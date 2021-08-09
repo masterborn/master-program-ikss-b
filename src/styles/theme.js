@@ -63,9 +63,9 @@ export const fontSize = {
 
 const theme = {
   fontFamily,
+  lineHeight,
   fontSize,
   fontWeight,
-  lineHeight,
   letterSpacing,
   color,
   medias,
