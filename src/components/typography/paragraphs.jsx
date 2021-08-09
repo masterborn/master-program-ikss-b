@@ -23,5 +23,6 @@ ParagraphSmall.defaultProps = {
 };
 const paragraphs = {
   ParagraphBody,
+  ParagraphSmall,
 };
 export default paragraphs;
