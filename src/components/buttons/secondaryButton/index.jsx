@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Icon from './secondaryIcon';
 import StyledSecondaryButton from './styledSecondaryButton';
 
-export default function SecondaryButton({ children, disabled, withIcon, onClick, size }) {
+export default function SecondaryButton({ children, disabled, withIcon, onClick, isBig }) {
   return (
-    <StyledSecondaryButton disabled={disabled} onClick={onClick} size={size}>
+    <StyledSecondaryButton disabled={disabled} onClick={onClick} isBig={isBig}>
       {withIcon && <Icon />}
       {children}
     </StyledSecondaryButton>
@@ -17,7 +17,7 @@ SecondaryButton.propTypes = {
   children: PropTypes.string,
   disabled: PropTypes.bool,
   withIcon: PropTypes.bool,
-  size: PropTypes.oneOf(['big', 'small']),
+  isBig: PropTypes.bool,
 };
 
 SecondaryButton.defaultProps = {
@@ -25,5 +25,5 @@ SecondaryButton.defaultProps = {
   children: '',
   disabled: false,
   withIcon: false,
-  size: 'big',
+  isBig: false,
 };

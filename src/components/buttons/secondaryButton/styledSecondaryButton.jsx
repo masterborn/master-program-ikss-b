@@ -6,7 +6,7 @@ const StyledSecondaryButton = styled.button`
   justify-content: center;
 
   ${(props) => {
-    if (props.size === 'big') {
+    if (props.isBig) {
       return `
             font-size: 16px;
             padding: 0.7em 1.2em 0.7em 1.2em;
