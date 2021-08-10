@@ -1,10 +1,25 @@
-import { DefaultTheme } from 'styled-components';
-
 export const fontFamily = {
-  main: "Mulish"
-} as const;
+  main: 'Mulish',
+};
+export const letterSpacing = '-0.015em';
 
 export const fontWeight = {
+  body: '400',
+  bodySmall: '400',
+  header1: '900',
+  header2: '900',
+  header3: '800',
+  header4: '800',
+  header5: '800',
+};
+export const lineHeight = {
+  body: '32px',
+  bodySmall: '28px',
+  header1: '72px',
+  header2: '72px',
+  header3: '44px',
+  header4: '32px',
+  header5: '24px',
 };
 
 export const color = {
@@ -33,7 +48,7 @@ export const color = {
     successGreen: '#18D4A7',
     errorRed: '#E01A4F',
   },
-} as const;
+};
 
 export const medias = {};
 export const fontSize = {
@@ -44,13 +59,16 @@ export const fontSize = {
   header3: '32pt',
   header4: '24pt',
   header5: '18pt',
-}
+};
 
-const theme: DefaultTheme = {
+const theme = {
   fontFamily,
+  lineHeight,
+  fontSize,
   fontWeight,
+  letterSpacing,
   color,
   medias,
-} as const;
+};
 
 export default theme;
