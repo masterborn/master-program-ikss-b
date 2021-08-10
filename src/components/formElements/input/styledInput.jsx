@@ -13,7 +13,7 @@ const styledInput = styled.input`
   outline: none;
   border: 1.5px solid
     ${(props) =>
-      props.hasError ? props.theme.color.misc.errorRed : props.theme.color.steelTints.steel30};
+      props.isInvalid ? props.theme.color.misc.errorRed : props.theme.color.steelTints.steel30};
   border-radius: 4px;
 
   font-size: 14px;
@@ -25,7 +25,7 @@ const styledInput = styled.input`
   }
 
   &:focus {
-    border-color: ${(props) => !props.hasError && props.theme.color.ikssBlue};
+    border-color: ${(props) => !props.isInvalid && props.theme.color.ikssBlue};
     color: ${(props) => props.theme.color.steel};
   }
   &:disabled {
