@@ -7,33 +7,23 @@ import StyledInputContainer from './styledInputContainer';
 export default function InputContainer({
   placeholder,
   disabled,
-  isControlled,
   withIcon,
-  hasError,
+  isInvalid,
   value,
   onChange,
 }) {
   return (
     <StyledInputContainer withIcon={withIcon}>
-      {isControlled ? (
-        <StyledInput
-          placeholder={placeholder}
-          disabled={disabled}
-          hasError={hasError}
-          withIcon={withIcon}
-          onChange={onChange}
-          value={value}
-        />
-      ) : (
-        <StyledInput
-          placeholder={placeholder}
-          disabled={disabled}
-          hasError={hasError}
-          withIcon={withIcon}
-        />
-      )}
+      <StyledInput
+        placeholder={placeholder}
+        disabled={disabled}
+        isInvalid={isInvalid}
+        withIcon={withIcon}
+        onChange={onChange}
+        value={value}
+      />
 
-      {withIcon && <Icon hasError={hasError} disabled={disabled} />}
+      {withIcon && <Icon isInvalid={isInvalid} disabled={disabled} />}
     </StyledInputContainer>
   );
 }
@@ -41,19 +31,15 @@ export default function InputContainer({
 InputContainer.propTypes = {
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
-  isControlled: PropTypes.bool,
   withIcon: PropTypes.bool,
-  hasError: PropTypes.bool,
-  value: PropTypes.string,
-  onChange: PropTypes.func,
+  isInvalid: PropTypes.bool,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 InputContainer.defaultProps = {
   placeholder: '',
   disabled: false,
-  isControlled: false,
   withIcon: false,
-  hasError: false,
-  value: '',
-  onChange: () => {},
+  isInvalid: false,
 };

@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import ErrorIcon from './error';
 import InfoIcon from './info';
 
-export default function Icon({ hasError, disabled }) {
-  if (hasError) return <ErrorIcon />;
+export default function Icon({ isInvalid, disabled }) {
+  if (isInvalid) return <ErrorIcon />;
   return <InfoIcon disabled={disabled} />;
 }
 
 Icon.propTypes = {
-  hasError: PropTypes.bool,
+  isInvalid: PropTypes.bool,
   disabled: PropTypes.bool,
 };
 
 Icon.defaultProps = {
-  hasError: false,
+  isInvalid: false,
   disabled: false,
 };
