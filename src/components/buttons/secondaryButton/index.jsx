@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from './secondaryIcon';
-import StyledSecondaryButton from './styledSecondaryButton';
+import Icon from './SecondaryIcon';
+import StyledSecondaryButton from './StyledSecondaryButton';
 
 export default function SecondaryButton({ children, disabled, withIcon, onClick, isBig }) {
   return (
