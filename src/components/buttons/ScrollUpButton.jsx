@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function scrollUpButton({ onClick }) {
+export default function ScrollUpButton({ onClick }) {
   return (
     <svg
       width="126"
@@ -76,3 +77,7 @@ export default function scrollUpButton({ onClick }) {
     </svg>
   );
 }
+
+ScrollUpButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};

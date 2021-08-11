@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from './primaryIcon';
-import StyledPrimaryButton from './styledPrimaryButton';
+import Icon from './PrimaryIcon';
+import StyledPrimaryButton from './StyledPrimaryButton';
 
 export default function PrimaryButton({ children, disabled, withIcon, onClick, isBig }) {
   return (
