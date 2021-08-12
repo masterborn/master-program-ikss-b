@@ -32,6 +32,7 @@ const StyledSecondaryButton = styled.button`
   &:hover {
     border-color: #3c4863;
     color: #3c4863;
+    cursor: pointer;
     & > .icon {
       fill: #3c4863;
     }

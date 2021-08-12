@@ -31,6 +31,7 @@ const StyledPrimaryButton = styled.button`
   }
   &:hover {
     background-color: #2f95eb;
+    cursor: pointer;
   }
   &:active {
     background-color: #167bd2;
