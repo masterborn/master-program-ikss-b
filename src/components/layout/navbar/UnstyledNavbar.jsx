@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Logo from '../../logos/BubbleLogo';
 import Socials from './Socials';
 import PrimaryButton from '../../buttons/primaryButton';
+import handleContactFormButton from './contactFormButton';
 
 const MOCK_SOCIALS = {
   fb: 'https://www.facebook.com/',
@@ -13,8 +14,14 @@ const MOCK_SOCIALS = {
   in: 'https://www.linkedin.com/',
 };
 
+// Form on homepage must have 'contactForm' id
+
 export default function Navbar({ className, paths }) {
   const router = useRouter();
+
+  const handleClick = () => {
+    handleContactFormButton(router);
+  };
 
   return (
     <nav className={className}>
@@ -35,7 +42,7 @@ export default function Navbar({ className, paths }) {
 
       <Socials socialsLinks={MOCK_SOCIALS} router={router} />
 
-      <PrimaryButton>Skontaktuj się</PrimaryButton>
+      <PrimaryButton onClick={handleClick}>Skontaktuj się</PrimaryButton>
     </nav>
   );
 }
