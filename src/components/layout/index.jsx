@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { useRouter } from 'next/dist/client/router';
 import Navbar from './navbar';
 import Footer from './footer';
 
@@ -28,9 +29,10 @@ const paths = [
 ];
 
 export default function Layout({ children }) {
+  const router = useRouter();
   return (
     <div>
-      <Navbar paths={paths} />
+      <Navbar paths={paths} currPathname={router.pathname} />
       <Content>{children}</Content>
 
       <Footer />

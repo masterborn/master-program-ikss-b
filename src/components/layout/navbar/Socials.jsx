@@ -5,7 +5,7 @@ import { FbCircleIcon, IgCircleIcon, YtCircleIcon, InCircleIcon } from '../../ic
 // Add 'hideNavSocials' class to a section,
 // to specify if navbar's social icons should be hidden
 
-export default function Socials({ socialsLinks, router }) {
+export default function Socials({ socialsLinks, currPathname }) {
   const [hideSocials, setHideSocials] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function Socials({ socialsLinks, router }) {
     }
 
     return null;
-  }, [router]);
+  }, [currPathname]);
 
   if (hideSocials) return null;
 
@@ -59,5 +59,5 @@ Socials.propTypes = {
     yt: PropTypes.string,
     in: PropTypes.string,
   }).isRequired,
-  router: PropTypes.shape({}).isRequired,
+  currPathname: PropTypes.string.isRequired,
 };

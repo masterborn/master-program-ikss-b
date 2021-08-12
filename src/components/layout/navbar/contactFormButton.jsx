@@ -1,5 +1,5 @@
-const handleClick = (router) => {
-  if (router.pathname === '/') {
+const handleClick = (currPathname) => {
+  if (currPathname === '/') {
     const contactForm = document.getElementById('contactForm');
     const navbarOffset = 88;
 
@@ -12,7 +12,7 @@ const handleClick = (router) => {
         window.scrollBy(0, contactFormPosition - navbarOffset);
       }
     }
-  } else if (router.pathname !== '/_error') {
+  } else if (currPathname !== '/_error') {
     // do something
   }
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import Logo from '../../logos/BubbleLogo';
 import Socials from './Socials';
 import PrimaryButton from '../../buttons/primaryButton';
@@ -16,11 +15,9 @@ const MOCK_SOCIALS = {
 
 // Form on homepage must have 'contactForm' id
 
-export default function Navbar({ className, paths }) {
-  const router = useRouter();
-
+export default function Navbar({ className, paths, currPathname }) {
   const handleClick = () => {
-    handleContactFormButton(router);
+    handleContactFormButton(currPathname);
   };
 
   return (
@@ -33,14 +30,14 @@ export default function Navbar({ className, paths }) {
       <div className="links">
         {paths.map(({ name, path }) => (
           <Link href={path} key={path} passHref>
-            <a href className={router.pathname === path ? 'highlighted' : ''}>
+            <a href className={currPathname === path ? 'highlighted' : ''}>
               {name}
             </a>
           </Link>
         ))}
       </div>
 
-      <Socials socialsLinks={MOCK_SOCIALS} router={router} />
+      <Socials socialsLinks={MOCK_SOCIALS} currPathname={currPathname} />
 
       <PrimaryButton onClick={handleClick}>Skontaktuj się</PrimaryButton>
     </nav>
@@ -55,4 +52,5 @@ Navbar.propTypes = {
       path: PropTypes.string,
     }),
   ).isRequired,
+  currPathname: PropTypes.string.isRequired,
 };
