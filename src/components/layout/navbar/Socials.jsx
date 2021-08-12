@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
 import { FbCircleIcon, IgCircleIcon, YtCircleIcon, InCircleIcon } from '../../icons/socialCircle';
 
-export default function Socials({ socialsLinks }) {
+// Add 'hideNavSocials' class to a section,
+// to specify if navbar's social icons should be hidden
+
+export default function Socials({ socialsLinks, router }) {
+  const [hideSocials, setHideSocials] = useState(false);
+
+  useEffect(() => {
+    const section = document.querySelector('.hideNavSocials');
+
+    if (section) {
+      const options = {
+        rootMargin: '-88px',
+      };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          setHideSocials(entry.isIntersecting);
+        });
+      }, options);
+
+      observer.observe(section);
+
+      return () => {
+        observer.disconnect();
+        setHideSocials(false);
+      };
+    }
+
+    return null;
+  }, [router]);
+
+  if (hideSocials) return null;
+
   return (
     <div className="socials">
       <a href={socialsLinks.fb}>
@@ -29,4 +59,5 @@ Socials.propTypes = {
     yt: PropTypes.string,
     in: PropTypes.string,
   }).isRequired,
+  router: PropTypes.shape({}).isRequired,
 };

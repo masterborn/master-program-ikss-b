@@ -33,7 +33,7 @@ export default function Navbar({ className, paths }) {
         ))}
       </div>
 
-      <Socials socialsLinks={MOCK_SOCIALS} />
+      <Socials socialsLinks={MOCK_SOCIALS} router={router} />
 
       <PrimaryButton>Skontaktuj się</PrimaryButton>
     </nav>
