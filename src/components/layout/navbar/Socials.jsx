@@ -60,5 +60,5 @@ Socials.propTypes = {
     in: PropTypes.string,
   }).isRequired,
   currPathname: PropTypes.string.isRequired,
-  navbarHeight: PropTypes.number.isRequired,
+  navbarHeight: PropTypes.string.isRequired,
 };
