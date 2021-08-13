@@ -5,7 +5,7 @@ import { FbCircleIcon, IgCircleIcon, YtCircleIcon, InCircleIcon } from '../../ic
 // Add 'hideNavSocials' class to a section,
 // to specify if navbar's social icons should be hidden
 
-export default function Socials({ socialsLinks, currPathname }) {
+export default function Socials({ socialsLinks, currPathname, navbarHeight }) {
   const [hideSocials, setHideSocials] = useState(false);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ export default function Socials({ socialsLinks, currPathname }) {
 
     if (section) {
       const options = {
-        rootMargin: '-88px',
+        rootMargin: `-${navbarHeight}`,
       };
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -30,7 +30,7 @@ export default function Socials({ socialsLinks, currPathname }) {
     }
 
     return null;
-  }, [currPathname]);
+  }, [currPathname, navbarHeight]);
 
   if (hideSocials) return null;
 
@@ -60,4 +60,5 @@ Socials.propTypes = {
     in: PropTypes.string,
   }).isRequired,
   currPathname: PropTypes.string.isRequired,
+  navbarHeight: PropTypes.number.isRequired,
 };

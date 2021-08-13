@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import Navbar from './UnstyledNavbar';
 
 const StyledNavbar = styled(Navbar)`
-  position: fixed;
-  width: 100vw;
-  height: ${(props) => props.navbarHeight};
+  position: sticky;
+  min-width: 1185px;
+  width: 100%;
+  height: ${(props) => (props.isMobile ? '56px' : '88px')};
   left: 0px;
   top: 0px;
 

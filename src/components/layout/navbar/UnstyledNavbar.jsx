@@ -15,7 +15,9 @@ const MOCK_SOCIALS = {
 
 // Form on homepage must have 'contactForm' id
 
-export default function Navbar({ className, navbarHeight, paths, currPathname }) {
+export default function Navbar({ className, isMobile, paths, currPathname }) {
+  const navbarHeight = isMobile ? '56px' : '88px';
+
   const handleClick = () => {
     handleContactFormButton(currPathname, navbarHeight);
   };
@@ -37,7 +39,11 @@ export default function Navbar({ className, navbarHeight, paths, currPathname })
         ))}
       </div>
 
-      <Socials socialsLinks={MOCK_SOCIALS} currPathname={currPathname} />
+      <Socials
+        socialsLinks={MOCK_SOCIALS}
+        currPathname={currPathname}
+        navbarHeight={navbarHeight}
+      />
 
       <PrimaryButton onClick={handleClick}>Skontaktuj się</PrimaryButton>
     </nav>
@@ -46,7 +52,7 @@ export default function Navbar({ className, navbarHeight, paths, currPathname })
 
 Navbar.propTypes = {
   className: PropTypes.string.isRequired,
-  navbarHeight: PropTypes.string.isRequired,
+  isMobile: PropTypes.bool.isRequired,
   paths: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,

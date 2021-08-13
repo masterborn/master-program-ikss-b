@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { useRouter } from 'next/dist/client/router';
+import StyledLayout from './StyledLayout';
 import Navbar from './navbar';
 import Footer from './footer';
-
-const Content = styled.div`
-  margin-top: 88px;
-`;
 
 const paths = [
   {
@@ -30,16 +26,16 @@ const paths = [
 
 export default function Layout({ children }) {
   const router = useRouter();
-  const navbarHeight = '88px';
+  const isMobile = false;
 
   return (
-    <div>
-      <Navbar navbarHeight={navbarHeight} paths={paths} currPathname={router.pathname} />
+    <StyledLayout isMobile={isMobile}>
+      <Navbar isMobile={isMobile} paths={paths} currPathname={router.pathname} />
 
-      <Content>{children}</Content>
+      <div className="pageContent">{children}</div>
 
       <Footer />
-    </div>
+    </StyledLayout>
   );
 }
 
