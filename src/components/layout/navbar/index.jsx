@@ -4,7 +4,7 @@ import Navbar from './UnstyledNavbar';
 const StyledNavbar = styled(Navbar)`
   position: fixed;
   width: 100vw;
-  height: 88px;
+  height: ${(props) => props.navbarHeight};
   left: 0px;
   top: 0px;
 

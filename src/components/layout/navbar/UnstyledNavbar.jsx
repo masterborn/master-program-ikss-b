@@ -15,9 +15,9 @@ const MOCK_SOCIALS = {
 
 // Form on homepage must have 'contactForm' id
 
-export default function Navbar({ className, paths, currPathname }) {
+export default function Navbar({ className, navbarHeight, paths, currPathname }) {
   const handleClick = () => {
-    handleContactFormButton(currPathname);
+    handleContactFormButton(currPathname, navbarHeight);
   };
 
   return (
@@ -46,6 +46,7 @@ export default function Navbar({ className, paths, currPathname }) {
 
 Navbar.propTypes = {
   className: PropTypes.string.isRequired,
+  navbarHeight: PropTypes.string.isRequired,
   paths: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,

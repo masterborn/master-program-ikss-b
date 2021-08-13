@@ -30,9 +30,12 @@ const paths = [
 
 export default function Layout({ children }) {
   const router = useRouter();
+  const navbarHeight = '88px';
+
   return (
     <div>
-      <Navbar paths={paths} currPathname={router.pathname} />
+      <Navbar navbarHeight={navbarHeight} paths={paths} currPathname={router.pathname} />
+
       <Content>{children}</Content>
 
       <Footer />

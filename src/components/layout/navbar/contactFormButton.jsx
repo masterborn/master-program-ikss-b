@@ -1,7 +1,7 @@
-const handleClick = (currPathname) => {
+const handleClick = (currPathname, navbarHeight) => {
   if (currPathname === '/') {
     const contactForm = document.getElementById('contactForm');
-    const navbarOffset = 88;
+    const navbarOffset = Number(navbarHeight.replace(/px$/, ''));
 
     if (contactForm) {
       const contactFormPosition = contactForm.getBoundingClientRect().top;
