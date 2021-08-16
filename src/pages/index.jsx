@@ -1,3 +1,10 @@
+import React from 'react';
 import Mockup from '@components/Example/mockup';
 
-export default Mockup;
+export default function index() {
+  return (
+    <div>
+      <Mockup />
+    </div>
+  );
+}
