@@ -3,7 +3,6 @@ import Navbar from './UnstyledNavbar';
 
 const StyledNavbar = styled(Navbar)`
   position: sticky;
-  min-width: 1185px;
   width: 100%;
   height: ${(props) => (props.isMobile ? '56px' : '88px')};
   left: 0px;

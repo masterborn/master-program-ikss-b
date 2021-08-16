@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
 import StyledLayout from './StyledLayout';
@@ -24,18 +25,24 @@ const paths = [
   },
 ];
 
+const Centered = styled.div`
+  width: 100%;
+`;
+
 export default function Layout({ children }) {
   const router = useRouter();
   const isMobile = false;
 
   return (
-    <StyledLayout isMobile={isMobile}>
-      <Navbar isMobile={isMobile} paths={paths} currPathname={router.pathname} />
+    <Centered>
+      <StyledLayout isMobile={isMobile}>
+        <Navbar isMobile={isMobile} paths={paths} currPathname={router.pathname} />
 
-      <div className="pageContent">{children}</div>
+        <div className="pageContent">{children}</div>
 
-      <Footer />
-    </StyledLayout>
+        <Footer />
+      </StyledLayout>
+    </Centered>
   );
 }
 
