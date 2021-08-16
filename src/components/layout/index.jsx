@@ -17,7 +17,7 @@ const paths = [
   },
   {
     name: 'O nas',
-    path: '/onas',
+    path: '/o-nas',
   },
   {
     name: 'Współpraca',
