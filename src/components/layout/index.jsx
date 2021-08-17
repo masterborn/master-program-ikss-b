@@ -40,7 +40,7 @@ export default function Layout({ children }) {
 
         <div className="pageContent">{children}</div>
 
-        <Footer />
+        <Footer paths={paths} isHomepage={router.pathname === '/'} />
       </StyledLayout>
     </Centered>
   );
