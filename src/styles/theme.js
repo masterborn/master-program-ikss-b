@@ -52,13 +52,13 @@ export const color = {
 
 export const medias = {};
 export const fontSize = {
-  body: '16pt',
-  bodySmall: '14pt',
-  header1: '56pt',
-  header2: '40pt',
-  header3: '32pt',
-  header4: '24pt',
-  header5: '18pt',
+  body: '16px',
+  bodySmall: '14px',
+  header1: '56px',
+  header2: '40px',
+  header3: '32px',
+  header4: '24px',
+  header5: '18px',
 };
 
 const theme = {
