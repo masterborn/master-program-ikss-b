@@ -27,7 +27,7 @@ const MOCKUP = {
   'homepage-tile-3': {
     title: 'Coś o tym, że łączycie rozwój z zabawą i poznawaniem nowych ludzi',
     text1:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.',
     image1:
       '//images.ctfassets.net/n21y2i4hkj4h/6rSHMopKSWH8YCfhrRMg9c/78c1ff6cd36dfe747b17c3b6b55901ae/Frame_170__1_.svg',
   },

@@ -49,6 +49,7 @@ const StyledValuesSection = styled(ValuesSection)`
         margin-bottom: -14px;
 
         align-items: center;
+
         .image-filler {
           width: 232px;
           height: 232px;
@@ -57,10 +58,17 @@ const StyledValuesSection = styled(ValuesSection)`
         }
         h5 {
           width: 336px;
+          height: 48px;
           color: ${(props) => props.theme.color.navy};
         }
         p {
           width: 336px;
+
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+
           text-align: center;
         }
       }
