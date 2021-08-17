@@ -59,7 +59,7 @@ const StyledFooter = styled(Footer)`
     z-index: -100;
     height: 324px;
     background-color: ${(props) => props.theme.color.ikssBlue};
-    visibility: ${(props) => (props.isHomepage ? 'visible' : 'hidden')};
+    visibility: ${(props) => !props.isHomepage && 'hidden'};
   }
   .scrollUpButton {
     position: absolute;
