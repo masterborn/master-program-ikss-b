@@ -10,15 +10,18 @@ export default async function getPagesData() {
 
   const res = await fetch(apiEndPoint, { signal: controller.signal });
   if (res.status !== 200) {
-    throw new Error(`Wrong Status Code: ${res.status}: ${res.statusText}`);
+    throw new Error(`Contentful API: Wrong Status Code: ${res.status}: ${res.statusText}`);
   }
+  const contentType = res.headers.get('content-type');
+  if (contentType !== 'application/vnd.contentful.delivery.v1+json')
+    throw new Error("Contentful API: Response doesn't contain JSON package");
 
-  const resJSON = await res.json();
-  if (!resJSON) throw new Error("Response doesnt't contain JSON package");
-  if (!resJSON.includes.Asset) throw new Error('JSON data is corrupted: No assets present');
+  const resJson = await res.json();
+  if (!resJson.includes.Asset)
+    throw new Error('Contentful API: JSON data is corrupted: No assets present');
 
   clearTimeout(timeoutId);
-  return resJSON;
+  return resJson;
 }
 
 export async function getPagesDataMockup() {
