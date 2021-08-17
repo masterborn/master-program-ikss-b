@@ -1,4 +1,4 @@
-import data from './data.json';
+import data from '../api/data.json';
 
 export default async function getPagesData() {
   const apiEndPoint = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/${process.env.ENV_ID}/entries?access_token=${process.env.TOKEN}`;
