@@ -3,7 +3,7 @@ import data from './data.json';
 export default async function getPagesData() {
   const apiEndPoint = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/${process.env.ENV_ID}/entries?access_token=${process.env.TOKEN}`;
   const controller = new AbortController();
-  setTimeout(() => {
+  const timeoutId = setTimeout(() => {
     controller.abort();
     throw new Error('API request timeout');
   }, 5000);
@@ -17,6 +17,7 @@ export default async function getPagesData() {
   if (!resJSON) throw new Error("Response doesnt't contain JSON package");
   if (!resJSON.includes.Asset) throw new Error('JSON data is corrupted: No assets present');
 
+  clearTimeout(timeoutId);
   return resJSON;
 }
 

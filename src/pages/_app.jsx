@@ -34,7 +34,7 @@ const App = (props) => {
       <ThemeProvider theme={theme}>
         <QueryClientProvider client={queryClientRef.current}>
           <Hydrate>
-            {isMobile !== undefined && <Component pagesData={pagesData} isMobile={isMobile} />}
+            <Component pagesData={pagesData} isMobile={isMobile} />
           </Hydrate>
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
