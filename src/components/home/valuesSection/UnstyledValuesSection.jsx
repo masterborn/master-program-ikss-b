@@ -34,7 +34,14 @@ const MOCKUP = {
 };
 
 export default function UnstyledValuesSection({ className }) {
-  const tiles = [MOCKUP['homepage-tile-1'], MOCKUP['homepage-tile-2'], MOCKUP['homepage-tile-3']];
+  const tiles = [];
+
+  for (let index = 1; index <= 3; index += 1) {
+    if (MOCKUP[`homepage-tile-${index}`]) {
+      tiles.push(MOCKUP[`homepage-tile-${index}`]);
+    }
+  }
+
   return (
     <section className={className}>
       <Header3>{MOCKUP['homepage-values'].title}</Header3>

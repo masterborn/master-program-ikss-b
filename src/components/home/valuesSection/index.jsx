@@ -21,7 +21,8 @@ const StyledValuesSection = styled(ValuesSection)`
     width: 100%;
     margin-top: 40px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     .tile {
       width: 384px;
       display: flex;
@@ -60,6 +61,7 @@ const StyledValuesSection = styled(ValuesSection)`
           width: 336px;
           height: 48px;
           color: ${(props) => props.theme.color.navy};
+          overflow: hidden;
         }
         p {
           width: 336px;
