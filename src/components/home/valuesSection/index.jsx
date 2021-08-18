@@ -59,7 +59,7 @@ const StyledValuesSection = styled(ValuesSection)`
         }
         h5 {
           width: 336px;
-          height: 48px;
+          height: 72px;
           color: ${(props) => props.theme.color.navy};
           overflow: hidden;
         }
