@@ -10,8 +10,9 @@ const styledCheckbox = styled.input.attrs({ type: 'checkbox' })`
   appearance: none;
   background-color: ${(props) => props.theme.color.white};
 
-  border: 1.5px solid ${(props) => props.theme.color.steelTints.steel40};
-
+  border: 1.5px solid;
+  border-color: ${(props) =>
+    props.isInvalid ? props.theme.color.misc.errorRed : props.theme.color.steelTints.steel40};
   border-radius: 4px;
 
   &:after {
