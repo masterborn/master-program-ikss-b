@@ -8,6 +8,8 @@ const StyledNavbar = styled(Navbar)`
   left: 0px;
   top: 0px;
 
+  z-index: 9999;
+
   background: ${(props) => props.theme.color.white};
   box-shadow: 0px 4px 16px rgba(97, 121, 139, 0.1);
 
