@@ -10,7 +10,7 @@ import {
 
 function sortLogos() {
   // once API integration is up, this function will belong in contentful mapper
-  const homepagePartners = partners.filter((partner) => partner.showOnHomepage);
+  const homepagePartners = partners.filter((partner) => partner.showOnHomepage && partner.logo.url);
 
   homepagePartners.sort((a, b) => (b.order || 0) - (a.order || 0));
   return homepagePartners;
