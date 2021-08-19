@@ -23,10 +23,8 @@ import {
 function sortProjects() {
   // once API integration is up, this function will belong in contentful mapper
   const homepageArticles = projects.filter((project) => project.showOnHomepage);
-  homepageArticles.forEach((project, index) => {
-    if (!project.order) homepageArticles[index].order = 0;
-  });
-  homepageArticles.sort((a, b) => b.order - a.order);
+
+  homepageArticles.sort((a, b) => (b.order || 0) - (a.order || 0));
   const sortedArticles = homepageArticles.slice(0, 3);
   return sortedArticles;
 }
