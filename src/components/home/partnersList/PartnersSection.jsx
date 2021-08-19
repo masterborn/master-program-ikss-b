@@ -11,10 +11,8 @@ import {
 function sortLogos() {
   // once API integration is up, this function will belong in contentful mapper
   const homepagePartners = partners.filter((partner) => partner.showOnHomepage);
-  homepagePartners.forEach((partner, index) => {
-    if (!partner.order) homepagePartners[index].order = 0;
-  });
-  homepagePartners.sort((a, b) => b.order - a.order);
+
+  homepagePartners.sort((a, b) => (b.order || 0) - (a.order || 0));
   return homepagePartners;
 }
 export default function PartnersSection() {
