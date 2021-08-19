@@ -27,7 +27,7 @@ const MOCKUP = {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ut volutpat tincidunt dictumst neque neque molestie parturient.',
 };
 
-export default function ContactForm({ isModal, closeModal }) {
+export default function ContactForm({ className, isModal, closeModal }) {
   const [formValues, setFormValues] = useState({
     name: '',
     lastName: '',
@@ -65,17 +65,19 @@ export default function ContactForm({ isModal, closeModal }) {
 
     setAreInputsInvalid(resources);
 
-    return Object.values(resources).some((isInvalid) => isInvalid);
+    return !Object.values(resources).some((isInvalid) => isInvalid);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(areInputsInvalid, isFormValid());
+    if (isFormValid()) {
+      // send form
+    }
   };
 
   return (
-    <ContactFormContainer id="contact-form">
-      <Content isModal={isModal}>
+    <ContactFormContainer className={className} id="contact-form" isModal={isModal}>
+      <Content>
         {isModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
@@ -154,10 +156,12 @@ export default function ContactForm({ isModal, closeModal }) {
 }
 
 ContactForm.propTypes = {
+  className: PropTypes.string,
   isModal: PropTypes.bool,
   closeModal: PropTypes.func,
 };
 ContactForm.defaultProps = {
+  className: '',
   isModal: false,
   closeModal: () => {},
 };
