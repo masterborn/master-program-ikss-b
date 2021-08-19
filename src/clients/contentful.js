@@ -1,7 +1,8 @@
+import config from '@root/config/contentful';
 import data from '../api/data.json';
 
 export default async function getPagesData() {
-  const apiEndPoint = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/${process.env.ENV_ID}/entries?access_token=${process.env.TOKEN}`;
+  const apiEndPoint = `https://cdn.contentful.com/spaces/${config.SPACE_ID}/environments/${config.ENV_ID}/entries?access_token=${config.TOKEN}`;
   const controller = new AbortController();
   const timeoutId = setTimeout(() => {
     controller.abort();
