@@ -1,4 +1,4 @@
-import { FunctionComponent, useRef } from 'react';
+import { FunctionComponent, useRef, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Hydrate } from 'react-query/hydration';
@@ -16,6 +16,15 @@ const App: FunctionComponent<AppProps> = (props) => {
   }
   const { Component, pageProps } = props;
 
+  const [isContactModalOpened, setModalIsOpened] = useState(false);
+
+  const closeContactModal = () => {
+    setModalIsOpened(false);
+  };
+  const openContactModal = () => {
+    setModalIsOpened(true);
+  };
+
   return (
     <>
       <Head>
@@ -30,13 +39,17 @@ const App: FunctionComponent<AppProps> = (props) => {
       <ThemeProvider theme={theme}>
         <QueryClientProvider client={queryClientRef.current}>
           <Hydrate state={pageProps.dehydratedState}>
-            <Layout>
+            <Layout
+              closeContactModal={closeContactModal}
+              openContactModal={openContactModal}
+              isContactModalOpened={isContactModalOpened}
+            >
               <Component {...pageProps} />
             </Layout>
           </Hydrate>
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
-        <GlobalStyles />
+        <GlobalStyles isContactModalOpened={isContactModalOpened} />
       </ThemeProvider>
     </>
   );

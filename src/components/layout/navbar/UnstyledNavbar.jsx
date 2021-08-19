@@ -13,13 +13,13 @@ const MOCK_SOCIALS = {
   in: 'https://www.linkedin.com/',
 };
 
-// Form on homepage must have 'contactForm' id
+// Form on homepage must have 'contact-form' id
 
-export default function Navbar({ className, isMobile, paths, currPathname }) {
+export default function Navbar({ className, isMobile, paths, currPathname, openContactModal }) {
   const navbarHeight = isMobile ? '56px' : '88px';
 
   const handleClick = () => {
-    handleContactFormButton(currPathname, navbarHeight);
+    handleContactFormButton(currPathname, navbarHeight, openContactModal);
   };
 
   return (
@@ -60,4 +60,5 @@ Navbar.propTypes = {
     }),
   ).isRequired,
   currPathname: PropTypes.string.isRequired,
+  openContactModal: PropTypes.func.isRequired,
 };
