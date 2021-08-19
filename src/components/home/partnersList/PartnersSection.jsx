@@ -25,8 +25,8 @@ export default function PartnersSection() {
         zyskać współpracując z wami jako partnerzy. Jakie to niesie korzyści PR’owe etc.
       </PartnersDescription>
       <LogosContainer>
-        {homepagePartners.map(({ logo: { title, url } }) => (
-          <Logo key={title}>
+        {homepagePartners.map(({ logo: { title, url }, linkUrl }) => (
+          <Logo key={title} href={linkUrl || ''}>
             <img alt={title} src={url} />
           </Logo>
         ))}
