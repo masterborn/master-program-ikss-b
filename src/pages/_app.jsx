@@ -1,20 +1,25 @@
-import { FunctionComponent, useRef } from 'react';
+import { useRef } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Hydrate } from 'react-query/hydration';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
-import { AppProps } from 'next/app';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
 import Layout from '../components/layout';
+import getPagesData from '@root/clients/contentful';
+import mapData from '@root/dataMappers/contentful';
+import useIsMobile from '@root/hooks/useIsMobile';
 
-const App: FunctionComponent<AppProps> = (props) => {
-  const queryClientRef = useRef<QueryClient>();
+const App = (props) => {
+  const queryClientRef = useRef();
   if (!queryClientRef.current) {
     queryClientRef.current = new QueryClient();
   }
-  const { Component, pageProps } = props;
+  // eslint-disable-next-line react/prop-types
+  const { Component, pagesData } = props;
+  const isMobile = useIsMobile();
 
   return (
     <>
@@ -29,9 +34,9 @@ const App: FunctionComponent<AppProps> = (props) => {
       </Head>
       <ThemeProvider theme={theme}>
         <QueryClientProvider client={queryClientRef.current}>
-          <Hydrate state={pageProps.dehydratedState}>
+          <Hydrate>
             <Layout>
-              <Component {...pageProps} />
+              <Component pagesData={pagesData} isMobile={isMobile} />
             </Layout>
           </Hydrate>
           <ReactQueryDevtools initialIsOpen={false} />
@@ -40,6 +45,17 @@ const App: FunctionComponent<AppProps> = (props) => {
       </ThemeProvider>
     </>
   );
+};
+
+App.getInitialProps = async () => {
+  const resJSON = await getPagesData();
+  const pagesData = mapData(resJSON);
+
+  return { pagesData };
+};
+
+App.propTypes = {
+  Component: PropTypes.func.isRequired,
 };
 
 export default App;
