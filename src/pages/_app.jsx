@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
-import Layout from '../components/layout';
+import Layout from '@root/components/layout';
 import getPagesData from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import useIsMobile from '@root/hooks/useIsMobile';
