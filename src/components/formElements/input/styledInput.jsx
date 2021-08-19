@@ -9,6 +9,7 @@ const styledInput = styled.input`
   box-sizing: border-box;
 
   height: 100%;
+  width: 100%;
 
   outline: none;
   border: 1.5px solid
