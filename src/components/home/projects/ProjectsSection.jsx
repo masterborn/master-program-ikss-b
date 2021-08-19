@@ -7,7 +7,7 @@ import projects from './projects.json';
 
 import {
   ProjectDescription,
-  Container,
+  ProjectSection,
   ProjectArticle,
   ProjectButton,
   ProjectDate,
@@ -48,7 +48,7 @@ export default function ProjectsSection() {
   }
   const linkIsFromFacebook = /^(https:\/\/)?(www.)?facebook\.com\/.*/.test(linkUrl);
   return (
-    <Container id="projects">
+    <ProjectSection id="projects">
       <SectionHeader>Najnowsze Projekty</SectionHeader>
       <ProjectsButtonsContainer>
         {homepageArticles.map(({ title: articleTitle }) => (
@@ -86,6 +86,6 @@ export default function ProjectsSection() {
       <Link href="/projekty">
         <SecondaryButton isBig>Zobacz wszystkie projekty</SecondaryButton>
       </Link>
-    </Container>
+    </ProjectSection>
   );
 }

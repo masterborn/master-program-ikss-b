@@ -3,7 +3,7 @@ import { ParagraphBody } from '@root/components/typography/paragraphs';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const ProjectSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
