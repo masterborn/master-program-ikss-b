@@ -25,7 +25,7 @@ const paths = [
   },
 ];
 
-const Centered = styled.div`
+const PageWrapper = styled.div`
   width: 100%;
 `;
 
@@ -34,15 +34,15 @@ export default function Layout({ children }) {
   const isMobile = false;
 
   return (
-    <Centered>
+    <PageWrapper>
       <StyledLayout isMobile={isMobile}>
         <Navbar isMobile={isMobile} paths={paths} currPathname={router.pathname} />
 
-        <div className="pageContent">{children}</div>
+        <div id="main">{children}</div>
 
         <Footer paths={paths} isHomepage={router.pathname === '/'} />
       </StyledLayout>
-    </Centered>
+    </PageWrapper>
   );
 }
 

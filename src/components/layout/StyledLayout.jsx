@@ -6,6 +6,12 @@ const StyledLayout = styled.div`
   width: 100%;
 
   margin: 0 auto;
+
+  #main > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export default StyledLayout;
