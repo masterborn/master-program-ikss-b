@@ -3,7 +3,6 @@ import {
   StyledTopSection,
   Content,
   LeftSide,
-  Video,
   Header,
   Paragraph,
   StyledSocials,
@@ -36,7 +35,7 @@ export default function UnstyledTopSection() {
             Skontaktuj się
           </SecondaryButton>
         </LeftSide>
-        <Video src={`https:${MOCKUP.image1}`} height={505} muted autoPlay loop />
+        <video src={`https:${MOCKUP.image1}`} width={808} muted autoPlay loop />
       </Content>
 
       <StyledSocials socialsLinks={MOCK_SOCIALS} className="socials" showLabel />

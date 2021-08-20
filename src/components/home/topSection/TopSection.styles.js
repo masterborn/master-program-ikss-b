@@ -18,11 +18,9 @@ export const Content = styled.div`
 
 export const LeftSide = styled.div`
   min-width: 416px;
-  margin: 0 6.59% 20px 8%;
-  padding-top: 77px;
+  margin-top: 77px;
+  margin-left: 120px;
 `;
-
-export const Video = styled.video``;
 
 export const StyledSocials = styled(Socials)`
   width: 1037px;
