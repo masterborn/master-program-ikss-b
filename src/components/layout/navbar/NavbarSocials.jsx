@@ -5,7 +5,7 @@ import SocialsCollection from '../../icons/SocialsCollection';
 // Add 'hideNavSocials' class to a section,
 // to specify if navbar's social icons should be hidden
 
-export default function NavbarSocials({ socialsLinks, currPathname, navbarHeight }) {
+export default function NavbarSocials({ className, socialsLinks, currPathname, navbarHeight }) {
   const [hideSocials, setHideSocials] = useState(false);
 
   useEffect(() => {
@@ -34,10 +34,11 @@ export default function NavbarSocials({ socialsLinks, currPathname, navbarHeight
 
   if (hideSocials) return null;
 
-  return <SocialsCollection className="socials" socialsLinks={socialsLinks} />;
+  return <SocialsCollection className={className} socialsLinks={socialsLinks} />;
 }
 
 NavbarSocials.propTypes = {
+  className: PropTypes.string.isRequired,
   socialsLinks: PropTypes.shape({
     fb: PropTypes.string,
     ig: PropTypes.string,
