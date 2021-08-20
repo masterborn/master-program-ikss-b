@@ -6,7 +6,6 @@ export default async function getPagesData() {
   const timeoutId = setTimeout(() => {
     throw new Error('API request timeout');
   }, 5000);
-
   const res = await fetch(apiEndPoint);
   if (res.status !== 200) {
     throw new Error(`Contentful API: Wrong Status Code: ${res.status}: ${res.statusText}`);
