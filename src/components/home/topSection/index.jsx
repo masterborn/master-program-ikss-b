@@ -22,7 +22,7 @@ const MOCK_SOCIALS = {
   in: 'https://www.linkedin.com/',
 };
 
-export default function UnstyledTopSection() {
+export default function TopSection() {
   const handleClick = () => {};
 
   return (
