@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 import Logo from '../../logos/BubbleLogo';
 
 import NavbarSocials from './NavbarSocials';
@@ -33,8 +32,6 @@ export const LinksContainer = styled.div`
 
   margin-left: 126px;
 `;
-
-export const StyledLogoLink = styled(Link)``;
 
 export const StyledLogo = styled(Logo)`
   width: 78px;

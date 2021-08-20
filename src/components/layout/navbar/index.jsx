@@ -4,7 +4,6 @@ import Link from 'next/link';
 import {
   StyledNavbar,
   LinksContainer,
-  StyledLogoLink,
   StyledLogo,
   Label,
   StyledNavbarSocials,
@@ -30,11 +29,11 @@ export default function Navbar({ isMobile, paths, currPathname }) {
 
   return (
     <StyledNavbar>
-      <StyledLogoLink href="/" passHref>
+      <Link href="/" passHref>
         <a href>
           <StyledLogo />
         </a>
-      </StyledLogoLink>
+      </Link>
       <LinksContainer>
         {paths.map(({ name, path }) => (
           <Link href={path} key={path}>
