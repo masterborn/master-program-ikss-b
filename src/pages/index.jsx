@@ -1,6 +1,6 @@
 import React from 'react';
 import Mockup from '@components/Example/mockup';
-import getPagesData from '@root/clients/contentful';
+import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import TopSection from '../components/home/topSection';
 
@@ -14,7 +14,7 @@ export default function index() {
 }
 
 export async function getStaticProps() {
-  const resJson = await getPagesData();
+  const resJson = await getPagesDataMockup();
   const pagesData = mapData(resJson);
   const {
     basicContent: { homepage: basicContent, common },

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useRef } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -32,7 +33,7 @@ const App = (props) => {
       </Head>
       <ThemeProvider theme={theme}>
         <QueryClientProvider client={queryClientRef.current}>
-          <Hydrate state={pageProps.dehydratedState}>
+          <Hydrate>
             <Layout>
               <Component {...pageProps} isMobile={isMobile} />
             </Layout>
