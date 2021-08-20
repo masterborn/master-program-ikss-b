@@ -29,12 +29,7 @@ export default function ProjectVideo({ url }) {
           <PlayIcon />
         </PlayButton>
       </ThumnbailContainer>
-      <VideoFrame
-        ref={videoFrame}
-        allow={playingVideo ? 'autoplay' : undefined}
-        playingVideo={playingVideo}
-        src={embedUrl}
-      />
+      <VideoFrame ref={videoFrame} allow="autoplay" playingVideo={playingVideo} src={embedUrl} />
     </VideoWrapper>
   );
 }

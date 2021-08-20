@@ -18,6 +18,7 @@ export const ThumnbailContainer = styled.div`
   width: 100%;
   height: 100%;
 `;
+
 export const VideoThumbnail = styled(Image)`
   border-radius: 16px 16px 0 0;
 `;
@@ -32,6 +33,7 @@ export const PlayButton = styled.button`
 export const VideoFrame = styled.iframe`
   display: ${(props) => (props.playingVideo ? 'flex' : 'none')};
   border-radius: 16px 16px 0 0;
+  border: none;
   height: 100%;
   width: 100%;
 `;
