@@ -49,6 +49,17 @@ export const ErrorIcon = () => (
   </svg>
 );
 
+export const PlayIcon = () => (
+  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="32" cy="32" r="32" fill="#E8F3FD" />
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M43.7328 32.2802C44.3351 32.6751 44.3351 33.558 43.7328 33.9528L26.5482 45.2181C25.8832 45.6541 25 45.177 25 44.3818L25 21.8513C25 21.0561 25.8832 20.579 26.5482 21.0149L43.7328 32.2802Z"
+      fill="#1889E9"
+    />
+  </svg>
+);
 export const SuccessIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -137,6 +148,7 @@ const miscIcons = {
   ErrorIcon,
   SuccessIcon,
   LoaderIcon,
+  PlayIcon,
 };
 
 export default miscIcons;
