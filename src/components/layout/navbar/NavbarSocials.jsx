@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { FbCircleIcon, IgCircleIcon, YtCircleIcon, InCircleIcon } from '../../icons/socialCircle';
+import SocialsCollection from '../../icons/SocialsCollection';
 
 // Add 'hideNavSocials' class to a section,
 // to specify if navbar's social icons should be hidden
 
-export default function Socials({ socialsLinks, currPathname, navbarHeight }) {
+export default function NavbarSocials({ socialsLinks, currPathname, navbarHeight }) {
   const [hideSocials, setHideSocials] = useState(false);
 
   useEffect(() => {
@@ -34,25 +34,10 @@ export default function Socials({ socialsLinks, currPathname, navbarHeight }) {
 
   if (hideSocials) return null;
 
-  return (
-    <div className="socials">
-      <a href={socialsLinks.fb}>
-        <FbCircleIcon />
-      </a>
-      <a href={socialsLinks.ig}>
-        <IgCircleIcon />
-      </a>
-      <a href={socialsLinks.yt}>
-        <YtCircleIcon />
-      </a>
-      <a href={socialsLinks.in}>
-        <InCircleIcon />
-      </a>
-    </div>
-  );
+  return <SocialsCollection className="socials" socialsLinks={socialsLinks} />;
 }
 
-Socials.propTypes = {
+NavbarSocials.propTypes = {
   socialsLinks: PropTypes.shape({
     fb: PropTypes.string,
     ig: PropTypes.string,

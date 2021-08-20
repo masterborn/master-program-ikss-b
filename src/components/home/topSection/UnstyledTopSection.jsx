@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Header1 } from '../../typography/headers';
 import { ParagraphBody } from '../../typography/paragraphs';
 import SecondaryButton from '../../buttons/secondaryButton';
-import Socials from './Socials';
+import Socials from '../../icons/SocialsCollection';
 
 const MOCKUP = {
   title: 'Przykładowy nagłówek IKSS',
@@ -34,7 +34,7 @@ export default function UnstyledTopSection({ className }) {
         <video className="video" src={`https:${MOCKUP.image1}`} muted autoPlay loop />
       </div>
 
-      <Socials socialsLinks={MOCK_SOCIALS} />
+      <Socials socialsLinks={MOCK_SOCIALS} className="socials" showLabel />
     </section>
   );
 }
