@@ -3,7 +3,7 @@ const withSvgr = require('next-svgr');
 
 const nextConfig = {
   images: {
-    domains: ['images.ctfassets.net'],
+    domains: ['img.youtube.com', 'images.ctfassets.net'],
   },
 };
 

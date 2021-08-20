@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { StyledTile, Content, ImageFiller, Title, Body } from './Tile.styles';
+import { StyledTile, Content, ImageFiller, Title, Body } from './ValuesTile.styles';
 
 export default function Tile({ data }) {
   return (
