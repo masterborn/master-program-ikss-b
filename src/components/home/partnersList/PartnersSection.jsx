@@ -1,5 +1,8 @@
-import React from 'react';
-import partners from './partners.json';
+import React, { useMemo } from 'react';
+import PropTypes from 'prop-types';
+import { sortByOrder } from '@root/dataMappers/contentful';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+// import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import {
   Logo,
   LogosContainer,
@@ -8,22 +11,29 @@ import {
   PartnersHeader,
 } from './PartnersSection.style';
 
-function sortLogos() {
-  // once API integration is up, this function will belong in contentful mapper
-  const homepagePartners = partners.filter((partner) => partner.showOnHomepage && partner.logo.url);
+// function renderRichText(richText) {
+//   const options = {
+//     renderNode: {
+//       [BLOCKS.PARAGRAPH]: (node, children) => <PartnersDescription>{children}</PartnersDescription>,
+//     },
+//   };
+// }
 
-  homepagePartners.sort((a, b) => (b.order || 0) - (a.order || 0));
-  return homepagePartners;
-}
-export default function PartnersSection() {
-  const homepagePartners = sortLogos();
+export default function PartnersSection({ partners, partnersText }) {
+  function sortPartners() {
+    const homepagePartners = partners.filter(
+      (partner) => partner.showOnHomepage && partner.logo.url,
+    );
+    return sortByOrder(homepagePartners);
+  }
+  const { title: partnersTitle, text1: richText } = partnersText;
+  const homepagePartners = useMemo(sortPartners, [partners]);
+  const partnersDescription = documentToReactComponents(richText);
+
   return (
     <LogosSection>
-      <PartnersHeader>Współpracują z nami</PartnersHeader>
-      <PartnersDescription>
-        Na pewno powinno się pojawić tu logo UE na pierwszym miejscu. Kilka słów o tym, co można
-        zyskać współpracując z wami jako partnerzy. Jakie to niesie korzyści PR’owe etc.
-      </PartnersDescription>
+      <PartnersHeader>{partnersTitle}</PartnersHeader>
+      <PartnersDescription>{partnersDescription}</PartnersDescription>
       <LogosContainer>
         {homepagePartners.map(({ logo: { title, url }, linkUrl }) => (
           <Logo key={title} href={linkUrl || ''}>
@@ -34,3 +44,8 @@ export default function PartnersSection() {
     </LogosSection>
   );
 }
+
+PartnersSection.propTypes = {
+  partners: PropTypes.shape.isRequired,
+  partnersText: PropTypes.shape.isRequired,
+};
