@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { sortByOrder } from '@root/dataMappers/contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-// import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import {
   Logo,
   LogosContainer,
@@ -11,13 +11,17 @@ import {
   PartnersHeader,
 } from './PartnersSection.style';
 
-// function renderRichText(richText) {
-//   const options = {
-//     renderNode: {
-//       [BLOCKS.PARAGRAPH]: (node, children) => <PartnersDescription>{children}</PartnersDescription>,
-//     },
-//   };
-// }
+function renderRichText(richText) {
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => <PartnersDescription>{children}</PartnersDescription>,
+    },
+    renderMark: {
+      [MARKS.BOLD]: (text) => <b>{text}</b>,
+    },
+  };
+  return documentToReactComponents(richText, options);
+}
 
 export default function PartnersSection({ partners, partnersText }) {
   function sortPartners() {
@@ -28,12 +32,12 @@ export default function PartnersSection({ partners, partnersText }) {
   }
   const { title: partnersTitle, text1: richText } = partnersText;
   const homepagePartners = useMemo(sortPartners, [partners]);
-  const partnersDescription = documentToReactComponents(richText);
+  const partnersDescription = renderRichText(richText);
 
   return (
     <LogosSection>
       <PartnersHeader>{partnersTitle}</PartnersHeader>
-      <PartnersDescription>{partnersDescription}</PartnersDescription>
+      {partnersDescription}
       <LogosContainer>
         {homepagePartners.map(({ logo: { title, url }, linkUrl }) => (
           <Logo key={title} href={linkUrl || ''}>
@@ -46,6 +50,15 @@ export default function PartnersSection({ partners, partnersText }) {
 }
 
 PartnersSection.propTypes = {
-  partners: PropTypes.shape.isRequired,
-  partnersText: PropTypes.shape.isRequired,
+  partners: PropTypes.arrayOf(PropTypes.object).isRequired,
+  partnersText: PropTypes.shape({
+    page: PropTypes.string,
+    identifier: PropTypes.string,
+    title: PropTypes.string,
+    text1: PropTypes.shape({
+      data: PropTypes.shape({}),
+      nodeType: PropTypes.string,
+      content: PropTypes.arrayOf(PropTypes.object),
+    }),
+  }).isRequired,
 };
