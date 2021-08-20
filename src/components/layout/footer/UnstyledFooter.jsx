@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import Socials from './Socials';
+import Socials from '../../icons/SocialsCollection';
 import Logo from '../../logos/PlainLogo';
 import { ParagraphSmall } from '../../typography/paragraphs';
 import LoveIcon from './LoveIcon';
@@ -37,7 +37,7 @@ export default function Footer({ className, paths }) {
             </Link>
           ))}
         </div>
-        <Socials socialsLinks={MOCK_SOCIALS} />
+        <Socials className="socials" socialsLinks={MOCK_SOCIALS} showRegular />
 
         <Link href="/" passHref>
           <a href className="logo">

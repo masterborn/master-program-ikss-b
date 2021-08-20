@@ -8,11 +8,13 @@ const StyledSecondaryButton = styled.button`
   ${(props) => {
     if (props.isBig) {
       return `
+            height: 48px;
             font-size: 16px;
             padding: 0.7em 1.2em 0.7em 1.2em;
             `;
     }
     return `
+        height: 36px;
         font-size: 14px;
         padding: 0.5em 0.88em 0.5em 0.88em;
         `;
