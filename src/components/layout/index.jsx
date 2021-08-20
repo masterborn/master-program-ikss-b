@@ -1,8 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
-import StyledLayout from './StyledLayout';
+import { StyledLayout, PageWrapper } from './Layout.styles';
 import Navbar from './navbar';
 import Footer from './footer';
 
@@ -24,10 +23,6 @@ const paths = [
     path: '/wspolpraca',
   },
 ];
-
-const PageWrapper = styled.div`
-  width: 100%;
-`;
 
 export default function Layout({ children }) {
   const router = useRouter();
