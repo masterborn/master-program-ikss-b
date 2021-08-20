@@ -2,12 +2,18 @@ import React from 'react';
 import Mockup from '@components/Example/mockup';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
+import ProjectsSection from '@root/components/home/projects/ProjectsSection';
+import PartnersSection from '@root/components/home/partnersList/PartnersSection';
 import TopSection from '../components/home/topSection';
 
-export default function index() {
+export default function index({ homepageData: { partners, basicContent } }) {
+  const { 'homepage-partners-text': partnersText } = basicContent;
+
   return (
     <div>
       <TopSection />
+      <ProjectsSection />
+      <PartnersSection partners={partners} partnersText={partnersText} />
       <Mockup />
     </div>
   );
