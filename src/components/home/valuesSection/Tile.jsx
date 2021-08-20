@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { Header5 } from '../../typography/headers';
-import { ParagraphBody } from '../../typography/paragraphs';
+import { StyledTile, Content, ImageFiller, Title, Body } from './Tile.styles';
 
 export default function Tile({ data }) {
   return (
-    <div className="tile">
-      <div className="content">
+    <StyledTile>
+      <Content>
         {data.image1 ? (
           <Image src={`https:${data.image1}`} height={232} width={232} />
         ) : (
-          <div className="image-filler" />
+          <ImageFiller />
         )}
-        <Header5>{data.title}</Header5>
-        <ParagraphBody>{data.text1}</ParagraphBody>
-      </div>
-    </div>
+        <Title>{data.title}</Title>
+        <Body>{data.text1}</Body>
+      </Content>
+    </StyledTile>
   );
 }
 

@@ -1,81 +1,55 @@
-import styled from 'styled-components';
-import ValuesSection from './UnstyledValuesSection';
+import React from 'react';
+import { StyledValuesSection, Title, Paragraph, TilesContainer } from './ValuesSection.styles';
+import Tile from './Tile';
 
-const StyledValuesSection = styled(ValuesSection)`
-  margin-top: 157px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h3 {
-    color: ${(props) => props.theme.color.navy};
-  }
-  p {
-    width: 551px;
-    margin-top: 32px;
-    text-align: center;
-    color: ${(props) => props.theme.color.steel};
-  }
+const MOCKUP = {
+  'homepage-values': {
+    title: 'Wyróżniki, wartości, X-factory organizacji',
+    text1:
+      'Nie koniecznie musimy tu dawać tekst, ale jak jest potrzeba i przestrzeń można rozwinąć nagłówek.',
+  },
+  'homepage-tile-1': {
+    title: 'Największa organizacja kulturalno-sportowa',
+    text1:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.',
+    image1:
+      '//images.ctfassets.net/n21y2i4hkj4h/57PyNcsV9LnnX3os87lfaj/111394c0e83b6b167351a35dee87ab38/Group_163.svg',
+  },
+  'homepage-tile-2': {
+    title: 'O różnorodności projektów, że każdy znajdzie coś dla siebie',
+    text1:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.',
+    image1:
+      '//images.ctfassets.net/n21y2i4hkj4h/5WqeSc2NUSBWwLFJDfdTSJ/8608077c37107cd0a646561d8a46ce4e/Frame_170.svg',
+  },
+  'homepage-tile-3': {
+    title: 'Coś o tym, że łączycie rozwój z zabawą i poznawaniem nowych ludzi',
+    text1:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.',
+    image1:
+      '//images.ctfassets.net/n21y2i4hkj4h/6rSHMopKSWH8YCfhrRMg9c/78c1ff6cd36dfe747b17c3b6b55901ae/Frame_170__1_.svg',
+  },
+};
 
-  .tiles-container {
-    max-width: 1200px;
-    width: 100%;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    .tile {
-      width: 384px;
-      display: flex;
-      flex-direction: column;
+export default function ValuesSection() {
+  const tiles = [];
 
-      margin-top: 62px;
-
-      text-align: center;
-
-      z-index: 0;
-
-      background-color: ${(props) => props.theme.color.white};
-      box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
-        1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
-        0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
-        0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
-      border-radius: 16px;
-
-      .content {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: -62px;
-
-        margin-bottom: -14px;
-
-        align-items: center;
-
-        .image-filler {
-          width: 232px;
-          height: 232px;
-        }
-        img {
-        }
-        h5 {
-          width: 336px;
-          height: 72px;
-          color: ${(props) => props.theme.color.navy};
-          overflow: hidden;
-        }
-        p {
-          width: 336px;
-
-          display: -webkit-box;
-          -webkit-line-clamp: 4;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-
-          text-align: center;
-        }
-      }
+  for (let index = 1; index <= 3; index += 1) {
+    if (MOCKUP[`homepage-tile-${index}`]) {
+      tiles.push(MOCKUP[`homepage-tile-${index}`]);
     }
   }
-`;
 
-export default StyledValuesSection;
+  return (
+    <StyledValuesSection id="values-section">
+      <Title>{MOCKUP['homepage-values'].title}</Title>
+      <Paragraph>{MOCKUP['homepage-values'].text1}</Paragraph>
+
+      <TilesContainer>
+        {tiles.map((val) => (
+          <Tile data={val} key={val.title} />
+        ))}
+      </TilesContainer>
+    </StyledValuesSection>
+  );
+}
