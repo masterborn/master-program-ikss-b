@@ -83,8 +83,10 @@ export default function ProjectsSection() {
           )}
         </ProjectSummary>
       </ProjectArticle>
-      <Link href="/projekty">
-        <SecondaryButton isBig>Zobacz wszystkie projekty</SecondaryButton>
+      <Link passHref href="/projekty">
+        <a href>
+          <SecondaryButton isBig>Zobacz wszystkie projekty</SecondaryButton>
+        </a>
       </Link>
     </ProjectSection>
   );

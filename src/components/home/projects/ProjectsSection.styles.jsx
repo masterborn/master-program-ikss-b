@@ -11,6 +11,12 @@ export const ProjectSection = styled.section`
   height: 1261px;
   width: 997px;
   margin-top: 180px;
+  a {
+    margin-top: auto;
+
+    color: inherit;
+    text-decoration: none;
+  }
 `;
 
 export const SectionHeader = styled(Header3)`
@@ -65,13 +71,6 @@ export const ProjectSummary = styled.div`
   height: 390px;
   width: 100%;
   padding: 64px 102px 66px 103px;
-
-  a {
-    margin-top: auto;
-
-    color: inherit;
-    text-decoration: none;
-  }
 `;
 export const ProjectHeader = styled.div`
   display: flex;

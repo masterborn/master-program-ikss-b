@@ -3,13 +3,10 @@ import data from '../api/data.json';
 
 export default async function getPagesData() {
   const apiEndPoint = `https://cdn.contentful.com/spaces/${config.SPACE_ID}/environments/${config.ENV_ID}/entries?access_token=${config.TOKEN}`;
-  const controller = new AbortController();
   const timeoutId = setTimeout(() => {
-    controller.abort();
     throw new Error('API request timeout');
   }, 5000);
-
-  const res = await fetch(apiEndPoint, { signal: controller.signal });
+  const res = await fetch(apiEndPoint);
   if (res.status !== 200) {
     throw new Error(`Contentful API: Wrong Status Code: ${res.status}: ${res.statusText}`);
   }

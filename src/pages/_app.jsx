@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useRef } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -8,8 +9,6 @@ import Head from 'next/head';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
 import Layout from '@root/components/layout';
-import getPagesData from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
 import useIsMobile from '@root/hooks/useIsMobile';
 
 const App = (props) => {
@@ -18,7 +17,7 @@ const App = (props) => {
     queryClientRef.current = new QueryClient();
   }
   // eslint-disable-next-line react/prop-types
-  const { Component, pagesData } = props;
+  const { Component, pageProps } = props;
   const isMobile = useIsMobile();
 
   return (
@@ -36,7 +35,7 @@ const App = (props) => {
         <QueryClientProvider client={queryClientRef.current}>
           <Hydrate>
             <Layout>
-              <Component pagesData={pagesData} isMobile={isMobile} />
+              <Component {...pageProps} isMobile={isMobile} />
             </Layout>
           </Hydrate>
           <ReactQueryDevtools initialIsOpen={false} />
@@ -45,13 +44,6 @@ const App = (props) => {
       </ThemeProvider>
     </>
   );
-};
-
-App.getInitialProps = async () => {
-  const resJSON = await getPagesData();
-  const pagesData = mapData(resJSON);
-
-  return { pagesData };
 };
 
 App.propTypes = {
