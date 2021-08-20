@@ -1,0 +1,316 @@
+ 
+[
+    {
+      "image": {
+        "url": "//images.ctfassets.net/n21y2i4hkj4h/2fNMHQifNLIKiyar2rpAma/84f429b1608b20d50789fd26de48554f/image_2.jpg",
+        "title": "Nocne Kino Akademickie"
+      },
+      "title": "Pracownia Teatralna",
+      "date": "2020-11-15",
+      "video_url": "https://www.youtube.com/watch?v=0Q_1KW0Q-10",
+      "description": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Kurtyna w górę… Przed Państwem cykl warsztatów teatralnych i aktorskich prowadzonych przez profesjonalistów dla studentów naszego Uniwersytetu. Wieczorem projekt zwieńczony jest na scenie, gdzie nasi uczestnicy zasiadają na widowni, skąd mogą być świadkami wyjątkowego spektaklu teatralnego.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+      "linkCaption": "Dołącz do wydarzenia",
+      "showOnHomepage": true
+    },
+    {
+      "image": {
+        "url": "//images.ctfassets.net/n21y2i4hkj4h/2VmKhKaOFbTZBHD7M0ED3V/bbbfaf58ba344c23f02fa42f168d5518/image_2__1_.jpg",
+        "title": "Wrocławski bieg akademicki"
+      },
+      "title": "Wrocławski Bieg Akademicki",
+      "date": "2020-11-15",
+      "order": 5,
+      "description": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Największy projekt organizacji, w którym biegniemy i pomagamy. To charytatywne wydarzenie zrzesza blisko 1000 biegaczy z całego Wrocławia! Celem wydarzenia jest integracja środowiska akademickiego i biegowego w okresie juwenaliowym poprzez zdrową rywalizację i pomoc potrzebującym. Podczas wydarzenia nie ograniczamy się do biegu, organizujemy ogromną strefę około eventową, której celem jest zapewnienie odpoczynku, rozrywki oraz motywowanie do zdrowego trybu życia poprzez stoiska, np. z pomiarami składu ciała, czy pomocą dietetyczną.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+      "linkCaption": "Podsumowanie wydarzenia",
+      "showOnHomepage": true
+    },
+    {
+      "image": {
+        "url": "//images.ctfassets.net/n21y2i4hkj4h/2fNMHQifNLIKiyar2rpAma/84f429b1608b20d50789fd26de48554f/image_2.jpg",
+        "title": "Nocne Kino Akademickie"
+      },
+      "title": "Nocne Kino Akademickie",
+      "date": "2020-11-15",
+      "order": 10,
+      "video_url": "https://www.youtube.com/watch?v=2ft954vXPa4",
+      "description": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Wydarzenie organizowane we współpracy z Kinem Nowe Horyzonty. Nocne Kino Akademickie to wyjątkowa noc dla wszystkich kinomaniaków, którzy mają możliwość obejrzenia najlepszych produkcji filmowych, które zostały nominowane do Oscarów. ",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Wydarzenie dla 500 osób jest prawdziwą ucztą dla kinomana i świetną zabawą w gronie przyjaciół.",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      },
+      "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+      "linkCaption": "Dołącz do wydarzenia",
+      "showOnHomepage": true
+    },
+    {
+      "image": {
+        "url": "//images.ctfassets.net/n21y2i4hkj4h/2VmKhKaOFbTZBHD7M0ED3V/bbbfaf58ba344c23f02fa42f168d5518/image_2__1_.jpg",
+        "title": "Wrocławski bieg akademicki"
+      },
+      "title": "Express Sportowy",
+      "date": "2020-11-15",
+      "order": 15,
+
+      "description": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "Wyjazd studentów na wydarzenie sportowe, pełne emocji, nowych znajomości, a także sportowych wrażeń. Wspólne kibicowanie, gorący doping i co najważniejsze wspólna radość ze zwycięstwa. Projekt skierowany do sportowych pasjonatów, którzy chcą zorganizować studencki wyjazd na wybrane wydarzenie sportowe.",
+                "marks": [],
+                "data": {}
+              }
+            ],
+            "data": {}
+          }
+        ]
+      },
+      "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+      "linkCaption": "Podsumowanie wydarzenia"
+    },
+    {
+      "image": {
+        "url": "//images.ctfassets.net/n21y2i4hkj4h/2VmKhKaOFbTZBHD7M0ED3V/bbbfaf58ba344c23f02fa42f168d5518/image_2__1_.jpg",
+        "title": "Wrocławski bieg akademicki"
+      },
+      "title": "Express Kulturalny",
+      "date": "2020-11-15",
+      "order": 3,
+      "description": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "Jest to projekt łączący pasjonatów kultury i podróży. Podczas tego jednodniowego wyjazdu można nie tylko poznać europejskie miasta, ale również przeżyć niezapomniane chwile wypełnione dobrą zabawą w najlepszym towarzystwie. Odwiedziliśmy już Drezno, Wiedeń, Bratysławę, Berlin i Amsterdam. Gdzie znajdziemy się kolejnym razem?",
+                "marks": [],
+                "data": {}
+              }
+            ],
+            "data": {}
+          }
+        ]
+      },
+      "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+      "linkCaption": "Podsumowanie wydarzenia"
+    },
+    {
+      "image": {
+        "url": "//images.ctfassets.net/n21y2i4hkj4h/2VmKhKaOFbTZBHD7M0ED3V/bbbfaf58ba344c23f02fa42f168d5518/image_2__1_.jpg",
+        "title": "Wrocławski bieg akademicki"
+      },
+      "title": "IKSS WinterCamp",
+      "date": "2020-11-15",
+      "order": 1,
+      "showOnHomepage": true,
+
+      "description": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "Góry wysokie, śnieg, 115 kilometrów idealnie przygotowanych tras o zróżnicowanym stopniu zaawansowania, snowparki. To wszystko i jeszcze więcej znajdziecie na naszym najdłuższym wyjeździe do Livignio. Oczywiście nie tylko stokiem student żyje, dlatego zaraz po wyjściu z wagonu kolejki wybieramy się ze swoimi przyjaciółmi, aby sprawdzać uroki miasta oraz bawić się do …przyzwoitej pory, aby na drugi dzień znów wrócić na stok.",
+                "marks": [],
+                "data": {}
+              }
+            ],
+            "data": {}
+          }
+        ]
+      },
+      "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+      "linkCaption": "Podsumowanie wydarzenia"
+    },
+    {
+      "image": {
+        "url": "//images.ctfassets.net/n21y2i4hkj4h/2VmKhKaOFbTZBHD7M0ED3V/bbbfaf58ba344c23f02fa42f168d5518/image_2__1_.jpg",
+        "title": "Wrocławski bieg akademicki"
+      },
+      "title": "Kuźnia Stand Up'u",
+      "date": "2020-11-15",
+      "order": 6,
+
+      "description": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "We współpracy z Zrzeszeniem Studentów Polskich organizujemy wieczór, w który studenci mogą odpocząć od natłoku obowiązków i rozerwać się podczas amatorskich występów Stand-Uperów. Projekt daje możliwość zaprezentowania swoich sił stand-uperskich na scenie. Grono jurorów pod przewodnictwem znanego komika  wybiera zwycięzcę tego wieczoru.",
+                "marks": [],
+                "data": {}
+              }
+            ],
+            "data": {}
+          }
+        ]
+      },
+      "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+      "linkCaption": "Podsumowanie wydarzenia"
+    },
+    {
+      "image": {
+        "url": "//images.ctfassets.net/n21y2i4hkj4h/2VmKhKaOFbTZBHD7M0ED3V/bbbfaf58ba344c23f02fa42f168d5518/image_2__1_.jpg",
+        "title": "Wrocławski bieg akademicki"
+      },
+      "title": "Turniej IKSS WOŚP",
+      "date": "2020-11-15",
+      "order": 8,
+      "description": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "Wydarzenie integruje społeczność akademicką poprzez zdrową rywalizację w turnieju piłki nożnej i wsparcie Wielkiej Orkiestry Świątecznej Pomocy. Podczas turnieju piłki halowej uczestnicy mogą wziąć udział w licznych licytacjach na rzecz WOŚP, a całe wydarzenie rozbudowane jest o wiele wyjątkowych atrakcji. Swoimi działaniami dokładamy małą cegiełkę w postaci blisko 20 000 zł do wyniku Wielkiej Orkiestry Świątecznej Pomocy!",
+                "marks": [],
+                "data": {}
+              }
+            ],
+            "data": {}
+          }
+        ]
+      },
+      "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+      "linkCaption": "Podsumowanie wydarzenia"
+    },
+    {
+      "image": {
+        "url": "//images.ctfassets.net/n21y2i4hkj4h/2VmKhKaOFbTZBHD7M0ED3V/bbbfaf58ba344c23f02fa42f168d5518/image_2__1_.jpg",
+        "title": "Wrocławski bieg akademicki"
+      },
+      "title": "Live4Life",
+      "date": "2020-11-15",
+      "order": 11,
+
+      "description": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "Pasja, muzyka i pomoc w jednym. L4L to charytatywny koncert, podczas którego jesteśmy świadkami występów muzyków, zespołów oraz artystów, którzy chcą zaprezentować swoje umiejętności na scenie. W trakcie koncertu odbywają się liczne licytacje, z których całkowity dochód zostaje przeznaczony na podopiecznego wybranej fundacji.",
+                "marks": [],
+                "data": {}
+              }
+            ],
+            "data": {}
+          }
+        ]
+      },
+      "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+      "linkCaption": "Podsumowanie wydarzenia"
+    },
+    {
+      "image": {
+        "url": "//images.ctfassets.net/n21y2i4hkj4h/2VmKhKaOFbTZBHD7M0ED3V/bbbfaf58ba344c23f02fa42f168d5518/image_2__1_.jpg",
+        "title": "Wrocławski bieg akademicki"
+      },
+      "title": "Wrocław E-Sport Tournaments",
+      "date": "2020-11-15",
+      "order": 9,
+
+      "description": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "WEST jest innowacyjnym, ogólnopolskim turniejem w popularną grę – Counter Strike: Global Offensive tworzonym przez grupę osób zafascynowanych tematyką e-sportową. Podczas wydarzenia mamy dla uczestników przygotowany bogaty w różne znane tytuły gier festiwal gamingu, na którym każdy znajdzie coś dla siebie.",
+                "marks": [],
+                "data": {}
+              }
+            ],
+            "data": {}
+          }
+        ]
+      },
+      "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+      "linkCaption": "Podsumowanie wydarzenia"
+    }
+  ]
+  
