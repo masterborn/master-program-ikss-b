@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 import ScrollUpButton from '../../buttons/ScrollUpButton';
 import Logo from '../../logos/PlainLogo';
 import { ParagraphSmall } from '../../typography/paragraphs';
@@ -28,7 +27,6 @@ export const StyledSrollUpButton = styled(ScrollUpButton)`
   position: absolute;
   top: ${(props) => (props.isHomepage ? '-371px' : '-47px')};
   right: 126px;
-  visibility: visible;
   z-index: 1;
   & > g:hover {
     cursor: pointer;
@@ -54,8 +52,6 @@ export const LinksContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-
-export const StyledLink = styled(Link)``;
 
 export const Label = styled.h3`
   min-width: fit-content;
