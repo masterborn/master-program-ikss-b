@@ -54,6 +54,10 @@ function mapItemsCollection(collection) {
   return mappedCollection;
 }
 
+export function sortByOrder(data) {
+  return data.sort((a, b) => (b.order || 0) - (a.order || 0));
+}
+
 export default function mapData(data) {
   const itemCollection = extractItems(data);
   const mappedCollection = mapItemsCollection(itemCollection);
