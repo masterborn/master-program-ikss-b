@@ -1,6 +1,5 @@
 import React from 'react';
 import Mockup from '@components/Example/mockup';
-import TopSection from '../components/home/topSection';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import TopSection from '../components/home/topSection';
