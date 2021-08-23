@@ -7,14 +7,14 @@ import PartnersSection from '@root/components/home/partnersList/PartnersSection'
 import TopSection from '../components/home/topSection';
 import ValuesSection from '../components/home/valuesSection';
 
-export default function index({ homepageData: { partners, basicContent } }) {
+export default function index({ homepageData: { partners, basicContent, projects } }) {
   const { 'homepage-partners-text': partnersText } = basicContent;
 
   return (
     <div>
       <TopSection />
       <ValuesSection />
-      <ProjectsSection />
+      <ProjectsSection projects={projects} />
       <PartnersSection partners={partners} partnersText={partnersText} />
 
       <Mockup />
