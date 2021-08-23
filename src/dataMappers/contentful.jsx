@@ -1,6 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
 
 function extractAsset(itemData, assets) {
   const assetId = itemData.sys.id;
