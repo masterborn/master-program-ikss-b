@@ -129,7 +129,7 @@ const StatusButton = styled.button`
   align-items: center;
 
   border: none;
-  border-radius: 2em;
+  border-radius: 26px;
 
   cursor: pointer;
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ContactForm from '../index';
 
-export const ContacModalContainer = styled.div`
+export const ContactModalContainer = styled.div`
   position: fixed;
   z-index: 9999999;
   left: 0;

@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ContacModalContainer, StyledContactForm, ModalBackground } from './ContactModal.styles';
+import { ContactModalContainer, StyledContactForm, ModalBackground } from './ContactModal.styles';
 
-export default function UnstyledContactModal({ isOpened, closeModal }) {
+export default function ContactModal({ isOpened, closeModal }) {
   if (!isOpened) return null;
   return (
-    <ContacModalContainer>
+    <ContactModalContainer>
       <ModalBackground onClick={closeModal} />
       <StyledContactForm isModal closeModal={closeModal} />
-    </ContacModalContainer>
+    </ContactModalContainer>
   );
 }
 
-UnstyledContactModal.propTypes = {
+ContactModal.propTypes = {
   isOpened: PropTypes.bool,
   closeModal: PropTypes.func.isRequired,
 };
 
-UnstyledContactModal.defaultProps = {
+ContactModal.defaultProps = {
   isOpened: false,
 };

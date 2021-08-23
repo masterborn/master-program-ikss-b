@@ -8,12 +8,12 @@ const mockApi = (data, isRejected = false) =>
     }, 2000);
   });
 
-const sendEmail = async (data, callback, responseType) => {
+const sendEmail = (data, callback, responseType) => {
   callback(responseType.loading);
-  await mockApi(data)
-    .then((res) => {
+  mockApi(data)
+    .then(() => {
       callback(responseType.success);
-      console.log(res);
+      // console.log(res);
     })
     .catch(() => {
       callback(responseType.error);

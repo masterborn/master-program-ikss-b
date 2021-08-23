@@ -20,11 +20,11 @@ const MOCK_SOCIALS = {
 
 // Form on homepage must have 'contact-form' id
 
-export default function Navbar({ isMobile, paths, currPathname }) {
+export default function Navbar({ isMobile, paths, currPathname, openContactModal }) {
   const navbarHeight = isMobile ? '56px' : '88px';
 
   const handleClick = () => {
-    handleContactFormButton(currPathname, navbarHeight);
+    handleContactFormButton(currPathname, navbarHeight, openContactModal);
   };
 
   return (
@@ -62,4 +62,5 @@ Navbar.propTypes = {
     }),
   ).isRequired,
   currPathname: PropTypes.string.isRequired,
+  openContactModal: PropTypes.func.isRequired,
 };

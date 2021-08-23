@@ -6,7 +6,6 @@ import validateInputs from './validation';
 import { XIcon, LoaderIcon } from '../icons/misc';
 import { Header3 } from '../typography/headers';
 import { ParagraphBody, ParagraphSmall } from '../typography/paragraphs';
-import WavingHand from './WavingHand';
 import {
   ContactFormContainer,
   CloseButton,
@@ -29,6 +28,7 @@ import {
 } from './ContactForm.styles';
 
 const MOCKUP = {
+  title: 'Skontaktuj się z nami 👋',
   text1:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ut volutpat tincidunt dictumst neque neque molestie parturient.',
 };
@@ -137,9 +137,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
         {isModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
-          <Header3>
-            Skontaktuj się z nami <WavingHand />{' '}
-          </Header3>
+          <Header3>{MOCKUP.title}</Header3>
           <ParagraphBody>{MOCKUP.text1}</ParagraphBody>
         </TopSection>
 
@@ -198,7 +196,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
             <StyledRODO>
               Zapoznałem się z{' '}
               <Link href="/terms" passHref>
-                <StyledRODOLink href>
+                <StyledRODOLink href target="_blank" rel="noreferrer">
                   informacją o administratorze i przetwarzaniu danych.
                 </StyledRODOLink>
               </Link>
