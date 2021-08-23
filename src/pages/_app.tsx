@@ -18,7 +18,9 @@ const App: FunctionComponent<AppProps> = (props) => {
 
   const [isContactModalOpened, setModalIsOpened] = useState(false);
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const closeContactModal = () => setModalIsOpened(false);
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const openContactModal = () => setModalIsOpened(true);
 
   const updatedTheme = {
