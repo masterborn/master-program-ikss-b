@@ -135,8 +135,13 @@ const StatusButton = styled.button`
 
   color: ${(props) => props.theme.color.white};
   font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
 `;
 
 export const SuccessButton = styled(StatusButton)`
-  background-color: #18d4a7;
+  background-color: ${(props) => props.theme.color.misc.successGreen};
+`;
+export const ErrorButton = styled(StatusButton)`
+  background-color: ${(props) => props.theme.color.misc.errorRed};
 `;

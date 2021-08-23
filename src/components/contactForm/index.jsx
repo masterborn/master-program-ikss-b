@@ -24,6 +24,8 @@ import {
   LoadingButton,
   SuccessButton,
   StyledSuccessIcon,
+  ErrorButton,
+  StyledErrorIcon,
 } from './ContactForm.styles';
 
 const MOCKUP = {
@@ -55,7 +57,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
     termsCheckbox: false,
   });
 
-  const [formStatus, setFormStatus] = useState('loading');
+  const [formStatus, setFormStatus] = useState('changing');
 
   const handleNameChange = ({ target: { value } }) => {
     setFormValues((prevState) => ({ ...prevState, name: value }));
@@ -81,18 +83,24 @@ export default function ContactForm({ className, isModal, closeModal }) {
     return !Object.values(resources).some((isInvalid) => isInvalid);
   };
 
+  const changeFormStatus = (statusType) => setFormStatus(statusType);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (formStatus === STATUS_STATES.changing && isFormValid()) {
-      setFormStatus(STATUS_STATES.loading);
-      sendEmail(formValues)
-        .then(() => {
-          setFormStatus(STATUS_STATES.success);
-          // console.log(data);
-        })
-        .catch(() => {
-          setFormStatus(STATUS_STATES.error);
-        });
+    if (
+      (formStatus === STATUS_STATES.changing || formStatus === STATUS_STATES.error) &&
+      isFormValid()
+    ) {
+      sendEmail(formValues, changeFormStatus, STATUS_STATES);
+    } else if (formStatus === STATUS_STATES.success) {
+      setFormValues({
+        name: '',
+        lastName: '',
+        email: '',
+        content: '',
+        isTermsBoxChecked: false,
+      });
+      setFormStatus(STATUS_STATES.changing);
     }
   };
 
@@ -101,11 +109,17 @@ export default function ContactForm({ className, isModal, closeModal }) {
       case STATUS_STATES.success:
         return (
           <SuccessButton>
-            <StyledSuccessIcon /> Wiadomość wysłano! Odpowiemy wkrótce.
+            <StyledSuccessIcon />
+            Wiadomość wysłano! Odpowiemy wkrótce.
           </SuccessButton>
         );
       case STATUS_STATES.error:
-        return 'error';
+        return (
+          <ErrorButton>
+            <StyledErrorIcon />
+            Coś poszło nie tak. Spróbuj jeszcze raz.
+          </ErrorButton>
+        );
       case STATUS_STATES.loading:
         return (
           <LoadingButton isBig>
@@ -178,6 +192,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
           <Row>
             <StyledCheckbox
               onChange={handleTermsCheckboxSelect}
+              checked={formValues.isTermsBoxChecked}
               isInvalid={areInputsInvalid.termsCheckbox}
             />
             <StyledRODO>
