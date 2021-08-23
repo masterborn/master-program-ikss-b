@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import sendEmail from '@root/clients/formcarry';
 import validateInputs from './validation';
-import { XIcon } from '../icons/misc';
+import { XIcon, LoaderIcon } from '../icons/misc';
 import { Header3 } from '../typography/headers';
 import { ParagraphBody, ParagraphSmall } from '../typography/paragraphs';
 import WavingHand from './WavingHand';
@@ -20,11 +21,21 @@ import {
   StyledRODO,
   StyledRODOLink,
   SubmitButton,
+  LoadingButton,
+  SuccessButton,
+  StyledSuccessIcon,
 } from './ContactForm.styles';
 
 const MOCKUP = {
   text1:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ut volutpat tincidunt dictumst neque neque molestie parturient.',
+};
+
+const STATUS_STATES = {
+  changing: 'changing',
+  loading: 'loading',
+  success: 'success',
+  error: 'error',
 };
 
 export default function ContactForm({ className, isModal, closeModal }) {
@@ -43,6 +54,8 @@ export default function ContactForm({ className, isModal, closeModal }) {
     content: false,
     termsCheckbox: false,
   });
+
+  const [formStatus, setFormStatus] = useState('loading');
 
   const handleNameChange = ({ target: { value } }) => {
     setFormValues((prevState) => ({ ...prevState, name: value }));
@@ -70,8 +83,37 @@ export default function ContactForm({ className, isModal, closeModal }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (isFormValid()) {
-      // send form
+    if (formStatus === STATUS_STATES.changing && isFormValid()) {
+      setFormStatus(STATUS_STATES.loading);
+      sendEmail(formValues)
+        .then(() => {
+          setFormStatus(STATUS_STATES.success);
+          // console.log(data);
+        })
+        .catch(() => {
+          setFormStatus(STATUS_STATES.error);
+        });
+    }
+  };
+
+  const submitButton = () => {
+    switch (formStatus) {
+      case STATUS_STATES.success:
+        return (
+          <SuccessButton>
+            <StyledSuccessIcon /> Wiadomość wysłano! Odpowiemy wkrótce.
+          </SuccessButton>
+        );
+      case STATUS_STATES.error:
+        return 'error';
+      case STATUS_STATES.loading:
+        return (
+          <LoadingButton isBig>
+            <LoaderIcon intervalDuration={200} />
+          </LoadingButton>
+        );
+      default:
+        return <SubmitButton isBig>Wyślij wiadomość</SubmitButton>;
     }
   };
 
@@ -148,7 +190,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
             </StyledRODO>
           </Row>
 
-          <SubmitButton isBig>Wyślij wiadomość</SubmitButton>
+          {submitButton()}
         </Form>
       </Content>
     </ContactFormContainer>

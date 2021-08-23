@@ -5,6 +5,7 @@ import { ParagraphSmall } from '../typography/paragraphs';
 import PrimaryButton from '../buttons/primaryButton';
 import TextArea from '../formElements/textarea';
 import Checkbox from '../formElements/checkbox';
+import { SuccessIcon, ErrorIcon } from '../icons/misc';
 
 export const ContactFormContainer = styled.div`
   width: 748px;
@@ -97,6 +98,45 @@ export const StyledRODOLink = styled.a`
 `;
 
 export const SubmitButton = styled(PrimaryButton)`
+  width: 187px;
+  height: 48px;
+
   margin-top: 37px;
   margin-left: auto;
+`;
+
+export const LoadingButton = styled(SubmitButton)`
+  width: 187px;
+  height: 48px;
+`;
+
+export const StyledSuccessIcon = styled(SuccessIcon)`
+  margin-right: 10px;
+`;
+export const StyledErrorIcon = styled(ErrorIcon)`
+  margin-right: 10px;
+`;
+
+const StatusButton = styled.button`
+  width: 100%;
+  height: 48px;
+
+  margin-top: 37px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 2em;
+
+  cursor: pointer;
+
+  color: ${(props) => props.theme.color.white};
+  font-weight: bold;
+`;
+
+export const SuccessButton = styled(StatusButton)`
+  background-color: #18d4a7;
 `;
