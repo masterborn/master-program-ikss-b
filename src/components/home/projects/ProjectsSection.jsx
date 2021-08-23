@@ -1,88 +1,47 @@
-import PrimaryButton from '@root/components/buttons/primaryButton';
-import SecondaryButton from '@root/components/buttons/secondaryButton';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import ProjectVideo from './ProjectVideo';
-import projects from './projects.json';
+import PropTypes from 'prop-types';
+import SecondaryButton from '@root/components/buttons/secondaryButton';
+import ProjectTile from '@root/components/projectTile/ProjectTile';
+import { sortByOrder } from '@root/dataMappers/contentful';
 
 import {
-  ProjectDescription,
   ProjectSection,
-  ProjectArticle,
   ProjectButton,
-  ProjectDate,
-  ProjectHeader,
-  ProjectMediaContainer,
   ProjectsButtonsContainer,
-  ProjectSummary,
-  ProjectTitle,
   SectionHeader,
-  ProjectImage,
 } from './ProjectsSection.styles';
 
-function sortProjects() {
-  // once API integration is up, this function will belong in contentful mapper
-  const homepageArticles = projects.filter((project) => project.showOnHomepage);
-
-  homepageArticles.sort((a, b) => (b.order || 0) - (a.order || 0));
-  const sortedArticles = homepageArticles.slice(0, 3);
-  return sortedArticles;
+function sortProjects(projects) {
+  const homepageProjects = projects.filter((project) => project.showOnHomepage);
+  const sortedProjects = sortByOrder(homepageProjects);
+  return sortedProjects.slice(0, 3);
 }
-export default function ProjectsSection() {
-  // once API integration is up, take projects' data as props to func component,
-  // and sort them using imported function from dataMappers/contentful.js
-  const homepageArticles = sortProjects();
-  const [currentArticle, setArticle] = useState(homepageArticles[0]);
-  const {
-    title,
-    date,
-    image: { url: imageUrl, title: imgTitle },
-    linkUrl,
-    video_url: videoUrl,
-  } = currentArticle;
+export default function ProjectsSection({ projects }) {
+  const homepageProjects = useMemo(() => sortProjects(projects), [projects]);
+  const [currentProject, setCurrentProject] = useState(homepageProjects[0]);
 
-  function switchArticle(event) {
-    const articleTitle = event.target.value;
-    const newArticle = homepageArticles.find((article) => article.title === articleTitle);
-    setArticle(newArticle);
+  function switchProject({ target }) {
+    const { value: projectTitle } = target;
+    const nextProject = homepageProjects.find(({ title }) => title === projectTitle);
+    setCurrentProject(nextProject);
   }
-  const linkIsFromFacebook = /^(https:\/\/)?(www.)?facebook\.com\/.*/.test(linkUrl);
   return (
     <ProjectSection id="projects">
       <SectionHeader>Najnowsze Projekty</SectionHeader>
       <ProjectsButtonsContainer>
-        {homepageArticles.map(({ title: articleTitle }) => (
+        {homepageProjects.map(({ title }) => (
           <ProjectButton
-            key={articleTitle}
-            value={articleTitle}
-            onClick={switchArticle}
-            clicked={articleTitle === title}
+            key={title}
+            value={title}
+            onClick={switchProject}
+            clicked={title === currentProject.title}
           >
-            {articleTitle}
+            {title}
           </ProjectButton>
         ))}
       </ProjectsButtonsContainer>
-      <ProjectArticle>
-        <ProjectMediaContainer>
-          {videoUrl ? (
-            <ProjectVideo url={videoUrl} />
-          ) : (
-            <ProjectImage width={997} height={579} alt={imgTitle} src={`https:\\${imageUrl}`} />
-          )}
-        </ProjectMediaContainer>
-        <ProjectSummary>
-          <ProjectHeader>
-            <ProjectTitle>{title}</ProjectTitle>
-            <ProjectDate>{date}</ProjectDate>
-          </ProjectHeader>
-          <ProjectDescription>nic</ProjectDescription>
-          {linkUrl && (
-            <a href={linkUrl}>
-              <PrimaryButton withIcon={linkIsFromFacebook}>Podsumowanie wydarzenia</PrimaryButton>
-            </a>
-          )}
-        </ProjectSummary>
-      </ProjectArticle>
+      <ProjectTile showOnHomepage project={currentProject} />
       <Link passHref href="/projekty">
         <a href>
           <SecondaryButton isBig>Zobacz wszystkie projekty</SecondaryButton>
@@ -91,3 +50,7 @@ export default function ProjectsSection() {
     </ProjectSection>
   );
 }
+
+ProjectsSection.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

@@ -1,3 +1,6 @@
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+
 function extractAsset(itemData, assets) {
   const assetId = itemData.sys.id;
   const asset = assets.find((collectionAsset) => collectionAsset.sys.id === assetId);
@@ -56,6 +59,20 @@ function mapItemsCollection(collection) {
 
 export function sortByOrder(data) {
   return data.sort((a, b) => (b.order || 0) - (a.order || 0));
+}
+
+export function convertRichTextToReactComponent(Component, richText) {
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => <Component>{children}</Component>,
+    },
+    renderMark: {
+      [MARKS.BOLD]: (text) => <b>{text}</b>,
+      [MARKS.ITALIC]: (text) => <i>{text}</i>,
+      [MARKS.UNDERLINE]: (text) => <ins>{text}</ins>,
+    },
+  };
+  return documentToReactComponents(richText, options);
 }
 
 export default function mapData(data) {
