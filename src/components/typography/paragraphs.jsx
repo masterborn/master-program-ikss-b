@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ParagraphBody = styled.p`
+  color: ${(props) => props.theme.color.steel};
   font-size: ${(props) => props.theme.fontSize.body};
   font-weight: ${(props) => props.theme.fontWeight.body};
   line-height: ${(props) => props.theme.lineHeight.body};
@@ -12,6 +13,7 @@ ParagraphBody.defaultProps = {
 };
 
 export const ParagraphSmall = styled.p`
+  color: ${(props) => props.theme.color.steel};
   font-size: ${(props) => props.theme.fontSize.bodySmall};
   font-weight: ${(props) => props.theme.fontWeight.bodySmall};
   line-height: ${(props) => props.theme.lineHeight.bodySmall};

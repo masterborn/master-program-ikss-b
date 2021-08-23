@@ -1,8 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
-import StyledLayout from './StyledLayout';
+import { StyledLayout, PageWrapper } from './Layout.styles';
 import Navbar from './navbar';
 import Footer from './footer';
 import ContactFormModal from '../contactForm/contactModal';
@@ -26,22 +25,17 @@ const paths = [
   },
 ];
 
-const Centered = styled.div`
-  width: 100%;
-  height: 100%;
-`;
-
 export default function Layout({
   children,
+  isMobile,
   isContactModalOpened,
   closeContactModal,
   openContactModal,
 }) {
   const router = useRouter();
-  const isMobile = false;
 
   return (
-    <Centered>
+    <PageWrapper>
       <StyledLayout isMobile={isMobile}>
         <Navbar
           isMobile={isMobile}
@@ -56,16 +50,18 @@ export default function Layout({
             closeModal={closeContactModal}
           />
         )}
-        <div className="pageContent">{children}</div>
+
+        <div id="main">{children}</div>
 
         <Footer paths={paths} isHomepage={router.pathname === '/'} />
       </StyledLayout>
-    </Centered>
+    </PageWrapper>
   );
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  isMobile: PropTypes.bool.isRequired,
   isContactModalOpened: PropTypes.bool.isRequired,
   closeContactModal: PropTypes.func.isRequired,
   openContactModal: PropTypes.func.isRequired,

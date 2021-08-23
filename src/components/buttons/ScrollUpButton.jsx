@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function ScrollUpButton({ onClick }) {
+export default function ScrollUpButton({ className, onClick }) {
   return (
     <svg
+      className={className}
       width="126"
       height="126"
       viewBox="0 0 126 126"
@@ -79,5 +80,10 @@ export default function ScrollUpButton({ onClick }) {
 }
 
 ScrollUpButton.propTypes = {
+  className: PropTypes.string,
   onClick: PropTypes.func.isRequired,
+};
+
+ScrollUpButton.defaultProps = {
+  className: '',
 };

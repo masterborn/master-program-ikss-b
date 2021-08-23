@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function BubbleLogo() {
+export default function BubbleLogo({ className }) {
   return (
     <svg
+      className={className}
       width="179"
       height="113"
       viewBox="0 0 179 113"
@@ -40,3 +42,11 @@ export default function BubbleLogo() {
     </svg>
   );
 }
+
+BubbleLogo.propTypes = {
+  className: PropTypes.string,
+};
+
+BubbleLogo.defaultProps = {
+  className: '',
+};

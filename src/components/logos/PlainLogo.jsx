@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function RectangleLogo() {
+export default function PlainLogo({ className }) {
   return (
     <svg
+      className={className}
       width="116"
       height="67"
       viewBox="0 0 116 67"
@@ -44,3 +46,11 @@ export default function RectangleLogo() {
     </svg>
   );
 }
+
+PlainLogo.propTypes = {
+  className: PropTypes.string,
+};
+
+PlainLogo.defaultProps = {
+  className: '',
+};

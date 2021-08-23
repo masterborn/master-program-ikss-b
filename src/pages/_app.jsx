@@ -1,26 +1,28 @@
-import { FunctionComponent, useRef, useState } from 'react';
+/* eslint-disable react/jsx-props-no-spreading */
+import { useRef, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Hydrate } from 'react-query/hydration';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
-import { AppProps } from 'next/app';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
-import Layout from '../components/layout';
+import Layout from '@root/components/layout';
+import useIsMobile from '@root/hooks/useIsMobile';
 
-const App: FunctionComponent<AppProps> = (props) => {
-  const queryClientRef = useRef<QueryClient>();
+const App = (props) => {
+  const queryClientRef = useRef();
   if (!queryClientRef.current) {
     queryClientRef.current = new QueryClient();
   }
+  // eslint-disable-next-line react/prop-types
   const { Component, pageProps } = props;
+  const isMobile = useIsMobile();
 
   const [isContactModalOpened, setModalIsOpened] = useState(false);
 
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const closeContactModal = () => setModalIsOpened(false);
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const openContactModal = () => setModalIsOpened(true);
 
   const updatedTheme = {
@@ -41,13 +43,14 @@ const App: FunctionComponent<AppProps> = (props) => {
       </Head>
       <ThemeProvider theme={updatedTheme}>
         <QueryClientProvider client={queryClientRef.current}>
-          <Hydrate state={pageProps.dehydratedState}>
+          <Hydrate>
             <Layout
+              isMobile={isMobile}
               closeContactModal={closeContactModal}
               openContactModal={openContactModal}
               isContactModalOpened={isContactModalOpened}
             >
-              <Component {...pageProps} />
+              <Component {...pageProps} isMobile={isMobile} />
             </Layout>
           </Hydrate>
           <ReactQueryDevtools initialIsOpen={false} />
@@ -56,6 +59,10 @@ const App: FunctionComponent<AppProps> = (props) => {
       </ThemeProvider>
     </>
   );
+};
+
+App.propTypes = {
+  Component: PropTypes.func.isRequired,
 };
 
 export default App;

@@ -1,76 +1,70 @@
-import styled from 'styled-components';
-import Footer from './UnstyledFooter';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
+import {
+  StyledFooter,
+  Filler,
+  StyledSrollUpButton,
+  Centered,
+  LinksContainer,
+  Label,
+  StyledLogo,
+  StyledSocials,
+  Paragraph,
+} from './Footer.styles';
+import LoveIcon from './LoveIcon';
 
-const StyledFooter = styled(Footer)`
-  position: relative;
+const MOCK_SOCIALS = {
+  fb: 'https://www.facebook.com/',
+  ig: 'https://www.instagram.com/',
+  yt: 'https://www.youtube.com/',
+  in: 'https://www.linkedin.com/',
+};
+const MOCK_RIGHT_RESERVERD =
+  '©2021 All rights reserved by Informacja Kulturalno-Sportowa Studentów';
 
-  width: 100%;
-  height: 404px;
+export default function Footer({ paths, isHomepage }) {
+  const scrollUp = () => {
+    window.scroll(0, 0);
+  };
 
-  background-color: ${(props) => props.theme.color.ikssBlue};
-  color: ${(props) => props.theme.color.white};
+  return (
+    <StyledFooter>
+      {isHomepage && <Filler isHomepage={isHomepage} />}
 
-  .centered {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+      <StyledSrollUpButton isHomepage={isHomepage} onClick={scrollUp} />
 
-    padding-top: 56px;
-    padding-bottom: 48px;
-    z-index: 1;
+      <Centered>
+        <LinksContainer>
+          {paths.map(({ name, path }) => (
+            <Link href={path} key={path}>
+              <Label>{name}</Label>
+            </Link>
+          ))}
+        </LinksContainer>
+        <StyledSocials className="socials" socialsLinks={MOCK_SOCIALS} showRegular />
 
-    .links {
-      a {
-        margin: 0px 32px;
-        color: ${(props) => props.theme.color.white};
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-      }
-      margin-bottom: 48px;
-    }
-    .socials {
-      width: 189px;
+        <Link href="/" passHref>
+          <a href className="logo">
+            <StyledLogo />
+          </a>
+        </Link>
 
-      margin-bottom: 29px;
+        <Paragraph>
+          {MOCK_RIGHT_RESERVERD} <br />
+          Made with <LoveIcon /> by MasterBorn Software
+        </Paragraph>
+      </Centered>
+    </StyledFooter>
+  );
+}
 
-      display: flex;
-      justify-content: space-between;
-    }
-
-    & .logo {
-      margin-bottom: 56px;
-
-      & > svg {
-        width: 84px;
-        height: 48px;
-      }
-    }
-  }
-
-  .filler {
-    position: absolute;
-    left: 0;
-    top: -324px;
-    width: 100%;
-    z-index: -100;
-    height: 324px;
-    background-color: ${(props) => props.theme.color.ikssBlue};
-    visibility: ${(props) => !props.isHomepage && 'hidden'};
-  }
-  .scrollUpButton {
-    position: absolute;
-    top: ${(props) => (props.isHomepage ? '-371px' : '-47px')};
-    right: 126px;
-    visibility: visible;
-    z-index: 1;
-    & > svg > g:hover {
-      cursor: pointer;
-    }
-  }
-`;
-
-export default StyledFooter;
+Footer.propTypes = {
+  paths: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      path: PropTypes.string,
+    }),
+  ).isRequired,
+  isHomepage: PropTypes.bool.isRequired,
+};
