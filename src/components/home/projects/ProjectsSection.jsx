@@ -19,12 +19,12 @@ function sortProjects(projects) {
 }
 export default function ProjectsSection({ projects }) {
   const homepageProjects = useMemo(() => sortProjects(projects), [projects]);
-  const [currentProject, setProject] = useState(homepageProjects[0]);
+  const [currentProject, setCurrentProject] = useState(homepageProjects[0]);
 
-  function switchProject(event) {
-    const projectTitle = event.target.value;
+  function switchProject({ target }) {
+    const { value: projectTitle } = target;
     const nextProject = homepageProjects.find(({ title }) => title === projectTitle);
-    setProject(nextProject);
+    setCurrentProject(nextProject);
   }
   return (
     <ProjectSection id="projects">
