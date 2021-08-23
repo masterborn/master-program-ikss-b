@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const styledCheckbox = styled.input.attrs({ type: 'checkbox' })`
-  padding-left: 3px;
+  padding-left: 1.5px;
   padding-top: 4px;
   padding-bottom: 0.25px;
   box-sizing: border-box;
