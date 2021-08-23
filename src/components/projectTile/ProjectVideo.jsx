@@ -7,11 +7,13 @@ import {
   VideoFrame,
   VideoThumbnail,
   VideoWrapper,
-} from './ProjectVideo.style';
+} from './ProjectVideo.styles';
 
 export default function ProjectVideo({ url }) {
   const videoFrame = useRef();
-  const videoId = url.match(/(https:\/\/)?(www\.)?youtube\.com\/watch\?v=(\S+)(\?.*)?/)[3];
+  const videoId = url.match(
+    /http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-_]*)(&(amp;)?‌)?/,
+  )[1];
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
   const thumbnailImage = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
   const [playingVideo, setPlayingVideo] = useState(false);
