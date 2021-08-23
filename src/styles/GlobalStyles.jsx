@@ -5,7 +5,7 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  overflow: ${(props) => props.isContactModalOpened && 'hidden'};
+  overflow: ${(props) => props.theme.overflow};
 }
   * {
     -webkit-font-smoothing: antialiased;

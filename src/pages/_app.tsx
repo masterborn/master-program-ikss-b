@@ -18,11 +18,12 @@ const App: FunctionComponent<AppProps> = (props) => {
 
   const [isContactModalOpened, setModalIsOpened] = useState(false);
 
-  const closeContactModal = () => {
-    setModalIsOpened(false);
-  };
-  const openContactModal = () => {
-    setModalIsOpened(true);
+  const closeContactModal = () => setModalIsOpened(false);
+  const openContactModal = () => setModalIsOpened(true);
+
+  const updatedTheme = {
+    ...theme,
+    overflow: isContactModalOpened ? 'hidden' : 'auto',
   };
 
   return (
@@ -36,7 +37,7 @@ const App: FunctionComponent<AppProps> = (props) => {
           rel="stylesheet"
         />
       </Head>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={updatedTheme}>
         <QueryClientProvider client={queryClientRef.current}>
           <Hydrate state={pageProps.dehydratedState}>
             <Layout
@@ -49,7 +50,7 @@ const App: FunctionComponent<AppProps> = (props) => {
           </Hydrate>
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
-        <GlobalStyles isContactModalOpened={isContactModalOpened} />
+        <GlobalStyles />
       </ThemeProvider>
     </>
   );
