@@ -3,9 +3,9 @@ const joi = require('joi');
 const schema = joi
   .object()
   .keys({
-    SPACE_ID: joi.string().required(),
-    ENV_ID: joi.string().required(),
-    TOKEN: joi.string().required(),
+    SPACE_ID: joi.string(),
+    ENV_ID: joi.string(),
+    TOKEN: joi.string(),
   })
   .unknown();
 
