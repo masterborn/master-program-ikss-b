@@ -11,7 +11,6 @@ import Head from 'next/head';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
 import Layout from '@root/components/layout';
-import useIsMobile from '@root/hooks/useIsMobile';
 
 const App = (props) => {
   const queryClientRef = useRef();
@@ -20,7 +19,6 @@ const App = (props) => {
   }
   // eslint-disable-next-line react/prop-types
   const { Component, pageProps } = props;
-  const isMobile = useIsMobile();
 
   return (
     <>
@@ -37,8 +35,8 @@ const App = (props) => {
         <CustomThemeProvider theme={theme}>
           <QueryClientProvider client={queryClientRef.current}>
             <Hydrate>
-              <Layout isMobile={isMobile}>
-                <Component {...pageProps} isMobile={isMobile} />
+              <Layout>
+                <Component {...pageProps} />
               </Layout>
             </Hydrate>
             <ReactQueryDevtools initialIsOpen={false} />

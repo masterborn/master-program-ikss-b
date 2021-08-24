@@ -26,17 +26,15 @@ const paths = [
   },
 ];
 
-export default function Layout({ children, isMobile }) {
+export default function Layout({ children }) {
   const router = useRouter();
   const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
 
   return (
     <PageWrapper>
-      <StyledLayout isMobile={isMobile}>
-        <Navbar isMobile={isMobile} paths={paths} currPathname={router.pathname} />
-        {router.pathname !== '/' && (
-          <ContactFormModal isMobile={false} isOpened={isContactModalOpened} />
-        )}
+      <StyledLayout>
+        <Navbar paths={paths} currPathname={router.pathname} />
+        {router.pathname !== '/' && <ContactFormModal isOpened={isContactModalOpened} />}
 
         <div id="main">{children}</div>
 
@@ -48,5 +46,4 @@ export default function Layout({ children, isMobile }) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  isMobile: PropTypes.bool.isRequired,
 };
