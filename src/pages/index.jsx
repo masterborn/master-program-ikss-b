@@ -1,5 +1,4 @@
 import React from 'react';
-import Mockup from '@components/Example/mockup';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import ProjectsSection from '@root/components/home/projects/ProjectsSection';
@@ -16,8 +15,6 @@ export default function index({ homepageData: { partners, basicContent, projects
       <ValuesSection />
       <ProjectsSection projects={projects} />
       <PartnersSection partners={partners} partnersText={partnersText} />
-
-      <Mockup />
     </div>
   );
 }
