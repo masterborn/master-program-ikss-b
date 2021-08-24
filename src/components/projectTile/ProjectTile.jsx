@@ -4,6 +4,7 @@ import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import PrimaryButton from '../buttons/primaryButton';
 import ProjectVideo from './ProjectVideo';
 import {
+  ProjectDescription,
   ProjectArticle,
   ProjectDate,
   ProjectHeader,
@@ -12,12 +13,10 @@ import {
   ProjectImage,
   ProjectMediaContainer,
 } from './ProjectTile.styles';
-import { ParagraphBody } from '../typography/paragraphs';
 
 export default function ProjectTile({ project }) {
   const { title, date, video_url: videoUrl, image, linkUrl, description } = project;
   const linkIsFromFacebook = /^(https:\/\/)?(www.)?f(b||acebook)\.com\/.*/.test(linkUrl);
-  const ProjectDescription = convertRichTextToReactComponent(ParagraphBody, description);
 
   return (
     <ProjectArticle>
@@ -33,7 +32,7 @@ export default function ProjectTile({ project }) {
           <ProjectTitle>{title}</ProjectTitle>
           <ProjectDate>{date}</ProjectDate>
         </ProjectHeader>
-        {ProjectDescription}
+        {convertRichTextToReactComponent(ProjectDescription, description)}
         {linkUrl && (
           <a href={linkUrl}>
             <PrimaryButton withIcon={linkIsFromFacebook}>Podsumowanie wydarzenia</PrimaryButton>

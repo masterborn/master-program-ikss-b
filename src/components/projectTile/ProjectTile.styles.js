@@ -1,4 +1,5 @@
 import { Header4, Header5 } from '@root/components/typography/headers';
+import { ParagraphBody } from '@root/components/typography/paragraphs';
 import Image from 'next/image';
 import styled from 'styled-components';
 
@@ -40,6 +41,12 @@ export const ProjectDate = styled(Header5)`
 
 export const ProjectTitle = styled(Header4)`
   margin: 0 24px 0 0;
+`;
+export const ProjectDescription = styled(ParagraphBody)`
+  @media (max-width: 550px) {
+    font-size: 14px;
+    line-height: 28px;
+  }
 `;
 
 export const ProjectImage = styled(Image)`
