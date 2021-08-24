@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
+import { useSelector } from 'react-redux';
 import { StyledLayout, PageWrapper } from './Layout.styles';
 import Navbar from './navbar';
 import Footer from './footer';
@@ -25,30 +26,16 @@ const paths = [
   },
 ];
 
-export default function Layout({
-  children,
-  isMobile,
-  isContactModalOpened,
-  closeContactModal,
-  openContactModal,
-}) {
+export default function Layout({ children, isMobile }) {
   const router = useRouter();
+  const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
 
   return (
     <PageWrapper>
       <StyledLayout isMobile={isMobile}>
-        <Navbar
-          isMobile={isMobile}
-          paths={paths}
-          currPathname={router.pathname}
-          openContactModal={openContactModal}
-        />
+        <Navbar isMobile={isMobile} paths={paths} currPathname={router.pathname} />
         {router.pathname !== '/' && (
-          <ContactFormModal
-            isMobile={false}
-            isOpened={isContactModalOpened}
-            closeModal={closeContactModal}
-          />
+          <ContactFormModal isMobile={false} isOpened={isContactModalOpened} />
         )}
 
         <div id="main">{children}</div>
@@ -62,7 +49,4 @@ export default function Layout({
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   isMobile: PropTypes.bool.isRequired,
-  isContactModalOpened: PropTypes.bool.isRequired,
-  closeContactModal: PropTypes.func.isRequired,
-  openContactModal: PropTypes.func.isRequired,
 };

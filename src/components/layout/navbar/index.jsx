@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { useDispatch } from 'react-redux';
+import { openModal } from '@root/redux/actions/modalActions';
 import {
   StyledNavbar,
   LinksContainer,
@@ -20,13 +22,13 @@ const MOCK_SOCIALS = {
 
 // Form on homepage must have 'contact-form' id
 
-export default function Navbar({ isMobile, paths, currPathname, openContactModal }) {
+export default function Navbar({ isMobile, paths, currPathname }) {
+  const dispatch = useDispatch();
   const navbarHeight = isMobile ? '56px' : '88px';
 
-  const handleClick = () => {
-    handleContactFormButton(currPathname, navbarHeight, openContactModal);
-  };
+  const closeContactModal = () => dispatch(openModal());
 
+  const handleClick = () => handleContactFormButton(currPathname, navbarHeight, closeContactModal);
   return (
     <StyledNavbar>
       <Link href="/" passHref>
@@ -62,5 +64,4 @@ Navbar.propTypes = {
     }),
   ).isRequired,
   currPathname: PropTypes.string.isRequired,
-  openContactModal: PropTypes.func.isRequired,
 };

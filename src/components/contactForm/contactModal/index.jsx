@@ -1,22 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import { closeModal } from '@root/redux/actions/modalActions';
 import { ContactModalContainer, StyledContactForm, ModalBackground } from './ContactModal.styles';
 
-export default function ContactModal({ isOpened, closeModal }) {
-  if (!isOpened) return null;
+export default function ContactModal() {
+  const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
+  const dispatch = useDispatch();
+
+  const closeContactModal = () => dispatch(closeModal());
+
+  if (!isContactModalOpened) return null;
   return (
     <ContactModalContainer>
-      <ModalBackground onClick={closeModal} />
-      <StyledContactForm isModal closeModal={closeModal} />
+      <ModalBackground onClick={closeContactModal} />
+      <StyledContactForm isModal closeModal={closeContactModal} />
     </ContactModalContainer>
   );
 }
-
-ContactModal.propTypes = {
-  isOpened: PropTypes.bool,
-  closeModal: PropTypes.func.isRequired,
-};
-
-ContactModal.defaultProps = {
-  isOpened: false,
-};
