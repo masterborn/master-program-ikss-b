@@ -101,6 +101,10 @@ export default function ContactForm({ className, isModal, closeModal }) {
         isTermsBoxChecked: false,
       });
       setFormStatus(STATUS_STATES.changing);
+
+      if (isModal) {
+        closeModal();
+      }
     }
   };
 
