@@ -5,6 +5,11 @@ export const StyledLayout = styled.div`
 
   margin: 0 auto;
 
+  @media (max-width: 550px) {
+    min-width: 300px;
+    width: auto;
+  }
+
   #main > div {
     display: flex;
     flex-direction: column;
