@@ -15,11 +15,16 @@ const styledCheckbox = styled.input.attrs({ type: 'checkbox' })`
     props.isInvalid ? props.theme.color.misc.errorRed : props.theme.color.steelTints.steel40};
   border-radius: 4px;
 
-  &:not(:disabled) {
-    cursor: pointer;
-    &:hover {
-      border-color: ${(props) => props.theme.color.ikssBlue};
-    }
+  cursor: pointer;
+
+  &:hover {
+    border-color: ${(props) => props.theme.color.ikssBlue};
+  }
+
+  &:disabled {
+    cursor: default;
+    border-color: ${(props) => props.theme.color.steelTints.steel40};
+    background-color: ${(props) => props.theme.color.blueTints.blue05};
   }
 
   &:after {
