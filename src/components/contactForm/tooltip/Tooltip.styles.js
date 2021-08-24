@@ -29,5 +29,7 @@ export const Tail = styled.div`
   transform: translateX(-50%);
   transform: rotate(45deg);
 
+  border-radius: 2px;
+
   background: #e8f3fd;
 `;
