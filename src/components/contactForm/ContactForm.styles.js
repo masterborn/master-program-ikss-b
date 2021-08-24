@@ -87,10 +87,15 @@ export const ContentInput = styled(TextArea)`
 export const StyledCheckbox = styled(Checkbox)`
   margin-right: 16px;
 `;
-export const StyledRODO = styled(ParagraphSmall)`
+
+export const RODOContainer = styled.div`
+  position: relative;
+`;
+
+export const RODO = styled(ParagraphSmall)`
   color: ${(props) => props.theme.color.steelTints.steel70};
 `;
-export const StyledRODOLink = styled.a`
+export const RODOLink = styled.a`
   color: inherit;
   cursor: pointer;
   font-weight: 700;
