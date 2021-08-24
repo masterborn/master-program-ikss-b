@@ -1,26 +1,57 @@
-import { CHANGE_INPUT_VALUES, RESET_INPUT_VALUES } from '../actions/contactFormActions';
+import {
+  CHANGE_INPUT_VALUES,
+  RESET_INPUT_VALUES,
+  CHANGE_FORM_SENDING_STATUS,
+  ADD_FORM_TEXT,
+} from '../actions/contactFormActions';
 
 const initialState = {
-  name: '',
-  lastName: '',
-  email: '',
-  content: '',
-  isTermsBoxChecked: false,
+  inputsValues: {
+    name: '',
+    lastName: '',
+    email: '',
+    content: '',
+    isTermsBoxChecked: false,
+  },
+  contactFormText: {
+    title: '',
+    text1: '',
+  },
+  status: 'initial',
 };
 
 const contactFormReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_INPUT_VALUES: {
       const { inputName, value } = action.payload;
-      return { ...state, [inputName]: value };
+      return {
+        ...state,
+        inputsValues: {
+          ...state.inputsValues,
+          [inputName]: value,
+        },
+      };
     }
     case RESET_INPUT_VALUES:
       return {
-        name: '',
-        lastName: '',
-        email: '',
-        content: '',
-        isTermsBoxChecked: false,
+        ...state,
+        inputsValues: {
+          name: '',
+          lastName: '',
+          email: '',
+          content: '',
+          isTermsBoxChecked: false,
+        },
+      };
+    case CHANGE_FORM_SENDING_STATUS:
+      return {
+        ...state,
+        status: action.payload.status,
+      };
+    case ADD_FORM_TEXT:
+      return {
+        ...state,
+        contactFormText: action.payload.text,
       };
     default:
       return state;
