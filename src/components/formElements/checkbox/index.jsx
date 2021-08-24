@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const styledCheckbox = styled.input.attrs({ type: 'checkbox' })`
-  padding-left: 1.5px;
+  padding-left: 2px;
   padding-top: 4px;
   padding-bottom: 0.25px;
   box-sizing: border-box;
@@ -14,6 +14,8 @@ const styledCheckbox = styled.input.attrs({ type: 'checkbox' })`
   border-color: ${(props) =>
     props.isInvalid ? props.theme.color.misc.errorRed : props.theme.color.steelTints.steel40};
   border-radius: 4px;
+
+  cursor: pointer;
 
   &:after {
     content: '\\00A0';
