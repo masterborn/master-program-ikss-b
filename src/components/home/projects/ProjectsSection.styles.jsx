@@ -6,11 +6,11 @@ export const ProjectSection = styled.section`
   flex-direction: column;
   align-items: center;
   align-self: center;
-  height: 1322px;
+  height: auto;
   width: 997px;
   margin-top: 180px;
   a {
-    margin-top: auto;
+    margin-top: 32px;
 
     color: inherit;
     text-decoration: none;
