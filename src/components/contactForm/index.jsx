@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeInputValues, resetInputValues } from '@root/redux/actions/contactFormActions';
+import {
+  changeInputValues,
+  resetInputValues,
+  changeFormSendingStatus,
+} from '@root/redux/actions/contactFormActions';
 import sendEmail from '@root/clients/formcarry';
+import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import validateInputs from './validation';
 import { XIcon, LoaderIcon } from '../icons/misc';
 import { Header3 } from '../typography/headers';
@@ -32,9 +37,6 @@ import {
 } from './ContactForm.styles';
 
 const MOCKUP = {
-  title: 'Skontaktuj się z nami 👋',
-  text1:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ut volutpat tincidunt dictumst neque neque molestie parturient.',
   tooltipText:
     'Gravida convallis risus adipiscing non enim. Consectetur quam facilisis tincidunt vitae. Sed id a vestibulum est. A malesuada massa ultrices proin tempor tempus vestibulum. At eros, lacus viverra lacinia eget suspendisse habitasse.',
 };
@@ -47,7 +49,8 @@ const FORM_SENDING_STATUS = {
 };
 
 export default function ContactForm({ className, isModal, closeModal }) {
-  const formValues = useSelector((state) => state.contactForm);
+  const { contactFormText } = useSelector((state) => state.contactForm);
+  const formValues = useSelector((state) => state.contactForm.inputsValues);
   const dispatch = useDispatch();
 
   const [areInputsInvalid, setAreInputsInvalid] = useState({
@@ -58,7 +61,14 @@ export default function ContactForm({ className, isModal, closeModal }) {
     termsCheckbox: false,
   });
 
-  const [formStatus, setFormStatus] = useState(FORM_SENDING_STATUS.initial);
+  const formStatus = useSelector((state) => state.contactForm.status);
+
+  useEffect(() => {
+    if (formStatus === FORM_SENDING_STATUS.success) {
+      dispatch(changeFormSendingStatus(FORM_SENDING_STATUS.initial));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -86,7 +96,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
     if (statusType === FORM_SENDING_STATUS.success) {
       dispatch(resetInputValues());
     }
-    return setFormStatus(statusType);
+    return dispatch(changeFormSendingStatus(statusType));
   };
 
   const handleSubmit = (event) => {
@@ -97,7 +107,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
     ) {
       sendEmail(formValues, changeFormStatus, FORM_SENDING_STATUS);
     } else if (formStatus === FORM_SENDING_STATUS.success) {
-      setFormStatus(FORM_SENDING_STATUS.initial);
+      dispatch(changeFormSendingStatus(FORM_SENDING_STATUS.initial));
 
       if (isModal) {
         closeModal();
@@ -132,14 +142,16 @@ export default function ContactForm({ className, isModal, closeModal }) {
     }
   };
 
+  const Body = convertRichTextToReactComponent(ParagraphBody, contactFormText.text1);
+
   return (
     <ContactFormContainer className={className} id="contact-form" isModal={isModal}>
       <Content>
         {isModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
-          <Header3>{MOCKUP.title}</Header3>
-          <ParagraphBody>{MOCKUP.text1}</ParagraphBody>
+          <Header3>{contactFormText.title}</Header3>
+          {Body}
         </TopSection>
 
         <Form onSubmit={handleSubmit}>
