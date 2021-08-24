@@ -1,10 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { useRef, useState } from 'react';
-import { ThemeProvider } from 'styled-components';
+import { useRef } from 'react';
+import CustomThemeProvider from '@root/styles/CustomThemeProvider';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Hydrate } from 'react-query/hydration';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import PropTypes from 'prop-types';
+import { Provider as ReduxProvider } from 'react-redux';
+import store from '@root/redux/store';
 import Head from 'next/head';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
@@ -20,16 +22,6 @@ const App = (props) => {
   const { Component, pageProps } = props;
   const isMobile = useIsMobile();
 
-  const [isContactModalOpened, setModalIsOpened] = useState(false);
-
-  const closeContactModal = () => setModalIsOpened(false);
-  const openContactModal = () => setModalIsOpened(true);
-
-  const updatedTheme = {
-    ...theme,
-    overflow: isContactModalOpened ? 'hidden' : 'auto',
-  };
-
   return (
     <>
       <Head>
@@ -41,22 +33,19 @@ const App = (props) => {
           rel="stylesheet"
         />
       </Head>
-      <ThemeProvider theme={updatedTheme}>
-        <QueryClientProvider client={queryClientRef.current}>
-          <Hydrate>
-            <Layout
-              isMobile={isMobile}
-              closeContactModal={closeContactModal}
-              openContactModal={openContactModal}
-              isContactModalOpened={isContactModalOpened}
-            >
-              <Component {...pageProps} isMobile={isMobile} />
-            </Layout>
-          </Hydrate>
-          <ReactQueryDevtools initialIsOpen={false} />
-        </QueryClientProvider>
-        <GlobalStyles />
-      </ThemeProvider>
+      <ReduxProvider store={store}>
+        <CustomThemeProvider theme={theme}>
+          <QueryClientProvider client={queryClientRef.current}>
+            <Hydrate>
+              <Layout isMobile={isMobile}>
+                <Component {...pageProps} isMobile={isMobile} />
+              </Layout>
+            </Hydrate>
+            <ReactQueryDevtools initialIsOpen={false} />
+          </QueryClientProvider>
+          <GlobalStyles />
+        </CustomThemeProvider>
+      </ReduxProvider>
     </>
   );
 };
