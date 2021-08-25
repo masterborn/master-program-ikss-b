@@ -163,6 +163,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
                 onChange={(event) => handleInputChange(event, 'name')}
                 placeholder="Wpisz swoje imię"
                 isInvalid={areInputsInvalid.name}
+                withIcon={areInputsInvalid.name}
                 disabled={disableInputs}
               />
             </label>
@@ -173,6 +174,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
                 onChange={(event) => handleInputChange(event, 'lastName')}
                 placeholder="Wpisz swoje nazwisko"
                 isInvalid={areInputsInvalid.lastName}
+                withIcon={areInputsInvalid.lastName}
                 disabled={disableInputs}
               />
             </label>
@@ -186,6 +188,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
                 onChange={(event) => handleInputChange(event, 'email')}
                 placeholder="Wpisz swój adres e-mail"
                 isInvalid={areInputsInvalid.email}
+                withIcon={areInputsInvalid.email}
                 disabled={disableInputs}
               />
             </label>
