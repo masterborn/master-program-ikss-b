@@ -50,6 +50,8 @@ export default function ContactForm({
   isModal,
   closeModal,
 }) {
+  const { title, text1: text } = contactFormText;
+
   const formValues = useSelector((state) => state.contactForm.inputsValues);
   const dispatch = useDispatch();
 
@@ -68,6 +70,16 @@ export default function ContactForm({
     content: false,
     termsCheckbox: false,
   });
+
+  const resetAreInputsValid = () => {
+    setAreInputsValid({
+      name: false,
+      lastName: false,
+      email: false,
+      content: false,
+      termsCheckbox: false,
+    });
+  };
 
   const formStatus = useSelector((state) => state.contactForm.status);
 
@@ -104,6 +116,7 @@ export default function ContactForm({
   const changeFormStatus = (statusType) => {
     if (statusType === FORM_SENDING_STATUS.success) {
       dispatch(resetInputValues());
+      resetAreInputsValid();
     }
     return dispatch(changeFormSendingStatus(statusType));
   };
@@ -151,7 +164,7 @@ export default function ContactForm({
     }
   };
 
-  const Body = convertRichTextToReactComponent(ParagraphBody, contactFormText.text1);
+  const Body = convertRichTextToReactComponent(ParagraphBody, text);
 
   return (
     <ContactFormContainer className={className} id="contact-form" isModal={isModal}>
@@ -159,7 +172,7 @@ export default function ContactForm({
         {isModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
-          <Header3>{contactFormText.title}</Header3>
+          <Header3>{title}</Header3>
           {Body}
         </TopSection>
 

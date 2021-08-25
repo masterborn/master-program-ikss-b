@@ -4,7 +4,10 @@ import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { TooltipContainer, Text, Tail } from './Tooltip.styles';
 
 export default function Tooltip({ tooltipText, show }) {
-  const Body = convertRichTextToReactComponent(Text, tooltipText.text1);
+  const { text1: text } = tooltipText;
+
+  const Body = convertRichTextToReactComponent(Text, text);
+
   if (!show) return null;
   return (
     <TooltipContainer>
