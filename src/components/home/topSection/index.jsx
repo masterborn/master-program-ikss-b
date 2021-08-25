@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import {
   StyledTopSection,
@@ -11,26 +12,12 @@ import {
 } from './TopSection.styles';
 import SecondaryButton from '../../buttons/secondaryButton';
 
-const MOCKUP = {
-  title: 'Przykładowy nagłówek IKSS',
-  text: 'Urna, mi condimentum amet, consectetur mauris tincidunt gravida aenean. Dignissim in sit arcu nam. Ultrices integer odio feugiat vulputate.',
-  image1:
-    '//videos.ctfassets.net/n21y2i4hkj4h/4fPIBredtzYNienv1X0MSk/93a72f310b4c8a02de8428cccd288ceb/na_strone_ikss.mp4',
-};
-const MOCK_SOCIALS = {
-  fb: 'https://www.facebook.com/',
-  ig: 'https://www.instagram.com/',
-  yt: 'https://www.youtube.com/',
-  in: 'https://www.linkedin.com/',
-};
-
 export default function TopSection({ topSectionContent, socials }) {
   const {
     title: sectionHeader,
     image1: { url: mediaUrl, title: mediaTitle },
     text1: richText,
   } = topSectionContent;
-  console.log(socials);
 
   const urlIsVideo = /.*\.mp4$/.test(mediaUrl);
   const Description = convertRichTextToReactComponent(Paragraph, richText);
@@ -47,13 +34,25 @@ export default function TopSection({ topSectionContent, socials }) {
           </SecondaryButton>
         </LeftSide>
         {urlIsVideo ? (
-          <video src={`https:${mediaUrl}`} width={808} muted autoPlay loop />
+          <video src={`https:${mediaUrl}`} alt={mediaTitle} width={808} muted autoPlay loop />
         ) : (
           <TopSectionImage src={mediaUrl} alt={mediaTitle} />
         )}
       </Content>
 
-      <StyledSocials socialsLinks={socials} className="socials" showLabel />
+      <StyledSocials socialsLinks={socials} showLabel />
     </StyledTopSection>
   );
 }
+
+TopSection.propTypes = {
+  topSectionContent: PropTypes.shape({
+    title: PropTypes.string,
+    image1: PropTypes.shape({
+      url: PropTypes.string,
+      title: PropTypes.string,
+    }),
+    text1: PropTypes.shape({}),
+  }).isRequired,
+  socials: PropTypes.shape({}).isRequired,
+};
