@@ -26,12 +26,20 @@ export default function ProjectVideo({ url }) {
   return (
     <VideoWrapper>
       <ThumnbailContainer playingVideo={playingVideo}>
-        <VideoThumbnail src={thumbnailImage} height={579} width={997} />
+        <VideoThumbnail width={997} height={579} src={thumbnailImage} />
         <PlayButton onClick={playVideo}>
           <PlayIcon />
         </PlayButton>
       </ThumnbailContainer>
-      <VideoFrame ref={videoFrame} allow="autoplay" playingVideo={playingVideo} src={embedUrl} />
+      <VideoFrame
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        ref={videoFrame}
+        playingVideo={playingVideo}
+        src={embedUrl}
+      />
     </VideoWrapper>
   );
 }
