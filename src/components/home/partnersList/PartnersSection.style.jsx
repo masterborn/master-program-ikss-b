@@ -67,7 +67,7 @@ export const Logo = styled.div`
 
   @media (max-width: 550px) {
     width: calc(100% / 3);
-    height: calc(100% / 5);
+    height: auto;
     margin-bottom: 30px;
 
     & a,
