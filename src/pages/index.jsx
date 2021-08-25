@@ -6,12 +6,20 @@ import PartnersSection from '@root/components/home/partnersList/PartnersSection'
 import TopSection from '../components/home/topSection';
 import ValuesSection from '../components/home/valuesSection';
 
-export default function index({ homepageData: { partners, basicContent, projects } }) {
+export default function index({ homepageData: { partners, basicContent, projects, common } }) {
   const { 'homepage-partners-text': partnersText } = basicContent;
+  const { 'homepage-top-section': topSectionContent } = basicContent;
+  const {
+    'social-facebook': socialFb,
+    'social-linkedin': socialIn,
+    'social-instagram': socialIg,
+    'social-youtube': socialYt,
+  } = common;
+  const socials = { socialFb, socialIn, socialIg, socialYt };
 
   return (
     <div>
-      <TopSection />
+      <TopSection topSectionContent={topSectionContent} socials={socials} />
       <ValuesSection />
       <ProjectsSection projects={projects} />
       <PartnersSection partners={partners} partnersText={partnersText} />

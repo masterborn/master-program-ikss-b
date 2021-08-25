@@ -1,4 +1,5 @@
 import React from 'react';
+import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import {
   StyledTopSection,
   Content,
@@ -6,6 +7,7 @@ import {
   Header,
   Paragraph,
   StyledSocials,
+  TopSectionImage,
 } from './TopSection.styles';
 import SecondaryButton from '../../buttons/secondaryButton';
 
@@ -22,23 +24,36 @@ const MOCK_SOCIALS = {
   in: 'https://www.linkedin.com/',
 };
 
-export default function TopSection() {
+export default function TopSection({ topSectionContent, socials }) {
+  const {
+    title: sectionHeader,
+    image1: { url: mediaUrl, title: mediaTitle },
+    text1: richText,
+  } = topSectionContent;
+  console.log(socials);
+
+  const urlIsVideo = /.*\.mp4$/.test(mediaUrl);
+  const Description = convertRichTextToReactComponent(Paragraph, richText);
   const handleClick = () => {};
 
   return (
     <StyledTopSection className="hideNavSocials">
       <Content>
         <LeftSide>
-          <Header>{MOCKUP.title}</Header>
-          <Paragraph>{MOCKUP.text}</Paragraph>
+          <Header>{sectionHeader}</Header>
+          {Description}
           <SecondaryButton isBig onClick={handleClick}>
             Skontaktuj się
           </SecondaryButton>
         </LeftSide>
-        <video src={`https:${MOCKUP.image1}`} width={808} muted autoPlay loop />
+        {urlIsVideo ? (
+          <video src={`https:${mediaUrl}`} width={808} muted autoPlay loop />
+        ) : (
+          <TopSectionImage src={mediaUrl} alt={mediaTitle} />
+        )}
       </Content>
 
-      <StyledSocials socialsLinks={MOCK_SOCIALS} className="socials" showLabel />
+      <StyledSocials socialsLinks={socials} className="socials" showLabel />
     </StyledTopSection>
   );
 }
