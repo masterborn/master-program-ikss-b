@@ -22,7 +22,9 @@ export const ProjectMediaContainer = styled.div`
   height: auto;
   width: 100%;
   @media (max-width: 550px) {
-    height: auto;
+    height: 50vw;
+    min-height: 199px;
+    max-height: 300px;
   }
 `;
 export const ProjectSummary = styled.div`

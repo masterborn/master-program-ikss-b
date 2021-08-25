@@ -15,7 +15,8 @@ import {
 } from './ProjectTile.styles';
 
 export default function ProjectTile({ project }) {
-  const { title, date, video_url: videoUrl, image, linkUrl, description } = project;
+  const { title, date, image, linkUrl, description } = project;
+  const videoUrl = 'https://www.youtube.com/watch?v=ty3F30lgHZs';
   const linkIsFromFacebook = /^(https:\/\/)?(www.)?f(b||acebook)\.com\/.*/.test(linkUrl);
   return (
     <ProjectArticle>
