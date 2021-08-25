@@ -2,7 +2,6 @@ import {
   CHANGE_INPUT_VALUES,
   RESET_INPUT_VALUES,
   CHANGE_FORM_SENDING_STATUS,
-  ADD_FORM_TEXT,
 } from '../actions/contactFormActions';
 
 const initialState = {
@@ -12,10 +11,6 @@ const initialState = {
     email: '',
     content: '',
     isTermsBoxChecked: false,
-  },
-  contactFormText: {
-    title: '',
-    text1: '',
   },
   status: 'initial',
 };
@@ -47,11 +42,6 @@ const contactFormReducer = (state = initialState, action) => {
       return {
         ...state,
         status: action.payload.status,
-      };
-    case ADD_FORM_TEXT:
-      return {
-        ...state,
-        contactFormText: action.payload.text,
       };
     default:
       return state;
