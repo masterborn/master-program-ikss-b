@@ -2,10 +2,859 @@
   "sys": {
     "type": "Array"
   },
-  "total": 71,
+  "total": 72,
   "skip": 0,
   "limit": 100,
   "items": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "jRYH4RO0j4uBlacnHxXAc",
+        "type": "Entry",
+        "createdAt": "2021-08-09T16:56:05.282Z",
+        "updatedAt": "2021-08-25T09:26:10.971Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 6,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "common",
+        "identifier": "social-linkedin",
+        "title": "URL do LinkedIn",
+        "linkUrl": "https://www.linkedin.com/company/informacjakulturalnosportowastudentowikss/",
+        "linkCaption": "LinkedIn"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "2rV9pJAYpPqCghlKiKjC3b",
+        "type": "Entry",
+        "createdAt": "2021-08-09T16:55:43.315Z",
+        "updatedAt": "2021-08-25T09:25:56.499Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 6,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "common",
+        "identifier": "social-youtube",
+        "title": "URL do YouTube",
+        "linkUrl": "https://www.youtube.com/channel/UC6cKLW4YEBqA7FWmkY0HThQ",
+        "linkCaption": "YouTube"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "3fLPV37zcRQIQSodv4CCBK",
+        "type": "Entry",
+        "createdAt": "2021-08-09T16:55:24.868Z",
+        "updatedAt": "2021-08-25T09:25:32.933Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 9,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "common",
+        "identifier": "social-instagram",
+        "title": "URL do Instagrama",
+        "linkUrl": "https://www.instagram.com/ikssue/",
+        "linkCaption": "Instagram"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "52Yc1IcAXSY3KSGLuuqaHg",
+        "type": "Entry",
+        "createdAt": "2021-08-25T08:59:08.184Z",
+        "updatedAt": "2021-08-25T09:00:29.890Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "common",
+        "identifier": "contact-form-tooltip",
+        "title": "Tooltip text",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "385oEBQcf7Si5hhneHT94A",
+        "type": "Entry",
+        "createdAt": "2021-08-09T21:36:10.019Z",
+        "updatedAt": "2021-08-25T08:54:26.215Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "common",
+        "identifier": "contact-form-text",
+        "title": "Skontaktuj się z nami 👋",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ut volutpat tincidunt dictumst neque neque molestie parturient.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "4IvkLIh9EtOylcAVJ58cuC",
+        "type": "Entry",
+        "createdAt": "2021-08-09T14:09:33.898Z",
+        "updatedAt": "2021-08-19T12:28:05.572Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2VmKhKaOFbTZBHD7M0ED3V"
+          }
+        },
+        "title": "Turniej IKSS WOŚP",
+        "date": "2018-10-11",
+        "description": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Wydarzenie integruje społeczność akademicką poprzez zdrową rywalizację w turnieju piłki nożnej i wsparcie Wielkiej Orkiestry Świątecznej Pomocy. Podczas turnieju piłki halowej uczestnicy mogą wziąć udział w licznych licytacjach na rzecz WOŚP, a całe wydarzenie rozbudowane jest o wiele wyjątkowych atrakcji. Swoimi działaniami dokładamy małą cegiełkę w postaci blisko 20 000 zł do wyniku Wielkiej Orkiestry Świątecznej Pomocy!",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+        "linkCaption": "Podsumowanie wydarzenia"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "1NIWMUXQzVYDnC5SFS0KSy",
+        "type": "Entry",
+        "createdAt": "2021-08-09T14:06:42.626Z",
+        "updatedAt": "2021-08-19T12:27:43.995Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2fNMHQifNLIKiyar2rpAma"
+          }
+        },
+        "videoUrl": "https://www.youtube.com/watch?v=gZZRFf2v5wQ",
+        "title": "Pracownia Teatralna",
+        "date": "2020-11-15",
+        "description": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Kurtyna w górę… Przed Państwem cykl warsztatów teatralnych i aktorskich prowadzonych przez profesjonalistów dla studentów naszego Uniwersytetu. Wieczorem projekt zwieńczony jest na scenie, gdzie nasi uczestnicy zasiadają na widowni, skąd mogą być świadkami wyjątkowego spektaklu teatralnego.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "linkUrl": "https://www.facebook.com/groups/140537399452984",
+        "linkCaption": "Dołącz do wydarzenia",
+        "showOnHomepage": true,
+        "order": 3
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "2BD72jODSN46WPQpz45kdv",
+        "type": "Entry",
+        "createdAt": "2021-08-09T14:07:26.612Z",
+        "updatedAt": "2021-08-19T12:26:38.484Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2VmKhKaOFbTZBHD7M0ED3V"
+          }
+        },
+        "title": "Wrocław E-Sport Tournaments",
+        "date": "2019-11-13",
+        "description": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "WEST jest innowacyjnym, ogólnopolskim turniejem w popularną grę – Counter Strike: Global Offensive tworzonym przez grupę osób zafascynowanych tematyką e-sportową. Podczas wydarzenia mamy dla uczestników przygotowany bogaty w różne znane tytuły gier festiwal gamingu, na którym każdy znajdzie coś dla siebie.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+        "linkCaption": "Podsumowanie wydarzenia"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "7t4WUHsDzRz9iEK2mbTc3Z",
+        "type": "Entry",
+        "createdAt": "2021-08-09T14:08:52.994Z",
+        "updatedAt": "2021-08-19T12:26:14.494Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2VmKhKaOFbTZBHD7M0ED3V"
+          }
+        },
+        "title": "Live4Life",
+        "date": "2021-01-14",
+        "description": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Pasja, muzyka i pomoc w jednym. L4L to charytatywny koncert, podczas którego jesteśmy świadkami występów muzyków, zespołów oraz artystów, którzy chcą zaprezentować swoje umiejętności na scenie. W trakcie koncertu odbywają się liczne licytacje, z których całkowity dochód zostaje przeznaczony na podopiecznego wybranej fundacji.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+        "linkCaption": "Podsumowanie wydarzenia"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "5FiaM1h1UjL1Ddtc6tSl4F",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:53:34.671Z",
+        "updatedAt": "2021-08-18T08:21:36.009Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "partnerLogos"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "name": "AZS",
+        "logo": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "9N88tiK1VQ2YzsjDh1WRm"
+          }
+        },
+        "showOnHomepage": true,
+        "order": 34
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "6aTkUh5hsdbYcdEZhTsjPw",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:52:16.549Z",
+        "updatedAt": "2021-08-18T08:21:19.806Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "partnerLogos"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "name": "BNY MELLON",
+        "logo": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "3PmbJT0lmFfjDjqeWijLNy"
+          }
+        },
+        "showOnHomepage": true,
+        "order": 35
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "6dDQhXTXbtyi35EqRqJEAY",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:50:32.075Z",
+        "updatedAt": "2021-08-18T08:21:01.443Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "partnerLogos"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "name": "Uniwersytet Ekonomiczny we Wrocławiu",
+        "logo": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2mvtj2ICd5NL22tbkarWhQ"
+          }
+        },
+        "linkUrl": "https://www.ue.wroc.pl/",
+        "showOnHomepage": true,
+        "order": 40
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "1NThuWH82CZhpmCv9uFA15",
+        "type": "Entry",
+        "createdAt": "2021-08-06T10:38:11.389Z",
+        "updatedAt": "2021-08-17T13:14:40.002Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2fNMHQifNLIKiyar2rpAma"
+          }
+        },
+        "title": "Nocne Kino Akademickie",
+        "date": "2020-11-15",
+        "description": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Wydarzenie organizowane we współpracy z Kinem Nowe Horyzonty. Nocne Kino Akademickie to wyjątkowa noc dla wszystkich kinomaniaków, którzy mają możliwość obejrzenia najlepszych produkcji filmowych, które zostały nominowane do Oscarów. ",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            },
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Wydarzenie dla 500 osób jest prawdziwą ucztą dla kinomana i świetną zabawą w gronie przyjaciół.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+        "linkCaption": "Dołącz do wydarzenia",
+        "showOnHomepage": true,
+        "order": 1
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "3L9C5dIdaswMEzwQNsSxwO",
+        "type": "Entry",
+        "createdAt": "2021-08-09T14:04:08.995Z",
+        "updatedAt": "2021-08-17T13:14:32.014Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2VmKhKaOFbTZBHD7M0ED3V"
+          }
+        },
+        "title": "Wrocławski Bieg Akademicki",
+        "date": "2020-11-15",
+        "description": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Największy projekt organizacji, w którym biegniemy i pomagamy. To charytatywne wydarzenie zrzesza blisko 1000 biegaczy z całego Wrocławia! Celem wydarzenia jest integracja środowiska akademickiego i biegowego w okresie juwenaliowym poprzez zdrową rywalizację i pomoc potrzebującym. Podczas wydarzenia nie ograniczamy się do biegu, organizujemy ogromną strefę około eventową, której celem jest zapewnienie odpoczynku, rozrywki oraz motywowanie do zdrowego trybu życia poprzez stoiska, np. z pomiarami składu ciała, czy pomocą dietetyczną.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
+        "linkCaption": "Podsumowanie wydarzenia",
+        "showOnHomepage": true,
+        "order": 2
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "1X1gLNzfpSkhRQtWfWscJ8",
+        "type": "Entry",
+        "createdAt": "2021-08-09T16:52:46.631Z",
+        "updatedAt": "2021-08-17T07:24:59.304Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "homepage",
+        "identifier": "homepage-top-section",
+        "title": "Przykładowy nagłówek IKSS",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Urna, mi condimentum amet, consectetur mauris tincidunt gravida aenean. Dignissim in sit arcu nam. Ultrices integer odio feugiat vulputate.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4fPIBredtzYNienv1X0MSk"
+          }
+        }
+      }
+    },
     {
       "metadata": {
         "tags": []
@@ -123,126 +972,6 @@
         "title": "URL do Facebooka",
         "linkUrl": "https://www.facebook.com/IKSSUE/",
         "linkCaption": "Facebook"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "jRYH4RO0j4uBlacnHxXAc",
-        "type": "Entry",
-        "createdAt": "2021-08-09T16:56:05.282Z",
-        "updatedAt": "2021-08-12T12:33:43.664Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "common",
-        "identifier": "social-linkedin",
-        "title": "URL do LinkedIn",
-        "linkUrl": "https://www.linkedin.com/company/informacjakulturalnosportowastudentowikss/"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "2rV9pJAYpPqCghlKiKjC3b",
-        "type": "Entry",
-        "createdAt": "2021-08-09T16:55:43.315Z",
-        "updatedAt": "2021-08-12T12:33:37.226Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "common",
-        "identifier": "social-youtube",
-        "title": "URL do YouTube",
-        "linkUrl": "https://www.youtube.com/channel/UC6cKLW4YEBqA7FWmkY0HThQ"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "3fLPV37zcRQIQSodv4CCBK",
-        "type": "Entry",
-        "createdAt": "2021-08-09T16:55:24.868Z",
-        "updatedAt": "2021-08-12T12:33:29.267Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "common",
-        "identifier": "social-instagram",
-        "title": "URL do Instagrama",
-        "linkUrl": "https://www.instagram.com/ikssue/"
       }
     },
     {
@@ -1608,272 +2337,6 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "385oEBQcf7Si5hhneHT94A",
-        "type": "Entry",
-        "createdAt": "2021-08-09T21:36:10.019Z",
-        "updatedAt": "2021-08-09T21:36:10.019Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "identifier": "contact-form-text",
-        "title": "Skontaktuj się z nami 👋",
-        "text1": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ut volutpat tincidunt dictumst neque neque molestie parturient.",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
-          ]
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "1NIWMUXQzVYDnC5SFS0KSy",
-        "type": "Entry",
-        "createdAt": "2021-08-09T14:06:42.626Z",
-        "updatedAt": "2021-08-09T21:19:14.280Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "projects"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "image": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2fNMHQifNLIKiyar2rpAma"
-          }
-        },
-        "title": "Pracownia Teatralna",
-        "date": "2020-11-15",
-        "description": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Kurtyna w górę… Przed Państwem cykl warsztatów teatralnych i aktorskich prowadzonych przez profesjonalistów dla studentów naszego Uniwersytetu. Wieczorem projekt zwieńczony jest na scenie, gdzie nasi uczestnicy zasiadają na widowni, skąd mogą być świadkami wyjątkowego spektaklu teatralnego.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
-        "linkCaption": "Dołącz do wydarzenia",
-        "showOnHomepage": true
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "3L9C5dIdaswMEzwQNsSxwO",
-        "type": "Entry",
-        "createdAt": "2021-08-09T14:04:08.995Z",
-        "updatedAt": "2021-08-09T21:19:06.012Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "projects"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "image": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2VmKhKaOFbTZBHD7M0ED3V"
-          }
-        },
-        "title": "Wrocławski Bieg Akademicki",
-        "date": "2020-11-15",
-        "description": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Największy projekt organizacji, w którym biegniemy i pomagamy. To charytatywne wydarzenie zrzesza blisko 1000 biegaczy z całego Wrocławia! Celem wydarzenia jest integracja środowiska akademickiego i biegowego w okresie juwenaliowym poprzez zdrową rywalizację i pomoc potrzebującym. Podczas wydarzenia nie ograniczamy się do biegu, organizujemy ogromną strefę około eventową, której celem jest zapewnienie odpoczynku, rozrywki oraz motywowanie do zdrowego trybu życia poprzez stoiska, np. z pomiarami składu ciała, czy pomocą dietetyczną.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
-        "linkCaption": "Podsumowanie wydarzenia",
-        "showOnHomepage": true
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "1NThuWH82CZhpmCv9uFA15",
-        "type": "Entry",
-        "createdAt": "2021-08-06T10:38:11.389Z",
-        "updatedAt": "2021-08-09T21:18:57.810Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "projects"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "image": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2fNMHQifNLIKiyar2rpAma"
-          }
-        },
-        "title": "Nocne Kino Akademickie",
-        "date": "2020-11-15",
-        "description": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Wydarzenie organizowane we współpracy z Kinem Nowe Horyzonty. Nocne Kino Akademickie to wyjątkowa noc dla wszystkich kinomaniaków, którzy mają możliwość obejrzenia najlepszych produkcji filmowych, które zostały nominowane do Oscarów. ",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            },
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Wydarzenie dla 500 osób jest prawdziwą ucztą dla kinomana i świetną zabawą w gronie przyjaciół.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
-        "linkCaption": "Dołącz do wydarzenia",
-        "showOnHomepage": true
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
         "id": "7qSUUcdnCjg2eb4NeouUiw",
         "type": "Entry",
         "createdAt": "2021-08-09T16:02:23.902Z",
@@ -2324,96 +2787,6 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "5FiaM1h1UjL1Ddtc6tSl4F",
-        "type": "Entry",
-        "createdAt": "2021-08-09T15:53:34.671Z",
-        "updatedAt": "2021-08-09T21:16:55.908Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "partnerLogos"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "name": "AZS",
-        "logo": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "9N88tiK1VQ2YzsjDh1WRm"
-          }
-        },
-        "showOnHomepage": true
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "6aTkUh5hsdbYcdEZhTsjPw",
-        "type": "Entry",
-        "createdAt": "2021-08-09T15:52:16.549Z",
-        "updatedAt": "2021-08-09T21:16:46.700Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "partnerLogos"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "name": "BNY MELLON",
-        "logo": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "3PmbJT0lmFfjDjqeWijLNy"
-          }
-        },
-        "showOnHomepage": true
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
         "id": "3rCxnIQDqMvFA1gEAuypMM",
         "type": "Entry",
         "createdAt": "2021-08-09T16:56:53.293Z",
@@ -2457,117 +2830,6 @@
             }
           ]
         }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "1X1gLNzfpSkhRQtWfWscJ8",
-        "type": "Entry",
-        "createdAt": "2021-08-09T16:52:46.631Z",
-        "updatedAt": "2021-08-09T16:52:46.631Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "homepage",
-        "identifier": "homepage-top-section",
-        "title": "Przykładowy nagłówek IKSS",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Urna, mi condimentum amet, consectetur mauris tincidunt gravida aenean. Dignissim in sit arcu nam. Ultrices integer odio feugiat vulputate.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "1TBj78EIU57GfHjE4AEWCN"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "6dDQhXTXbtyi35EqRqJEAY",
-        "type": "Entry",
-        "createdAt": "2021-08-09T15:50:32.075Z",
-        "updatedAt": "2021-08-09T16:27:15.166Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "partnerLogos"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "name": "Uniwersytet Ekonomiczny we Wrocławiu",
-        "logo": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2mvtj2ICd5NL22tbkarWhQ"
-          }
-        },
-        "linkUrl": "https://www.ue.wroc.pl/",
-        "showOnHomepage": true,
-        "order": 1
       }
     },
     {
@@ -3570,201 +3832,6 @@
         "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
         "linkCaption": "Podsumowanie wydarzenia"
       }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "4IvkLIh9EtOylcAVJ58cuC",
-        "type": "Entry",
-        "createdAt": "2021-08-09T14:09:33.898Z",
-        "updatedAt": "2021-08-09T14:09:33.898Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "projects"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "image": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2VmKhKaOFbTZBHD7M0ED3V"
-          }
-        },
-        "title": "Turniej IKSS WOŚP",
-        "date": "2020-11-15",
-        "description": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "Wydarzenie integruje społeczność akademicką poprzez zdrową rywalizację w turnieju piłki nożnej i wsparcie Wielkiej Orkiestry Świątecznej Pomocy. Podczas turnieju piłki halowej uczestnicy mogą wziąć udział w licznych licytacjach na rzecz WOŚP, a całe wydarzenie rozbudowane jest o wiele wyjątkowych atrakcji. Swoimi działaniami dokładamy małą cegiełkę w postaci blisko 20 000 zł do wyniku Wielkiej Orkiestry Świątecznej Pomocy!",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
-          ]
-        },
-        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
-        "linkCaption": "Podsumowanie wydarzenia"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "7t4WUHsDzRz9iEK2mbTc3Z",
-        "type": "Entry",
-        "createdAt": "2021-08-09T14:08:52.994Z",
-        "updatedAt": "2021-08-09T14:08:52.994Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "projects"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "image": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2VmKhKaOFbTZBHD7M0ED3V"
-          }
-        },
-        "title": "Live4Life",
-        "date": "2020-11-15",
-        "description": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "Pasja, muzyka i pomoc w jednym. L4L to charytatywny koncert, podczas którego jesteśmy świadkami występów muzyków, zespołów oraz artystów, którzy chcą zaprezentować swoje umiejętności na scenie. W trakcie koncertu odbywają się liczne licytacje, z których całkowity dochód zostaje przeznaczony na podopiecznego wybranej fundacji.",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
-          ]
-        },
-        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
-        "linkCaption": "Podsumowanie wydarzenia"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "2BD72jODSN46WPQpz45kdv",
-        "type": "Entry",
-        "createdAt": "2021-08-09T14:07:26.612Z",
-        "updatedAt": "2021-08-09T14:07:26.612Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "projects"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "image": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2VmKhKaOFbTZBHD7M0ED3V"
-          }
-        },
-        "title": "Wrocław E-Sport Tournaments",
-        "date": "2020-11-15",
-        "description": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "WEST jest innowacyjnym, ogólnopolskim turniejem w popularną grę – Counter Strike: Global Offensive tworzonym przez grupę osób zafascynowanych tematyką e-sportową. Podczas wydarzenia mamy dla uczestników przygotowany bogaty w różne znane tytuły gier festiwal gamingu, na którym każdy znajdzie coś dla siebie.",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
-          ]
-        },
-        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
-        "linkCaption": "Podsumowanie wydarzenia"
-      }
     }
   ],
   "includes": {
@@ -3850,48 +3917,6 @@
             },
             "fileName": "g2993.svg",
             "contentType": "image/svg+xml"
-          }
-        }
-      },
-      {
-        "metadata": {
-          "tags": []
-        },
-        "sys": {
-          "space": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Space",
-              "id": "n21y2i4hkj4h"
-            }
-          },
-          "id": "1TBj78EIU57GfHjE4AEWCN",
-          "type": "Asset",
-          "createdAt": "2021-08-09T16:52:34.552Z",
-          "updatedAt": "2021-08-09T16:52:34.552Z",
-          "environment": {
-            "sys": {
-              "id": "master",
-              "type": "Link",
-              "linkType": "Environment"
-            }
-          },
-          "revision": 1,
-          "locale": "en-US"
-        },
-        "fields": {
-          "title": "image 1",
-          "file": {
-            "url": "//images.ctfassets.net/n21y2i4hkj4h/1TBj78EIU57GfHjE4AEWCN/aded5688e0ad0e706c8f8c13499d554b/image_1.jpg",
-            "details": {
-              "size": 661584,
-              "image": {
-                "width": 809,
-                "height": 505
-              }
-            },
-            "fileName": "image 1.jpg",
-            "contentType": "image/jpeg"
           }
         }
       },
@@ -4522,6 +4547,44 @@
             },
             "fileName": "social.svg",
             "contentType": "image/svg+xml"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "n21y2i4hkj4h"
+            }
+          },
+          "id": "4fPIBredtzYNienv1X0MSk",
+          "type": "Asset",
+          "createdAt": "2021-08-17T07:24:49.152Z",
+          "updatedAt": "2021-08-17T07:24:49.152Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "na strone ikss",
+          "file": {
+            "url": "//videos.ctfassets.net/n21y2i4hkj4h/4fPIBredtzYNienv1X0MSk/93a72f310b4c8a02de8428cccd288ceb/na_strone_ikss.mp4",
+            "details": {
+              "size": 3429828
+            },
+            "fileName": "na_strone_ikss.mp4",
+            "contentType": "video/mp4"
           }
         }
       },
