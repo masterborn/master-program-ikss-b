@@ -5,7 +5,7 @@ export const StyledLayout = styled.div`
 
   margin: 0 auto;
 
-  #main > div {
+  #main {
     display: flex;
     flex-direction: column;
     align-items: center;

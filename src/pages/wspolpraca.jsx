@@ -1,21 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { addFormText } from '@root/redux/actions/contactFormActions';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
+import Layout from '@root/components/layout';
 
-export default function Cooperation({ cooperationData: { contactForm } }) {
-  const dispatch = useDispatch();
+export default function Cooperation({ cooperationData: { common } }) {
+  const { 'contact-form-text': contactFormText } = common;
+  const { 'contact-form-tooltip': tooltipText } = common;
 
-  const { 'contact-form-text': contactFormText } = contactForm;
-
-  useEffect(() => {
-    dispatch(addFormText(contactFormText));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  return <div>Cooperation</div>;
+  return (
+    <Layout contactFormText={contactFormText} tooltipText={tooltipText}>
+      Cooperation
+    </Layout>
+  );
 }
 
 export async function getStaticProps() {
@@ -23,9 +20,9 @@ export async function getStaticProps() {
   const pagesData = mapData(resJson);
 
   const {
-    basicContent: { undefined: contactForm },
+    basicContent: { common },
   } = pagesData;
-  const cooperationData = { contactForm };
+  const cooperationData = { common };
 
   return {
     props: {
@@ -36,8 +33,9 @@ export async function getStaticProps() {
 
 Cooperation.propTypes = {
   cooperationData: PropTypes.shape({
-    contactForm: PropTypes.shape({
+    common: PropTypes.shape({
       'contact-form-text': PropTypes.shape({}),
+      'contact-form-tooltip': PropTypes.shape({}),
     }),
   }).isRequired,
 };

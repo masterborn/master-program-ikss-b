@@ -1,35 +1,28 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { addFormText } from '@root/redux/actions/contactFormActions';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
+import Layout from '@root/components/layout';
 import ProjectsSection from '@root/components/home/projects/ProjectsSection';
 import PartnersSection from '@root/components/home/partnersList/PartnersSection';
 import TopSection from '../components/home/topSection';
 import ValuesSection from '../components/home/valuesSection';
 import ContactForm from '../components/contactForm';
 
-export default function index({ homepageData: { partners, basicContent, contactForm, projects } }) {
-  const dispatch = useDispatch();
-
+export default function Homepage({ homepageData: { partners, basicContent, common, projects } }) {
   const { 'homepage-partners-text': partnersText } = basicContent;
 
-  const { 'contact-form-text': contactFormText } = contactForm;
-
-  useEffect(() => {
-    dispatch(addFormText(contactFormText));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const { 'contact-form-text': contactFormText } = common;
+  const { 'contact-form-tooltip': tooltipText } = common;
 
   return (
-    <div>
+    <Layout contactFormText={contactFormText} tooltipText={tooltipText}>
       <TopSection />
       <ValuesSection />
       <ProjectsSection projects={projects} />
       <PartnersSection partners={partners} partnersText={partnersText} />
-      <ContactForm />
-    </div>
+      <ContactForm contactFormText={contactFormText} tooltipText={tooltipText} />
+    </Layout>
   );
 }
 
@@ -38,11 +31,11 @@ export async function getStaticProps() {
   const pagesData = mapData(resJson);
 
   const {
-    basicContent: { homepage: basicContent, common, undefined: contactForm },
+    basicContent: { homepage: basicContent, common },
     projects,
     partnerLogos: partners,
   } = pagesData;
-  const homepageData = { basicContent, common, contactForm, projects, partners };
+  const homepageData = { basicContent, common, projects, partners };
 
   return {
     props: {
@@ -50,3 +43,17 @@ export async function getStaticProps() {
     },
   };
 }
+
+Homepage.propTypes = {
+  homepageData: PropTypes.shape({
+    partners: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+    basicContent: PropTypes.shape({
+      'homepage-partners-text': PropTypes.shape({}),
+    }).isRequired,
+    projects: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+    common: PropTypes.shape({
+      'contact-form-text': PropTypes.shape({}),
+      'contact-form-tooltip': PropTypes.shape({}),
+    }),
+  }).isRequired,
+};

@@ -10,7 +10,6 @@ import store from '@root/redux/store';
 import Head from 'next/head';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
-import Layout from '@root/components/layout';
 
 const App = (props) => {
   const queryClientRef = useRef();
@@ -35,9 +34,7 @@ const App = (props) => {
         <CustomThemeProvider theme={theme}>
           <QueryClientProvider client={queryClientRef.current}>
             <Hydrate>
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
+              <Component {...pageProps} />
             </Hydrate>
             <ReactQueryDevtools initialIsOpen={false} />
           </QueryClientProvider>
