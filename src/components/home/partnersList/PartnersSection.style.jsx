@@ -10,6 +10,8 @@ export const LogosSection = styled.section`
   width: 1134px;
   height: 556px;
   margin-top: 148px;
+  /* remove this margin when contact form is present on the homepage */
+  margin-bottom: 400px;
 `;
 export const PartnersHeader = styled(Header3)`
   margin-bottom: 32px;
@@ -19,7 +21,6 @@ export const PartnersDescription = styled(ParagraphBody)`
   text-align: center;
   width: 635px;
   height: 64px;
-  margin-bottom: 80px;
 `;
 
 export const LogosContainer = styled.div`
@@ -28,13 +29,13 @@ export const LogosContainer = styled.div`
   justify-content: center;
   align-content: flex-start;
   height: 336px;
-  width: 1134px; ;
+  width: 1134px;
+  margin-top: 80px;
 `;
-export const Logo = styled.a`
+export const Logo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 226px;
   height: 112px;
-  cursor: pointer;
 `;
