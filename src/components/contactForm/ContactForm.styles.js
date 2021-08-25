@@ -72,11 +72,13 @@ export const NameInput = styled(Input)`
   width: 282px;
   height: 48px;
   margin-top: 5px;
+  margin-right: 0;
 `;
 export const EmailInput = styled(Input)`
   width: 588px;
   height: 48px;
   margin-top: 5px;
+  margin-right: 0;
 `;
 export const ContentInput = styled(TextArea)`
   width: 588px;
