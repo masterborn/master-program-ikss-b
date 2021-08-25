@@ -44,7 +44,7 @@ export const Title = styled(Header5)`
   color: ${(props) => props.theme.color.navy};
   overflow: hidden;
 `;
-export const Body = styled(ParagraphBody)`
+export const Paragraph = styled(ParagraphBody)`
   max-width: 336px;
 
   display: -webkit-box;

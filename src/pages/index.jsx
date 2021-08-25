@@ -16,11 +16,18 @@ export default function index({ homepageData: { partners, basicContent, projects
     'social-youtube': socialYt,
   } = common;
   const socials = { socialFb, socialIn, socialIg, socialYt };
+  const {
+    'homepage-values': valuesText,
+    'homepage-tile-1': homepageTile1,
+    'homepage-tile-2': homepageTile2,
+    'homepage-tile-3': homepageTile3,
+  } = basicContent;
+  const valuesTiles = [homepageTile1, homepageTile2, homepageTile3];
 
   return (
     <div>
       <TopSection topSectionContent={topSectionContent} socials={socials} />
-      <ValuesSection />
+      <ValuesSection valuesText={valuesText} valuesTiles={valuesTiles} />
       <ProjectsSection projects={projects} />
       <PartnersSection partners={partners} partnersText={partnersText} />
     </div>
