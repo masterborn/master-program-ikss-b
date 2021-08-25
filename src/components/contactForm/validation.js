@@ -22,6 +22,7 @@ const validateTermsCheckbox = (isTermsBoxChecked) => !isTermsBoxChecked;
 
 const validateInputs = (formValues) => {
   const areInputsInvalid = {};
+  const areInputsValid = {};
 
   areInputsInvalid.name = validateName(formValues.name);
   areInputsInvalid.lastName = validateLastName(formValues.lastName);
@@ -29,7 +30,11 @@ const validateInputs = (formValues) => {
   areInputsInvalid.content = validateContent(formValues.content);
   areInputsInvalid.termsCheckbox = validateTermsCheckbox(formValues.isTermsBoxChecked);
 
-  return areInputsInvalid;
+  Object.entries(areInputsInvalid).forEach(([key, value]) => {
+    areInputsValid[key] = !value;
+  });
+
+  return { areInputsInvalid, areInputsValid };
 };
 
 export default validateInputs;

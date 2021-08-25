@@ -61,6 +61,14 @@ export default function ContactForm({ className, isModal, closeModal }) {
     termsCheckbox: false,
   });
 
+  const [areInputsValid, setAreInputsValid] = useState({
+    name: false,
+    lastName: false,
+    email: false,
+    content: false,
+    termsCheckbox: false,
+  });
+
   const formStatus = useSelector((state) => state.contactForm.status);
 
   useEffect(() => {
@@ -87,9 +95,10 @@ export default function ContactForm({ className, isModal, closeModal }) {
   const isFormValid = () => {
     const resources = validateInputs(formValues);
 
-    setAreInputsInvalid(resources);
+    setAreInputsInvalid(resources.areInputsInvalid);
+    setAreInputsValid(resources.areInputsValid);
 
-    return !Object.values(resources).some((isInvalid) => isInvalid);
+    return !Object.values(resources.areInputsInvalid).some((isInvalid) => isInvalid);
   };
 
   const changeFormStatus = (statusType) => {
@@ -163,6 +172,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
                 onChange={(event) => handleInputChange(event, 'name')}
                 placeholder="Wpisz swoje imię"
                 isInvalid={areInputsInvalid.name}
+                isValid={areInputsValid.name}
                 withIcon={areInputsInvalid.name}
                 disabled={disableInputs}
               />
@@ -174,6 +184,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
                 onChange={(event) => handleInputChange(event, 'lastName')}
                 placeholder="Wpisz swoje nazwisko"
                 isInvalid={areInputsInvalid.lastName}
+                isValid={areInputsValid.lastName}
                 withIcon={areInputsInvalid.lastName}
                 disabled={disableInputs}
               />
@@ -188,6 +199,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
                 onChange={(event) => handleInputChange(event, 'email')}
                 placeholder="Wpisz swój adres e-mail"
                 isInvalid={areInputsInvalid.email}
+                isValid={areInputsValid.email}
                 withIcon={areInputsInvalid.email}
                 disabled={disableInputs}
               />
@@ -202,6 +214,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
                 onChange={(event) => handleInputChange(event, 'content')}
                 placeholder="O czym chcesz porozmawiać?"
                 isInvalid={areInputsInvalid.content}
+                isValid={areInputsValid.content}
                 disabled={disableInputs}
               />
             </label>
