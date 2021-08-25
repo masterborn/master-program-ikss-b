@@ -26,7 +26,7 @@ const paths = [
   },
 ];
 
-export default function Layout({ children }) {
+export default function Layout({ children, contactFormText, tooltipText }) {
   const router = useRouter();
   const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
 
@@ -34,7 +34,13 @@ export default function Layout({ children }) {
     <PageWrapper>
       <StyledLayout>
         <Navbar paths={paths} currPathname={router.pathname} />
-        {router.pathname !== '/' && <ContactFormModal isOpened={isContactModalOpened} />}
+        {router.pathname !== '/' && (
+          <ContactFormModal
+            contactFormText={contactFormText}
+            tooltipText={tooltipText}
+            isOpened={isContactModalOpened}
+          />
+        )}
 
         <div id="main">{children}</div>
 
@@ -46,4 +52,6 @@ export default function Layout({ children }) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  contactFormText: PropTypes.shape({}).isRequired,
+  tooltipText: PropTypes.shape({}).isRequired,
 };

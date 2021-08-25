@@ -1,20 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { TooltipContainer, Text, Tail } from './Tooltip.styles';
 
-export default function Tooltip({ text, show }) {
+export default function Tooltip({ tooltipText, show }) {
+  const Body = convertRichTextToReactComponent(Text, tooltipText.text1);
   if (!show) return null;
   return (
     <TooltipContainer>
-      <Text>{text}</Text>
+      {Body}
       <Tail />
     </TooltipContainer>
   );
 }
 
 Tooltip.propTypes = {
-  text: PropTypes.string.isRequired,
+  tooltipText: PropTypes.shape({
+    text1: PropTypes.shape({}),
+  }).isRequired,
   show: PropTypes.bool,
 };
 

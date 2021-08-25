@@ -36,11 +36,6 @@ import {
   StyledErrorIcon,
 } from './ContactForm.styles';
 
-const MOCKUP = {
-  tooltipText:
-    'Gravida convallis risus adipiscing non enim. Consectetur quam facilisis tincidunt vitae. Sed id a vestibulum est. A malesuada massa ultrices proin tempor tempus vestibulum. At eros, lacus viverra lacinia eget suspendisse habitasse.',
-};
-
 const FORM_SENDING_STATUS = {
   initial: 'initial',
   loading: 'loading',
@@ -48,8 +43,13 @@ const FORM_SENDING_STATUS = {
   error: 'error',
 };
 
-export default function ContactForm({ className, isModal, closeModal }) {
-  const { contactFormText } = useSelector((state) => state.contactForm);
+export default function ContactForm({
+  className,
+  contactFormText,
+  tooltipText,
+  isModal,
+  closeModal,
+}) {
   const formValues = useSelector((state) => state.contactForm.inputsValues);
   const dispatch = useDispatch();
 
@@ -228,7 +228,7 @@ export default function ContactForm({ className, isModal, closeModal }) {
               disabled={disableInputs}
             />
             <RODOContainer>
-              <Tooltip text={MOCKUP.tooltipText} show={showTooltip} />
+              <Tooltip tooltipText={tooltipText} show={showTooltip} />
               <RODO>
                 Zapoznałem się z{' '}
                 <Link href="/terms" passHref>
@@ -257,6 +257,11 @@ export default function ContactForm({ className, isModal, closeModal }) {
 
 ContactForm.propTypes = {
   className: PropTypes.string,
+  contactFormText: PropTypes.shape({
+    title: PropTypes.string,
+    text1: PropTypes.shape({}),
+  }).isRequired,
+  tooltipText: PropTypes.shape({}).isRequired,
   isModal: PropTypes.bool,
   closeModal: PropTypes.func,
 };
