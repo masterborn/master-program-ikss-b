@@ -17,14 +17,13 @@ import {
 export default function ProjectTile({ project }) {
   const { title, date, video_url: videoUrl, image, linkUrl, description } = project;
   const linkIsFromFacebook = /^(https:\/\/)?(www.)?f(b||acebook)\.com\/.*/.test(linkUrl);
-
   return (
     <ProjectArticle>
       <ProjectMediaContainer>
         {videoUrl ? (
           <ProjectVideo url={videoUrl} />
         ) : (
-          <ProjectImage width={997} height={579} alt={image.title} src={`https:\\${image.url}`} />
+          <ProjectImage alt={image.title} src={`https:\\${image.url}`} />
         )}
       </ProjectMediaContainer>
       <ProjectSummary>

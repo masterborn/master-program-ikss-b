@@ -20,6 +20,11 @@ export const ProjectSection = styled.section`
     width: 100%;
     max-width: 550px;
     padding: 0 24px 0 24px;
+
+    a {
+      align-self: center;
+      margin-top: 16px;
+    }
   }
 `;
 
@@ -27,6 +32,7 @@ export const SectionHeader = styled(Header3)`
   margin-bottom: 32px;
 
   @media (max-width: 550px) {
+    margin-bottom: 24px;
     font-size: 24px;
     line-height: 32px;
   }
@@ -35,10 +41,13 @@ export const ProjectsButtonsContainer = styled.div`
   display: flex;
   width: auto;
   height: 48px;
+  background-color: ${(props) => props.theme.color.blueTints.blue10};
   margin-bottom: 64px;
   border-radius: 26px;
+
   @media (max-width: 550px) {
-    min-width: 300px;
+    margin-bottom: 24px;
+    background: none;
     height: auto;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,15 +76,16 @@ export const ProjectButton = styled.button`
     padding: 9px 16px;
     font-size: 10px;
     line-height: 13px;
-
     &:first-child {
-      margin: 0 100px 12px 100px;
+      margin: 0 100% 12px 100%;
+      min-width: max-content;
     }
     &:last-child {
       margin: 0 0 0 12px;
     }
   }
   @media (max-width: 380px) {
-    width: 130px;
+    min-width: 90px;
+    max-width: 120px;
   }
 `;
