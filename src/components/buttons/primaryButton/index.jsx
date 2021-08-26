@@ -15,7 +15,7 @@ export default function PrimaryButton({ className, children, disabled, withIcon,
 PrimaryButton.propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
-  children: PropTypes.string,
+  children: PropTypes.node,
   disabled: PropTypes.bool,
   withIcon: PropTypes.bool,
   isBig: PropTypes.bool,

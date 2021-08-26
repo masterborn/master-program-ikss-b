@@ -1,10 +1,16 @@
 {
-  "extends": [
-      "@masterborn/eslint-config/frontend/typescript",
-      "prettier"
-  ],
+  "extends": ["@masterborn/eslint-config/frontend/typescript", "prettier"],
   "rules": {
     "react/jsx-one-expression-per-line": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": ["CustomInputLabel"],
+        "labelAttributes": ["label"],
+        "controlComponents": ["CustomInput"],
+        "depth": 3
+      }
+    ]
   }
 }

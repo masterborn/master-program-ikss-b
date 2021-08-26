@@ -9,11 +9,16 @@ const styledInput = styled.input`
   box-sizing: border-box;
 
   height: 100%;
+  width: 100%;
 
   outline: none;
   border: 1.5px solid
-    ${(props) =>
-      props.isInvalid ? props.theme.color.misc.errorRed : props.theme.color.steelTints.steel30};
+    ${(props) => {
+      if (props.isInvalid) return props.theme.color.misc.errorRed;
+      if (props.isValid) return props.theme.color.misc.successGreen;
+
+      return props.theme.color.steelTints.steel30;
+    }};
   border-radius: 4px;
 
   font-size: 14px;

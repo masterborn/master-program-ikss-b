@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
+import { useSelector } from 'react-redux';
 import { StyledLayout, PageWrapper } from './Layout.styles';
 import Navbar from './navbar';
 import Footer from './footer';
+import ContactFormModal from '../contactForm/contactModal';
 
 const paths = [
   {
@@ -24,14 +26,21 @@ const paths = [
   },
 ];
 
-export default function Layout({ children }) {
+export default function Layout({ children, contactFormText, tooltipText }) {
   const router = useRouter();
-  const isMobile = false;
+  const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
 
   return (
     <PageWrapper>
-      <StyledLayout isMobile={isMobile}>
-        <Navbar isMobile={isMobile} paths={paths} currPathname={router.pathname} />
+      <StyledLayout>
+        <Navbar paths={paths} currPathname={router.pathname} />
+        {router.pathname !== '/' && (
+          <ContactFormModal
+            contactFormText={contactFormText}
+            tooltipText={tooltipText}
+            isOpened={isContactModalOpened}
+          />
+        )}
 
         <div id="main">{children}</div>
 
@@ -43,4 +52,6 @@ export default function Layout({ children }) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  contactFormText: PropTypes.shape({}).isRequired,
+  tooltipText: PropTypes.shape({}).isRequired,
 };

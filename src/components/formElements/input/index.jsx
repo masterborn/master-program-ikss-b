@@ -9,15 +9,18 @@ export default function InputContainer({
   disabled,
   withIcon,
   isInvalid,
+  isValid,
   value,
   onChange,
+  className,
 }) {
   return (
-    <StyledInputContainer withIcon={withIcon}>
+    <StyledInputContainer withIcon={withIcon} className={className}>
       <StyledInput
         placeholder={placeholder}
         disabled={disabled}
         isInvalid={isInvalid}
+        isValid={isValid}
         withIcon={withIcon}
         onChange={onChange}
         value={value}
@@ -33,8 +36,10 @@ InputContainer.propTypes = {
   disabled: PropTypes.bool,
   withIcon: PropTypes.bool,
   isInvalid: PropTypes.bool,
+  isValid: PropTypes.bool,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  className: PropTypes.string,
 };
 
 InputContainer.defaultProps = {
@@ -42,4 +47,6 @@ InputContainer.defaultProps = {
   disabled: false,
   withIcon: false,
   isInvalid: false,
+  isValid: false,
+  className: '',
 };

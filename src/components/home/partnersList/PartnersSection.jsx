@@ -1,48 +1,33 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { sortByOrder } from '@root/dataMappers/contentful';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+// eslint-disable-next-line import/extensions
+import { convertRichTextToReactComponent, sortByOrder } from '@root/dataMappers/contentful.jsx';
+
+import PartnerLogo from '@root/components/logos/PartnerLogo';
 import {
-  Logo,
   LogosContainer,
   LogosSection,
   PartnersDescription,
   PartnersHeader,
 } from './PartnersSection.style';
 
-function renderRichText(richText) {
-  const options = {
-    renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <PartnersDescription>{children}</PartnersDescription>,
-    },
-    renderMark: {
-      [MARKS.BOLD]: (text) => <b>{text}</b>,
-    },
-  };
-  return documentToReactComponents(richText, options);
+function sortPartners(partners) {
+  const homepagePartners = partners.filter(
+    ({ showOnHomepage, logo }) => showOnHomepage && logo.url,
+  );
+  return sortByOrder(homepagePartners);
 }
-
 export default function PartnersSection({ partners, partnersText }) {
-  function sortPartners() {
-    const homepagePartners = partners.filter(
-      (partner) => partner.showOnHomepage && partner.logo.url,
-    );
-    return sortByOrder(homepagePartners);
-  }
   const { title: partnersTitle, text1: richText } = partnersText;
-  const homepagePartners = useMemo(sortPartners, [partners]);
-  const partnersDescription = renderRichText(richText);
-
+  const homepagePartners = useMemo(() => sortPartners(partners), [partners]);
+  const Description = convertRichTextToReactComponent(PartnersDescription, richText);
   return (
-    <LogosSection>
+    <LogosSection id="partners">
       <PartnersHeader>{partnersTitle}</PartnersHeader>
-      {partnersDescription}
+      {Description}
       <LogosContainer>
-        {homepagePartners.map(({ logo: { title, url }, linkUrl }) => (
-          <Logo key={title} href={linkUrl || ''}>
-            <img alt={title} src={url} />
-          </Logo>
+        {homepagePartners.map((partner) => (
+          <PartnerLogo key={partner.name} partner={partner} />
         ))}
       </LogosContainer>
     </LogosSection>
