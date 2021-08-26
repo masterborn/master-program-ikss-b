@@ -86,3 +86,8 @@ export const Paragraph = styled(ParagraphSmall)`
 
   text-align: center;
 `;
+
+export const MBLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+`;
