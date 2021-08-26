@@ -22,7 +22,7 @@ export default function PartnersSection({ partners, partnersText }) {
   const homepagePartners = useMemo(() => sortPartners(partners), [partners]);
   const Description = convertRichTextToReactComponent(PartnersDescription, richText);
   return (
-    <LogosSection>
+    <LogosSection id="partners">
       <PartnersHeader>{partnersTitle}</PartnersHeader>
       {Description}
       <LogosContainer>

@@ -14,10 +14,31 @@ import {
 import handleContactFormButton from './contactFormButton';
 
 const MOCK_SOCIALS = {
-  fb: 'https://www.facebook.com/',
-  ig: 'https://www.instagram.com/',
-  yt: 'https://www.youtube.com/',
-  in: 'https://www.linkedin.com/',
+  socialFb: {
+    page: 'common',
+    identifier: 'social-facebook',
+    title: 'URL do Facebooka',
+    linkUrl: 'https://www.facebook.com/IKSSUE/',
+    linkCaption: 'Facebook',
+  },
+  socialIn: {
+    page: 'common',
+    identifier: 'social-linkedin',
+    title: 'URL do LinkedIn',
+    linkUrl: 'https://www.linkedin.com/company/informacjakulturalnosportowastudentowikss/',
+  },
+  socialIg: {
+    page: 'common',
+    identifier: 'social-instagram',
+    title: 'URL do Instagrama',
+    linkUrl: 'https://www.instagram.com/ikssue/',
+  },
+  socialYt: {
+    page: 'common',
+    identifier: 'social-youtube',
+    title: 'URL do YouTube',
+    linkUrl: 'https://www.youtube.com/channel/UC6cKLW4YEBqA7FWmkY0HThQ',
+  },
 };
 
 // Form on homepage must have 'contact-form' id

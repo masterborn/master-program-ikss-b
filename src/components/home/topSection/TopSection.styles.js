@@ -58,7 +58,14 @@ export const StyledSocials = styled(Socials)`
   }
 `;
 
-export const Header = styled(Header1)``;
+export const Header = styled(Header1)`
+  width: 512px;
+`;
+
+export const TopSectionImage = styled.img`
+  width: 808px;
+  height: 505px;
+`;
 
 export const Paragraph = styled(ParagraphBody)`
   width: 384px;

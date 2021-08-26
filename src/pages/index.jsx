@@ -11,14 +11,29 @@ import ContactForm from '../components/contactForm';
 
 export default function Homepage({ homepageData: { partners, basicContent, common, projects } }) {
   const { 'homepage-partners-text': partnersText } = basicContent;
+  const { 'homepage-top-section': topSectionContent } = basicContent;
+  const {
+    'social-facebook': socialFb,
+    'social-linkedin': socialIn,
+    'social-instagram': socialIg,
+    'social-youtube': socialYt,
+  } = common;
+  const socials = { socialFb, socialIn, socialIg, socialYt };
+  const {
+    'homepage-values': valuesText,
+    'homepage-tile-1': homepageTile1,
+    'homepage-tile-2': homepageTile2,
+    'homepage-tile-3': homepageTile3,
+  } = basicContent;
+  const valuesTiles = [homepageTile1, homepageTile2, homepageTile3];
 
   const { 'contact-form-text': contactFormText } = common;
   const { 'contact-form-tooltip': tooltipText } = common;
 
   return (
     <Layout contactFormText={contactFormText} tooltipText={tooltipText}>
-      <TopSection />
-      <ValuesSection />
+      <TopSection topSectionContent={topSectionContent} socials={socials} />
+      <ValuesSection valuesText={valuesText} valuesTiles={valuesTiles} />
       <ProjectsSection projects={projects} />
       <PartnersSection partners={partners} partnersText={partnersText} />
       <ContactForm contactFormText={contactFormText} tooltipText={tooltipText} />
@@ -54,6 +69,6 @@ Homepage.propTypes = {
     common: PropTypes.shape({
       'contact-form-text': PropTypes.shape({}),
       'contact-form-tooltip': PropTypes.shape({}),
-    }),
+    }).isRequired,
   }).isRequired,
 };
