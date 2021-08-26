@@ -1,6 +1,5 @@
 import { Header4, Header5 } from '@root/components/typography/headers';
 import { ParagraphBody } from '@root/components/typography/paragraphs';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 export const ProjectArticle = styled.article`
@@ -8,42 +7,79 @@ export const ProjectArticle = styled.article`
   flex-direction: column;
   border-radius: 16px;
   width: 997px;
-  height: 1029px;
+  height: auto;
   margin-bottom: 56px;
   box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
     1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
     0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
+  @media (max-width: 550px) {
+    width: 100%;
+  }
 `;
 export const ProjectMediaContainer = styled.div`
   border-radius: 16px 16px 0 0;
-  background-color: black;
-  height: 579px;
+  height: auto;
   width: 100%;
+  @media (max-width: 550px) {
+    height: auto;
+  }
 `;
 export const ProjectSummary = styled.div`
   display: flex;
   flex-direction: column;
-  height: 440px;
+  height: auto;
   width: 100%;
   padding: 64px 102px 66px 103px;
+  @media (max-width: 550px) {
+    padding: 24px 26px 32px 24px;
+  }
 `;
 export const ProjectHeader = styled.div`
   display: flex;
   align-items: flex-end;
   text-align: center;
   margin-bottom: 32px;
+  @media (max-width: 550px) {
+    text-align: left;
+    margin-bottom: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 `;
 
 export const ProjectDate = styled(Header5)`
   color: ${(props) => props.theme.color.steel};
+
+  @media (max-width: 550px) {
+    font-size: 14px;
+    line-height: 17.57px;
+    weight: 700;
+  }
 `;
 
 export const ProjectTitle = styled(Header4)`
   margin: 0 24px 0 0;
+  @media (max-width: 550px) {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 24px;
+  }
 `;
-export const ProjectDescription = styled(ParagraphBody)``;
+export const ProjectDescription = styled(ParagraphBody)`
+  @media (max-width: 550px) {
+    font-size: 14px;
+    line-height: 28px;
+  }
+`;
 
-export const ProjectImage = styled(Image)`
+export const ProjectImage = styled.img`
+  width: 997px;
+  height: auto;
   border-radius: 16px 16px 0 0;
+  @media (max-width: 550px) {
+    max-width: 100%;
+    height: auto;
+  }
 `;
