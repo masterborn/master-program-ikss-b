@@ -30,6 +30,8 @@ export default function Layout({ children, contactFormText, tooltipText }) {
   const router = useRouter();
   const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
 
+  const isValidPage = paths.some(({ path }) => path === router.pathname);
+
   return (
     <PageWrapper>
       <StyledLayout>
@@ -43,8 +45,7 @@ export default function Layout({ children, contactFormText, tooltipText }) {
         )}
 
         <div id="main">{children}</div>
-
-        <Footer paths={paths} isHomepage={router.pathname === '/'} />
+        {isValidPage && <Footer paths={paths} isHomepage={router.pathname === '/'} />}
       </StyledLayout>
     </PageWrapper>
   );
