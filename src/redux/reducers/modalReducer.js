@@ -1,4 +1,4 @@
-import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modalActions';
+import { TOGGLE_MODAL } from '../actions/modalActions';
 
 const initialState = {
   isModalOpened: false,
@@ -6,10 +6,8 @@ const initialState = {
 
 const modalReducer = (state = initialState, action) => {
   switch (action.type) {
-    case OPEN_MODAL:
-      return { ...state, isModalOpened: true };
-    case CLOSE_MODAL:
-      return { ...state, isModalOpened: false };
+    case TOGGLE_MODAL:
+      return { ...state, isModalOpened: action.payload };
     default:
       return state;
   }

@@ -1,4 +1,4 @@
-const handleClick = (currPathname, navbarHeight, openContactModal) => {
+const handleClick = (currPathname, navbarHeight, toggleContactModal) => {
   if (currPathname === '/') {
     const contactForm = document.getElementById('contact-form');
     const navbarOffset = Number(navbarHeight.replace(/px$/, ''));
@@ -8,7 +8,7 @@ const handleClick = (currPathname, navbarHeight, openContactModal) => {
       window.scrollBy(0, contactFormPosition - navbarOffset);
     }
   } else {
-    openContactModal();
+    toggleContactModal(true);
   }
 };
 

@@ -60,7 +60,7 @@ export const Form = styled.form`
   color: ${(props) => props.theme.color.navy};
 `;
 
-export const Row = styled.div`
+export const InputRow = styled.div`
   width: 588px;
   display: flex;
   flex-direction: row;

@@ -1,37 +1,37 @@
 const validateName = (name) => {
-  if (!name) return true;
+  if (!name) return false;
 
-  return false;
+  return true;
 };
 const validateLastName = (lastName) => {
-  if (!lastName) return true;
+  if (!lastName) return false;
 
-  return false;
+  return true;
 };
 const validateEmail = (email) => {
-  if (!email) return true;
+  if (!email) return false;
 
-  return false;
+  return true;
 };
 const validateContent = (content) => {
-  if (!content) return true;
+  if (!content) return false;
 
-  return false;
+  return true;
 };
-const validateTermsCheckbox = (isTermsBoxChecked) => !isTermsBoxChecked;
+const validateTermsCheckbox = (isTermsBoxChecked) => isTermsBoxChecked;
 
 const validateInputs = (formValues) => {
   const areInputsInvalid = {};
   const areInputsValid = {};
 
-  areInputsInvalid.name = validateName(formValues.name);
-  areInputsInvalid.lastName = validateLastName(formValues.lastName);
-  areInputsInvalid.email = validateEmail(formValues.email);
-  areInputsInvalid.content = validateContent(formValues.content);
-  areInputsInvalid.termsCheckbox = validateTermsCheckbox(formValues.isTermsBoxChecked);
+  areInputsValid.name = validateName(formValues.name);
+  areInputsValid.lastName = validateLastName(formValues.lastName);
+  areInputsValid.email = validateEmail(formValues.email);
+  areInputsValid.content = validateContent(formValues.content);
+  areInputsValid.termsCheckbox = validateTermsCheckbox(formValues.isTermsBoxChecked);
 
-  Object.entries(areInputsInvalid).forEach(([key, value]) => {
-    areInputsValid[key] = !value;
+  Object.entries(areInputsValid).forEach(([key, value]) => {
+    areInputsInvalid[key] = !value;
   });
 
   return { areInputsInvalid, areInputsValid };

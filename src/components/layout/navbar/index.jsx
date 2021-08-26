@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { useDispatch } from 'react-redux';
-import { openModal } from '@root/redux/actions/modalActions';
+import { toggleModal } from '@root/redux/actions/modalActions';
 import {
   StyledNavbar,
   LinksContainer,
@@ -26,9 +26,9 @@ export default function Navbar({ paths, currPathname }) {
   const dispatch = useDispatch();
   const navbarHeight = '88px';
 
-  const closeContactModal = () => dispatch(openModal());
+  const openContactModal = (isToggled) => dispatch(toggleModal(isToggled));
 
-  const handleClick = () => handleContactFormButton(currPathname, navbarHeight, closeContactModal);
+  const handleClick = () => handleContactFormButton(currPathname, navbarHeight, openContactModal);
   return (
     <StyledNavbar>
       <Link href="/" passHref>

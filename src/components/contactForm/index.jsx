@@ -20,7 +20,7 @@ import {
   Content,
   TopSection,
   Form,
-  Row,
+  InputRow,
   NameInput,
   EmailInput,
   ContentInput,
@@ -177,7 +177,7 @@ export default function ContactForm({
         </TopSection>
 
         <Form onSubmit={handleSubmit}>
-          <Row spaceBetween>
+          <InputRow spaceBetween>
             <label htmlFor="name">
               <ParagraphSmall>Imię</ParagraphSmall>
               <NameInput
@@ -202,9 +202,9 @@ export default function ContactForm({
                 disabled={disableInputs}
               />
             </label>
-          </Row>
+          </InputRow>
 
-          <Row>
+          <InputRow>
             <label htmlFor="email">
               <ParagraphSmall>Adres email</ParagraphSmall>
               <EmailInput
@@ -217,9 +217,9 @@ export default function ContactForm({
                 disabled={disableInputs}
               />
             </label>
-          </Row>
+          </InputRow>
 
-          <Row>
+          <InputRow>
             <label htmlFor="content">
               <ParagraphSmall>Treść</ParagraphSmall>
               <ContentInput
@@ -231,9 +231,9 @@ export default function ContactForm({
                 disabled={disableInputs}
               />
             </label>
-          </Row>
+          </InputRow>
 
-          <Row>
+          <InputRow>
             <StyledCheckbox
               onChange={(event) => handleInputChange(event, 'isTermsBoxChecked')}
               checked={formValues.isTermsBoxChecked}
@@ -259,7 +259,7 @@ export default function ContactForm({
                 </Link>
               </RODO>
             </RODOContainer>
-          </Row>
+          </InputRow>
 
           {submitButton()}
         </Form>
