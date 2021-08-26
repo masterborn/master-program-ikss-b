@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const StyledLayout = styled.div`
   width: 1440px;
 
-  margin: 0 auto;
-
   #main {
     display: flex;
     flex-direction: column;
