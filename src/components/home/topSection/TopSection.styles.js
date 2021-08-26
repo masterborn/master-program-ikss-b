@@ -7,19 +7,63 @@ export const StyledTopSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media (max-width: 550px) {
+    max-width: 550px;
+    min-width: 300px;
+    width: 100%;
+  }
 `;
 
 export const Content = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-end;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
-export const LeftSide = styled.div`
+export const TextSection = styled.div`
   min-width: 416px;
   margin-top: 77px;
   margin-left: 120px;
+  @media (max-width: 550px) {
+    min-width: 300px;
+    margin-top: 40px;
+    margin-left: 0;
+    padding: 0 24px;
+    order: 2;
+  }
+`;
+
+export const TopSectionImage = styled.img`
+  width: 808px;
+  height: 505px;
+
+  @media (max-width: 550px) {
+    order: 1;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+  }
+`;
+
+export const TopSectionVideo = styled.video`
+  width: 808px;
+  height: 505px;
+
+  @media (max-width: 550px) {
+    order: 1;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+  }
 `;
 
 export const StyledSocials = styled(Socials)`
@@ -41,6 +85,16 @@ export const StyledSocials = styled(Socials)`
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
   border-radius: 16px 0px 0px 16px;
 
+  @media (max-width: 550px) {
+    width: 80%;
+    height: 80px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    justify-content: space-around;
+  }
+
   a {
     height: 48px;
     display: flex;
@@ -54,22 +108,38 @@ export const StyledSocials = styled(Socials)`
       transform: scale(2);
       margin-right: 24px;
       margin-left: 24px;
+
+      @media (max-width: 550px) {
+        transform: scale(1.5);
+        margin: 0;
+      }
+    }
+    @media (max-width: 550px) {
+      height: 32px;
+      width: 32px;
     }
   }
 `;
 
 export const Header = styled(Header1)`
-  width: 512px;
-`;
+  width: 100%;
 
-export const TopSectionImage = styled.img`
-  width: 808px;
-  height: 505px;
+  @media (max-width: 550px) {
+    font-size: 32px;
+    line-height: 44px;
+  }
 `;
 
 export const Paragraph = styled(ParagraphBody)`
-  width: 384px;
+  width: 100%;
   margin: 32px 0;
 
   color: ${(props) => props.theme.color.steel};
+
+  @media (max-width: 550px) {
+    margin: 24px 0;
+
+    font-size: 14px;
+    line-height: 28px;
+  }
 `;
