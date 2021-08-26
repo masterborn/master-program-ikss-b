@@ -2,7 +2,7 @@ import config from '@root/config/contentful';
 import data from '../api/data.json';
 
 export default async function getPagesData() {
-  const apiEndPoint = `https://cdn.contentful.com/spaces/${config.SPACE_ID}/environments/${config.ENV_ID}/entries?access_token=${config.TOKEN}`;
+  const apiEndPoint = `https://cdn.contentful.com/spaces/${config.SPACE_ID}/environments/master/entries?access_token=${config.TOKEN}`;
   const timeoutId = setTimeout(() => {
     throw new Error('API request timeout');
   }, 5000);

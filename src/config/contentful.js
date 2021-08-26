@@ -3,9 +3,8 @@ const joi = require('joi');
 const schema = joi
   .object()
   .keys({
-    SPACE_ID: joi.string().required(),
-    ENV_ID: joi.string().required(),
-    TOKEN: joi.string().required(),
+    NEXT_PUBLIC_CONTENTFUL_SPACE_ID: joi.string().required(),
+    NEXT_PUBLIC_CONTENTFUL_API_TOKEN: joi.string().required(),
   })
   .unknown();
 
@@ -15,7 +14,6 @@ if (error) {
 }
 
 module.exports = {
-  SPACE_ID: envVars.SPACE_ID,
-  ENV_ID: envVars.ENV_ID,
-  TOKEN: envVars.TOKEN,
+  SPACE_ID: envVars.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  TOKEN: envVars.NEXT_PUBLIC_CONTENTFUL_API_TOKEN,
 };
