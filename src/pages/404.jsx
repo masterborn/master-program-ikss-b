@@ -6,6 +6,7 @@ import Layout from '@root/components/layout';
 import {
   ErrorDescription,
   ErrorMessage,
+  ErrorPageContainer,
   GetBackButton,
   IKKSContainer,
   IKKSLogo,
@@ -18,17 +19,19 @@ export default function Custom404({ custom404Data: { common } }) {
 
   return (
     <Layout contactFormText={contactFormText} tooltipText={tooltipText}>
-      <IKKSContainer>
-        <IKKSLogo />
-      </IKKSContainer>
-      <ErrorMessage>ups, 404</ErrorMessage>
-      <ErrorDescription>
-        Za każdym razem kiedy trafiasz na tę stronę, ktoś wymawia „i-ka-ka-es” zamiast
-        <b> „ikss”.</b>
-      </ErrorDescription>
-      <Link href="/">
-        <GetBackButton isBig>Uciekam stąd</GetBackButton>
-      </Link>
+      <ErrorPageContainer>
+        <IKKSContainer>
+          <IKKSLogo />
+        </IKKSContainer>
+        <ErrorMessage>ups, 404</ErrorMessage>
+        <ErrorDescription>
+          Za każdym razem kiedy trafiasz na tę stronę, ktoś wymawia „i-ka-ka-es” zamiast
+          <b> „ikss”.</b>
+        </ErrorDescription>
+        <Link href="/">
+          <GetBackButton isBig>Uciekam stąd</GetBackButton>
+        </Link>
+      </ErrorPageContainer>
     </Layout>
   );
 }

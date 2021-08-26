@@ -4,6 +4,19 @@ import { Header1 } from '../typography/headers';
 import { ParagraphBody } from '../typography/paragraphs';
 import IKKSErrorImage from './IKKSErrorImage';
 
+export const ErrorPageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  @media (max-width: 550px) {
+    padding: 0 24px;
+  }
+`;
+
 export const IKKSContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -30,6 +43,7 @@ export const IKKSLogo = styled(IKKSErrorImage)`
 export const ErrorMessage = styled(Header1)`
   margin-bottom: 32px;
   @media (max-width: 550px) {
+    margin-bottom: 24px;
     font-size: 40px;
     line-height: 56px;
   }
@@ -42,6 +56,7 @@ export const ErrorDescription = styled(ParagraphBody)`
   font-size: 20px;
   line-height: 32px;
   @media (max-width: 550px) {
+    margin-bottom: 24px;
     text-align: center;
     display: inline;
     font-size: 14px;
@@ -50,8 +65,13 @@ export const ErrorDescription = styled(ParagraphBody)`
 `;
 
 export const GetBackButton = styled(StyledPrimaryButton)`
-  height: 36px;
-  padding: 9px 16px;
-  font-size: 14px;
-  line-height: 18px;
+  width: 153px;
+  @media (max-width: 550px) {
+    width: max-content;
+    min-width: 124px;
+    height: 36px;
+    padding: 9px 16px;
+    font-size: 14px;
+    line-height: 18px;
+  }
 `;
