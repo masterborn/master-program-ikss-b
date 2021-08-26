@@ -8,12 +8,22 @@ const StyledButton = styled.button`
   background: inherit;
   width: auto;
   height: auto;
+  cursor: pointer;
 `;
 
-export default function IconButton({ icon, onClick }) {
-  return <StyledButton onClick={onClick}>{icon}</StyledButton>;
+export default function IconButton({ icon, onClick, className }) {
+  return (
+    <StyledButton className={className} onClick={onClick}>
+      {icon}
+    </StyledButton>
+  );
 }
 IconButton.propTypes = {
   icon: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
+  className: PropTypes.string,
+};
+
+IconButton.defaultProps = {
+  className: '',
 };

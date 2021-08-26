@@ -4,6 +4,9 @@ const GlobalStyles = createGlobalStyle`
 html{
   scroll-behavior: smooth;
 }
+body{
+  overflow: ${(props) => props.theme.isModalOpened && 'hidden'};
+}
   * {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;

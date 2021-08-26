@@ -10,9 +10,7 @@ export const LogosSection = styled.section`
   width: 1134px;
   height: 556px;
   margin-top: 148px;
-  /* remove this margin when contact form is present on the homepage */
-  margin-bottom: 400px;
-
+  
   @media (max-width: 550px) {
     width: 100%;
     max-width: 550px;

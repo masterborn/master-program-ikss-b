@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-const styledInput = styled.input`
+const StyledTextArea = styled.textarea`
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 12px;
-  ${(props) => (props.withIcon ? 'padding-right: 38px;' : 'padding-right: 12px;')}
+  padding-right: 12px;
 
   box-sizing: border-box;
 
@@ -39,4 +39,4 @@ const styledInput = styled.input`
   }
 `;
 
-export default styledInput;
+export default StyledTextArea;
