@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledLayout = styled.div`
-  ${(props) => (props.isMobile ? '' : 'width: 1440px')};
-
-  margin: 0 auto;
+  width: 1440px;
+  @media (max-width: 550px) {
+    min-width: 300px;
+    width: auto;
+  }
 
   @media (max-width: 550px) {
     min-width: 300px;
