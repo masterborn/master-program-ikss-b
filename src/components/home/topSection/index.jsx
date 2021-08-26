@@ -19,7 +19,7 @@ export default function TopSection({ topSectionContent, socials }) {
     text1: richText,
   } = topSectionContent;
 
-  const urlIsVideo = /.*\.mp4$/.test(mediaUrl);
+  const urlIsImage = /.*.(jpg|png|jpeg)$/.test(mediaUrl);
   const Description = convertRichTextToReactComponent(Paragraph, richText);
   const handleClick = () => {};
 
@@ -33,10 +33,10 @@ export default function TopSection({ topSectionContent, socials }) {
             Skontaktuj się
           </SecondaryButton>
         </LeftSide>
-        {urlIsVideo ? (
-          <video src={`https:${mediaUrl}`} alt={mediaTitle} width={808} muted autoPlay loop />
-        ) : (
+        {urlIsImage ? (
           <TopSectionImage src={mediaUrl} alt={mediaTitle} />
+        ) : (
+          <video src={`https:${mediaUrl}`} alt={mediaTitle} width={808} muted autoPlay loop />
         )}
       </Content>
 
