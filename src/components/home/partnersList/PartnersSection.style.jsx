@@ -1,5 +1,5 @@
 import { Header3 } from '@root/components/typography/headers';
-import { ParagraphBody, ParagraphSmall } from '@root/components/typography/paragraphs';
+import { ParagraphBody } from '@root/components/typography/paragraphs';
 import styled from 'styled-components';
 
 export const LogosSection = styled.section`
