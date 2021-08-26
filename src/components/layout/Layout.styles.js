@@ -9,6 +9,9 @@ export const StyledLayout = styled.div`
   }
 
   #main {
+    width: 100%;
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,4 +24,14 @@ export const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const BackgroundGradient = styled.div`
+  width: 100%;
+  height: 464px;
+
+  position: absolute;
+  z-index: -1;
+
+  background: linear-gradient(180deg, #f4faff 0%, rgba(255, 255, 255, 0) 100%);
 `;
