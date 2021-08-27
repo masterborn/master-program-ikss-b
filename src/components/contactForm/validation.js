@@ -18,7 +18,7 @@ const validateContent = (content) => {
 
   return true;
 };
-const validateTermsCheckbox = (isTermsBoxChecked) => isTermsBoxChecked;
+const validateTermsCheckbox = (hasAgreedToTerms) => hasAgreedToTerms;
 
 const validateInputs = (formValues) => {
   const areInputsInvalid = {};
@@ -28,7 +28,7 @@ const validateInputs = (formValues) => {
   areInputsValid.lastName = validateLastName(formValues.lastName);
   areInputsValid.email = validateEmail(formValues.email);
   areInputsValid.content = validateContent(formValues.content);
-  areInputsValid.termsCheckbox = validateTermsCheckbox(formValues.isTermsBoxChecked);
+  areInputsValid.termsCheckbox = validateTermsCheckbox(formValues.hasAgreedToTerms);
 
   Object.entries(areInputsValid).forEach(([key, value]) => {
     areInputsInvalid[key] = !value;

@@ -10,7 +10,7 @@ const initialState = {
     lastName: '',
     email: '',
     content: '',
-    isTermsBoxChecked: false,
+    hasAgreedToTerms: false,
   },
   status: 'initial',
 };

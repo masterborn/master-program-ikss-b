@@ -99,7 +99,7 @@ export default function ContactForm({
   const toggleShowTooltip = (show) => setShowTooltip(show);
 
   const handleInputChange = ({ target }, storeFieldName) => {
-    const value = storeFieldName === 'isTermsBoxChecked' ? target.checked : target.value;
+    const value = storeFieldName === 'hasAgreedToTerms' ? target.checked : target.value;
 
     dispatch(changeInputValues(storeFieldName, value));
   };
@@ -235,8 +235,8 @@ export default function ContactForm({
 
           <InputRow>
             <StyledCheckbox
-              onChange={(event) => handleInputChange(event, 'isTermsBoxChecked')}
-              checked={formValues.isTermsBoxChecked}
+              onChange={(event) => handleInputChange(event, 'hasAgreedToTerms')}
+              checked={formValues.hasAgreedToTerms}
               isInvalid={areInputsInvalid.termsCheckbox}
               disabled={disableInputs}
             />
