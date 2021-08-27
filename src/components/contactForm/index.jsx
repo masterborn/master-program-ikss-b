@@ -17,7 +17,7 @@ import Tooltip from './tooltip';
 import {
   ContactFormContainer,
   CloseButton,
-  Content,
+  ContactFormContent,
   TopSection,
   Form,
   InputRow,
@@ -55,29 +55,21 @@ export default function ContactForm({
   const formValues = useSelector((state) => state.contactForm.inputsValues);
   const dispatch = useDispatch();
 
-  const [areInputsInvalid, setAreInputsInvalid] = useState({
-    name: false,
-    lastName: false,
-    email: false,
-    content: false,
-    termsCheckbox: false,
+  const [validatedInputs, setValidatedInputs] = useState({
+    name: { isValid: false, isInvalid: false, message: '' },
+    lastName: { isValid: false, isInvalid: false, message: '' },
+    email: { isValid: false, isInvalid: false, message: '' },
+    content: { isValid: false, isInvalid: false, message: '' },
+    termsCheckbox: { isInvalid: false },
   });
 
-  const [areInputsValid, setAreInputsValid] = useState({
-    name: false,
-    lastName: false,
-    email: false,
-    content: false,
-    termsCheckbox: false,
-  });
-
-  const resetAreInputsValid = () => {
-    setAreInputsValid({
-      name: false,
-      lastName: false,
-      email: false,
-      content: false,
-      termsCheckbox: false,
+  const resetValidatedInputs = () => {
+    setValidatedInputs({
+      name: { isValid: false, isInvalid: false, message: '' },
+      lastName: { isValid: false, isInvalid: false, message: '' },
+      email: { isValid: false, isInvalid: false, message: '' },
+      content: { isValid: false, isInvalid: false, message: '' },
+      termsCheckbox: { isValid: false, isInvalid: false, message: '' },
     });
   };
 
@@ -98,25 +90,24 @@ export default function ContactForm({
 
   const toggleShowTooltip = (show) => setShowTooltip(show);
 
-  const handleInputChange = ({ target }, storeFieldName) => {
-    const value = storeFieldName === 'isTermsBoxChecked' ? target.checked : target.value;
+  const handleInputChange = ({ target, target: { name } }) => {
+    const value = name === 'hasAgreedToTerms' ? target.checked : target.value;
 
-    dispatch(changeInputValues(storeFieldName, value));
+    dispatch(changeInputValues(name, value));
   };
 
   const isFormValid = () => {
     const resources = validateInputs(formValues);
 
-    setAreInputsInvalid(resources.areInputsInvalid);
-    setAreInputsValid(resources.areInputsValid);
+    setValidatedInputs(resources);
 
-    return !Object.values(resources.areInputsInvalid).some((isInvalid) => isInvalid);
+    return !Object.values(resources).some(({ isInvalid }) => isInvalid);
   };
 
   const changeFormStatus = (statusType) => {
     if (statusType === FORM_SENDING_STATUS.success) {
       dispatch(resetInputValues());
-      resetAreInputsValid();
+      resetValidatedInputs();
     }
     return dispatch(changeFormSendingStatus(statusType));
   };
@@ -168,7 +159,7 @@ export default function ContactForm({
 
   return (
     <ContactFormContainer className={className} id="contact-form" isModal={isModal}>
-      <Content>
+      <ContactFormContent>
         {isModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
@@ -181,25 +172,29 @@ export default function ContactForm({
             <label htmlFor="name">
               <ParagraphSmall>Imię</ParagraphSmall>
               <NameInput
+                name="name"
                 value={formValues.name || ''}
-                onChange={(event) => handleInputChange(event, 'name')}
+                onChange={handleInputChange}
                 placeholder="Wpisz swoje imię"
-                isInvalid={areInputsInvalid.name}
-                isValid={areInputsValid.name}
-                withIcon={areInputsInvalid.name}
+                isInvalid={validatedInputs.name.isInvalid}
+                isValid={validatedInputs.name.isValid}
+                withIcon={validatedInputs.name.isInvalid}
                 disabled={disableInputs}
+                errorTooltipText={validatedInputs.name.message}
               />
             </label>
             <label htmlFor="lastName">
               <ParagraphSmall>Nazwisko</ParagraphSmall>
               <NameInput
+                name="lastName"
                 value={formValues.lastName || ''}
-                onChange={(event) => handleInputChange(event, 'lastName')}
+                onChange={handleInputChange}
                 placeholder="Wpisz swoje nazwisko"
-                isInvalid={areInputsInvalid.lastName}
-                isValid={areInputsValid.lastName}
-                withIcon={areInputsInvalid.lastName}
+                isInvalid={validatedInputs.lastName.isInvalid}
+                isValid={validatedInputs.lastName.isValid}
+                withIcon={validatedInputs.lastName.isInvalid}
                 disabled={disableInputs}
+                errorTooltipText={validatedInputs.lastName.message}
               />
             </label>
           </InputRow>
@@ -208,13 +203,15 @@ export default function ContactForm({
             <label htmlFor="email">
               <ParagraphSmall>Adres email</ParagraphSmall>
               <EmailInput
+                name="email"
                 value={formValues.email || ''}
-                onChange={(event) => handleInputChange(event, 'email')}
+                onChange={handleInputChange}
                 placeholder="Wpisz swój adres e-mail"
-                isInvalid={areInputsInvalid.email}
-                isValid={areInputsValid.email}
-                withIcon={areInputsInvalid.email}
+                isInvalid={validatedInputs.email.isInvalid}
+                isValid={validatedInputs.email.isValid}
+                withIcon={validatedInputs.email.isInvalid}
                 disabled={disableInputs}
+                errorTooltipText={validatedInputs.email.message}
               />
             </label>
           </InputRow>
@@ -223,21 +220,24 @@ export default function ContactForm({
             <label htmlFor="content">
               <ParagraphSmall>Treść</ParagraphSmall>
               <ContentInput
+                name="content"
                 value={formValues.content || ''}
-                onChange={(event) => handleInputChange(event, 'content')}
+                onChange={handleInputChange}
                 placeholder="O czym chcesz porozmawiać?"
-                isInvalid={areInputsInvalid.content}
-                isValid={areInputsValid.content}
+                isInvalid={validatedInputs.content.isInvalid}
+                isValid={validatedInputs.content.isValid}
                 disabled={disableInputs}
+                errorTooltipText={validatedInputs.content.message}
               />
             </label>
           </InputRow>
 
           <InputRow>
             <StyledCheckbox
-              onChange={(event) => handleInputChange(event, 'isTermsBoxChecked')}
-              checked={formValues.isTermsBoxChecked}
-              isInvalid={areInputsInvalid.termsCheckbox}
+              name="hasAgreedToTerms"
+              onChange={handleInputChange}
+              checked={formValues.hasAgreedToTerms}
+              isInvalid={validatedInputs.termsCheckbox.isInvalid}
               disabled={disableInputs}
             />
             <RODOContainer>
@@ -250,9 +250,7 @@ export default function ContactForm({
                     target="_blank"
                     rel="noreferrer"
                     onMouseEnter={() => toggleShowTooltip(true)}
-                    onMouseLeave={() => {
-                      toggleShowTooltip(false);
-                    }}
+                    onMouseLeave={() => toggleShowTooltip(false)}
                   >
                     informacją o administratorze i przetwarzaniu danych.
                   </RODOLink>
@@ -263,7 +261,7 @@ export default function ContactForm({
 
           {submitButton()}
         </Form>
-      </Content>
+      </ContactFormContent>
     </ContactFormContainer>
   );
 }

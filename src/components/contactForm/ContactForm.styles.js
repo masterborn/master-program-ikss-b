@@ -27,7 +27,7 @@ export const CloseButton = styled(IconButton)`
   right: 37px;
 `;
 
-export const Content = styled.div`
+export const ContactFormContent = styled.div`
   width: 100%;
   height: 100%;
 
@@ -84,7 +84,6 @@ export const ContentInput = styled(TextArea)`
   width: 588px;
   height: 221px;
   margin-top: 5px;
-  resize: none;
 `;
 export const StyledCheckbox = styled(Checkbox)`
   margin-right: 16px;
