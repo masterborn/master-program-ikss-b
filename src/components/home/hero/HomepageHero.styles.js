@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import Socials from '../../icons/SocialsCollection';
+import Socials from '@root/components/layout/footer/Socials';
 import { Header1 } from '../../typography/headers';
 import { ParagraphBody } from '../../typography/paragraphs';
 
-export const StyledTopSection = styled.section`
+export const StyledHomepageHero = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -62,7 +62,7 @@ export const Header = styled(Header1)`
   width: 512px;
 `;
 
-export const TopSectionImage = styled.img`
+export const HomepageHeroImage = styled.img`
   width: 808px;
   height: 505px;
 `;
