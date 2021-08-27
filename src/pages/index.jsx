@@ -5,14 +5,14 @@ import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
 import ProjectsSection from '@root/components/home/projects/ProjectsSection';
 import PartnersSection from '@root/components/home/partnersList/PartnersSection';
-import TopSection from '../components/home/topSection';
+import TopSection from '../components/home/hero';
 import ValuesSection from '../components/home/valuesSection';
 import ContactForm from '../components/contactForm';
 
 export default function Homepage({ homepageData: { partners, basicContent, common, projects } }) {
   const {
     'homepage-partners-text': partnersText,
-    'homepage-top-section': topSectionContent,
+    'homepage-top-section': homepageHeroContent,
     'homepage-values': valuesText,
     'homepage-tile-1': homepageTile1,
     'homepage-tile-2': homepageTile2,
@@ -31,7 +31,7 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
 
   return (
     <Layout contactFormText={contactFormText} tooltipText={tooltipText}>
-      <TopSection topSectionContent={topSectionContent} socials={socials} />
+      <TopSection homepageHeroContent={homepageHeroContent} socials={socials} />
       <ValuesSection valuesText={valuesText} valuesTiles={valuesTiles} />
       <ProjectsSection projects={projects} />
       <PartnersSection partners={partners} partnersText={partnersText} />
