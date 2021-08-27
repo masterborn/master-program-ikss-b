@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const styledCheckbox = styled.input.attrs({ type: 'checkbox' })`
+const StyledCheckbox = styled.input.attrs({ type: 'checkbox' })`
   padding-left: 2px;
   padding-top: 4px;
   padding-bottom: 0.25px;
@@ -41,4 +41,4 @@ const styledCheckbox = styled.input.attrs({ type: 'checkbox' })`
   }
 `;
 
-export default styledCheckbox;
+export default StyledCheckbox;
