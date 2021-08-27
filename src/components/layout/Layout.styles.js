@@ -5,7 +5,7 @@ export const StyledLayout = styled.div`
 
   @media (max-width: 550px) {
     min-width: 300px;
-    width: auto;
+    width: 100%;
   }
 
   #main {
