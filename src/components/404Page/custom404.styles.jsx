@@ -14,6 +14,10 @@ export const ErrorPageContainer = styled.div`
 
   @media (max-width: 550px) {
     padding: 0 24px;
+    & span {
+      display: inline-block;
+      width: 76px;
+    }
   }
 `;
 

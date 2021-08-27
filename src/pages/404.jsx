@@ -25,7 +25,8 @@ export default function Custom404({ custom404Data: { common } }) {
         </IKKSContainer>
         <ErrorMessage>ups, 404</ErrorMessage>
         <ErrorDescription>
-          Za każdym razem kiedy trafiasz na tę stronę, ktoś wymawia „i-ka-ka-es” zamiast
+          Za każdym razem kiedy trafiasz na tę stronę, ktoś wymawia <span>„i-ka-ka-es”</span>
+          zamiast
           <b> „ikss”.</b>
         </ErrorDescription>
         <Link href="/">
