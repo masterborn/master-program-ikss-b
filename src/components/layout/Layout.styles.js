@@ -25,7 +25,7 @@ export const PageWrapper = styled.div`
 
 export const TopBackgroundGradient = styled.div`
   width: 100%;
-  height: ${(props) => (props.isMobile ? '464px' : '464px')};
+  height: 464px;
 
   position: absolute;
   z-index: -1;
@@ -35,11 +35,16 @@ export const TopBackgroundGradient = styled.div`
 
 export const BottomBackgroundGradient = styled.div`
   width: 100%;
-  height: ${(props) => (props.isMobile ? '770px' : '994px')};
+  height: 994px;
 
   position: absolute;
   bottom: ${(props) => (props.isHomepage ? '324px' : '0')};
   z-index: -1;
 
-  background: linear-gradient(0deg, #f4faff 0%, rgba(255, 255, 255, 0) 100%); ;
+  background: linear-gradient(0deg, #f4faff 0%, rgba(255, 255, 255, 0) 100%);
+
+  @media (max-width: 550px) {
+    height: 770px;
+    bottom: 206px;
+  }
 `;

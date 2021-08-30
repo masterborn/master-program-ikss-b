@@ -35,7 +35,6 @@ export default function Layout({ children, contactFormText, tooltipText }) {
   const router = useRouter();
   const isHomepage = router.pathname === '/';
   const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
-  const isMobile = useSelector((state) => state.isMobile);
 
   return (
     <PageWrapper>
@@ -50,9 +49,9 @@ export default function Layout({ children, contactFormText, tooltipText }) {
         )}
 
         <div id="main">
-          <TopBackgroundGradient isMobile={isMobile} />
+          <TopBackgroundGradient />
           {children}
-          <BottomBackgroundGradient isHomepage={isHomepage} isMobile={isMobile} />
+          <BottomBackgroundGradient isHomepage={isHomepage} />
         </div>
 
         <Footer paths={paths} isHomepage={isHomepage} />
