@@ -1,12 +1,12 @@
 import styled from 'styled-components';
+import IconButton from '@root/components/buttons/misc/IconButton';
 import Logo from '../../logos/BubbleLogo';
-
 import NavbarSocials from './NavbarSocials';
 import PrimaryButton from '../../buttons/primaryButton';
 
 export const StyledNavbar = styled.nav`
   width: 100%;
-  height: ${(props) => (props.isMobile ? '56px' : '88px')};
+  height: 88px;
 
   position: sticky;
   left: 0px;
@@ -20,6 +20,10 @@ export const StyledNavbar = styled.nav`
 
   background: ${(props) => props.theme.color.white};
   box-shadow: 0px 4px 16px rgba(97, 121, 139, 0.1);
+
+  @media (max-width: 550px) {
+    height: 56px;
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -33,11 +37,24 @@ export const LinksContainer = styled.div`
   margin-left: 126px;
 `;
 
+export const StyledLogoLink = styled.a`
+  margin-left: 120px;
+
+  @media (max-width: 550px) {
+    width: 56px;
+    height: 35px;
+    margin-left: 24px;
+  }
+`;
+
 export const StyledLogo = styled(Logo)`
   width: 78px;
   height: 48.8px;
 
-  margin-left: 120px;
+  @media (max-width: 550px) {
+    width: 56px;
+    height: 35px;
+  }
 `;
 
 export const Label = styled.h3`
@@ -71,4 +88,9 @@ export const StyledNavbarSocials = styled(NavbarSocials)`
 export const ContactButton = styled(PrimaryButton)`
   margin-left: auto;
   margin-right: 120px;
+`;
+
+export const HamburgerMenu = styled(IconButton)`
+  margin-left: auto;
+  margin-right: 22px;
 `;

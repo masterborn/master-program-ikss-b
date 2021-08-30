@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { toggleModal } from '@root/redux/actions/modalActions';
+import { HamburgerMenuIcon } from '@root/components/icons/misc';
 import {
   StyledNavbar,
   LinksContainer,
+  StyledLogoLink,
   StyledLogo,
   Label,
   StyledNavbarSocials,
   ContactButton,
+  HamburgerMenu,
 } from './Navbar.styles';
 import handleContactFormButton from './contactFormButton';
 
@@ -48,30 +51,37 @@ export default function Navbar({ paths, currPathname }) {
   const navbarHeight = '88px';
 
   const openContactModal = (isToggled) => dispatch(toggleModal(isToggled));
+  const isMobile = useSelector((state) => state.isMobile);
 
   const handleClick = () => handleContactFormButton(currPathname, navbarHeight, openContactModal);
   return (
     <StyledNavbar>
       <Link href="/" passHref>
-        <a href>
+        <StyledLogoLink href>
           <StyledLogo />
-        </a>
+        </StyledLogoLink>
       </Link>
-      <LinksContainer>
-        {paths.map(({ name, path }) => (
-          <Link href={path} key={path}>
-            <Label isHighlighted={currPathname === path}>{name}</Label>
-          </Link>
-        ))}
-      </LinksContainer>
+      {isMobile ? (
+        <HamburgerMenu icon={<HamburgerMenuIcon />} onClick={() => {}} />
+      ) : (
+        <>
+          <LinksContainer>
+            {paths.map(({ name, path }) => (
+              <Link href={path} key={path}>
+                <Label isHighlighted={currPathname === path}>{name}</Label>
+              </Link>
+            ))}
+          </LinksContainer>
 
-      <StyledNavbarSocials
-        socialsLinks={MOCK_SOCIALS}
-        currPathname={currPathname}
-        navbarHeight={navbarHeight}
-      />
+          <StyledNavbarSocials
+            socialsLinks={MOCK_SOCIALS}
+            currPathname={currPathname}
+            navbarHeight={navbarHeight}
+          />
 
-      <ContactButton onClick={handleClick}>Skontaktuj się</ContactButton>
+          <ContactButton onClick={handleClick}>Skontaktuj się</ContactButton>
+        </>
+      )}
     </StyledNavbar>
   );
 }
