@@ -10,8 +10,6 @@ const validateName = (name) => {
     return { isValid: false, isInvalid: true, message: 'Zbyt krótkie imię.' };
   if (name.length > MAX_NAME_LENGTH)
     return { isValid: false, isInvalid: true, message: 'Zbyt długie imię.' };
-  if (!validator.isAlpha(name, 'pl-PL'))
-    return { isValid: false, isInvalid: true, message: 'Wprowadzono niedozwolone znaki.' };
 
   return { isValid: true, isInvalid: false, message: 'ok' };
 };
@@ -20,8 +18,6 @@ const validateLastName = (lastName) => {
     return { isValid: false, isInvalid: true, message: 'Zbyt krótkie nazwisko.' };
   if (lastName.length > MAX_NAME_LENGTH)
     return { isValid: false, isInvalid: true, message: 'Zbyt długie nazwisko.' };
-  if (!validator.isAlpha(lastName, 'pl-PL'))
-    return { isValid: false, isInvalid: true, message: 'Wprowadzono niedozwolone znaki.' };
 
   return { isValid: true, isInvalid: false, message: 'ok' };
 };
