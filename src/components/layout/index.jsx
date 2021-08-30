@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
 import { useSelector } from 'react-redux';
-import { StyledLayout, PageWrapper, BackgroundGradient } from './Layout.styles';
+import {
+  StyledLayout,
+  PageWrapper,
+  TopBackgroundGradient,
+  BottomBackgroundGradient,
+} from './Layout.styles';
 import Navbar from './navbar';
 import Footer from './footer';
 import ContactFormModal from '../contactForm/contactModal';
@@ -28,7 +33,9 @@ const paths = [
 
 export default function Layout({ children, contactFormText, tooltipText }) {
   const router = useRouter();
+  const isHomepage = router.pathname === '/';
   const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
+  const isMobile = useSelector((state) => state.isMobile);
 
   return (
     <PageWrapper>
@@ -43,11 +50,12 @@ export default function Layout({ children, contactFormText, tooltipText }) {
         )}
 
         <div id="main">
-          <BackgroundGradient />
+          <TopBackgroundGradient isMobile={isMobile} />
           {children}
+          <BottomBackgroundGradient isHomepage={isHomepage} isMobile={isMobile} />
         </div>
 
-        <Footer paths={paths} isHomepage={router.pathname === '/'} />
+        <Footer paths={paths} isHomepage={isHomepage} />
       </StyledLayout>
     </PageWrapper>
   );
