@@ -6,8 +6,12 @@ import { useSelector } from 'react-redux';
 export default function CustomThemeProvider({ children, theme }) {
   const { isModalOpened } = useSelector((state) => state.modal);
   const isMobile = useSelector((state) => state.isMobile);
-
-  return <ThemeProvider theme={{ ...theme, isModalOpened, isMobile }}>{children}</ThemeProvider>;
+  const hideOverflowOnBody = useSelector((state) => state.hideOverflowOnBody);
+  return (
+    <ThemeProvider theme={{ ...theme, isModalOpened, isMobile, hideOverflowOnBody }}>
+      {children}
+    </ThemeProvider>
+  );
 }
 
 CustomThemeProvider.propTypes = {

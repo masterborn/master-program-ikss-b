@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
@@ -15,6 +15,7 @@ import {
   HamburgerMenu,
 } from './Navbar.styles';
 import handleContactFormButton from './contactFormButton';
+import Sidebar from './sidebar';
 
 const MOCK_SOCIALS = {
   socialFb: {
@@ -49,11 +50,15 @@ const MOCK_SOCIALS = {
 export default function Navbar({ paths, currPathname }) {
   const dispatch = useDispatch();
   const navbarHeight = '88px';
-
+  const [isSidebarOpened, toggleSidebar] = useState(false);
   const openContactModal = (isToggled) => dispatch(toggleModal(isToggled));
   const isMobile = useSelector((state) => state.isMobile);
 
-  const handleClick = () => handleContactFormButton(currPathname, navbarHeight, openContactModal);
+  const handleClickContactButton = () =>
+    handleContactFormButton(currPathname, navbarHeight, openContactModal);
+
+  const handleOpenSidebar = () => toggleSidebar(true);
+  const handleCloseSidebar = () => toggleSidebar(false);
   return (
     <StyledNavbar>
       <Link href="/" passHref>
@@ -62,7 +67,17 @@ export default function Navbar({ paths, currPathname }) {
         </StyledLogoLink>
       </Link>
       {isMobile ? (
-        <HamburgerMenu icon={<HamburgerMenuIcon />} onClick={() => {}} />
+        <>
+          <HamburgerMenu icon={<HamburgerMenuIcon />} onClick={handleOpenSidebar} />
+          <Sidebar
+            isOpened={isSidebarOpened}
+            handleCloseSidebar={handleCloseSidebar}
+            paths={paths}
+            currPathname={currPathname}
+            handleContactFormButton={handleClickContactButton}
+            socialsLinks={MOCK_SOCIALS}
+          />
+        </>
       ) : (
         <>
           <LinksContainer>
@@ -79,7 +94,7 @@ export default function Navbar({ paths, currPathname }) {
             navbarHeight={navbarHeight}
           />
 
-          <ContactButton onClick={handleClick}>Skontaktuj się</ContactButton>
+          <ContactButton onClick={handleClickContactButton}>Skontaktuj się</ContactButton>
         </>
       )}
     </StyledNavbar>
