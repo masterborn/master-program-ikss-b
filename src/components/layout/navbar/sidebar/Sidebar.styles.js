@@ -67,6 +67,10 @@ export const LinksContainer = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  &:nth-child(1) > a {
+    color: red;
+  }
 `;
 
 export const SubpageLink = styled.a`
@@ -77,7 +81,10 @@ export const SubpageLink = styled.a`
 
   text-decoration: none;
 
-  box-shadow: inset 0px -1.5px 0px #eaf5ff;
+  box-shadow: ${(props) =>
+    props.pathname === 'Strona główna'
+      ? 'inset 0px 1.5px 0px #EAF5FF, inset 0px -1.5px 0px #EAF5FF'
+      : 'inset 0px -1.5px 0px #eaf5ff'};
 `;
 
 export const ContactButton = styled(PrimaryButton)`

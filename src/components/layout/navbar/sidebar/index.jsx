@@ -44,7 +44,7 @@ export default function Sidebar({
         <LinksContainer>
           {paths.map(({ name, path }) => (
             <Link href={path} key={path} passHref>
-              <SubpageLink href>
+              <SubpageLink href pathname={name}>
                 <Label isHighlighted={currPathname === path}>{name}</Label>
               </SubpageLink>
             </Link>
