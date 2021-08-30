@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
-import BottomCta from '@root/components/bottomCta/BottomCta';
+import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
 
 export default function Projects({ projectsData: { basicContent, common } }) {
   const { 'contact-form-text': contactFormText } = common;

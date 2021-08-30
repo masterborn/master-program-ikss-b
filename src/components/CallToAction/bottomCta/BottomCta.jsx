@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { BottomCtaContainer, BottomCtaHeader, BottomCtaText } from './BottomCta.styles';
-import CtaButton from '../CtaButton.styles';
+import CtaButton from '../ctaButton';
 
 export default function BottomCta({ bottomCtaContent }) {
   const { title, linkCaption: buttonText, text1: richText } = bottomCtaContent;
@@ -11,7 +11,7 @@ export default function BottomCta({ bottomCtaContent }) {
     <BottomCtaContainer>
       {title && <BottomCtaHeader>{title}</BottomCtaHeader>}
       {richText && CtaDescription}
-      {buttonText && <CtaButton isBig>{buttonText}</CtaButton>}
+      {buttonText && <CtaButton isBig buttonCaption={buttonText} />}
     </BottomCtaContainer>
   );
 }

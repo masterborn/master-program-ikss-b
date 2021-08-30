@@ -1,6 +1,6 @@
+import { Header3 } from '@root/components/typography/headers';
+import { ParagraphBody } from '@root/components/typography/paragraphs';
 import styled from 'styled-components';
-import { Header3 } from '../typography/headers';
-import { ParagraphBody } from '../typography/paragraphs';
 
 export const BottomCtaContainer = styled.div`
   display: flex;
