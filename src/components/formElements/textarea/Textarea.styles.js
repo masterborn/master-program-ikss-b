@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import ErrorIcon from '../input/icon/ErrorIcon';
+import ErrorIcon from '../misc/icon/ErrorIcon';
 
 export const TextareaContainer = styled.div`
   position: relative;
 `;
 export const StyledTextarea = styled.textarea`
-  padding-top: ${(props) => (props.isInvalid ? '30px' : '10px')};
+  padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 20px;
@@ -46,6 +46,6 @@ export const StyledTextarea = styled.textarea`
 `;
 export const StyledErrorIcon = styled(ErrorIcon)`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  bottom: 0;
+  right: -35px;
 `;

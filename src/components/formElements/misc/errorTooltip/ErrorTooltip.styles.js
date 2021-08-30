@@ -5,8 +5,8 @@ export const TooltipContainer = styled.div`
   width: max-content;
 
   position: absolute;
-  right: 0;
-  bottom: 50px;
+  right: 2px;
+  bottom: 35px;
   z-index: 100;
   padding: 13px 19px 19px;
 
