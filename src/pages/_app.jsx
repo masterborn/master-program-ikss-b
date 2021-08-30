@@ -10,6 +10,7 @@ import store from '@root/redux/store';
 import Head from 'next/head';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
+import IsMobileProvider from '@contextProviders/IsMobileProvider';
 
 const App = (props) => {
   const queryClientRef = useRef();
@@ -34,7 +35,9 @@ const App = (props) => {
         <CustomThemeProvider theme={theme}>
           <QueryClientProvider client={queryClientRef.current}>
             <Hydrate>
-              <Component {...pageProps} />
+              <IsMobileProvider>
+                <Component {...pageProps} />
+              </IsMobileProvider>
             </Hydrate>
             <ReactQueryDevtools initialIsOpen={false} />
           </QueryClientProvider>
