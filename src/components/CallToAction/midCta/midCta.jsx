@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CtaOverlay, MidCtaButton, MidCtaContainer, MidCtaHeader } from './midCta.styles';
+import { CtaOverlay, MidCtaContainer, MidCtaHeader } from './midCta.styles';
+import CtaButton from '../ctaButton';
 
 export default function MidCta({ midCtaContent }) {
   const { title, linkCaption: buttonText } = midCtaContent;
+
   return (
     <MidCtaContainer>
       <CtaOverlay>
         {title && <MidCtaHeader>{title}</MidCtaHeader>}
-        {buttonText && <MidCtaButton isBig>{buttonText}</MidCtaButton>}
+        {buttonText && <CtaButton buttonCaption={buttonText} />}
       </CtaOverlay>
     </MidCtaContainer>
   );
