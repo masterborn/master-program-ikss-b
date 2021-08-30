@@ -1,3 +1,5 @@
+import formcarryConfig from '@root/config/formcarry';
+
 const mockApi = (data, isRejected = false) =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -22,7 +24,7 @@ export const sendEmailMockup = (data, callback, responseType) => {
 
 const sendEmail = (data, callback, responseType) => {
   callback(responseType.loading);
-  fetch(`https://formcarry.com/s/${process.env.NEXT_PUBLIC_FORMCARRY_ENDPOINT}`, {
+  fetch(`https://formcarry.com/s/${formcarryConfig.ENDPOINT}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
     body: JSON.stringify(data),
@@ -37,7 +39,6 @@ const sendEmail = (data, callback, responseType) => {
       }
     })
     .catch(() => {
-      // console.error(error);
       callback(responseType.error);
     });
 };
