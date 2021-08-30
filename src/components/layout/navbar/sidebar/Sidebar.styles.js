@@ -51,6 +51,7 @@ export const Label = styled.h3`
 
   cursor: pointer;
 
+  white-space: nowrap;
   text-align: center;
   font-weight: bold;
   font-size: 16px;
@@ -81,7 +82,7 @@ export const SubpageLink = styled.a`
 
 export const ContactButton = styled(PrimaryButton)`
   margin-top: 40px;
-  margin-left: auto;
+  margin-left: 87px;
   margin-right: auto;
 `;
 
@@ -89,7 +90,7 @@ export const StyledSocials = styled(Socials)`
   width: 200px;
 
   margin-top: 40px;
-  margin-left: auto;
+  margin-left: 50px;
   margin-right: auto;
 
   display: flex;
