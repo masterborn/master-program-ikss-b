@@ -6,7 +6,7 @@ import StyledCtaButton from './ctaButton.styles';
 
 export default function CtaButton({ buttonCaption }) {
   const dispatch = useDispatch();
-  const openContactModal = (modalState) => dispatch(toggleModal(modalState));
+  const openContactModal = () => dispatch(toggleModal(true));
 
   return (
     <StyledCtaButton onClick={openContactModal} isBig>
