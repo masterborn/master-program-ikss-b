@@ -80,14 +80,14 @@ const validateContent = (content) => {
 const validateTermsCheckbox = (hasAgreedToTerms) => ({ isInvalid: !hasAgreedToTerms });
 
 const validateInputs = (formValues) => {
-  const validatedInputs = {};
-
-  validatedInputs.firstName = validateName(formValues.firstName);
-  validatedInputs.lastName = validateLastName(formValues.lastName);
-  validatedInputs.email = validateEmail(formValues.email);
-  validatedInputs.title = validateTitle(formValues.title);
-  validatedInputs.content = validateContent(formValues.content);
-  validatedInputs.termsCheckbox = validateTermsCheckbox(formValues.hasAgreedToTerms);
+  const validatedInputs = {
+    firstName: validateName(formValues.firstName),
+    lastName: validateLastName(formValues.lastName),
+    email: validateEmail(formValues.email),
+    title: validateTitle(formValues.title),
+    content: validateContent(formValues.content),
+    termsCheckbox: validateTermsCheckbox(formValues.hasAgreedToTerms),
+  };
 
   return validatedInputs;
 };
