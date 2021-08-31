@@ -14,11 +14,11 @@ import {
   ProjectMediaContainer,
 } from './ProjectTile.styles';
 
-export default function ProjectTile({ project }) {
+export default function ProjectTile({ project, isOnGrid }) {
   const { title, date, image, video_url: videoUrl, linkUrl, description } = project;
   const linkIsFromFacebook = /^(https:\/\/)?(www.)?f(b||acebook)\.com\/.*/.test(linkUrl);
   return (
-    <ProjectArticle>
+    <ProjectArticle isOnGrid={isOnGrid}>
       <ProjectMediaContainer>
         {videoUrl ? (
           <ProjectVideo url={videoUrl} />
@@ -26,8 +26,8 @@ export default function ProjectTile({ project }) {
           <ProjectImage alt={image.title} src={`https:\\${image.url}`} />
         )}
       </ProjectMediaContainer>
-      <ProjectSummary>
-        <ProjectHeader>
+      <ProjectSummary isOnGrid={isOnGrid}>
+        <ProjectHeader isOnGrid={isOnGrid}>
           <ProjectTitle>{title}</ProjectTitle>
           <ProjectDate>{date}</ProjectDate>
         </ProjectHeader>
