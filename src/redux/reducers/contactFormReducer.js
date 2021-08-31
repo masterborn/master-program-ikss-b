@@ -10,7 +10,8 @@ const initialState = {
     lastName: '',
     email: '',
     content: '',
-    isTermsBoxChecked: false,
+    hasAgreedToTerms: false,
+    _gotcha: '',
   },
   status: 'initial',
 };
@@ -35,7 +36,8 @@ const contactFormReducer = (state = initialState, action) => {
           lastName: '',
           email: '',
           content: '',
-          isTermsBoxChecked: false,
+          hasAgreedToTerms: false,
+          _gotcha: '',
         },
       };
     case CHANGE_FORM_SENDING_STATUS:

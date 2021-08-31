@@ -34,6 +34,7 @@ import {
   StyledSuccessIcon,
   ErrorButton,
   StyledErrorIcon,
+  ZIPCode,
 } from './ContactForm.styles';
 
 const FORM_SENDING_STATUS = {
@@ -98,10 +99,9 @@ export default function ContactForm({
 
   const toggleShowTooltip = (show) => setShowTooltip(show);
 
-  const handleInputChange = ({ target }, storeFieldName) => {
-    const value = storeFieldName === 'isTermsBoxChecked' ? target.checked : target.value;
-
-    dispatch(changeInputValues(storeFieldName, value));
+  const handleInputChange = ({ target, target: { name } }) => {
+    const value = name === 'hasAgreedToTerms' ? target.checked : target.value;
+    dispatch(changeInputValues(name, value));
   };
 
   const isFormValid = () => {
@@ -181,8 +181,9 @@ export default function ContactForm({
             <label htmlFor="name">
               <ParagraphSmall>Imię</ParagraphSmall>
               <NameInput
+                name="name"
                 value={formValues.name || ''}
-                onChange={(event) => handleInputChange(event, 'name')}
+                onChange={handleInputChange}
                 placeholder="Wpisz swoje imię"
                 isInvalid={areInputsInvalid.name}
                 isValid={areInputsValid.name}
@@ -193,8 +194,9 @@ export default function ContactForm({
             <label htmlFor="lastName">
               <ParagraphSmall>Nazwisko</ParagraphSmall>
               <NameInput
+                name="lastName"
                 value={formValues.lastName || ''}
-                onChange={(event) => handleInputChange(event, 'lastName')}
+                onChange={handleInputChange}
                 placeholder="Wpisz swoje nazwisko"
                 isInvalid={areInputsInvalid.lastName}
                 isValid={areInputsValid.lastName}
@@ -208,8 +210,9 @@ export default function ContactForm({
             <label htmlFor="email">
               <ParagraphSmall>Adres email</ParagraphSmall>
               <EmailInput
+                name="email"
                 value={formValues.email || ''}
-                onChange={(event) => handleInputChange(event, 'email')}
+                onChange={handleInputChange}
                 placeholder="Wpisz swój adres e-mail"
                 isInvalid={areInputsInvalid.email}
                 isValid={areInputsValid.email}
@@ -223,8 +226,9 @@ export default function ContactForm({
             <label htmlFor="content">
               <ParagraphSmall>Treść</ParagraphSmall>
               <ContentInput
+                name="content"
                 value={formValues.content || ''}
-                onChange={(event) => handleInputChange(event, 'content')}
+                onChange={handleInputChange}
                 placeholder="O czym chcesz porozmawiać?"
                 isInvalid={areInputsInvalid.content}
                 isValid={areInputsValid.content}
@@ -235,8 +239,9 @@ export default function ContactForm({
 
           <InputRow>
             <StyledCheckbox
-              onChange={(event) => handleInputChange(event, 'isTermsBoxChecked')}
-              checked={formValues.isTermsBoxChecked}
+              name="hasAgreedToTerms"
+              onChange={handleInputChange}
+              checked={formValues.hasAgreedToTerms}
               isInvalid={areInputsInvalid.termsCheckbox}
               disabled={disableInputs}
             />
@@ -260,7 +265,12 @@ export default function ContactForm({
               </RODO>
             </RODOContainer>
           </InputRow>
-
+          <ZIPCode
+            name="_gotcha"
+            // eslint-disable-next-line no-underscore-dangle
+            value={formValues._gotcha || ''}
+            onChange={handleInputChange}
+          />
           {submitButton()}
         </Form>
       </Content>
