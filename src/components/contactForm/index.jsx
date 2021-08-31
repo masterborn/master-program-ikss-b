@@ -7,7 +7,7 @@ import {
   resetInputValues,
   changeFormSendingStatus,
 } from '@root/redux/actions/contactFormActions';
-import sendEmail from '@root/clients/formcarry';
+import { sendEmailMockup } from '@root/clients/formcarry';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import validateInputs from './validation';
 import { XIcon, LoaderIcon } from '../icons/misc';
@@ -29,7 +29,6 @@ import {
   RODO,
   RODOLink,
   SubmitButton,
-  LoadingButton,
   SuccessButton,
   StyledSuccessIcon,
   ErrorButton,
@@ -55,6 +54,8 @@ export default function ContactForm({
 
   const formValues = useSelector((state) => state.contactForm.inputsValues);
   const dispatch = useDispatch();
+
+  const isMobile = useSelector((state) => state.isMobile);
 
   const [validatedInputs, setValidatedInputs] = useState({
     firstName: { isValid: false, isInvalid: false, message: '' },
@@ -121,7 +122,7 @@ export default function ContactForm({
       (formStatus === FORM_SENDING_STATUS.initial || formStatus === FORM_SENDING_STATUS.error) &&
       isFormValid()
     ) {
-      sendEmail(formValues, changeFormStatus, FORM_SENDING_STATUS);
+      sendEmailMockup(formValues, changeFormStatus, FORM_SENDING_STATUS);
     } else if (formStatus === FORM_SENDING_STATUS.success) {
       dispatch(changeFormSendingStatus(FORM_SENDING_STATUS.initial));
 
@@ -137,24 +138,24 @@ export default function ContactForm({
         return (
           <SuccessButton>
             <StyledSuccessIcon />
-            Wiadomość wysłano! Odpowiemy wkrótce.
+            Wiadomość wysłano!{!isMobile && ' Odpowiemy wkrótce.'}
           </SuccessButton>
         );
       case FORM_SENDING_STATUS.error:
         return (
           <ErrorButton>
             <StyledErrorIcon />
-            Coś poszło nie tak. Spróbuj jeszcze raz.
+            Coś poszło nie tak.{!isMobile && ' Spróbuj jeszcze raz.'}
           </ErrorButton>
         );
       case FORM_SENDING_STATUS.loading:
         return (
-          <LoadingButton isBig>
+          <SubmitButton isBig={!isMobile}>
             <LoaderIcon intervalDuration={200} />
-          </LoadingButton>
+          </SubmitButton>
         );
       default:
-        return <SubmitButton isBig>Wyślij wiadomość</SubmitButton>;
+        return <SubmitButton isBig={!isMobile}>Wyślij wiadomość</SubmitButton>;
     }
   };
 
@@ -252,7 +253,7 @@ export default function ContactForm({
             </label>
           </InputRow>
 
-          <InputRow>
+          <InputRow areTerms>
             <StyledCheckbox
               name="hasAgreedToTerms"
               onChange={handleInputChange}
