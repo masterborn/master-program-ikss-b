@@ -3,6 +3,15 @@ import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
+import {
+  ErrorDescription,
+  ErrorMessage,
+  ErrorPageContainer,
+  GetBackButton,
+  IKKSContainer,
+  IKKSLogo,
+} from '@root/components/404Page/custom404.styles';
+import Link from 'next/link';
 
 export default function Custom404({ custom404Data: { common } }) {
   const {
@@ -23,7 +32,20 @@ export default function Custom404({ custom404Data: { common } }) {
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
-      You have reached the world&apos;s edge, none but devils play past here
+      <ErrorPageContainer>
+        <IKKSContainer>
+          <IKKSLogo />
+        </IKKSContainer>
+        <ErrorMessage>ups, 404</ErrorMessage>
+        <ErrorDescription>
+          Za każdym razem kiedy trafiasz na tę stronę, ktoś wymawia <span>„i-ka-ka-es”</span>
+          zamiast
+          <b> „ikss”.</b>
+        </ErrorDescription>
+        <Link href="/">
+          <GetBackButton isBig>Uciekam stąd</GetBackButton>
+        </Link>
+      </ErrorPageContainer>
     </Layout>
   );
 }

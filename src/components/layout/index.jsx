@@ -36,6 +36,8 @@ export default function Layout({ children, socials, footerText, contactFormText,
   const isHomepage = router.pathname === '/';
   const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
 
+  const isValidPage = paths.some(({ path }) => path === router.pathname);
+
   return (
     <PageWrapper>
       <StyledLayout>
@@ -47,19 +49,15 @@ export default function Layout({ children, socials, footerText, contactFormText,
             isOpened={isContactModalOpened}
           />
         )}
-
         <div id="main">
           <TopBackgroundGradient />
           {children}
           <BottomBackgroundGradient isHomepage={isHomepage} />
         </div>
-
-        <Footer
-          socials={socials}
-          footerText={footerText}
-          paths={paths}
-          isHomepage={isHomepage}
-        />
+        {isValidPage && (
+          <Footer socials={socials} footerText={footerText} paths={paths} isHomepage={isHomepage} />
+        )}
+        =======
       </StyledLayout>
     </PageWrapper>
   );
