@@ -37,6 +37,11 @@ export const CloseButton = styled(IconButton)`
   position: absolute;
   top: 37px;
   right: 37px;
+
+  @media (max-width: 550px) {
+    top: 20px;
+    right: 24px;
+  }
 `;
 
 export const ContactFormContent = styled.div`
@@ -54,7 +59,7 @@ export const ContactFormContent = styled.div`
   overflow: auto;
 
   @media (max-width: 550px) {
-    padding-top: 32px;
+    padding-top: ${(props) => (props.isModal ? '56px' : '32px')};
     padding-bottom: 32px;
   }
 `;

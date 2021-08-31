@@ -163,7 +163,7 @@ export default function ContactForm({
 
   return (
     <ContactFormContainer className={className} id="contact-form" isModal={isModal}>
-      <ContactFormContent>
+      <ContactFormContent isModal={isModal}>
         {isModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
