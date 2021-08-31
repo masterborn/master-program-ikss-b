@@ -1,15 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { StyledErrorContainer, StyledErrorIcon } from './ErrorIcon.styles';
 import ErrorTooltip from '../errorTooltip';
 
 export default function ErrorIcon({ className, tooltipText }) {
   const [showTooltip, setShowTooltip] = useState(false);
+  const node = useRef();
 
   const toggleShowTooltip = (show) => setShowTooltip(show);
 
+  const handleClickOnComponent = ({ target }) => {
+    if (node.current.contains(target)) {
+      setShowTooltip(true);
+    } else {
+      setShowTooltip(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOnComponent);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOnComponent);
+    };
+  }, []);
+
   return (
-    <StyledErrorContainer className={className}>
+    <StyledErrorContainer className={className} ref={node}>
       <ErrorTooltip tooltipText={tooltipText} show={showTooltip} />
       <StyledErrorIcon
         onMouseEnter={() => toggleShowTooltip(true)}

@@ -262,7 +262,7 @@ export default function ContactForm({
               disabled={disableInputs}
             />
             <RODOContainer>
-              <Tooltip tooltipText={tooltipText} show={showTooltip} />
+              {!isMobile && <Tooltip tooltipText={tooltipText} show={showTooltip} />}
               <RODO>
                 Zapoznałem się z{' '}
                 <Link href="/terms" passHref>
