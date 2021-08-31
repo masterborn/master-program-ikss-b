@@ -32,8 +32,7 @@ export default function Sidebar({
   };
 
   useEffect(() => {
-    if (isOpened) dispatch(hideOverflowOnBody(true));
-    else dispatch(hideOverflowOnBody(false));
+    dispatch(hideOverflowOnBody(isOpened));
   }, [dispatch, isOpened]);
 
   return (

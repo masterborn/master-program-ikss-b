@@ -50,15 +50,14 @@ const MOCK_SOCIALS = {
 export default function Navbar({ paths, currPathname }) {
   const dispatch = useDispatch();
   const navbarHeight = '88px';
-  const [isSidebarOpened, toggleSidebar] = useState(false);
+  const [isSidebarOpened, setIsSidebarOpened] = useState(false);
   const openContactModal = (isToggled) => dispatch(toggleModal(isToggled));
   const isMobile = useSelector((state) => state.isMobile);
 
   const handleClickContactButton = () =>
     handleContactFormButton(currPathname, navbarHeight, openContactModal);
 
-  const handleOpenSidebar = () => toggleSidebar(true);
-  const handleCloseSidebar = () => toggleSidebar(false);
+  const toggleSidebar = () => setIsSidebarOpened((prevState) => !prevState);
   return (
     <StyledNavbar>
       <Link href="/" passHref>
@@ -68,10 +67,10 @@ export default function Navbar({ paths, currPathname }) {
       </Link>
       {isMobile ? (
         <>
-          <HamburgerMenu icon={<HamburgerMenuIcon />} onClick={handleOpenSidebar} />
+          <HamburgerMenu icon={<HamburgerMenuIcon />} onClick={toggleSidebar} />
           <Sidebar
             isOpened={isSidebarOpened}
-            handleCloseSidebar={handleCloseSidebar}
+            handleCloseSidebar={toggleSidebar}
             paths={paths}
             currPathname={currPathname}
             handleContactFormButton={handleClickContactButton}
