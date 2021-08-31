@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
+import MidCta from '@root/components/CallToAction/midCta/midCta';
 import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
 
 export default function Projects({ projectsData: { basicContent, common } }) {
-  const { 'projects-bottom-cta-text': bottomCtaContent } = basicContent;
+  const {
+    'projects-bottom-cta-text': bottomCtaContent,
+    'projects-middle-cta-text': midCtaContent,
+  } = basicContent;
 
   const {
     'social-facebook': socialFb,
@@ -26,6 +30,7 @@ export default function Projects({ projectsData: { basicContent, common } }) {
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
+      <MidCta midCtaContent={midCtaContent} />
       <BottomCta bottomCtaContent={bottomCtaContent} />
     </Layout>
   );
@@ -61,6 +66,7 @@ Projects.propTypes = {
     basicContent: PropTypes.shape({
       'projects-top-section': PropTypes.shape({}),
       'projects-bottom-cta-text': PropTypes.shape({}),
+      'projects-middle-cta-text': PropTypes.shape({}),
     }),
   }).isRequired,
 };
