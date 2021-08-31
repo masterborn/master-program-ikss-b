@@ -17,37 +17,9 @@ import {
 import handleContactFormButton from './contactFormButton';
 import Sidebar from './sidebar';
 
-const MOCK_SOCIALS = {
-  socialFb: {
-    page: 'common',
-    identifier: 'social-facebook',
-    title: 'URL do Facebooka',
-    linkUrl: 'https://www.facebook.com/IKSSUE/',
-    linkCaption: 'Facebook',
-  },
-  socialIn: {
-    page: 'common',
-    identifier: 'social-linkedin',
-    title: 'URL do LinkedIn',
-    linkUrl: 'https://www.linkedin.com/company/informacjakulturalnosportowastudentowikss/',
-  },
-  socialIg: {
-    page: 'common',
-    identifier: 'social-instagram',
-    title: 'URL do Instagrama',
-    linkUrl: 'https://www.instagram.com/ikssue/',
-  },
-  socialYt: {
-    page: 'common',
-    identifier: 'social-youtube',
-    title: 'URL do YouTube',
-    linkUrl: 'https://www.youtube.com/channel/UC6cKLW4YEBqA7FWmkY0HThQ',
-  },
-};
-
 // Form on homepage must have 'contact-form' id
 
-export default function Navbar({ paths, currPathname }) {
+export default function Navbar({ socials, paths, currPathname }) {
   const dispatch = useDispatch();
   const navbarHeight = '88px';
   const [isSidebarOpened, setIsSidebarOpened] = useState(false);
@@ -74,7 +46,7 @@ export default function Navbar({ paths, currPathname }) {
             paths={paths}
             currPathname={currPathname}
             handleContactFormButton={handleClickContactButton}
-            socialsLinks={MOCK_SOCIALS}
+            socialsLinks={socials}
           />
         </>
       ) : (
@@ -87,11 +59,11 @@ export default function Navbar({ paths, currPathname }) {
             ))}
           </LinksContainer>
 
-          <StyledNavbarSocials
-            socialsLinks={MOCK_SOCIALS}
-            currPathname={currPathname}
-            navbarHeight={navbarHeight}
-          />
+      <StyledNavbarSocials
+        socialsLinks={socials}
+        currPathname={currPathname}
+        navbarHeight={navbarHeight}
+      />
 
           <ContactButton onClick={handleClickContactButton}>Skontaktuj się</ContactButton>
         </>
@@ -101,6 +73,7 @@ export default function Navbar({ paths, currPathname }) {
 }
 
 Navbar.propTypes = {
+  socials: PropTypes.shape({}).isRequired,
   paths: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,

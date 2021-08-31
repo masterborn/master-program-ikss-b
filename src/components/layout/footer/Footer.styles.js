@@ -124,3 +124,8 @@ export const Paragraph = styled(ParagraphSmall)`
     margin-top: 40px;
   }
 `;
+
+export const MBLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+`;
