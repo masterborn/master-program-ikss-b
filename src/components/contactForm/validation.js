@@ -1,40 +1,96 @@
-const validateName = (name) => {
-  if (!name) return false;
+import validator from 'validator';
 
-  return true;
+const MAX_NAME_LENGTH = 20;
+const MIN_NAME_LENGTH = 3;
+const MAX_TITLE_LENGTH = 50;
+const MIN_TITLE_LENGTH = 6;
+const MAX_CONTENT_LENGTH = 150;
+const MIN_CONTENT_LENGTH = 6;
+
+const validateName = (firstName) => {
+  if (firstName.length < MIN_NAME_LENGTH)
+    return {
+      isValid: false,
+      isInvalid: true,
+      message: 'Zbyt krótkie imię. Powinno zawierać od 3 do 20 znaków.',
+    };
+  if (firstName.length > MAX_NAME_LENGTH)
+    return {
+      isValid: false,
+      isInvalid: true,
+      message: 'Zbyt długie imię. Powinno zawierać od 3 do 20 znaków.',
+    };
+
+  return { isValid: true, isInvalid: false, message: 'ok' };
 };
 const validateLastName = (lastName) => {
-  if (!lastName) return false;
+  if (lastName.length < MIN_NAME_LENGTH)
+    return {
+      isValid: false,
+      isInvalid: true,
+      message: 'Zbyt krótkie nazwisko. Powinno zawierać od 3 do 20 znaków.',
+    };
+  if (lastName.length > MAX_NAME_LENGTH)
+    return {
+      isValid: false,
+      isInvalid: true,
+      message: 'Zbyt długie nazwisko. Powinno zawierać od 3 do 20 znaków.',
+    };
 
-  return true;
+  return { isValid: true, isInvalid: false, message: 'ok' };
 };
 const validateEmail = (email) => {
-  if (!email) return false;
+  if (!validator.isEmail(email))
+    return { isValid: false, isInvalid: true, message: 'Niepoprawny adres email.' };
 
-  return true;
+  return { isValid: true, isInvalid: false, message: 'ok' };
+};
+const validateTitle = (title) => {
+  if (title.length < MIN_TITLE_LENGTH)
+    return {
+      isValid: false,
+      isInvalid: true,
+      message: 'Zbyt krótki tytuł. Powinno zawierać od 6 do 50 znaków.',
+    };
+  if (title.length > MAX_TITLE_LENGTH)
+    return {
+      isValid: false,
+      isInvalid: true,
+      message: 'Zbyt długi tytuł. Powinno zawierać od 6 do 50 znaków.',
+    };
+
+  return { isValid: true, isInvalid: false, message: 'ok' };
 };
 const validateContent = (content) => {
-  if (!content) return false;
+  if (content.length < MIN_CONTENT_LENGTH)
+    return {
+      isValid: false,
+      isInvalid: true,
+      message: 'Zbyt krótki tekst. Powinno zawierać od 6 do 150 znaków.',
+    };
+  if (content.length > MAX_CONTENT_LENGTH)
+    return {
+      isValid: false,
+      isInvalid: true,
+      message: 'Zbyt długi tekst. Powinno zawierać od 6 do 150 znaków.',
+    };
 
-  return true;
+  return { isValid: true, isInvalid: false, message: 'ok' };
 };
-const validateTermsCheckbox = (hasAgreedToTerms) => hasAgreedToTerms;
+
+const validateTermsCheckbox = (hasAgreedToTerms) => ({ isInvalid: !hasAgreedToTerms });
 
 const validateInputs = (formValues) => {
-  const areInputsInvalid = {};
-  const areInputsValid = {};
+  const validatedInputs = {
+    firstName: validateName(formValues.firstName),
+    lastName: validateLastName(formValues.lastName),
+    email: validateEmail(formValues.email),
+    title: validateTitle(formValues.title),
+    content: validateContent(formValues.content),
+    termsCheckbox: validateTermsCheckbox(formValues.hasAgreedToTerms),
+  };
 
-  areInputsValid.name = validateName(formValues.name);
-  areInputsValid.lastName = validateLastName(formValues.lastName);
-  areInputsValid.email = validateEmail(formValues.email);
-  areInputsValid.content = validateContent(formValues.content);
-  areInputsValid.termsCheckbox = validateTermsCheckbox(formValues.hasAgreedToTerms);
-
-  Object.entries(areInputsValid).forEach(([key, value]) => {
-    areInputsInvalid[key] = !value;
-  });
-
-  return { areInputsInvalid, areInputsValid };
+  return validatedInputs;
 };
 
 export default validateInputs;

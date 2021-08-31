@@ -6,9 +6,10 @@ import {
 
 const initialState = {
   inputsValues: {
-    name: '',
+    firstName: '',
     lastName: '',
     email: '',
+    title: '',
     content: '',
     hasAgreedToTerms: false,
     _gotcha: '',
@@ -32,9 +33,10 @@ const contactFormReducer = (state = initialState, action) => {
       return {
         ...state,
         inputsValues: {
-          name: '',
+          firstName: '',
           lastName: '',
           email: '',
+          title: '',
           content: '',
           hasAgreedToTerms: false,
           _gotcha: '',

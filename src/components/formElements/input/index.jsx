@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StyledInput from './styledInput';
-import Icon from './icon';
+import Icon from '../misc/icon';
 import StyledInputContainer from './styledInputContainer';
 
 export default function InputContainer({
@@ -14,6 +14,7 @@ export default function InputContainer({
   value,
   onChange,
   className,
+  errorTooltipText,
 }) {
   return (
     <StyledInputContainer withIcon={withIcon} className={className}>
@@ -28,7 +29,9 @@ export default function InputContainer({
         value={value}
       />
 
-      {withIcon && <Icon isInvalid={isInvalid} disabled={disabled} />}
+      {withIcon && (
+        <Icon errorTooltipText={errorTooltipText} isInvalid={isInvalid} disabled={disabled} />
+      )}
     </StyledInputContainer>
   );
 }
@@ -43,6 +46,7 @@ InputContainer.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   className: PropTypes.string,
+  errorTooltipText: PropTypes.string,
 };
 
 InputContainer.defaultProps = {
@@ -53,4 +57,5 @@ InputContainer.defaultProps = {
   isInvalid: false,
   isValid: false,
   className: '',
+  errorTooltipText: '',
 };

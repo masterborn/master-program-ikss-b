@@ -17,12 +17,12 @@ import Tooltip from './tooltip';
 import {
   ContactFormContainer,
   CloseButton,
-  Content,
+  ContactFormContent,
   TopSection,
   Form,
   InputRow,
   NameInput,
-  EmailInput,
+  FullWidthInput,
   ContentInput,
   StyledCheckbox,
   RODOContainer,
@@ -56,29 +56,23 @@ export default function ContactForm({
   const formValues = useSelector((state) => state.contactForm.inputsValues);
   const dispatch = useDispatch();
 
-  const [areInputsInvalid, setAreInputsInvalid] = useState({
-    name: false,
-    lastName: false,
-    email: false,
-    content: false,
-    termsCheckbox: false,
+  const [validatedInputs, setValidatedInputs] = useState({
+    firstName: { isValid: false, isInvalid: false, message: '' },
+    lastName: { isValid: false, isInvalid: false, message: '' },
+    email: { isValid: false, isInvalid: false, message: '' },
+    title: { isValid: false, isInvalid: false, message: '' },
+    content: { isValid: false, isInvalid: false, message: '' },
+    termsCheckbox: { isInvalid: false },
   });
 
-  const [areInputsValid, setAreInputsValid] = useState({
-    name: false,
-    lastName: false,
-    email: false,
-    content: false,
-    termsCheckbox: false,
-  });
-
-  const resetAreInputsValid = () => {
-    setAreInputsValid({
-      name: false,
-      lastName: false,
-      email: false,
-      content: false,
-      termsCheckbox: false,
+  const resetValidatedInputs = () => {
+    setValidatedInputs({
+      firstName: { isValid: false, isInvalid: false, message: '' },
+      lastName: { isValid: false, isInvalid: false, message: '' },
+      email: { isValid: false, isInvalid: false, message: '' },
+      title: { isValid: false, isInvalid: false, message: '' },
+      content: { isValid: false, isInvalid: false, message: '' },
+      termsCheckbox: { isValid: false, isInvalid: false, message: '' },
     });
   };
 
@@ -101,22 +95,22 @@ export default function ContactForm({
 
   const handleInputChange = ({ target, target: { name } }) => {
     const value = name === 'hasAgreedToTerms' ? target.checked : target.value;
+
     dispatch(changeInputValues(name, value));
   };
 
   const isFormValid = () => {
     const resources = validateInputs(formValues);
 
-    setAreInputsInvalid(resources.areInputsInvalid);
-    setAreInputsValid(resources.areInputsValid);
+    setValidatedInputs(resources);
 
-    return !Object.values(resources.areInputsInvalid).some((isInvalid) => isInvalid);
+    return !Object.values(resources).some(({ isInvalid }) => isInvalid);
   };
 
   const changeFormStatus = (statusType) => {
     if (statusType === FORM_SENDING_STATUS.success) {
       dispatch(resetInputValues());
-      resetAreInputsValid();
+      resetValidatedInputs();
     }
     return dispatch(changeFormSendingStatus(statusType));
   };
@@ -168,7 +162,7 @@ export default function ContactForm({
 
   return (
     <ContactFormContainer className={className} id="contact-form" isModal={isModal}>
-      <Content>
+      <ContactFormContent>
         {isModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
@@ -178,17 +172,18 @@ export default function ContactForm({
 
         <Form onSubmit={handleSubmit}>
           <InputRow spaceBetween>
-            <label htmlFor="name">
+            <label htmlFor="firstName">
               <ParagraphSmall>Imię</ParagraphSmall>
               <NameInput
-                name="name"
-                value={formValues.name || ''}
+                name="firstName"
+                value={formValues.firstName || ''}
                 onChange={handleInputChange}
                 placeholder="Wpisz swoje imię"
-                isInvalid={areInputsInvalid.name}
-                isValid={areInputsValid.name}
-                withIcon={areInputsInvalid.name}
+                isInvalid={validatedInputs.firstName.isInvalid}
+                isValid={validatedInputs.firstName.isValid}
+                withIcon={validatedInputs.firstName.isInvalid}
                 disabled={disableInputs}
+                errorTooltipText={validatedInputs.firstName.message}
               />
             </label>
             <label htmlFor="lastName">
@@ -198,10 +193,11 @@ export default function ContactForm({
                 value={formValues.lastName || ''}
                 onChange={handleInputChange}
                 placeholder="Wpisz swoje nazwisko"
-                isInvalid={areInputsInvalid.lastName}
-                isValid={areInputsValid.lastName}
-                withIcon={areInputsInvalid.lastName}
+                isInvalid={validatedInputs.lastName.isInvalid}
+                isValid={validatedInputs.lastName.isValid}
+                withIcon={validatedInputs.lastName.isInvalid}
                 disabled={disableInputs}
+                errorTooltipText={validatedInputs.lastName.message}
               />
             </label>
           </InputRow>
@@ -209,15 +205,33 @@ export default function ContactForm({
           <InputRow>
             <label htmlFor="email">
               <ParagraphSmall>Adres email</ParagraphSmall>
-              <EmailInput
+              <FullWidthInput
                 name="email"
                 value={formValues.email || ''}
                 onChange={handleInputChange}
                 placeholder="Wpisz swój adres e-mail"
-                isInvalid={areInputsInvalid.email}
-                isValid={areInputsValid.email}
-                withIcon={areInputsInvalid.email}
+                isInvalid={validatedInputs.email.isInvalid}
+                isValid={validatedInputs.email.isValid}
+                withIcon={validatedInputs.email.isInvalid}
                 disabled={disableInputs}
+                errorTooltipText={validatedInputs.email.message}
+              />
+            </label>
+          </InputRow>
+
+          <InputRow>
+            <label htmlFor="title">
+              <ParagraphSmall>Temat</ParagraphSmall>
+              <FullWidthInput
+                name="title"
+                value={formValues.title || ''}
+                onChange={handleInputChange}
+                placeholder="Temat wiadomości"
+                isInvalid={validatedInputs.title.isInvalid}
+                isValid={validatedInputs.title.isValid}
+                withIcon={validatedInputs.title.isInvalid}
+                disabled={disableInputs}
+                errorTooltipText={validatedInputs.title.message}
               />
             </label>
           </InputRow>
@@ -230,9 +244,10 @@ export default function ContactForm({
                 value={formValues.content || ''}
                 onChange={handleInputChange}
                 placeholder="O czym chcesz porozmawiać?"
-                isInvalid={areInputsInvalid.content}
-                isValid={areInputsValid.content}
+                isInvalid={validatedInputs.content.isInvalid}
+                isValid={validatedInputs.content.isValid}
                 disabled={disableInputs}
+                errorTooltipText={validatedInputs.content.message}
               />
             </label>
           </InputRow>
@@ -242,7 +257,7 @@ export default function ContactForm({
               name="hasAgreedToTerms"
               onChange={handleInputChange}
               checked={formValues.hasAgreedToTerms}
-              isInvalid={areInputsInvalid.termsCheckbox}
+              isInvalid={validatedInputs.termsCheckbox.isInvalid}
               disabled={disableInputs}
             />
             <RODOContainer>
@@ -255,9 +270,7 @@ export default function ContactForm({
                     target="_blank"
                     rel="noreferrer"
                     onMouseEnter={() => toggleShowTooltip(true)}
-                    onMouseLeave={() => {
-                      toggleShowTooltip(false);
-                    }}
+                    onMouseLeave={() => toggleShowTooltip(false)}
                   >
                     informacją o administratorze i przetwarzaniu danych.
                   </RODOLink>
@@ -273,7 +286,7 @@ export default function ContactForm({
           />
           {submitButton()}
         </Form>
-      </Content>
+      </ContactFormContent>
     </ContactFormContainer>
   );
 }
