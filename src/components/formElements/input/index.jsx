@@ -9,7 +9,6 @@ export default function InputContainer({
   placeholder,
   disabled,
   withIcon,
-  name,
   isInvalid,
   isValid,
   value,
