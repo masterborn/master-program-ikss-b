@@ -74,7 +74,7 @@ export const NameInput = styled(Input)`
   margin-top: 5px;
   margin-right: 0;
 `;
-export const EmailInput = styled(Input)`
+export const FullWidthInput = styled(Input)`
   width: 588px;
   height: 48px;
   margin-top: 5px;

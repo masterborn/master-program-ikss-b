@@ -22,7 +22,7 @@ import {
   Form,
   InputRow,
   NameInput,
-  EmailInput,
+  FullWidthInput,
   ContentInput,
   StyledCheckbox,
   RODOContainer,
@@ -56,18 +56,20 @@ export default function ContactForm({
   const dispatch = useDispatch();
 
   const [validatedInputs, setValidatedInputs] = useState({
-    name: { isValid: false, isInvalid: false, message: '' },
+    firstName: { isValid: false, isInvalid: false, message: '' },
     lastName: { isValid: false, isInvalid: false, message: '' },
     email: { isValid: false, isInvalid: false, message: '' },
+    title: { isValid: false, isInvalid: false, message: '' },
     content: { isValid: false, isInvalid: false, message: '' },
     termsCheckbox: { isInvalid: false },
   });
 
   const resetValidatedInputs = () => {
     setValidatedInputs({
-      name: { isValid: false, isInvalid: false, message: '' },
+      firstName: { isValid: false, isInvalid: false, message: '' },
       lastName: { isValid: false, isInvalid: false, message: '' },
       email: { isValid: false, isInvalid: false, message: '' },
+      title: { isValid: false, isInvalid: false, message: '' },
       content: { isValid: false, isInvalid: false, message: '' },
       termsCheckbox: { isValid: false, isInvalid: false, message: '' },
     });
@@ -169,18 +171,18 @@ export default function ContactForm({
 
         <Form onSubmit={handleSubmit}>
           <InputRow spaceBetween>
-            <label htmlFor="name">
+            <label htmlFor="firstName">
               <ParagraphSmall>Imię</ParagraphSmall>
               <NameInput
-                name="name"
-                value={formValues.name || ''}
+                name="firstName"
+                value={formValues.firstName || ''}
                 onChange={handleInputChange}
                 placeholder="Wpisz swoje imię"
-                isInvalid={validatedInputs.name.isInvalid}
-                isValid={validatedInputs.name.isValid}
-                withIcon={validatedInputs.name.isInvalid}
+                isInvalid={validatedInputs.firstName.isInvalid}
+                isValid={validatedInputs.firstName.isValid}
+                withIcon={validatedInputs.firstName.isInvalid}
                 disabled={disableInputs}
-                errorTooltipText={validatedInputs.name.message}
+                errorTooltipText={validatedInputs.firstName.message}
               />
             </label>
             <label htmlFor="lastName">
@@ -202,7 +204,7 @@ export default function ContactForm({
           <InputRow>
             <label htmlFor="email">
               <ParagraphSmall>Adres email</ParagraphSmall>
-              <EmailInput
+              <FullWidthInput
                 name="email"
                 value={formValues.email || ''}
                 onChange={handleInputChange}
@@ -212,6 +214,23 @@ export default function ContactForm({
                 withIcon={validatedInputs.email.isInvalid}
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.email.message}
+              />
+            </label>
+          </InputRow>
+
+          <InputRow>
+            <label htmlFor="title">
+              <ParagraphSmall>Temat</ParagraphSmall>
+              <FullWidthInput
+                name="title"
+                value={formValues.title || ''}
+                onChange={handleInputChange}
+                placeholder="Temat wiadomości"
+                isInvalid={validatedInputs.title.isInvalid}
+                isValid={validatedInputs.title.isValid}
+                withIcon={validatedInputs.title.isInvalid}
+                disabled={disableInputs}
+                errorTooltipText={validatedInputs.title.message}
               />
             </label>
           </InputRow>
