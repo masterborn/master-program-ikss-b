@@ -13,27 +13,25 @@ export default function Socials({ className, socialsLinks, showRegular, showLabe
   } = socialsLinks;
 
   return (
-    <div>
-      <div className={className}>
-        <a href={facebookUrl} alt={facebookLinkCaption || facebookTitle}>
-          {showRegular ? <FbIcon /> : <FbCircleIcon />}
-          {showLabel && <Header5>Facebook</Header5>}
-        </a>
+    <div className={className}>
+      <a href={facebookUrl} alt={facebookLinkCaption || facebookTitle}>
+        {showRegular ? <FbIcon /> : <FbCircleIcon />}
+        {showLabel && <Header5>Facebook</Header5>}
+      </a>
 
-        <a href={instagramUrl} alt={instagramLinkCaption || instagramTitle}>
-          {showRegular ? <IgIcon /> : <IgCircleIcon />}
-          {showLabel && <Header5>Instagram</Header5>}
-        </a>
-        <a href={youtubeUrl} alt={youtubeLinkCaption || youtubeTitle}>
-          {showRegular ? <YtIcon /> : <YtCircleIcon />}
-          {showLabel && <Header5>YouTube</Header5>}
-        </a>
+      <a href={instagramUrl} alt={instagramLinkCaption || instagramTitle}>
+        {showRegular ? <IgIcon /> : <IgCircleIcon />}
+        {showLabel && <Header5>Instagram</Header5>}
+      </a>
+      <a href={youtubeUrl} alt={youtubeLinkCaption || youtubeTitle}>
+        {showRegular ? <YtIcon /> : <YtCircleIcon />}
+        {showLabel && <Header5>YouTube</Header5>}
+      </a>
 
-        <a href={linkedinUrl} alt={linkedinLinkCaption || linkedinTitle}>
-          {showRegular ? <InIcon /> : <InCircleIcon />}
-          {showLabel && <Header5>LinkedIn</Header5>}
-        </a>
-      </div>
+      <a href={linkedinUrl} alt={linkedinLinkCaption || linkedinTitle}>
+        {showRegular ? <InIcon /> : <InCircleIcon />}
+        {showLabel && <Header5>LinkedIn</Header5>}
+      </a>
     </div>
   );
 }

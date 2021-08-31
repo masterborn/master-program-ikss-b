@@ -10,7 +10,14 @@ export const StyledFooter = styled.footer`
   width: 100%;
   height: 404px;
 
+  text-align: center;
+
   background-color: ${(props) => props.theme.color.ikssBlue};
+
+  @media (max-width: 550px) {
+    height: auto;
+    margin-top: 90px;
+  }
 `;
 
 export const Filler = styled.div`
@@ -21,6 +28,11 @@ export const Filler = styled.div`
   z-index: -100;
   height: 324px;
   background-color: ${(props) => props.theme.color.ikssBlue};
+
+  @media (max-width: 550px) {
+    top: -296px;
+    height: 296px;
+  }
 `;
 
 export const StyledSrollUpButton = styled(ScrollUpButton)`
@@ -30,6 +42,12 @@ export const StyledSrollUpButton = styled(ScrollUpButton)`
   z-index: 1;
   & > g:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 550px) {
+    top: -57px;
+    right: 50%;
+    transform: translateX(50%);
   }
 `;
 
@@ -51,6 +69,11 @@ export const LinksContainer = styled.div`
 
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 550px) {
+    height: 144px;
+    flex-direction: column;
+  }
 `;
 
 export const Label = styled.h3`
@@ -73,6 +96,16 @@ export const StyledSocials = styled(Socials)`
   a {
     margin: 0px 32px;
   }
+
+  @media (max-width: 550px) {
+    width: 189px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      margin: 0;
+    }
+  }
 `;
 
 export const StyledLogo = styled(Logo)`
@@ -85,4 +118,14 @@ export const Paragraph = styled(ParagraphSmall)`
   color: ${(props) => props.theme.color.white};
 
   text-align: center;
+
+  @media (max-width: 550px) {
+    width: 300px;
+    margin-top: 40px;
+  }
+`;
+
+export const MBLink = styled.a`
+  color: inherit;
+  text-decoration: none;
 `;

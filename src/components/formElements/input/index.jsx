@@ -5,6 +5,7 @@ import Icon from '../misc/icon';
 import StyledInputContainer from './styledInputContainer';
 
 export default function InputContainer({
+  name,
   placeholder,
   disabled,
   withIcon,

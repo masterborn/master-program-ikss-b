@@ -151,3 +151,8 @@ export const SuccessButton = styled(StatusButton)`
 export const ErrorButton = styled(StatusButton)`
   background-color: ${(props) => props.theme.color.misc.errorRed};
 `;
+
+export const ZIPCode = styled.input`
+  position: absolute;
+  z-index: -1;
+`;

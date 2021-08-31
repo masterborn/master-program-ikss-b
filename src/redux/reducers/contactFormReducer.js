@@ -12,6 +12,7 @@ const initialState = {
     title: '',
     content: '',
     hasAgreedToTerms: false,
+    _gotcha: '',
   },
   status: 'initial',
 };
@@ -38,6 +39,7 @@ const contactFormReducer = (state = initialState, action) => {
           title: '',
           content: '',
           hasAgreedToTerms: false,
+          _gotcha: '',
         },
       };
     case CHANGE_FORM_SENDING_STATUS:

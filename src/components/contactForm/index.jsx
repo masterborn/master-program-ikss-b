@@ -34,6 +34,7 @@ import {
   StyledSuccessIcon,
   ErrorButton,
   StyledErrorIcon,
+  ZIPCode,
 } from './ContactForm.styles';
 
 const FORM_SENDING_STATUS = {
@@ -277,7 +278,12 @@ export default function ContactForm({
               </RODO>
             </RODOContainer>
           </InputRow>
-
+          <ZIPCode
+            name="_gotcha"
+            // eslint-disable-next-line no-underscore-dangle
+            value={formValues._gotcha || ''}
+            onChange={handleInputChange}
+          />
           {submitButton()}
         </Form>
       </ContactFormContent>

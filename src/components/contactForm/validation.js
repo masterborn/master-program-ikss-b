@@ -77,6 +77,7 @@ const validateContent = (content) => {
 
   return { isValid: true, isInvalid: false, message: 'ok' };
 };
+
 const validateTermsCheckbox = (hasAgreedToTerms) => ({ isInvalid: !hasAgreedToTerms });
 
 const validateInputs = (formValues) => {

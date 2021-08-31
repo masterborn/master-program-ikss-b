@@ -11,40 +11,15 @@ import {
   StyledLogo,
   StyledSocials,
   Paragraph,
+  MBLink,
 } from './Footer.styles';
 import LoveIcon from './LoveIcon';
 
-const MOCK_SOCIALS = {
-  socialFb: {
-    page: 'common',
-    identifier: 'social-facebook',
-    title: 'URL do Facebooka',
-    linkUrl: 'https://www.facebook.com/IKSSUE/',
-    linkCaption: 'Facebook',
-  },
-  socialIn: {
-    page: 'common',
-    identifier: 'social-linkedin',
-    title: 'URL do LinkedIn',
-    linkUrl: 'https://www.linkedin.com/company/informacjakulturalnosportowastudentowikss/',
-  },
-  socialIg: {
-    page: 'common',
-    identifier: 'social-instagram',
-    title: 'URL do Instagrama',
-    linkUrl: 'https://www.instagram.com/ikssue/',
-  },
-  socialYt: {
-    page: 'common',
-    identifier: 'social-youtube',
-    title: 'URL do YouTube',
-    linkUrl: 'https://www.youtube.com/channel/UC6cKLW4YEBqA7FWmkY0HThQ',
-  },
-};
-const MOCK_RIGHT_RESERVERD =
-  '©2021 All rights reserved by Informacja Kulturalno-Sportowa Studentów';
+const MASTERBORN_LINK = 'https://masterborn.com/';
 
-export default function Footer({ paths, isHomepage }) {
+export default function Footer({ socials, footerText, paths, isHomepage }) {
+  const { title } = footerText;
+
   const scrollUp = () => {
     window.scroll(0, 0);
   };
@@ -63,7 +38,7 @@ export default function Footer({ paths, isHomepage }) {
             </Link>
           ))}
         </LinksContainer>
-        <StyledSocials className="socials" socialsLinks={MOCK_SOCIALS} showRegular />
+        <StyledSocials socialsLinks={socials} showRegular />
 
         <Link href="/" passHref>
           <a href className="logo">
@@ -72,8 +47,8 @@ export default function Footer({ paths, isHomepage }) {
         </Link>
 
         <Paragraph>
-          {MOCK_RIGHT_RESERVERD} <br />
-          Made with <LoveIcon /> by MasterBorn Software
+          {title} <br />
+          Made with <LoveIcon /> by <MBLink href={MASTERBORN_LINK}>MasterBorn Software</MBLink>
         </Paragraph>
       </Centered>
     </StyledFooter>
@@ -81,6 +56,10 @@ export default function Footer({ paths, isHomepage }) {
 }
 
 Footer.propTypes = {
+  socials: PropTypes.shape({}).isRequired,
+  footerText: PropTypes.shape({
+    title: PropTypes.string,
+  }).isRequired,
   paths: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,

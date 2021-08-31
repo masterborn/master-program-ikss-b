@@ -23,14 +23,20 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
     'social-linkedin': socialIn,
     'social-instagram': socialIg,
     'social-youtube': socialYt,
+    'contact-form-text': contactFormText,
+    'contact-form-tooltip': tooltipText,
+    'footer-text': footerText,
   } = common;
   const socials = { socialFb, socialIn, socialIg, socialYt };
   const valuesTiles = [homepageTile1, homepageTile2, homepageTile3];
 
-  const { 'contact-form-text': contactFormText, 'contact-form-tooltip': tooltipText } = common;
-
   return (
-    <Layout contactFormText={contactFormText} tooltipText={tooltipText}>
+    <Layout
+      socials={socials}
+      footerText={footerText}
+      contactFormText={contactFormText}
+      tooltipText={tooltipText}
+    >
       <TopSection topSectionContent={topSectionContent} socials={socials} />
       <ValuesSection valuesText={valuesText} valuesTiles={valuesTiles} />
       <ProjectsSection projects={projects} />
@@ -77,6 +83,7 @@ Homepage.propTypes = {
       'social-linkedin': PropTypes.shape({}),
       'social-instagram': PropTypes.shape({}),
       'social-youtube': PropTypes.shape({}),
+      'footer-text': PropTypes.shape({}),
     }).isRequired,
   }).isRequired,
 };
