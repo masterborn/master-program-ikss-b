@@ -1,18 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
+import { scrollToContactForm } from '@root/components/layout/navbar/contactFormButton';
 import {
   StyledTopSection,
   Content,
-  LeftSide,
+  TextSection,
   Header,
   Paragraph,
   StyledSocials,
   TopSectionImage,
+  TopSectionVideo,
 } from './TopSection.styles';
 import SecondaryButton from '../../buttons/secondaryButton';
 
 export default function TopSection({ topSectionContent, socials }) {
+  const isMobile = useSelector((state) => state.isMobile);
+
+  const navbarHeight = isMobile ? '56px' : '88px';
+
   const {
     title: sectionHeader,
     image1: { url: mediaUrl, title: mediaTitle },
@@ -21,26 +28,33 @@ export default function TopSection({ topSectionContent, socials }) {
 
   const urlIsImage = /.*.(jpg|png|jpeg)$/.test(mediaUrl);
   const Description = convertRichTextToReactComponent(Paragraph, richText);
-  const handleClick = () => {};
+  const handleClick = () => scrollToContactForm(navbarHeight);
 
   return (
     <StyledTopSection className="hideNavSocials">
       <Content>
-        <LeftSide>
+        <TextSection>
           <Header>{sectionHeader}</Header>
           {Description}
-          <SecondaryButton isBig onClick={handleClick}>
+          <SecondaryButton isBig={!isMobile} onClick={handleClick}>
             Skontaktuj się
           </SecondaryButton>
-        </LeftSide>
+        </TextSection>
         {urlIsImage ? (
           <TopSectionImage src={mediaUrl} alt={mediaTitle} />
         ) : (
-          <video src={`https:${mediaUrl}`} alt={mediaTitle} width={808} muted autoPlay loop />
+          <TopSectionVideo
+            src={`https:${mediaUrl}`}
+            alt={mediaTitle}
+            width={808}
+            muted
+            autoPlay
+            loop
+          />
         )}
       </Content>
 
-      <StyledSocials socialsLinks={socials} showLabel />
+      <StyledSocials socialsLinks={socials} showLabel={!isMobile} />
     </StyledTopSection>
   );
 }

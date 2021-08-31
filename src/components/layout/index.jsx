@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
 import { useSelector } from 'react-redux';
-import { StyledLayout, PageWrapper } from './Layout.styles';
+import { StyledLayout, PageWrapper, BackgroundGradient } from './Layout.styles';
 import Navbar from './navbar';
 import Footer from './footer';
 import ContactFormModal from '../contactForm/contactModal';
@@ -42,7 +42,10 @@ export default function Layout({ children, socials, footerText, contactFormText,
           />
         )}
 
-        <div id="main">{children}</div>
+        <div id="main">
+          <BackgroundGradient />
+          {children}
+        </div>
 
         <Footer
           socials={socials}
