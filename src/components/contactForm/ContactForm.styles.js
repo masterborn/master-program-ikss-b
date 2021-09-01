@@ -152,7 +152,7 @@ export const ContentInput = styled(TextArea)`
   height: 221px;
 
   @media (max-width: 550px) {
-    width: 92%;
+    width: 89%;
     height: 125px;
   }
 `;
