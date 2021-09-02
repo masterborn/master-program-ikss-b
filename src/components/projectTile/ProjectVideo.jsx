@@ -21,4 +21,5 @@ export default function ProjectVideo({ url, isOnGrid }) {
 
 ProjectVideo.propTypes = {
   url: PropTypes.string.isRequired,
+  isOnGrid: PropTypes.bool.isRequired,
 };
