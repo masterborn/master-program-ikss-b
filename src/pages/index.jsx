@@ -5,6 +5,7 @@ import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
 import ProjectsSection from '@root/components/home/projects/ProjectsSection';
 import PartnersSection from '@root/components/home/partnersList/PartnersSection';
+import sortHomepagePartners from '@root/dataMappers/partners';
 import TopSection from '../components/home/topSection';
 import ValuesSection from '../components/home/valuesSection';
 import ContactForm from '../components/contactForm';
@@ -29,6 +30,7 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
   } = common;
   const socials = { socialFb, socialIn, socialIg, socialYt };
   const valuesTiles = [homepageTile1, homepageTile2, homepageTile3];
+  const homepagePartners = sortHomepagePartners(partners);
 
   return (
     <Layout
@@ -40,7 +42,7 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
       <TopSection topSectionContent={topSectionContent} socials={socials} />
       <ValuesSection valuesText={valuesText} valuesTiles={valuesTiles} />
       <ProjectsSection projects={projects} />
-      <PartnersSection partners={partners} partnersText={partnersText} />
+      <PartnersSection partners={homepagePartners} partnersText={partnersText} />
       <ContactForm contactFormText={contactFormText} tooltipText={tooltipText} />
     </Layout>
   );

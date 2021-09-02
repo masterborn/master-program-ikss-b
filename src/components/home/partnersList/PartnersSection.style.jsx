@@ -8,9 +8,9 @@ export const LogosSection = styled.section`
   justify-content: flex-start;
   align-items: center;
   width: 1134px;
-  height: 556px;
+  height: auto;
   margin-top: 148px;
-  
+
   @media (max-width: 550px) {
     width: 100%;
     max-width: 550px;
@@ -48,7 +48,7 @@ export const LogosContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
-  height: 336px;
+  height: auto;
   width: 1134px;
   margin-top: 80px;
 

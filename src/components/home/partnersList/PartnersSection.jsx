@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 // eslint-disable-next-line import/extensions
-import { convertRichTextToReactComponent, sortByOrder } from '@root/dataMappers/contentful.jsx';
+import { convertRichTextToReactComponent } from '@root/dataMappers/contentful.jsx';
 
 import PartnerLogo from '@root/components/logos/PartnerLogo';
 import {
@@ -11,22 +11,15 @@ import {
   PartnersHeader,
 } from './PartnersSection.style';
 
-function sortPartners(partners) {
-  const homepagePartners = partners.filter(
-    ({ showOnHomepage, logo }) => showOnHomepage && logo.url,
-  );
-  return sortByOrder(homepagePartners);
-}
 export default function PartnersSection({ partners, partnersText }) {
   const { title: partnersTitle, text1: richText } = partnersText;
-  const homepagePartners = useMemo(() => sortPartners(partners), [partners]);
   const Description = convertRichTextToReactComponent(PartnersDescription, richText);
   return (
     <LogosSection id="partners">
       <PartnersHeader>{partnersTitle}</PartnersHeader>
       {Description}
       <LogosContainer>
-        {homepagePartners.map((partner) => (
+        {partners.map((partner) => (
           <PartnerLogo key={partner.name} partner={partner} />
         ))}
       </LogosContainer>
