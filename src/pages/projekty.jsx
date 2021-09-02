@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
-import ProjectsGrid from '@root/components/cooperation/ProjectsMasonry';
+import ProjectsMasonry from '@root/components/cooperation/ProjectsMasonry';
 
 export default function Projects({ projectsData: { projects, common } }) {
   const { 'contact-form-text': contactFormText } = common;
@@ -11,7 +11,7 @@ export default function Projects({ projectsData: { projects, common } }) {
 
   return (
     <Layout contactFormText={contactFormText} tooltipText={tooltipText}>
-      <ProjectsGrid projectsData={projects} />
+      <ProjectsMasonry projectsData={projects} />
     </Layout>
   );
 }
@@ -39,5 +39,6 @@ Projects.propTypes = {
       'contact-form-text': PropTypes.shape({}),
       'contact-form-tooltip': PropTypes.shape({}),
     }),
+    projects: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
 };
