@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
-import ProjectsGrid from '@root/components/cooperation/projectsGrid';
+import ProjectsGrid from '@root/components/cooperation/ProjectsMasonry';
 
 export default function Projects({ projectsData: { projects, common } }) {
   const { 'contact-form-text': contactFormText } = common;
