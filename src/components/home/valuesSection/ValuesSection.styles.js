@@ -8,10 +8,20 @@ export const StyledValuesSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 550px) {
+    margin-top: 80px;
+  }
 `;
 
 export const Title = styled(Header3)`
   color: ${(props) => props.theme.color.navy};
+  text-align: center;
+
+  @media (max-width: 550px) {
+    width: 260px;
+    font-size: 24px;
+    line-height: 32px;
+  }
 `;
 
 export const Paragraph = styled(ParagraphBody)`
@@ -19,6 +29,10 @@ export const Paragraph = styled(ParagraphBody)`
   margin-top: 32px;
   text-align: center;
   color: ${(props) => props.theme.color.steel};
+  @media (max-width: 550px) {
+    width: 300px;
+    margin-top: 24px;
+  }
 `;
 
 export const TilesContainer = styled.div`
@@ -29,5 +43,3 @@ export const TilesContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
 `;
-
-export default StyledValuesSection;

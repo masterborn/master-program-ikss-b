@@ -20,6 +20,7 @@ export const ProjectSection = styled.section`
     width: 100%;
     max-width: 550px;
     padding: 0 24px 0 24px;
+    margin-top: 30px;
 
     a {
       align-self: center;

@@ -21,7 +21,12 @@ export const StyledTile = styled.div`
   border-radius: 16px;
 
   @media (max-width: 550px) {
-    width: 300px;
+    width: 90%;
+    min-width: 300px;
+    max-width: 384px;
+    height: 300px;
+
+    display: block;
   }
 `;
 
