@@ -4,6 +4,7 @@ import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData, { sortByOrder } from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
 import PartnersSection from '@root/components/home/partnersList/PartnersSection';
+import CooperationValuesSection from '@root/components/cooperation/valuesSection';
 
 export default function Cooperation({ cooperationData: { common, partners, basicContent } }) {
   const {
@@ -15,7 +16,13 @@ export default function Cooperation({ cooperationData: { common, partners, basic
     'contact-form-tooltip': tooltipText,
     'footer-text': footerText,
   } = common;
-  const { 'cooperation-logos-text': partnersText } = basicContent;
+
+  const valuesTiles = Object.entries(basicContent)
+    .filter(([key]) => /cooperation-tile-/.test(key))
+    .map(([, val]) => val);
+
+  const { 'cooperation-logos-text': partnersText, 'cooperation-tiles-title': valuesTitle } =
+    basicContent;
   const socials = { socialFb, socialIn, socialIg, socialYt };
   const orderedPartners = sortByOrder(partners);
 
@@ -26,8 +33,9 @@ export default function Cooperation({ cooperationData: { common, partners, basic
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
+      <CooperationValuesSection valuesTiles={valuesTiles} valuesTitle={valuesTitle} />
+
       <PartnersSection partners={orderedPartners} partnersText={partnersText} />
-      Cooperation
     </Layout>
   );
 }
@@ -41,7 +49,6 @@ export async function getStaticProps() {
     partnerLogos: partners,
   } = pagesData;
   const cooperationData = { partners, common, basicContent };
-
   return {
     props: {
       cooperationData,
@@ -63,6 +70,7 @@ Cooperation.propTypes = {
     partners: PropTypes.arrayOf(PropTypes.object).isRequired,
     basicContent: PropTypes.shape({
       'cooperation-logos-text': PropTypes.shape({}),
+      'cooperation-tiles-title': PropTypes.shape({}),
     }),
   }).isRequired,
 };
