@@ -57,7 +57,6 @@ export default function Layout({ children, socials, footerText, contactFormText,
         {isValidPage && (
           <Footer socials={socials} footerText={footerText} paths={paths} isHomepage={isHomepage} />
         )}
-        =======
       </StyledLayout>
     </PageWrapper>
   );

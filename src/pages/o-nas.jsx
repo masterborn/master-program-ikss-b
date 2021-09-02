@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
+import MissionTile from '@root/components/aboutUs/MissionTile';
+import HistoryTile from '@root/components/aboutUs/HistoryTile';
 
-export default function AboutUs({ aboutUsData: { common } }) {
+export default function AboutUs({ aboutUsData: { common, basicContent } }) {
   const {
     'social-facebook': socialFb,
     'social-linkedin': socialIn,
@@ -14,6 +16,9 @@ export default function AboutUs({ aboutUsData: { common } }) {
     'contact-form-tooltip': tooltipText,
     'footer-text': footerText,
   } = common;
+  const { 'about-us-content-1': missionContent, 'about-us-content-2': historyContent } =
+    basicContent;
+  console.log(basicContent);
   const socials = { socialFb, socialIn, socialIg, socialYt };
 
   return (
@@ -23,7 +28,8 @@ export default function AboutUs({ aboutUsData: { common } }) {
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
-      About us
+      <MissionTile missionContent={missionContent} />
+      <HistoryTile historyContent={historyContent} />
     </Layout>
   );
 }
@@ -33,9 +39,9 @@ export async function getStaticProps() {
   const pagesData = mapData(resJson);
 
   const {
-    basicContent: { common },
+    basicContent: { common, 'about-us': basicContent },
   } = pagesData;
-  const aboutUsData = { common };
+  const aboutUsData = { common, basicContent };
 
   return {
     props: {
