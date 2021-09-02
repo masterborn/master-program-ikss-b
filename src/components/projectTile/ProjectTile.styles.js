@@ -21,6 +21,10 @@ export const ProjectArticle = styled.article`
 
     color: inherit;
     text-decoration: none;
+    @media (max-width: 550px) {
+      display: flex;
+      justify-content: center;
+    }
   }
   &:nth-child(2n) {
     order: ${(props) => props.isOnGrid && 2};

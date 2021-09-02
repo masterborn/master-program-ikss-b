@@ -15,13 +15,13 @@ import {
 } from './ProjectTile.styles';
 
 export default function ProjectTile({ project, isOnGrid }) {
-  const { title, date, image, video_url: videoUrl, linkUrl, description } = project;
+  const { title, date, image, videoUrl, linkUrl, description } = project;
   const linkIsFromFacebook = /^(https:\/\/)?(www.)?f(b||acebook)\.com\/.*/.test(linkUrl);
   return (
     <ProjectArticle isOnGrid={isOnGrid}>
       <ProjectMediaContainer>
         {videoUrl ? (
-          <ProjectVideo url={videoUrl} />
+          <ProjectVideo isOnGrid={isOnGrid} url={videoUrl} />
         ) : (
           <ProjectImage alt={image.title} src={`https:\\${image.url}`} />
         )}
