@@ -18,6 +18,155 @@
             "id": "n21y2i4hkj4h"
           }
         },
+        "id": "1wzQQg3TJItduIZWEINvxp",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:35:39.466Z",
+        "updatedAt": "2021-08-30T09:35:40.488Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "boardMembers"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2tOCnaN3hGEmgtgQxjUucL"
+          }
+        },
+        "name": "Paweł Borycki",
+        "role": "Członek zarządu ds. Promocji",
+        "phone": "786 152 266",
+        "email": "pawel.borycki.ikss@gmail.com",
+        "linkedinUrl": "https://linkedin.com/"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "6zTzXFh79v6ixOtVTHWdxt",
+        "type": "Entry",
+        "createdAt": "2021-08-09T21:50:19.640Z",
+        "updatedAt": "2021-08-30T09:25:46.202Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "about-us",
+        "identifier": "about-us-content-2",
+        "title": "Historia",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Informacja Kulturalno-Sportowa Studentów powstała jako projekt zainicjowany przez Joannę Sobieśniewską – późniejszą pierwszą przewodniczącą organizacji oraz Bartłomieja Postka. Na mocy aktu założycielskiego 8 stycznia 2008 roku powstała organizacja o nazwie Informacja Kulturalno-Sportowa Studentów, która po pewnym okresie działalności zaczęła sama organizować własne projekty, które swoją skalą podbijały nie tylko serca uczestników miasta, ale również i całej Polski.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "text2": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "       W styczniu 2020 roku IKSS świętowaliśmy swoje 12-lecie organizacji. Do chwili obecnej IKSSem kierowało 12 zarządów, przez organizację przewinęło się ponad 650 członków oraz zorganizowano ponad 130 projektów i 25 wyjazdów integracyjnych.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "\n       Historia IKSSa jest cały czas pisana i to każdy z nas jest jej autorem. Każdy z nas przekazuje reszcie swoją pozytywną energię i posiada różnorodne zajawki, którymi dzieląc się z innymi umożliwia rozwój siebie oraz całej organizacji. Każdy z nas jest wyjątkowy i dlatego tworzymy zgraną całość, którą jest właśnie Informacja Kulturalno-Sportowa Studentów we Wrocławiu.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6nczxG404H2A11U7PneCil"
+          }
+        },
+        "image2": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "3HI3H9eVkQY2150SUxmBj6"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
         "id": "jRYH4RO0j4uBlacnHxXAc",
         "type": "Entry",
         "createdAt": "2021-08-09T16:56:05.282Z",
@@ -1895,101 +2044,6 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "6zTzXFh79v6ixOtVTHWdxt",
-        "type": "Entry",
-        "createdAt": "2021-08-09T21:50:19.640Z",
-        "updatedAt": "2021-08-09T21:55:21.742Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "about-us",
-        "identifier": "about-us-content-2",
-        "title": "Historia",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Informacja Kulturalno-Sportowa Studentów powstała jako projekt zainicjowany przez Joannę Sobieśniewską – późniejszą pierwszą przewodniczącą organizacji oraz Bartłomieja Postka. Na mocy aktu założycielskiego 8 stycznia 2008 roku powstała organizacja o nazwie Informacja Kulturalno-Sportowa Studentów, która po pewnym okresie działalności zaczęła sama organizować własne projekty, które swoją skalą podbijały nie tylko serca uczestników miasta, ale również i całej Polski.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            },
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "\n      W styczniu 2020 roku IKSS świętowaliśmy swoje 12-lecie organizacji. Do chwili obecnej IKSSem kierowało 12 zarządów, przez organizację przewinęło się ponad 650 członków oraz zorganizowano ponad 130 projektów i 25 wyjazdów integracyjnych.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            },
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "\n       Historia IKSSa jest cały czas pisana i to każdy z nas jest jej autorem. Każdy z nas przekazuje reszcie swoją pozytywną energię i posiada różnorodne zajawki, którymi dzieląc się z innymi umożliwia rozwój siebie oraz całej organizacji. Każdy z nas jest wyjątkowy i dlatego tworzymy zgraną całość, którą jest właśnie Informacja Kulturalno-Sportowa Studentów we Wrocławiu.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "6nczxG404H2A11U7PneCil"
-          }
-        },
-        "image2": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "3HI3H9eVkQY2150SUxmBj6"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
         "id": "6DbIyxBXDDKl6A5DEuvmYa",
         "type": "Entry",
         "createdAt": "2021-08-09T21:47:29.963Z",
@@ -3522,54 +3576,6 @@
         "role": "Przewodnicząca",
         "phone": "693 829 206",
         "email": "roksana.bialowas.ikss@gmail.com",
-        "linkedinUrl": "https://linkedin.com/"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "1wzQQg3TJItduIZWEINvxp",
-        "type": "Entry",
-        "createdAt": "2021-08-09T15:35:39.466Z",
-        "updatedAt": "2021-08-09T15:35:51.827Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "boardMembers"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "image": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2tOCnaN3hGEmgtgQxjUucL"
-          }
-        },
-        "name": "Paweł Borycki",
-        "role": "Członek zarządu ds. Promocji",
-        "phone": "786 152 266",
-        "email": "pawel.borycki.ikss@gmail.com",
         "linkedinUrl": "https://linkedin.com/"
       }
     },
