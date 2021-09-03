@@ -11,6 +11,9 @@ export default function ValuesTile({ className, data }) {
     image1: { url: imageUrl },
   } = data;
   const Body = convertRichTextToReactComponent(Paragraph, richText);
+
+  if (!imageUrl && !title && !!Body[0].props.children) return null;
+
   return (
     <StyledTile className={className}>
       <Content>
