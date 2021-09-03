@@ -4,6 +4,7 @@ import { ParagraphBody } from '@root/components/typography/paragraphs';
 
 export const StyledTile = styled.div`
   width: 384px;
+  height: 382px;
   display: flex;
   flex-direction: column;
 
@@ -74,7 +75,7 @@ export const Paragraph = styled(ParagraphBody)`
   margin: 0 24px;
 
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 
