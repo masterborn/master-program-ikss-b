@@ -5,10 +5,11 @@ import {
   Title,
   CooperationValuesTilesContainer,
   CooperationValuesTile,
-} from './ValuesSection.styles';
+} from './CooperationValuesSection.styles';
 
 export default function CooperationValuesSection({ valuesTiles, valuesTitle }) {
   const { title } = valuesTitle;
+
   return (
     <CooperationValuesSectionContainer>
       <Title>{title}</Title>
