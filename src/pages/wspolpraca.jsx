@@ -17,13 +17,23 @@ export default function Cooperation({ cooperationData: { common, partners, basic
     'footer-text': footerText,
   } = common;
 
-  const valuesTiles = Object.entries(basicContent)
-    .filter(([key]) => /cooperation-tile-/.test(key))
-    .map(([, val]) => val);
-
-  const { 'cooperation-logos-text': partnersText, 'cooperation-tiles-title': valuesTitle } =
-    basicContent;
+  const {
+    'cooperation-logos-text': partnersText,
+    'cooperation-tiles-title': valuesTitle,
+    'cooperation-tile-1': cooperationTile1,
+    'cooperation-tile-2': cooperationTile2,
+    'cooperation-tile-3': cooperationTile3,
+    'cooperation-tile-4': cooperationTile4,
+    'cooperation-tile-5': cooperationTile5,
+  } = basicContent;
   const socials = { socialFb, socialIn, socialIg, socialYt };
+  const valuesTiles = [
+    cooperationTile1,
+    cooperationTile2,
+    cooperationTile3,
+    cooperationTile4,
+    cooperationTile5,
+  ];
   const orderedPartners = sortByOrder(partners);
 
   return (
@@ -71,6 +81,11 @@ Cooperation.propTypes = {
     basicContent: PropTypes.shape({
       'cooperation-logos-text': PropTypes.shape({}),
       'cooperation-tiles-title': PropTypes.shape({}),
+      'cooperation-tile-1': PropTypes.shape({}),
+      'cooperation-tile-2': PropTypes.shape({}),
+      'cooperation-tile-3': PropTypes.shape({}),
+      'cooperation-tile-4': PropTypes.shape({}),
+      'cooperation-tile-5': PropTypes.shape({}),
     }),
   }).isRequired,
 };
