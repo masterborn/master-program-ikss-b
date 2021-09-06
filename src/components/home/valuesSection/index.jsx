@@ -16,7 +16,7 @@ export default function ValuesSection({ valuesText, valuesTiles }) {
 
       <TilesContainer>
         {valuesTiles.map((val) => (
-          <Tile data={val} key={val.title} />
+          <Tile data={val} key={val.title} isOnHomepage />
         ))}
       </TilesContainer>
     </StyledValuesSection>

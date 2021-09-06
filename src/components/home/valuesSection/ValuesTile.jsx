@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { StyledTile, Content, ImageFiller, Title, Paragraph } from './ValuesTile.styles';
 
-export default function ValuesTile({ className, data }) {
+export default function ValuesTile({ className, data, isOnHomepage }) {
   const {
     title,
     text1: richText,
@@ -17,7 +17,7 @@ export default function ValuesTile({ className, data }) {
 
   return (
     <StyledTile className={className}>
-      <Content>
+      <Content isOnHomepage={isOnHomepage}>
         {imageUrl ? (
           <Image src={`https:${imageUrl}`} height={232} width={232} alt={title} />
         ) : (
@@ -40,8 +40,10 @@ ValuesTile.propTypes = {
       url: PropTypes.string,
     }),
   }).isRequired,
+  isOnHomepage: PropTypes.bool,
 };
 
 ValuesTile.defaultProps = {
   className: '',
+  isOnHomepage: false,
 };

@@ -4,7 +4,7 @@ import { ParagraphBody } from '@root/components/typography/paragraphs';
 
 export const StyledTile = styled.div`
   width: 384px;
-  height: 382px;
+  height: 384px;
   display: flex;
   flex-direction: column;
 
@@ -25,7 +25,7 @@ export const StyledTile = styled.div`
     width: 90%;
     min-width: 300px;
     max-width: 384px;
-    height: 300px;
+    height: ${({ isOnHomepage }) => (isOnHomepage ? '334px' : '350px')};
 
     display: block;
   }
@@ -33,42 +33,53 @@ export const StyledTile = styled.div`
 
 export const Content = styled.div`
   position: relative;
-  top: -62px;
+  top: ${({ isOnHomepage }) => isOnHomepage && '-62px'};
 
-  margin-bottom: -14px;
+  margin-top: ${({ isOnHomepage }) => !isOnHomepage && '32px'};
+  margin-bottom: ${({ isOnHomepage }) => isOnHomepage && '-14px'};
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  img {
+    width: ${({ isOnHomepage }) => !isOnHomepage && '214px'};
+    height: ${({ isOnHomepage }) => !isOnHomepage && '142px'};
+  }
+
   @media (max-width: 550px) {
-    top: -38px;
-    margin-bottom: -14px;
+    top: ${({ isOnHomepage }) => isOnHomepage && '-38px'};
+    margin-bottom: ${({ isOnHomepage }) => isOnHomepage && '-14px'};
 
     img {
-      width: 133px;
+      width: ${({ isOnHomepage }) => (isOnHomepage ? '184px' : '197px')};
+      height: ${({ isOnHomepage }) => (isOnHomepage ? '144px' : '121px')};
     }
   }
 `;
 
 export const ImageFiller = styled.div`
-  width: 232px;
-  height: 232px;
+  width: ${({ isOnHomepage }) => (isOnHomepage ? '232px' : '214px')};
+  height: ${({ isOnHomepage }) => (isOnHomepage ? '232px' : '142px')};
 
   @media (max-width: 550px) {
     width: 133px;
     height: 133px;
+    width: ${({ isOnHomepage }) => (isOnHomepage ? '133px' : '214px')};
+    height: ${({ isOnHomepage }) => (isOnHomepage ? '133px' : '214px')};
   }
 `;
 
 export const Title = styled(Header5)`
-  margin: 0 24px;
+  margin: 20px 24px 0;
 
   height: 72px;
   color: ${(props) => props.theme.color.navy};
   overflow: hidden;
 
   @media (max-width: 550px) {
-    margin: 0 20px;
+    margin: 20px 20px 0;
+    height: 48px;
   }
 `;
 export const Paragraph = styled(ParagraphBody)`
@@ -83,7 +94,7 @@ export const Paragraph = styled(ParagraphBody)`
   color: ${(props) => props.theme.color.steel};
 
   @media (max-width: 550px) {
-    margin: 0 20px;
+    margin: 12px 20px 0;
 
     font-size: 14px;
     line-height: 28px;
