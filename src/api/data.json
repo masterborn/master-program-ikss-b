@@ -4235,7 +4235,7 @@
           "id": "3HI3H9eVkQY2150SUxmBj6",
           "type": "Asset",
           "createdAt": "2021-08-09T21:55:14.256Z",
-          "updatedAt": "2021-08-09T21:55:14.256Z",
+          "updatedAt": "2021-09-02T13:00:35.654Z",
           "environment": {
             "sys": {
               "id": "master",
@@ -4243,21 +4243,21 @@
               "linkType": "Environment"
             }
           },
-          "revision": 1,
+          "revision": 2,
           "locale": "en-US"
         },
         "fields": {
           "title": "Rectangle 22",
           "file": {
-            "url": "//images.ctfassets.net/n21y2i4hkj4h/3HI3H9eVkQY2150SUxmBj6/d3378172c274048da76eddfa49a15635/Rectangle_22.jpg",
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/3HI3H9eVkQY2150SUxmBj6/8a262dbb2dacb9a9041d836acf13c889/historia2.jpeg",
             "details": {
-              "size": 252640,
+              "size": 522947,
               "image": {
-                "width": 644,
-                "height": 426
+                "width": 2048,
+                "height": 1134
               }
             },
-            "fileName": "Rectangle 22.jpg",
+            "fileName": "historia2.jpeg",
             "contentType": "image/jpeg"
           }
         }
@@ -4319,7 +4319,7 @@
           "id": "3YhlwAFi5HscCiTO0N3a8A",
           "type": "Asset",
           "createdAt": "2021-08-09T21:59:03.966Z",
-          "updatedAt": "2021-08-09T21:59:03.966Z",
+          "updatedAt": "2021-09-02T12:59:27.639Z",
           "environment": {
             "sys": {
               "id": "master",
@@ -4327,21 +4327,21 @@
               "linkType": "Environment"
             }
           },
-          "revision": 1,
+          "revision": 2,
           "locale": "en-US"
         },
         "fields": {
           "title": "Rectangle 20 (1)",
           "file": {
-            "url": "//images.ctfassets.net/n21y2i4hkj4h/3YhlwAFi5HscCiTO0N3a8A/2159d8349eb62dc454856b63b0ecfbe7/Rectangle_20__1_.jpg",
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/3YhlwAFi5HscCiTO0N3a8A/bf7e27756b08dc37cc81dec0bf1718e1/zespol.jpeg",
             "details": {
-              "size": 737279,
+              "size": 561101,
               "image": {
-                "width": 1157,
-                "height": 666
+                "width": 2048,
+                "height": 1536
               }
             },
-            "fileName": "Rectangle 20 (1).jpg",
+            "fileName": "zespol.jpeg",
             "contentType": "image/jpeg"
           }
         }
@@ -5239,7 +5239,7 @@
           "id": "6nczxG404H2A11U7PneCil",
           "type": "Asset",
           "createdAt": "2021-08-09T21:54:29.494Z",
-          "updatedAt": "2021-08-09T21:54:29.494Z",
+          "updatedAt": "2021-09-02T13:00:19.738Z",
           "environment": {
             "sys": {
               "id": "master",
@@ -5247,21 +5247,21 @@
               "linkType": "Environment"
             }
           },
-          "revision": 1,
+          "revision": 2,
           "locale": "en-US"
         },
         "fields": {
           "title": "Rectangle 21",
           "file": {
-            "url": "//images.ctfassets.net/n21y2i4hkj4h/6nczxG404H2A11U7PneCil/e68e6ec737e52be082c3431ddd0646d9/Rectangle_21.jpg",
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/6nczxG404H2A11U7PneCil/af98aa1eb1b39dde63472a137d598fab/historia1.jpeg",
             "details": {
-              "size": 255196,
+              "size": 346103,
               "image": {
-                "width": 644,
-                "height": 513
+                "width": 1440,
+                "height": 1080
               }
             },
-            "fileName": "Rectangle 21.jpg",
+            "fileName": "historia1.jpeg",
             "contentType": "image/jpeg"
           }
         }
@@ -5365,7 +5365,7 @@
           "id": "7Ck74WLjBr86MJ29wZCO9R",
           "type": "Asset",
           "createdAt": "2021-08-09T21:47:18.960Z",
-          "updatedAt": "2021-08-09T21:47:18.960Z",
+          "updatedAt": "2021-09-02T12:55:44.556Z",
           "environment": {
             "sys": {
               "id": "master",
@@ -5373,21 +5373,21 @@
               "linkType": "Environment"
             }
           },
-          "revision": 1,
+          "revision": 2,
           "locale": "en-US"
         },
         "fields": {
           "title": "Rectangle 20",
           "file": {
-            "url": "//images.ctfassets.net/n21y2i4hkj4h/7Ck74WLjBr86MJ29wZCO9R/73553837c0b7f31009ef10cee0f79161/Rectangle_20.jpg",
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/7Ck74WLjBr86MJ29wZCO9R/83a79160c155fee3c6f2f36967e8e0fa/misja.jpeg",
             "details": {
-              "size": 237209,
+              "size": 266680,
               "image": {
-                "width": 644,
-                "height": 406
+                "width": 1440,
+                "height": 884
               }
             },
-            "fileName": "Rectangle 20.jpg",
+            "fileName": "misja.jpeg",
             "contentType": "image/jpeg"
           }
         }

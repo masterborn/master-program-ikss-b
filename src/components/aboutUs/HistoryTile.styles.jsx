@@ -22,6 +22,7 @@ export const HistoryRow = styled.div`
     margin-bottom: 32px;
   }
   @media (max-width: 550px) {
+    margin-bottom: 40px;
     flex-direction: column-reverse;
   }
 `;
@@ -31,7 +32,7 @@ export const HistoryTextContainer = styled.div`
 `;
 
 export const HistoryHeader = styled(Header2)`
-  margin: 29px 0 24px 0;
+  margin: 32px 0 16px 0;
 `;
 export const HistoryDescription = styled(ParagraphBody)``;
 
@@ -46,5 +47,6 @@ export const HistoryImage = styled.img`
   @media (max-width: 550px) {
     width: 100%;
     margin-left: 0;
+    border-radius: 0;
   }
 `;

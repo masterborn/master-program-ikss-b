@@ -11,10 +11,6 @@ import {
 
 export default function HistoryTile({ historyContent }) {
   const { title, image1, image2, text1: richText1, text2: richText2 } = historyContent;
-  image1.url =
-    'https://images.ctfassets.net/n21y2i4hkj4h/2fNMHQifNLIKiyar2rpAma/84f429b1608b20d50789fd26de48554f/image_2.jpg';
-  image2.url =
-    'https://images.ctfassets.net/n21y2i4hkj4h/2fNMHQifNLIKiyar2rpAma/84f429b1608b20d50789fd26de48554f/image_2.jpg';
   const Description1 = convertRichTextToReactComponent(HistoryDescription, richText1);
   const Description2 = convertRichTextToReactComponent(HistoryDescription, richText2);
 
