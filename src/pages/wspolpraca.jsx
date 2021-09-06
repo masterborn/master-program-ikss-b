@@ -5,6 +5,7 @@ import mapData, { sortByOrder } from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
 import PartnersSection from '@root/components/home/partnersList/PartnersSection';
 import CooperationValuesSection from '@root/components/cooperation/valuesSection';
+import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
 
 export default function Cooperation({ cooperationData: { common, partners, basicContent } }) {
   const {
@@ -25,6 +26,7 @@ export default function Cooperation({ cooperationData: { common, partners, basic
     'cooperation-tile-3': cooperationTile3,
     'cooperation-tile-4': cooperationTile4,
     'cooperation-tile-5': cooperationTile5,
+    'cooperation-bottom-cta': bottomCtaContent,
   } = basicContent;
   const socials = { socialFb, socialIn, socialIg, socialYt };
   const valuesTiles = [
@@ -44,8 +46,8 @@ export default function Cooperation({ cooperationData: { common, partners, basic
       tooltipText={tooltipText}
     >
       <CooperationValuesSection valuesTiles={valuesTiles} valuesTitle={valuesTitle} />
-
       <PartnersSection partners={orderedPartners} partnersText={partnersText} />
+      <BottomCta bottomCtaContent={bottomCtaContent} />
     </Layout>
   );
 }
@@ -86,6 +88,7 @@ Cooperation.propTypes = {
       'cooperation-tile-3': PropTypes.shape({}),
       'cooperation-tile-4': PropTypes.shape({}),
       'cooperation-tile-5': PropTypes.shape({}),
+      'cooperation-bottom-cta': PropTypes.shape({}),
     }),
   }).isRequired,
 };

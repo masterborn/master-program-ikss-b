@@ -9,11 +9,11 @@ export const BottomCtaContainer = styled.div`
   align-items: center;
   width: 635px;
   height: auto;
-  margin-bottom: 148px;
+  margin: 148px 0;
 
   @media (max-width: 550px) {
     height: auto;
-    margin-bottom: 103px;
+    margin: 103px 0;
     width: 100%;
     padding: 0 24px;
   }
