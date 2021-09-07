@@ -25,17 +25,24 @@ export default function BoardMemberTile({ data }) {
       <RoleText>{role}</RoleText>
 
       <ContactContainer>
-        <ContactLink href={`tel:${phoneNumber}`}>
-          <TelIcon /> {phoneNumber}
-        </ContactLink>
-        <ContactLink href={`mailto:${phoneNumber}`}>
-          <EmailIcon /> {email}
-        </ContactLink>
+        {phoneNumber && (
+          <ContactLink href={`tel:${phoneNumber}`}>
+            <TelIcon /> {phoneNumber}
+          </ContactLink>
+        )}
+
+        {email && (
+          <ContactLink href={`mailto:${email}`} bottom>
+            <EmailIcon /> {email}
+          </ContactLink>
+        )}
       </ContactContainer>
 
-      <LinkedInButton href={linkedInUrl}>
-        <SecondaryButton withIcon>LinkedIn</SecondaryButton>
-      </LinkedInButton>
+      {linkedInUrl && (
+        <LinkedInButton href={linkedInUrl}>
+          <SecondaryButton withIcon>LinkedIn</SecondaryButton>
+        </LinkedInButton>
+      )}
     </StyledBoardMemberTile>
   );
 }

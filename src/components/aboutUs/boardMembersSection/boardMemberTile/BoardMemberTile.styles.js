@@ -42,12 +42,13 @@ export const RoleText = styled(Header5)`
 `;
 export const ContactContainer = styled.div`
   margin-top: 12px;
+  height: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 export const ContactLink = styled.a`
-  margin-top: 12px;
+  margin-top: ${({ bottom }) => (bottom ? 'auto' : '0')};
   color: ${({ theme: { color } }) => color.ikssBlue};
   font-weight: bold;
   text-decoration: none;
