@@ -35,4 +35,9 @@ TopSection.propTypes = {
     }),
   }).isRequired,
   sectionId: PropTypes.string.isRequired,
+  isOnCooperation: PropTypes.bool,
+};
+
+TopSection.defaultProps = {
+  isOnCooperation: false,
 };
