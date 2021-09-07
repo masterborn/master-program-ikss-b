@@ -6,8 +6,9 @@ import Layout from '@root/components/layout';
 import MissionTile from '@root/components/aboutUs/MissionTile';
 import HistoryTile from '@root/components/aboutUs/HistoryTile';
 import TeamTile from '@root/components/aboutUs/TeamTile';
+import BoardMembersSection from '@root/components/aboutUs/boardMembersSection';
 
-export default function AboutUs({ aboutUsData: { common, basicContent } }) {
+export default function AboutUs({ aboutUsData: { common, basicContent, boardMembers } }) {
   const {
     'social-facebook': socialFb,
     'social-linkedin': socialIn,
@@ -21,8 +22,8 @@ export default function AboutUs({ aboutUsData: { common, basicContent } }) {
     'about-us-content-1': missionContent,
     'about-us-content-2': historyContent,
     'about-us-content-3': teamContent,
+    'about-us-board-members-text': boardMembersSectionText,
   } = basicContent;
-  console.log(basicContent);
   const socials = { socialFb, socialIn, socialIg, socialYt };
 
   return (
@@ -34,6 +35,10 @@ export default function AboutUs({ aboutUsData: { common, basicContent } }) {
     >
       <MissionTile missionContent={missionContent} />
       <HistoryTile historyContent={historyContent} />
+      <BoardMembersSection
+        boardMembersSectionText={boardMembersSectionText}
+        boardMembers={boardMembers}
+      />
       <TeamTile teamContent={teamContent} />
     </Layout>
   );
@@ -45,8 +50,9 @@ export async function getStaticProps() {
 
   const {
     basicContent: { common, 'about-us': basicContent },
+    boardMembers,
   } = pagesData;
-  const aboutUsData = { common, basicContent };
+  const aboutUsData = { common, basicContent, boardMembers };
 
   return {
     props: {
@@ -66,5 +72,12 @@ AboutUs.propTypes = {
       'social-youtube': PropTypes.shape({}),
       'footer-text': PropTypes.shape({}),
     }).isRequired,
+    basicContent: PropTypes.shape({
+      'about-us-content-1': PropTypes.shape({}),
+      'about-us-content-2': PropTypes.shape({}),
+      'about-us-content-3': PropTypes.shape({}),
+      'about-us-board-members-text': PropTypes.shape({}),
+    }).isRequired,
+    boardMembers: PropTypes.arrayOf(PropTypes.object).isRequired,
   }).isRequired,
 };

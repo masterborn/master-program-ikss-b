@@ -28,7 +28,7 @@ const StyledSecondaryButton = styled.button`
   background-color: ${(props) => props.theme.color.white};
   & > .icon {
     height: 1em;
-    padding-right: 0.8em;
+    margin-right: 6.5px;
     fill: ${(props) => props.theme.color.navy};
   }
   &:hover {

@@ -3,6 +3,7 @@ import { Header3 } from '../typography/headers';
 import { ParagraphBody } from '../typography/paragraphs';
 
 export const TeamTileContainer = styled.div`
+  margin-top: 164px;
   display: flex;
   flex-direction: column;
   align-items: center;
