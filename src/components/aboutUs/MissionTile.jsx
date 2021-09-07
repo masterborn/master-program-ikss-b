@@ -1,5 +1,7 @@
-import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import {
   MissionContainer,
   MissionDescription,
@@ -23,3 +25,14 @@ export default function MissionTile({ missionContent }) {
     </MissionContainer>
   );
 }
+
+MissionTile.propTypes = {
+  missionContent: PropTypes.shape({
+    title: PropTypes.string,
+    text1: PropTypes.shape({}),
+    image1: PropTypes.shape({
+      title: PropTypes.string,
+      url: PropTypes.string,
+    }),
+  }).isRequired,
+};

@@ -1,5 +1,7 @@
-import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { TeamDescription, TeamHeader, TeamImage, TeamTileContainer } from './TeamTile.styles';
 
 export default function TeamTile({ teamContent }) {
@@ -13,3 +15,14 @@ export default function TeamTile({ teamContent }) {
     </TeamTileContainer>
   );
 }
+
+TeamTile.propTypes = {
+  teamContent: PropTypes.shape({
+    title: PropTypes.string,
+    image1: PropTypes.shape({
+      title: PropTypes.string,
+      url: PropTypes.string,
+    }),
+    text1: PropTypes.shape({}),
+  }).isRequired,
+};

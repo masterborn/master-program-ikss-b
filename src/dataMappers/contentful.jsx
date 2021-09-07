@@ -83,6 +83,7 @@ export function convertRichTextToReactComponent(Component, richText) {
     },
     rednerInline: {
       // Make sure to prepare generic Hyperlink component
+      // eslint-disable-next-line react/prop-types
       [INLINES.HYPERLINK]: ({ data }, text) => <a href={data.uri}>{text}</a>,
     },
   };

@@ -22,7 +22,6 @@ export default function AboutUs({ aboutUsData: { common, basicContent } }) {
     'about-us-content-2': historyContent,
     'about-us-content-3': teamContent,
   } = basicContent;
-  console.log(basicContent);
   const socials = { socialFb, socialIn, socialIg, socialYt };
 
   return (
@@ -66,5 +65,10 @@ AboutUs.propTypes = {
       'social-youtube': PropTypes.shape({}),
       'footer-text': PropTypes.shape({}),
     }).isRequired,
+    basicContent: PropTypes.shape({
+      'about-us-content-1': PropTypes.shape({}),
+      'about-us-content-2': PropTypes.shape({}),
+      'about-us-content-3': PropTypes.shape({}),
+    }),
   }).isRequired,
 };
