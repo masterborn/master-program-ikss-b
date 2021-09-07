@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import {
   HistoryImage,
@@ -30,3 +31,19 @@ export default function HistoryTile({ historyContent }) {
     </HistoryTileContainer>
   );
 }
+
+HistoryTile.propTypes = {
+  historyContent: PropTypes.shape({
+    title: PropTypes.string,
+    image1: PropTypes.shape({
+      url: PropTypes.string,
+      title: PropTypes.string,
+    }),
+    image2: PropTypes.shape({
+      url: PropTypes.string,
+      title: PropTypes.string,
+    }),
+    text1: PropTypes.shape({}),
+    text2: PropTypes.shape({}),
+  }).isRequired,
+};
