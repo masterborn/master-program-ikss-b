@@ -7,7 +7,7 @@ export const TopSectionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: ${(props) => (props.isCooperationPage ? '583px' : 'auto')};
+  width: ${(props) => (props.isOnCooperationPage ? '583px' : 'auto')};
 
   height: auto;
   text-align: center;

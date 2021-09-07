@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
-import { useRouter } from 'next/dist/client/router';
 import {
   TopSectionContainer,
   TopSectionDescription,
@@ -9,14 +9,11 @@ import {
   TopSectionImage,
 } from './TopSection.styles';
 
-export default function TopSection({ topSectionContent, sectionId }) {
-  const router = useRouter();
-  const isCooperationPage = router.pathname === '/wspolpraca';
-
+export default function TopSection({ topSectionContent, sectionId, isOnCooperation = false }) {
   const { title: sectionTitle, image1: image, text1: richText } = topSectionContent;
   const Description = convertRichTextToReactComponent(TopSectionDescription, richText);
   return (
-    <TopSectionContainer isCooperationPage={isCooperationPage} id={sectionId}>
+    <TopSectionContainer isOnCooperationPage={isOnCooperation} id={sectionId}>
       {image && <TopSectionImage src={image.url} alt={image.title} />}
       {sectionTitle && <TopSectionHeader>{sectionTitle}</TopSectionHeader>}
       {richText && Description}

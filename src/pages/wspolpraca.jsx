@@ -12,7 +12,7 @@ export default function Cooperation({ cooperationData: { common, basicContent } 
 
   return (
     <Layout contactFormText={contactFormText} tooltipText={tooltipText}>
-      <TopSection topSectionContent={topSectionContent} sectionId="współpraca" />
+      <TopSection isOnCooperation topSectionContent={topSectionContent} sectionId="współpraca" />
     </Layout>
   );
 }
