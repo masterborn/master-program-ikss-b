@@ -28,10 +28,10 @@ export default function MissionTile({ missionContent }) {
 MissionTile.propTypes = {
   missionContent: PropTypes.shape({
     title: PropTypes.string,
-    image1: PropTypes.shape({
-      url: PropTypes.string,
-      title: PropTypes.string,
-    }),
     text1: PropTypes.shape({}),
+    image1: PropTypes.shape({
+      title: PropTypes.string,
+      url: PropTypes.string,
+    }),
   }).isRequired,
 };
