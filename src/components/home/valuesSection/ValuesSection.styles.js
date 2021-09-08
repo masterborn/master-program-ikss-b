@@ -14,7 +14,7 @@ export const StyledValuesSection = styled.section`
 `;
 
 export const ValuesSectionTitle = styled(Header3)`
-  color: ${(props) => props.theme.color.navy};
+  color: ${({ theme: { color } }) => color.navy};
   text-align: center;
 
   @media (max-width: 550px) {
@@ -28,7 +28,7 @@ export const ValuesSectionParagraph = styled(ParagraphBody)`
   width: 551px;
   margin-top: 32px;
   text-align: center;
-  color: ${(props) => props.theme.color.steel};
+  color: ${({ theme: { color } }) => color.steel};
   @media (max-width: 550px) {
     width: 300px;
     margin-top: 24px;
