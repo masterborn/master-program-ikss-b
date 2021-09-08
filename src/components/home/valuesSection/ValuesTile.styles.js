@@ -8,7 +8,7 @@ export const StyledTile = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin-top: 62px;
+  margin: 12px;
 
   text-align: center;
 
@@ -26,6 +26,7 @@ export const StyledTile = styled.div`
     min-width: 300px;
     max-width: 384px;
     height: ${({ isOnHomepage }) => (isOnHomepage ? '334px' : '350px')};
+    margin: 24px 0 0;
 
     display: block;
   }
