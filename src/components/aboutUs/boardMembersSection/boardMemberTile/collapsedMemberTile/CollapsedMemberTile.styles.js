@@ -64,4 +64,7 @@ export const NameText = styled(Header5)`
 
 export const RoleText = styled(ParagraphSmall)`
   color: ${({ theme: { color } }) => color.steel};
+
+  font-size: 14px;
+  line-height: 18px;
 `;
