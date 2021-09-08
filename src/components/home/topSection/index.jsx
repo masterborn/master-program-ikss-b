@@ -36,7 +36,7 @@ export default function TopSection({ topSectionContent, socials }) {
         <TextSection>
           <Header>{sectionHeader}</Header>
           {Description}
-          <SecondaryButton isBig={!isMobile} onClick={handleClick}>
+          <SecondaryButton large={!isMobile} onClick={handleClick}>
             Skontaktuj się
           </SecondaryButton>
         </TextSection>

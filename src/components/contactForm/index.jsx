@@ -150,12 +150,12 @@ export default function ContactForm({
         );
       case FORM_SENDING_STATUS.loading:
         return (
-          <SubmitButton isBig={!isMobile}>
+          <SubmitButton large={!isMobile}>
             <LoaderIcon intervalDuration={200} />
           </SubmitButton>
         );
       default:
-        return <SubmitButton isBig={!isMobile}>Wyślij wiadomość</SubmitButton>;
+        return <SubmitButton large={!isMobile}>Wyślij wiadomość</SubmitButton>;
     }
   };
 
