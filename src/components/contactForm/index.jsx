@@ -9,6 +9,7 @@ import {
 } from '@root/redux/actions/contactFormActions';
 import { sendEmailMockup } from '@root/clients/formcarry';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
+import { inputsValidationInitialState } from '@root/consts/contactForm';
 import validateInputs from './validation';
 import { XIcon, LoaderIcon } from '../icons/misc';
 import { Header3 } from '../typography/headers';
@@ -57,24 +58,10 @@ export default function ContactForm({
 
   const isMobile = useSelector((state) => state.isMobile);
 
-  const [validatedInputs, setValidatedInputs] = useState({
-    firstName: { isValid: false, isInvalid: false, message: '' },
-    lastName: { isValid: false, isInvalid: false, message: '' },
-    email: { isValid: false, isInvalid: false, message: '' },
-    title: { isValid: false, isInvalid: false, message: '' },
-    content: { isValid: false, isInvalid: false, message: '' },
-    termsCheckbox: { isInvalid: false },
-  });
+  const [validatedInputs, setValidatedInputs] = useState(inputsValidationInitialState);
 
   const resetValidatedInputs = () => {
-    setValidatedInputs({
-      firstName: { isValid: false, isInvalid: false, message: '' },
-      lastName: { isValid: false, isInvalid: false, message: '' },
-      email: { isValid: false, isInvalid: false, message: '' },
-      title: { isValid: false, isInvalid: false, message: '' },
-      content: { isValid: false, isInvalid: false, message: '' },
-      termsCheckbox: { isValid: false, isInvalid: false, message: '' },
-    });
+    setValidatedInputs(inputsValidationInitialState);
   };
 
   const formStatus = useSelector((state) => state.contactForm.status);
