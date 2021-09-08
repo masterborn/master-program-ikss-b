@@ -11,9 +11,9 @@ export const ContactFormContainer = styled.div`
   width: 748px;
   height: fit-content;
 
-  margin-top: ${(props) => !props.isModal && '180px'};
+  margin-top: ${({ isModal }) => !isModal && '180px'};
 
-  background-color: ${(props) => props.theme.color.white};
+  background-color: ${({ theme: { color } }) => color.white};
   box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
     1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
     0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
@@ -23,7 +23,7 @@ export const ContactFormContainer = styled.div`
   @media (max-width: 550px) {
     width: 80%;
     min-width: 300px;
-    margin-top: ${(props) => !props.isModal && '46px'};
+    margin-top: ${({ isModal }) => !isModal && '46px'};
   }
 
   @media (max-width: 420px) {
@@ -59,7 +59,7 @@ export const ContactFormContent = styled.div`
   overflow: auto;
 
   @media (max-width: 550px) {
-    padding-top: ${(props) => (props.isModal ? '56px' : '32px')};
+    padding-top: ${({ isModal }) => (isModal ? '56px' : '32px')};
     padding-bottom: 32px;
   }
 `;
@@ -68,11 +68,11 @@ export const TopSection = styled.div`
   width: 588px;
   text-align: center;
   h3 {
-    color: ${(props) => props.theme.color.navy};
+    color: ${({ theme: { color } }) => color.navy};
   }
   p {
     margin-top: 25px;
-    color: ${(props) => props.theme.color.steel};
+    color: ${({ theme: { color } }) => color.steel};
   }
 
   @media (max-width: 550px) {
@@ -95,7 +95,7 @@ export const Form = styled.form`
   margin-top: 37px;
 
   label > p {
-    color: ${(props) => props.theme.color.navy};
+    color: ${({ theme: { color } }) => color.navy};
   }
 
   @media (max-width: 550px) {
@@ -113,15 +113,15 @@ export const InputRow = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: ${(props) => props.spaceBetween && 'space-between'};
+  justify-content: ${({ spaceBetween }) => spaceBetween && 'space-between'};
 
   label {
     margin-top: 15px;
   }
 
   @media (max-width: 550px) {
-    margin-top: ${(props) => props.areTerms && '12px'};
-    flex-direction: ${(props) => !props.areTerms && 'column'};
+    margin-top: ${({ isTerms }) => isTerms && '12px'};
+    flex-direction: ${({ isTerms }) => !isTerms && 'column'};
 
     label {
       margin-top: 12px;
@@ -165,7 +165,7 @@ export const RODOContainer = styled.div`
 `;
 
 export const RODO = styled(ParagraphSmall)`
-  color: ${(props) => props.theme.color.steelTints.steel70};
+  color: ${({ theme: { color } }) => color.steelTints.steel70};
 
   @media (max-width: 550px) {
     width: 240px;
@@ -219,7 +219,7 @@ const StatusButton = styled.button`
 
   cursor: pointer;
 
-  color: ${(props) => props.theme.color.white};
+  color: ${({ theme: { color } }) => color.white};
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
@@ -236,10 +236,10 @@ const StatusButton = styled.button`
 `;
 
 export const SuccessButton = styled(StatusButton)`
-  background-color: ${(props) => props.theme.color.misc.successGreen};
+  background-color: ${({ theme: { color } }) => color.misc.successGreen};
 `;
 export const ErrorButton = styled(StatusButton)`
-  background-color: ${(props) => props.theme.color.misc.errorRed};
+  background-color: ${({ theme: { color } }) => color.misc.errorRed};
 `;
 
 export const ZIPCode = styled.input`

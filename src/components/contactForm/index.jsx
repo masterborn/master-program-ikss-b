@@ -253,7 +253,7 @@ export default function ContactForm({
             </label>
           </InputRow>
 
-          <InputRow areTerms>
+          <InputRow isTerms>
             <StyledCheckbox
               name="hasAgreedToTerms"
               onChange={handleInputChange}
