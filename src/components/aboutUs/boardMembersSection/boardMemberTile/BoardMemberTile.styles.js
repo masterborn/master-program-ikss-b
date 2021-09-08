@@ -66,7 +66,7 @@ export const StyledBoardMemberTile = styled.div`
   }
 `;
 
-export const Avatar = styled.div`
+export const BoardMemberTileAvatar = styled.div`
   width: 164px;
   height: 164px;
   margin: 32px auto 0;

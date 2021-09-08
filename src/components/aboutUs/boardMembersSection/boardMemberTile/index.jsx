@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { TelIcon, EmailIcon, ChevronIcon } from '@root/components/icons/misc';
 import SecondaryButton from '@root/components/buttons/secondaryButton';
-import CollapsedMemberTile from './collapsedMemberTile';
+import CollapsedBoardMemberTile from './collapsedBoardMemberTile';
 import {
   BoardMemberTileWrapper,
   ToggleButton,
   StyledBoardMemberTile,
-  Avatar,
+  BoardMemberTileAvatar,
   NameText,
   RoleText,
   ContactContainer,
@@ -33,7 +33,7 @@ export default function BoardMemberTile({ data, isMobile }) {
             onClick={toggleTileIsOpened}
             isTileOpened={isTileOpened}
           />
-          <CollapsedMemberTile
+          <CollapsedBoardMemberTile
             data={closedBoardMemberTileData}
             isTileOpened={isTileOpened}
             onClick={toggleTileIsOpened}
@@ -41,9 +41,9 @@ export default function BoardMemberTile({ data, isMobile }) {
         </>
       )}
       <StyledBoardMemberTile isTileOpened={isTileOpened}>
-        <Avatar>
+        <BoardMemberTileAvatar>
           {imageUrl && <Image src={`https://${imageUrl}`} width={164} height={164} alt={name} />}
-        </Avatar>
+        </BoardMemberTileAvatar>
         <NameText>{name}</NameText>
         <RoleText>{role}</RoleText>
 

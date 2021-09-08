@@ -2,29 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import {
-  StyledCollapsedMemberTile,
-  Avatar,
-  TextContent,
+  StyledCollapsedBoardMemberTile,
+  BoardMemberTileAvatar,
+  BoardMemberTileTextContent,
   NameText,
   RoleText,
-} from './CollapsedMemberTile.styles';
+} from './CollapsedBoardMemberTile.styles';
 
-export default function CollapsedMemberTile({ data, onClick, isTileOpened }) {
+export default function CollapsedBoardMemberTile({ data, onClick, isTileOpened }) {
   const { imageUrl, name, role } = data;
   return (
-    <StyledCollapsedMemberTile onClick={onClick} isTileOpened={isTileOpened}>
-      <Avatar>
+    <StyledCollapsedBoardMemberTile onClick={onClick} isTileOpened={isTileOpened}>
+      <BoardMemberTileAvatar>
         {imageUrl && <Image src={`https://${imageUrl}`} width={80} height={80} alt={name} />}
-      </Avatar>
-      <TextContent>
+      </BoardMemberTileAvatar>
+      <BoardMemberTileTextContent>
         <NameText>{name}</NameText>
         <RoleText>{role}</RoleText>
-      </TextContent>
-    </StyledCollapsedMemberTile>
+      </BoardMemberTileTextContent>
+    </StyledCollapsedBoardMemberTile>
   );
 }
 
-CollapsedMemberTile.propTypes = {
+CollapsedBoardMemberTile.propTypes = {
   data: PropTypes.shape({
     imageUrl: PropTypes.string,
     name: PropTypes.string,

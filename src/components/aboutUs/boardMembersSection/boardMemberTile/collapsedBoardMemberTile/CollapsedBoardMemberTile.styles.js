@@ -3,7 +3,7 @@ import { Header5 } from '@root/components/typography/headers';
 import { ParagraphSmall } from '@root/components/typography/paragraphs';
 import toggleTileVisibility from '../TileAnimations.styles';
 
-export const StyledCollapsedMemberTile = styled.button`
+export const StyledCollapsedBoardMemberTile = styled.button`
   width: 90%;
   max-width: 384px;
   min-width: 252px;
@@ -26,7 +26,7 @@ export const StyledCollapsedMemberTile = styled.button`
   ${({ isTileOpened }) => toggleTileVisibility(!isTileOpened, 'max-content', '23px 0')}
 `;
 
-export const Avatar = styled.div`
+export const BoardMemberTileAvatar = styled.div`
   width: 80px;
   height: 80px;
   margin-left: 20px;
@@ -44,7 +44,7 @@ export const Avatar = styled.div`
   }
 `;
 
-export const TextContent = styled.div`
+export const BoardMemberTileTextContent = styled.div`
   width: 130px;
   margin-left: 24px;
   display: flex;

@@ -12,6 +12,8 @@ export const TeamTileContainer = styled.div`
 
   @media (max-width: 550px) {
     width: 100%;
+    margin-top: 80px;
+
     padding: 0 24px;
   }
 `;
