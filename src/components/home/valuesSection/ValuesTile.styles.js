@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Header5 } from '@root/components/typography/headers';
 import { ParagraphBody } from '@root/components/typography/paragraphs';
 
-export const StyledTile = styled.div`
+export const StyledValueTile = styled.div`
   width: 384px;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ export const StyledTile = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const ValueTileContent = styled.div`
   position: relative;
   top: -62px;
 
@@ -49,7 +49,7 @@ export const Content = styled.div`
   }
 `;
 
-export const ImageFiller = styled.div`
+export const ValueTileImageFiller = styled.div`
   width: 232px;
   height: 232px;
 
@@ -59,7 +59,7 @@ export const ImageFiller = styled.div`
   }
 `;
 
-export const Title = styled(Header5)`
+export const ValueTileTitle = styled(Header5)`
   margin: 0 24px;
 
   height: 72px;
@@ -70,7 +70,7 @@ export const Title = styled(Header5)`
     margin: 0 20px;
   }
 `;
-export const Paragraph = styled(ParagraphBody)`
+export const ValueTileParagraph = styled(ParagraphBody)`
   margin: 0 24px;
 
   display: -webkit-box;

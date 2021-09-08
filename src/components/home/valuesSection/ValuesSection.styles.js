@@ -13,7 +13,7 @@ export const StyledValuesSection = styled.section`
   }
 `;
 
-export const Title = styled(Header3)`
+export const ValuesSectionTitle = styled(Header3)`
   color: ${(props) => props.theme.color.navy};
   text-align: center;
 
@@ -24,7 +24,7 @@ export const Title = styled(Header3)`
   }
 `;
 
-export const Paragraph = styled(ParagraphBody)`
+export const ValuesSectionParagraph = styled(ParagraphBody)`
   width: 551px;
   margin-top: 32px;
   text-align: center;
@@ -35,7 +35,7 @@ export const Paragraph = styled(ParagraphBody)`
   }
 `;
 
-export const TilesContainer = styled.div`
+export const ValuesSectionTilesContainer = styled.div`
   max-width: 1200px;
   width: 100%;
   margin-top: 40px;

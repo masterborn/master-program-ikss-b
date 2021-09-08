@@ -3,25 +3,30 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import ValuesTilesSlider from './valuesTilesSlider';
-import { StyledValuesSection, Title, Paragraph, TilesContainer } from './ValuesSection.styles';
+import {
+  StyledValuesSection,
+  ValuesSectionTitle,
+  ValuesSectionParagraph,
+  ValuesSectionTilesContainer,
+} from './ValuesSection.styles';
 import Tile from './ValuesTile';
 
 export default function ValuesSection({ valuesText, valuesTiles }) {
   const { title, text1: richText } = valuesText;
   const isMobile = useSelector((state) => state.isMobile);
-  const Body = convertRichTextToReactComponent(Paragraph, richText);
+  const Body = convertRichTextToReactComponent(ValuesSectionParagraph, richText);
   return (
     <StyledValuesSection id="values-section">
-      <Title>{title}</Title>
+      <ValuesSectionTitle>{title}</ValuesSectionTitle>
       {Body}
       {isMobile ? (
         <ValuesTilesSlider valuesTiles={valuesTiles} />
       ) : (
-        <TilesContainer>
+        <ValuesSectionTilesContainer>
           {valuesTiles.map((val) => (
             <Tile data={val} key={val.title} />
           ))}
-        </TilesContainer>
+        </ValuesSectionTilesContainer>
       )}
     </StyledValuesSection>
   );
