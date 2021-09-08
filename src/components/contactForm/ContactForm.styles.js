@@ -11,7 +11,7 @@ export const ContactFormContainer = styled.div`
   width: 748px;
   height: fit-content;
 
-  margin-top: ${({ isModal }) => !isModal && '180px'};
+  margin-top: ${({ isInModal }) => !isInModal && '180px'};
 
   background-color: ${({ theme: { color } }) => color.white};
   box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
@@ -23,7 +23,7 @@ export const ContactFormContainer = styled.div`
   @media (max-width: 550px) {
     width: 80%;
     min-width: 300px;
-    margin-top: ${({ isModal }) => !isModal && '46px'};
+    margin-top: ${({ isInModal }) => !isInModal && '46px'};
   }
 
   @media (max-width: 420px) {
@@ -59,7 +59,7 @@ export const ContactFormContent = styled.div`
   overflow: auto;
 
   @media (max-width: 550px) {
-    padding-top: ${({ isModal }) => (isModal ? '56px' : '32px')};
+    padding-top: ${({ isInModal }) => (isInModal ? '56px' : '32px')};
     padding-bottom: 32px;
   }
 `;

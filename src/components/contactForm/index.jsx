@@ -47,7 +47,7 @@ export default function ContactForm({
   className,
   contactFormText,
   tooltipText,
-  isModal,
+  isInModal,
   closeModal,
 }) {
   const { title, text1: text } = contactFormText;
@@ -126,13 +126,13 @@ export default function ContactForm({
     } else if (formStatus === FORM_SENDING_STATUS.success) {
       dispatch(changeFormSendingStatus(FORM_SENDING_STATUS.initial));
 
-      if (isModal) {
+      if (isInModal) {
         closeModal();
       }
     }
   };
 
-  const submitButton = () => {
+  const renderSubmitButton = () => {
     switch (formStatus) {
       case FORM_SENDING_STATUS.success:
         return (
@@ -162,9 +162,9 @@ export default function ContactForm({
   const Body = convertRichTextToReactComponent(ParagraphBody, text);
 
   return (
-    <ContactFormContainer className={className} id="contact-form" isModal={isModal}>
-      <ContactFormContent isModal={isModal}>
-        {isModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
+    <ContactFormContainer className={className} id="contact-form" isInModal={isInModal}>
+      <ContactFormContent isInModal={isInModal}>
+        {isInModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
           <Header3>{title}</Header3>
@@ -285,7 +285,7 @@ export default function ContactForm({
             value={formValues._gotcha || ''}
             onChange={handleInputChange}
           />
-          {submitButton()}
+          {renderSubmitButton()}
         </Form>
       </ContactFormContent>
     </ContactFormContainer>
@@ -299,11 +299,11 @@ ContactForm.propTypes = {
     text1: PropTypes.shape({}),
   }).isRequired,
   tooltipText: PropTypes.shape({}).isRequired,
-  isModal: PropTypes.bool,
+  isInModal: PropTypes.bool,
   closeModal: PropTypes.func,
 };
 ContactForm.defaultProps = {
   className: '',
-  isModal: false,
+  isInModal: false,
   closeModal: () => {},
 };
