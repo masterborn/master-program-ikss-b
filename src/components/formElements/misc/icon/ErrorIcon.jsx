@@ -5,17 +5,11 @@ import ErrorTooltip from '../errorTooltip';
 
 export default function ErrorIcon({ className, tooltipText }) {
   const [showTooltip, setShowTooltip] = useState(false);
-  const node = useRef();
+  const nodeRef = useRef();
 
   const toggleShowTooltip = (show) => setShowTooltip(show);
 
-  const handleClickOnComponent = ({ target }) => {
-    if (node.current.contains(target)) {
-      setShowTooltip(true);
-    } else {
-      setShowTooltip(false);
-    }
-  };
+  const handleClickOnComponent = ({ target }) => setShowTooltip(nodeRef.current.contains(target));
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOnComponent);
@@ -26,7 +20,7 @@ export default function ErrorIcon({ className, tooltipText }) {
   }, []);
 
   return (
-    <StyledErrorContainer className={className} ref={node}>
+    <StyledErrorContainer className={className} ref={nodeRef}>
       <ErrorTooltip tooltipText={tooltipText} show={showTooltip} />
       <StyledErrorIcon
         onMouseEnter={() => toggleShowTooltip(true)}
