@@ -6,7 +6,7 @@ import toggleTileVisibility from '../TileAnimations.styles';
 export const StyledCollapsedBoardMemberTile = styled.button`
   width: 90%;
   max-width: 384px;
-  min-width: 252px;
+  min-width: 300px;
   margin: 0;
 
   display: flex;

@@ -24,6 +24,10 @@ const toggleButtonOnCollapsedTile = css`
   right: 40px;
 
   transform: translateY(-50%);
+
+  @media (max-width: 320px) {
+    right: 20px;
+  }
 `;
 const toggleButtonOnExpandedTile = css`
   position: absolute;
@@ -31,6 +35,10 @@ const toggleButtonOnExpandedTile = css`
   right: 40px;
 
   transform: rotate(180deg);
+
+  @media (max-width: 320px) {
+    right: 20px;
+  }
 `;
 
 export const ToggleButton = styled(IconButton)`
@@ -57,7 +65,7 @@ export const StyledBoardMemberTile = styled.div`
   @media (max-width: 550px) {
     width: 90%;
     max-width: 384px;
-    min-width: 252px;
+    min-width: 300px;
 
     opacity: 1;
     overflow: hidden;
