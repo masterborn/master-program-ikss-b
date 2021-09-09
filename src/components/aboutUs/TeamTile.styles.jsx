@@ -3,7 +3,7 @@ import { Header3 } from '../typography/headers';
 import { ParagraphBody } from '../typography/paragraphs';
 
 export const TeamTileContainer = styled.div`
-  margin-top: 164px;
+  margin: 164px 0 148px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@ export const TeamTileContainer = styled.div`
 
   @media (max-width: 550px) {
     width: 100%;
-    margin-top: 80px;
+    margin: 80px 0 130px;
 
     padding: 0 24px;
   }
@@ -40,6 +40,7 @@ export const TeamImage = styled.img`
   height: auto;
   max-height: 505px;
   margin-top: 64px;
+  border-radius: 16px;
   @media (max-width: 550px) {
     min-height: 150px;
     height: 50vw;
