@@ -7,6 +7,7 @@ import MissionTile from '@root/components/aboutUs/MissionTile';
 import HistoryTile from '@root/components/aboutUs/HistoryTile';
 import TeamTile from '@root/components/aboutUs/TeamTile';
 import BoardMembersSection from '@root/components/aboutUs/boardMembersSection';
+import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
 
 export default function AboutUs({ aboutUsData: { common, basicContent, boardMembers } }) {
   const {
@@ -23,9 +24,9 @@ export default function AboutUs({ aboutUsData: { common, basicContent, boardMemb
     'about-us-content-2': historyContent,
     'about-us-content-3': teamContent,
     'about-us-board-members-text': boardMembersSectionText,
+    'about-us-bottom-cta': bottomCtaContent,
   } = basicContent;
   const socials = { socialFb, socialIn, socialIg, socialYt };
-
   return (
     <Layout
       socials={socials}
@@ -40,6 +41,7 @@ export default function AboutUs({ aboutUsData: { common, basicContent, boardMemb
         boardMembers={boardMembers}
       />
       <TeamTile teamContent={teamContent} />
+      <BottomCta bottomCtaContent={bottomCtaContent} />
     </Layout>
   );
 }
@@ -77,6 +79,7 @@ AboutUs.propTypes = {
       'about-us-content-2': PropTypes.shape({}),
       'about-us-content-3': PropTypes.shape({}),
       'about-us-board-members-text': PropTypes.shape({}),
+      'about-us-bottom-cta': PropTypes.shape({}),
     }).isRequired,
     boardMembers: PropTypes.arrayOf(PropTypes.object).isRequired,
   }).isRequired,
