@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import {
   StyledFooter,
+  FooterWrapper,
   Filler,
   StyledSrollUpButton,
   Centered,
@@ -27,30 +28,31 @@ export default function Footer({ socials, footerText, paths, isHomepage }) {
   return (
     <StyledFooter>
       {isHomepage && <Filler isHomepage={isHomepage} />}
+      <FooterWrapper>
+        <StyledSrollUpButton isHomepage={isHomepage} onClick={scrollUp} />
 
-      <StyledSrollUpButton isHomepage={isHomepage} onClick={scrollUp} />
+        <Centered>
+          <LinksContainer>
+            {paths.map(({ name, path }) => (
+              <Link href={path} key={path}>
+                <Label>{name}</Label>
+              </Link>
+            ))}
+          </LinksContainer>
+          <StyledSocials socialsLinks={socials} showRegular />
 
-      <Centered>
-        <LinksContainer>
-          {paths.map(({ name, path }) => (
-            <Link href={path} key={path}>
-              <Label>{name}</Label>
-            </Link>
-          ))}
-        </LinksContainer>
-        <StyledSocials socialsLinks={socials} showRegular />
+          <Link href="/" passHref>
+            <a href className="logo">
+              <StyledLogo />
+            </a>
+          </Link>
 
-        <Link href="/" passHref>
-          <a href className="logo">
-            <StyledLogo />
-          </a>
-        </Link>
-
-        <Paragraph>
-          {title} <br />
-          Made with <LoveIcon /> by <MBLink href={MASTERBORN_LINK}>MasterBorn Software</MBLink>
-        </Paragraph>
-      </Centered>
+          <Paragraph>
+            {title} <br />
+            Made with <LoveIcon /> by <MBLink href={MASTERBORN_LINK}>MasterBorn Software</MBLink>
+          </Paragraph>
+        </Centered>
+      </FooterWrapper>
     </StyledFooter>
   );
 }
