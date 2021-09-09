@@ -22,11 +22,11 @@ export default function HistoryTile({ historyContent }) {
           <HistoryHeader>{title}</HistoryHeader>
           {Description1}
         </HistoryTextContainer>
-        <HistoryImage src={image1.url} alt={image1.title} />
+        {image1 && <HistoryImage src={image1.url} alt={image1.title} />}
       </HistoryRow>
       <HistoryRow>
         <HistoryTextContainer>{Description2}</HistoryTextContainer>
-        <HistoryImage src={image2.url} alt={image2.title} />
+        {image2 && <HistoryImage src={image2.url} alt={image2.title} />}
       </HistoryRow>
     </HistoryTileContainer>
   );

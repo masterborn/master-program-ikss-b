@@ -10,7 +10,7 @@ export default function TeamTile({ teamContent }) {
     <TeamTileContainer>
       <TeamHeader>{title}</TeamHeader>
       {Description}
-      <TeamImage src={image.url} alt={image.title} />
+      {image && <TeamImage src={image.url} alt={image.title} />}
     </TeamTileContainer>
   );
 }
