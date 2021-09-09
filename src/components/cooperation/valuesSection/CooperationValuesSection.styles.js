@@ -39,4 +39,8 @@ export const CooperationValuesTilesContainer = styled.div`
 
 export const CooperationValuesTile = styled(ValuesTile)`
   margin: 50px 12px 12px;
+
+  @media (max-width: 550px) {
+    margin: 12px 0;
+  }
 `;
