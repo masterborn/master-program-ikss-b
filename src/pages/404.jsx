@@ -13,6 +13,22 @@ import {
 } from '@root/components/404Page/custom404.styles';
 import Link from 'next/link';
 
+export async function getStaticProps() {
+  const resJson = await getPagesDataMockup();
+  const pagesData = mapData(resJson);
+
+  const {
+    basicContent: { common },
+  } = pagesData;
+  const custom404Data = { common };
+
+  return {
+    props: {
+      custom404Data,
+    },
+  };
+}
+
 export default function Custom404({ custom404Data: { common } }) {
   const {
     'social-facebook': socialFb,
@@ -48,22 +64,6 @@ export default function Custom404({ custom404Data: { common } }) {
       </ErrorPageContainer>
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const resJson = await getPagesDataMockup();
-  const pagesData = mapData(resJson);
-
-  const {
-    basicContent: { common },
-  } = pagesData;
-  const custom404Data = { common };
-
-  return {
-    props: {
-      custom404Data,
-    },
-  };
 }
 
 Custom404.propTypes = {

@@ -9,6 +9,24 @@ import TopSection from '../components/home/topSection';
 import ValuesSection from '../components/home/valuesSection';
 import ContactForm from '../components/contactForm';
 
+export async function getStaticProps() {
+  const resJson = await getPagesDataMockup();
+  const pagesData = mapData(resJson);
+
+  const {
+    basicContent: { homepage: basicContent, common },
+    projects,
+    partnerLogos: partners,
+  } = pagesData;
+  const homepageData = { basicContent, common, projects, partners };
+
+  return {
+    props: {
+      homepageData,
+    },
+  };
+}
+
 export default function Homepage({ homepageData: { partners, basicContent, common, projects } }) {
   const {
     'homepage-partners-text': partnersText,
@@ -46,23 +64,7 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
   );
 }
 
-export async function getStaticProps() {
-  const resJson = await getPagesDataMockup();
-  const pagesData = mapData(resJson);
 
-  const {
-    basicContent: { homepage: basicContent, common },
-    projects,
-    partnerLogos: partners,
-  } = pagesData;
-  const homepageData = { basicContent, common, projects, partners };
-
-  return {
-    props: {
-      homepageData,
-    },
-  };
-}
 
 Homepage.propTypes = {
   homepageData: PropTypes.shape({
