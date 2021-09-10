@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VideoFrame from './ProjectVideo.styles';
 
-export default function ProjectVideo({ url, isOnGrid = false }) {
+export default function ProjectVideo({ url, isOnGrid }) {
   const videoId = url.match(
     /http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-_]*)(&(amp;)?‌)?/,
   )[1];
