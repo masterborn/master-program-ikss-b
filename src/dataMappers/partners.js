@@ -1,4 +1,4 @@
-const { sortByOrder } = require('./contentful');
+import { sortByOrder } from './contentful';
 
 export default function sortHomepagePartners(partners) {
   const homepagePartners = partners.filter(
