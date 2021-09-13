@@ -1,28 +1,23 @@
-import styled from 'styled-components';
+import { css } from 'styled-components';
 
-export const ParagraphBody = styled.p`
-  color: ${(props) => props.theme.color.steel};
-  font-size: ${(props) => props.theme.fontSize.body};
-  font-weight: ${(props) => props.theme.fontWeight.body};
-  line-height: ${(props) => props.theme.lineHeight.body};
-  letter-spacing: ${(props) => props.theme.letterSpacing};
-  margin: ${(props) => props.margin};
+export const ParagraphBody = css`
+  color: ${({ theme: { color } }) => color.steel};
+  font-size: ${({ theme: { fontSize } }) => fontSize.body};
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.body};
+  line-height: ${({ theme: { lineHeight } }) => lineHeight.body};
+  letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing};
+  margin: ${({ margin }) => margin};
 `;
-ParagraphBody.defaultProps = {
-  margin: 0,
-};
 
-export const ParagraphSmall = styled.p`
-  color: ${(props) => props.theme.color.steel};
-  font-size: ${(props) => props.theme.fontSize.bodySmall};
-  font-weight: ${(props) => props.theme.fontWeight.bodySmall};
-  line-height: ${(props) => props.theme.lineHeight.bodySmall};
-  letter-spacing: ${(props) => props.theme.letterSpacing};
-  margin: ${(props) => props.margin};
+export const ParagraphSmall = css`
+  color: ${({ theme: { color } }) => color.steel};
+  font-size: ${({ theme: { fontSize } }) => fontSize.body};
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bodySmall};
+  line-height: ${({ theme: { lineHeight } }) => lineHeight.bodySmall};
+  letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing};
+  margin: ${({ margin }) => margin};
 `;
-ParagraphSmall.defaultProps = {
-  margin: 0,
-};
+
 const paragraphs = {
   ParagraphBody,
   ParagraphSmall,
