@@ -12,8 +12,9 @@ export async function getStaticProps() {
 
   const {
     basicContent: { projects: basicContent, common },
+    projects,
   } = pagesData;
-  const projectsData = { basicContent, common };
+  const projectsData = { basicContent, common, projects };
 
   return {
     props: {

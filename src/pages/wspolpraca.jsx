@@ -12,10 +12,10 @@ export async function getStaticProps() {
   const pagesData = mapData(resJson);
 
   const {
-    basicContent: { common },
+    basicContent: { common, cooperation: basicContent },
+    partnerLogos: partners,
   } = pagesData;
-  const cooperationData = { common };
-
+  const cooperationData = { partners, common, basicContent };
   return {
     props: {
       cooperationData,
@@ -61,6 +61,7 @@ export default function Cooperation({ cooperationData: { common, partners, basic
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
+      <TopSection />
       <CooperationValuesSection valuesTiles={valuesTiles} valuesTitle={valuesTitle} />
       <PartnersSection partners={orderedPartners} partnersText={partnersText} />
       <BottomCta bottomCtaContent={bottomCtaContent} />
