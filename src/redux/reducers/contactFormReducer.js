@@ -1,3 +1,5 @@
+import { inputsInitialState as inputsValues } from '@root/consts/contactForm';
+
 import {
   CHANGE_INPUT_VALUES,
   RESET_INPUT_VALUES,
@@ -5,15 +7,7 @@ import {
 } from '../actions/contactFormActions';
 
 const initialState = {
-  inputsValues: {
-    firstName: '',
-    lastName: '',
-    email: '',
-    title: '',
-    content: '',
-    hasAgreedToTerms: false,
-    _gotcha: '',
-  },
+  inputsValues,
   status: 'initial',
 };
 
@@ -32,15 +26,7 @@ const contactFormReducer = (state = initialState, action) => {
     case RESET_INPUT_VALUES:
       return {
         ...state,
-        inputsValues: {
-          firstName: '',
-          lastName: '',
-          email: '',
-          title: '',
-          content: '',
-          hasAgreedToTerms: false,
-          _gotcha: '',
-        },
+        inputsValues,
       };
     case CHANGE_FORM_SENDING_STATUS:
       return {

@@ -17,7 +17,7 @@ export default function ContactModal({ contactFormText, tooltipText }) {
       <StyledContactForm
         contactFormText={contactFormText}
         tooltipText={tooltipText}
-        isModal
+        isInModal
         closeModal={closeContactModal}
       />
     </ContactModalContainer>

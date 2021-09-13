@@ -43,7 +43,7 @@ export default function ProjectsSection({ projects }) {
       <ProjectTile showOnHomepage project={currentProject} />
       <Link passHref href="/projekty">
         <a href>
-          <SecondaryButton isBig>Zobacz wszystkie projekty</SecondaryButton>
+          <SecondaryButton large>Zobacz wszystkie projekty</SecondaryButton>
         </a>
       </Link>
     </ProjectSection>

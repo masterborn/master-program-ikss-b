@@ -34,7 +34,7 @@ export default function HomepageHero({ homepageHeroContent, socials }) {
         <TextSection>
           <Header>{sectionHeader}</Header>
           {Description}
-          <SecondaryButton isBig={!isMobile} onClick={handleClick}>
+          <SecondaryButton large={!isMobile} onClick={handleClick}>
             Skontaktuj się
           </SecondaryButton>
         </TextSection>

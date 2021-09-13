@@ -9,7 +9,7 @@ export const ContactModalContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: ${(props) => props.theme.color.navy}99;
+  background-color: ${({ theme: { color } }) => color.navy}99;
 `;
 
 export const StyledContactForm = styled(ContactForm)`
