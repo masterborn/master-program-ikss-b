@@ -3,16 +3,21 @@ import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
-
+import MissionTile from '@root/components/aboutUs/MissionTile';
+import HistoryTile from '@root/components/aboutUs/HistoryTile';
+import TeamTile from '@root/components/aboutUs/TeamTile';
+import BoardMembersSection from '@root/components/aboutUs/boardMembersSection';
+import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
   const pagesData = mapData(resJson);
 
   const {
-    basicContent: { common },
+    basicContent: { common, 'about-us': basicContent },
+    boardMembers,
   } = pagesData;
-  const aboutUsData = { common };
+  const aboutUsData = { common, basicContent, boardMembers };
 
   return {
     props: {
@@ -21,7 +26,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function AboutUs({ aboutUsData: { common } }) {
+export default function AboutUs({ aboutUsData: { common, basicContent, boardMembers } }) {
   const {
     'social-facebook': socialFb,
     'social-linkedin': socialIn,
@@ -31,8 +36,14 @@ export default function AboutUs({ aboutUsData: { common } }) {
     'contact-form-tooltip': tooltipText,
     'footer-text': footerText,
   } = common;
+  const {
+    'about-us-content-1': missionContent,
+    'about-us-content-2': historyContent,
+    'about-us-content-3': teamContent,
+    'about-us-board-members-text': boardMembersSectionText,
+    'about-us-bottom-cta': bottomCtaContent,
+  } = basicContent;
   const socials = { socialFb, socialIn, socialIg, socialYt };
-
   return (
     <Layout
       socials={socials}
@@ -40,11 +51,17 @@ export default function AboutUs({ aboutUsData: { common } }) {
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
-      About us
+      <MissionTile missionContent={missionContent} />
+      <HistoryTile historyContent={historyContent} />
+      <BoardMembersSection
+        boardMembersSectionText={boardMembersSectionText}
+        boardMembers={boardMembers}
+      />
+      <TeamTile teamContent={teamContent} />
+      <BottomCta bottomCtaContent={bottomCtaContent} />
     </Layout>
   );
 }
-
 
 AboutUs.propTypes = {
   aboutUsData: PropTypes.shape({
@@ -57,5 +74,13 @@ AboutUs.propTypes = {
       'social-youtube': PropTypes.shape({}),
       'footer-text': PropTypes.shape({}),
     }).isRequired,
+    basicContent: PropTypes.shape({
+      'about-us-content-1': PropTypes.shape({}),
+      'about-us-content-2': PropTypes.shape({}),
+      'about-us-content-3': PropTypes.shape({}),
+      'about-us-board-members-text': PropTypes.shape({}),
+      'about-us-bottom-cta': PropTypes.shape({}),
+    }).isRequired,
+    boardMembers: PropTypes.arrayOf(PropTypes.object).isRequired,
   }).isRequired,
 };
