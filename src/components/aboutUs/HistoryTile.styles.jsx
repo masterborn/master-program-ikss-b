@@ -9,6 +9,7 @@ export const HistoryTileContainer = styled.div`
   margin-top: 148px;
   flex-wrap: wrap;
   @media (max-width: 550px) {
+    margin-top: 80px;
     width: 100%;
     padding: 0 24px;
   }
@@ -47,6 +48,6 @@ export const HistoryImage = styled.img`
   @media (max-width: 550px) {
     width: 100%;
     margin-left: 0;
-    border-radius: 0;
+    border-radius: 8px;
   }
 `;

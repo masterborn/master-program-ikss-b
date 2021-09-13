@@ -21,8 +21,10 @@ export const MissionImage = styled.img`
   border-radius: 16px;
   width: 483px;
   height: auto;
+  border-radius: 16px;
   @media (max-width: 550px) {
     margin-right: 0;
+    border-radius: 8px;
     width: 100%;
   }
 `;
