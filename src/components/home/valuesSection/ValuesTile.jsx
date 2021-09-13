@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
-import { StyledTile, Content, ImageFiller, Title, Paragraph } from './ValuesTile.styles';
+import {
+  StyledValueTile,
+  ValueTileContent,
+  ValueTileImageFiller,
+  ValueTileParagraph,
+  ValueTileTitle,
+} from './ValuesTile.styles';
 
 export default function ValuesTile({ className, data, isOnHomepage }) {
   const {
@@ -10,24 +16,20 @@ export default function ValuesTile({ className, data, isOnHomepage }) {
     text1: richText,
     image1: { url: imageUrl },
   } = data;
-
-  if (!imageUrl && !title && !richText) return null;
-
-  const Body = convertRichTextToReactComponent(Paragraph, richText);
-
+  const Body = convertRichTextToReactComponent(ValueTileParagraph, richText);
   return (
-    <StyledTile className={className}>
-      <Content isOnHomepage={isOnHomepage}>
+    <StyledValueTile>
+      <ValueTileContent>
         {imageUrl ? (
           <Image src={`https:${imageUrl}`} height={232} width={232} alt={title} />
         ) : (
-          <ImageFiller />
+          <ValueTileImageFiller />
         )}
 
-        <Title>{title}</Title>
+        <ValueTileTitle>{title}</ValueTileTitle>
         {Body}
-      </Content>
-    </StyledTile>
+      </ValueTileContent>
+    </StyledValueTile>
   );
 }
 

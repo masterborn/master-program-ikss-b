@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Header5 } from '@root/components/typography/headers';
 import { ParagraphBody } from '@root/components/typography/paragraphs';
 
-export const StyledTile = styled.div`
+export const StyledValueTile = styled.div`
   width: 384px;
   height: 384px;
   display: flex;
@@ -31,7 +31,7 @@ export const StyledTile = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const ValueTileContent = styled.div`
   position: relative;
   top: ${({ isOnHomepage }) => isOnHomepage && '-62px'};
 
@@ -57,7 +57,7 @@ export const Content = styled.div`
   }
 `;
 
-export const ImageFiller = styled.div`
+export const ValueTileImageFiller = styled.div`
   width: ${({ isOnHomepage }) => (isOnHomepage ? '232px' : '214px')};
   height: ${({ isOnHomepage }) => (isOnHomepage ? '232px' : '142px')};
 
@@ -69,7 +69,7 @@ export const ImageFiller = styled.div`
   }
 `;
 
-export const Title = styled(Header5)`
+export const ValueTileTitle = styled(Header5)`
   margin: 20px 24px 0;
 
   height: 72px;
@@ -81,7 +81,7 @@ export const Title = styled(Header5)`
     height: 48px;
   }
 `;
-export const Paragraph = styled(ParagraphBody)`
+export const ValueTileParagraph = styled(ParagraphBody)`
   margin: 0 24px;
 
   display: -webkit-box;
