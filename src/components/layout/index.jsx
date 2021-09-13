@@ -56,7 +56,7 @@ export default function Layout({ children, socials, footerText, contactFormText,
 
           <div id="main">{children}</div>
 
-          <BottomBackgroundGradient isHomepage={isHomepage} />
+          {isValidPage && <BottomBackgroundGradient isHomepage={isHomepage} />}
         </PageContentWrapper>
 
         {isValidPage && (
