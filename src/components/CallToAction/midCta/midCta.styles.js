@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Header3 } from '../../typography/headers';
+import { Header3 } from '../../../styles/typography/headers';
 
 export const MidCtaContainer = styled.div`
   /* just for display testing */

@@ -1,5 +1,5 @@
-import { Header3 } from '@root/components/typography/headers';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
+import { Header3 } from '@root/styles/typography/headers';
+import { ParagraphBody } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
 export const BottomCtaContainer = styled.div`

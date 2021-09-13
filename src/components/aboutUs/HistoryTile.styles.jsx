@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Header2 } from '../typography/headers';
-import { ParagraphBody } from '../typography/paragraphs';
+import { Header2 } from '../../styles/typography/headers';
+import { ParagraphBody } from '../../styles/typography/paragraphs';
 
 export const HistoryTileContainer = styled.div`
   display: flex;

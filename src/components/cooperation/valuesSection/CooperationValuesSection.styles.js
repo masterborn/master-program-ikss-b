@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Header3 } from '@root/components/typography/headers';
+import { Header3 } from '@root/styles/typography/headers';
 import ValuesTile from '@root/components/home/valuesSection/ValuesTile';
 
 export const CooperationValuesSectionContainer = styled.div`

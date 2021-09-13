@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Header5 } from '@root/components/typography/headers';
-import { ParagraphSmall } from '@root/components/typography/paragraphs';
+import { Header5 } from '@root/styles/typography/headers';
+import { ParagraphSmall } from '@root/styles/typography/paragraphs';
 import toggleTileVisibility from '../TileAnimations.styles';
 
 export const StyledCollapsedBoardMemberTile = styled.button`

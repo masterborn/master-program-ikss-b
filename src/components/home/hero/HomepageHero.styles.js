@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Socials from '@root/components/layout/footer/Socials';
-import { Header1 } from '../../typography/headers';
-import { ParagraphBody } from '../../typography/paragraphs';
+import { Header1 } from '../../../styles/typography/headers';
+import { ParagraphBody } from '../../../styles/typography/paragraphs';
 
 export const StyledHomepageHero = styled.section`
   display: flex;

@@ -1,5 +1,5 @@
-import headers from '@root/components/typography/headers';
-import paragraphs from '@root/components/typography/paragraphs';
+import headers from '@root/styles/typography/headers';
+import paragraphs from '@root/styles/typography/paragraphs';
 
 export const fontFamily = {
   main: 'Mulish',

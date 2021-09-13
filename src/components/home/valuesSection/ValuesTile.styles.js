@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Header5 } from '@root/components/typography/headers';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
+import { Header5 } from '@root/styles/typography/headers';
+import { ParagraphBody } from '@root/styles/typography/paragraphs';
 
 export const StyledValueTile = styled.div`
   width: 384px;

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import IconButton from '@root/components/buttons/misc/IconButton';
-import { Header4, Header5 } from '@root/components/typography/headers';
+import { Header4, Header5 } from '@root/styles/typography/headers';
 import toggleTileVisibility from './TileAnimations.styles';
 
 export const BoardMemberTileWrapper = styled.div`

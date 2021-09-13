@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import IconButton from '../buttons/misc/IconButton';
 import Input from '../formElements/input';
-import { ParagraphSmall } from '../typography/paragraphs';
+import { ParagraphSmall } from '../../styles/typography/paragraphs';
 import PrimaryButton from '../buttons/primaryButton';
 import TextArea from '../formElements/textarea';
 import Checkbox from '../formElements/checkbox';

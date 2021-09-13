@@ -1,5 +1,5 @@
-import { Header4, Header5 } from '@root/components/typography/headers';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
+import { Header4, Header5 } from '@root/styles/typography/headers';
+import { ParagraphBody } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
 export const ProjectArticle = styled.article`
@@ -65,7 +65,8 @@ export const ProjectHeader = styled.div`
   }
 `;
 
-export const ProjectDate = styled(Header5)`
+export const ProjectDate = styled.h5`
+  ${Header5};
   color: ${(props) => props.theme.color.steel};
 
   @media (max-width: 550px) {

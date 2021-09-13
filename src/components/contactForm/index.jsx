@@ -11,8 +11,8 @@ import { sendEmailMockup } from '@root/clients/formcarry';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { inputsValidationInitialState } from '@root/consts/contactForm';
 import validateInputs from './validation';
-import { XIcon, LoaderIcon } from '../icons/misc';
-import { Header3 } from '../typography/headers';
+import { XIcon, LoaderIco../../styles/typography/headerssc';
+import { Header3 } from '../typography/headers'../../styles/typography/paragraphs
 import { ParagraphBody, ParagraphSmall } from '../typography/paragraphs';
 import Tooltip from './tooltip';
 import {

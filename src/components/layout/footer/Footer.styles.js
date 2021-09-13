@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ScrollUpButton from '../../buttons/ScrollUpButton';
 import Logo from '../../logos/PlainLogo';
-import { ParagraphSmall } from '../../typography/paragraphs';
+import { ParagraphSmall } from '../../../styles/typography/paragraphs';
 import Socials from '../../icons/SocialsCollection';
 
 export const StyledFooter = styled.footer`

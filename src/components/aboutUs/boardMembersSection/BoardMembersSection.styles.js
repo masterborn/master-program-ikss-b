@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Header3 } from '@root/components/typography/headers';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
+import { Header3 } from '@root/styles/typography/headers';
+import { ParagraphBody } from '@root/styles/typography/paragraphs';
 
 export const StyledBoardMembersSection = styled.section`
   margin: 148px 108px 0;

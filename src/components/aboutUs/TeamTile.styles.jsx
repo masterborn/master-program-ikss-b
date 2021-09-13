@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Header3 } from '../typography/headers';
-import { ParagraphBody } from '../typography/paragraphs';
+import { Header3 } from '../../styles/typography/headers';
+import { ParagraphBody } from '../../styles/typography/paragraphs';
 
 export const TeamTileContainer = styled.div`
   margin: 164px 0 148px;
