@@ -12,13 +12,13 @@ export const ContactModalContainer = styled.div`
   background-color: ${({ theme: { color } }) => color.navy}99;
 `;
 
-export const StyledContactForm = styled(ContactForm)`
-  position: absolute;
-  top: 5%;
-  left: 0;
-  right: 0;
-  margin: auto;
-`;
+// export const StyledContactForm = styled(ContactForm)`
+//   position: absolute;
+//   top: 5%;
+//   left: 0;
+//   right: 0;
+//   margin: auto;
+// `;
 
 export const ModalBackground = styled.button`
   width: calc(100% - 15px);

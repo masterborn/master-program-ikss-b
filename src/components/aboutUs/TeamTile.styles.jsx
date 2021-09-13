@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Header3 } from '../../styles/typography/headers';
+import { Header3, Header4 } from '../../styles/typography/headers';
 import { ParagraphBody } from '../../styles/typography/paragraphs';
 
 export const TeamTileContainer = styled.div`
@@ -18,16 +18,17 @@ export const TeamTileContainer = styled.div`
   }
 `;
 
-export const TeamHeader = styled(Header3)`
+export const TeamHeader = styled.h3`
+  ${Header3}
   margin-bottom: 32px;
   @media (max-width: 550px) {
-    font-size: 24px;
-    line-height: 32px;
+    ${Header4}
     margin-bottom: 16px;
   }
 `;
 
-export const TeamDescription = styled(ParagraphBody)`
+export const TeamDescription = styled.p`
+  ${ParagraphBody}
   width: 635px;
   @media (max-width: 550px) {
     width: 100%;

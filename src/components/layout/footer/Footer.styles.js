@@ -121,7 +121,8 @@ export const StyledLogo = styled(Logo)`
   height: 48px;
 `;
 
-export const Paragraph = styled(ParagraphSmall)`
+export const Paragraph = styled.p`
+  ${ParagraphSmall}
   margin-top: 56px;
   color: ${(props) => props.theme.color.white};
 

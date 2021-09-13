@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Header2 } from '../../styles/typography/headers';
-import { ParagraphBody } from '../../styles/typography/paragraphs';
+import { Header2, Header4 } from '../../styles/typography/headers';
+import { ParagraphBody, ParagraphSmall } from '../../styles/typography/paragraphs';
 
 export const HistoryTileContainer = styled.div`
   display: flex;
@@ -32,10 +32,22 @@ export const HistoryTextContainer = styled.div`
   flex-direction: column;
 `;
 
-export const HistoryHeader = styled(Header2)`
+export const HistoryHeader = styled.h2`
+  ${Header2}
   margin: 32px 0 16px 0;
+  @media ${({ theme: { media } }) => media.mobile} {
+    ${Header4}
+  }
 `;
-export const HistoryDescription = styled(ParagraphBody)``;
+export const HistoryDescription = styled.p(
+  ({ theme: { media } }) => `
+  ${ParagraphBody}
+
+  @media ${media.mobile} {
+    ${ParagraphSmall}
+  }
+`,
+);
 
 export const HistoryImage = styled.img`
   width: 483px;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Header2 } from '../../styles/typography/headers';
-import { ParagraphBody } from '../../styles/typography/paragraphs';
+import { Header2, Header4 } from '../../styles/typography/headers';
+import { ParagraphBody, ParagraphSmall } from '../../styles/typography/paragraphs';
 
 export const MissionContainer = styled.div`
   display: flex;
@@ -39,17 +39,17 @@ export const MissionTextContainer = styled.div`
     padding: 32px 0 0 0;
   }
 `;
-export const MissionHeader = styled(Header2)`
+export const MissionHeader = styled.h2`
+  ${Header2}
   margin-bottom: 24px;
   @media (max-width: 550px) {
+    ${Header4}
     margin-bottom: 16px;
-    font-size: 24px;
-    line-height: 32px;
   }
 `;
-export const MissionDescription = styled(ParagraphBody)`
+export const MissionDescription = styled.p`
+  ${ParagraphBody}
   @media (max-width: 550px) {
-    font-size: 14px;
-    line-height: 28px;
+    ${ParagraphSmall}
   }
 `;
