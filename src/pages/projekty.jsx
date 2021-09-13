@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
-import MidCta from '@root/components/CallToAction/midCta/midCta';
 import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
-
+import ProjectsMasonry from '@root/components/cooperation/ProjectsMasonry';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
@@ -23,7 +22,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Projects({ projectsData: { basicContent, common } }) {
+export default function Projects({ projectsData: { basicContent, projects, common } }) {
   const {
     'projects-bottom-cta-text': bottomCtaContent,
     'projects-middle-cta-text': midCtaContent,
@@ -47,13 +46,12 @@ export default function Projects({ projectsData: { basicContent, common } }) {
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
-      <MidCta midCtaContent={midCtaContent} />
+      <ProjectsMasonry midCtaContent={midCtaContent} projectsData={projects} />
+
       <BottomCta bottomCtaContent={bottomCtaContent} />
     </Layout>
   );
 }
-
-
 
 Projects.propTypes = {
   projectsData: PropTypes.shape({
@@ -71,5 +69,6 @@ Projects.propTypes = {
       'projects-bottom-cta-text': PropTypes.shape({}),
       'projects-middle-cta-text': PropTypes.shape({}),
     }),
+    projects: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
 };

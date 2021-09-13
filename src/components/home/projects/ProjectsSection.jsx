@@ -6,11 +6,10 @@ import ProjectTile from '@root/components/projectTile/ProjectTile';
 import { sortByOrder } from '@root/dataMappers/contentful';
 
 import {
-  ProjectSection,
-  ProjectButton,
-  ProjectsButtonsContainer,
-  SectionHeader,
-} from './ProjectsSection.styles';
+  ProjectsSwitchContainer,
+  SwitchButton,
+} from '@root/components/Generic/ProjectsSwitch/ProjectsSwitch.styles';
+import { ProjectSection, SectionHeader } from './ProjectsSection.styles';
 
 function sortProjects(projects) {
   const homepageProjects = projects.filter((project) => project.showOnHomepage);
@@ -29,18 +28,18 @@ export default function ProjectsSection({ projects }) {
   return (
     <ProjectSection id="projects">
       <SectionHeader>Najnowsze Projekty</SectionHeader>
-      <ProjectsButtonsContainer>
+      <ProjectsSwitchContainer>
         {homepageProjects.map(({ title }) => (
-          <ProjectButton
+          <SwitchButton
             key={title}
             value={title}
             onClick={switchProject}
             clicked={title === currentProject.title}
           >
             {title}
-          </ProjectButton>
+          </SwitchButton>
         ))}
-      </ProjectsButtonsContainer>
+      </ProjectsSwitchContainer>
       <ProjectTile showOnHomepage project={currentProject} />
       <Link passHref href="/projekty">
         <a href>
