@@ -27,7 +27,10 @@ export const ProjectsMasonryContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 38px;
+
   @media (max-width: 550px) {
+    margin-top: 40px;
     width: 100%;
   }
 `;

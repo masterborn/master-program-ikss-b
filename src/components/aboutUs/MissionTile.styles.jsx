@@ -6,8 +6,9 @@ export const MissionContainer = styled.div`
   display: flex;
   width: 1197px;
   height: auto;
-  margin-top: 106px;
+  margin-top: 148px;
   @media (max-width: 550px) {
+    margin-top: 80px;
     padding: 0 24px 0 24px;
     justify-content: flex-start;
     width: 100%;

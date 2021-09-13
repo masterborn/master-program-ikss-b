@@ -9,6 +9,7 @@ export const CooperationValuesSectionContainer = styled.div`
   text-align: center;
 
   @media (max-width: 550px) {
+    margin-top: 80px;
     width: 100%;
   }
 `;
