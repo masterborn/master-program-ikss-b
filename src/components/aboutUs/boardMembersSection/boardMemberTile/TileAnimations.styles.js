@@ -10,14 +10,14 @@ const hideTile = css`
   opacity: 0;
   ${toggleTiletransition}
 `;
-const showTile = (componenHeight, componentPadding) => css`
-  height: ${componenHeight};
+const showTile = (componentHeight, componentPadding) => css`
+  height: ${componentHeight};
   padding: ${componentPadding};
   opacity: 1;
   ${toggleTiletransition}
 `;
 
-const toggleTileVisibility = (shouldDisplay, componenHeight, componentPadding = 0) =>
-  shouldDisplay ? showTile(componenHeight, componentPadding) : hideTile;
+const toggleTileVisibility = (shouldDisplay, componentHeight, componentPadding = 0) =>
+  shouldDisplay ? showTile(componentHeight, componentPadding) : hideTile;
 
 export default toggleTileVisibility;
