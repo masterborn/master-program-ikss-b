@@ -11,7 +11,7 @@ export const BottomCtaContainer = styled.div`
   height: auto;
   margin: 148px 0;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: auto;
     margin: 103px 0;
     width: 100%;
@@ -22,7 +22,7 @@ export const BottomCtaContainer = styled.div`
 export const BottomCtaHeader = styled(Header3)`
   text-align: center;
   margin-bottom: 32px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 16px;
     font-size: 24px;
     line-height: 32px;
@@ -33,7 +33,7 @@ export const BottomCtaText = styled(ParagraphBody)`
   text-align: center;
   margin-bottom: 32px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 16px;
   }
 `;

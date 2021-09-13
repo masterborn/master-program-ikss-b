@@ -8,7 +8,7 @@ export const CooperationValuesSectionContainer = styled.div`
 
   text-align: center;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 80px;
     width: 100%;
   }
@@ -16,7 +16,7 @@ export const CooperationValuesSectionContainer = styled.div`
 export const Title = styled(Header3)`
   color: ${({ theme: { color } }) => color.navy};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     font-size: 24px;
     line-height: 32px;
   }
@@ -30,7 +30,7 @@ export const CooperationValuesTilesContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 24px;
 
     flex-direction: column;
@@ -41,7 +41,7 @@ export const CooperationValuesTilesContainer = styled.div`
 export const CooperationValuesTile = styled(ValuesTile)`
   margin: 50px 12px 12px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin: 12px 0;
   }
 `;

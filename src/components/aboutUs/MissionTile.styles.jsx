@@ -7,7 +7,7 @@ export const MissionContainer = styled.div`
   width: 1197px;
   height: auto;
   margin-top: 148px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 80px;
     padding: 0 24px 0 24px;
     justify-content: flex-start;
@@ -22,7 +22,7 @@ export const MissionImage = styled.img`
   width: 483px;
   height: auto;
   border-radius: 16px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-right: 0;
     border-radius: 8px;
     width: 100%;
@@ -35,20 +35,20 @@ export const MissionTextContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 19px 0 18px 0;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     padding: 32px 0 0 0;
   }
 `;
 export const MissionHeader = styled(Header2)`
   margin-bottom: 24px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 16px;
     font-size: 24px;
     line-height: 32px;
   }
 `;
 export const MissionDescription = styled(ParagraphBody)`
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     font-size: 14px;
     line-height: 28px;
   }

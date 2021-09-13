@@ -8,7 +8,7 @@ export const StyledValuesSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 80px;
   }
 `;
@@ -17,7 +17,7 @@ export const ValuesSectionTitle = styled(Header3)`
   color: ${({ theme: { color } }) => color.navy};
   text-align: center;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 260px;
     font-size: 24px;
     line-height: 32px;
@@ -29,7 +29,7 @@ export const ValuesSectionParagraph = styled(ParagraphBody)`
   margin-top: 32px;
   text-align: center;
   color: ${({ theme: { color } }) => color.steel};
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 300px;
     margin-top: 24px;
   }

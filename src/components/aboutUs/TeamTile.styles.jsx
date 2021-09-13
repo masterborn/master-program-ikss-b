@@ -10,7 +10,7 @@ export const TeamTileContainer = styled.div`
   width: 996px;
   height: auto;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
     margin: 80px 0 130px;
 
@@ -20,7 +20,7 @@ export const TeamTileContainer = styled.div`
 
 export const TeamHeader = styled(Header3)`
   margin-bottom: 32px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 16px;
@@ -29,7 +29,7 @@ export const TeamHeader = styled(Header3)`
 
 export const TeamDescription = styled(ParagraphBody)`
   width: 635px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
     text-align: center;
   }
@@ -41,7 +41,7 @@ export const TeamImage = styled.img`
   max-height: 505px;
   margin-top: 64px;
   border-radius: 16px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     min-height: 150px;
     height: 50vw;
     width: 100%;

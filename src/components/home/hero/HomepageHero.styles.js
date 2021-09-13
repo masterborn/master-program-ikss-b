@@ -8,7 +8,7 @@ export const StyledHomepageHero = styled.section`
   flex-direction: column;
   align-items: flex-end;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     max-width: 550px;
     min-width: 300px;
     width: 100%;
@@ -22,7 +22,7 @@ export const Content = styled.div`
   align-items: flex-start;
   justify-content: flex-end;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ export const TextSection = styled.div`
   min-width: 416px;
   margin-top: 77px;
   margin-left: 120px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     min-width: 300px;
     margin-top: 40px;
     margin-left: 0;
@@ -46,7 +46,7 @@ export const HomepageHeroVideo = styled.video`
   width: 808px;
   height: 505px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     order: 1;
     width: 100%;
     max-width: 550px;
@@ -73,7 +73,7 @@ export const StyledSocials = styled(Socials)`
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
   border-radius: 16px 0px 0px 16px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 80%;
     height: 80px;
     margin-top: 40px;
@@ -97,12 +97,12 @@ export const StyledSocials = styled(Socials)`
       margin-right: 24px;
       margin-left: 24px;
 
-      @media (max-width: 550px) {
+      @media ${({ theme: { medias } }) => medias.mobile} {
         transform: scale(1.5);
         margin: 0;
       }
     }
-    @media (max-width: 550px) {
+    @media ${({ theme: { medias } }) => medias.mobile} {
       height: 32px;
       width: 32px;
     }
@@ -112,7 +112,7 @@ export const StyledSocials = styled(Socials)`
 export const Header = styled(Header1)`
   width: 100%;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     font-size: 32px;
     line-height: 44px;
   }
@@ -128,7 +128,7 @@ export const Paragraph = styled(ParagraphBody)`
 
   color: ${(props) => props.theme.color.steel};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin: 24px 0;
 
     font-size: 14px;

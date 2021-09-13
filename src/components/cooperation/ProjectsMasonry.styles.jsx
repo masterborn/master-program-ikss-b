@@ -15,7 +15,7 @@ export const Masonry = styled.div`
     order: 1;
   }
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: auto;
     width: 100%;
     padding: 0 24px 0 24px;
@@ -29,7 +29,7 @@ export const ProjectsMasonryContainer = styled.div`
   align-items: center;
   margin-top: 80px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 40px;
     width: 100%;
   }

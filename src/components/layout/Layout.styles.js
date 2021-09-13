@@ -5,7 +5,7 @@ export const StyledLayout = styled.div`
   min-width: 1440px;
   margin: 0 auto;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     min-width: 300px;
     width: 100%;
   }
@@ -50,7 +50,7 @@ export const BottomBackgroundGradient = styled.div`
   z-index: -1;
 
   background: linear-gradient(0deg, #f4faff 0%, rgba(255, 255, 255, 0) 100%);
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: 770px;
     bottom: 206px;
   }

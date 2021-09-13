@@ -13,7 +13,7 @@ export const ProjectArticle = styled.article`
     1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
     0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
   }
   a {
@@ -21,7 +21,7 @@ export const ProjectArticle = styled.article`
 
     color: inherit;
     text-decoration: none;
-    @media (max-width: 550px) {
+    @media ${({ theme: { medias } }) => medias.mobile} {
       display: flex;
       justify-content: center;
     }
@@ -37,7 +37,7 @@ export const ProjectMediaContainer = styled.div`
   border-radius: 16px 16px 0 0;
   height: auto;
   width: 100%;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: auto;
   }
 `;
@@ -47,7 +47,7 @@ export const ProjectSummary = styled.div`
   height: auto;
   width: 100%;
   padding: ${(props) => (props.isOnGrid ? '32px 32px 40px 32px' : '64px 102px 66px 103px')};
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     padding: 24px 26px 32px 24px;
   }
 `;
@@ -56,7 +56,7 @@ export const ProjectHeader = styled.div`
   align-items: flex-end;
   text-align: center;
   margin-bottom: ${(props) => (props.isOnGrid ? '28px' : '32px')};
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     text-align: left;
     margin-bottom: 16px;
     flex-direction: column;
@@ -68,7 +68,7 @@ export const ProjectHeader = styled.div`
 export const ProjectDate = styled(Header5)`
   color: ${(props) => props.theme.color.steel};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     font-size: 14px;
     line-height: 17.57px;
     weight: 700;
@@ -77,14 +77,14 @@ export const ProjectDate = styled(Header5)`
 
 export const ProjectTitle = styled(Header4)`
   margin: 0 24px 0 0;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 8px;
     font-size: 18px;
     line-height: 24px;
   }
 `;
 export const ProjectDescription = styled(ParagraphBody)`
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     font-size: 14px;
     line-height: 28px;
   }
@@ -94,7 +94,7 @@ export const ProjectImage = styled.img`
   width: 100%;
   height: auto;
   border-radius: 16px 16px 0 0;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     max-width: 100%;
     height: auto;
   }

@@ -12,7 +12,7 @@ export const StyledFooter = styled.footer`
 
   background-color: ${(props) => props.theme.color.ikssBlue};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: auto;
     margin-top: 90px;
   }
@@ -37,7 +37,7 @@ export const Filler = styled.div`
   height: 324px;
   background-color: ${(props) => props.theme.color.ikssBlue};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     top: -296px;
     height: 296px;
   }
@@ -52,7 +52,7 @@ export const StyledSrollUpButton = styled(ScrollUpButton)`
     cursor: pointer;
   }
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     top: -57px;
     right: 50%;
     transform: translateX(50%);
@@ -78,7 +78,7 @@ export const LinksContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: 144px;
     flex-direction: column;
   }
@@ -105,7 +105,7 @@ export const StyledSocials = styled(Socials)`
     margin: 0px 32px;
   }
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 189px;
     display: flex;
     justify-content: space-between;
@@ -127,7 +127,7 @@ export const Paragraph = styled(ParagraphSmall)`
 
   text-align: center;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 300px;
     margin-top: 40px;
   }

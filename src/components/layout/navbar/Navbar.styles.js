@@ -21,7 +21,7 @@ export const StyledNavbar = styled.nav`
   background: ${(props) => props.theme.color.white};
   box-shadow: 0px 4px 16px rgba(97, 121, 139, 0.1);
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: 56px;
   }
 `;
@@ -48,7 +48,7 @@ export const LinksContainer = styled.div`
 export const StyledLogoLink = styled.a`
   margin-left: 120px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 56px;
     height: 35px;
     margin-left: 24px;
@@ -59,7 +59,7 @@ export const StyledLogo = styled(Logo)`
   width: 78px;
   height: 48.8px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 56px;
     height: 35px;
   }

@@ -6,7 +6,7 @@ import toggleTileVisibility from './TileAnimations.styles';
 export const BoardMemberTileWrapper = styled.div`
   margin: 12px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
     min-height: fit-content;
     margin: 12px 0;
@@ -62,7 +62,7 @@ export const StyledBoardMemberTile = styled.div`
     0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 90%;
     max-width: 384px;
     min-width: 300px;
@@ -82,7 +82,7 @@ export const BoardMemberTileAvatar = styled.div`
 
   background-color: ${({ theme: { color } }) => color.blueTints.blue20};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 151px;
     min-width: 151px;
     height: 151px;
@@ -98,7 +98,7 @@ export const NameText = styled(Header4)`
   margin-top: 24px;
   color: ${({ theme: { color } }) => color.navy};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 16px;
 
     font-size: 18px;
@@ -112,7 +112,7 @@ export const RoleText = styled(Header5)`
   text-align: center;
   color: ${({ theme: { color } }) => color.steel};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 8px;
     height: 36px;
     font-size: 14px;
@@ -138,7 +138,7 @@ export const LinkedInButton = styled.a`
   margin: auto 0 40px;
   text-decoration: none;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 32px;
   }
 `;

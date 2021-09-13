@@ -16,7 +16,7 @@ export const ProjectSection = styled.section`
     text-decoration: none;
   }
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
     max-width: 550px;
     padding: 0 24px 0 24px;
@@ -32,7 +32,7 @@ export const ProjectSection = styled.section`
 export const SectionHeader = styled(Header3)`
   margin-bottom: 32px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 24px;
     font-size: 24px;
     line-height: 32px;

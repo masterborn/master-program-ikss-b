@@ -9,7 +9,7 @@ export const ProjectsSwitchContainer = styled.div`
   margin-bottom: ${(props) => (props.isOnGrid ? '48px' : '64px')};
   border-radius: 26px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 24px;
     background: ${(props) => (props.isOnGrid ? 'iherit' : 'none')};
     height: auto;
@@ -35,7 +35,7 @@ export const DateSwitchButton = styled.button`
   font-size: 16px;
   cursor: pointer;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: 31px;
     width: 84px;
     padding: 9px 16px;
@@ -61,7 +61,7 @@ export const SwitchButton = styled.button`
   font-size: 16px;
   cursor: pointer;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: 31px;
     width: auto;
     padding: 9px 16px;

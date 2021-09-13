@@ -11,7 +11,7 @@ export const TopSectionContainer = styled.section`
 
   height: auto;
   text-align: center;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     padding: 0 24px;
     width: auto;
   }
@@ -19,7 +19,7 @@ export const TopSectionContainer = styled.section`
 export const TopSectionImage = styled.img`
   margin-top: 64px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 32px;
   }
 `;
@@ -27,7 +27,7 @@ export const TopSectionImage = styled.img`
 export const TopSectionHeader = styled(Header1)`
   margin-top: 16px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 8px;
     font-size: 32px;
     line-height: 44px;
@@ -39,7 +39,7 @@ export const TopSectionDescription = styled(ParagraphBody)`
   max-width: 996px;
   height: 96px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
     height: auto;
 

@@ -7,7 +7,7 @@ export const MidCtaContainer = styled.div`
   width: 1200px;
   height: 352px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
     padding: 0 24px;
     height: auto;
@@ -28,7 +28,7 @@ export const CtaOverlay = styled.div`
   height: 100%;
   background-color: ${(props) => props.theme.color.blueTints.blue10};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     padding-top: 56px;
     padding-bottom: 56px;
   }
@@ -37,7 +37,7 @@ export const CtaOverlay = styled.div`
 export const MidCtaHeader = styled(Header3)`
   text-align: center;
   margin-bottom: 32px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
     padding: 0 31px;
     margin-top: 0;

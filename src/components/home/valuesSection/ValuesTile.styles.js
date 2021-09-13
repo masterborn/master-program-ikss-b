@@ -21,7 +21,7 @@ export const StyledValueTile = styled.div`
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
   border-radius: 16px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 90%;
     min-width: 300px;
     max-width: 384px;
@@ -46,7 +46,7 @@ export const ValueTileContent = styled.div`
     height: ${({ isOnHomepage }) => !isOnHomepage && '142px'};
   }
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     top: ${({ isOnHomepage }) => isOnHomepage && '-38px'};
     margin-bottom: ${({ isOnHomepage }) => isOnHomepage && '-14px'};
 
@@ -61,7 +61,7 @@ export const ValueTileImageFiller = styled.div`
   width: ${({ isOnHomepage }) => (isOnHomepage ? '232px' : '214px')};
   height: ${({ isOnHomepage }) => (isOnHomepage ? '232px' : '142px')};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 133px;
     height: 133px;
     width: ${({ isOnHomepage }) => (isOnHomepage ? '133px' : '214px')};
@@ -76,7 +76,7 @@ export const ValueTileTitle = styled(Header5)`
   color: ${({ theme: { color } }) => color.navy};
   overflow: hidden;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin: 20px 20px 0;
     height: 48px;
   }
@@ -92,7 +92,7 @@ export const ValueTileParagraph = styled(ParagraphBody)`
   text-align: center;
   color: ${({ theme: { color } }) => color.steel};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin: 12px 20px 0;
 
     font-size: 14px;

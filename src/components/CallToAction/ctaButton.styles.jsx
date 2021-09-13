@@ -2,7 +2,7 @@ import StyledPrimaryButton from '@root/components/buttons/primaryButton/StyledPr
 import styled from 'styled-components';
 
 const StyledCtaButton = styled(StyledPrimaryButton)`
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: 36px;
     padding: 9px 16px;
     font-size: 14px;

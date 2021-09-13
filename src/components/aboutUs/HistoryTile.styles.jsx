@@ -8,7 +8,7 @@ export const HistoryTileContainer = styled.div`
   width: 1197px;
   margin-top: 148px;
   flex-wrap: wrap;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 80px;
     width: 100%;
     padding: 0 24px;
@@ -22,7 +22,7 @@ export const HistoryRow = styled.div`
   &:first-child {
     margin-bottom: 32px;
   }
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 40px;
     flex-direction: column-reverse;
   }
@@ -45,7 +45,7 @@ export const HistoryImage = styled.img`
   &:first-child {
     margin-bottom: 32px;
   }
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
     margin-left: 0;
     border-radius: 8px;

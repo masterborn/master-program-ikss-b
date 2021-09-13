@@ -5,7 +5,7 @@ const VideoFrame = styled.iframe`
   border: none;
   height: ${(props) => (props.isOnGrid ? '379px' : '579px')};
   width: 100%;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: 40vw;
     min-height: 200px;
   }

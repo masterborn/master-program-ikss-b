@@ -11,7 +11,7 @@ export const LogosSection = styled.section`
   height: auto;
   margin-top: 148px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
     max-width: 550px;
     padding: 0 26px 0 26px;
@@ -33,7 +33,7 @@ export const PartnersDescription = styled(ParagraphBody)`
   width: 635px;
   height: 64px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     font-size: 14px;
     line-height: 28px;
     width: 100%;
@@ -52,7 +52,7 @@ export const LogosContainer = styled.div`
   width: 1134px;
   margin-top: 80px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
     max-width: 550px;
     margin-top: 32px;
@@ -67,7 +67,7 @@ export const Logo = styled.div`
   width: 226px;
   height: 112px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: calc(100% / 3);
     height: auto;
     margin-bottom: 30px;

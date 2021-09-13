@@ -8,7 +8,7 @@ export const StyledBoardMembersSection = styled.section`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 95%;
     min-width: 252px;
     margin: 70px auto 0;
@@ -19,7 +19,7 @@ export const Title = styled(Header3)`
   text-align: center;
   color: ${({ theme: { color } }) => color.navy};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     font-size: 24px;
     line-height: 32px;
   }
@@ -31,7 +31,7 @@ export const Description = styled(ParagraphBody)`
 
   color: ${({ theme: { color } }) => color.steel};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 95%;
     min-width: 252px;
     margin: 16px auto 0;
@@ -46,7 +46,7 @@ export const BoardMembersContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 57px;
     flex-direction: column;
   }

@@ -20,7 +20,7 @@ export const ContactFormContainer = styled.div`
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
   border-radius: 16px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 80%;
     min-width: 300px;
     margin-top: ${({ isInModal }) => !isInModal && '46px'};
@@ -38,7 +38,7 @@ export const CloseButton = styled(IconButton)`
   top: 37px;
   right: 37px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     top: 20px;
     right: 24px;
   }
@@ -58,7 +58,7 @@ export const ContactFormContent = styled.div`
 
   overflow: auto;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     padding-top: ${({ isInModal }) => (isInModal ? '56px' : '32px')};
     padding-bottom: 32px;
   }
@@ -75,7 +75,7 @@ export const TopSection = styled.div`
     color: ${({ theme: { color } }) => color.steel};
   }
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 80%;
     min-width: 295px;
     h3 {
@@ -98,7 +98,7 @@ export const Form = styled.form`
     color: ${({ theme: { color } }) => color.navy};
   }
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 80%;
     min-width: 295px;
     margin-top: 24px;
@@ -119,7 +119,7 @@ export const InputRow = styled.div`
     margin-top: 15px;
   }
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: ${({ isTerms }) => isTerms && '12px'};
     flex-direction: ${({ isTerms }) => !isTerms && 'column'};
 
@@ -134,7 +134,7 @@ export const NameInput = styled(Input)`
   height: 48px;
   margin-right: 0;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
   }
 `;
@@ -143,7 +143,7 @@ export const FullWidthInput = styled(Input)`
   height: 48px;
   margin-right: 0;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 100%;
   }
 `;
@@ -151,7 +151,7 @@ export const ContentInput = styled(TextArea)`
   width: 588px;
   height: 221px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 89%;
     height: 125px;
   }
@@ -167,7 +167,7 @@ export const RODOContainer = styled.div`
 export const RODO = styled(ParagraphSmall)`
   color: ${({ theme: { color } }) => color.steelTints.steel70};
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 240px;
 
     font-size: 12px;
@@ -188,7 +188,7 @@ export const SubmitButton = styled(PrimaryButton)`
   margin-top: 37px;
   margin-left: auto;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: 154px;
     height: 36px;
 
@@ -224,7 +224,7 @@ const StatusButton = styled.button`
   font-size: 16px;
   line-height: 20px;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: 36px;
     font-size: 14px;
     line-height: 18px;

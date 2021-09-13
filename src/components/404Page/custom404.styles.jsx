@@ -12,7 +12,7 @@ export const ErrorPageContainer = styled.div`
   width: 100%;
   height: auto;
 
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     padding: 0 24px;
     & span {
       display: inline-block;
@@ -28,7 +28,7 @@ export const IKKSContainer = styled.div`
   margin-bottom: -65px;
   width: 100%;
   height: auto;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-top: 207px;
     margin-bottom: 0;
     height: 51vw;
@@ -38,7 +38,7 @@ export const IKKSContainer = styled.div`
 `;
 
 export const IKKSLogo = styled(IKKSErrorImage)`
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     height: auto;
     width: auto;
   }
@@ -46,7 +46,7 @@ export const IKKSLogo = styled(IKKSErrorImage)`
 
 export const ErrorMessage = styled(Header1)`
   margin-bottom: 32px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 24px;
     font-size: 40px;
     line-height: 56px;
@@ -59,7 +59,7 @@ export const ErrorDescription = styled(ParagraphBody)`
   margin-bottom: 32px;
   font-size: 20px;
   line-height: 32px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     margin-bottom: 24px;
     text-align: center;
     display: inline;
@@ -70,7 +70,7 @@ export const ErrorDescription = styled(ParagraphBody)`
 
 export const GetBackButton = styled(StyledPrimaryButton)`
   width: 153px;
-  @media (max-width: 550px) {
+  @media ${({ theme: { medias } }) => medias.mobile} {
     width: max-content;
     min-width: 124px;
     height: 36px;
