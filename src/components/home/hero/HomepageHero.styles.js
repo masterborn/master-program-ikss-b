@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Socials from '@root/components/layout/footer/Socials';
+import Socials from '@root/components/icons/SocialsCollection';
 import { Header1 } from '../../typography/headers';
 import { ParagraphBody } from '../../typography/paragraphs';
 
