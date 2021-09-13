@@ -6,6 +6,23 @@ import Layout from '@root/components/layout';
 import MidCta from '@root/components/CallToAction/midCta/midCta';
 import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
 
+
+export async function getStaticProps() {
+  const resJson = await getPagesDataMockup();
+  const pagesData = mapData(resJson);
+
+  const {
+    basicContent: { projects: basicContent, common },
+  } = pagesData;
+  const projectsData = { basicContent, common };
+
+  return {
+    props: {
+      projectsData,
+    },
+  };
+}
+
 export default function Projects({ projectsData: { basicContent, common } }) {
   const {
     'projects-bottom-cta-text': bottomCtaContent,
@@ -36,21 +53,7 @@ export default function Projects({ projectsData: { basicContent, common } }) {
   );
 }
 
-export async function getStaticProps() {
-  const resJson = await getPagesDataMockup();
-  const pagesData = mapData(resJson);
 
-  const {
-    basicContent: { projects: basicContent, common },
-  } = pagesData;
-  const projectsData = { basicContent, common };
-
-  return {
-    props: {
-      projectsData,
-    },
-  };
-}
 
 Projects.propTypes = {
   projectsData: PropTypes.shape({
