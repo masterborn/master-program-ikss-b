@@ -35,8 +35,7 @@ export const Content = styled.div`
   position: relative;
   top: ${({ isOnHomepage }) => isOnHomepage && '-62px'};
 
-  margin-top: ${({ isOnHomepage }) => !isOnHomepage && '32px'};
-  margin-bottom: ${({ isOnHomepage }) => isOnHomepage && '-14px'};
+  margin: ${({ isOnHomepage }) => !isOnHomepage && '32px 0 -14px'};
 
   display: flex;
   flex-direction: column;
