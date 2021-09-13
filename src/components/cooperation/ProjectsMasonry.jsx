@@ -9,7 +9,7 @@ import MasonryWithCta from './MasonryLayout/MasonryWithCta';
 import MasonryWithoutCta from './MasonryLayout/MasonryWithoutCta';
 import { ProjectsMasonryContainer } from './ProjectsMasonry.styles';
 
-export default function ProjectsMasonry({ projectsData }) {
+export default function ProjectsMasonry({ projectsData, midCtaContent }) {
   const projectsCollection = sortProjectsByYear(projectsData);
   const [currentProjects, setCurrentProjects] = useState(projectsCollection[0]);
   const shouldDisplayCta = currentProjects.length > 6;
@@ -39,7 +39,11 @@ export default function ProjectsMasonry({ projectsData }) {
         })}
       </ProjectsSwitchContainer>
       {shouldDisplayCta ? (
-        <MasonryWithCta getColumnWidth={getColumnWidth} projects={currentProjects} />
+        <MasonryWithCta
+          midCtaContent={midCtaContent}
+          getColumnWidth={getColumnWidth}
+          projects={currentProjects}
+        />
       ) : (
         <MasonryWithoutCta getColumnWidth={getColumnWidth} projects={currentProjects} />
       )}
@@ -49,4 +53,5 @@ export default function ProjectsMasonry({ projectsData }) {
 
 ProjectsMasonry.propTypes = {
   projectsData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  midCtaContent: PropTypes.shape({}).isRequired,
 };

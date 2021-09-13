@@ -47,7 +47,6 @@ export default function Projects({ projectsData: { basicContent, projects, commo
       tooltipText={tooltipText}
     >
       <ProjectsMasonry midCtaContent={midCtaContent} projectsData={projects} />
-
       <BottomCta bottomCtaContent={bottomCtaContent} />
     </Layout>
   );

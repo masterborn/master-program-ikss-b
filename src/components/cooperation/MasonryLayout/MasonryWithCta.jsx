@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProjectTile from '@root/components/projectTile/ProjectTile';
-import { CtaMockup, Masonry } from '../ProjectsMasonry.styles';
+import MidCta from '@root/components/CallToAction/midCta/midCta';
+import { Masonry } from '../ProjectsMasonry.styles';
 
-export default function MasonryWithCta({ projects, getColumnWidth }) {
+export default function MasonryWithCta({ projects, getColumnWidth, midCtaContent }) {
   const beforeCtaProjects = projects.slice(0, 4);
   const afterCtaProjects = projects.slice(4);
 
@@ -14,7 +15,7 @@ export default function MasonryWithCta({ projects, getColumnWidth }) {
           <ProjectTile key={project.title} isOnGrid project={project} />
         ))}
       </Masonry>
-      <CtaMockup />
+      <MidCta midCtaContent={midCtaContent} />
       <Masonry columnWidth={getColumnWidth(afterCtaProjects)}>
         {afterCtaProjects.map((project) => (
           <ProjectTile key={project.title} isOnGrid project={project} />
@@ -26,4 +27,5 @@ export default function MasonryWithCta({ projects, getColumnWidth }) {
 MasonryWithCta.propTypes = {
   projects: PropTypes.arrayOf(PropTypes.object).isRequired,
   getColumnWidth: PropTypes.func.isRequired,
+  midCtaContent: PropTypes.shape({}).isRequired,
 };
