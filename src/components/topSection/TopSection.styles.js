@@ -13,6 +13,7 @@ export const TopSectionContainer = styled.section`
   text-align: center;
   @media (max-width: 550px) {
     padding: 0 24px;
+    width: auto;
   }
 `;
 export const TopSectionImage = styled.img`
