@@ -6,8 +6,8 @@ import {
   StyledValueTile,
   ValueTileContent,
   ValueTileImageFiller,
-  ValueTileParagraph,
   ValueTileTitle,
+  ValueTileParagraph,
 } from './ValuesTile.styles';
 
 export default function ValuesTile({ className, data, isOnHomepage }) {
@@ -16,10 +16,14 @@ export default function ValuesTile({ className, data, isOnHomepage }) {
     text1: richText,
     image1: { url: imageUrl },
   } = data;
+
+  if (!imageUrl && !title && !richText) return null;
+
   const Body = convertRichTextToReactComponent(ValueTileParagraph, richText);
+
   return (
-    <StyledValueTile>
-      <ValueTileContent>
+    <StyledValueTile className={className}>
+      <ValueTileContent isOnHomepage={isOnHomepage}>
         {imageUrl ? (
           <Image src={`https:${imageUrl}`} height={232} width={232} alt={title} />
         ) : (
