@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
+import mapData, { sortByOrder } from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
+import PartnersSection from '@root/components/home/partnersList/PartnersSection';
+import CooperationValuesSection from '@root/components/cooperation/valuesSection';
+import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
@@ -20,7 +23,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Cooperation({ cooperationData: { common } }) {
+export default function Cooperation({ cooperationData: { common, partners, basicContent } }) {
   const {
     'social-facebook': socialFb,
     'social-linkedin': socialIn,
@@ -30,7 +33,26 @@ export default function Cooperation({ cooperationData: { common } }) {
     'contact-form-tooltip': tooltipText,
     'footer-text': footerText,
   } = common;
+
+  const {
+    'cooperation-logos-text': partnersText,
+    'cooperation-tiles-title': valuesTitle,
+    'cooperation-tile-1': cooperationTile1,
+    'cooperation-tile-2': cooperationTile2,
+    'cooperation-tile-3': cooperationTile3,
+    'cooperation-tile-4': cooperationTile4,
+    'cooperation-tile-5': cooperationTile5,
+    'cooperation-bottom-cta': bottomCtaContent,
+  } = basicContent;
   const socials = { socialFb, socialIn, socialIg, socialYt };
+  const valuesTiles = [
+    cooperationTile1,
+    cooperationTile2,
+    cooperationTile3,
+    cooperationTile4,
+    cooperationTile5,
+  ];
+  const orderedPartners = sortByOrder(partners);
 
   return (
     <Layout
@@ -39,7 +61,9 @@ export default function Cooperation({ cooperationData: { common } }) {
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
-      Cooperation
+      <CooperationValuesSection valuesTiles={valuesTiles} valuesTitle={valuesTitle} />
+      <PartnersSection partners={orderedPartners} partnersText={partnersText} />
+      <BottomCta bottomCtaContent={bottomCtaContent} />
     </Layout>
   );
 }
@@ -54,6 +78,17 @@ Cooperation.propTypes = {
       'social-instagram': PropTypes.shape({}),
       'social-youtube': PropTypes.shape({}),
       'footer-text': PropTypes.shape({}),
-    }).isRequired,
+    }),
+    partners: PropTypes.arrayOf(PropTypes.object).isRequired,
+    basicContent: PropTypes.shape({
+      'cooperation-logos-text': PropTypes.shape({}),
+      'cooperation-tiles-title': PropTypes.shape({}),
+      'cooperation-tile-1': PropTypes.shape({}),
+      'cooperation-tile-2': PropTypes.shape({}),
+      'cooperation-tile-3': PropTypes.shape({}),
+      'cooperation-tile-4': PropTypes.shape({}),
+      'cooperation-tile-5': PropTypes.shape({}),
+      'cooperation-bottom-cta': PropTypes.shape({}),
+    }),
   }).isRequired,
 };
