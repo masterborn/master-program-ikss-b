@@ -45,6 +45,7 @@ export default function ProjectTile({ project, isOnGrid }) {
 ProjectTile.propTypes = {
   project: PropTypes.shape({
     title: PropTypes.string.isRequired,
+    videoUrl: PropTypes.string,
     date: PropTypes.string.isRequired,
     image: PropTypes.shape({
       url: PropTypes.string,
@@ -60,4 +61,9 @@ ProjectTile.propTypes = {
       nodeType: PropTypes.string,
     }),
   }).isRequired,
+  isOnGrid: PropTypes.bool,
+};
+
+ProjectTile.defaultProps = {
+  isOnGrid: false,
 };
