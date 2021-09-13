@@ -39,9 +39,9 @@ export const CtaOverlay = styled.div(
 );
 
 export const MidCtaHeader = styled.h3(
-  ({ theme, theme: { medias } }) => `
+  ({ theme: { medias } }) => `
   margin-bottom: 32px;
-  ${Header3(theme)};
+  ${Header3};
   text-align: center;
   @media ${medias.mobile} {
     width: 100%;
@@ -49,7 +49,7 @@ export const MidCtaHeader = styled.h3(
     margin-top: 0;
     margin-bottom: 24px;
 
-    ${Header5(theme)};
+    ${Header5};
   }
 `,
 );

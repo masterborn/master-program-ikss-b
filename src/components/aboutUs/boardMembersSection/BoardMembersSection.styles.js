@@ -18,21 +18,21 @@ export const StyledBoardMembersSection = styled.section(
 );
 
 export const Title = styled.h3(
-  ({ theme, theme: { medias, color } }) => `
-  ${Header3(theme)};
+  ({ theme: { medias, color } }) => `
+  ${Header3};
   text-align: center;
   color: ${color.navy};
 
   @media ${medias.mobile} {
-    ${Header4(theme)};
+    ${Header4};
   }
 `,
 );
 export const Description = styled.p(
-  ({ theme, theme: { medias, color } }) => `
+  ({ theme: { medias, color } }) => `
   width: 635px;
   margin-top: 32px;
-  ${ParagraphBody(theme)};
+  ${ParagraphBody};
   text-align: center;
 
   color: ${color.steel};

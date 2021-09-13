@@ -63,8 +63,8 @@ export const BoardMemberTileTextContent = styled.div`
 `;
 
 export const NameText = styled.h5(
-  ({ theme, theme: { color } }) => `
-  ${Header5(theme)};
+  ({ theme: { color } }) => `
+  ${Header5};
   color: ${color.navy};
 `,
 );

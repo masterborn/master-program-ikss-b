@@ -22,21 +22,21 @@ export const BottomCtaContainer = styled.div(
 );
 
 export const BottomCtaHeader = styled.h3(
-  ({ theme, theme: { medias } }) => `
+  ({ theme: { medias } }) => `
   margin-bottom: 32px;
-  ${Header3(theme)};
+  ${Header3};
   text-align: center;
   @media ${medias.mobile} {
     margin-bottom: 16px;
-    ${Header4(theme)};
+    ${Header4};
   }
 `,
 );
 
 export const BottomCtaText = styled.p(
-  ({ theme, theme: { medias } }) => `
+  ({ theme: { medias } }) => `
   margin-bottom: 32px;
-  ${ParagraphBody(theme)};
+  ${ParagraphBody};
   text-align: center;
 
   @media ${medias.mobile} {

@@ -1,6 +1,3 @@
-import headers from '@root/styles/typography/headers';
-import paragraphs from '@root/styles/typography/paragraphs';
-
 export const fontFamily = {
   main: 'Mulish',
 };
@@ -67,8 +64,6 @@ export const fontSize = {
 };
 
 const theme = {
-  headers,
-  paragraphs,
   fontFamily,
   lineHeight,
   fontSize,

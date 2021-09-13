@@ -76,10 +76,10 @@ export const ValueTileImageFiller = styled.div(
 );
 
 export const ValueTileTitle = styled.h5(
-  ({ theme, theme: { medias, color } }) => `
+  ({ theme: { medias, color } }) => `
   margin: 20px 24px 0;
   height: 72px;
-  ${Header5(theme)};
+  ${Header5};
   color: ${color.navy};
   overflow: hidden;
 
@@ -90,21 +90,21 @@ export const ValueTileTitle = styled.h5(
 `,
 );
 export const ValueTileParagraph = styled.p(
-  ({ theme, theme: { medias, color } }) => `
+  ({ theme: { medias, color } }) => `
   margin: 0 24px;
 
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  ${ParagraphBody(theme)};
+  ${ParagraphBody};
   text-align: center;
   color: ${color.steel};
 
   @media ${medias.mobile} {
     margin: 12px 20px 0;
 
-    ${ParagraphSmall(theme)};
+    ${ParagraphSmall};
   }
 `,
 );

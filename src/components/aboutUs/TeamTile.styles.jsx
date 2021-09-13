@@ -21,19 +21,19 @@ export const TeamTileContainer = styled.div(
 );
 
 export const TeamHeader = styled.h3(
-  ({ theme, theme: { medias } }) => `
-  ${Header3(theme)};
+  ({ theme: { medias } }) => `
+  ${Header3};
   margin-bottom: 32px;
   @media ${medias.mobile} {
-    ${Header4(theme)};
+    ${Header4};
     margin-bottom: 16px;
   }
 `,
 );
 
 export const TeamDescription = styled.p(
-  ({ theme, theme: { medias } }) => `
-  ${ParagraphBody(theme)};
+  ({ theme: { medias } }) => `
+  ${ParagraphBody};
   width: 635px;
   @media ${medias.mobile} {
     width: 100%;

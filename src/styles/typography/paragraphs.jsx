@@ -1,21 +1,17 @@
-export const ParagraphBody = (theme) => `
-  color: ${theme.color.steel};
-  font-size: ${theme.fontSize.body};
-  font-weight: ${theme.fontWeight.body};
-  line-height: ${theme.lineHeight.body};
-  letter-spacing: ${theme.letterSpacing};
+import { color, fontSize, fontWeight, lineHeight, letterSpacing } from '../theme';
+
+export const ParagraphBody = `
+  color: ${color.steel};
+  font-size: ${fontSize.body};
+  font-weight: ${fontWeight.body};
+  line-height: ${lineHeight.body};
+  letter-spacing: ${letterSpacing};
 `;
 
-export const ParagraphSmall = (theme) => `
-  color: ${theme.color.steel};
-  font-size: ${theme.fontSize.bodySmall};
-  font-weight: ${theme.fontWeight.bodySmall};
-  line-height: ${theme.lineHeight.bodySmall};
-  letter-spacing: ${theme.letterSpacing};
+export const ParagraphSmall = `
+  color: ${color.steel};
+  font-size: ${fontSize.bodySmall};
+  font-weight: ${fontWeight.bodySmall};
+  line-height: ${lineHeight.bodySmall};
+  letter-spacing: ${letterSpacing};
 `;
-
-const paragraphs = {
-  ParagraphBody,
-  ParagraphSmall,
-};
-export default paragraphs;

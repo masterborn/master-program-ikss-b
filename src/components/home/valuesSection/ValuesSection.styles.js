@@ -16,22 +16,22 @@ export const StyledValuesSection = styled.section(
 );
 
 export const ValuesSectionTitle = styled.h3(
-  ({ theme, theme: { medias, color } }) => `
-  ${Header3(theme)};
+  ({ theme: { medias, color } }) => `
+  ${Header3};
   color: ${color.navy};
   text-align: center;
 
   @media ${medias.mobile}{
-    ${Header4(theme)};
+    ${Header4};
   }
 `,
 );
 
 export const ValuesSectionParagraph = styled.p(
-  ({ theme, theme: { medias, color } }) => `
+  ({ theme: { medias, color } }) => `
   width: 551px;
   margin-top: 32px;
-  ${ParagraphBody(theme)};
+  ${ParagraphBody};
   text-align: center;
   color: ${color.steel};
   @media ${medias.mobile} {

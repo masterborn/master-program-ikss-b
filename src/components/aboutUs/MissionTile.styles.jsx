@@ -46,20 +46,20 @@ export const MissionTextContainer = styled.div(
 `,
 );
 export const MissionHeader = styled.h2(
-  ({ theme, theme: { medias } }) => `
-  ${Header2(theme)};
+  ({ theme: { medias } }) => `
+  ${Header2};
   margin-bottom: 24px;
   @media ${medias.mobile} {
-    ${Header4(theme)};
+    ${Header4};
     margin-bottom: 16px;
   }
 `,
 );
 export const MissionDescription = styled.p(
-  ({ theme, theme: { medias } }) => `
-  ${ParagraphBody(theme)};
+  ({ theme: { medias } }) => `
+  ${ParagraphBody};
   @media ${medias.mobile} {
-    ${ParagraphSmall(theme)};
+    ${ParagraphSmall};
   }
 `,
 );

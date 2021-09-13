@@ -21,25 +21,25 @@ export const LogosSection = styled.section(
 `,
 );
 export const PartnersHeader = styled.h3(
-  ({ theme, theme: { medias } }) => `
+  ({ theme: { medias } }) => `
   margin-bottom: 32px;
-  ${Header3(theme)};
+  ${Header3};
   @media ${medias.mobile} {
-    ${Header4(theme)};
+    ${Header4};
     margin-bottom: 16px;
   }
 `,
 );
 
 export const PartnersDescription = styled.p(
-  ({ theme, theme: { medias } }) => `
+  ({ theme: { medias } }) => `
   text-align: center;
   width: 635px;
   height: 64px;
-  ${ParagraphBody(theme)};
+  ${ParagraphBody};
 
   @media ${medias.mobile} {
-    ${ParagraphSmall(theme)};
+    ${ParagraphSmall};
     width: 100%;
     max-width: 550px;
     height: auto;

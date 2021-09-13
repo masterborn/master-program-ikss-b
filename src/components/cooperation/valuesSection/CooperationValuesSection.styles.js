@@ -16,12 +16,12 @@ export const CooperationValuesSectionContainer = styled.div(
 `,
 );
 export const Title = styled.h3(
-  ({ theme, theme: { medias } }) => `
-  ${Header3(theme)};
+  ({ theme: { medias } }) => `
+  ${Header3};
   color: ${({ theme: { color } }) => color.navy};
 
   @media ${medias.mobile} {
-    ${Header4(theme)};
+    ${Header4};
   }
 `,
 );

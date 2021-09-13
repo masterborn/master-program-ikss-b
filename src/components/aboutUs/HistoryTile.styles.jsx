@@ -37,20 +37,20 @@ export const HistoryTextContainer = styled.div`
 `;
 
 export const HistoryHeader = styled.h2(
-  ({ theme, theme: { medias } }) => `
-  ${Header2(theme)};
+  ({ theme: { medias } }) => `
+  ${Header2};
   margin: 32px 0 16px 0;
   @media ${medias.mobile} {
-    ${Header4(theme)};
+    ${Header4};
   }
 `,
 );
 export const HistoryDescription = styled.p(
-  ({ theme, theme: { medias } }) => `
-  ${ParagraphBody(theme)};
+  ({ theme: { medias } }) => `
+  ${ParagraphBody};
 
   @media ${medias.mobile} {
-    ${ParagraphSmall(theme)};
+    ${ParagraphSmall};
   }
 `,
 );

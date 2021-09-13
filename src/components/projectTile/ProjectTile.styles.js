@@ -75,8 +75,8 @@ export const ProjectHeader = styled.div(
 );
 
 export const ProjectDate = styled.h5(
-  ({ theme, theme: { medias, color } }) => `
-  ${Header5(theme)};;
+  ({ theme: { medias, color } }) => `
+  ${Header5};;
   color: ${color.steel};
 
   @media ${medias.mobile} {
@@ -86,20 +86,20 @@ export const ProjectDate = styled.h5(
 );
 
 export const ProjectTitle = styled.h4(
-  ({ theme, theme: { medias } }) => `
-  ${Header4(theme)};
+  ({ theme: { medias } }) => `
+  ${Header4};
   margin: 0 24px 0 0;
   @media ${medias.mobile} {
-    ${Header5(theme)};
+    ${Header5};
     margin-bottom: 8px;
   }
 `,
 );
 export const ProjectDescription = styled.p(
-  ({ theme, theme: { medias } }) => `
-  ${ParagraphBody(theme)};
+  ({ theme: { medias } }) => `
+  ${ParagraphBody};
   @media ${medias.mobile} {
-    ${ParagraphSmall(theme)};
+    ${ParagraphSmall};
   }
 `,
 );

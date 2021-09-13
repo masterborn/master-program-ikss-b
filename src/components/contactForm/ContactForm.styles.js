@@ -101,19 +101,19 @@ export const TopSection = styled.div(
 );
 
 export const ContactFormTitle = styled.h3(
-  ({ theme, theme: { medias } }) => `
-  ${Header3(theme)};
+  ({ theme: { medias } }) => `
+  ${Header3};
   @media ${medias.mobile} {
-    ${Header5(theme)};
+    ${Header5};
   }
 `,
 );
 
 export const ContactFormDescription = styled.p(
-  ({ theme, theme: { medias } }) => `
-  ${ParagraphBody(theme)};
+  ({ theme: { medias } }) => `
+  ${ParagraphBody};
   @media ${medias.mobile} {
-    ${ParagraphSmall(theme)};
+    ${ParagraphSmall};
   }
 `,
 );
@@ -146,8 +146,8 @@ export const ContactFormLabel = styled.label(
 );
 
 export const ContactFormLabelParagraph = styled.p(
-  ({ theme, theme: { color } }) => `
-  ${ParagraphSmall(theme)};
+  ({ theme: { color } }) => `
+  ${ParagraphSmall};
   color: ${color.navy}
 `,
 );
@@ -210,8 +210,8 @@ export const RODOContainer = styled.div`
 `;
 
 export const RODO = styled.p(
-  ({ theme, theme: { medias, color } }) => `
-  ${ParagraphSmall(theme)};
+  ({ theme: { medias, color } }) => `
+  ${ParagraphSmall};
   color: ${color.steelTints.steel70};
 
   @media ${medias.mobile} {

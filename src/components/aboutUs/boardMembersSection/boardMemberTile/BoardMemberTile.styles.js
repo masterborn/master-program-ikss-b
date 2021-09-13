@@ -105,22 +105,22 @@ export const BoardMemberTileAvatar = styled.div(
 );
 
 export const NameText = styled.h4(
-  ({ theme, theme: { medias } }) => `
+  ({ theme: { medias } }) => `
   margin-top: 24px;
-  ${Header4(theme)};
+  ${Header4};
 
   @media ${medias.mobile} {
     margin-top: 16px;
 
-    ${Header5(theme)};
+    ${Header5};
   }
 `,
 );
 export const RoleText = styled.h5(
-  ({ theme, theme: { medias, color } }) => `
+  ({ theme: { medias, color } }) => `
   margin: 8px 24px 0;
   height: 48px;
-  ${Header5(theme)};
+  ${Header5};
   text-align: center;
   color: ${color.steel};
 

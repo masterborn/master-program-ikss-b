@@ -120,12 +120,12 @@ export const StyledSocials = styled(Socials)(
 );
 
 export const Header = styled.h1(
-  ({ theme, theme: { medias } }) => `
+  ({ theme: { medias } }) => `
   width: 100%;
-  ${Header1(theme)};
+  ${Header1};
 
   @media ${medias.mobile} {
-    ${Header4(theme)};
+    ${Header4};
   }
 `,
 );
@@ -135,16 +135,16 @@ export const HomepageHeroImage = styled.img`
 `;
 
 export const Paragraph = styled.p(
-  ({ theme, theme: { medias, color } }) => `
+  ({ theme: { medias, color } }) => `
   width: 100%;
   margin: 32px 0;
-  ${ParagraphBody(theme)};
+  ${ParagraphBody};
   color: ${color.steel};
 
   @media ${medias.mobile} {
     margin: 24px 0;
 
-    ${ParagraphSmall(theme)};
+    ${ParagraphSmall};
   }
 `,
 );

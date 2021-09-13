@@ -32,12 +32,12 @@ export const ProjectSection = styled.section(
 );
 
 export const SectionHeader = styled.h3(
-  ({ theme, theme: { medias } }) => `
+  ({ theme: { medias } }) => `
   margin-bottom: 32px;
-  ${Header3(theme)};
+  ${Header3};
 
   @media ${medias.mobile} {
-    ${Header4(theme)};
+    ${Header4};
     margin-bottom: 24px;
   }
 `,

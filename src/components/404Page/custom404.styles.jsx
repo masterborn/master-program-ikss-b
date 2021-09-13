@@ -50,13 +50,13 @@ export const IKKSLogo = styled(IKKSErrorImage)(
 );
 
 export const ErrorMessage = styled.h1(
-  ({ theme, theme: { medias } }) => `
+  ({ theme: { medias } }) => `
   margin-bottom: 32px;
 
-  ${Header1(theme)};
+  ${Header1};
   @media ${medias.mobile} {
     margin-bottom: 24px;
-    ${Header2(theme)};
+    ${Header2};
   }
 `,
 );

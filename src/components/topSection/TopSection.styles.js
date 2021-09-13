@@ -29,26 +29,26 @@ export const TopSectionImage = styled.img(
 );
 
 export const TopSectionHeader = styled.h1(
-  ({ theme, theme: { medias } }) => `
-  ${Header1(theme)};
+  ({ theme: { medias } }) => `
+  ${Header1};
   margin-top: 16px;
 
   @media ${medias.mobile} {
-    ${Header3(theme)};
+    ${Header3};
     margin-top: 8px;
   }
 `,
 );
 
 export const TopSectionDescription = styled.p(
-  ({ theme, theme: { medias } }) => `
+  ({ theme: { medias } }) => `
   margin-top: 32px;
   max-width: 996px;
   height: 96px;
-  ${ParagraphBody(theme)};
+  ${ParagraphBody};
 
   @media ${medias.mobile} {
-    ${ParagraphSmall(theme)};
+    ${ParagraphSmall};
     width: 100%;
     height: auto;
     margin-top: 24px;

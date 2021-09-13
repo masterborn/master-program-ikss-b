@@ -133,8 +133,8 @@ export const StyledLogo = styled(Logo)`
 `;
 
 export const Paragraph = styled.p(
-  ({ theme, theme: { medias, color } }) => `
-  ${ParagraphSmall(theme)};
+  ({ theme: { medias, color } }) => `
+  ${ParagraphSmall};
   margin-top: 56px;
   color: ${color.white};
 
