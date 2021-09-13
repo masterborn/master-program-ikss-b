@@ -3,35 +3,33 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { scrollToContactForm } from '@root/components/layout/navbar/contactFormButton';
+import SecondaryButton from '@root/components/buttons/secondaryButton';
 import {
-  StyledTopSection,
   Content,
   TextSection,
   Header,
   Paragraph,
   StyledSocials,
-  TopSectionImage,
-  TopSectionVideo,
-} from './TopSection.styles';
-import SecondaryButton from '../../buttons/secondaryButton';
+  HomepageHeroImage,
+  StyledHomepageHero,
+  HomepageHeroVideo,
+} from './HomepageHero.styles';
 
-export default function TopSection({ topSectionContent, socials }) {
-  const isMobile = useSelector((state) => state.isMobile);
-
-  const navbarHeight = isMobile ? '56px' : '88px';
-
+export default function HomepageHero({ homepageHeroContent, socials }) {
   const {
     title: sectionHeader,
     image1: { url: mediaUrl, title: mediaTitle },
     text1: richText,
-  } = topSectionContent;
+  } = homepageHeroContent;
+  const isMobile = useSelector((state) => state.isMobile);
+  const navbarHeight = isMobile ? '56px' : '88px';
 
   const urlIsImage = /.*.(jpg|png|jpeg)$/.test(mediaUrl);
   const Description = convertRichTextToReactComponent(Paragraph, richText);
   const handleClick = () => scrollToContactForm(navbarHeight);
 
   return (
-    <StyledTopSection className="hideNavSocials">
+    <StyledHomepageHero className="hideNavSocials">
       <Content>
         <TextSection>
           <Header>{sectionHeader}</Header>
@@ -41,9 +39,9 @@ export default function TopSection({ topSectionContent, socials }) {
           </SecondaryButton>
         </TextSection>
         {urlIsImage ? (
-          <TopSectionImage src={mediaUrl} alt={mediaTitle} />
+          <HomepageHeroImage src={mediaUrl} alt={mediaTitle} />
         ) : (
-          <TopSectionVideo
+          <HomepageHeroVideo
             src={`https:${mediaUrl}`}
             alt={mediaTitle}
             width={808}
@@ -55,12 +53,12 @@ export default function TopSection({ topSectionContent, socials }) {
       </Content>
 
       <StyledSocials socialsLinks={socials} showLabel={!isMobile} />
-    </StyledTopSection>
+    </StyledHomepageHero>
   );
 }
 
-TopSection.propTypes = {
-  topSectionContent: PropTypes.shape({
+HomepageHero.propTypes = {
+  homepageHeroContent: PropTypes.shape({
     title: PropTypes.string,
     image1: PropTypes.shape({
       url: PropTypes.string,

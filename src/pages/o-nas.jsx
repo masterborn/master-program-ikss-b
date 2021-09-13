@@ -8,6 +8,7 @@ import HistoryTile from '@root/components/aboutUs/HistoryTile';
 import TeamTile from '@root/components/aboutUs/TeamTile';
 import BoardMembersSection from '@root/components/aboutUs/boardMembersSection';
 import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
+import TopSection from '@root/components/topSection/TopSection';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
@@ -37,6 +38,7 @@ export default function AboutUs({ aboutUsData: { common, basicContent, boardMemb
     'footer-text': footerText,
   } = common;
   const {
+    'about-us-top-section': topSectionContent,
     'about-us-content-1': missionContent,
     'about-us-content-2': historyContent,
     'about-us-content-3': teamContent,
@@ -51,6 +53,8 @@ export default function AboutUs({ aboutUsData: { common, basicContent, boardMemb
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
+      <TopSection topSectionContent={topSectionContent} sectionId="o-nas" />
+
       <MissionTile missionContent={missionContent} />
       <HistoryTile historyContent={historyContent} />
       <BoardMembersSection
@@ -80,6 +84,7 @@ AboutUs.propTypes = {
       'about-us-content-3': PropTypes.shape({}),
       'about-us-board-members-text': PropTypes.shape({}),
       'about-us-bottom-cta': PropTypes.shape({}),
+      'about-us-top-section': PropTypes.shape({}),
     }).isRequired,
     boardMembers: PropTypes.arrayOf(PropTypes.object).isRequired,
   }).isRequired,

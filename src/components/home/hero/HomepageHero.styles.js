@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import Socials from '../../icons/SocialsCollection';
+import Socials from '@root/components/layout/footer/Socials';
 import { Header1 } from '../../typography/headers';
 import { ParagraphBody } from '../../typography/paragraphs';
 
-export const StyledTopSection = styled.section`
+export const StyledHomepageHero = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -42,19 +42,7 @@ export const TextSection = styled.div`
   }
 `;
 
-export const TopSectionImage = styled.img`
-  width: 808px;
-  height: 505px;
-
-  @media (max-width: 550px) {
-    order: 1;
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-  }
-`;
-
-export const TopSectionVideo = styled.video`
+export const HomepageHeroVideo = styled.video`
   width: 808px;
   height: 505px;
 
@@ -128,6 +116,10 @@ export const Header = styled(Header1)`
     font-size: 32px;
     line-height: 44px;
   }
+`;
+export const HomepageHeroImage = styled.img`
+  width: 808px;
+  height: 505px;
 `;
 
 export const Paragraph = styled(ParagraphBody)`

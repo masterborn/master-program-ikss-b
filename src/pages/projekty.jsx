@@ -5,6 +5,7 @@ import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
 import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
 import ProjectsMasonry from '@root/components/cooperation/ProjectsMasonry';
+import TopSection from '@root/components/topSection/TopSection';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
@@ -25,6 +26,7 @@ export async function getStaticProps() {
 
 export default function Projects({ projectsData: { basicContent, projects, common } }) {
   const {
+    'projects-top-section': topSectionContent,
     'projects-bottom-cta-text': bottomCtaContent,
     'projects-middle-cta-text': midCtaContent,
   } = basicContent;
@@ -47,6 +49,8 @@ export default function Projects({ projectsData: { basicContent, projects, commo
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
+      <TopSection topSectionContent={topSectionContent} sectionId="projekty" />
+
       <ProjectsMasonry midCtaContent={midCtaContent} projectsData={projects} />
       <BottomCta bottomCtaContent={bottomCtaContent} />
     </Layout>
@@ -65,9 +69,9 @@ Projects.propTypes = {
       'footer-text': PropTypes.shape({}),
     }),
     basicContent: PropTypes.shape({
-      'projects-top-section': PropTypes.shape({}),
       'projects-bottom-cta-text': PropTypes.shape({}),
       'projects-middle-cta-text': PropTypes.shape({}),
+      'projects-top-section': PropTypes.shape({}),
     }),
     projects: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,

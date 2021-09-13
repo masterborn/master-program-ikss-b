@@ -6,6 +6,7 @@ import Layout from '@root/components/layout';
 import PartnersSection from '@root/components/home/partnersList/PartnersSection';
 import CooperationValuesSection from '@root/components/cooperation/valuesSection';
 import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
+import TopSection from '@root/components/topSection/TopSection';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
@@ -35,6 +36,7 @@ export default function Cooperation({ cooperationData: { common, partners, basic
   } = common;
 
   const {
+    'cooperation-top-section': topSectionContent,
     'cooperation-logos-text': partnersText,
     'cooperation-tiles-title': valuesTitle,
     'cooperation-tile-1': cooperationTile1,
@@ -61,7 +63,7 @@ export default function Cooperation({ cooperationData: { common, partners, basic
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
-      <TopSection />
+      <TopSection isOnCooperation topSectionContent={topSectionContent} sectionId="współpraca" />
       <CooperationValuesSection valuesTiles={valuesTiles} valuesTitle={valuesTitle} />
       <PartnersSection partners={orderedPartners} partnersText={partnersText} />
       <BottomCta bottomCtaContent={bottomCtaContent} />
@@ -90,6 +92,7 @@ Cooperation.propTypes = {
       'cooperation-tile-4': PropTypes.shape({}),
       'cooperation-tile-5': PropTypes.shape({}),
       'cooperation-bottom-cta': PropTypes.shape({}),
+      'cooperation-top-section': PropTypes.shape({}),
     }),
   }).isRequired,
 };

@@ -6,7 +6,7 @@ import Layout from '@root/components/layout';
 import ProjectsSection from '@root/components/home/projects/ProjectsSection';
 import PartnersSection from '@root/components/home/partnersList/PartnersSection';
 import sortHomepagePartners from '@root/dataMappers/partners';
-import TopSection from '../components/home/topSection';
+import HomepageHero from '../components/home/hero';
 import ValuesSection from '../components/home/valuesSection';
 import ContactForm from '../components/contactForm';
 
@@ -31,7 +31,7 @@ export async function getStaticProps() {
 export default function Homepage({ homepageData: { partners, basicContent, common, projects } }) {
   const {
     'homepage-partners-text': partnersText,
-    'homepage-top-section': topSectionContent,
+    'homepage-top-section': homepageHeroContent,
     'homepage-values': valuesText,
     'homepage-tile-1': homepageTile1,
     'homepage-tile-2': homepageTile2,
@@ -57,7 +57,7 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
       contactFormText={contactFormText}
       tooltipText={tooltipText}
     >
-      <TopSection topSectionContent={topSectionContent} socials={socials} />
+      <HomepageHero homepageHeroContent={homepageHeroContent} socials={socials} />
       <ValuesSection valuesText={valuesText} valuesTiles={valuesTiles} />
       <ProjectsSection projects={projects} />
       <PartnersSection partners={homepagePartners} partnersText={partnersText} />
@@ -65,8 +65,6 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
     </Layout>
   );
 }
-
-
 
 Homepage.propTypes = {
   homepageData: PropTypes.shape({
