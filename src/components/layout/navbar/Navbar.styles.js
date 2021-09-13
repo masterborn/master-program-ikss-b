@@ -14,9 +14,9 @@ export const StyledNavbar = styled.nav`
 
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
 
-  z-index: 9999;
+  z-index: 99;
 
   background: ${(props) => props.theme.color.white};
   box-shadow: 0px 4px 16px rgba(97, 121, 139, 0.1);
@@ -24,6 +24,14 @@ export const StyledNavbar = styled.nav`
   @media (max-width: 550px) {
     height: 56px;
   }
+`;
+
+export const FooterWrapper = styled.div`
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
 
 export const LinksContainer = styled.div`
