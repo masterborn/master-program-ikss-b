@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
 
 export const ButtonSmallText = css`
-  font-weight: 700;
+  font-weight: bold;
   font-size: 14px;
-  line-height: 180px;
+  line-height: 18px;
 `;
 
 export const ButtonBigText = css`

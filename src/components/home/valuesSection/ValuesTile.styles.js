@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { Header5 } from '@root/styles/typography/headers';
-import { ParagraphBody } from '@root/styles/typography/paragraphs';
+import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 
-export const StyledValueTile = styled.div`
+export const StyledValueTile = styled.div(
+  ({ theme: { medias, color }, isOnHomepage }) => `
   width: 384px;
   height: 384px;
   display: flex;
@@ -14,88 +15,96 @@ export const StyledValueTile = styled.div`
 
   z-index: 0;
 
-  background-color: ${({ theme: { color } }) => color.white};
+  background-color: ${color.white};
   box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
     1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
     0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
   border-radius: 16px;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 90%;
     min-width: 300px;
     max-width: 384px;
-    height: ${({ isOnHomepage }) => (isOnHomepage ? '334px' : '350px')};
+    height: ${isOnHomepage ? '334px' : '350px'};
 
     display: block;
   }
-`;
+`,
+);
 
-export const ValueTileContent = styled.div`
+export const ValueTileContent = styled.div(
+  ({ theme: { medias }, isOnHomepage }) => `
   position: relative;
-  top: ${({ isOnHomepage }) => isOnHomepage && '-62px'};
+  top: ${isOnHomepage && '-62px'};
 
-  margin: ${({ isOnHomepage }) => !isOnHomepage && '32px 0 -14px'};
+  margin: ${!isOnHomepage && '32px 0 -14px'};
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   img {
-    width: ${({ isOnHomepage }) => !isOnHomepage && '214px'};
-    height: ${({ isOnHomepage }) => !isOnHomepage && '142px'};
+    width: ${!isOnHomepage && '214px'};
+    height: ${!isOnHomepage && '142px'};
   }
 
-  @media (max-width: 550px) {
-    top: ${({ isOnHomepage }) => isOnHomepage && '-38px'};
-    margin-bottom: ${({ isOnHomepage }) => isOnHomepage && '-14px'};
+  @media ${medias.mobile} {
+    top: ${isOnHomepage && '-38px'};
+    margin-bottom: ${isOnHomepage && '-14px'};
 
     img {
-      width: ${({ isOnHomepage }) => (isOnHomepage ? '184px' : '197px')};
-      height: ${({ isOnHomepage }) => (isOnHomepage ? '144px' : '121px')};
+      width: ${isOnHomepage ? '184px' : '197px'};
+      height: ${isOnHomepage ? '144px' : '121px'};
     }
   }
-`;
+`,
+);
 
-export const ValueTileImageFiller = styled.div`
-  width: ${({ isOnHomepage }) => (isOnHomepage ? '232px' : '214px')};
-  height: ${({ isOnHomepage }) => (isOnHomepage ? '232px' : '142px')};
+export const ValueTileImageFiller = styled.div(
+  ({ theme: { medias }, isOnHomepage }) => `
+  width: ${isOnHomepage ? '232px' : '214px'};
+  height: ${isOnHomepage ? '232px' : '142px'};
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 133px;
     height: 133px;
-    width: ${({ isOnHomepage }) => (isOnHomepage ? '133px' : '214px')};
-    height: ${({ isOnHomepage }) => (isOnHomepage ? '133px' : '214px')};
+    width: ${isOnHomepage ? '133px' : '214px'};
+    height: ${isOnHomepage ? '133px' : '214px'};
   }
-`;
+`,
+);
 
-export const ValueTileTitle = styled(Header5)`
+export const ValueTileTitle = styled.h5(
+  ({ theme, theme: { medias, color } }) => `
   margin: 20px 24px 0;
-
   height: 72px;
-  color: ${({ theme: { color } }) => color.navy};
+  ${Header5(theme)};
+  color: ${color.navy};
   overflow: hidden;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     margin: 20px 20px 0;
     height: 48px;
   }
-`;
-export const ValueTileParagraph = styled(ParagraphBody)`
+`,
+);
+export const ValueTileParagraph = styled.p(
+  ({ theme, theme: { medias, color } }) => `
   margin: 0 24px;
 
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-
+  ${ParagraphBody(theme)};
   text-align: center;
-  color: ${({ theme: { color } }) => color.steel};
+  color: ${color.steel};
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     margin: 12px 20px 0;
 
-    font-size: 14px;
-    line-height: 28px;
+    ${ParagraphSmall(theme)};
   }
-`;
+`,
+);

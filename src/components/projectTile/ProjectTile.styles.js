@@ -3,99 +3,115 @@ import { Header4, Header5 } from '@root/styles/typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
-export const ProjectArticle = styled.article`
+export const ProjectArticle = styled.article(
+  ({ theme: { medias }, isOnGrid }) => `
   display: flex;
   flex-direction: column;
   border-radius: 16px;
-  width: ${(props) => (props.isOnGrid ? '588px' : '997px')};
+  width: ${isOnGrid ? '588px' : '997px'};
   height: auto;
-  margin-bottom: ${(props) => (props.isOnGrid ? '24px' : '56px')};
+  margin-bottom: ${isOnGrid ? '24px' : '56px'};
   box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
     1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
     0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 100%;
   }
   a {
-    margin-top: ${(props) => (props.isOnGrid ? '24px' : '32px')};
+    margin-top: ${isOnGrid ? '24px' : '32px'};
 
     color: inherit;
     text-decoration: none;
-    @media (max-width: 550px) {
+    @media ${medias.mobile} {
       display: flex;
       justify-content: center;
     }
   }
   &:nth-child(2n) {
-    order: ${(props) => props.isOnGrid && 2};
+    order: ${isOnGrid && 2};
   }
   &:nth-child(2n + 1) {
-    order: ${(props) => props.isOnGrid && 1};
+    order: ${isOnGrid && 1};
   }
-`;
-export const ProjectMediaContainer = styled.div`
+`,
+);
+export const ProjectMediaContainer = styled.div(
+  ({ theme: { medias } }) => `
   border-radius: 16px 16px 0 0;
   height: auto;
   width: 100%;
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     height: auto;
   }
-`;
-export const ProjectSummary = styled.div`
+`,
+);
+export const ProjectSummary = styled.div(
+  ({ theme: { medias }, isOnGrid }) => `
   display: flex;
   flex-direction: column;
   height: auto;
   width: 100%;
-  padding: ${(props) => (props.isOnGrid ? '32px 32px 40px 32px' : '64px 102px 66px 103px')};
-  @media (max-width: 550px) {
+  padding: ${isOnGrid ? '32px 32px 40px 32px' : '64px 102px 66px 103px'};
+  @media ${medias.mobile} {
     padding: 24px 26px 32px 24px;
   }
-`;
-export const ProjectHeader = styled.div`
+`,
+);
+export const ProjectHeader = styled.div(
+  ({ theme: { medias }, isOnGrid }) => `
   display: flex;
   align-items: flex-end;
   text-align: center;
-  margin-bottom: ${(props) => (props.isOnGrid ? '28px' : '32px')};
-  @media (max-width: 550px) {
+  margin-bottom: ${isOnGrid ? '28px' : '32px'};
+  @media ${medias.mobile} {
     text-align: left;
     margin-bottom: 16px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
   }
-`;
+`,
+);
 
-export const ProjectDate = styled.h5`
-  ${Header5};
-  color: ${(props) => props.theme.color.steel};
+export const ProjectDate = styled.h5(
+  ({ theme, theme: { medias, color } }) => `
+  ${Header5(theme)};;
+  color: ${color.steel};
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     ${ButtonSmallText}
   }
-`;
+`,
+);
 
-export const ProjectTitle = styled.h4`
-  ${Header4}
+export const ProjectTitle = styled.h4(
+  ({ theme, theme: { medias } }) => `
+  ${Header4(theme)};
   margin: 0 24px 0 0;
-  @media (max-width: 550px) {
-    ${Header5}
+  @media ${medias.mobile} {
+    ${Header5(theme)};
     margin-bottom: 8px;
   }
-`;
-export const ProjectDescription = styled.p`
-  ${ParagraphBody}
-  @media (max-width: 550px) {
-    ${ParagraphSmall}
+`,
+);
+export const ProjectDescription = styled.p(
+  ({ theme, theme: { medias } }) => `
+  ${ParagraphBody(theme)};
+  @media ${medias.mobile} {
+    ${ParagraphSmall(theme)};
   }
-`;
+`,
+);
 
-export const ProjectImage = styled.img`
+export const ProjectImage = styled.img(
+  ({ theme: { medias } }) => `
   width: 100%;
   height: auto;
   border-radius: 16px 16px 0 0;
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     max-width: 100%;
     height: auto;
   }
-`;
+`,
+);

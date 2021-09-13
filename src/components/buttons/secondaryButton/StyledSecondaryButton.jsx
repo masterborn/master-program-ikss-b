@@ -1,34 +1,34 @@
 import styled, { css } from 'styled-components';
+import { ButtonBigText, ButtonSmallText } from '@root/styles/typography/buttonsText';
 
 const defaultVariantStyles = css`
   height: 36px;
-  font-size: 14px;
+  ${ButtonSmallText};
   padding: 0.5em 0.88em 0.5em 0.88em;
 `;
 
 const largeVariantStyles = css`
   height: 48px;
-  font-size: 16px;
+  ${ButtonBigText};
   padding: 0.7em 1.2em 0.7em 1.2em;
 `;
 
-const StyledSecondaryButton = styled.button`
+const StyledSecondaryButton = styled.button(
+  ({ theme: { color }, large }) => `
   display: flex;
   align-items: center;
   justify-content: center;
 
-  ${({ large }) => (large ? largeVariantStyles : defaultVariantStyles)}
+  ${large ? largeVariantStyles : defaultVariantStyles};
 
-  font-weight: 700;
-
-  border: 2px solid ${(props) => props.theme.color.navy};
+  border: 2px solid ${color.navy};
   border-radius: 2em;
-  color: ${(props) => props.theme.color.navy};
-  background-color: ${(props) => props.theme.color.white};
+  color: ${color.navy};
+  background-color: ${color.white};
   & > .icon {
     height: 1em;
     margin-right: 6.5px;
-    fill: ${(props) => props.theme.color.navy};
+    fill: ${color.navy};
   }
   &:hover {
     border-color: #3c4863;
@@ -54,6 +54,7 @@ const StyledSecondaryButton = styled.button`
       fill: #babec8;
     }
   }
-`;
+`,
+);
 
 export default StyledSecondaryButton;

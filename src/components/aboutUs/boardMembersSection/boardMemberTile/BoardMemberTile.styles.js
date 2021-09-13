@@ -1,12 +1,14 @@
 import styled, { css } from 'styled-components';
 import IconButton from '@root/components/buttons/misc/IconButton';
 import { Header4, Header5 } from '@root/styles/typography/headers';
+import { ButtonSmallText } from '@root/styles/typography/buttonsText';
 import toggleTileVisibility from './TileAnimations.styles';
 
-export const BoardMemberTileWrapper = styled.div`
+export const BoardMemberTileWrapper = styled.div(
+  ({ theme: { medias } }) => `
   margin: 12px;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 100%;
     min-height: fit-content;
     margin: 12px 0;
@@ -16,7 +18,8 @@ export const BoardMemberTileWrapper = styled.div`
     flex-direction: column;
     align-items: center;
   }
-`;
+`,
+);
 
 const toggleButtonOnCollapsedTile = css`
   position: absolute;
@@ -41,13 +44,16 @@ const toggleButtonOnExpandedTile = css`
   }
 `;
 
-export const ToggleButton = styled(IconButton)`
-  ${({ isTileOpened }) => (isTileOpened ? toggleButtonOnExpandedTile : toggleButtonOnCollapsedTile)}
+export const ToggleButton = styled(IconButton)(
+  ({ isTileOpened }) => `
+  ${isTileOpened ? toggleButtonOnExpandedTile : toggleButtonOnCollapsedTile}
   z-index: 1;
   transition: transform linear 0.2s;
-`;
+`,
+);
 
-export const StyledBoardMemberTile = styled.div`
+export const StyledBoardMemberTile = styled.div(
+  ({ theme: { medias, color }, isTileOpened }) => `
   width: 384px;
   height: 480px;
 
@@ -56,13 +62,13 @@ export const StyledBoardMemberTile = styled.div`
   align-items: center;
 
   border-radius: 16px;
-  background-color: ${({ theme: { color } }) => color.white};
+  background-color: ${color.white};
   box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
     1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
     0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 90%;
     max-width: 384px;
     min-width: 300px;
@@ -70,19 +76,21 @@ export const StyledBoardMemberTile = styled.div`
     opacity: 1;
     overflow: hidden;
 
-    ${({ isTileOpened }) => toggleTileVisibility(isTileOpened, '423px')}
+    ${toggleTileVisibility(isTileOpened, '423px')}
   }
-`;
+`,
+);
 
-export const BoardMemberTileAvatar = styled.div`
+export const BoardMemberTileAvatar = styled.div(
+  ({ theme: { medias, color } }) => `
   width: 164px;
   height: 164px;
   margin: 32px auto 0;
   border-radius: 50%;
 
-  background-color: ${({ theme: { color } }) => color.blueTints.blue20};
+  background-color: ${color.blueTints.blue20};
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 151px;
     min-width: 151px;
     height: 151px;
@@ -93,32 +101,36 @@ export const BoardMemberTileAvatar = styled.div`
   img {
     border-radius: 50%;
   }
-`;
-export const NameText = styled(Header4)`
-  margin-top: 24px;
-  color: ${({ theme: { color } }) => color.navy};
+`,
+);
 
-  @media (max-width: 550px) {
+export const NameText = styled.h4(
+  ({ theme, theme: { medias } }) => `
+  margin-top: 24px;
+  ${Header4(theme)};
+
+  @media ${medias.mobile} {
     margin-top: 16px;
 
-    font-size: 18px;
-    line-height: 24px;
+    ${Header5(theme)};
   }
-`;
-export const RoleText = styled(Header5)`
+`,
+);
+export const RoleText = styled.h5(
+  ({ theme, theme: { medias, color } }) => `
   margin: 8px 24px 0;
   height: 48px;
-
+  ${Header5(theme)};
   text-align: center;
-  color: ${({ theme: { color } }) => color.steel};
+  color: ${color.steel};
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     margin-top: 8px;
     height: 36px;
-    font-size: 14px;
-    line-height: 18px;
+    ${ButtonSmallText}
   }
-`;
+`,
+);
 export const ContactContainer = styled.div`
   margin-top: 12px;
   height: 48px;
@@ -126,19 +138,21 @@ export const ContactContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-export const ContactLink = styled.a`
-  margin-top: ${({ isBottom }) => (isBottom ? 'auto' : '0')};
-  color: ${({ theme: { color } }) => color.ikssBlue};
-  font-weight: bold;
+export const ContactLink = styled.a(
+  ({ theme: { color }, isBottom }) => `
+  margin-top: ${isBottom ? 'auto' : '0'};
+  color: ${color.ikssBlue};
+  ${ButtonSmallText}
   text-decoration: none;
-  font-size: 14px;
-  line-height: 18px;
-`;
-export const LinkedInButton = styled.a`
+`,
+);
+export const LinkedInButton = styled.a(
+  ({ theme: { medias } }) => `
   margin: auto 0 40px;
   text-decoration: none;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     margin-bottom: 32px;
   }
-`;
+`,
+);

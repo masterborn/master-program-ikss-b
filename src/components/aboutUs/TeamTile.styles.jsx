@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { Header3, Header4 } from '../../styles/typography/headers';
 import { ParagraphBody } from '../../styles/typography/paragraphs';
 
-export const TeamTileContainer = styled.div`
+export const TeamTileContainer = styled.div(
+  ({ theme: { medias } }) => `
   margin: 164px 0 148px;
   display: flex;
   flex-direction: column;
@@ -10,42 +11,49 @@ export const TeamTileContainer = styled.div`
   width: 996px;
   height: auto;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 100%;
     margin: 80px 0 130px;
 
     padding: 0 24px;
   }
-`;
+`,
+);
 
-export const TeamHeader = styled.h3`
-  ${Header3}
+export const TeamHeader = styled.h3(
+  ({ theme, theme: { medias } }) => `
+  ${Header3(theme)};
   margin-bottom: 32px;
-  @media (max-width: 550px) {
-    ${Header4}
+  @media ${medias.mobile} {
+    ${Header4(theme)};
     margin-bottom: 16px;
   }
-`;
+`,
+);
 
-export const TeamDescription = styled.p`
-  ${ParagraphBody}
+export const TeamDescription = styled.p(
+  ({ theme, theme: { medias } }) => `
+  ${ParagraphBody(theme)};
   width: 635px;
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 100%;
     text-align: center;
   }
-`;
+`,
+);
 
-export const TeamImage = styled.img`
+export const TeamImage = styled.img(
+  ({ theme: { medias } }) => `
   width: 996px;
   height: auto;
   max-height: 505px;
   margin-top: 64px;
   border-radius: 16px;
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     min-height: 150px;
     height: 50vw;
     width: 100%;
     margin-top: 32px;
   }
-`;
+`,
+);

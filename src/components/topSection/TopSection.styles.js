@@ -2,7 +2,8 @@ import { Header1, Header3 } from '@root/styles/typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
-export const TopSectionContainer = styled.section`
+export const TopSectionContainer = styled.section(
+  ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,39 +12,46 @@ export const TopSectionContainer = styled.section`
 
   height: auto;
   text-align: center;
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     padding: 0 24px;
     width: auto;
   }
-`;
-export const TopSectionImage = styled.img`
+`,
+);
+export const TopSectionImage = styled.img(
+  ({ theme: { medias } }) => `
   margin-top: 64px;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     margin-top: 32px;
   }
-`;
+`,
+);
 
-export const TopSectionHeader = styled.h1`
-  ${Header1}
+export const TopSectionHeader = styled.h1(
+  ({ theme, theme: { medias } }) => `
+  ${Header1(theme)};
   margin-top: 16px;
 
-  @media (max-width: 550px) {
-    ${Header3}
+  @media ${medias.mobile} {
+    ${Header3(theme)};
     margin-top: 8px;
   }
-`;
+`,
+);
 
-export const TopSectionDescription = styled.p`
+export const TopSectionDescription = styled.p(
+  ({ theme, theme: { medias } }) => `
   margin-top: 32px;
   max-width: 996px;
   height: 96px;
-  ${ParagraphBody}
+  ${ParagraphBody(theme)};
 
-  @media (max-width: 550px) {
-    ${ParagraphSmall}
+  @media ${medias.mobile} {
+    ${ParagraphSmall(theme)};
     width: 100%;
     height: auto;
     margin-top: 24px;
   }
-`;
+`,
+);
