@@ -1,5 +1,6 @@
+import { ButtonSmallText } from '@root/styles/typography/buttonsText';
 import { Header4, Header5 } from '@root/styles/typography/headers';
-import { ParagraphBody } from '@root/styles/typography/paragraphs';
+import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
 export const ProjectArticle = styled.article`
@@ -70,24 +71,22 @@ export const ProjectDate = styled.h5`
   color: ${(props) => props.theme.color.steel};
 
   @media (max-width: 550px) {
-    font-size: 14px;
-    line-height: 17.57px;
-    weight: 700;
+    ${ButtonSmallText}
   }
 `;
 
-export const ProjectTitle = styled(Header4)`
+export const ProjectTitle = styled.h4`
+  ${Header4}
   margin: 0 24px 0 0;
   @media (max-width: 550px) {
+    ${Header5}
     margin-bottom: 8px;
-    font-size: 18px;
-    line-height: 24px;
   }
 `;
-export const ProjectDescription = styled(ParagraphBody)`
+export const ProjectDescription = styled.p`
+  ${ParagraphBody}
   @media (max-width: 550px) {
-    font-size: 14px;
-    line-height: 28px;
+    ${ParagraphSmall}
   }
 `;
 

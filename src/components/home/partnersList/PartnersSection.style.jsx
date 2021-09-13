@@ -1,5 +1,5 @@
-import { Header3 } from '@root/styles/typography/headers';
-import { ParagraphBody } from '@root/styles/typography/paragraphs';
+import { Header3, Header4 } from '@root/styles/typography/headers';
+import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
 export const LogosSection = styled.section`
@@ -18,24 +18,23 @@ export const LogosSection = styled.section`
     height: auto;
   } ;
 `;
-export const PartnersHeader = styled(Header3)`
+export const PartnersHeader = styled.h3`
   margin-bottom: 32px;
-
+  ${Header3}
   @media (max-width: 500px) {
+    ${Header4}
     margin-bottom: 16px;
-    font-size: 24px;
-    line-height: 32px;
   }
 `;
 
-export const PartnersDescription = styled(ParagraphBody)`
+export const PartnersDescription = styled.p`
   text-align: center;
   width: 635px;
   height: 64px;
+  ${ParagraphBody}
 
   @media (max-width: 550px) {
-    font-size: 14px;
-    line-height: 28px;
+    ${ParagraphSmall}
     width: 100%;
     max-width: 550px;
     height: auto;

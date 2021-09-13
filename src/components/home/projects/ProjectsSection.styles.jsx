@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Header3 } from '@root/styles/typography/headers';
+import { Header3, Header4 } from '@root/styles/typography/headers';
 
 export const ProjectSection = styled.section`
   display: flex;
@@ -29,12 +29,12 @@ export const ProjectSection = styled.section`
   }
 `;
 
-export const SectionHeader = styled(Header3)`
+export const SectionHeader = styled.h3`
   margin-bottom: 32px;
+  ${Header3}
 
   @media (max-width: 550px) {
+    ${Header4}
     margin-bottom: 24px;
-    font-size: 24px;
-    line-height: 32px;
   }
 `;

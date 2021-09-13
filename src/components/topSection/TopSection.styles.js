@@ -1,5 +1,5 @@
-import { Header1 } from '@root/styles/typography/headers';
-import { ParagraphBody } from '@root/styles/typography/paragraphs';
+import { Header1, Header3 } from '@root/styles/typography/headers';
+import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
 export const TopSectionContainer = styled.section`
@@ -7,7 +7,7 @@ export const TopSectionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: ${(props) => (props.isOnCooperationPage ? '583px' : 'auto')};
+  width: ${({ isOnCooperationPage }) => (isOnCooperationPage ? '583px' : 'auto')};
 
   height: auto;
   text-align: center;
@@ -24,27 +24,26 @@ export const TopSectionImage = styled.img`
   }
 `;
 
-export const TopSectionHeader = styled(Header1)`
+export const TopSectionHeader = styled.h1`
+  ${Header1}
   margin-top: 16px;
 
   @media (max-width: 550px) {
+    ${Header3}
     margin-top: 8px;
-    font-size: 32px;
-    line-height: 44px;
   }
 `;
 
-export const TopSectionDescription = styled(ParagraphBody)`
+export const TopSectionDescription = styled.p`
   margin-top: 32px;
   max-width: 996px;
   height: 96px;
+  ${ParagraphBody}
 
   @media (max-width: 550px) {
+    ${ParagraphSmall}
     width: 100%;
     height: auto;
-
     margin-top: 24px;
-    font-size: 14px;
-    line-height: 28px;
   }
 `;

@@ -1,3 +1,4 @@
+import { ButtonBigText } from '@root/styles/typography/buttonsText';
 import styled from 'styled-components';
 
 export const ProjectsSwitchContainer = styled.div`
@@ -30,9 +31,7 @@ export const DateSwitchButton = styled.button`
   color: ${(props) => (props.clicked ? props.theme.color.white : props.theme.color.navy)};
   background-color: ${(props) =>
     props.clicked ? props.theme.color.ikssBlue : props.theme.color.blueTints.blue10};
-  font-weight: 700;
-  line-height: 20px;
-  font-size: 16px;
+  ${ButtonBigText}
   cursor: pointer;
 
   @media (max-width: 550px) {
