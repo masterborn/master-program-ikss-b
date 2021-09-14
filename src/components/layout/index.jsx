@@ -11,7 +11,7 @@ import {
 } from './Layout.styles';
 import Navbar from './navbar';
 import Footer from './footer';
-import ContactFormModal from '../contactForm/contactModal';
+import ContactFormModal from '../Generic/contactForm/contactModal';
 
 const paths = [
   {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import IconButton from '@root/components/buttons/misc/IconButton';
-import PrimaryButton from '@root/components/buttons/primaryButton';
-import Socials from '@root/components/icons/SocialsCollection';
+import IconButton from '@root/components/Generic/buttons/misc/IconButton';
+import PrimaryButton from '@root/components/Generic/buttons/primaryButton';
+import Socials from '@root/components/Generic/icons/SocialsCollection';
 import { ButtonBigText } from '@root/styles/typography/buttonsText';
 
 export const SidebarContainer = styled.div(

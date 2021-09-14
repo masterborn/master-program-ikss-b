@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import SocialsCollection from '../../icons/SocialsCollection';
+import SocialsCollection from '../../Generic/icons/SocialsCollection';
 
 // Add 'hideNavSocials' class to a section,
 // to specify if navbar's social icons should be hidden

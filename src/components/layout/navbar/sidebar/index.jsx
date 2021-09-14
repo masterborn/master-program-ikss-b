@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import hideOverflowOnBody from '@root/redux/actions/hideOverflowOnBodyActions';
 import Link from 'next/link';
-import { XIcon } from '@root/components/icons/misc';
+import { XIcon } from '@root/components/Generic/icons/misc';
 import {
   SidebarContainer,
   SidebarBackground,

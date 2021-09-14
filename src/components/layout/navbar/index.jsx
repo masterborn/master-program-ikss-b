@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleModal } from '@root/redux/actions/modalActions';
-import { HamburgerMenuIcon } from '@root/components/icons/misc';
+import { HamburgerMenuIcon } from '@root/components/Generic/icons/misc';
 import {
   StyledNavbar,
   FooterWrapper,

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
-import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
-import ProjectsMasonry from '@root/components/cooperation/ProjectsMasonry';
-import TopSection from '@root/components/topSection/TopSection';
+import BottomCta from '@root/components/Generic/CallToAction/bottomCta/BottomCta';
+import ProjectsMasonry from '@root/components/pages/cooperation/ProjectsMasonry';
+import TopSection from '@root/components/Generic/topSection/TopSection';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();

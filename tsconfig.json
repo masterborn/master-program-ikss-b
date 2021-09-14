@@ -24,6 +24,24 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
+      "@home/*": ["./src/components/pages/home/*"],
+      "@aboutUs/*": ["./src/components/pages/aboutUs/*"],
+      "@cooperation/*": ["./src/components/pages/cooperation/*"],
+      "@404page/*": ["./src/components/pages/404Page/*"],
+      "@layout/*": ["./src/components/layout/*"],
+      "@generic/*": ["./src/components/Generic/*"],
+      "@cta/*": ["./src/components/Generic/CallToAction/*"],
+      "@topSection/*": ["./src/components/Generic/topSection/*"],
+      "@icons/*": ["./src/components/Generic/icons/*"],
+      "@formElements/*": ["./src/components/Generic/formElements/*"],
+      "@valueTiles/*": ["./src/components/Generic/ValueTiles/*"],
+      "@partnerTiles/*": ["./src/components/Generic/partnersList/*"],
+      "@buttons/*": ["./src/components/Generic/buttons/*"],
+
+
+
+
+
       "@root/*": ["./src/*"],
       "@api/*": ["./src/api/*"],
       "@api": ["./src/api/index.ts"],

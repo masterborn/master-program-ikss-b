@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import IconButton from '@root/components/buttons/misc/IconButton';
+import IconButton from '@root/components/Generic/buttons/misc/IconButton';
 import { ButtonBigText } from '@root/styles/typography/buttonsText';
-import Logo from '../../logos/BubbleLogo';
+import Logo from '../../Generic/logos/BubbleLogo';
 import NavbarSocials from './NavbarSocials';
-import PrimaryButton from '../../buttons/primaryButton';
+import PrimaryButton from '../../Generic/buttons/primaryButton';
 
 export const StyledNavbar = styled.nav(
   ({ theme: { medias, color } }) => `

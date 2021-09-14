@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FbIcon, IgIcon, YtIcon, InIcon } from '../../icons/socialRegular';
+import { FbIcon, IgIcon, YtIcon, InIcon } from '../../Generic/icons/socialRegular';
 
 export default function Socials({ socialsLinks }) {
   return (

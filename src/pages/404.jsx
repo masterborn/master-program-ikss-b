@@ -10,7 +10,7 @@ import {
   GetBackButton,
   IKKSContainer,
   IKKSLogo,
-} from '@root/components/404Page/custom404.styles';
+} from '@root/components/pages/404Page/custom404.styles';
 import Link from 'next/link';
 
 export async function getStaticProps() {
