@@ -7,8 +7,6 @@ export const ValuesTilesContainer = styled.div`
 
   .slider {
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
   .swiper-pagination-bullet {
     width: 1.6rem;
