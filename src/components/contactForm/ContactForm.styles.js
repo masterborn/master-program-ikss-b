@@ -34,7 +34,7 @@ export const ContactFormContainer = styled.div(
   @media (max-width: 42.0rem) {
     width: 80%;
     max-width: 33.7rem;
-    min-width: 30.0rem;
+    min-width: 27.8rem;
   }
 `,
 );
