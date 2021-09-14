@@ -73,15 +73,15 @@ export const ContactFormContent = styled.div(
 );
 
 export const TopSection = styled.div(
-  ({ theme: { medias } }) => `
+  ({ theme: { medias, color } }) => `
   width: 588px;
   text-align: center;
   h3 {
-    color: ${({ theme: { color } }) => color.navy};
+    color: ${color.navy};
   }
   p {
     margin-top: 25px;
-    color: ${({ theme: { color } }) => color.steel};
+    color: ${color.steel};
   }
 
   @media ${medias.mobile} {
