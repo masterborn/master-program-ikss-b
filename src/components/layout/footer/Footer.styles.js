@@ -1,22 +1,25 @@
 import styled from 'styled-components';
+import { ButtonBigText } from '@root/styles/typography/buttonsText';
 import ScrollUpButton from '../../buttons/ScrollUpButton';
 import Logo from '../../logos/PlainLogo';
-import { ParagraphSmall } from '../../typography/paragraphs';
+import { ParagraphSmall } from '../../../styles/typography/paragraphs';
 import Socials from '../../icons/SocialsCollection';
 
-export const StyledFooter = styled.footer`
+export const StyledFooter = styled.footer(
+  ({ theme: { medias, color } }) => `
   position: relative;
 
   width: 100%;
   height: 404px;
 
-  background-color: ${(props) => props.theme.color.ikssBlue};
+  background-color: ${color.ikssBlue};
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     height: auto;
     margin-top: 90px;
   }
-`;
+`,
+);
 
 export const FooterWrapper = styled.div`
   max-width: 1440px;
@@ -28,36 +31,40 @@ export const FooterWrapper = styled.div`
   text-align: center;
 `;
 
-export const Filler = styled.div`
+export const Filler = styled.div(
+  ({ theme: { medias, color } }) => `
   position: absolute;
   left: 0;
   top: -324px;
   width: 100%;
   z-index: -100;
   height: 324px;
-  background-color: ${(props) => props.theme.color.ikssBlue};
+  background-color: ${color.ikssBlue};
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     top: -296px;
     height: 296px;
   }
-`;
+`,
+);
 
-export const StyledSrollUpButton = styled(ScrollUpButton)`
+export const StyledSrollUpButton = styled(ScrollUpButton)(
+  ({ theme: { medias }, isOnHomepage }) => `
   position: absolute;
-  top: ${(props) => (props.isHomepage ? '-371px' : '-47px')};
+  top: ${isOnHomepage ? '-371px' : '-47px'};
   right: 126px;
   z-index: 1;
   & > g:hover {
     cursor: pointer;
   }
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     top: -57px;
     right: 50%;
     transform: translateX(50%);
   }
-`;
+`,
+);
 
 export const Centered = styled.div`
   width: 100%;
@@ -70,7 +77,8 @@ export const Centered = styled.div`
   z-index: 1;
 `;
 
-export const LinksContainer = styled.div`
+export const LinksContainer = styled.div(
+  ({ theme: { medias } }) => `
   width: fit-content;
 
   margin-bottom: 48px;
@@ -78,34 +86,36 @@ export const LinksContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     height: 144px;
     flex-direction: column;
   }
-`;
+`,
+);
 
-export const Label = styled.h3`
+export const Label = styled.h3(
+  ({ theme: { color } }) => `
   min-width: fit-content;
   margin: 0px 32px;
 
   cursor: pointer;
 
-  color: ${(props) => props.theme.color.white};
+  color: ${color.white};
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
+  ${ButtonBigText}
   text-align: center;
-`;
+`,
+);
 
-export const StyledSocials = styled(Socials)`
+export const StyledSocials = styled(Socials)(
+  ({ theme: { medias } }) => `
   margin-bottom: 29px;
 
   a {
     margin: 0px 32px;
   }
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 189px;
     display: flex;
     justify-content: space-between;
@@ -114,24 +124,28 @@ export const StyledSocials = styled(Socials)`
       margin: 0;
     }
   }
-`;
+`,
+);
 
 export const StyledLogo = styled(Logo)`
   width: 84px;
   height: 48px;
 `;
 
-export const Paragraph = styled(ParagraphSmall)`
+export const Paragraph = styled.p(
+  ({ theme: { medias, color } }) => `
+  ${ParagraphSmall};
   margin-top: 56px;
-  color: ${(props) => props.theme.color.white};
+  color: ${color.white};
 
   text-align: center;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 300px;
     margin-top: 40px;
   }
-`;
+`,
+);
 
 export const MBLink = styled.a`
   color: inherit;

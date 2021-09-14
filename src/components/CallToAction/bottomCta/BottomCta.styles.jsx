@@ -1,8 +1,9 @@
-import { Header3 } from '@root/components/typography/headers';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
+import { Header3, Header4 } from '@root/styles/typography/headers';
+import { ParagraphBody } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
-export const BottomCtaContainer = styled.div`
+export const BottomCtaContainer = styled.div(
+  ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -11,29 +12,35 @@ export const BottomCtaContainer = styled.div`
   height: auto;
   margin: 148px 0;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     height: auto;
     margin: 103px 0;
     width: 100%;
     padding: 0 24px;
   }
-`;
+`,
+);
 
-export const BottomCtaHeader = styled(Header3)`
-  text-align: center;
+export const BottomCtaHeader = styled.h3(
+  ({ theme: { medias } }) => `
   margin-bottom: 32px;
-  @media ${({ theme: { medias } }) => medias.mobile} {
-    margin-bottom: 16px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-`;
-
-export const BottomCtaText = styled(ParagraphBody)`
+  ${Header3};
   text-align: center;
-  margin-bottom: 32px;
+  @media ${medias.mobile} {
+    margin-bottom: 16px;
+    ${Header4};
+  }
+`,
+);
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+export const BottomCtaText = styled.p(
+  ({ theme: { medias } }) => `
+  margin-bottom: 32px;
+  ${ParagraphBody};
+  text-align: center;
+
+  @media ${medias.mobile} {
     margin-bottom: 16px;
   }
-`;
+`,
+);

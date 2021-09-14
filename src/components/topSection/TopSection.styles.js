@@ -1,50 +1,57 @@
-import { Header1 } from '@root/components/typography/headers';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
+import { Header1, Header3 } from '@root/styles/typography/headers';
+import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
-export const TopSectionContainer = styled.section`
+export const TopSectionContainer = styled.section(
+  ({ theme: { medias }, isOnCooperationPage }) => `
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: ${(props) => (props.isOnCooperationPage ? '583px' : 'auto')};
+  width: ${isOnCooperationPage ? '583px' : 'auto'};
 
   height: auto;
   text-align: center;
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     padding: 0 24px;
     width: auto;
   }
-`;
-export const TopSectionImage = styled.img`
+`,
+);
+export const TopSectionImage = styled.img(
+  ({ theme: { medias } }) => `
   margin-top: 64px;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     margin-top: 32px;
   }
-`;
+`,
+);
 
-export const TopSectionHeader = styled(Header1)`
+export const TopSectionHeader = styled.h1(
+  ({ theme: { medias } }) => `
+  ${Header1};
   margin-top: 16px;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
+    ${Header3};
     margin-top: 8px;
-    font-size: 32px;
-    line-height: 44px;
   }
-`;
+`,
+);
 
-export const TopSectionDescription = styled(ParagraphBody)`
+export const TopSectionDescription = styled.p(
+  ({ theme: { medias } }) => `
   margin-top: 32px;
   max-width: 996px;
   height: 96px;
+  ${ParagraphBody};
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
+    ${ParagraphSmall};
     width: 100%;
     height: auto;
-
     margin-top: 24px;
-    font-size: 14px;
-    line-height: 28px;
   }
-`;
+`,
+);

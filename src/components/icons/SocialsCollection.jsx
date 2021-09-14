@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FbCircleIcon, IgCircleIcon, YtCircleIcon, InCircleIcon } from './socialCircle';
 import { FbIcon, IgIcon, YtIcon, InIcon } from './socialRegular';
-import { Header5 } from '../typography/headers';
+import { Header5 } from '../../styles/typography/headers';
 
 export default function Socials({ className, socialsLinks, showRegular, showLabel }) {
   const {

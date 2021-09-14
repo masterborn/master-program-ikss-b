@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import IconButton from '@root/components/buttons/misc/IconButton';
+import { ButtonBigText } from '@root/styles/typography/buttonsText';
 import Logo from '../../logos/BubbleLogo';
 import NavbarSocials from './NavbarSocials';
 import PrimaryButton from '../../buttons/primaryButton';
 
-export const StyledNavbar = styled.nav`
+export const StyledNavbar = styled.nav(
+  ({ theme: { medias, color } }) => `
   width: 100%;
   height: 88px;
 
@@ -18,13 +20,14 @@ export const StyledNavbar = styled.nav`
 
   z-index: 99;
 
-  background: ${(props) => props.theme.color.white};
+  background: ${color.white};
   box-shadow: 0px 4px 16px rgba(97, 121, 139, 0.1);
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     height: 56px;
   }
-`;
+`,
+);
 
 export const FooterWrapper = styled.div`
   width: 100%;
@@ -45,27 +48,32 @@ export const LinksContainer = styled.div`
   margin-left: 126px;
 `;
 
-export const StyledLogoLink = styled.a`
+export const StyledLogoLink = styled.a(
+  ({ theme: { medias } }) => `
   margin-left: 120px;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 56px;
     height: 35px;
     margin-left: 24px;
   }
-`;
+`,
+);
 
-export const StyledLogo = styled(Logo)`
+export const StyledLogo = styled(Logo)(
+  ({ theme: { medias } }) => `
   width: 78px;
   height: 48.8px;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 56px;
     height: 35px;
   }
-`;
+`,
+);
 
-export const Label = styled.h3`
+export const Label = styled.h3(
+  ({ theme: { color }, isHighlighted }) => `
   margin: 0 10px;
 
   width: fit-content;
@@ -73,13 +81,14 @@ export const Label = styled.h3`
   cursor: pointer;
 
   text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
+  
+  ${ButtonBigText}
+
   text-decoration: none;
 
-  color: ${(props) => (props.isHighlighted ? props.theme.color.navy : props.theme.color.steel)};
-`;
+  color: ${isHighlighted ? color.navy : color.steel};
+`,
+);
 
 export const StyledNavbarSocials = styled(NavbarSocials)`
   display: flex;

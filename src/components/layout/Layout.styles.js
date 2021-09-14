@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
-export const StyledLayout = styled.div`
+export const StyledLayout = styled.div(
+  ({ theme: { medias } }) => `
   width: 100%;
   min-width: 1440px;
   margin: 0 auto;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     min-width: 300px;
     width: 100%;
   }
@@ -20,7 +21,8 @@ export const StyledLayout = styled.div`
     flex-direction: column;
     align-items: center;
   }
-`;
+`,
+);
 
 export const PageWrapper = styled.div`
   width: 100%;
@@ -41,17 +43,19 @@ export const TopBackgroundGradient = styled.div`
   background: linear-gradient(180deg, #f4faff 0%, rgba(255, 255, 255, 0) 100%);
 `;
 
-export const BottomBackgroundGradient = styled.div`
+export const BottomBackgroundGradient = styled.div(
+  ({ theme: { medias }, isOnHomepage }) => `
   width: 100%;
   height: 994px;
 
   position: absolute;
-  bottom: ${(props) => (props.isHomepage ? '324px' : '0')};
+  bottom: ${isOnHomepage ? '324px' : '0'};
   z-index: -1;
 
   background: linear-gradient(0deg, #f4faff 0%, rgba(255, 255, 255, 0) 100%);
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     height: 770px;
     bottom: 206px;
   }
-`;
+`,
+);

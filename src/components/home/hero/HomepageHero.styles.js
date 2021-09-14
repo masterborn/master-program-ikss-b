@@ -1,60 +1,69 @@
 import styled from 'styled-components';
 import Socials from '@root/components/icons/SocialsCollection';
-import { Header1 } from '../../typography/headers';
-import { ParagraphBody } from '../../typography/paragraphs';
+import { Header1, Header4 } from '../../../styles/typography/headers';
+import { ParagraphBody, ParagraphSmall } from '../../../styles/typography/paragraphs';
 
-export const StyledHomepageHero = styled.section`
+export const StyledHomepageHero = styled.section(
+  ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     max-width: 550px;
     min-width: 300px;
     width: 100%;
   }
-`;
+`,
+);
 
-export const Content = styled.div`
+export const Content = styled.div(
+  ({ theme: { medias } }) => `
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-end;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-`;
+`,
+);
 
-export const TextSection = styled.div`
+export const TextSection = styled.div(
+  ({ theme: { medias } }) => `
   min-width: 416px;
   margin-top: 77px;
   margin-left: 120px;
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     min-width: 300px;
     margin-top: 40px;
     margin-left: 0;
     padding: 0 24px;
     order: 2;
   }
-`;
+`,
+);
 
-export const HomepageHeroVideo = styled.video`
+export const HomepageHeroVideo = styled.video(
+  ({ theme: { medias } }) => `
   width: 808px;
   height: 505px;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     order: 1;
     width: 100%;
     max-width: 550px;
     height: auto;
   }
-`;
+`,
+);
 
-export const StyledSocials = styled(Socials)`
+export const StyledSocials = styled(Socials)(
+  ({ theme: { medias, color } }) => `
   width: 1037px;
   height: 137px;
 
@@ -65,7 +74,7 @@ export const StyledSocials = styled(Socials)`
   padding-right: 120px;
   padding-left: 56px;
 
-  background-color: ${(props) => props.theme.color.white};
+  background-color: ${color.white};
 
   box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
     1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
@@ -73,7 +82,7 @@ export const StyledSocials = styled(Socials)`
     0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
   border-radius: 16px 0px 0px 16px;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 80%;
     height: 80px;
     margin-top: 40px;
@@ -91,47 +100,51 @@ export const StyledSocials = styled(Socials)`
 
     text-decoration: none;
 
-    color: ${(props) => props.theme.color.navy};
+    color: ${color.navy};
     svg {
       transform: scale(2);
       margin-right: 24px;
       margin-left: 24px;
 
-      @media ${({ theme: { medias } }) => medias.mobile} {
+      @media ${medias.mobile} {
         transform: scale(1.5);
         margin: 0;
       }
     }
-    @media ${({ theme: { medias } }) => medias.mobile} {
+    @media ${medias.mobile} {
       height: 32px;
       width: 32px;
     }
   }
-`;
+`,
+);
 
-export const Header = styled(Header1)`
+export const Header = styled.h1(
+  ({ theme: { medias } }) => `
   width: 100%;
+  ${Header1};
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
-    font-size: 32px;
-    line-height: 44px;
+  @media ${medias.mobile} {
+    ${Header4};
   }
-`;
+`,
+);
 export const HomepageHeroImage = styled.img`
   width: 808px;
   height: 505px;
 `;
 
-export const Paragraph = styled(ParagraphBody)`
+export const Paragraph = styled.p(
+  ({ theme: { medias, color } }) => `
   width: 100%;
   margin: 32px 0;
+  ${ParagraphBody};
+  color: ${color.steel};
 
-  color: ${(props) => props.theme.color.steel};
-
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     margin: 24px 0;
 
-    font-size: 14px;
-    line-height: 28px;
+    ${ParagraphSmall};
   }
-`;
+`,
+);

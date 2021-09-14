@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { Header3 } from '@root/components/typography/headers';
+import { Header3, Header4 } from '@root/styles/typography/headers';
 
-export const ProjectSection = styled.section`
+export const ProjectSection = styled.section(
+  ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +17,7 @@ export const ProjectSection = styled.section`
     text-decoration: none;
   }
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 100%;
     max-width: 550px;
     padding: 0 24px 0 24px;
@@ -27,14 +28,17 @@ export const ProjectSection = styled.section`
       margin-top: 16px;
     }
   }
-`;
+`,
+);
 
-export const SectionHeader = styled(Header3)`
+export const SectionHeader = styled.h3(
+  ({ theme: { medias } }) => `
   margin-bottom: 32px;
+  ${Header3};
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
+    ${Header4};
     margin-bottom: 24px;
-    font-size: 24px;
-    line-height: 32px;
   }
-`;
+`,
+);

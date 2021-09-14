@@ -11,16 +11,17 @@ import { sendEmailMockup } from '@root/clients/formcarry';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { inputsValidationInitialState } from '@root/consts/contactForm';
 import validateInputs from './validation';
-import { XIcon, LoaderIcon } from '../icons/misc';
-import { Header3 } from '../typography/headers';
-import { ParagraphBody, ParagraphSmall } from '../typography/paragraphs';
 import Tooltip from './tooltip';
 import {
   ContactFormContainer,
   CloseButton,
   ContactFormContent,
   TopSection,
+  ContactFormTitle,
+  ContactFormDescription,
   Form,
+  ContactFormLabel,
+  ContactFormLabelParagraph,
   InputRow,
   NameInput,
   FullWidthInput,
@@ -36,6 +37,7 @@ import {
   StyledErrorIcon,
   ZIPCode,
 } from './ContactForm.styles';
+import { LoaderIcon, XIcon } from '../icons/misc';
 
 const FORM_SENDING_STATUS = {
   initial: 'initial',
@@ -146,7 +148,7 @@ export default function ContactForm({
     }
   };
 
-  const Body = convertRichTextToReactComponent(ParagraphBody, text);
+  const Body = convertRichTextToReactComponent(ContactFormDescription, text);
 
   return (
     <ContactFormContainer className={className} id="contact-form" isInModal={isInModal}>
@@ -154,14 +156,14 @@ export default function ContactForm({
         {isInModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
-          <Header3>{title}</Header3>
+          <ContactFormTitle>{title}</ContactFormTitle>
           {Body}
         </TopSection>
 
         <Form onSubmit={handleSubmit}>
           <InputRow spaceBetween>
-            <label htmlFor="firstName">
-              <ParagraphSmall>Imię</ParagraphSmall>
+            <ContactFormLabel htmlFor="firstName">
+              <ContactFormLabelParagraph>Imię</ContactFormLabelParagraph>
               <NameInput
                 name="firstName"
                 value={formValues.firstName || ''}
@@ -173,9 +175,9 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.firstName.message}
               />
-            </label>
-            <label htmlFor="lastName">
-              <ParagraphSmall>Nazwisko</ParagraphSmall>
+            </ContactFormLabel>
+            <ContactFormLabel htmlFor="lastName">
+              <ContactFormLabelParagraph>Nazwisko</ContactFormLabelParagraph>
               <NameInput
                 name="lastName"
                 value={formValues.lastName || ''}
@@ -187,12 +189,12 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.lastName.message}
               />
-            </label>
+            </ContactFormLabel>
           </InputRow>
 
           <InputRow>
-            <label htmlFor="email">
-              <ParagraphSmall>Adres email</ParagraphSmall>
+            <ContactFormLabel htmlFor="email">
+              <ContactFormLabelParagraph>Adres email</ContactFormLabelParagraph>
               <FullWidthInput
                 name="email"
                 value={formValues.email || ''}
@@ -204,12 +206,12 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.email.message}
               />
-            </label>
+            </ContactFormLabel>
           </InputRow>
 
           <InputRow>
-            <label htmlFor="title">
-              <ParagraphSmall>Temat</ParagraphSmall>
+            <ContactFormLabel htmlFor="title">
+              <ContactFormLabelParagraph>Temat</ContactFormLabelParagraph>
               <FullWidthInput
                 name="title"
                 value={formValues.title || ''}
@@ -221,12 +223,12 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.title.message}
               />
-            </label>
+            </ContactFormLabel>
           </InputRow>
 
           <InputRow>
-            <label htmlFor="content">
-              <ParagraphSmall>Treść</ParagraphSmall>
+            <ContactFormLabel htmlFor="content">
+              <ContactFormLabelParagraph>Treść</ContactFormLabelParagraph>
               <ContentInput
                 name="content"
                 value={formValues.content || ''}
@@ -237,7 +239,7 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.content.message}
               />
-            </label>
+            </ContactFormLabel>
           </InputRow>
 
           <InputRow isTerms>

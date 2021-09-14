@@ -1,8 +1,9 @@
-import { Header3 } from '@root/components/typography/headers';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
+import { Header3, Header4 } from '@root/styles/typography/headers';
+import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
-export const LogosSection = styled.section`
+export const LogosSection = styled.section(
+  ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -11,39 +12,44 @@ export const LogosSection = styled.section`
   height: auto;
   margin-top: 148px;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 100%;
     max-width: 550px;
     padding: 0 26px 0 26px;
     height: auto;
   } ;
-`;
-export const PartnersHeader = styled(Header3)`
+`,
+);
+export const PartnersHeader = styled.h3(
+  ({ theme: { medias } }) => `
   margin-bottom: 32px;
-
-  @media (max-width: 500px) {
+  ${Header3};
+  @media ${medias.mobile} {
+    ${Header4};
     margin-bottom: 16px;
-    font-size: 24px;
-    line-height: 32px;
   }
-`;
+`,
+);
 
-export const PartnersDescription = styled(ParagraphBody)`
+export const PartnersDescription = styled.p(
+  ({ theme: { medias } }) => `
   text-align: center;
   width: 635px;
   height: 64px;
+  ${ParagraphBody};
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
-    font-size: 14px;
-    line-height: 28px;
+  @media ${medias.mobile} {
+    ${ParagraphSmall};
     width: 100%;
     max-width: 550px;
     height: auto;
     min-height: 112px;
   }
-`;
+`,
+);
 
-export const LogosContainer = styled.div`
+export const LogosContainer = styled.div(
+  ({ theme: { medias } }) => `
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -52,22 +58,25 @@ export const LogosContainer = styled.div`
   width: 1134px;
   margin-top: 80px;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 100%;
     max-width: 550px;
     margin-top: 32px;
     min-height: 302px;
     height: auto;
   }
-`;
-export const Logo = styled.div`
+`,
+);
+
+export const Logo = styled.div(
+  ({ theme: { medias } }) => `
   display: flex;
   justify-content: center;
   align-items: center;
   width: 226px;
   height: 112px;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: calc(100% / 3);
     height: auto;
     margin-bottom: 30px;
@@ -80,4 +89,5 @@ export const Logo = styled.div`
       max-height: 40px;
     }
   } ;
-`;
+`,
+);

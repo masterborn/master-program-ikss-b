@@ -1,44 +1,52 @@
 import styled from 'styled-components';
-import { Header3 } from '@root/components/typography/headers';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
+import { Header3, Header4 } from '@root/styles/typography/headers';
+import { ParagraphBody } from '@root/styles/typography/paragraphs';
 
-export const StyledBoardMembersSection = styled.section`
+export const StyledBoardMembersSection = styled.section(
+  ({ theme: { medias } }) => `
   margin: 148px 108px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 95%;
     min-width: 252px;
     margin: 70px auto 0;
   }
-`;
+`,
+);
 
-export const Title = styled(Header3)`
+export const Title = styled.h3(
+  ({ theme: { medias, color } }) => `
+  ${Header3};
   text-align: center;
-  color: ${({ theme: { color } }) => color.navy};
+  color: ${color.navy};
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
-    font-size: 24px;
-    line-height: 32px;
+  @media ${medias.mobile} {
+    ${Header4};
   }
-`;
-export const Description = styled(ParagraphBody)`
+`,
+);
+export const Description = styled.p(
+  ({ theme: { medias, color } }) => `
   width: 635px;
   margin-top: 32px;
+  ${ParagraphBody};
   text-align: center;
 
-  color: ${({ theme: { color } }) => color.steel};
+  color: ${color.steel};
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 95%;
     min-width: 252px;
     margin: 16px auto 0;
   }
-`;
+`,
+);
 
-export const BoardMembersContainer = styled.div`
+export const BoardMembersContainer = styled.div(
+  ({ theme: { medias } }) => `
   margin-top: 64px;
 
   display: flex;
@@ -46,8 +54,9 @@ export const BoardMembersContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     margin-top: 57px;
     flex-direction: column;
   }
-`;
+`,
+);

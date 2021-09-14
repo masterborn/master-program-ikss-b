@@ -1,31 +1,31 @@
 import styled, { css } from 'styled-components';
+import { ButtonBigText, ButtonSmallText } from '@root/styles/typography/buttonsText';
 
 const defaultVariantStyles = css`
   height: 36px;
-  font-size: 14px;
+  ${ButtonSmallText};
   padding: 0.5em 0.88em 0.5em 0.88em;
 `;
 
 const largeVariantStyles = css`
   height: 48px;
-  font-size: 16px;
+  ${ButtonBigText};
   padding: 0.7em 1.2em 0.7em 1.2em;
 `;
 
-const StyledPrimaryButton = styled.button`
+const StyledPrimaryButton = styled.button(
+  ({ theme: { color }, large }) => `
   display: flex;
   align-items: center;
   justify-content: center;
   width: max-content;
 
-  ${({ large }) => (large ? largeVariantStyles : defaultVariantStyles)}
-
-  font-weight: 700;
-
   border: none;
   border-radius: 2em;
-  color: ${(props) => props.theme.color.white};
-  background-color: ${(props) => props.theme.color.ikssBlue};
+  color: ${color.white};
+  background-color: ${color.ikssBlue};
+  ${large ? largeVariantStyles : defaultVariantStyles};
+
   & > .icon {
     height: 1em;
 
@@ -41,6 +41,7 @@ const StyledPrimaryButton = styled.button`
   &:disabled {
     background-color: #badcf8;
   }
-`;
+`,
+);
 
 export default StyledPrimaryButton;

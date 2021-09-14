@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import ContactForm from '../index';
 
-export const ContactModalContainer = styled.div`
+export const ContactModalContainer = styled.div(
+  ({ theme: { color } }) => `
   position: fixed;
   z-index: 999;
   left: 0;
@@ -9,8 +10,9 @@ export const ContactModalContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: ${({ theme: { color } }) => color.navy}99;
-`;
+  background-color: ${color.navy}99;
+`,
+);
 
 export const StyledContactForm = styled(ContactForm)`
   position: absolute;

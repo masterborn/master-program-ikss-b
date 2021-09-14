@@ -1,55 +1,65 @@
 import styled from 'styled-components';
-import { Header2 } from '../typography/headers';
-import { ParagraphBody } from '../typography/paragraphs';
+import { Header2, Header4 } from '../../styles/typography/headers';
+import { ParagraphBody, ParagraphSmall } from '../../styles/typography/paragraphs';
 
-export const MissionContainer = styled.div`
+export const MissionContainer = styled.div(
+  ({ theme: { medias } }) => `
   display: flex;
   width: 1197px;
   height: auto;
   margin-top: 148px;
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     margin-top: 80px;
     padding: 0 24px 0 24px;
     justify-content: flex-start;
     width: 100%;
     flex-direction: column;
   }
-`;
+`,
+);
 
-export const MissionImage = styled.img`
+export const MissionImage = styled.img(
+  ({ theme: { medias } }) => `
   margin-right: 56px;
   border-radius: 16px;
   width: 483px;
   height: auto;
   border-radius: 16px;
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     margin-right: 0;
     border-radius: 8px;
     width: 100%;
   }
-`;
-export const MissionTextContainer = styled.div`
+`,
+);
+export const MissionTextContainer = styled.div(
+  ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
   height: 100%;
   padding: 19px 0 18px 0;
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     padding: 32px 0 0 0;
   }
-`;
-export const MissionHeader = styled(Header2)`
+`,
+);
+export const MissionHeader = styled.h2(
+  ({ theme: { medias } }) => `
+  ${Header2};
   margin-bottom: 24px;
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
+    ${Header4};
     margin-bottom: 16px;
-    font-size: 24px;
-    line-height: 32px;
   }
-`;
-export const MissionDescription = styled(ParagraphBody)`
-  @media ${({ theme: { medias } }) => medias.mobile} {
-    font-size: 14px;
-    line-height: 28px;
+`,
+);
+export const MissionDescription = styled.p(
+  ({ theme: { medias } }) => `
+  ${ParagraphBody};
+  @media ${medias.mobile} {
+    ${ParagraphSmall};
   }
-`;
+`,
+);

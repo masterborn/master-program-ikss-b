@@ -13,11 +13,13 @@ export const TooltipContainer = styled.div`
   border-radius: 4px;
 `;
 
-export const Text = styled.p`
+export const Text = styled.p(
+  ({ theme: { color } }) => `
   font-size: 10px;
   line-height: 18px;
-  color: ${(props) => props.theme.color.steel};
-`;
+  color: ${color.steel};
+`,
+);
 
 export const Tail = styled.div`
   width: 14px;

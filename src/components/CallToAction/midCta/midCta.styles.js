@@ -1,20 +1,23 @@
 import styled from 'styled-components';
-import { Header3 } from '../../typography/headers';
+import { Header3, Header5 } from '../../../styles/typography/headers';
 
-export const MidCtaContainer = styled.div`
+export const MidCtaContainer = styled.div(
+  ({ theme: { medias } }) => `
   /* just for display testing */
   margin: 120px 0 120px 0;
   width: 1200px;
   height: 352px;
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     width: 100%;
     padding: 0 24px;
     height: auto;
   }
-`;
+`,
+);
 
-export const CtaOverlay = styled.div`
+export const CtaOverlay = styled.div(
+  ({ theme: { medias, color } }) => `
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -26,24 +29,27 @@ export const CtaOverlay = styled.div`
 
   width: 100%;
   height: 100%;
-  background-color: ${(props) => props.theme.color.blueTints.blue10};
+  background-color: ${color.blueTints.blue10};
 
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  @media ${medias.mobile} {
     padding-top: 56px;
     padding-bottom: 56px;
   }
-`;
+`,
+);
 
-export const MidCtaHeader = styled(Header3)`
-  text-align: center;
+export const MidCtaHeader = styled.h3(
+  ({ theme: { medias } }) => `
   margin-bottom: 32px;
-  @media ${({ theme: { medias } }) => medias.mobile} {
+  ${Header3};
+  text-align: center;
+  @media ${medias.mobile} {
     width: 100%;
     padding: 0 31px;
     margin-top: 0;
     margin-bottom: 24px;
 
-    font-size: 18px;
-    line-height: 24px;
+    ${Header5};
   }
-`;
+`,
+);
