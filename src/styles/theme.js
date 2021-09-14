@@ -13,13 +13,13 @@ export const fontWeight = {
   header5: '800',
 };
 export const lineHeight = {
-  body: '2rem',
-  bodySmall: '2rem',
-  header1: '1.29rem',
-  header2: '1.8rem',
-  header3: '1.37rem',
-  header4: '1.34rem',
-  header5: '1.34rem',
+  body: '3.2rem',
+  bodySmall: '2.8rem',
+  header1: '7.2rem',
+  header2: '7.2rem',
+  header3: '4.4rem',
+  header4: '3.2rem',
+  header5: '2.4rem',
 };
 
 export const color = {
