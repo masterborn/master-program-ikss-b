@@ -27,9 +27,9 @@ export const ContactFormContainer = styled.div`
   }
 
   @media (max-width: 420px) {
-    width: 100%;
+    width: 80%;
     max-width: 337px;
-    min-width: 300px;
+    min-width: 278px;
   }
 `;
 
@@ -77,7 +77,6 @@ export const TopSection = styled.div`
 
   @media (max-width: 550px) {
     width: 80%;
-    min-width: 295px;
     h3 {
       font-size: 18px;
       line-height: 24px;
@@ -100,7 +99,6 @@ export const Form = styled.form`
 
   @media (max-width: 550px) {
     width: 80%;
-    min-width: 295px;
     margin-top: 24px;
 
     display: flex;
@@ -131,7 +129,6 @@ export const InputRow = styled.div`
 
 export const NameInput = styled(Input)`
   width: 282px;
-  height: 48px;
   margin-right: 0;
 
   @media (max-width: 550px) {
@@ -140,7 +137,6 @@ export const NameInput = styled(Input)`
 `;
 export const FullWidthInput = styled(Input)`
   width: 588px;
-  height: 48px;
   margin-right: 0;
 
   @media (max-width: 550px) {
@@ -161,14 +157,14 @@ export const StyledCheckbox = styled(Checkbox)`
 `;
 
 export const RODOContainer = styled.div`
-  position: relative;
+  width: 100%;
 `;
 
 export const RODO = styled(ParagraphSmall)`
   color: ${({ theme: { color } }) => color.steelTints.steel70};
 
   @media (max-width: 550px) {
-    width: 240px;
+    width: 100%;
 
     font-size: 12px;
     line-height: 15px;
