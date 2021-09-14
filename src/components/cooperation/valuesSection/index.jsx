@@ -15,7 +15,7 @@ export default function CooperationValuesSection({ valuesTiles, valuesTitle }) {
       <Title>{title}</Title>
       <CooperationValuesTilesContainer>
         {valuesTiles.map((tileData) => (
-          <CooperationValuesTile data={tileData} key={tileData.title} />
+          <CooperationValuesTile data={tileData} key={tileData.title} isOnCooperation />
         ))}
       </CooperationValuesTilesContainer>
     </CooperationValuesSectionContainer>

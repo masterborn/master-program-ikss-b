@@ -10,7 +10,7 @@ import {
   ValueTileParagraph,
 } from './ValuesTile.styles';
 
-export default function ValuesTile({ className, data, isOnHomepage }) {
+export default function ValuesTile({ className, data, isOnCooperation }) {
   const {
     title,
     text1: richText,
@@ -22,12 +22,12 @@ export default function ValuesTile({ className, data, isOnHomepage }) {
   const Body = convertRichTextToReactComponent(ValueTileParagraph, richText);
 
   return (
-    <StyledValueTile className={className}>
-      <ValueTileContent isOnHomepage={isOnHomepage}>
+    <StyledValueTile className={className} isOnCooperation={isOnCooperation}>
+      <ValueTileContent isOnCooperation={isOnCooperation}>
         {imageUrl ? (
           <Image src={`https:${imageUrl}`} height={232} width={232} alt={title} />
         ) : (
-          <ValueTileImageFiller />
+          <ValueTileImageFiller isOnCooperation={isOnCooperation} />
         )}
 
         <ValueTileTitle>{title}</ValueTileTitle>
@@ -46,10 +46,10 @@ ValuesTile.propTypes = {
       url: PropTypes.string,
     }),
   }).isRequired,
-  isOnHomepage: PropTypes.bool,
+  isOnCooperation: PropTypes.bool,
 };
 
 ValuesTile.defaultProps = {
   className: '',
-  isOnHomepage: false,
+  isOnCooperation: false,
 };

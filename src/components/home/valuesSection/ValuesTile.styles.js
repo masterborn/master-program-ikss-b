@@ -3,7 +3,7 @@ import { Header5 } from '@root/styles/typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 
 export const StyledValueTile = styled.div(
-  ({ theme: { medias, color }, isOnHomepage }) => `
+  ({ theme: { medias, color }, isOnCooperation }) => `
   width: 38.4rem;
   height: 38.4rem;
   display: flex;
@@ -26,7 +26,7 @@ export const StyledValueTile = styled.div(
     width: 90%;
     min-width: 25.2rem;
     max-width: 38.4rem;
-    height: ${isOnHomepage ? '33.4rem' : '35.0rem'};
+    height: ${!isOnCooperation ? '33.4rem' : '35.0rem'};
 
     display: block;
   }
@@ -34,43 +34,43 @@ export const StyledValueTile = styled.div(
 );
 
 export const ValueTileContent = styled.div(
-  ({ theme: { medias }, isOnHomepage }) => `
+  ({ theme: { medias }, isOnCooperation }) => `
   position: relative;
-  top: ${isOnHomepage && '-6.2rem'};
+  top: ${!isOnCooperation && '-6.2rem'};
 
-  margin: ${!isOnHomepage && '3.2rem 0 -1.4rem'};
+  margin: ${isOnCooperation && '3.2rem 0 -1.4rem'};
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   img {
-    width: ${!isOnHomepage && '21.4rem'};
-    height: ${!isOnHomepage && '14.2rem'};
+    width: ${isOnCooperation && '21.4rem'};
+    height: ${isOnCooperation && '14.2rem'};
   }
 
   @media ${medias.mobile} {
-    top: ${isOnHomepage && '-3.8rem'};
-    margin-bottom: ${isOnHomepage && '-1.4rem'};
+    top: ${!isOnCooperation && '-3.8rem'};
+    margin-bottom: ${!isOnCooperation && '-1.4rem'};
 
     img {
-      width: ${isOnHomepage ? '18.4rem' : '19.7rem'};
-      height: ${isOnHomepage ? '14.4rem' : '12.1rem'};
+      width: ${!isOnCooperation ? '18.4rem' : '19.7rem'};
+      height: ${!isOnCooperation ? '14.4rem' : '12.1rem'};
     }
   }
 `,
 );
 
 export const ValueTileImageFiller = styled.div(
-  ({ theme: { medias }, isOnHomepage }) => `
-  width: ${isOnHomepage ? '23.2rem' : '21.4rem'};
-  height: ${isOnHomepage ? '23.2rem' : '14.2rem'};
+  ({ theme: { medias }, isOnCooperation }) => `
+  width: ${!isOnCooperation ? '23.2rem' : '21.4rem'};
+  height: ${!isOnCooperation ? '23.2rem' : '14.2rem'};
 
   @media ${medias.mobile} {
     width: 13.3rem;
     height: 13.3rem;
-    width: ${isOnHomepage ? '13.3rem' : '21.4rem'};
-    height: ${isOnHomepage ? '13.3rem' : '21.4rem'};
+    width: ${!isOnCooperation ? '13.3rem' : '21.4rem'};
+    height: ${!isOnCooperation ? '13.3rem' : '21.4rem'};
   }
 `,
 );
