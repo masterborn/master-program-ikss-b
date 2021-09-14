@@ -51,13 +51,11 @@ export const TextSection = styled.div(
 export const HomepageHeroVideo = styled.video(
   ({ theme: { medias } }) => `
   width: 808px;
-  height: 505px;
 
   @media ${medias.mobile} {
     order: 1;
     width: 100%;
     max-width: 550px;
-    height: auto;
   }
 `,
 );
