@@ -24,7 +24,7 @@ export const StyledValueTile = styled.div(
 
   @media ${medias.mobile} {
     width: 90%;
-    min-width: 300px;
+    min-width: 252px;
     max-width: 384px;
     height: ${isOnHomepage ? '334px' : '350px'};
 

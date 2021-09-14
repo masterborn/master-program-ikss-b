@@ -12,6 +12,7 @@ export const CooperationValuesSectionContainer = styled.div(
   @media ${medias.mobile} {
     margin-top: 80px;
     width: 100%;
+    padding: 0 12px;
   }
 `,
 );

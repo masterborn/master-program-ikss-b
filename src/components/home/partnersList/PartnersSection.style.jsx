@@ -23,6 +23,8 @@ export const LogosSection = styled.section(
 export const PartnersHeader = styled.h3(
   ({ theme: { medias } }) => `
   margin-bottom: 32px;
+  text-align: center;
+  
   ${Header3};
   @media ${medias.mobile} {
     ${Header4};
