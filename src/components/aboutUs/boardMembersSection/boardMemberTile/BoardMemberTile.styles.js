@@ -6,12 +6,12 @@ import toggleTileVisibility from './TileAnimations.styles';
 
 export const BoardMemberTileWrapper = styled.div(
   ({ theme: { medias } }) => `
-  margin: 12px;
+  margin: 1.2rem;
 
   @media ${medias.mobile} {
     width: 100%;
     min-height: fit-content;
-    margin: 12px 0;
+    margin: 1.2rem 0;
 
     position: relative;
     display: flex;
@@ -24,23 +24,23 @@ export const BoardMemberTileWrapper = styled.div(
 const toggleButtonOnCollapsedTile = css`
   position: absolute;
   top: 50%;
-  right: 40px;
+  right: 4rem;
 
   transform: translateY(-50%);
 
-  @media (max-width: 320px) {
-    right: 20px;
+  @media (max-width: 32rem) {
+    right: 2rem;
   }
 `;
 const toggleButtonOnExpandedTile = css`
   position: absolute;
-  top: 21px;
-  right: 40px;
+  top: 2.1rem;
+  right: 4rem;
 
   transform: rotate(180deg);
 
-  @media (max-width: 320px) {
-    right: 20px;
+  @media (max-width: 32rem) {
+    right: 2rem;
   }
 `;
 
@@ -54,49 +54,49 @@ export const ToggleButton = styled(IconButton)(
 
 export const StyledBoardMemberTile = styled.div(
   ({ theme: { medias, color }, isTileOpened }) => `
-  width: 384px;
-  height: 480px;
+  width: 38.4rem;
+  height: 48.0rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  border-radius: 16px;
+  border-radius: 1.6rem;
   background-color: ${color.white};
-  box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
-    1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
-    0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
-    0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
+  box-shadow: 3.38443rem 5.58976rem 8.0rem rgba(97, 121, 139, 0.07),
+    1.71337rem 2.82982rem 3.4875rem rgba(97, 121, 139, 0.04725),
+    .0676885rem 1.11795rem 1.3rem rgba(97, 121, 139, 0.035),
+    .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
 
   @media ${medias.mobile} {
     width: 90%;
-    max-width: 384px;
-    min-width: 300px;
+    max-width: 38.4rem;
+    min-width: 30.0rem;
 
     opacity: 1;
     overflow: hidden;
 
-    ${toggleTileVisibility(isTileOpened, '423px')}
+    ${toggleTileVisibility(isTileOpened, '42.3rem')}
   }
 `,
 );
 
 export const BoardMemberTileAvatar = styled.div(
   ({ theme: { medias, color } }) => `
-  width: 164px;
-  height: 164px;
-  margin: 32px auto 0;
+  width: 16.4rem;
+  height: 16.4rem;
+  margin: 3.2rem auto 0;
   border-radius: 50%;
 
   background-color: ${color.blueTints.blue20};
 
   @media ${medias.mobile} {
-    width: 151px;
-    min-width: 151px;
-    height: 151px;
-    min-height: 151px;
+    width: 15.1rem;
+    min-width: 15.1rem;
+    height: 15.1rem;
+    min-height: 15.1rem;
 
-    margin-top: 45px;
+    margin-top: 4.5rem;
   }
   img {
     border-radius: 50%;
@@ -106,11 +106,11 @@ export const BoardMemberTileAvatar = styled.div(
 
 export const NameText = styled.h4(
   ({ theme: { medias } }) => `
-  margin-top: 24px;
+  margin-top: 2.4rem;
   ${Header4};
 
   @media ${medias.mobile} {
-    margin-top: 16px;
+    margin-top: 1.6rem;
 
     ${Header5};
   }
@@ -118,22 +118,22 @@ export const NameText = styled.h4(
 );
 export const RoleText = styled.h5(
   ({ theme: { medias, color } }) => `
-  margin: 8px 24px 0;
-  height: 48px;
+  margin: .8rem 2.4rem 0;
+  height: 4.8rem;
   ${Header5};
   text-align: center;
   color: ${color.steel};
 
   @media ${medias.mobile} {
-    margin-top: 8px;
-    height: 36px;
+    margin-top: .8rem;
+    height: 3.6rem;
     ${ButtonSmallText}
   }
 `,
 );
 export const ContactContainer = styled.div`
-  margin-top: 12px;
-  height: 48px;
+  margin-top: 1.2rem;
+  height: 4.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,11 +148,11 @@ export const ContactLink = styled.a(
 );
 export const LinkedInButton = styled.a(
   ({ theme: { medias } }) => `
-  margin: auto 0 40px;
+  margin: auto 0 4.0rem;
   text-decoration: none;
 
   @media ${medias.mobile} {
-    margin-bottom: 32px;
+    margin-bottom: 3.2rem;
   }
 `,
 );

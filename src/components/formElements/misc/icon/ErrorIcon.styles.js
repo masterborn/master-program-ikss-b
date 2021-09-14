@@ -5,8 +5,8 @@ export const StyledErrorContainer = styled.div`
 `;
 
 export const StyledErrorIcon = styled.svg`
-  width: 20px;
-  height: 20px;
-  margin-left: -30px;
+  width: 2rem;
+  height: 2rem;
+  margin-left: -3rem;
   cursor: help;
 `;

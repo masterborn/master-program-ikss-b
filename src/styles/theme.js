@@ -51,7 +51,7 @@ export const color = {
 };
 
 export const medias = {
-  mobile: '(max-width: 550px)',
+  mobile: '(max-width: 55.0rem)',
 };
 export const fontSize = {
   body: '1.6rem',

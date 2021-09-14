@@ -5,12 +5,12 @@ import { ParagraphBody } from '../../../styles/typography/paragraphs';
 export const StyledValuesSection = styled.section(
   ({ theme: { medias } }) => `
   min-width: 100%;
-  margin-top: 157px;
+  margin-top: 15.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media ${medias.mobile}{ 
-    margin-top: 80px;
+    margin-top: 8.0rem;
   }
 `,
 );
@@ -29,21 +29,21 @@ export const ValuesSectionTitle = styled.h3(
 
 export const ValuesSectionParagraph = styled.p(
   ({ theme: { medias, color } }) => `
-  width: 551px;
-  margin-top: 32px;
+  width: 55.1rem;
+  margin-top: 3.2rem;
   ${ParagraphBody};
   text-align: center;
   color: ${color.steel};
   @media ${medias.mobile} {
-    width: 300px;
-    margin-top: 24px;
+    width: 30.0rem;
+    margin-top: 2.4rem;
   }
 `,
 );
 export const ValuesSectionTilesContainer = styled.div`
-  max-width: 1200px;
+  max-width: 120rem;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

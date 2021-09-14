@@ -4,15 +4,15 @@ import ValuesTile from '@root/components/home/valuesSection/ValuesTile';
 
 export const CooperationValuesSectionContainer = styled.div(
   ({ theme: { medias } }) => `
-  width: 1224px;
-  margin-top: 148px;
+  width: 122.4rem;
+  margin-top: 14.8rem;
 
   text-align: center;
 
   @media ${medias.mobile} {
-    margin-top: 80px;
+    margin-top: 8.0rem;
     width: 100%;
-    padding: 0 12px;
+    padding: 0 1.2rem;
   }
 `,
 );
@@ -29,7 +29,7 @@ export const Title = styled.h3(
 export const CooperationValuesTilesContainer = styled.div(
   ({ theme: { medias } }) => `
   width: 100%;
-  margin-top: 62px;
+  margin-top: 6.2rem;
 
   display: flex;
   flex-direction: row;
@@ -37,7 +37,7 @@ export const CooperationValuesTilesContainer = styled.div(
   justify-content: center;
 
   @media ${medias.mobile} {
-    margin-top: 24px;
+    margin-top: 2.4rem;
 
     flex-direction: column;
     align-items: center;
@@ -47,10 +47,10 @@ export const CooperationValuesTilesContainer = styled.div(
 
 export const CooperationValuesTile = styled(ValuesTile)(
   ({ theme: { medias } }) => `
-  margin: 50px 12px 12px;
+  margin: 5.0rem 1.2rem 1.2rem;
 
   @media ${medias.mobile} {
-    margin: 12px 0;
+    margin: 1.2rem 0;
   }
 `,
 );

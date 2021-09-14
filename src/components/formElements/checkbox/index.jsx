@@ -4,14 +4,14 @@ const StyledCheckbox = styled.input.attrs({ type: 'checkbox' })(
   ({ theme: { color }, isInvalid }) => `
   padding-left: 2px;
   padding-top: 4px;
-  padding-bottom: 0.25px;
+  padding-bottom: .025rem;
   box-sizing: border-box;
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
   appearance: none;
   background-color: ${color.white};
 
-  border: 1.5px solid;
+  border: 1..5rem solid;
   border-color: ${isInvalid ? color.misc.errorRed : color.steelTints.steel40};
   border-radius: 4px;
 

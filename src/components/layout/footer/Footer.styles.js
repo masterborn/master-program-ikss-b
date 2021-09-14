@@ -10,19 +10,19 @@ export const StyledFooter = styled.footer(
   position: relative;
 
   width: 100%;
-  height: 404px;
+  height: 40.4rem;
 
   background-color: ${color.ikssBlue};
 
   @media ${medias.mobile} {
     height: auto;
-    margin-top: 90px;
+    margin-top: 9.0rem;
   }
 `,
 );
 
 export const FooterWrapper = styled.div`
-  max-width: 1440px;
+  max-width: 144rem;
   height: 100%;
   margin: 0 auto;
 
@@ -35,15 +35,15 @@ export const Filler = styled.div(
   ({ theme: { medias, color } }) => `
   position: absolute;
   left: 0;
-  top: -324px;
+  top: -32.4rem;
   width: 100%;
   z-index: -100;
-  height: 324px;
+  height: 32.4rem;
   background-color: ${color.ikssBlue};
 
   @media ${medias.mobile} {
-    top: -296px;
-    height: 296px;
+    top: -29.6rem;
+    height: 29.6rem;
   }
 `,
 );
@@ -51,15 +51,15 @@ export const Filler = styled.div(
 export const StyledSrollUpButton = styled(ScrollUpButton)(
   ({ theme: { medias }, isOnHomepage }) => `
   position: absolute;
-  top: ${isOnHomepage ? '-371px' : '-47px'};
-  right: 126px;
+  top: ${isOnHomepage ? '-37.1rem' : '-4.7rem'};
+  right: 12.6rem;
   z-index: 1;
   & > g:hover {
     cursor: pointer;
   }
 
   @media ${medias.mobile} {
-    top: -57px;
+    top: -5.7rem;
     right: 50%;
     transform: translateX(50%);
   }
@@ -72,8 +72,8 @@ export const Centered = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding-top: 56px;
-  padding-bottom: 48px;
+  padding-top: 5.6rem;
+  padding-bottom: 4.8rem;
   z-index: 1;
 `;
 
@@ -81,13 +81,13 @@ export const LinksContainer = styled.div(
   ({ theme: { medias } }) => `
   width: fit-content;
 
-  margin-bottom: 48px;
+  margin-bottom: 4.8rem;
 
   display: flex;
   justify-content: space-between;
 
   @media ${medias.mobile} {
-    height: 144px;
+    height: 14.4rem;
     flex-direction: column;
   }
 `,
@@ -96,7 +96,7 @@ export const LinksContainer = styled.div(
 export const Label = styled.h3(
   ({ theme: { color } }) => `
   min-width: fit-content;
-  margin: 0px 32px;
+  margin: .0rem 3.2rem;
 
   cursor: pointer;
 
@@ -109,14 +109,14 @@ export const Label = styled.h3(
 
 export const StyledSocials = styled(Socials)(
   ({ theme: { medias } }) => `
-  margin-bottom: 29px;
+  margin-bottom: 2.9rem;
 
   a {
-    margin: 0px 32px;
+    margin: .0rem 3.2rem;
   }
 
   @media ${medias.mobile} {
-    width: 189px;
+    width: 18.9rem;
     display: flex;
     justify-content: space-between;
 
@@ -128,21 +128,21 @@ export const StyledSocials = styled(Socials)(
 );
 
 export const StyledLogo = styled(Logo)`
-  width: 84px;
-  height: 48px;
+  width: 8.4rem;
+  height: 4.8rem;
 `;
 
 export const Paragraph = styled.p(
   ({ theme: { medias, color } }) => `
   ${ParagraphSmall};
-  margin-top: 56px;
+  margin-top: 5.6rem;
   color: ${color.white};
 
   text-align: center;
 
   @media ${medias.mobile} {
-    width: 300px;
-    margin-top: 40px;
+    width: 30.0rem;
+    margin-top: 4.0rem;
   }
 `,
 );

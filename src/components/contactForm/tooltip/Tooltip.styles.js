@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const TooltipContainer = styled.div`
-  width: 347px;
+  width: 34.7rem;
 
   position: absolute;
   right: 0;
-  bottom: 30px;
+  bottom: 3rem;
 
-  padding: 13px 19px 19px;
+  padding: 1.3rem 1.9rem 1.9rem;
 
   background: #e8f3fd;
   border-radius: 4px;
@@ -15,19 +15,19 @@ export const TooltipContainer = styled.div`
 
 export const Text = styled.p(
   ({ theme: { color } }) => `
-  font-size: 10px;
-  line-height: 18px;
+  font-size: 1.0rem;
+  line-height: 1.8rem;
   color: ${color.steel};
 `,
 );
 
 export const Tail = styled.div`
-  width: 14px;
-  height: 14px;
+  width: 1.4rem;
+  height: 1.4rem;
 
   position: absolute;
   left: 50%;
-  bottom: -7px;
+  bottom: -0.7rem;
   transform: translateX(-50%);
   transform: rotate(45deg);
 

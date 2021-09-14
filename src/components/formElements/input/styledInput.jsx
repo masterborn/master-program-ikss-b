@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const styledInput = styled.input(
   ({ theme: { color }, withIcon, isValid, isInvalid }) => `
-  padding: 10px 12px;
-  padding-right: ${withIcon && 'padding-right: 38px'};
+  padding: 1.0rem 1.2rem;
+  padding-right: ${withIcon && 'padding-right: 3.8rem'};
 
   box-sizing: border-box;
 
@@ -12,7 +12,7 @@ const styledInput = styled.input(
 
   outline: none;
 
-  border-width: 1.5px;
+  border-width: 1..5rem;
   border-style: solid;
   border-color: ${color.steelTints.steel30};
   border-color: ${isValid && color.misc.successGreen};
@@ -20,7 +20,7 @@ const styledInput = styled.input(
 
   border-radius: 4px;
 
-  font-size: 14px;
+  font-size: 1.4rem;
 
   color: ${color.steel};
 

@@ -8,26 +8,26 @@ export const BottomCtaContainer = styled.div(
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 635px;
+  width: 63.5rem;
   height: auto;
-  margin: 148px 0;
+  margin: 14.8rem 0;
 
   @media ${medias.mobile} {
     height: auto;
-    margin: 103px 0;
+    margin: 10.3rem 0;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 2.4rem;
   }
 `,
 );
 
 export const BottomCtaHeader = styled.h3(
   ({ theme: { medias } }) => `
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
   ${Header3};
   text-align: center;
   @media ${medias.mobile} {
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
     ${Header4};
   }
 `,
@@ -35,12 +35,12 @@ export const BottomCtaHeader = styled.h3(
 
 export const BottomCtaText = styled.p(
   ({ theme: { medias } }) => `
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
   ${ParagraphBody};
   text-align: center;
 
   @media ${medias.mobile} {
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
   }
 `,
 );

@@ -4,8 +4,8 @@ const styledInputContainer = styled.div(
   ({ withIcon }) => `
   display: flex;
   align-items: center;
-  margin-right: ${withIcon && `10px`};
-  min-height: 48px;
+  margin-right: ${withIcon && `1.0rem`};
+  min-height: 4.8rem;
 `,
 );
 

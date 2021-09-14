@@ -10,8 +10,8 @@ export const StyledHomepageHero = styled.section(
   align-items: flex-end;
 
   @media ${medias.mobile} {
-    max-width: 550px;
-    min-width: 300px;
+    max-width: 55.0rem;
+    min-width: 30.0rem;
     width: 100%;
   }
 `,
@@ -35,14 +35,14 @@ export const Content = styled.div(
 
 export const TextSection = styled.div(
   ({ theme: { medias } }) => `
-  min-width: 416px;
-  margin-top: 77px;
-  margin-left: 120px;
+  min-width: 41.6rem;
+  margin-top: 7.7rem;
+  margin-left: 12.0rem;
   @media ${medias.mobile} {
-    min-width: 300px;
-    margin-top: 40px;
+    min-width: 30.0rem;
+    margin-top: 4.0rem;
     margin-left: 0;
-    padding: 0 24px;
+    padding: 0 2.4rem;
     order: 2;
   }
 `,
@@ -50,40 +50,40 @@ export const TextSection = styled.div(
 
 export const HomepageHeroVideo = styled.video(
   ({ theme: { medias } }) => `
-  width: 808px;
+  width: 80.8rem;
 
   @media ${medias.mobile} {
     order: 1;
     width: 100%;
-    max-width: 550px;
+    max-width: 55.0rem;
   }
 `,
 );
 
 export const StyledSocials = styled(Socials)(
   ({ theme: { medias, color } }) => `
-  width: 1037px;
-  height: 137px;
+  width: 103.7rem;
+  height: 13.7rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding-right: 120px;
-  padding-left: 56px;
+  padding-right: 12.0rem;
+  padding-left: 5.6rem;
 
   background-color: ${color.white};
 
-  box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
-    1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
-    0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
-    0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
-  border-radius: 16px 0px 0px 16px;
+  box-shadow: 3.38443rem 5.58976rem 8.0rem rgba(97, 121, 139, 0.07),
+    1.71337rem 2.82982rem 3.4875rem rgba(97, 121, 139, 0.04725),
+    .0676885rem 1.11795rem 1.3rem rgba(97, 121, 139, 0.035),
+    .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
+  border-radius: 1.6rem .0rem .0rem 1.6rem;
 
   @media ${medias.mobile} {
     width: 80%;
-    height: 80px;
-    margin-top: 40px;
+    height: 8.0rem;
+    margin-top: 4.0rem;
     margin-right: auto;
     margin-left: auto;
     padding: 0;
@@ -91,7 +91,7 @@ export const StyledSocials = styled(Socials)(
   }
 
   a {
-    height: 48px;
+    height: 4.8rem;
     display: flex;
     flex: row;
     align-items: center;
@@ -101,8 +101,8 @@ export const StyledSocials = styled(Socials)(
     color: ${color.navy};
     svg {
       transform: scale(2);
-      margin-right: 24px;
-      margin-left: 24px;
+      margin-right: 2.4rem;
+      margin-left: 2.4rem;
 
       @media ${medias.mobile} {
         transform: scale(1.5);
@@ -110,8 +110,8 @@ export const StyledSocials = styled(Socials)(
       }
     }
     @media ${medias.mobile} {
-      height: 32px;
-      width: 32px;
+      height: 3.2rem;
+      width: 3.2rem;
     }
   }
 `,
@@ -128,19 +128,19 @@ export const Header = styled.h1(
 `,
 );
 export const HomepageHeroImage = styled.img`
-  width: 808px;
-  height: 505px;
+  width: 80.8rem;
+  height: 50.5rem;
 `;
 
 export const Paragraph = styled.p(
   ({ theme: { medias, color } }) => `
   width: 100%;
-  margin: 32px 0;
+  margin: 3.2rem 0;
   ${ParagraphBody};
   color: ${color.steel};
 
   @media ${medias.mobile} {
-    margin: 24px 0;
+    margin: 2.4rem 0;
 
     ${ParagraphSmall};
   }

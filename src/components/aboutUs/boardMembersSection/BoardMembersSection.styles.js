@@ -4,15 +4,15 @@ import { ParagraphBody } from '@root/styles/typography/paragraphs';
 
 export const StyledBoardMembersSection = styled.section(
   ({ theme: { medias } }) => `
-  margin: 148px 108px 0;
+  margin: 14.8rem 10.8rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media ${medias.mobile} {
     width: 95%;
-    min-width: 252px;
-    margin: 70px auto 0;
+    min-width: 25.2rem;
+    margin: 7.0rem auto 0;
   }
 `,
 );
@@ -30,8 +30,8 @@ export const Title = styled.h3(
 );
 export const Description = styled.p(
   ({ theme: { medias, color } }) => `
-  width: 635px;
-  margin-top: 32px;
+  width: 63.5rem;
+  margin-top: 3.2rem;
   ${ParagraphBody};
   text-align: center;
 
@@ -39,15 +39,15 @@ export const Description = styled.p(
 
   @media ${medias.mobile} {
     width: 95%;
-    min-width: 252px;
-    margin: 16px auto 0;
+    min-width: 25.2rem;
+    margin: 1.6rem auto 0;
   }
 `,
 );
 
 export const BoardMembersContainer = styled.div(
   ({ theme: { medias } }) => `
-  margin-top: 64px;
+  margin-top: 6.4rem;
 
   display: flex;
   flex-direction: row;
@@ -55,7 +55,7 @@ export const BoardMembersContainer = styled.div(
   justify-content: center;
 
   @media ${medias.mobile} {
-    margin-top: 57px;
+    margin-top: 5.7rem;
     flex-direction: column;
   }
 `,

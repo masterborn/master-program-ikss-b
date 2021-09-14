@@ -15,7 +15,7 @@ export const Header2 = css`
   font-weight: ${fontWeight.header2};
   font-size: ${fontSize.header2};
   letter-spacing: ${letterSpacing};
-`;
+`.join('');
 
 export const Header3 = css`
   color: ${color.navy};

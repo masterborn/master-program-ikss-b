@@ -23,8 +23,8 @@ export const StyledContactForm = styled(ContactForm)`
 `;
 
 export const ModalBackground = styled.button`
-  width: calc(100% - 15px);
-  height: calc(100% - 15px);
+  width: calc(100% - 1.5rem);
+  height: calc(100% - 1.5rem);
   position: fixed;
   top: 0;
   left: 0;

@@ -6,7 +6,7 @@ export const TextareaContainer = styled.div`
 `;
 export const StyledTextarea = styled.textarea(
   ({ theme: { color }, isValid, isInvalid }) => `
-  padding: 10px 20px 10px 12px;
+  padding: 1.0rem 2.0rem 1.0rem 1.2rem;
 
   box-sizing: border-box;
 
@@ -17,14 +17,14 @@ export const StyledTextarea = styled.textarea(
 
   outline: none;
   
-  border-width: 1.5px;
+  border-width: 1..5rem;
   border-style: solid;
   border-color: ${color.steelTints.steel30};
   border-color: ${isValid && color.misc.successGreen};
   border-color: ${isInvalid && color.misc.errorRed};
   border-radius: 4px;
 
-  font-size: 14px;
+  font-size: 1.4rem;
 
   color: ${color.steel};
 
@@ -45,5 +45,5 @@ export const StyledTextarea = styled.textarea(
 export const StyledErrorIcon = styled(ErrorIcon)`
   position: absolute;
   bottom: 0;
-  right: -35px;
+  right: -3.5rem;
 `;

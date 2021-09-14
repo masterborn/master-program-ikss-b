@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const StyledCtaButton = styled(StyledPrimaryButton)(
   ({ theme: { medias } }) => `
   @media ${medias.mobile} {
-    height: 36px;
-    padding: 9px 16px;
+    height: 3.6rem;
+    padding: .9rem 1.6rem;
   }
 `,
 );

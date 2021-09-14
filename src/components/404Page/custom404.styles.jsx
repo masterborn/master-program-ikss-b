@@ -13,10 +13,10 @@ export const ErrorPageContainer = styled.div(
   height: auto;
 
   @media ${medias.mobile} {
-    padding: 0 24px;
+    padding: 0 2.4rem;
     & span {
       display: inline-block;
-      width: 76px;
+      width: 7.6rem;
     }
   }
 `,
@@ -26,15 +26,15 @@ export const IKKSContainer = styled.div(
   ({ theme: { medias } }) => `
   display: flex;
   justify-content: center;
-  margin-top: 116px;
-  margin-bottom: -65px;
+  margin-top: 11.6rem;
+  margin-bottom: -6.5rem;
   width: 100%;
   height: auto;
   @media ${medias.mobile} {
-    margin-top: 207px;
+    margin-top: 20.7rem;
     margin-bottom: 0;
     height: 51vw;
-    min-height: 136px;
+    min-height: 13.6rem;
     width: 100%;
   }
 `,
@@ -51,11 +51,11 @@ export const IKKSLogo = styled(IKKSErrorImage)(
 
 export const ErrorMessage = styled.h1(
   ({ theme: { medias } }) => `
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
 
   ${Header1};
   @media ${medias.mobile} {
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
     ${Header2};
   }
 `,
@@ -65,29 +65,29 @@ export const ErrorDescription = styled.p(
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
-  font-size: 20px;
-  line-height: 32px;
+  margin-bottom: 3.2rem;
+  font-size: 2.0rem;
+  line-height: 3.2rem;
   @media ${medias.mobile} {
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
     text-align: center;
     display: inline;
-    font-size: 14px;
-    line-height: 28px;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
   }
 `,
 );
 
 export const GetBackButton = styled(StyledPrimaryButton)(
   ({ theme: { medias } }) => `
-  width: 153px;
+  width: 15.3rem;
   @media ${medias.mobile} {
     width: max-content;
-    min-width: 124px;
-    height: 36px;
-    padding: 9px 16px;
-    font-size: 14px;
-    line-height: 18px;
+    min-width: 12.4rem;
+    height: 3.6rem;
+    padding: .9rem 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
   }
 `,
 );

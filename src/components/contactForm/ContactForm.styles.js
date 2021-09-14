@@ -11,28 +11,28 @@ import { SuccessIcon, ErrorIcon } from '../icons/misc';
 
 export const ContactFormContainer = styled.div(
   ({ theme: { medias, color }, isInModal }) => `
-  width: 748px;
+  width: 74.8rem;
   height: fit-content;
 
-  margin-top: ${!isInModal && '180px'};
+  margin-top: ${!isInModal && '18.0rem'};
 
   background-color: ${color.white};
-  box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
-    1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
-    0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
-    0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
-  border-radius: 16px;
+  box-shadow: 3.38443rem 5.58976rem 8.0rem rgba(97, 121, 139, 0.07),
+    1.71337rem 2.82982rem 3.4875rem rgba(97, 121, 139, 0.04725),
+    .0676885rem 1.11795rem 1.3rem rgba(97, 121, 139, 0.035),
+    .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
+  border-radius: 1.6rem;
 
   @media ${medias.mobile} {
     width: 80%;
-    min-width: 300px;
-    margin-top: ${!isInModal && '46px'};
+    min-width: 30.0rem;
+    margin-top: ${!isInModal && '4.6rem'};
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 42.0rem) {
     width: 100%;
-    max-width: 337px;
-    min-width: 300px;
+    max-width: 33.7rem;
+    min-width: 30.0rem;
   }
 `,
 );
@@ -40,12 +40,12 @@ export const ContactFormContainer = styled.div(
 export const CloseButton = styled(IconButton)(
   ({ theme: { medias } }) => `
   position: absolute;
-  top: 37px;
-  right: 37px;
+  top: 3.7rem;
+  right: 3.7rem;
 
   @media ${medias.mobile} {
-    top: 20px;
-    right: 24px;
+    top: 2.0rem;
+    right: 2.4rem;
   }
 `,
 );
@@ -58,43 +58,43 @@ export const ContactFormContent = styled.div(
   display: flex;
   flex-direction: column;
 
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
 
   align-items: center;
 
   overflow: auto;
 
   @media ${medias.mobile} {
-    padding-top: ${isInModal ? '56px' : '32px'};
-    padding-bottom: 32px;
+    padding-top: ${isInModal ? '5.6rem' : '3.2rem'};
+    padding-bottom: 3.2rem;
   }
 `,
 );
 
 export const TopSection = styled.div(
   ({ theme: { medias, color } }) => `
-  width: 588px;
+  width: 58.8rem;
   text-align: center;
   h3 {
     color: ${color.navy};
   }
   p {
-    margin-top: 25px;
+    margin-top: 2.5rem;
     color: ${color.steel};
   }
 
   @media ${medias.mobile} {
     width: 80%;
-    min-width: 295px;
+    min-width: 29.5rem;
     h3 {
-      font-size: 18px;
-      line-height: 24px;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
     }
     p {
-      margin-top: 24px;
-      font-size: 14px;
-      line-height: 28px;
+      margin-top: 2.4rem;
+      font-size: 1.4rem;
+      line-height: 2.8rem;
     }
   }
 `,
@@ -120,13 +120,13 @@ export const ContactFormDescription = styled.p(
 
 export const Form = styled.form(
   ({ theme: { medias } }) => `
-  width: 588px;
-  margin-top: 37px;
+  width: 58.8rem;
+  margin-top: 3.7rem;
 
   @media ${medias.mobile} {
     width: 80%;
-    min-width: 295px;
-    margin-top: 24px;
+    min-width: 29.5rem;
+    margin-top: 2.4rem;
 
     display: flex;
     flex-direction: column;
@@ -137,10 +137,10 @@ export const Form = styled.form(
 
 export const ContactFormLabel = styled.label(
   ({ theme: { medias } }) => `
-  margin-top: 15px;
+  margin-top: 1.5rem;
 
   @media ${medias.mobile}{
-    margin-top: 12px;
+    margin-top: 1.2rem;
   }
 `,
 );
@@ -159,10 +159,10 @@ export const InputRow = styled.div(
   flex-direction: row;
   justify-content: ${spaceBetween && 'space-between'};
 
-  margin-top: ${isTerms && '12px'};
+  margin-top: ${isTerms && '1.2rem'};
 
   @media ${medias.mobile} {
-    margin-top: ${isTerms && '30px'};
+    margin-top: ${isTerms && '3.0rem'};
     flex-direction: ${!isTerms && 'column'};
   }
 `,
@@ -170,8 +170,8 @@ export const InputRow = styled.div(
 
 export const NameInput = styled(Input)(
   ({ theme: { medias } }) => `
-  width: 282px;
-  height: 48px;
+  width: 28.2rem;
+  height: 4.8rem;
   margin-right: 0;
 
   @media ${medias.mobile} {
@@ -181,8 +181,8 @@ export const NameInput = styled(Input)(
 );
 export const FullWidthInput = styled(Input)(
   ({ theme: { medias } }) => `
-  width: 588px;
-  height: 48px;
+  width: 58.8rem;
+  height: 4.8rem;
   margin-right: 0;
 
   @media ${medias.mobile} {
@@ -192,17 +192,17 @@ export const FullWidthInput = styled(Input)(
 );
 export const ContentInput = styled(TextArea)(
   ({ theme: { medias } }) => `
-  width: 588px;
-  height: 221px;
+  width: 58.8rem;
+  height: 22.1rem;
 
   @media ${medias.mobile} {
     width: 89%;
-    height: 125px;
+    height: 12.5rem;
   }
 `,
 );
 export const StyledCheckbox = styled(Checkbox)`
-  margin-right: 16px;
+  margin-right: 1.6rem;
 `;
 
 export const RODOContainer = styled.div`
@@ -215,10 +215,10 @@ export const RODO = styled.p(
   color: ${color.steelTints.steel70};
 
   @media ${medias.mobile} {
-    width: 240px;
+    width: 24.0rem;
 
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 `,
 );
@@ -231,15 +231,15 @@ export const RODOLink = styled.a`
 
 export const SubmitButton = styled(PrimaryButton)(
   ({ theme: { medias } }) => `
-  width: 187px;
-  height: 48px;
+  width: 18.7rem;
+  height: 4.8rem;
 
-  margin-top: 37px;
+  margin-top: 3.7rem;
   margin-left: auto;
 
   @media ${medias.mobile} {
-    width: 154px;
-    height: 36px;
+    width: 15.4rem;
+    height: 3.6rem;
 
     margin-right: auto;
   }
@@ -247,18 +247,18 @@ export const SubmitButton = styled(PrimaryButton)(
 );
 
 export const StyledSuccessIcon = styled(SuccessIcon)`
-  margin-right: 10px;
+  margin-right: 1rem;
 `;
 export const StyledErrorIcon = styled(ErrorIcon)`
-  margin-right: 10px;
+  margin-right: 1rem;
 `;
 
 const StatusButton = styled.button(
   ({ theme: { medias, color } }) => `
   width: 100%;
-  height: 48px;
+  height: 4.8rem;
 
-  margin-top: 37px;
+  margin-top: 3.7rem;
 
   display: flex;
   flex-direction: row;
@@ -266,18 +266,18 @@ const StatusButton = styled.button(
   align-items: center;
 
   border: none;
-  border-radius: 26px;
+  border-radius: 2.6rem;
 
   cursor: pointer;
   ${ButtonBigText}
   color: ${color.white};
 
   @media ${medias.mobile} {
-    height: 36px;
+    height: 3.6rem;
     ${ButtonSmallText}
     svg {
-      width: 20px;
-      height: 20px;
+      width: 2.0rem;
+      height: 2.0rem;
     }
   }
 `,

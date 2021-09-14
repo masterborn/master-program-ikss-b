@@ -3,17 +3,17 @@ import styled from 'styled-components';
 export const StyledLayout = styled.div(
   ({ theme: { medias } }) => `
   width: 100%;
-  min-width: 1440px;
+  min-width: 144.0rem;
   margin: 0 auto;
 
   @media ${medias.mobile} {
-    min-width: 300px;
+    min-width: 30.0rem;
     width: 100%;
   }
 
   #main {
     width: 100%;
-    max-width: 1440px;
+    max-width: 144.0rem;
     margin: 0 auto;
     position: relative;
 
@@ -35,7 +35,7 @@ export const PageContentWrapper = styled.div`
 
 export const TopBackgroundGradient = styled.div`
   width: 100%;
-  height: 464px;
+  height: 46.4rem;
 
   position: absolute;
   z-index: -1;
@@ -46,16 +46,16 @@ export const TopBackgroundGradient = styled.div`
 export const BottomBackgroundGradient = styled.div(
   ({ theme: { medias }, isOnHomepage }) => `
   width: 100%;
-  height: 994px;
+  height: 99.4rem;
 
   position: absolute;
-  bottom: ${isOnHomepage ? '324px' : '0'};
+  bottom: ${isOnHomepage ? '32.4rem' : '0'};
   z-index: -1;
 
   background: linear-gradient(0deg, #f4faff 0%, rgba(255, 255, 255, 0) 100%);
   @media ${medias.mobile} {
-    height: 770px;
-    bottom: 206px;
+    height: 77.0rem;
+    bottom: 20.6rem;
   }
 `,
 );

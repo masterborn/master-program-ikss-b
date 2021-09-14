@@ -8,27 +8,27 @@ export const LogosSection = styled.section(
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 1134px;
+  width: 113.4rem;
   height: auto;
-  margin-top: 148px;
+  margin-top: 14.8rem;
 
   @media ${medias.mobile} {
     width: 100%;
-    max-width: 550px;
-    padding: 0 26px 0 26px;
+    max-width: 55.0rem;
+    padding: 0 2.6rem 0 2.6rem;
     height: auto;
   } ;
 `,
 );
 export const PartnersHeader = styled.h3(
   ({ theme: { medias } }) => `
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
   text-align: center;
   
   ${Header3};
   @media ${medias.mobile} {
     ${Header4};
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
   }
 `,
 );
@@ -36,16 +36,16 @@ export const PartnersHeader = styled.h3(
 export const PartnersDescription = styled.p(
   ({ theme: { medias } }) => `
   text-align: center;
-  width: 635px;
-  height: 64px;
+  width: 63.5rem;
+  height: 6.4rem;
   ${ParagraphBody};
 
   @media ${medias.mobile} {
     ${ParagraphSmall};
     width: 100%;
-    max-width: 550px;
+    max-width: 55.0rem;
     height: auto;
-    min-height: 112px;
+    min-height: 11.2rem;
   }
 `,
 );
@@ -57,14 +57,14 @@ export const LogosContainer = styled.div(
   justify-content: center;
   align-content: flex-start;
   height: auto;
-  width: 1134px;
-  margin-top: 80px;
+  width: 113.4rem;
+  margin-top: 8.0rem;
 
   @media ${medias.mobile} {
     width: 100%;
-    max-width: 550px;
-    margin-top: 32px;
-    min-height: 302px;
+    max-width: 55.0rem;
+    margin-top: 3.2rem;
+    min-height: 30.2rem;
     height: auto;
   }
 `,
@@ -75,20 +75,20 @@ export const Logo = styled.div(
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 226px;
-  height: 112px;
+  width: 22.6rem;
+  height: 11.2rem;
 
   @media ${medias.mobile} {
     width: calc(100% / 3);
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 3.0rem;
 
     & a,
     img {
       width: 85%;
       height: auto;
-      min-height: 35px;
-      max-height: 40px;
+      min-height: 3.5rem;
+      max-height: 4.0rem;
     }
   } ;
 `,

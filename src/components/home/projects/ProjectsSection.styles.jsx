@@ -8,10 +8,10 @@ export const ProjectSection = styled.section(
   align-items: center;
   align-self: center;
   height: auto;
-  width: 997px;
-  margin-top: 180px;
+  width: 99.7rem;
+  margin-top: 18.0rem;
   a {
-    margin-top: 32px;
+    margin-top: 3.2rem;
 
     color: inherit;
     text-decoration: none;
@@ -19,13 +19,13 @@ export const ProjectSection = styled.section(
 
   @media ${medias.mobile} {
     width: 100%;
-    max-width: 550px;
-    padding: 0 24px 0 24px;
-    margin-top: 30px;
+    max-width: 55.0rem;
+    padding: 0 2.4rem 0 2.4rem;
+    margin-top: 3.0rem;
 
     a {
       align-self: center;
-      margin-top: 16px;
+      margin-top: 1.6rem;
     }
   }
 `,
@@ -33,12 +33,12 @@ export const ProjectSection = styled.section(
 
 export const SectionHeader = styled.h3(
   ({ theme: { medias } }) => `
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
   ${Header3};
 
   @media ${medias.mobile} {
     ${Header4};
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
 `,
 );

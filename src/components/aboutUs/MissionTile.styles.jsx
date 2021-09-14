@@ -5,12 +5,12 @@ import { ParagraphBody, ParagraphSmall } from '../../styles/typography/paragraph
 export const MissionContainer = styled.div(
   ({ theme: { medias } }) => `
   display: flex;
-  width: 1197px;
+  width: 119.7rem;
   height: auto;
-  margin-top: 148px;
+  margin-top: 14.8rem;
   @media ${medias.mobile} {
-    margin-top: 80px;
-    padding: 0 24px 0 24px;
+    margin-top: 8.0rem;
+    padding: 0 2.4rem 0 2.4rem;
     justify-content: flex-start;
     width: 100%;
     flex-direction: column;
@@ -20,14 +20,14 @@ export const MissionContainer = styled.div(
 
 export const MissionImage = styled.img(
   ({ theme: { medias } }) => `
-  margin-right: 56px;
-  border-radius: 16px;
-  width: 483px;
+  margin-right: 5.6rem;
+  border-radius: 1.6rem;
+  width: 48.3rem;
   height: auto;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   @media ${medias.mobile} {
     margin-right: 0;
-    border-radius: 8px;
+    border-radius: .8rem;
     width: 100%;
   }
 `,
@@ -39,19 +39,19 @@ export const MissionTextContainer = styled.div(
   justify-content: flex-start;
   width: 100%;
   height: 100%;
-  padding: 19px 0 18px 0;
+  padding: 1.9rem 0 1.8rem 0;
   @media ${medias.mobile} {
-    padding: 32px 0 0 0;
+    padding: 3.2rem 0 0 0;
   }
 `,
 );
 export const MissionHeader = styled.h2(
   ({ theme: { medias } }) => `
   ${Header2};
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
   @media ${medias.mobile} {
     ${Header4};
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
   }
 `,
 );

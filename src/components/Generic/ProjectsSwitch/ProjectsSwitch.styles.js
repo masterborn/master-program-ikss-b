@@ -6,13 +6,13 @@ export const ProjectsSwitchContainer = styled.div(
   display: flex;
   justify-content: center;
   width: ${isOnGrid ? 'max-content' : 'auto'};
-  height: 48px;
+  height: 4.8rem;
   background-color: ${color.blueTints.blue10};
-  margin-bottom: ${isOnGrid ? '48px' : '64px'};
-  border-radius: 26px;
+  margin-bottom: ${isOnGrid ? '4.8rem' : '6.4rem'};
+  border-radius: 2.6rem;
 
   @media ${medias.mobile} {
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
     background: ${isOnGrid ? 'iherit' : 'none'};
     height: auto;
     flex-wrap: wrap;
@@ -26,22 +26,22 @@ export const DateSwitchButton = styled.button(
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 10.0rem;
   height: 100%;
-  padding: 14px 24px;
+  padding: 1.4rem 2.4rem;
   border: none;
-  border-radius: 26px;
+  border-radius: 2.6rem;
   color: ${clicked ? color.white : color.navy};
   background-color: ${clicked ? color.ikssBlue : color.blueTints.blue10};
   ${ButtonBigText}
   cursor: pointer;
 
   @media ${medias.mobile} {
-    height: 31px;
-    width: 84px;
-    padding: 9px 16px;
-    font-size: 10px;
-    line-height: 13px;
+    height: 3.1rem;
+    width: 8.4rem;
+    padding: .9rem 1.6rem;
+    font-size: 1.0rem;
+    line-height: 1.3rem;
   }
 `,
 );
@@ -53,33 +53,33 @@ export const SwitchButton = styled.button(
   align-items: center;
   width: auto;
   height: 100%;
-  padding: 14px 24px;
+  padding: 1.4rem 2.4rem;
   border: none;
-  border-radius: 26px;
+  border-radius: 2.6rem;
   color: ${clicked ? color.white : color.navy};
   background-color: ${clicked ? color.ikssBlue : color.blueTints.blue10};
   font-weight: 700;
-  line-height: 20px;
-  font-size: 16px;
+  line-height: 2.0rem;
+  font-size: 1.6rem;
   cursor: pointer;
 
   @media ${medias.mobile} {
-    height: 31px;
+    height: 3.1rem;
     width: auto;
-    padding: 9px 16px;
-    font-size: 10px;
-    line-height: 13px;
+    padding: .9rem 1.6rem;
+    font-size: 1.0rem;
+    line-height: 1.3rem;
     &:first-child {
-      margin: 0 100% 12px 100%;
+      margin: 0 100% 1.2rem 100%;
       min-width: max-content;
     }
     &:last-child {
-      margin: 0 0 0 12px;
+      margin: 0 0 0 1.2rem;
     }
   }
-  @media (max-width: 380px) {
-    min-width: 90px;
-    max-width: 120px;
+  @media (max-width: 38.0rem) {
+    min-width: 9.0rem;
+    max-width: 12.0rem;
   }
 `,
 );

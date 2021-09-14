@@ -6,13 +6,13 @@ export const HistoryTileContainer = styled.div(
   ({ theme: { medias } }) => `
   display: flex;
   height: auto;
-  width: 1197px;
-  margin-top: 148px;
+  width: 119.7rem;
+  margin-top: 14.8rem;
   flex-wrap: wrap;
   @media ${medias.mobile} {
-    margin-top: 80px;
+    margin-top: 8.0rem;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 2.4rem;
   }
 `,
 );
@@ -23,10 +23,10 @@ export const HistoryRow = styled.div(
   height: auto;
   display: flex;
   &:first-child {
-    margin-bottom: 32px;
+    margin-bottom: 3.2rem;
   }
   @media ${medias.mobile} {
-    margin-bottom: 40px;
+    margin-bottom: 4.0rem;
     flex-direction: column-reverse;
   }
 `,
@@ -39,7 +39,7 @@ export const HistoryTextContainer = styled.div`
 export const HistoryHeader = styled.h2(
   ({ theme: { medias } }) => `
   ${Header2};
-  margin: 32px 0 16px 0;
+  margin: 3.2rem 0 1.6rem 0;
   @media ${medias.mobile} {
     ${Header4};
   }
@@ -57,17 +57,17 @@ export const HistoryDescription = styled.p(
 
 export const HistoryImage = styled.img(
   ({ theme: { medias } }) => `
-  width: 483px;
+  width: 48.3rem;
   height: auto;
-  border-radius: 16px;
-  margin-left: 56px;
+  border-radius: 1.6rem;
+  margin-left: 5.6rem;
   &:first-child {
-    margin-bottom: 32px;
+    margin-bottom: 3.2rem;
   }
   @media ${medias.mobile} {
     width: 100%;
     margin-left: 0;
-    border-radius: 8px;
+    border-radius: .8rem;
   }
 `,
 );

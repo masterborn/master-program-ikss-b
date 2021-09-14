@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 const VideoFrame = styled.iframe(
   ({ theme: { medias }, isOnGrid }) => `
-  border-radius: 16px 16px 0 0;
+  border-radius: 1.6rem 1.6rem 0 0;
   border: none;
-  height: ${isOnGrid ? '379px' : '579px'};
+  height: ${isOnGrid ? '37.9rem' : '57.9rem'};
   width: 100%;
   @media ${medias.mobile} {
     height: 40vw;
-    min-height: 200px;
+    min-height: 20.0rem;
   }
 `,
 );
