@@ -16,9 +16,9 @@ export const CooperationValuesSectionContainer = styled.div(
 `,
 );
 export const Title = styled.h3(
-  ({ theme: { medias } }) => `
+  ({ theme: { medias, color } }) => `
   ${Header3};
-  color: ${({ theme: { color } }) => color.navy};
+  color: ${color.navy};
 
   @media ${medias.mobile} {
     ${Header4};

@@ -3,12 +3,12 @@ import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraph
 import styled from 'styled-components';
 
 export const TopSectionContainer = styled.section(
-  ({ theme: { medias } }) => `
+  ({ theme: { medias }, isOnCooperationPage }) => `
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: ${({ isOnCooperationPage }) => (isOnCooperationPage ? '583px' : 'auto')};
+  width: ${isOnCooperationPage ? '583px' : 'auto'};
 
   height: auto;
   text-align: center;
