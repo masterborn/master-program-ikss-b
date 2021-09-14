@@ -13,13 +13,13 @@ export const fontWeight = {
   header5: '800',
 };
 export const lineHeight = {
-  body: '32px',
-  bodySmall: '28px',
-  header1: '72px',
-  header2: '72px',
-  header3: '44px',
-  header4: '32px',
-  header5: '24px',
+  body: '2rem',
+  bodySmall: '2rem',
+  header1: '1.29rem',
+  header2: '1.8rem',
+  header3: '1.37rem',
+  header4: '1.34rem',
+  header5: '1.34rem',
 };
 
 export const color = {
@@ -54,13 +54,13 @@ export const medias = {
   mobile: '(max-width: 550px)',
 };
 export const fontSize = {
-  body: '16px',
-  bodySmall: '14px',
-  header1: '56px',
-  header2: '40px',
-  header3: '32px',
-  header4: '24px',
-  header5: '18px',
+  body: '1.6rem',
+  bodySmall: '1.4rem',
+  header1: '5.6rem',
+  header2: '4rem',
+  header3: '3.2rem',
+  header4: '2.4rem',
+  header5: '1.8rem',
 };
 
 const theme = {
