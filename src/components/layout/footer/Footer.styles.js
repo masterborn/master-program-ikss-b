@@ -16,7 +16,6 @@ export const StyledFooter = styled.footer(
 
   @media ${medias.mobile} {
     height: auto;
-    margin-top: 9.0rem;
   }
 `,
 );

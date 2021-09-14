@@ -27,6 +27,8 @@ export const ContactFormContainer = styled.div(
     width: 80%;
     min-width: 30.0rem;
     margin-top: ${!isInModal && '4.6rem'};
+    margin-bottom: 9rem;
+
   }
 
   @media (max-width: 42.0rem) {
