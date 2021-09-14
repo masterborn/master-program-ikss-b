@@ -10,6 +10,7 @@ export const CooperationValuesSectionContainer = styled.div`
 
   @media (max-width: 550px) {
     width: 100%;
+    padding: 0 12px;
   }
 `;
 export const Title = styled(Header3)`

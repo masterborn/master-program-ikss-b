@@ -20,6 +20,7 @@ export const LogosSection = styled.section`
 `;
 export const PartnersHeader = styled(Header3)`
   margin-bottom: 32px;
+  text-align: center;
 
   @media (max-width: 500px) {
     margin-bottom: 16px;

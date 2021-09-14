@@ -23,7 +23,7 @@ export const StyledTile = styled.div`
 
   @media (max-width: 550px) {
     width: 90%;
-    min-width: 300px;
+    min-width: 252px;
     max-width: 384px;
     height: ${({ isOnHomepage }) => (isOnHomepage ? '334px' : '350px')};
 
