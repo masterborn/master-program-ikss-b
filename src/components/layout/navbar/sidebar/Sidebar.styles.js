@@ -90,8 +90,8 @@ export const SubpageLink = styled.a(
 
   box-shadow: ${
     pathname === 'Strona główna'
-      ? 'inset .0rem 1.5rem .0rem #EAF5FF, inset .0rem -1.5rem .0rem #EAF5FF'
-      : 'inset .0rem -1.5rem .0rem #eaf5ff'
+      ? 'inset 0px 1.5px 0px #EAF5FF, inset 0px -1.5px 0px #EAF5FF'
+      : 'inset 0px -1.5px 0px #eaf5ff'
   };
 
   &:hover {

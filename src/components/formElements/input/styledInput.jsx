@@ -12,7 +12,7 @@ const styledInput = styled.input(
 
   outline: none;
 
-  border-width: 1..5rem;
+  border-width: 1.5px;
   border-style: solid;
   border-color: ${color.steelTints.steel30};
   border-color: ${isValid && color.misc.successGreen};

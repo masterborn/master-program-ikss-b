@@ -11,7 +11,7 @@ const StyledCheckbox = styled.input.attrs({ type: 'checkbox' })(
   appearance: none;
   background-color: ${color.white};
 
-  border: 1..5rem solid;
+  border: 1.5px solid;
   border-color: ${isInvalid ? color.misc.errorRed : color.steelTints.steel40};
   border-radius: 4px;
 
