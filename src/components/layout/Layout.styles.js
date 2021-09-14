@@ -52,7 +52,7 @@ export const BottomBackgroundGradient = styled.div(
   bottom: ${isOnHomepage ? '324px' : '0'};
   z-index: -1;
 
-  background: red;
+  background: linear-gradient(0deg, #f4faff 0%, rgba(255, 255, 255, 0) 100%);
   @media ${medias.mobile} {
     height: 770px;
     bottom: ${isOnHomepage ? '206px' : '0'};
