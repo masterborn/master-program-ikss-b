@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import StyledPrimaryButton from '@buttons/primaryButton/StyledPrimaryButton';
 import { Header1, Header2 } from '@typography/headers';
+import { ParagraphSmall } from '@typography/paragraphs';
 import IKKSErrorImage from './IKKSErrorImage';
 
 export const ErrorPageContainer = styled.div(
@@ -17,7 +18,6 @@ export const ErrorPageContainer = styled.div(
     padding: 0 2.4rem;
     & span {
       display: inline-block;
-      width: 7.6rem;
     }
   }
 `,
@@ -63,18 +63,15 @@ export const ErrorMessage = styled.h1(
 );
 export const ErrorDescription = styled.p(
   ({ theme: { medias } }) => `
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline;
   margin-bottom: 3.2rem;
   font-size: 2.0rem;
   line-height: 3.2rem;
   @media ${medias.mobile} {
+    ${ParagraphSmall}
     margin-bottom: 2.4rem;
     text-align: center;
-    display: inline;
-    font-size: 1.4rem;
-    line-height: 2.8rem;
+    
   }
 `,
 );
