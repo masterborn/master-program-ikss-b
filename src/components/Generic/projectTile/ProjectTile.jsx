@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
-import PrimaryButton from '../buttons/primaryButton';
-import ProjectVideo from './ProjectVideo';
+
+import { convertRichTextToReactComponent } from '@mappers/contentful';
+import PrimaryButton from '@buttons/primaryButton';
 import {
   ProjectDescription,
   ProjectArticle,
@@ -13,6 +13,7 @@ import {
   ProjectImage,
   ProjectMediaContainer,
 } from './ProjectTile.styles';
+import ProjectVideo from './ProjectVideo';
 
 export default function ProjectTile({ project, isOnGrid }) {
   const { title, date, image, videoUrl, linkUrl, description } = project;

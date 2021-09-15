@@ -1,14 +1,15 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import SecondaryButton from '@root/components/Generic/buttons/secondaryButton';
-import ProjectTile from '@root/components/Generic/projectTile/ProjectTile';
-import { sortByOrder } from '@root/dataMappers/contentful';
+
+import SecondaryButton from '@buttons/secondaryButton';
+import { sortByOrder } from '@mappers/contentful';
 
 import {
   ProjectsSwitchContainer,
   SwitchButton,
 } from '@root/components/Generic/ProjectsSwitch/ProjectsSwitch.styles';
+import ProjectTile from '@generic/projectTile/ProjectTile';
 import { ProjectSection, SectionHeader } from './ProjectsSection.styles';
 
 function sortProjects(projects) {

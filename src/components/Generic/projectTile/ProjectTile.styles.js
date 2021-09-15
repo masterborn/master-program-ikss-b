@@ -1,7 +1,8 @@
-import { ButtonSmallText } from '@root/styles/typography/buttonsText';
-import { Header4, Header5 } from '@root/styles/typography/headers';
-import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
+
+import { ButtonSmallText } from '@typography/buttonsText';
+import { Header4, Header5 } from '@typography/headers';
+import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const ProjectArticle = styled.article(
   ({ theme: { medias }, isOnGrid }) => `

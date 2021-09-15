@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Header3, Header5 } from '../../../../styles/typography/headers';
+
+import { Header3, Header5 } from '@typography/headers';
 
 export const MidCtaContainer = styled.div(
   ({ theme: { medias } }) => `

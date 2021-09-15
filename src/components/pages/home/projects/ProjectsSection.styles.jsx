@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Header3, Header4 } from '@root/styles/typography/headers';
+
+import { Header3, Header4 } from '@typography/headers';
 
 export const ProjectSection = styled.section(
   ({ theme: { medias } }) => `

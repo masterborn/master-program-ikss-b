@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { toggleModal } from '@root/redux/actions/modalActions';
-import StyledCtaButton from './ctaButton.styles';
+
+import { toggleModal } from '@redux/actions/modalActions';
+import StyledCtaButton from '@cta/ctaButton.styles';
 
 export default function CtaButton({ buttonCaption }) {
   const dispatch = useDispatch();

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CtaOverlay, MidCtaContainer, MidCtaHeader } from './midCta.styles';
-import CtaButton from '../ctaButton';
+
+import { CtaOverlay, MidCtaContainer, MidCtaHeader } from '@cta/midCta/midCta.styles';
+import CtaButton from '@cta/ctaButton';
 
 export default function MidCta({ midCtaContent }) {
   const { title, linkCaption: buttonText } = midCtaContent;

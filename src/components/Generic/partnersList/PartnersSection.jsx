@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// eslint-disable-next-line import/extensions
-import { convertRichTextToReactComponent } from '@root/dataMappers/contentful.jsx';
 
-import PartnerLogo from '@root/components/Generic/logos/PartnerLogo';
+// eslint-disable-next-line import/extensions
+import { convertRichTextToReactComponent } from '@mappers/contentful.jsx';
+import PartnerLogo from '@logos/PartnerLogo';
 import {
   LogosContainer,
   LogosSection,
   PartnersDescription,
   PartnersHeader,
-} from './PartnersSection.style';
+} from '@partnerTiles/PartnersSection.style';
 
 export default function PartnersSection({ partners, partnersText }) {
   const { title: partnersTitle, text1: richText } = partnersText;

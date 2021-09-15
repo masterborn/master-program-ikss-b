@@ -1,5 +1,6 @@
-import StyledPrimaryButton from '@root/components/Generic/buttons/primaryButton/StyledPrimaryButton';
 import styled from 'styled-components';
+
+import StyledPrimaryButton from '@buttons/primaryButton/StyledPrimaryButton';
 
 const StyledCtaButton = styled(StyledPrimaryButton)(
   ({ theme: { medias } }) => `

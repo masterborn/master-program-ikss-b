@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import StyledPrimaryButton from '../../Generic/buttons/primaryButton/StyledPrimaryButton';
-import { Header1, Header2 } from '../../../styles/typography/headers';
+
+import StyledPrimaryButton from '@buttons/primaryButton/StyledPrimaryButton';
+import { Header1, Header2 } from '@typography/headers';
 import IKKSErrorImage from './IKKSErrorImage';
 
 export const ErrorPageContainer = styled.div(

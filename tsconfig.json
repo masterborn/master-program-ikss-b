@@ -37,11 +37,12 @@
       "@valueTiles/*": ["./src/components/Generic/ValueTiles/*"],
       "@partnerTiles/*": ["./src/components/Generic/partnersList/*"],
       "@buttons/*": ["./src/components/Generic/buttons/*"],
-
-
-
-
-
+      "@mappers/*": ["./src/dataMappers/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@projectSwitch/*": ["./src/components/Generic/ProjectsSwitch/*"],
+      "@typography/*": ["./src/styles/typography/*"],
+      "@projectTile/*": ["./src/components/Generic/projectTile/*"],
+      "@logos/*": ["./src/components/Generic/logos/*"],
       "@root/*": ["./src/*"],
       "@api/*": ["./src/api/*"],
       "@api": ["./src/api/index.ts"],

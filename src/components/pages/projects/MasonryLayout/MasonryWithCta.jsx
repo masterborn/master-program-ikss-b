@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProjectTile from '@root/components/Generic/projectTile/ProjectTile';
-import MidCta from '@root/components/Generic/CallToAction/midCta/midCta';
+
+import ProjectTile from '@projectTile/ProjectTile';
+import MidCta from '@cta/midCta/midCta';
 import { Masonry } from '../ProjectsMasonry.styles';
 
 export default function MasonryWithCta({ projects, getColumnWidth, midCtaContent }) {

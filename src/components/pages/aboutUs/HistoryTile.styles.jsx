@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { Header2, Header4 } from '../../../styles/typography/headers';
-import { ParagraphBody, ParagraphSmall } from '../../../styles/typography/paragraphs';
+
+import { Header2, Header4 } from '@typography/headers';
+import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const HistoryTileContainer = styled.div(
   ({ theme: { medias } }) => `

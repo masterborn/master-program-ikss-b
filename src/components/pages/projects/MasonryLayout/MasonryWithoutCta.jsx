@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProjectTile from '@root/components/Generic/projectTile/ProjectTile';
+
+import ProjectTile from '@projectTile/ProjectTile';
 import { Masonry } from '../ProjectsMasonry.styles';
 
 export default function MasonryWithoutCta({ projects, getColumnWidth }) {

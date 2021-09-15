@@ -1,6 +1,7 @@
-import { Header3, Header4 } from '@root/styles/typography/headers';
-import { ParagraphBody } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
+
+import { Header3, Header4 } from '@typography/headers';
+import { ParagraphBody } from '@typography/paragraphs';
 
 export const BottomCtaContainer = styled.div(
   ({ theme: { medias } }) => `

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import sortProjectsByYear from '@root/dataMappers/projects';
 import PropTypes from 'prop-types';
-import {
-  DateSwitchButton,
-  ProjectsSwitchContainer,
-} from '../../Generic/ProjectsSwitch/ProjectsSwitch.styles';
+
+import sortProjectsByYear from '@mappers/projects';
+import { DateSwitchButton, ProjectsSwitchContainer } from '@projectSwitch/ProjectsSwitch.styles';
 import MasonryWithCta from './MasonryLayout/MasonryWithCta';
 import MasonryWithoutCta from './MasonryLayout/MasonryWithoutCta';
 import { ProjectsMasonryContainer } from './ProjectsMasonry.styles';
