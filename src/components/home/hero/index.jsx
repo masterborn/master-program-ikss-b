@@ -22,7 +22,7 @@ export default function HomepageHero({ homepageHeroContent, socials }) {
     text1: richText,
   } = homepageHeroContent;
   const isMobile = useSelector((state) => state.isMobile);
-  const navbarHeight = isMobile ? '5.6rem' : '8.8rem';
+  const navbarHeight = isMobile ? 56 : 88;
 
   const urlIsImage = /.*.(jpg|png|jpeg)$/.test(mediaUrl);
   const Description = convertRichTextToReactComponent(Paragraph, richText);

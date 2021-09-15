@@ -4,13 +4,13 @@ import { ButtonBigText, ButtonSmallText } from '@root/styles/typography/buttonsT
 const defaultVariantStyles = css`
   height: 3.6rem;
   ${ButtonSmallText};
-  padding: 0.5em 0.88em 0.5em 0.88em;
+  padding: 0.9rem 1.6rem 0.9rem 1.8rem;
 `;
 
 const largeVariantStyles = css`
   height: 4.8rem;
   ${ButtonBigText};
-  padding: 0.7em 1.2em 0.7em 1.2em;
+  padding: 1.4rem 2.4rem 1.4rem 2.6rem;
 `;
 
 const StyledPrimaryButton = styled.button(
@@ -21,7 +21,7 @@ const StyledPrimaryButton = styled.button(
   width: max-content;
 
   border: none;
-  border-radius: 2em;
+  border-radius: 2.6rem;
   color: ${color.white};
   background-color: ${color.ikssBlue};
   ${large ? largeVariantStyles : defaultVariantStyles};
@@ -29,7 +29,7 @@ const StyledPrimaryButton = styled.button(
   & > .icon {
     height: 1em;
 
-    padding-right: 0.8em;
+    margin-right: 0.6rem;
   }
   &:hover {
     background-color: #2f95eb;

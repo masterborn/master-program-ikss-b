@@ -13,7 +13,7 @@ export default function NavbarSocials({ className, socialsLinks, currPathname, n
 
     if (section) {
       const options = {
-        rootMargin: `-${navbarHeight}`,
+        rootMargin: `-${navbarHeight}px`,
       };
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -46,5 +46,5 @@ NavbarSocials.propTypes = {
     in: PropTypes.string,
   }).isRequired,
   currPathname: PropTypes.string.isRequired,
-  navbarHeight: PropTypes.string.isRequired,
+  navbarHeight: PropTypes.number.isRequired,
 };

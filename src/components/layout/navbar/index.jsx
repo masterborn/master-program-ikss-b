@@ -22,10 +22,11 @@ import Sidebar from './sidebar';
 
 export default function Navbar({ socials, paths, currPathname }) {
   const dispatch = useDispatch();
-  const navbarHeight = '88px';
   const [isSidebarOpened, setIsSidebarOpened] = useState(false);
   const openContactModal = (isToggled) => dispatch(toggleModal(isToggled));
   const isMobile = useSelector((state) => state.isMobile);
+
+  const navbarHeight = isMobile ? 56 : 88;
 
   const handleClickContactButton = () =>
     handleContactFormButton(currPathname, navbarHeight, openContactModal);
