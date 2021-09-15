@@ -75,28 +75,12 @@ export const ContactFormContent = styled.div(
 );
 
 export const TopSection = styled.div(
-  ({ theme: { medias, color } }) => `
+  ({ theme: { medias } }) => `
   width: 58.8rem;
   text-align: center;
-  h3 {
-    color: ${color.navy};
-  }
-  p {
-    margin-top: 2.5rem;
-    color: ${color.steel};
-  }
 
   @media ${medias.mobile} {
     width: 80%;
-    h3 {
-      font-size: 1.8rem;
-      line-height: 2.4rem;
-    }
-    p {
-      margin-top: 2.4rem;
-      font-size: 1.4rem;
-      line-height: 2.8rem;
-    }
   }
 `,
 );
@@ -127,7 +111,7 @@ export const Form = styled.form(
   @media ${medias.mobile} {
     width: 80%;
     margin-top: 2.4rem;
-=======
+
     display: flex;
     flex-direction: column;
     align-items: center;
