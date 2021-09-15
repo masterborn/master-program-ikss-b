@@ -16,9 +16,7 @@ export const ProjectArticle = styled.article(
     1.71337rem 2.82982rem 3.4875rem rgba(97, 121, 139, 0.04725),
     .0676885rem 1.11795rem 1.3rem rgba(97, 121, 139, 0.035),
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
-  @media ${medias.mobile} {
-    width: 100%;
-  }
+
   a {
     margin-top: ${isOnGrid ? '2.4rem' : '3.2rem'};
 
@@ -34,6 +32,15 @@ export const ProjectArticle = styled.article(
   }
   &:nth-child(2n + 1) {
     order: ${isOnGrid && 1};
+  }
+  @media ${medias.mobile} {
+    width: 100%;
+    &:nth-child(n) {
+      order: ${isOnGrid && 1};
+    }
+   
+
+
   }
 `,
 );

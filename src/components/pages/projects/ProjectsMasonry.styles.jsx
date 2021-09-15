@@ -20,6 +20,7 @@ export const Masonry = styled.div(
     height: auto;
     width: 100%;
     padding: 0 2.4rem 0 2.4rem;
+  
   }
 `,
 );
