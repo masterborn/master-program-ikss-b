@@ -25,9 +25,24 @@ export const HistoryRow = styled.div(
   &:first-child {
     margin-bottom: 3.2rem;
   }
+  &:last-child {
+    div{
+      margin-top: -3.2rem;
+    }
+  }
+
   @media ${medias.mobile} {
     margin-bottom: 4.0rem;
     flex-direction: column-reverse;
+
+    &:last-child {
+      div{
+        margin-top: 0;
+      }
+      img{
+        margin-bottom: 3.2rem;
+      }
+    }
   }
 `,
 );
@@ -61,6 +76,9 @@ export const HistoryImage = styled.img(
   height: auto;
   border-radius: 1.6rem;
   margin-left: 5.6rem;
+  max-height: 40rem;
+
+
   &:first-child {
     margin-bottom: 3.2rem;
   }
