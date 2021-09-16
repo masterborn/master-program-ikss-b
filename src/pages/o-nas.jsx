@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { getPagesDataMockup } from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
+import mapData from '@mappers/contentful';
 import Layout from '@root/components/layout';
 import MissionTile from '@root/components/pages/aboutUs/MissionTile';
 import HistoryTile from '@root/components/pages/aboutUs/HistoryTile';
