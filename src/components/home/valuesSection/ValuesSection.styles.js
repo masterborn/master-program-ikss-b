@@ -3,7 +3,7 @@ import { Header3 } from '../../typography/headers';
 import { ParagraphBody } from '../../typography/paragraphs';
 
 export const StyledValuesSection = styled.section`
-  min-width: 100%;
+  width: 100%;
   margin-top: 157px;
   display: flex;
   flex-direction: column;
@@ -18,19 +18,17 @@ export const ValuesSectionTitle = styled(Header3)`
   text-align: center;
 
   @media (max-width: 550px) {
-    width: 260px;
+    margin: 0 24px;
     font-size: 24px;
     line-height: 32px;
   }
 `;
 
 export const ValuesSectionParagraph = styled(ParagraphBody)`
-  width: 551px;
-  margin-top: 32px;
+  margin: 32px 24px 0;
   text-align: center;
   color: ${({ theme: { color } }) => color.steel};
   @media (max-width: 550px) {
-    width: 300px;
     margin-top: 24px;
   }
 `;
