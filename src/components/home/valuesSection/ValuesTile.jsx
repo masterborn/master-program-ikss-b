@@ -11,17 +11,13 @@ import {
 } from './ValuesTile.styles';
 
 export default function ValuesTile({ data }) {
-  const {
-    title,
-    text1: richText,
-    image1: { url: imageUrl },
-  } = data;
+  const { title, text1: richText, image1: image } = data;
   const Body = convertRichTextToReactComponent(ValueTileParagraph, richText);
   return (
     <StyledValueTile>
       <ValueTileContent>
-        {imageUrl ? (
-          <Image src={`https:${imageUrl}`} height={232} width={232} alt={title} />
+        {image ? (
+          <Image src={`https:${image.url}`} height={232} width={232} alt={title} />
         ) : (
           <ValueTileImageFiller />
         )}

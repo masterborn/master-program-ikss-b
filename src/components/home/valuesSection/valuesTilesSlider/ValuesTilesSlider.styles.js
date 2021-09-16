@@ -9,6 +9,9 @@ export const ValuesTilesContainer = styled.div`
   .slider {
     width: 100%;
   }
+  .slide {
+    width: 100% !important;
+  }
   .swiper-wrapper {
     width: 100%;
   }

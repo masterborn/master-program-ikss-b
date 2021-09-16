@@ -23,8 +23,8 @@ export default function ValuesSection({ valuesText, valuesTiles }) {
         <ValuesTilesSlider valuesTiles={valuesTiles} />
       ) : (
         <ValuesSectionTilesContainer>
-          {valuesTiles.map((val) => (
-            <Tile data={val} key={val.title} />
+          {valuesTiles.map((valueTileData) => (
+            <Tile data={valueTileData} key={valueTileData.title} />
           ))}
         </ValuesSectionTilesContainer>
       )}
