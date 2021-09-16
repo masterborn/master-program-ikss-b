@@ -6,10 +6,22 @@ import SocialsLabel from './SocialsCollection.styles';
 
 export default function Socials({ className, socialsLinks, showRegular, showLabel }) {
   const {
-    socialFb: { title: facebookTitle, linkUrl: facebookUrl, linkCaption: facebookLinkCaption },
-    socialIg: { title: instagramTitle, linkUrl: instagramUrl, linkCaption: instagramLinkCaption },
-    socialYt: { title: youtubeTitle, linkUrl: youtubeUrl, linkCaption: youtubeLinkCaption },
-    socialIn: { title: linkedinTitle, linkUrl: linkedinUrl, linkCaption: linkedinLinkCaption },
+    socialFacebook: {
+      title: facebookTitle,
+      linkUrl: facebookUrl,
+      linkCaption: facebookLinkCaption,
+    },
+    socialInstagram: {
+      title: instagramTitle,
+      linkUrl: instagramUrl,
+      linkCaption: instagramLinkCaption,
+    },
+    socialYoutube: { title: youtubeTitle, linkUrl: youtubeUrl, linkCaption: youtubeLinkCaption },
+    socialLinkedin: {
+      title: linkedinTitle,
+      linkUrl: linkedinUrl,
+      linkCaption: linkedinLinkCaption,
+    },
   } = socialsLinks;
 
   return (
@@ -39,22 +51,22 @@ export default function Socials({ className, socialsLinks, showRegular, showLabe
 Socials.propTypes = {
   className: PropTypes.string,
   socialsLinks: PropTypes.shape({
-    socialFb: PropTypes.shape({
+    socialFacebook: PropTypes.shape({
       title: PropTypes.string,
       linkUrl: PropTypes.string,
       linkCaption: PropTypes.string,
     }),
-    socialIg: PropTypes.shape({
+    socialInstagram: PropTypes.shape({
       title: PropTypes.string,
       linkUrl: PropTypes.string,
       linkCaption: PropTypes.string,
     }),
-    socialYt: PropTypes.shape({
+    socialYoutube: PropTypes.shape({
       title: PropTypes.string,
       linkUrl: PropTypes.string,
       linkCaption: PropTypes.string,
     }),
-    socialIn: PropTypes.shape({
+    socialLinkedin: PropTypes.shape({
       title: PropTypes.string,
       linkUrl: PropTypes.string,
       linkCaption: PropTypes.string,
