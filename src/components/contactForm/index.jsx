@@ -11,6 +11,7 @@ import { sendEmailMockup } from '@root/clients/formcarry';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { inputsValidationInitialState } from '@root/consts/contactForm';
 import validateInputs from './validation';
+import { XIcon } from '../icons/misc';
 import Tooltip from './tooltip';
 import {
   ContactFormContainer,
@@ -30,14 +31,9 @@ import {
   RODOContainer,
   RODO,
   RODOLink,
-  SubmitButton,
-  SuccessButton,
-  StyledSuccessIcon,
-  ErrorButton,
-  StyledErrorIcon,
   ZIPCode,
 } from './ContactForm.styles';
-import { LoaderIcon, XIcon } from '../icons/misc';
+import RenderSubmitButton from './RenderSubmitButton';
 
 const FORM_SENDING_STATUS = {
   initial: 'initial',
@@ -73,7 +69,7 @@ export default function ContactForm({
       dispatch(changeFormSendingStatus(FORM_SENDING_STATUS.initial));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch]);
 
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -118,33 +114,6 @@ export default function ContactForm({
       if (isInModal) {
         closeModal();
       }
-    }
-  };
-
-  const renderSubmitButton = () => {
-    switch (formStatus) {
-      case FORM_SENDING_STATUS.success:
-        return (
-          <SuccessButton>
-            <StyledSuccessIcon />
-            Wiadomość wysłano!{!isMobile && ' Odpowiemy wkrótce.'}
-          </SuccessButton>
-        );
-      case FORM_SENDING_STATUS.error:
-        return (
-          <ErrorButton>
-            <StyledErrorIcon />
-            Coś poszło nie tak.{!isMobile && ' Spróbuj jeszcze raz.'}
-          </ErrorButton>
-        );
-      case FORM_SENDING_STATUS.loading:
-        return (
-          <SubmitButton large={!isMobile}>
-            <LoaderIcon intervalDuration={200} />
-          </SubmitButton>
-        );
-      default:
-        return <SubmitButton large={!isMobile}>Wyślij wiadomość</SubmitButton>;
     }
   };
 
@@ -274,7 +243,11 @@ export default function ContactForm({
             value={formValues._gotcha || ''}
             onChange={handleInputChange}
           />
-          {renderSubmitButton()}
+          <RenderSubmitButton
+            formStatus={formStatus}
+            FORM_SENDING_STATUS={FORM_SENDING_STATUS}
+            isMobile={isMobile}
+          />
         </Form>
       </ContactFormContent>
     </ContactFormContainer>
