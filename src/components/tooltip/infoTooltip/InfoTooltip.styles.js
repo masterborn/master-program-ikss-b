@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 
-export const TooltipContainer = styled.div`
+export const InfoTooltipContainer = styled.div`
   width: 34.7rem;
 
   position: absolute;
   right: 0;
-  bottom: 3rem;
+  bottom: 130%;
 
   padding: 1.3rem 1.9rem 1.9rem;
 
   background: #e8f3fd;
   border-radius: 4px;
+
+  @media (max-width: 550px) {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 
 export const Text = styled.p(
@@ -21,7 +27,7 @@ export const Text = styled.p(
 `,
 );
 
-export const Tail = styled.div`
+export const InfoTooltipTail = styled.div`
   width: 1.4rem;
   height: 1.4rem;
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   changeInputValues,
@@ -12,7 +11,7 @@ import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { inputsValidationInitialState } from '@root/consts/contactForm';
 import validateInputs from './validation';
 import { XIcon } from '../icons/misc';
-import Tooltip from './tooltip';
+import Tooltip from '../tooltip';
 import {
   ContactFormContainer,
   CloseButton,
@@ -29,8 +28,8 @@ import {
   ContentInput,
   StyledCheckbox,
   RODOContainer,
-  RODO,
-  RODOLink,
+  RODOText,
+  HighlightedRODOText,
   ZIPCode,
 } from './ContactForm.styles';
 import RenderSubmitButton from './RenderSubmitButton';
@@ -71,13 +70,9 @@ export default function ContactForm({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
-  const [showTooltip, setShowTooltip] = useState(false);
-
   const disableInputs = !(
     formStatus === FORM_SENDING_STATUS.initial || formStatus === FORM_SENDING_STATUS.error
   );
-
-  const toggleShowTooltip = (show) => setShowTooltip(show);
 
   const handleInputChange = ({ target, target: { name } }) => {
     const value = name === 'hasAgreedToTerms' ? target.checked : target.value;
@@ -220,21 +215,14 @@ export default function ContactForm({
               disabled={disableInputs}
             />
             <RODOContainer>
-              {!isMobile && <Tooltip tooltipText={tooltipText} show={showTooltip} />}
-              <RODO>
+              <RODOText>
                 Zapoznałem się z{' '}
-                <Link href="/terms" passHref>
-                  <RODOLink
-                    href
-                    target="_blank"
-                    rel="noreferrer"
-                    onMouseEnter={() => toggleShowTooltip(true)}
-                    onMouseLeave={() => toggleShowTooltip(false)}
-                  >
+                <Tooltip tooltipContent={tooltipText}>
+                  <HighlightedRODOText>
                     informacją o administratorze i przetwarzaniu danych.
-                  </RODOLink>
-                </Link>
-              </RODO>
+                  </HighlightedRODOText>
+                </Tooltip>
+              </RODOText>
             </RODOContainer>
           </InputRow>
           <ZIPCode

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const TooltipContainer = styled.div`
+export const ErrorTooltipContainer = styled.div`
   max-width: 18rem;
   width: max-content;
 
   position: absolute;
   right: 2px;
   bottom: 3.5rem;
-  z-index: 100;
+  z-index: 10;
   padding: 1.3rem 1.9rem 1.9rem;
 
   background: #ffcccc;
@@ -22,7 +22,7 @@ export const Text = styled.p(
 `,
 );
 
-export const Tail = styled.div`
+export const ErrorTooltipTail = styled.div`
   width: 1.4rem;
   height: 1.4rem;
 

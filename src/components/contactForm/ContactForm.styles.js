@@ -31,7 +31,7 @@ export const ContactFormContainer = styled.div(
 
   }
 
-  @media (max-width: 42.0rem) {
+  @media (max-width: 420px) {
     width: 80%;
     max-width: 33.7rem;
     min-width: 27.8rem;
@@ -188,10 +188,9 @@ export const StyledCheckbox = styled(Checkbox)`
 `;
 
 export const RODOContainer = styled.div`
-  width: 100%;
+  position: relative;
 `;
-
-export const RODO = styled.p(
+export const RODOText = styled.div(
   ({ theme: { medias, color } }) => `
   ${ParagraphSmall};
   color: ${color.steelTints.steel70};
@@ -204,11 +203,10 @@ export const RODO = styled.p(
   }
 `,
 );
-export const RODOLink = styled.a`
+export const HighlightedRODOText = styled.span`
   color: inherit;
-  cursor: pointer;
+  cursor: help;
   font-weight: 700;
-  text-decoration: underline;
 `;
 
 export const SubmitButton = styled(PrimaryButton)(
