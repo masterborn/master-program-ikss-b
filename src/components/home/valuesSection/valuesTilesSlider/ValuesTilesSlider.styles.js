@@ -7,12 +7,12 @@ export const ValuesTilesContainer = styled.div`
   .slider {
     width: 100%;
   }
+  .swiper-pagination {
+    bottom: 6rem;
+  }
   .swiper-pagination-bullet {
     width: 1.6rem;
     height: 1.6rem;
-
-    position: relative;
-    bottom: 0;
 
     border: 1px solid #1889e9;
     background-color: transparent;
@@ -25,7 +25,7 @@ export const ValuesTilesContainer = styled.div`
 
 export const ValuesTilesWrapper = styled.div`
   max-width: 100vw;
-  height: 47rem;
+  height: 50rem;
   display: flex;
   justify-content: center;
 `;
