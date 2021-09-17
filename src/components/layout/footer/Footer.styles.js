@@ -10,14 +10,22 @@ export const StyledFooter = styled.footer`
   width: 100%;
   height: 404px;
 
-  text-align: center;
-
   background-color: ${(props) => props.theme.color.ikssBlue};
 
   @media (max-width: 550px) {
     height: auto;
     margin-top: 90px;
   }
+`;
+
+export const FooterWrapper = styled.div`
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+
+  position: relative;
+
+  text-align: center;
 `;
 
 export const Filler = styled.div`
