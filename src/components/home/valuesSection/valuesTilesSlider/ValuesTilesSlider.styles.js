@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const ValuesTilesContainer = styled.div`
-  max-width: 100vw;
-  min-width: 30rem;
+  width: 100%;
   margin-top: 6rem;
 
   .slider {
