@@ -9,7 +9,7 @@ import {
   ValuesSectionParagraph,
   ValuesSectionTilesContainer,
 } from './ValuesSection.styles';
-import Tile from './ValuesTile';
+import ValueTile from './ValuesTile';
 
 export default function ValuesSection({ valuesText, valuesTiles }) {
   const { title, text1: richText } = valuesText;
@@ -23,8 +23,8 @@ export default function ValuesSection({ valuesText, valuesTiles }) {
         <ValuesTilesSlider valuesTiles={valuesTiles} />
       ) : (
         <ValuesSectionTilesContainer>
-          {valuesTiles.map((val) => (
-            <Tile data={val} key={val.title} />
+          {valuesTiles.map((valueTileData) => (
+            <ValueTile data={valueTileData} key={valueTileData.title} />
           ))}
         </ValuesSectionTilesContainer>
       )}

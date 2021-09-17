@@ -17,10 +17,10 @@ export default function ValuesTilesSlider({ valuesTiles }) {
   return (
     <ValuesTilesContainer>
       <Swiper slidesPerView={1} spaceBetween={2} pagination={pagination} loop className="slider">
-        {valuesTiles.map((val) => (
-          <SwiperSlide className="slide" key={val.title}>
+        {valuesTiles.map((valueTileData) => (
+          <SwiperSlide className="slide" key={valueTileData.title}>
             <ValuesTilesWrapper>
-              <ValuesTile data={val} />
+              <ValuesTile data={valueTileData} />
             </ValuesTilesWrapper>
           </SwiperSlide>
         ))}
