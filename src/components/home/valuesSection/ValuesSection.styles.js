@@ -19,6 +19,7 @@ export const StyledValuesSection = styled.section(
 
 export const ValuesSectionTitle = styled.h3(
   ({ theme: { medias, color } }) => `
+  margin: 0 2.4rem;
   ${Header3};
   color: ${color.navy};
   text-align: center;
@@ -33,11 +34,13 @@ export const ValuesSectionParagraph = styled.p(
   ({ theme: { medias, color } }) => `
   width: 55.1rem;
   margin-top: 3.2rem;
+  padding: 0 2.4rem;
+
   ${ParagraphBody};
   text-align: center;
   color: ${color.steel};
   @media ${medias.mobile} {
-    width: 30.0rem;
+    width: 100%;
     margin-top: 2.4rem;
   }
 `,
