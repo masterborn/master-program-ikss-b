@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import {
   StyledLayout,
   PageWrapper,
+  PageContentWrapper,
   TopBackgroundGradient,
   BottomBackgroundGradient,
 } from './Layout.styles';
@@ -49,15 +50,18 @@ export default function Layout({ children, socials, footerText, contactFormText,
             isOpened={isContactModalOpened}
           />
         )}
-        <div id="main">
+
+        <PageContentWrapper>
           <TopBackgroundGradient />
-          {children}
+
+          <div id="main">{children}</div>
+
           <BottomBackgroundGradient isHomepage={isHomepage} />
-        </div>
+        </PageContentWrapper>
+
         {isValidPage && (
           <Footer socials={socials} footerText={footerText} paths={paths} isHomepage={isHomepage} />
         )}
-        =======
       </StyledLayout>
     </PageWrapper>
   );

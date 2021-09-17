@@ -6,6 +6,7 @@ import { toggleModal } from '@root/redux/actions/modalActions';
 import { HamburgerMenuIcon } from '@root/components/icons/misc';
 import {
   StyledNavbar,
+  FooterWrapper,
   LinksContainer,
   StyledLogoLink,
   StyledLogo,
@@ -32,42 +33,44 @@ export default function Navbar({ socials, paths, currPathname }) {
   const toggleSidebar = () => setIsSidebarOpened((prevState) => !prevState);
   return (
     <StyledNavbar>
-      <Link href="/" passHref>
-        <StyledLogoLink href>
-          <StyledLogo />
-        </StyledLogoLink>
-      </Link>
-      {isMobile ? (
-        <>
-          <HamburgerMenu icon={<HamburgerMenuIcon />} onClick={toggleSidebar} />
-          <Sidebar
-            isOpened={isSidebarOpened}
-            handleCloseSidebar={toggleSidebar}
-            paths={paths}
-            currPathname={currPathname}
-            handleContactFormButton={handleClickContactButton}
-            socialsLinks={socials}
-          />
-        </>
-      ) : (
-        <>
-          <LinksContainer>
-            {paths.map(({ name, path }) => (
-              <Link href={path} key={path}>
-                <Label isHighlighted={currPathname === path}>{name}</Label>
-              </Link>
-            ))}
-          </LinksContainer>
+      <FooterWrapper>
+        <Link href="/" passHref>
+          <StyledLogoLink href>
+            <StyledLogo />
+          </StyledLogoLink>
+        </Link>
+        {isMobile ? (
+          <>
+            <HamburgerMenu icon={<HamburgerMenuIcon />} onClick={toggleSidebar} />
+            <Sidebar
+              isOpened={isSidebarOpened}
+              handleCloseSidebar={toggleSidebar}
+              paths={paths}
+              currPathname={currPathname}
+              handleContactFormButton={handleClickContactButton}
+              socialsLinks={socials}
+            />
+          </>
+        ) : (
+          <>
+            <LinksContainer>
+              {paths.map(({ name, path }) => (
+                <Link href={path} key={path}>
+                  <Label isHighlighted={currPathname === path}>{name}</Label>
+                </Link>
+              ))}
+            </LinksContainer>
 
-      <StyledNavbarSocials
-        socialsLinks={socials}
-        currPathname={currPathname}
-        navbarHeight={navbarHeight}
-      />
+            <StyledNavbarSocials
+              socialsLinks={socials}
+              currPathname={currPathname}
+              navbarHeight={navbarHeight}
+            />
 
-          <ContactButton onClick={handleClickContactButton}>Skontaktuj się</ContactButton>
-        </>
-      )}
+            <ContactButton onClick={handleClickContactButton}>Skontaktuj się</ContactButton>
+          </>
+        )}
+      </FooterWrapper>
     </StyledNavbar>
   );
 }

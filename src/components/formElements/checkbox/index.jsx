@@ -6,7 +6,9 @@ const StyledCheckbox = styled.input.attrs({ type: 'checkbox' })`
   padding-bottom: 0.25px;
   box-sizing: border-box;
   width: 24px;
+  min-width: 24px;
   height: 24px;
+  min-height: 24px;
   appearance: none;
   background-color: ${(props) => props.theme.color.white};
 

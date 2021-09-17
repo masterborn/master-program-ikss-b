@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Icon from './PrimaryIcon';
 import StyledPrimaryButton from './StyledPrimaryButton';
 
-export default function PrimaryButton({ className, children, disabled, withIcon, onClick, isBig }) {
+export default function PrimaryButton({ className, children, disabled, withIcon, onClick, large }) {
   return (
-    <StyledPrimaryButton className={className} disabled={disabled} onClick={onClick} isBig={isBig}>
+    <StyledPrimaryButton className={className} disabled={disabled} onClick={onClick} large={large}>
       {withIcon && <Icon />}
       {children}
     </StyledPrimaryButton>
@@ -18,7 +18,7 @@ PrimaryButton.propTypes = {
   children: PropTypes.node,
   disabled: PropTypes.bool,
   withIcon: PropTypes.bool,
-  isBig: PropTypes.bool,
+  large: PropTypes.bool,
 };
 
 PrimaryButton.defaultProps = {
@@ -27,5 +27,5 @@ PrimaryButton.defaultProps = {
   children: '',
   disabled: false,
   withIcon: false,
-  isBig: false,
+  large: false,
 };

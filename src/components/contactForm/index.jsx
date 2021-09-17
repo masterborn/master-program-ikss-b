@@ -7,10 +7,11 @@ import {
   resetInputValues,
   changeFormSendingStatus,
 } from '@root/redux/actions/contactFormActions';
-import sendEmail from '@root/clients/formcarry';
+import { sendEmailMockup } from '@root/clients/formcarry';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
+import { inputsValidationInitialState } from '@root/consts/contactForm';
 import validateInputs from './validation';
-import { XIcon, LoaderIcon } from '../icons/misc';
+import { XIcon } from '../icons/misc';
 import { Header3 } from '../typography/headers';
 import { ParagraphBody, ParagraphSmall } from '../typography/paragraphs';
 import Tooltip from './tooltip';
@@ -28,14 +29,9 @@ import {
   RODOContainer,
   RODO,
   RODOLink,
-  SubmitButton,
-  LoadingButton,
-  SuccessButton,
-  StyledSuccessIcon,
-  ErrorButton,
-  StyledErrorIcon,
   ZIPCode,
 } from './ContactForm.styles';
+import RenderSubmitButton from './RenderSubmitButton';
 
 const FORM_SENDING_STATUS = {
   initial: 'initial',
@@ -48,7 +44,7 @@ export default function ContactForm({
   className,
   contactFormText,
   tooltipText,
-  isModal,
+  isInModal,
   closeModal,
 }) {
   const { title, text1: text } = contactFormText;
@@ -56,24 +52,12 @@ export default function ContactForm({
   const formValues = useSelector((state) => state.contactForm.inputsValues);
   const dispatch = useDispatch();
 
-  const [validatedInputs, setValidatedInputs] = useState({
-    firstName: { isValid: false, isInvalid: false, message: '' },
-    lastName: { isValid: false, isInvalid: false, message: '' },
-    email: { isValid: false, isInvalid: false, message: '' },
-    title: { isValid: false, isInvalid: false, message: '' },
-    content: { isValid: false, isInvalid: false, message: '' },
-    termsCheckbox: { isInvalid: false },
-  });
+  const isMobile = useSelector((state) => state.isMobile);
+
+  const [validatedInputs, setValidatedInputs] = useState(inputsValidationInitialState);
 
   const resetValidatedInputs = () => {
-    setValidatedInputs({
-      firstName: { isValid: false, isInvalid: false, message: '' },
-      lastName: { isValid: false, isInvalid: false, message: '' },
-      email: { isValid: false, isInvalid: false, message: '' },
-      title: { isValid: false, isInvalid: false, message: '' },
-      content: { isValid: false, isInvalid: false, message: '' },
-      termsCheckbox: { isValid: false, isInvalid: false, message: '' },
-    });
+    setValidatedInputs(inputsValidationInitialState);
   };
 
   const formStatus = useSelector((state) => state.contactForm.status);
@@ -83,7 +67,7 @@ export default function ContactForm({
       dispatch(changeFormSendingStatus(FORM_SENDING_STATUS.initial));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch]);
 
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -121,49 +105,22 @@ export default function ContactForm({
       (formStatus === FORM_SENDING_STATUS.initial || formStatus === FORM_SENDING_STATUS.error) &&
       isFormValid()
     ) {
-      sendEmail(formValues, changeFormStatus, FORM_SENDING_STATUS);
+      sendEmailMockup(formValues, changeFormStatus, FORM_SENDING_STATUS);
     } else if (formStatus === FORM_SENDING_STATUS.success) {
       dispatch(changeFormSendingStatus(FORM_SENDING_STATUS.initial));
 
-      if (isModal) {
+      if (isInModal) {
         closeModal();
       }
-    }
-  };
-
-  const submitButton = () => {
-    switch (formStatus) {
-      case FORM_SENDING_STATUS.success:
-        return (
-          <SuccessButton>
-            <StyledSuccessIcon />
-            Wiadomość wysłano! Odpowiemy wkrótce.
-          </SuccessButton>
-        );
-      case FORM_SENDING_STATUS.error:
-        return (
-          <ErrorButton>
-            <StyledErrorIcon />
-            Coś poszło nie tak. Spróbuj jeszcze raz.
-          </ErrorButton>
-        );
-      case FORM_SENDING_STATUS.loading:
-        return (
-          <LoadingButton isBig>
-            <LoaderIcon intervalDuration={200} />
-          </LoadingButton>
-        );
-      default:
-        return <SubmitButton isBig>Wyślij wiadomość</SubmitButton>;
     }
   };
 
   const Body = convertRichTextToReactComponent(ParagraphBody, text);
 
   return (
-    <ContactFormContainer className={className} id="contact-form" isModal={isModal}>
-      <ContactFormContent>
-        {isModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
+    <ContactFormContainer className={className} id="contact-form" isInModal={isInModal}>
+      <ContactFormContent isInModal={isInModal}>
+        {isInModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
           <Header3>{title}</Header3>
@@ -252,7 +209,7 @@ export default function ContactForm({
             </label>
           </InputRow>
 
-          <InputRow>
+          <InputRow isTerms>
             <StyledCheckbox
               name="hasAgreedToTerms"
               onChange={handleInputChange}
@@ -261,7 +218,7 @@ export default function ContactForm({
               disabled={disableInputs}
             />
             <RODOContainer>
-              <Tooltip tooltipText={tooltipText} show={showTooltip} />
+              {!isMobile && <Tooltip tooltipText={tooltipText} show={showTooltip} />}
               <RODO>
                 Zapoznałem się z{' '}
                 <Link href="/terms" passHref>
@@ -284,7 +241,11 @@ export default function ContactForm({
             value={formValues._gotcha || ''}
             onChange={handleInputChange}
           />
-          {submitButton()}
+          <RenderSubmitButton
+            formStatus={formStatus}
+            FORM_SENDING_STATUS={FORM_SENDING_STATUS}
+            isMobile={isMobile}
+          />
         </Form>
       </ContactFormContent>
     </ContactFormContainer>
@@ -298,11 +259,11 @@ ContactForm.propTypes = {
     text1: PropTypes.shape({}),
   }).isRequired,
   tooltipText: PropTypes.shape({}).isRequired,
-  isModal: PropTypes.bool,
+  isInModal: PropTypes.bool,
   closeModal: PropTypes.func,
 };
 ContactForm.defaultProps = {
   className: '',
-  isModal: false,
+  isInModal: false,
   closeModal: () => {},
 };
