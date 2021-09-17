@@ -3,25 +3,37 @@ import { Header3 } from '../../typography/headers';
 import { ParagraphBody } from '../../typography/paragraphs';
 
 export const StyledValuesSection = styled.section`
-  min-width: 100%;
+  width: 100%;
   margin-top: 157px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 550px) {
+    margin-top: 80px;
+  }
 `;
 
-export const Title = styled(Header3)`
-  color: ${(props) => props.theme.color.navy};
-`;
-
-export const Paragraph = styled(ParagraphBody)`
-  width: 551px;
-  margin-top: 32px;
+export const ValuesSectionTitle = styled(Header3)`
+  color: ${({ theme: { color } }) => color.navy};
   text-align: center;
-  color: ${(props) => props.theme.color.steel};
+
+  @media (max-width: 550px) {
+    margin: 0 24px;
+    font-size: 24px;
+    line-height: 32px;
+  }
 `;
 
-export const TilesContainer = styled.div`
+export const ValuesSectionParagraph = styled(ParagraphBody)`
+  margin: 32px 24px 0;
+  text-align: center;
+  color: ${({ theme: { color } }) => color.steel};
+  @media (max-width: 550px) {
+    margin-top: 24px;
+  }
+`;
+
+export const ValuesSectionTilesContainer = styled.div`
   max-width: 1200px;
   width: 100%;
   margin-top: 40px;
@@ -29,5 +41,3 @@ export const TilesContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
 `;
-
-export default StyledValuesSection;

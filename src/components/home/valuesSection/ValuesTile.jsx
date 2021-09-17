@@ -2,28 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
-import { StyledTile, Content, ImageFiller, Title, Paragraph } from './ValuesTile.styles';
+import {
+  StyledValueTile,
+  ValueTileContent,
+  ValueTileImageFiller,
+  ValueTileTitle,
+  ValueTileParagraph,
+} from './ValuesTile.styles';
 
 export default function ValuesTile({ data }) {
-  const {
-    title,
-    text1: richText,
-    image1: { url: imageUrl },
-  } = data;
-  const Body = convertRichTextToReactComponent(Paragraph, richText);
+  const { title, text1: richText, image1: image } = data;
+  const Body = convertRichTextToReactComponent(ValueTileParagraph, richText);
   return (
-    <StyledTile>
-      <Content>
-        {imageUrl ? (
-          <Image src={`https:${imageUrl}`} height={232} width={232} alt={title} />
+    <StyledValueTile>
+      <ValueTileContent>
+        {image ? (
+          <Image src={`https:${image.url}`} height={232} width={232} alt={title} />
         ) : (
-          <ImageFiller />
+          <ValueTileImageFiller />
         )}
 
-        <Title>{title}</Title>
+        <ValueTileTitle>{title}</ValueTileTitle>
         {Body}
-      </Content>
-    </StyledTile>
+      </ValueTileContent>
+    </StyledValueTile>
   );
 }
 

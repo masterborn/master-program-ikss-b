@@ -11,6 +11,8 @@ import Head from 'next/head';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
 import IsMobileProvider from '@contextProviders/IsMobileProvider';
+import 'swiper/swiper.scss';
+import 'swiper/components/pagination/pagination.scss';
 
 const App = (props) => {
   const queryClientRef = useRef();
