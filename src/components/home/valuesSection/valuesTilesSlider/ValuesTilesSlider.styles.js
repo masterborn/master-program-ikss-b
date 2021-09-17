@@ -2,22 +2,12 @@ import styled from 'styled-components';
 
 export const ValuesTilesContainer = styled.div`
   max-width: 100vw;
-  width: 100%;
   min-width: 300px;
   margin-top: 60px;
-
-  .slider {
-    width: 100%;
-  }
-  .slide {
-    width: 100% !important;
-  }
-  .swiper-wrapper {
-    width: 100%;
-  }
   .swiper-pagination {
     bottom: 50px;
   }
+
   .swiper-pagination-bullet {
     width: 16px;
     height: 16px;
@@ -32,10 +22,8 @@ export const ValuesTilesContainer = styled.div`
 `;
 
 export const ValuesTilesWrapper = styled.div`
-  width: 100%;
-
+  max-width: 100vw;
   height: 470px;
-  width: 100%;
   display: flex;
   justify-content: center;
 `;
