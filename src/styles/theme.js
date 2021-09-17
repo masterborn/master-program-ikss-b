@@ -50,7 +50,9 @@ export const color = {
   },
 };
 
-export const medias = {};
+export const medias = {
+  mobile: '(max-width: 550px)',
+};
 export const fontSize = {
   body: '16px',
   bodySmall: '14px',

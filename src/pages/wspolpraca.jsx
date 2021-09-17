@@ -4,6 +4,22 @@ import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
 
+export async function getStaticProps() {
+  const resJson = await getPagesDataMockup();
+  const pagesData = mapData(resJson);
+
+  const {
+    basicContent: { common },
+  } = pagesData;
+  const cooperationData = { common };
+
+  return {
+    props: {
+      cooperationData,
+    },
+  };
+}
+
 export default function Cooperation({ cooperationData: { common } }) {
   const {
     'social-facebook': socialFb,
@@ -26,22 +42,6 @@ export default function Cooperation({ cooperationData: { common } }) {
       Cooperation
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const resJson = await getPagesDataMockup();
-  const pagesData = mapData(resJson);
-
-  const {
-    basicContent: { common },
-  } = pagesData;
-  const cooperationData = { common };
-
-  return {
-    props: {
-      cooperationData,
-    },
-  };
 }
 
 Cooperation.propTypes = {

@@ -4,6 +4,23 @@ import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
 
+
+export async function getStaticProps() {
+  const resJson = await getPagesDataMockup();
+  const pagesData = mapData(resJson);
+
+  const {
+    basicContent: { common },
+  } = pagesData;
+  const termsData = { common };
+
+  return {
+    props: {
+      termsData,
+    },
+  };
+}
+
 export default function Terms({ termsData: { common } }) {
   const {
     'social-facebook': socialFb,
@@ -32,21 +49,7 @@ export default function Terms({ termsData: { common } }) {
   );
 }
 
-export async function getStaticProps() {
-  const resJson = await getPagesDataMockup();
-  const pagesData = mapData(resJson);
 
-  const {
-    basicContent: { common },
-  } = pagesData;
-  const termsData = { common };
-
-  return {
-    props: {
-      termsData,
-    },
-  };
-}
 
 Terms.propTypes = {
   termsData: PropTypes.shape({
