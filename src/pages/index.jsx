@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
@@ -29,6 +29,8 @@ export async function getStaticProps() {
 }
 
 export default function Homepage({ homepageData: { partners, basicContent, common, projects } }) {
+  const homepageHeroRef = useRef();
+
   const {
     homepagePartnersText,
     homepageTopSection: homepageHeroContent,
@@ -56,8 +58,13 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
       footerText={footerText}
       contactFormText={contactFormText}
       tooltipText={contactFormTooltip}
+      homepageHeroRef={homepageHeroRef}
     >
-      <HomepageHero homepageHeroContent={homepageHeroContent} socials={socials} />
+      <HomepageHero
+        homepageHeroContent={homepageHeroContent}
+        socials={socials}
+        homepageHeroRef={homepageHeroRef}
+      />
       <ValuesSection valuesText={homepageValues} valuesTiles={valuesTiles} />
       <ProjectsSection projects={projects} />
       <PartnersSection partners={homepagePartners} partnersText={homepagePartnersText} />

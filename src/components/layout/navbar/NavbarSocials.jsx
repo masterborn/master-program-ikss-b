@@ -1,36 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import useHideNavSocials from '@hooks/useHideNavSocials';
 import SocialsCollection from '../../icons/SocialsCollection';
 
-// Add 'hideNavSocials' class to a section,
-// to specify if navbar's social icons should be hidden
-
-export default function NavbarSocials({ className, socialsLinks, currPathname, navbarHeight }) {
-  const [hideSocials, setHideSocials] = useState(false);
-
-  useEffect(() => {
-    const section = document.querySelector('.hideNavSocials');
-
-    if (section) {
-      const options = {
-        rootMargin: `-${navbarHeight}px`,
-      };
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          setHideSocials(entry.isIntersecting);
-        });
-      }, options);
-
-      observer.observe(section);
-
-      return () => {
-        observer.disconnect();
-        setHideSocials(false);
-      };
-    }
-
-    return null;
-  }, [currPathname, navbarHeight]);
+export default function NavbarSocials({ className, socialsLinks, navbarHeight, homepageHeroRef }) {
+  const hideSocials = useHideNavSocials(homepageHeroRef, navbarHeight);
 
   if (hideSocials) return null;
 
@@ -45,6 +19,10 @@ NavbarSocials.propTypes = {
     yt: PropTypes.string,
     in: PropTypes.string,
   }).isRequired,
-  currPathname: PropTypes.string.isRequired,
+  homepageHeroRef: PropTypes.shape({}),
   navbarHeight: PropTypes.number.isRequired,
+};
+
+NavbarSocials.defaultProps = {
+  homepageHeroRef: null,
 };

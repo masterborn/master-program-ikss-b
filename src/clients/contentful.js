@@ -1,5 +1,5 @@
 import config from '@root/config/contentful';
-import data from '../api/data.json';
+import data from '../mocks/data.json';
 
 const maxLimit = 1000;
 

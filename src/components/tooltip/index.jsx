@@ -7,8 +7,6 @@ export default function Tooltip({ className, children, errorTooltip, tooltipCont
   const [showTooltip, setShowTooltip] = useState(false);
   const nodeRef = useRef();
 
-  const toggleShowTooltip = (show) => setShowTooltip(show);
-
   const handleClickOnComponent = ({ target }) => setShowTooltip(nodeRef.current.contains(target));
 
   useEffect(() => {
@@ -23,8 +21,8 @@ export default function Tooltip({ className, children, errorTooltip, tooltipCont
     <span
       className={className}
       ref={nodeRef}
-      onMouseEnter={() => toggleShowTooltip(true)}
-      onMouseLeave={() => toggleShowTooltip(false)}
+      onMouseEnter={() => setShowTooltip(true)}
+      onMouseLeave={() => setShowTooltip(false)}
     >
       {errorTooltip ? (
         <ErrorTooltip tooltipText={tooltipContent} show={showTooltip} />

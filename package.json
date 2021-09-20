@@ -44,9 +44,6 @@
     "validator": "13.6.0",
     "sass": "1.39.0",
     "swiper": "6.8.4"
-
-
-  
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.14.7",

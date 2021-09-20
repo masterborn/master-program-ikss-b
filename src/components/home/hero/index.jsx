@@ -15,7 +15,7 @@ import {
   HomepageHeroVideo,
 } from './HomepageHero.styles';
 
-export default function HomepageHero({ homepageHeroContent, socials }) {
+export default function HomepageHero({ homepageHeroContent, socials, homepageHeroRef }) {
   const {
     title: sectionHeader,
     image1: { url: mediaUrl, title: mediaTitle },
@@ -27,9 +27,8 @@ export default function HomepageHero({ homepageHeroContent, socials }) {
   const urlIsImage = /.*.(jpg|png|jpeg)$/.test(mediaUrl);
   const Description = convertRichTextToReactComponent(Paragraph, richText);
   const handleClick = () => scrollToContactForm(navbarHeight);
-
   return (
-    <StyledHomepageHero className="hideNavSocials">
+    <StyledHomepageHero ref={homepageHeroRef}>
       <Content>
         <TextSection>
           <Header>{sectionHeader}</Header>
@@ -67,4 +66,5 @@ HomepageHero.propTypes = {
     text1: PropTypes.shape({}),
   }).isRequired,
   socials: PropTypes.shape({}).isRequired,
+  homepageHeroRef: PropTypes.shape({}).isRequired,
 };
