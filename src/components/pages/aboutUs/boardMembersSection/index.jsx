@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
+
+import { convertRichTextToReactComponent } from '@dataMappers/contentful';
 import BoardMemberTile from './boardMemberTile';
 import {
   StyledBoardMembersSection,

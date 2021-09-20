@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
+
+import { convertRichTextToReactComponent } from '@dataMappers/contentful';
 import { TooltipContainer, Text, Tail } from './Tooltip.styles';
 
 export default function Tooltip({ tooltipText, show }) {

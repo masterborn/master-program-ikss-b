@@ -3,7 +3,7 @@ const joi = require('joi');
 const schema = joi
   .object()
   .keys({
-    NEXT_PUBLIC_FORMCARRY_ENDPOINT: joi.string().required(),
+    NEXT_PUBLIC_FORMCARRY_ENDPOINT: joi.string(),
   })
   .unknown();
 const { value: envVars, error } = schema.validate({

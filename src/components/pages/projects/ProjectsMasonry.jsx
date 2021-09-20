@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import sortProjectsByYear from '@mappers/projects';
+import sortProjectsByYear from '@dataMappers/projects';
 import { DateSwitchButton, ProjectsSwitchContainer } from '@projectSwitch/ProjectsSwitch.styles';
 import MasonryWithCta from './MasonryLayout/MasonryWithCta';
 import MasonryWithoutCta from './MasonryLayout/MasonryWithoutCta';

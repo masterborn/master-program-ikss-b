@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line import/extensions
-import { convertRichTextToReactComponent } from '@mappers/contentful.jsx';
+import { convertRichTextToReactComponent } from '@dataMappers/contentful.jsx';
 import PartnerLogo from '@logos/PartnerLogo';
 import {
   LogosContainer,

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleModal } from '@root/redux/actions/modalActions';
+
+import { toggleModal } from '@redux/actions/modalActions';
 import { ContactModalContainer, StyledContactForm, ModalBackground } from './ContactModal.styles';
 
 export default function ContactModal({ contactFormText, tooltipText }) {

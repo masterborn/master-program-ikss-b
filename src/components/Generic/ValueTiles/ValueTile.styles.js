@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { Header5 } from '@root/styles/typography/headers';
-import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
+
+import { Header5 } from '@typography/headers';
+import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const StyledValueTile = styled.div(
   ({ theme: { medias, color }, isOnHomepage }) => `

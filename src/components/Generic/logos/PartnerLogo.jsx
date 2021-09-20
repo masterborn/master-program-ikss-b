@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { Logo } from '../partnersList/PartnersSection.style';
 
 export default function PartnerLogo({ partner }) {

@@ -3,13 +3,9 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 import SecondaryButton from '@buttons/secondaryButton';
-import { sortByOrder } from '@mappers/contentful';
-
-import {
-  ProjectsSwitchContainer,
-  SwitchButton,
-} from '@root/components/Generic/ProjectsSwitch/ProjectsSwitch.styles';
-import ProjectTile from '@generic/projectTile/ProjectTile';
+import { sortByOrder } from '@dataMappers/contentful';
+import { ProjectsSwitchContainer, SwitchButton } from '@projectSwitch/ProjectsSwitch.styles';
+import ProjectTile from '@projectTile/ProjectTile';
 import { ProjectSection, SectionHeader } from './ProjectsSection.styles';
 
 function sortProjects(projects) {

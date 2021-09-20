@@ -4,7 +4,7 @@ import {
   CooperationValuesSectionContainer,
   Title,
   CooperationValuesTilesContainer,
-  CooperationValuesTile,
+  CooperationValueTile,
 } from './CooperationValuesSection.styles';
 
 export default function CooperationValuesSection({ valuesTiles, valuesTitle }) {
@@ -15,7 +15,7 @@ export default function CooperationValuesSection({ valuesTiles, valuesTitle }) {
       <Title>{title}</Title>
       <CooperationValuesTilesContainer>
         {valuesTiles.map((tileData) => (
-          <CooperationValuesTile data={tileData} key={tileData.title} />
+          <CooperationValueTile data={tileData} key={tileData.title} />
         ))}
       </CooperationValuesTilesContainer>
     </CooperationValuesSectionContainer>

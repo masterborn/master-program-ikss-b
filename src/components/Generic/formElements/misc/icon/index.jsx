@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import ErrorIcon from './ErrorIcon';
 import InfoIcon from './info';
 

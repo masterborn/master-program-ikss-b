@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { TelIcon, EmailIcon, ChevronIcon } from '@root/components/Generic/icons/misc';
-import SecondaryButton from '@root/components/Generic/buttons/secondaryButton';
+
+import { TelIcon, EmailIcon, ChevronIcon } from '@icons/misc';
+import SecondaryButton from '@buttons/secondaryButton';
 import CollapsedBoardMemberTile from './collapsedBoardMemberTile';
 import {
   BoardMemberTileWrapper,

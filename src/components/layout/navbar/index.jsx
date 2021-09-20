@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleModal } from '@root/redux/actions/modalActions';
-import { HamburgerMenuIcon } from '@root/components/Generic/icons/misc';
+
+import { toggleModal } from '@redux/actions/modalActions';
+import { HamburgerMenuIcon } from '@icons/misc';
 import {
   StyledNavbar,
   FooterWrapper,

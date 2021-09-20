@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { TextareaContainer, StyledTextarea, StyledErrorIcon } from './Textarea.styles';
 
 export default function Textarea({

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { convertRichTextToReactComponent } from '@mappers/contentful';
+import { convertRichTextToReactComponent } from '@dataMappers/contentful';
 import {
   MissionContainer,
   MissionDescription,

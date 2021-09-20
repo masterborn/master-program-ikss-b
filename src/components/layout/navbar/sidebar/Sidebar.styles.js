@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import IconButton from '@root/components/Generic/buttons/misc/IconButton';
-import PrimaryButton from '@root/components/Generic/buttons/primaryButton';
-import Socials from '@root/components/Generic/icons/SocialsCollection';
-import { ButtonBigText } from '@root/styles/typography/buttonsText';
+
+import IconButton from '@buttons/misc/IconButton';
+import PrimaryButton from '@buttons/primaryButton';
+import Socials from '@icons/SocialsCollection';
+import { ButtonBigText } from '@typography/buttonsText';
 
 export const SidebarContainer = styled.div(
   ({ isOpened }) => `

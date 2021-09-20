@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getPagesDataMockup } from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
 
+import { getPagesDataMockup } from '@clients/contentful';
+import mapData from '@dataMappers/contentful';
+import Layout from '@layout';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
@@ -48,8 +48,6 @@ export default function Terms({ termsData: { common } }) {
     </Layout>
   );
 }
-
-
 
 Terms.propTypes = {
   termsData: PropTypes.shape({

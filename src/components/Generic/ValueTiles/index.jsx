@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
+
+import { convertRichTextToReactComponent } from '@dataMappers/contentful';
 import {
   StyledValueTile,
   ValueTileContent,
   ValueTileImageFiller,
   ValueTileTitle,
   ValueTileParagraph,
-} from './ValuesTile.styles';
+} from './ValueTile.styles';
 
 export default function ValuesTile({ className, data, isOnHomepage }) {
   const {

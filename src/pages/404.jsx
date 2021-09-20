@@ -1,8 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
-import { getPagesDataMockup } from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
+
+import { getPagesDataMockup } from '@clients/contentful';
+import mapData from '@dataMappers/contentful';
+import Layout from '@layout';
 import {
   ErrorDescription,
   ErrorMessage,
@@ -10,8 +12,7 @@ import {
   GetBackButton,
   IKKSContainer,
   IKKSLogo,
-} from '@root/components/pages/404Page/custom404.styles';
-import Link from 'next/link';
+} from '@404Page/custom404.styles';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();

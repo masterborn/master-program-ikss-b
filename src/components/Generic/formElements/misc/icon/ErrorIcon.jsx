@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+
 import { StyledErrorContainer, StyledErrorIcon } from './ErrorIcon.styles';
 import ErrorTooltip from '../errorTooltip';
 

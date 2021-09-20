@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
-import { scrollToContactForm } from '@root/components/layout/navbar/contactFormButton';
-import SecondaryButton from '@root/components/Generic/buttons/secondaryButton';
+
+import { convertRichTextToReactComponent } from '@dataMappers/contentful';
+import { scrollToContactForm } from '@generic/misc/contactFormActions';
+import SecondaryButton from '@buttons/secondaryButton';
 import {
   Content,
   TextSection,

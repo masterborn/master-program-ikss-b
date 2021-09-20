@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { Header3, Header5 } from '@root/styles/typography/headers';
-import { ButtonBigText, ButtonSmallText } from '@root/styles/typography/buttonsText';
+
+import { Header3, Header5 } from '@typography/headers';
+import { ButtonBigText, ButtonSmallText } from '@typography/buttonsText';
+import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 import IconButton from '../buttons/misc/IconButton';
 import Input from '../formElements/input';
-import { ParagraphBody, ParagraphSmall } from '../../../styles/typography/paragraphs';
 import PrimaryButton from '../buttons/primaryButton';
 import TextArea from '../formElements/textarea';
 import Checkbox from '../formElements/checkbox';

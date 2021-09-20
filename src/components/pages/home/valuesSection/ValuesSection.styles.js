@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Header3, Header4 } from '../../../../styles/typography/headers';
-import { ParagraphBody } from '../../../../styles/typography/paragraphs';
+import { Header3, Header4 } from '@typography/headers';
+import { ParagraphBody } from '@typography/paragraphs';
 
 export const StyledValuesSection = styled.section(
   ({ theme: { medias } }) => `

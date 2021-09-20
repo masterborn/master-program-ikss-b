@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import ContactForm from '../index';
 
 export const ContactModalContainer = styled.div(

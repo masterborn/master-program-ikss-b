@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { ButtonBigText } from '@root/styles/typography/buttonsText';
-import ScrollUpButton from '../../Generic/buttons/ScrollUpButton';
-import Logo from '../../Generic/logos/PlainLogo';
-import { ParagraphSmall } from '../../../styles/typography/paragraphs';
-import Socials from '../../Generic/icons/SocialsCollection';
+
+import { ButtonBigText } from '@typography/buttonsText';
+import ScrollUpButton from '@buttons/ScrollUpButton';
+import Logo from '@logos/PlainLogo';
+import { ParagraphSmall } from '@typography/paragraphs';
+import Socials from '@icons/SocialsCollection';
 
 export const StyledFooter = styled.footer(
   ({ theme: { medias, color } }) => `

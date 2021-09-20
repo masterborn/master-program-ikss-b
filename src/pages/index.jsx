@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getPagesDataMockup } from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
-import ProjectsSection from '@root/components/pages/home/projects/ProjectsSection';
-import PartnersSection from '@root/components/Generic/partnersList/PartnersSection';
-import sortHomepagePartners from '@root/dataMappers/partners';
-import HomepageHero from '../components/pages/home/hero';
-import ValuesSection from '../components/pages/home/valuesSection';
-import ContactForm from '../components/Generic/contactForm';
+
+import { getPagesDataMockup } from '@clients/contentful';
+import mapData from '@dataMappers/contentful';
+import Layout from '@layout';
+import ProjectsSection from '@homepage/projects/ProjectsSection';
+import PartnersSection from '@generic/partnersList/PartnersSection';
+import sortHomepagePartners from '@dataMappers/partners';
+import HomepageHero from '@homepage/hero';
+import ValuesSection from '@homepage/valuesSection';
+import ContactForm from '@generic/contactForm';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();

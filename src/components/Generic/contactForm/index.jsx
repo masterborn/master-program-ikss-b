@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
+
 import {
   changeInputValues,
   resetInputValues,
   changeFormSendingStatus,
-} from '@root/redux/actions/contactFormActions';
-import { sendEmailMockup } from '@root/clients/formcarry';
-import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
+} from '@redux/actions/contactFormActions';
+import { sendEmailMockup } from '@clients/formcarry';
+import { convertRichTextToReactComponent } from '@dataMappers/contentful';
 import { inputsValidationInitialState } from '@root/consts/contactForm';
 import validateInputs from './validation';
 import Tooltip from './tooltip';

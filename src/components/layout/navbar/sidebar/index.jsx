@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import hideOverflowOnBody from '@root/redux/actions/hideOverflowOnBodyActions';
+
+import hideOverflowOnBody from '@redux/actions/hideOverflowOnBodyActions';
 import Link from 'next/link';
-import { XIcon } from '@root/components/Generic/icons/misc';
+import { XIcon } from '@icons/misc';
 import {
   SidebarContainer,
   SidebarBackground,

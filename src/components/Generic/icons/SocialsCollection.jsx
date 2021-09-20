@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { FbCircleIcon, IgCircleIcon, YtCircleIcon, InCircleIcon } from './socialCircle';
 import { FbIcon, IgIcon, YtIcon, InIcon } from './socialRegular';
 import SocialsLabel from './SocialsCollection.styles';

@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
-import ValuesTile from '@root/components/Generic/ValueTiles/ValuesTile';
+
+import { convertRichTextToReactComponent } from '@dataMappers/contentful';
+import ValuesTile from '@valueTile';
 import ValuesTilesSlider from './valuesTilesSlider';
 import {
   StyledValuesSection,

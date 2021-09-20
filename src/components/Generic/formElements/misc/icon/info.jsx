@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import StyledInfo from './styledInfo';
 
 export default function InfoIcon({ disabled }) {

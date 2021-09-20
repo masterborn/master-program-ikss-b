@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
-import { ButtonBigText, ButtonSmallText } from '@root/styles/typography/buttonsText';
+
+import { ButtonBigText, ButtonSmallText } from '@typography/buttonsText';
 
 const defaultVariantStyles = css`
   height: 3.6rem;
