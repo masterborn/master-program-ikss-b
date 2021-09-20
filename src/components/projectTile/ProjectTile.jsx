@@ -14,11 +14,11 @@ import {
   ProjectMediaContainer,
 } from './ProjectTile.styles';
 
-export default function ProjectTile({ project, isOnGrid }) {
+export default function ProjectTile({ project, isOnGrid, order }) {
   const { title, date, image, videoUrl, linkUrl, description } = project;
   const linkIsFromFacebook = /^(https:\/\/)?(www.)?f(b||acebook)\.com\/.*/.test(linkUrl);
   return (
-    <ProjectArticle isOnGrid={isOnGrid}>
+    <ProjectArticle order={order} isOnGrid={isOnGrid}>
       <ProjectMediaContainer>
         {videoUrl ? (
           <ProjectVideo isOnGrid={isOnGrid} url={videoUrl} />
@@ -62,8 +62,10 @@ ProjectTile.propTypes = {
     }),
   }).isRequired,
   isOnGrid: PropTypes.bool,
+  order: PropTypes.number,
 };
 
 ProjectTile.defaultProps = {
   isOnGrid: false,
+  order: 0,
 };

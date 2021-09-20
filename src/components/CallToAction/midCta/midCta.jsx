@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { CtaOverlay, MidCtaContainer, MidCtaHeader } from './midCta.styles';
 import CtaButton from '../ctaButton';
 
-export default function MidCta({ midCtaContent }) {
+export default function MidCta({ midCtaContent, order }) {
   const { title, linkCaption: buttonText } = midCtaContent;
 
   return (
-    <MidCtaContainer>
+    <MidCtaContainer order={order}>
       <CtaOverlay>
         {title && <MidCtaHeader>{title}</MidCtaHeader>}
         {buttonText && <CtaButton buttonCaption={buttonText} />}
@@ -21,4 +21,8 @@ MidCta.propTypes = {
     title: PropTypes.string,
     linkCaption: PropTypes.string,
   }).isRequired,
+  order: PropTypes.number,
+};
+MidCta.defaultProps = {
+  order: 0,
 };

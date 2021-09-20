@@ -2,16 +2,18 @@ import styled from 'styled-components';
 import { Header3, Header5 } from '../../../styles/typography/headers';
 
 export const MidCtaContainer = styled.div(
-  ({ theme: { medias } }) => `
-  /* just for display testing */
-  margin: 12.0rem 0 12.0rem 0;
+  ({ theme: { medias }, order }) => `
+  margin: 6.8rem 0 9.2rem 0;
   width: 120.0rem;
   height: 35.2rem;
+  column-span: all;
 
   @media ${medias.mobile} {
+    order: ${order};
     width: 100%;
-    padding: 0 2.4rem;
-    height: auto;
+    padding: 0;
+    height: 22rem;
+    margin: 0.8rem 0 3.2rem 0;
   }
 `,
 );

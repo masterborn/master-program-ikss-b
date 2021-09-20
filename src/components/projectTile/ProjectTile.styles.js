@@ -1,12 +1,12 @@
+import styled from 'styled-components';
+
 import { ButtonSmallText } from '@root/styles/typography/buttonsText';
 import { Header4, Header5 } from '@root/styles/typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
-import styled from 'styled-components';
 
 export const ProjectArticle = styled.article(
-  ({ theme: { medias }, isOnGrid }) => `
-  display: flex;
-  flex-direction: column;
+  ({ theme: { medias }, isOnGrid, order }) => `
+  display: inline-block;
   border-radius: 1.6rem;
   width: ${isOnGrid ? '58.8rem' : '99.7rem'};
   height: auto;
@@ -15,12 +15,13 @@ export const ProjectArticle = styled.article(
     1.71337rem 2.82982rem 3.4875rem rgba(97, 121, 139, 0.04725),
     .0676885rem 1.11795rem 1.3rem rgba(97, 121, 139, 0.035),
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
+  order: ${order};
+
   @media ${medias.mobile} {
     width: 100%;
   }
   a {
     margin-top: ${isOnGrid ? '2.4rem' : '3.2rem'};
-
     color: inherit;
     text-decoration: none;
     @media ${medias.mobile} {
@@ -28,12 +29,8 @@ export const ProjectArticle = styled.article(
       justify-content: center;
     }
   }
-  &:nth-child(2n) {
-    order: ${isOnGrid && 2};
-  }
-  &:nth-child(2n + 1) {
-    order: ${isOnGrid && 1};
-  }
+
+ 
 `,
 );
 export const ProjectMediaContainer = styled.div(

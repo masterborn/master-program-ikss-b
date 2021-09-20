@@ -3,14 +3,14 @@ import { ParagraphBody } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
 export const BottomCtaContainer = styled.div(
-  ({ theme: { medias } }) => `
+  ({ theme: { medias }, isOnProjects }) => `
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 63.5rem;
   height: auto;
-  margin: 14.8rem 0;
+  margin: ${isOnProjects ? '12.4rem 0 14.8rem 0' : '14.8rem 0'};
 
   @media ${medias.mobile} {
     height: auto;

@@ -4,11 +4,11 @@ import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { BottomCtaContainer, BottomCtaHeader, BottomCtaText } from './BottomCta.styles';
 import CtaButton from '../ctaButton';
 
-export default function BottomCta({ bottomCtaContent }) {
+export default function BottomCta({ bottomCtaContent, isOnProjects }) {
   const { title, linkCaption: buttonText, text1: richText } = bottomCtaContent;
   const CtaDescription = convertRichTextToReactComponent(BottomCtaText, richText);
   return (
-    <BottomCtaContainer>
+    <BottomCtaContainer isOnProjects={isOnProjects}>
       {title && <BottomCtaHeader>{title}</BottomCtaHeader>}
       {richText && CtaDescription}
       {buttonText && <CtaButton isBig buttonCaption={buttonText} />}
@@ -26,4 +26,9 @@ BottomCta.propTypes = {
       content: PropTypes.arrayOf(PropTypes.object),
     }),
   }).isRequired,
+  isOnProjects: PropTypes.bool,
+};
+
+BottomCta.defaultProps = {
+  isOnProjects: false,
 };

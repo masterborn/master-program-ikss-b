@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Masonry = styled.div(
-  ({ theme: { medias }, columnWidth }) => `
-  display: flex;
-  flex-flow: column wrap;
-  align-content: space-between;
-  height: ${columnWidth}px;
+  ({ theme: { medias } }) => `
+  display:  block;
+  column-count: 2;
+  column-gap: 24px;
+
   width: 120.0rem;
 
   &&::before,
@@ -15,8 +15,11 @@ export const Masonry = styled.div(
     width: 0;
     order: 1;
   }
+ 
 
   @media ${medias.mobile} {
+    display: flex;
+    flex-direction: column;
     height: auto;
     width: 100%;
     padding: 0 2.4rem 0 2.4rem;
