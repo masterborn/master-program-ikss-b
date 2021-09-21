@@ -6,6 +6,7 @@ import Layout from '@root/components/layout';
 import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
 import ProjectsMasonry from '@root/components/cooperation/ProjectsMasonry';
 import TopSection from '@root/components/topSection/TopSection';
+import CustomHead from '@root/components/CustomHead/CustomHead';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
@@ -26,6 +27,7 @@ export async function getStaticProps() {
 
 export default function Projects({ projectsData: { basicContent, projects, common } }) {
   const {
+    projectsMeta,
     projectsTopSection,
     projectsBottomCtaText: bottomCtaContent,
     projectsMiddleCtaText: midCtaContent,
@@ -43,17 +45,20 @@ export default function Projects({ projectsData: { basicContent, projects, commo
   const socials = { socialFacebook, socialLinkedin, socialInstagram, socialYoutube };
 
   return (
-    <Layout
-      socials={socials}
-      footerText={footerText}
-      contactFormText={contactFormText}
-      tooltipText={contactFormTooltip}
-    >
-      <TopSection topSectionContent={projectsTopSection} sectionId="projekty" />
+    <>
+      <CustomHead metaContent={projectsMeta} />
+      <Layout
+        socials={socials}
+        footerText={footerText}
+        contactFormText={contactFormText}
+        tooltipText={contactFormTooltip}
+      >
+        <TopSection topSectionContent={projectsTopSection} sectionId="projekty" />
 
-      <ProjectsMasonry midCtaContent={midCtaContent} projectsData={projects} />
-      <BottomCta bottomCtaContent={bottomCtaContent} />
-    </Layout>
+        <ProjectsMasonry midCtaContent={midCtaContent} projectsData={projects} />
+        <BottomCta bottomCtaContent={bottomCtaContent} />
+      </Layout>
+    </>
   );
 }
 
@@ -69,6 +74,7 @@ Projects.propTypes = {
       footerText: PropTypes.shape({}),
     }).isRequired,
     basicContent: PropTypes.shape({
+      projectsMeta: PropTypes.shape({}),
       projectsBottomCtaText: PropTypes.shape({}),
       projectsMiddleCtaText: PropTypes.shape({}),
       projectsTopSection: PropTypes.shape({}),

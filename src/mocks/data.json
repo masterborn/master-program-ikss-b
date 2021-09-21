@@ -2,7 +2,7 @@
   "sys": {
     "type": "Array"
   },
-  "total": 72,
+  "total": 76,
   "skip": 0,
   "limit": 100,
   "items": [
@@ -18,10 +18,10 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "1wzQQg3TJItduIZWEINvxp",
+        "id": "5HImaB3auE5dqVRqjx6NKi",
         "type": "Entry",
-        "createdAt": "2021-08-09T15:35:39.466Z",
-        "updatedAt": "2021-08-30T09:35:40.488Z",
+        "createdAt": "2021-09-17T11:46:40.925Z",
+        "updatedAt": "2021-09-17T11:46:40.925Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -29,29 +29,266 @@
             "linkType": "Environment"
           }
         },
-        "revision": 3,
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "boardMembers"
+            "id": "basicContent"
           }
         },
         "locale": "en-US"
       },
       "fields": {
-        "image": {
+        "page": "cooperation",
+        "identifier": "cooperation-meta",
+        "title": "Informacja Kulturalno-Sportowa Studentów - Współpraca",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
           "sys": {
             "type": "Link",
-            "linkType": "Asset",
-            "id": "2tOCnaN3hGEmgtgQxjUucL"
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
           }
         },
-        "name": "Paweł Borycki",
-        "role": "Członek zarządu ds. Promocji",
-        "phone": "786 152 266",
-        "email": "pawel.borycki.ikss@gmail.com",
-        "linkedinUrl": "https://linkedin.com/"
+        "id": "lxUNIf3DZvGDb2nngRoV6",
+        "type": "Entry",
+        "createdAt": "2021-09-17T11:46:17.494Z",
+        "updatedAt": "2021-09-17T11:46:24.791Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "about-us",
+        "identifier": "about-us-meta",
+        "title": "Informacja Kulturalno-Sportowa Studentów - O nas",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "4Vu2blKUQTbFL8Cw4MJ698",
+        "type": "Entry",
+        "createdAt": "2021-09-17T11:45:55.737Z",
+        "updatedAt": "2021-09-17T11:45:55.737Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "projects",
+        "identifier": "projects-meta",
+        "title": "Informacja Kulturalno-Sportowa Studentów - Projekty",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "3xhXdP2tidNvnOXIgFvUB7",
+        "type": "Entry",
+        "createdAt": "2021-09-17T11:45:25.896Z",
+        "updatedAt": "2021-09-17T11:45:25.896Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "homepage",
+        "identifier": "homepage-meta",
+        "title": "Informacja Kulturalno-Sportowa Studentów - Uniwersytet Wrocławski",
+        "text1": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "52Yc1IcAXSY3KSGLuuqaHg",
+        "type": "Entry",
+        "createdAt": "2021-08-25T08:59:08.184Z",
+        "updatedAt": "2021-09-17T06:58:08.573Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "common",
+        "identifier": "contact-form-tooltip",
+        "title": "Tooltip text",
+        "text1": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Administratorem Twoich danych osobowych jest Informacja Kulturalno-Sportowa Studentów działająca przy Uniwersytecie Ekonomicznym we Wrocławiu. Kontakt z Administratorem danych jest dostępny za pomocą adresu email: ikss.ue.wroc@gmail.com. Będziemy przechowywać Pani/Pana dane osobowe do czasu cofnięcia przez Pana/Panią zgody na ich przetwarzanie, chyba że nasze obowiązki wynikające z obecnie panującego prawa będą stanowiły inaczej.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        }
       }
     },
     {
@@ -69,7 +306,7 @@
         "id": "6zTzXFh79v6ixOtVTHWdxt",
         "type": "Entry",
         "createdAt": "2021-08-09T21:50:19.640Z",
-        "updatedAt": "2021-08-30T09:25:46.202Z",
+        "updatedAt": "2021-09-09T15:35:11.681Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -77,7 +314,7 @@
             "linkType": "Environment"
           }
         },
-        "revision": 3,
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -118,7 +355,7 @@
               "content": [
                 {
                   "nodeType": "text",
-                  "value": "       W styczniu 2020 roku IKSS świętowaliśmy swoje 12-lecie organizacji. Do chwili obecnej IKSSem kierowało 12 zarządów, przez organizację przewinęło się ponad 650 członków oraz zorganizowano ponad 130 projektów i 25 wyjazdów integracyjnych.",
+                  "value": "       W tym roku obchodziliśmy 13 rok działania naszej organizacji. W chwili obecnej IKSSem kieruje 14 zarząd, przez organizację przewinęło się ponad 400 członków oraz zorganizowano ponad 150 projektów i 30 wyjazdów integracyjnych.",
                   "marks": [],
                   "data": {}
                 }
@@ -153,6 +390,1032 @@
             "id": "3HI3H9eVkQY2150SUxmBj6"
           }
         }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "4IvkLIh9EtOylcAVJ58cuC",
+        "type": "Entry",
+        "createdAt": "2021-08-09T14:09:33.898Z",
+        "updatedAt": "2021-09-09T15:19:59.550Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2VmKhKaOFbTZBHD7M0ED3V"
+          }
+        },
+        "title": "XII Turniej IKSS WOŚP",
+        "date": "2021-01-31",
+        "description": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Tegoroczny IKSS WOŚP ze względu na pandemie koronawirusa musiał przyjąć inną formę. Zamiast turnieju w piłkę halową organizacje studenckie UEW rywalizowały w grze terenowej, co pozwoliło na zachowanie wszelkich środków ostrożności. Licytacje odbywały się w 100% online w serwisie Allegro oraz na Facebooku. Pozwoliło to na zebranie 16515 zł na rzecz Wielkiej Orkiestry Świątecznej Pomocy.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "linkUrl": "https://ikss.ue.wroc.pl/projekty/"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "1wzQQg3TJItduIZWEINvxp",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:35:39.466Z",
+        "updatedAt": "2021-09-09T15:14:40.206Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "boardMembers"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2tOCnaN3hGEmgtgQxjUucL"
+          }
+        },
+        "name": "Paweł Borycki",
+        "role": "Członek zarządu ds. Promocji",
+        "phone": "786 152 266",
+        "email": "pawel.borycki.ikss@gmail.com",
+        "linkedinUrl": "https://linkedin.com/",
+        "order": 5
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "4fQQ3k1OgdxowJrR4mETrX",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:42:51.321Z",
+        "updatedAt": "2021-09-09T15:14:31.713Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "boardMembers"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4VLlWeZrGOxvTtw4KSLq3U"
+          }
+        },
+        "name": "Tomasz Wojciechowski",
+        "role": "Członek Zarządu ds. Kontaktów",
+        "phone": "783 355 077",
+        "email": "tomasz.wojciechowski24@gmail.com",
+        "linkedinUrl": "https://linkedin.com/",
+        "order": 3
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "7yrXTZqa1fkEimnTsbPcNi",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:43:47.407Z",
+        "updatedAt": "2021-09-09T15:14:17.507Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "boardMembers"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "KJKKI4GRQQAhRVHgRep5L"
+          }
+        },
+        "name": "Natalia Jaśkiewicz",
+        "role": "Członek Zarządu ds. Administracji i Finansów",
+        "phone": "697 106 691",
+        "email": "nataliajaskiewicz@gmail.com",
+        "linkedinUrl": "https://linkedin.com/",
+        "order": 4
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "dqukd148ip2KahuDESMsc",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:44:40.057Z",
+        "updatedAt": "2021-09-09T15:13:55.738Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "boardMembers"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "name": "Agnieszka Kuriata",
+        "role": "Członek Zarządu ds. Projektów Kulturalnych",
+        "phone": "538 354 053",
+        "email": "agnieszka.kuriata10@gmail.com",
+        "linkedinUrl": "https://linkedin.com/",
+        "order": 1
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "5rYQ29MzGOGeCvP1xcI60B",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:45:30.516Z",
+        "updatedAt": "2021-09-09T15:13:45.523Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "boardMembers"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4lFrVQUu7r4CLJoHGm3vuH"
+          }
+        },
+        "name": "Klaudia Padlewska",
+        "role": "Członek Zarządu ds. Projektów Sportowych",
+        "phone": "786 255 416",
+        "email": "klaudiapadlewska.ikss.1@gmail.com",
+        "linkedinUrl": "https://linkedin.com/",
+        "order": 2
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "7dBJKSl5tEn4hQkptadyqS",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:41:55.603Z",
+        "updatedAt": "2021-09-09T15:13:35.535Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "boardMembers"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2SbhYPaA4CB0py9yTVYNGB"
+          }
+        },
+        "name": "Michał Hołownia",
+        "role": "Członek Zarządu ds. Zarządzania Zasobami Ludzkimi",
+        "phone": "601 756 925",
+        "email": "michal.holownia.ikss@gmail.com",
+        "linkedinUrl": "https://linkedin.com/",
+        "order": 6
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "29tlUDri2Ke8OrJ1thUn8K",
+        "type": "Entry",
+        "createdAt": "2021-08-09T15:38:19.294Z",
+        "updatedAt": "2021-09-09T15:13:26.383Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "boardMembers"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6BLVSqa4thczdhW4IKon6V"
+          }
+        },
+        "name": "Roksana Białowąs",
+        "role": "Przewodnicząca",
+        "phone": "693 829 206",
+        "email": "roksana.bialowas.ikss@gmail.com",
+        "linkedinUrl": "https://linkedin.com/",
+        "order": 7
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "f65Os72kNC7dbZuwsjzi2",
+        "type": "Entry",
+        "createdAt": "2021-08-09T21:59:27.691Z",
+        "updatedAt": "2021-09-09T15:02:31.288Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "about-us",
+        "identifier": "about-us-content-3",
+        "title": "Zespół",
+        "text1": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Jesteśmy studentami, których połączyła wspólna pasja, chęć rozwoju i dobrej zabawy a poprzez tworzenie projektów i wspólne działania nawiązujemy przyjaźnie na długie lata.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "3YhlwAFi5HscCiTO0N3a8A"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "BNH7txFKvF8cM4UwzB2Zf",
+        "type": "Entry",
+        "createdAt": "2021-08-09T21:57:42.416Z",
+        "updatedAt": "2021-09-09T15:02:09.138Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "about-us",
+        "identifier": "about-us-board-members-text",
+        "title": "Zarząd",
+        "text1": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "W najbliższym roku akademickim nasza organizacja prowadzona jest przez zarząd kadencji 2021/2022, w którego skład wchodzą:",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "6enfYOcI5KXjAaGsfSNLjd",
+        "type": "Entry",
+        "createdAt": "2021-08-09T21:40:25.408Z",
+        "updatedAt": "2021-09-09T14:58:45.253Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "projects",
+        "identifier": "projects-top-section",
+        "title": "Projekty",
+        "text1": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Przez 14 lat działań naszej organizacji zrealizowaliśmy 150 edycji projektów kulturalnych i sportowych. Ich pomysłodawcami byli członkowie IKSSa, a przy ich tworzeniu współpracowaliśmy z wieloma firmami, które przyczyniły się do sukcesu prowadzonych przez nas działań.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "yH2eNUf6Ph8o9Ijo8hke1"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "58WFaSdZL4CcpO8zTJRO7E",
+        "type": "Entry",
+        "createdAt": "2021-08-09T21:14:19.088Z",
+        "updatedAt": "2021-09-09T14:57:34.380Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "homepage",
+        "identifier": "homepage-tile-3",
+        "title": "Rozwój, zabawa i nowe znajomości",
+        "text1": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "towarzyszą nam przy realizacji naszych projektów i inicjatyw.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6rSHMopKSWH8YCfhrRMg9c"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "6mn9XmULxQHqXcsshOg2xo",
+        "type": "Entry",
+        "createdAt": "2021-08-09T21:13:05.692Z",
+        "updatedAt": "2021-09-09T14:56:43.602Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "homepage",
+        "identifier": "homepage-tile-2",
+        "title": "Różnorodność realizowanych wydarzeń",
+        "text1": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "w naszej organizacji sprawia, że każdy znajdzie coś dla siebie.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "5WqeSc2NUSBWwLFJDfdTSJ"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "2TyrLz8qxG5ehklou1Aeu9",
+        "type": "Entry",
+        "createdAt": "2021-08-09T17:03:00.394Z",
+        "updatedAt": "2021-09-09T14:56:03.294Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "homepage",
+        "identifier": "homepage-tile-1",
+        "title": "Największa organizacja kulturalno-sportowa",
+        "text1": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "w Polsce tworząca projekty kulturalne i sportowe realizowane przez studentów UEW.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "57PyNcsV9LnnX3os87lfaj"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "3rCxnIQDqMvFA1gEAuypMM",
+        "type": "Entry",
+        "createdAt": "2021-08-09T16:56:53.293Z",
+        "updatedAt": "2021-09-09T14:55:23.116Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "homepage",
+        "identifier": "homepage-values",
+        "title": "Co nas wyróżnia",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Nie koniecznie musimy tu dawać tekst, ale jak jest potrzeba i przestrzeń można rozwinąć nagłówek.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "1X1gLNzfpSkhRQtWfWscJ8",
+        "type": "Entry",
+        "createdAt": "2021-08-09T16:52:46.631Z",
+        "updatedAt": "2021-09-07T09:27:25.720Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "homepage",
+        "identifier": "homepage-top-section",
+        "title": "Kulturalnie na sportowo",
+        "text1": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów tworzymy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego, oraz mieszkańców Wrocławia",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4fPIBredtzYNienv1X0MSk"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "1NIWMUXQzVYDnC5SFS0KSy",
+        "type": "Entry",
+        "createdAt": "2021-08-09T14:06:42.626Z",
+        "updatedAt": "2021-09-06T08:22:24.379Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2fNMHQifNLIKiyar2rpAma"
+          }
+        },
+        "videoUrl": "https://www.youtube.com/watch?v=gZZRFf2v5wQ",
+        "title": "Pracownia Teatralna",
+        "date": "2020-11-15",
+        "description": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Kurtyna w górę… Przed Państwem cykl ",
+                  "marks": [],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": "warsztatów teatralnych",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": " i ",
+                  "marks": [],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": "aktorskich",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": " ",
+                  "marks": [],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": "prowadzonych",
+                  "marks": [
+                    {
+                      "type": "underline"
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": " przez profesjonalistów dla studentów naszego Uniwersytetu. ",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Wieczorem projekt zwieńczony jest na scenie, gdzie nasi uczestnicy zasiadają na widowni, skąd mogą być świadkami wyjątkowego spektaklu teatralnego.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        "linkUrl": "https://www.facebook.com/groups/140537399452984",
+        "linkCaption": "Dołącz do wydarzenia",
+        "showOnHomepage": true,
+        "order": 3
       }
     },
     {
@@ -290,63 +1553,6 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "52Yc1IcAXSY3KSGLuuqaHg",
-        "type": "Entry",
-        "createdAt": "2021-08-25T08:59:08.184Z",
-        "updatedAt": "2021-08-25T09:00:29.890Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "common",
-        "identifier": "contact-form-tooltip",
-        "title": "Tooltip text",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
         "id": "385oEBQcf7Si5hhneHT94A",
         "type": "Entry",
         "createdAt": "2021-08-09T21:36:10.019Z",
@@ -390,139 +1596,6 @@
           ],
           "nodeType": "document"
         }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "4IvkLIh9EtOylcAVJ58cuC",
-        "type": "Entry",
-        "createdAt": "2021-08-09T14:09:33.898Z",
-        "updatedAt": "2021-08-19T12:28:05.572Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "projects"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "image": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2VmKhKaOFbTZBHD7M0ED3V"
-          }
-        },
-        "title": "Turniej IKSS WOŚP",
-        "date": "2018-10-11",
-        "description": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Wydarzenie integruje społeczność akademicką poprzez zdrową rywalizację w turnieju piłki nożnej i wsparcie Wielkiej Orkiestry Świątecznej Pomocy. Podczas turnieju piłki halowej uczestnicy mogą wziąć udział w licznych licytacjach na rzecz WOŚP, a całe wydarzenie rozbudowane jest o wiele wyjątkowych atrakcji. Swoimi działaniami dokładamy małą cegiełkę w postaci blisko 20 000 zł do wyniku Wielkiej Orkiestry Świątecznej Pomocy!",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
-        "linkCaption": "Podsumowanie wydarzenia"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "1NIWMUXQzVYDnC5SFS0KSy",
-        "type": "Entry",
-        "createdAt": "2021-08-09T14:06:42.626Z",
-        "updatedAt": "2021-08-19T12:27:43.995Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "projects"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "image": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2fNMHQifNLIKiyar2rpAma"
-          }
-        },
-        "videoUrl": "https://www.youtube.com/watch?v=gZZRFf2v5wQ",
-        "title": "Pracownia Teatralna",
-        "date": "2020-10-15",
-        "description": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Kurtyna w górę… Przed Państwem cykl warsztatów teatralnych i aktorskich prowadzonych przez profesjonalistów dla studentów naszego Uniwersytetu. Wieczorem projekt zwieńczony jest na scenie, gdzie nasi uczestnicy zasiadają na widowni, skąd mogą być świadkami wyjątkowego spektaklu teatralnego.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "linkUrl": "https://www.facebook.com/groups/140537399452984",
-        "linkCaption": "Dołącz do wydarzenia",
-        "showOnHomepage": true,
-        "order": 3
       }
     },
     {
@@ -836,7 +1909,7 @@
           }
         },
         "title": "Nocne Kino Akademickie",
-        "date": "2020-04-15",
+        "date": "2020-11-15",
         "description": {
           "data": {},
           "content": [
@@ -938,70 +2011,6 @@
         "linkCaption": "Podsumowanie wydarzenia",
         "showOnHomepage": true,
         "order": 2
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "1X1gLNzfpSkhRQtWfWscJ8",
-        "type": "Entry",
-        "createdAt": "2021-08-09T16:52:46.631Z",
-        "updatedAt": "2021-08-17T07:24:59.304Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "homepage",
-        "identifier": "homepage-top-section",
-        "title": "Przykładowy nagłówek IKSS",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Urna, mi condimentum amet, consectetur mauris tincidunt gravida aenean. Dignissim in sit arcu nam. Ultrices integer odio feugiat vulputate.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "4fPIBredtzYNienv1X0MSk"
-          }
-        }
       }
     },
     {
@@ -1235,198 +2244,6 @@
               "data": {}
             }
           ]
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "58WFaSdZL4CcpO8zTJRO7E",
-        "type": "Entry",
-        "createdAt": "2021-08-09T21:14:19.088Z",
-        "updatedAt": "2021-08-09T22:14:33.272Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "homepage",
-        "identifier": "homepage-tile-3",
-        "title": "Coś o tym, że łączycie rozwój z zabawą i poznawaniem nowych ludzi",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "6rSHMopKSWH8YCfhrRMg9c"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "6mn9XmULxQHqXcsshOg2xo",
-        "type": "Entry",
-        "createdAt": "2021-08-09T21:13:05.692Z",
-        "updatedAt": "2021-08-09T22:14:23.692Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "homepage",
-        "identifier": "homepage-tile-2",
-        "title": "O różnorodności projektów, że każdy znajdzie coś dla siebie",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "5WqeSc2NUSBWwLFJDfdTSJ"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "2TyrLz8qxG5ehklou1Aeu9",
-        "type": "Entry",
-        "createdAt": "2021-08-09T17:03:00.394Z",
-        "updatedAt": "2021-08-09T22:14:08.467Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "homepage",
-        "identifier": "homepage-tile-1",
-        "title": "Największa organizacja kulturalno-sportowa",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "57PyNcsV9LnnX3os87lfaj"
-          }
         }
       }
     },
@@ -1923,127 +2740,6 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "f65Os72kNC7dbZuwsjzi2",
-        "type": "Entry",
-        "createdAt": "2021-08-09T21:59:27.691Z",
-        "updatedAt": "2021-08-09T21:59:27.691Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "about-us",
-        "identifier": "about-us-content-3",
-        "title": "Zespół",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Tincidunt pulvinar sed nam hac phasellus morbi amet, faucibus. Sed mauris elementum convallis habitasse amet quis velit, eget. Iaculis platea a, et non euismod pretium dictum.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "3YhlwAFi5HscCiTO0N3a8A"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "BNH7txFKvF8cM4UwzB2Zf",
-        "type": "Entry",
-        "createdAt": "2021-08-09T21:57:42.416Z",
-        "updatedAt": "2021-08-09T21:57:42.416Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "about-us",
-        "identifier": "about-us-board-members-text",
-        "title": "Zarząd",
-        "text1": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "Tincidunt pulvinar sed nam hac phasellus morbi amet, faucibus. Sed mauris elementum convallis habitasse amet quis velit, eget. Iaculis platea a, et non euismod pretium dictum.",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
-          ]
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
         "id": "6DbIyxBXDDKl6A5DEuvmYa",
         "type": "Entry",
         "createdAt": "2021-08-09T21:47:29.963Z",
@@ -2256,70 +2952,6 @@
         "identifier": "projects-middle-cta-text",
         "title": "Chcesz zorganizować z nami podobny projekt?",
         "linkCaption": "Skontaktuj się z nami"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "6enfYOcI5KXjAaGsfSNLjd",
-        "type": "Entry",
-        "createdAt": "2021-08-09T21:40:25.408Z",
-        "updatedAt": "2021-08-09T21:40:25.408Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "projects",
-        "identifier": "projects-top-section",
-        "title": "Projekty",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Ut bibendum a velit, semper nunc. Suspendisse libero, tempor lectus arcu arcu amet egestas orci amet. Massa gravida massa faucibus arcu. Convallis turpis ut molestie dictum. In cursus dictumst facilisis diam ornare feugiat dolor dui lacus. Scelerisque dolor sagittis, tempus enim consectetur aliquam urna a nulla.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "yH2eNUf6Ph8o9Ijo8hke1"
-          }
-        }
       }
     },
     {
@@ -2841,63 +3473,6 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "3rCxnIQDqMvFA1gEAuypMM",
-        "type": "Entry",
-        "createdAt": "2021-08-09T16:56:53.293Z",
-        "updatedAt": "2021-08-09T16:56:53.293Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "homepage",
-        "identifier": "homepage-values",
-        "title": "Wyróżniki, wartości, X-factory organizacji",
-        "text1": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "Nie koniecznie musimy tu dawać tekst, ale jak jest potrzeba i przestrzeń można rozwinąć nagłówek.",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
-          ]
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
         "id": "i659Zuz3kvDVW8eTa4nuN",
         "type": "Entry",
         "createdAt": "2021-08-09T16:03:10.641Z",
@@ -3338,259 +3913,6 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "5rYQ29MzGOGeCvP1xcI60B",
-        "type": "Entry",
-        "createdAt": "2021-08-09T15:45:30.516Z",
-        "updatedAt": "2021-08-09T15:45:30.516Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "boardMembers"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "name": "Klaudia Padlewska",
-        "role": "Członek Zarządu ds. Projektów Sportowych",
-        "phone": "786 255 416",
-        "email": "klaudiapadlewska.ikss.1@gmail.com",
-        "linkedinUrl": "https://linkedin.com/"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "dqukd148ip2KahuDESMsc",
-        "type": "Entry",
-        "createdAt": "2021-08-09T15:44:40.057Z",
-        "updatedAt": "2021-08-09T15:44:40.057Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "boardMembers"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "name": "Agnieszka Kuriata",
-        "role": "Członek Zarządu ds. Projektów Kulturalnych",
-        "phone": "538 354 053",
-        "email": "agnieszka.kuriata10@gmail.com",
-        "linkedinUrl": "https://linkedin.com/"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "7yrXTZqa1fkEimnTsbPcNi",
-        "type": "Entry",
-        "createdAt": "2021-08-09T15:43:47.407Z",
-        "updatedAt": "2021-08-09T15:43:47.407Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "boardMembers"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "name": "Natalia Jaśkiewicz",
-        "role": "Członek Zarządu ds. Administracji i Finansów",
-        "phone": "697 106 691",
-        "email": "nataliajaskiewicz@gmail.com",
-        "linkedinUrl": "https://linkedin.com/"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "4fQQ3k1OgdxowJrR4mETrX",
-        "type": "Entry",
-        "createdAt": "2021-08-09T15:42:51.321Z",
-        "updatedAt": "2021-08-09T15:42:51.321Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "boardMembers"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "name": "Tomasz Wojciechowski",
-        "role": "Członek Zarządu ds. Kontaktów",
-        "phone": "783 355 077",
-        "email": "tomasz.wojciechowski24@gmail.com",
-        "linkedinUrl": "https://linkedin.com/"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "7dBJKSl5tEn4hQkptadyqS",
-        "type": "Entry",
-        "createdAt": "2021-08-09T15:41:55.603Z",
-        "updatedAt": "2021-08-09T15:41:55.603Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "boardMembers"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "name": "Michał Hołownia",
-        "role": "Członek Zarządu ds. Zarządzania Zasobami Ludzkimi",
-        "phone": "601 756 925",
-        "email": "michal.holownia.ikss@gmail.com",
-        "linkedinUrl": "https://linkedin.com/"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "29tlUDri2Ke8OrJ1thUn8K",
-        "type": "Entry",
-        "createdAt": "2021-08-09T15:38:19.294Z",
-        "updatedAt": "2021-08-09T15:38:19.294Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "boardMembers"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "image": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "6BLVSqa4thczdhW4IKon6V"
-          }
-        },
-        "name": "Roksana Białowąs",
-        "role": "Przewodnicząca",
-        "phone": "693 829 206",
-        "email": "roksana.bialowas.ikss@gmail.com",
-        "linkedinUrl": "https://linkedin.com/"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
         "id": "5KVT9vkUOb70mwKYt5CjfP",
         "type": "Entry",
         "createdAt": "2021-08-09T14:11:18.110Z",
@@ -3621,7 +3943,7 @@
           }
         },
         "title": "Express Sportowy",
-        "date": "2020-07-15",
+        "date": "2020-11-15",
         "description": {
           "nodeType": "document",
           "data": {},
@@ -3686,7 +4008,7 @@
           }
         },
         "title": "Express Kulturalny",
-        "date": "2020-12-15",
+        "date": "2020-11-15",
         "description": {
           "nodeType": "document",
           "data": {},
@@ -3751,7 +4073,7 @@
           }
         },
         "title": "IKSS WinterCamp",
-        "date": "2020-10-15",
+        "date": "2020-11-15",
         "description": {
           "nodeType": "document",
           "data": {},
@@ -3816,7 +4138,7 @@
           }
         },
         "title": "Kuźnia Stand Up'u",
-        "date": "2020-02-15",
+        "date": "2020-11-15",
         "description": {
           "nodeType": "document",
           "data": {},
@@ -4022,10 +4344,10 @@
               "id": "n21y2i4hkj4h"
             }
           },
-          "id": "2VmKhKaOFbTZBHD7M0ED3V",
+          "id": "2SbhYPaA4CB0py9yTVYNGB",
           "type": "Asset",
-          "createdAt": "2021-08-09T14:03:13.336Z",
-          "updatedAt": "2021-08-09T14:03:13.336Z",
+          "createdAt": "2021-09-09T14:51:22.175Z",
+          "updatedAt": "2021-09-10T12:39:08.167Z",
           "environment": {
             "sys": {
               "id": "master",
@@ -4033,21 +4355,64 @@
               "linkType": "Environment"
             }
           },
-          "revision": 1,
+          "revision": 3,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "Michał Hołownia-min",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/2SbhYPaA4CB0py9yTVYNGB/5f5c03ba0553fe56e9c439ac826972e8/Micha___Ho__ownia-min.jpg.png",
+            "details": {
+              "size": 247761,
+              "image": {
+                "width": 500,
+                "height": 500
+              }
+            },
+            "fileName": "Micha___Ho__ownia-min.jpg.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "n21y2i4hkj4h"
+            }
+          },
+          "id": "2VmKhKaOFbTZBHD7M0ED3V",
+          "type": "Asset",
+          "createdAt": "2021-08-09T14:03:13.336Z",
+          "updatedAt": "2021-09-09T15:18:20.823Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 2,
           "locale": "en-US"
         },
         "fields": {
           "title": "Wrocławski bieg akademicki",
           "file": {
-            "url": "//images.ctfassets.net/n21y2i4hkj4h/2VmKhKaOFbTZBHD7M0ED3V/bbbfaf58ba344c23f02fa42f168d5518/image_2__1_.jpg",
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/2VmKhKaOFbTZBHD7M0ED3V/9ccf68e019c31b87997c3e184a2dafff/IKSS_WO__P_2021.JPG",
             "details": {
-              "size": 343510,
+              "size": 3103366,
               "image": {
-                "width": 589,
-                "height": 320
+                "width": 5184,
+                "height": 2916
               }
             },
-            "fileName": "image 2 (1).jpg",
+            "fileName": "IKSS_WO__P_2021.JPG",
             "contentType": "image/jpeg"
           }
         }
@@ -4319,7 +4684,7 @@
           "id": "3YhlwAFi5HscCiTO0N3a8A",
           "type": "Asset",
           "createdAt": "2021-08-09T21:59:03.966Z",
-          "updatedAt": "2021-09-02T12:59:27.639Z",
+          "updatedAt": "2021-09-10T12:46:17.099Z",
           "environment": {
             "sys": {
               "id": "master",
@@ -4327,18 +4692,18 @@
               "linkType": "Environment"
             }
           },
-          "revision": 2,
+          "revision": 3,
           "locale": "en-US"
         },
         "fields": {
           "title": "Rectangle 20 (1)",
           "file": {
-            "url": "//images.ctfassets.net/n21y2i4hkj4h/3YhlwAFi5HscCiTO0N3a8A/bf7e27756b08dc37cc81dec0bf1718e1/zespol.jpeg",
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/3YhlwAFi5HscCiTO0N3a8A/4bdc63d463ae52460c948c824227309d/zespol.jpeg",
             "details": {
-              "size": 561101,
+              "size": 755058,
               "image": {
                 "width": 2048,
-                "height": 1536
+                "height": 1152
               }
             },
             "fileName": "zespol.jpeg",
@@ -4526,6 +4891,49 @@
               "id": "n21y2i4hkj4h"
             }
           },
+          "id": "4VLlWeZrGOxvTtw4KSLq3U",
+          "type": "Asset",
+          "createdAt": "2021-09-09T14:49:04.879Z",
+          "updatedAt": "2021-09-09T15:10:25.275Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 2,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "Tomasz Wojciechowski",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/4VLlWeZrGOxvTtw4KSLq3U/5831b313190a5d42f902586c693a7fb9/Tomasz_Wojciechowski.png",
+            "details": {
+              "size": 294577,
+              "image": {
+                "width": 420,
+                "height": 420
+              }
+            },
+            "fileName": "Tomasz_Wojciechowski.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "n21y2i4hkj4h"
+            }
+          },
           "id": "4YD89UZZXrLScYLl47wHgt",
           "type": "Asset",
           "createdAt": "2021-08-09T22:13:20.132Z",
@@ -4633,6 +5041,49 @@
             },
             "fileName": "Twitch_logo_2019 1.svg",
             "contentType": "image/svg+xml"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "n21y2i4hkj4h"
+            }
+          },
+          "id": "4lFrVQUu7r4CLJoHGm3vuH",
+          "type": "Asset",
+          "createdAt": "2021-09-09T14:44:03.510Z",
+          "updatedAt": "2021-09-09T15:09:03.293Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 2,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "Klaudia Padlewska",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/4lFrVQUu7r4CLJoHGm3vuH/c4740998adaceaf37d32dfe407f75c35/Klaudia_Padlewska.jpg.png",
+            "details": {
+              "size": 12601272,
+              "image": {
+                "width": 3680,
+                "height": 3680
+              }
+            },
+            "fileName": "Klaudia_Padlewska.jpg.png",
+            "contentType": "image/png"
           }
         }
       },
@@ -5599,6 +6050,49 @@
             },
             "fileName": "Group.svg",
             "contentType": "image/svg+xml"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "n21y2i4hkj4h"
+            }
+          },
+          "id": "KJKKI4GRQQAhRVHgRep5L",
+          "type": "Asset",
+          "createdAt": "2021-09-09T14:48:36.230Z",
+          "updatedAt": "2021-09-09T15:11:14.939Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 2,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "Natalia Jaśkiewicz",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/KJKKI4GRQQAhRVHgRep5L/91e2488401886bb95981319731d53267/Natalia_Ja__kiewicz.jpg.png",
+            "details": {
+              "size": 439317,
+              "image": {
+                "width": 598,
+                "height": 598
+              }
+            },
+            "fileName": "Natalia_Ja__kiewicz.jpg.png",
+            "contentType": "image/png"
           }
         }
       },
