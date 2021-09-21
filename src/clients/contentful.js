@@ -1,8 +1,10 @@
 import config from '@root/config/contentful';
-import data from '../api/data.json';
+import data from '../mocks/data.json';
+
+const maxLimit = 1000;
 
 export default async function getPagesData() {
-  const apiEndPoint = `https://cdn.contentful.com/spaces/${config.SPACE_ID}/environments/master/entries?access_token=${config.TOKEN}&limit=1000`; // yeah that's it
+  const apiEndPoint = `https://cdn.contentful.com/spaces/${config.SPACE_ID}/environments/master/entries?access_token=${config.TOKEN}&limit=${maxLimit}`; // yeah that's it
   const timeoutId = setTimeout(() => {
     throw new Error('API request timeout');
   }, 5000);

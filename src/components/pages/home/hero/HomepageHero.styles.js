@@ -89,6 +89,7 @@ export const StyledSocials = styled(Socials)(
     margin-left: auto;
     padding: 0;
     justify-content: space-around;
+    border-radius: 1.6rem;
   }
 
   a {

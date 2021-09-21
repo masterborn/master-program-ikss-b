@@ -1,9 +1,10 @@
 export const scrollToContactForm = (navbarHeight) => {
   const contactForm = document.getElementById('contact-form');
-  const navbarOffset = Number(navbarHeight.replace(/px$/, ''));
+  const navbarOffset = navbarHeight;
 
   if (contactForm) {
     const contactFormPosition = contactForm.getBoundingClientRect().top;
+
     window.scrollBy(0, contactFormPosition - navbarOffset);
   }
 };

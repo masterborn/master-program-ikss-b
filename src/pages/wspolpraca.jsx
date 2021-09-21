@@ -27,27 +27,27 @@ export async function getStaticProps() {
 
 export default function Cooperation({ cooperationData: { common, partners, basicContent } }) {
   const {
-    'social-facebook': socialFb,
-    'social-linkedin': socialIn,
-    'social-instagram': socialIg,
-    'social-youtube': socialYt,
-    'contact-form-text': contactFormText,
-    'contact-form-tooltip': tooltipText,
-    'footer-text': footerText,
+    socialFacebook,
+    socialLinkedin,
+    socialInstagram,
+    socialYoutube,
+    contactFormText,
+    contactFormTooltip,
+    footerText,
   } = common;
+  const socials = { socialFacebook, socialLinkedin, socialInstagram, socialYoutube };
 
   const {
-    'cooperation-top-section': topSectionContent,
-    'cooperation-logos-text': partnersText,
-    'cooperation-tiles-title': valuesTitle,
-    'cooperation-tile-1': cooperationTile1,
-    'cooperation-tile-2': cooperationTile2,
-    'cooperation-tile-3': cooperationTile3,
-    'cooperation-tile-4': cooperationTile4,
-    'cooperation-tile-5': cooperationTile5,
-    'cooperation-bottom-cta': bottomCtaContent,
+    cooperationTopSection,
+    cooperationLogosText: partnersText,
+    cooperationTilesTitle: valuesTitle,
+    cooperationTile1,
+    cooperationTile2,
+    cooperationTile3,
+    cooperationTile4,
+    cooperationTile5,
+    cooperationBottomCta,
   } = basicContent;
-  const socials = { socialFb, socialIn, socialIg, socialYt };
   const valuesTiles = [
     cooperationTile1,
     cooperationTile2,
@@ -62,12 +62,16 @@ export default function Cooperation({ cooperationData: { common, partners, basic
       socials={socials}
       footerText={footerText}
       contactFormText={contactFormText}
-      tooltipText={tooltipText}
+      tooltipText={contactFormTooltip}
     >
-      <TopSection isOnCooperation topSectionContent={topSectionContent} sectionId="współpraca" />
+      <TopSection
+        isOnCooperation
+        topSectionContent={cooperationTopSection}
+        sectionId="współpraca"
+      />
       <CooperationValuesSection valuesTiles={valuesTiles} valuesTitle={valuesTitle} />
       <PartnersSection partners={orderedPartners} partnersText={partnersText} />
-      <BottomCta bottomCtaContent={bottomCtaContent} />
+      <BottomCta bottomCtaContent={cooperationBottomCta} />
     </Layout>
   );
 }
@@ -75,25 +79,25 @@ export default function Cooperation({ cooperationData: { common, partners, basic
 Cooperation.propTypes = {
   cooperationData: PropTypes.shape({
     common: PropTypes.shape({
-      'contact-form-text': PropTypes.shape({}),
-      'contact-form-tooltip': PropTypes.shape({}),
-      'social-facebook': PropTypes.shape({}),
-      'social-linkedin': PropTypes.shape({}),
-      'social-instagram': PropTypes.shape({}),
-      'social-youtube': PropTypes.shape({}),
-      'footer-text': PropTypes.shape({}),
-    }),
+      contactFormText: PropTypes.shape({}),
+      contactFormTooltip: PropTypes.shape({}),
+      socialFacebook: PropTypes.shape({}),
+      socialLinkedin: PropTypes.shape({}),
+      socialInstagram: PropTypes.shape({}),
+      socialYoutube: PropTypes.shape({}),
+      footerText: PropTypes.shape({}),
+    }).isRequired,
     partners: PropTypes.arrayOf(PropTypes.object).isRequired,
     basicContent: PropTypes.shape({
-      'cooperation-logos-text': PropTypes.shape({}),
-      'cooperation-tiles-title': PropTypes.shape({}),
-      'cooperation-tile-1': PropTypes.shape({}),
-      'cooperation-tile-2': PropTypes.shape({}),
-      'cooperation-tile-3': PropTypes.shape({}),
-      'cooperation-tile-4': PropTypes.shape({}),
-      'cooperation-tile-5': PropTypes.shape({}),
-      'cooperation-bottom-cta': PropTypes.shape({}),
-      'cooperation-top-section': PropTypes.shape({}),
+      cooperationLogosText: PropTypes.shape({}),
+      cooperationTilesTitle: PropTypes.shape({}),
+      cooperationTile1: PropTypes.shape({}),
+      cooperationTile2: PropTypes.shape({}),
+      cooperationTile3: PropTypes.shape({}),
+      cooperationTile4: PropTypes.shape({}),
+      cooperationTile5: PropTypes.shape({}),
+      cooperationBottomCta: PropTypes.shape({}),
+      cooperationTopSection: PropTypes.shape({}),
     }),
   }).isRequired,
 };

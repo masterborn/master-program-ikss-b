@@ -32,10 +32,10 @@ export const ContactFormContainer = styled.div(
 
   }
 
-  @media (max-width: 42.0rem) {
-    width: 100%;
+  @media (max-width: 420px) {
+    width: 80%;
     max-width: 33.7rem;
-    min-width: 30.0rem;
+    min-width: 27.8rem;
   }
 `,
 );
@@ -76,29 +76,12 @@ export const ContactFormContent = styled.div(
 );
 
 export const TopSection = styled.div(
-  ({ theme: { medias, color } }) => `
+  ({ theme: { medias } }) => `
   width: 58.8rem;
   text-align: center;
-  h3 {
-    color: ${color.navy};
-  }
-  p {
-    margin-top: 2.5rem;
-    color: ${color.steel};
-  }
 
   @media ${medias.mobile} {
     width: 80%;
-    min-width: 29.5rem;
-    h3 {
-      font-size: 1.8rem;
-      line-height: 2.4rem;
-    }
-    p {
-      margin-top: 2.4rem;
-      font-size: 1.4rem;
-      line-height: 2.8rem;
-    }
   }
 `,
 );
@@ -128,7 +111,6 @@ export const Form = styled.form(
 
   @media ${medias.mobile} {
     width: 80%;
-    min-width: 29.5rem;
     margin-top: 2.4rem;
 
     display: flex;
@@ -174,7 +156,6 @@ export const InputRow = styled.div(
 export const NameInput = styled(Input)(
   ({ theme: { medias } }) => `
   width: 28.2rem;
-  height: 4.8rem;
   margin-right: 0;
 
   @media ${medias.mobile} {
@@ -185,7 +166,6 @@ export const NameInput = styled(Input)(
 export const FullWidthInput = styled(Input)(
   ({ theme: { medias } }) => `
   width: 58.8rem;
-  height: 4.8rem;
   margin-right: 0;
 
   @media ${medias.mobile} {
@@ -211,25 +191,23 @@ export const StyledCheckbox = styled(Checkbox)`
 export const RODOContainer = styled.div`
   position: relative;
 `;
-
-export const RODO = styled.p(
+export const RODOText = styled.div(
   ({ theme: { medias, color } }) => `
   ${ParagraphSmall};
   color: ${color.steelTints.steel70};
 
   @media ${medias.mobile} {
-    width: 24.0rem;
+    width: 100%;
 
     font-size: 1.2rem;
     line-height: 1.5rem;
   }
 `,
 );
-export const RODOLink = styled.a`
+export const HighlightedRODOText = styled.span`
   color: inherit;
-  cursor: pointer;
+  cursor: help;
   font-weight: 700;
-  text-decoration: underline;
 `;
 
 export const SubmitButton = styled(PrimaryButton)(

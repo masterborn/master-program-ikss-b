@@ -6,10 +6,10 @@ import toggleTileVisibility from '../TileAnimations.styles';
 
 export const StyledCollapsedBoardMemberTile = styled.button(
   ({ theme: { color }, isTileOpened }) => `
-  width: 90%;
-  max-width: 38.4rem;
-  min-width: 30.0rem;
-  margin: 0;
+  max-width:100vw;
+  width:90%;
+  min-width:252px;
+  margin: 0 2.4rem;
 
   display: flex;
   flex-direction: row;
@@ -32,7 +32,9 @@ export const StyledCollapsedBoardMemberTile = styled.button(
 export const BoardMemberTileAvatar = styled.div(
   ({ theme: { color } }) => `
   width: 8.0rem;
+  min-width: 8.0rem;
   height: 8.0rem;
+  min-height: 8.0rem;
   margin-left: 2.0rem;
 
   border-radius: 50%;
@@ -58,8 +60,9 @@ export const BoardMemberTileTextContent = styled.div`
   text-align: left;
 
   @media (max-width: 35.5rem) {
-    width: 11rem;
+    width: fit-content;
     margin-left: 0.5rem;
+    margin-right: 6rem;
   }
 `;
 

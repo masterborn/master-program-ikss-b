@@ -8,11 +8,11 @@ export default function IsMobileProvider({ children }) {
 
   useEffect(() => {
     const handleResize = () => {
-      const isMobile = window.matchMedia('(max-width: 55.0rem)').matches;
+      const isMobile = window.matchMedia('(max-width: 550px)').matches;
       dispatch(toggleIsMobile(isMobile));
     };
 
-    const isMobile = window.matchMedia('(max-width: 55.0rem)').matches;
+    const isMobile = window.matchMedia('(max-width: 550px)').matches;
     dispatch(toggleIsMobile(isMobile));
 
     window.addEventListener('resize', handleResize);

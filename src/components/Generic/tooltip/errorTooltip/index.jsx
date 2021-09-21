@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { ErrorTooltipContainer, Text, ErrorTooltipTail } from './ErrorTooltip.styles';
 
 export default function ErrorTooltip({ tooltipText, show }) {

@@ -37,7 +37,10 @@ export const HistoryRow = styled.div(
 
     &:last-child {
       div{
-      margin-top: 0;
+        margin-top: 0;
+      }
+      img{
+        margin-bottom: 3.2rem;
       }
     }
   }
@@ -73,6 +76,9 @@ export const HistoryImage = styled.img(
   height: auto;
   border-radius: 1.6rem;
   margin-left: 5.6rem;
+  max-height: 40rem;
+
+
   &:first-child {
     margin-bottom: 3.2rem;
   }

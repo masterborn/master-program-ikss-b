@@ -10,7 +10,9 @@ export const BoardMemberTileWrapper = styled.div(
   margin: 1.2rem;
 
   @media ${medias.mobile} {
+    max-width:100vw;
     width: 100%;
+    min-width: 252px;
     min-height: fit-content;
     margin: 1.2rem 0;
 
@@ -28,10 +30,6 @@ const toggleButtonOnCollapsedTile = css`
   right: 4rem;
 
   transform: translateY(-50%);
-
-  @media (max-width: 32rem) {
-    right: 2rem;
-  }
 `;
 const toggleButtonOnExpandedTile = css`
   position: absolute;
@@ -39,10 +37,6 @@ const toggleButtonOnExpandedTile = css`
   right: 4rem;
 
   transform: rotate(180deg);
-
-  @media (max-width: 32rem) {
-    right: 2rem;
-  }
 `;
 
 export const ToggleButton = styled(IconButton)(
@@ -70,10 +64,10 @@ export const StyledBoardMemberTile = styled.div(
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
 
   @media ${medias.mobile} {
-    width: 90%;
     max-width: 38.4rem;
-    min-width: 30.0rem;
-
+    width:90%;
+    min-width:252px;
+    margin: 0 2.4rem;
     opacity: 1;
     overflow: hidden;
 
@@ -147,6 +141,10 @@ export const ContactLink = styled.a(
   text-decoration: none;
 `,
 );
+
+export const ContactText = styled.span`
+  overflow-wrap: anywhere;
+`;
 export const LinkedInButton = styled.a(
   ({ theme: { medias } }) => `
   margin: auto 0 4.0rem;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
 import { convertRichTextToReactComponent } from '@dataMappers/contentful';
-import ValuesTile from '@valueTile';
+import ValueTile from '@valueTile';
 import ValuesTilesSlider from './valuesTilesSlider';
 import {
   StyledValuesSection,
@@ -24,8 +24,8 @@ export default function ValuesSection({ valuesText, valuesTiles }) {
         <ValuesTilesSlider valuesTiles={valuesTiles} />
       ) : (
         <ValuesSectionTilesContainer>
-          {valuesTiles.map((val) => (
-            <ValuesTile data={val} key={val.title} />
+          {valuesTiles.map((valueTileData) => (
+            <ValueTile data={valueTileData} key={valueTileData.title} />
           ))}
         </ValuesSectionTilesContainer>
       )}

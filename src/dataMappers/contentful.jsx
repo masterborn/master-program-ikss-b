@@ -26,6 +26,10 @@ function addAssetsToItems(data) {
   return data;
 }
 
+function convertKebabToCamelCase(str) {
+  return str.replace(/-./g, (match) => match[1].toUpperCase());
+}
+
 function extractItems(data) {
   const collection = addAssetsToItems(data);
   return collection.items;
@@ -35,7 +39,8 @@ function mapByPages(basicContent) {
   const pagesCollection = {};
   basicContent.forEach((itemData) => {
     const { page } = itemData || 'common';
-    const { identifier } = itemData;
+    let { identifier } = itemData;
+    identifier = convertKebabToCamelCase(identifier);
     pagesCollection[page] = { ...pagesCollection[page], [identifier]: itemData };
   });
   return pagesCollection;

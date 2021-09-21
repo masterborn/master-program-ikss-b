@@ -5,13 +5,13 @@ import { ButtonBigText, ButtonSmallText } from '@typography/buttonsText';
 const defaultVariantStyles = css`
   height: 3.6rem;
   ${ButtonSmallText};
-  padding: 0.5em 0.88em 0.5em 0.88em;
+  padding: 0.9rem 1.6rem 0.9rem 1.8rem;
 `;
 
 const largeVariantStyles = css`
   height: 4.8rem;
   ${ButtonBigText};
-  padding: 0.7em 1.2em 0.7em 1.2em;
+  padding: 1.4rem 2.4rem 1.4rem 2.6rem;
 `;
 
 const StyledSecondaryButton = styled.button(
@@ -23,12 +23,12 @@ const StyledSecondaryButton = styled.button(
   ${large ? largeVariantStyles : defaultVariantStyles};
 
   border: 2px solid ${color.navy};
-  border-radius: 2em;
+  border-radius: 2.6rem;
   color: ${color.navy};
   background-color: ${color.white};
   & > .icon {
     height: 1em;
-    margin-right: .65rem;
+    margin-right: 0.6rem;
     fill: ${color.navy};
   }
   &:hover {

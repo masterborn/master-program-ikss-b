@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import {
   CooperationValuesSectionContainer,
   Title,
@@ -14,8 +15,12 @@ export default function CooperationValuesSection({ valuesTiles, valuesTitle }) {
     <CooperationValuesSectionContainer>
       <Title>{title}</Title>
       <CooperationValuesTilesContainer>
-        {valuesTiles.map((tileData) => (
-          <CooperationValueTile data={tileData} key={tileData.title} />
+        {valuesTiles.map((cooperationValueTileData) => (
+          <CooperationValueTile
+            data={cooperationValueTileData}
+            key={cooperationValueTileData.title}
+            isOnCooperation
+          />
         ))}
       </CooperationValuesTilesContainer>
     </CooperationValuesSectionContainer>

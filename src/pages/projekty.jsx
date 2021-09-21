@@ -27,30 +27,30 @@ export async function getStaticProps() {
 
 export default function Projects({ projectsData: { basicContent, projects, common } }) {
   const {
-    'projects-top-section': topSectionContent,
-    'projects-bottom-cta-text': bottomCtaContent,
-    'projects-middle-cta-text': midCtaContent,
+    projectsTopSection,
+    projectsBottomCtaText: bottomCtaContent,
+    projectsMiddleCtaText: midCtaContent,
   } = basicContent;
 
   const {
-    'social-facebook': socialFb,
-    'social-linkedin': socialIn,
-    'social-instagram': socialIg,
-    'social-youtube': socialYt,
-    'contact-form-text': contactFormText,
-    'contact-form-tooltip': tooltipText,
-    'footer-text': footerText,
+    socialFacebook,
+    socialLinkedin,
+    socialInstagram,
+    socialYoutube,
+    contactFormText,
+    contactFormTooltip,
+    footerText,
   } = common;
-  const socials = { socialFb, socialIn, socialIg, socialYt };
+  const socials = { socialFacebook, socialLinkedin, socialInstagram, socialYoutube };
 
   return (
     <Layout
       socials={socials}
       footerText={footerText}
       contactFormText={contactFormText}
-      tooltipText={tooltipText}
+      tooltipText={contactFormTooltip}
     >
-      <TopSection topSectionContent={topSectionContent} sectionId="projekty" />
+      <TopSection topSectionContent={projectsTopSection} sectionId="projekty" />
 
       <ProjectsMasonry midCtaContent={midCtaContent} projectsData={projects} />
       <BottomCta bottomCtaContent={bottomCtaContent} />
@@ -61,18 +61,18 @@ export default function Projects({ projectsData: { basicContent, projects, commo
 Projects.propTypes = {
   projectsData: PropTypes.shape({
     common: PropTypes.shape({
-      'contact-form-text': PropTypes.shape({}),
-      'contact-form-tooltip': PropTypes.shape({}),
-      'social-facebook': PropTypes.shape({}),
-      'social-linkedin': PropTypes.shape({}),
-      'social-instagram': PropTypes.shape({}),
-      'social-youtube': PropTypes.shape({}),
-      'footer-text': PropTypes.shape({}),
-    }),
+      contactFormText: PropTypes.shape({}),
+      contactFormTooltip: PropTypes.shape({}),
+      socialFacebook: PropTypes.shape({}),
+      socialLinkedin: PropTypes.shape({}),
+      socialInstagram: PropTypes.shape({}),
+      socialYoutube: PropTypes.shape({}),
+      footerText: PropTypes.shape({}),
+    }).isRequired,
     basicContent: PropTypes.shape({
-      'projects-bottom-cta-text': PropTypes.shape({}),
-      'projects-middle-cta-text': PropTypes.shape({}),
-      'projects-top-section': PropTypes.shape({}),
+      projectsBottomCtaText: PropTypes.shape({}),
+      projectsMiddleCtaText: PropTypes.shape({}),
+      projectsTopSection: PropTypes.shape({}),
     }),
     projects: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,

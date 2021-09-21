@@ -10,6 +10,7 @@ const hideTile = css`
   opacity: 0;
   ${toggleTiletransition}
 `.join('');
+
 const showTile = (componentHeight, componentPadding) =>
   css`
     height: ${componentHeight};
