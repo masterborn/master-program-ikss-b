@@ -73,7 +73,7 @@ export const StyledLogo = styled(Logo)(
 `,
 );
 
-export const Label = styled.li(
+export const PageLink = styled.a(
   ({ theme: { color }, isHighlighted }) => `
   ${ButtonBigText}
 
