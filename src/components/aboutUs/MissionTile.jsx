@@ -13,7 +13,7 @@ export default function MissionTile({ missionContent }) {
   const { title, text1: richText, image1: image } = missionContent;
   const Description = convertRichTextToReactComponent(MissionDescription, richText);
   return (
-    <MissionContainer>
+    <MissionContainer id="misja">
       {image && <MissionImage src={image.url} alt={image.title} />}
       <MissionTextContainer>
         <MissionHeader>{title}</MissionHeader>

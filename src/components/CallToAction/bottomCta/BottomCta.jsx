@@ -8,7 +8,7 @@ export default function BottomCta({ bottomCtaContent }) {
   const { title, linkCaption: buttonText, text1: richText } = bottomCtaContent;
   const CtaDescription = convertRichTextToReactComponent(BottomCtaText, richText);
   return (
-    <BottomCtaContainer>
+    <BottomCtaContainer className="kontakt">
       {title && <BottomCtaHeader>{title}</BottomCtaHeader>}
       {richText && CtaDescription}
       {buttonText && <CtaButton isBig buttonCaption={buttonText} />}

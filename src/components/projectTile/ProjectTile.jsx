@@ -18,7 +18,7 @@ export default function ProjectTile({ project, isOnGrid }) {
   const { title, date, image, videoUrl, linkUrl, description } = project;
   const linkIsFromFacebook = /^(https:\/\/)?(www.)?f(b||acebook)\.com\/.*/.test(linkUrl);
   return (
-    <ProjectArticle isOnGrid={isOnGrid}>
+    <ProjectArticle id={title} isOnGrid={isOnGrid}>
       <ProjectMediaContainer>
         {videoUrl ? (
           <ProjectVideo isOnGrid={isOnGrid} url={videoUrl} />

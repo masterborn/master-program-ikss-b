@@ -7,7 +7,7 @@ export default function MidCta({ midCtaContent }) {
   const { title, linkCaption: buttonText } = midCtaContent;
 
   return (
-    <MidCtaContainer>
+    <MidCtaContainer className="kontakt">
       <CtaOverlay>
         {title && <MidCtaHeader>{title}</MidCtaHeader>}
         {buttonText && <CtaButton buttonCaption={buttonText} />}

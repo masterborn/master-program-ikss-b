@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Header3, Header4 } from '@root/styles/typography/headers';
 import ValuesTile from '@root/components/home/valuesSection/ValuesTile';
 
-export const CooperationValuesSectionContainer = styled.div(
+export const CooperationValuesSectionContainer = styled.section(
   ({ theme: { medias } }) => `
   width: 122.4rem;
   margin-top: 14.8rem;

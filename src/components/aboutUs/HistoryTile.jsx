@@ -16,7 +16,7 @@ export default function HistoryTile({ historyContent }) {
   const Description2 = convertRichTextToReactComponent(HistoryDescription, richText2);
 
   return (
-    <HistoryTileContainer>
+    <HistoryTileContainer id="historia">
       <HistoryRow>
         <HistoryTextContainer>
           <HistoryHeader>{title}</HistoryHeader>

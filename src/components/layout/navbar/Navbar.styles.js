@@ -29,7 +29,7 @@ export const StyledNavbar = styled.nav(
 `,
 );
 
-export const FooterWrapper = styled.div`
+export const NavWrapper = styled.div`
   width: 100%;
   max-width: 144rem;
   display: flex;
@@ -37,13 +37,14 @@ export const FooterWrapper = styled.div`
   align-items: center;
 `;
 
-export const LinksContainer = styled.div`
+export const LinksContainer = styled.ul`
   width: 41.3rem;
   height: 2rem;
 
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  list-style: none;
 
   margin-left: 12.6rem;
 `;
@@ -72,20 +73,15 @@ export const StyledLogo = styled(Logo)(
 `,
 );
 
-export const Label = styled.h3(
+export const Label = styled.li(
   ({ theme: { color }, isHighlighted }) => `
-  margin: 0 1.0rem;
-
-  width: fit-content;
-
-  cursor: pointer;
-
-  text-align: center;
-  
   ${ButtonBigText}
 
+  margin: 0 1.0rem;
+  width: fit-content;
+  cursor: pointer;
+  text-align: center;
   text-decoration: none;
-
   color: ${isHighlighted ? color.navy : color.steel};
 `,
 );

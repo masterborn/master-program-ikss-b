@@ -21,7 +21,7 @@ export default function ProjectsMasonry({ projectsData, midCtaContent }) {
   }
 
   return (
-    <ProjectsMasonryContainer>
+    <ProjectsMasonryContainer id="projekty">
       <ProjectsSwitchContainer isOnGrid>
         {projectsCollection.map((subCollection, index) => {
           const date = new Date(subCollection[0].date);

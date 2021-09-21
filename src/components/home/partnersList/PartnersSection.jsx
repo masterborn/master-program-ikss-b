@@ -15,7 +15,7 @@ export default function PartnersSection({ partners, partnersText }) {
   const { title: partnersTitle, text1: richText } = partnersText;
   const Description = convertRichTextToReactComponent(PartnersDescription, richText);
   return (
-    <LogosSection id="partners">
+    <LogosSection id="partnerzy">
       <PartnersHeader>{partnersTitle}</PartnersHeader>
       {Description}
       <LogosContainer>

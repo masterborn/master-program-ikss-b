@@ -16,7 +16,7 @@ export default function ValuesSection({ valuesText, valuesTiles }) {
   const isMobile = useSelector((state) => state.isMobile);
   const Body = convertRichTextToReactComponent(ValuesSectionParagraph, richText);
   return (
-    <StyledValuesSection id="values-section">
+    <StyledValuesSection id="nasze-wartości">
       <ValuesSectionTitle>{title}</ValuesSectionTitle>
       {Body}
       {isMobile ? (

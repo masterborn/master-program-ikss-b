@@ -26,7 +26,7 @@ export default function ProjectsSection({ projects }) {
     setCurrentProject(nextProject);
   }
   return (
-    <ProjectSection id="projects">
+    <ProjectSection id="projekty">
       <SectionHeader>Najnowsze Projekty</SectionHeader>
       <ProjectsSwitchContainer>
         {homepageProjects.map(({ title }) => (

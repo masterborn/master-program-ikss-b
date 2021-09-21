@@ -6,7 +6,6 @@ import { toggleModal } from '@root/redux/actions/modalActions';
 import { HamburgerMenuIcon } from '@root/components/icons/misc';
 import {
   StyledNavbar,
-  FooterWrapper,
   LinksContainer,
   StyledLogoLink,
   StyledLogo,
@@ -14,6 +13,7 @@ import {
   StyledNavbarSocials,
   ContactButton,
   HamburgerMenu,
+  NavWrapper,
 } from './Navbar.styles';
 import handleContactFormButton from './contactFormButton';
 import Sidebar from './sidebar';
@@ -34,7 +34,7 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
   const toggleSidebar = () => setIsSidebarOpened((prevState) => !prevState);
   return (
     <StyledNavbar>
-      <FooterWrapper>
+      <NavWrapper>
         <Link href="/" passHref>
           <StyledLogoLink href>
             <StyledLogo />
@@ -71,7 +71,7 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
             <ContactButton onClick={handleClickContactButton}>Skontaktuj się</ContactButton>
           </>
         )}
-      </FooterWrapper>
+      </NavWrapper>
     </StyledNavbar>
   );
 }

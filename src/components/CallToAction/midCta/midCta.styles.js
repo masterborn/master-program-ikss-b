@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Header3, Header5 } from '../../../styles/typography/headers';
 
-export const MidCtaContainer = styled.div(
+export const MidCtaContainer = styled.section(
   ({ theme: { medias } }) => `
   /* just for display testing */
   margin: 12.0rem 0 12.0rem 0;

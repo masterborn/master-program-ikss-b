@@ -121,9 +121,11 @@ export const StyledSocials = styled(Socials)(
 export const Header = styled.h1(
   ({ theme: { medias } }) => `
   width: 100%;
+  max-width: 512px;
   ${Header1};
 
   @media ${medias.mobile} {
+    max-width: auto;
     ${Header4};
   }
 `,
