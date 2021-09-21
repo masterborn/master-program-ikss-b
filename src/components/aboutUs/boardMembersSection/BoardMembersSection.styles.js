@@ -46,15 +46,23 @@ export const Description = styled.p(
 );
 
 export const BoardMembersContainer = styled.div(
-  ({ theme: { medias } }) => `
+  ({ theme: { medias }, isDiamond }) => `
   margin-top: 6.4rem;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  ${
+    isDiamond &&
+    `
+    display: block;
+    column-count: 3;
+    column-gap: 24px;
+  `
+  }
+  }
 
   @media ${medias.mobile} {
+    display: flex;
     margin-top: 5.7rem;
     flex-direction: column;
   }

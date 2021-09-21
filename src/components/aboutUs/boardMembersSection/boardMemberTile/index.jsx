@@ -17,7 +17,7 @@ import {
   LinkedInButton,
 } from './BoardMemberTile.styles';
 
-export default function BoardMemberTile({ data, isMobile }) {
+export default function BoardMemberTile({ data, isMobile, isDiamond }) {
   const { name, role, phone: phoneNumber, email, linkedinUrl: linkedInUrl } = data;
   const imageUrl = data.image?.url;
   const closedBoardMemberTileData = { imageUrl, name, role };
@@ -26,7 +26,7 @@ export default function BoardMemberTile({ data, isMobile }) {
   const toggleTileIsOpened = () => setIsTileOpened((prevState) => !prevState);
 
   return (
-    <BoardMemberTileWrapper>
+    <BoardMemberTileWrapper isDiamond={isDiamond}>
       {isMobile && (
         <>
           <ToggleButton
@@ -84,4 +84,9 @@ BoardMemberTile.propTypes = {
     linkedinUrl: PropTypes.string,
   }).isRequired,
   isMobile: PropTypes.bool.isRequired,
+  isDiamond: PropTypes.bool,
+};
+
+BoardMemberTile.defaultProps = {
+  isDiamond: false,
 };
