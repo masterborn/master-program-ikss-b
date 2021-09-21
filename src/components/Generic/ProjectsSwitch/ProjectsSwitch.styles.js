@@ -65,13 +65,14 @@ export const SwitchButton = styled.button(
 
   @media ${medias.mobile} {
     height: 3.1rem;
-    width: auto;
+    width: 45%;
     padding: .9rem 1.6rem;
     font-size: 1.0rem;
     line-height: 1.3rem;
     &:first-child {
-      margin: 0 100% 1.2rem 100%;
+      margin-bottom: 1.2rem;
       min-width: max-content;
+      width: 60%;
     }
     &:last-child {
       margin: 0 0 0 1.2rem;
@@ -79,7 +80,6 @@ export const SwitchButton = styled.button(
   }
   @media (max-width: 38.0rem) {
     min-width: 9.0rem;
-    max-width: 12.0rem;
   }
 `,
 );
