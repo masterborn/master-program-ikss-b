@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+:root {
+  font-size: 62.5%;
+}
+
 html{
   scroll-behavior: smooth;
 }

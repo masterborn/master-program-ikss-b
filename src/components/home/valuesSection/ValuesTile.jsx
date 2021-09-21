@@ -10,16 +10,24 @@ import {
   ValueTileParagraph,
 } from './ValuesTile.styles';
 
-export default function ValuesTile({ data }) {
-  const { title, text1: richText, image1: image } = data;
+export default function ValuesTile({ className, data, isOnCooperation }) {
+  const {
+    title,
+    text1: richText,
+    image1: { url: imageUrl },
+  } = data;
+
+  if (!imageUrl && !title && !richText) return null;
+
   const Body = convertRichTextToReactComponent(ValueTileParagraph, richText);
+
   return (
-    <StyledValueTile>
-      <ValueTileContent>
-        {image ? (
-          <Image src={`https:${image.url}`} height={232} width={232} alt={title} />
+    <StyledValueTile className={className} isOnCooperation={isOnCooperation}>
+      <ValueTileContent isOnCooperation={isOnCooperation}>
+        {imageUrl ? (
+          <Image src={`https:${imageUrl}`} height={232} width={232} alt={title} />
         ) : (
-          <ValueTileImageFiller />
+          <ValueTileImageFiller isOnCooperation={isOnCooperation} />
         )}
 
         <ValueTileTitle>{title}</ValueTileTitle>
@@ -30,6 +38,7 @@ export default function ValuesTile({ data }) {
 }
 
 ValuesTile.propTypes = {
+  className: PropTypes.string,
   data: PropTypes.shape({
     title: PropTypes.string,
     text1: PropTypes.shape({}),
@@ -37,4 +46,10 @@ ValuesTile.propTypes = {
       url: PropTypes.string,
     }),
   }).isRequired,
+  isOnCooperation: PropTypes.bool,
+};
+
+ValuesTile.defaultProps = {
+  className: '',
+  isOnCooperation: false,
 };

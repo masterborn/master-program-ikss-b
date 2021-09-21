@@ -1,5 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 
 function extractAsset(itemData, assets) {
   const assetId = itemData.sys.id;
@@ -26,6 +26,10 @@ function addAssetsToItems(data) {
   return data;
 }
 
+function convertKebabToCamelCase(str) {
+  return str.replace(/-./g, (match) => match[1].toUpperCase());
+}
+
 function extractItems(data) {
   const collection = addAssetsToItems(data);
   return collection.items;
@@ -35,7 +39,8 @@ function mapByPages(basicContent) {
   const pagesCollection = {};
   basicContent.forEach((itemData) => {
     const { page } = itemData || 'common';
-    const { identifier } = itemData;
+    let { identifier } = itemData;
+    identifier = convertKebabToCamelCase(identifier);
     pagesCollection[page] = { ...pagesCollection[page], [identifier]: itemData };
   });
   return pagesCollection;
@@ -63,6 +68,16 @@ export function sortByOrder(data) {
 
 export function convertRichTextToReactComponent(Component, richText) {
   const options = {
+    renderText: (text) =>
+      text.split('\n').reduce(
+        (children, textSegment, index) => [
+          ...children,
+          // eslint-disable-next-line react/no-array-index-key
+          index > 0 && <br key={index} />,
+          textSegment,
+        ],
+        [],
+      ),
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <Component>{children}</Component>,
     },
@@ -70,6 +85,11 @@ export function convertRichTextToReactComponent(Component, richText) {
       [MARKS.BOLD]: (text) => <b>{text}</b>,
       [MARKS.ITALIC]: (text) => <i>{text}</i>,
       [MARKS.UNDERLINE]: (text) => <ins>{text}</ins>,
+    },
+    rednerInline: {
+      // Make sure to prepare generic Hyperlink component
+      // eslint-disable-next-line react/prop-types
+      [INLINES.HYPERLINK]: ({ data }, text) => <a href={data.uri}>{text}</a>,
     },
   };
   return documentToReactComponents(richText, options);

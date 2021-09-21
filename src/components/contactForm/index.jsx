@@ -1,34 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   changeInputValues,
   resetInputValues,
   changeFormSendingStatus,
 } from '@root/redux/actions/contactFormActions';
-import { sendEmailMockup } from '@root/clients/formcarry';
+import sendEmail from '@root/clients/formcarry';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { inputsValidationInitialState } from '@root/consts/contactForm';
 import validateInputs from './validation';
 import { XIcon } from '../icons/misc';
-import { Header3 } from '../typography/headers';
-import { ParagraphBody, ParagraphSmall } from '../typography/paragraphs';
-import Tooltip from './tooltip';
+import Tooltip from '../tooltip';
 import {
   ContactFormContainer,
   CloseButton,
   ContactFormContent,
   TopSection,
+  ContactFormTitle,
+  ContactFormDescription,
   Form,
+  ContactFormLabel,
+  ContactFormLabelParagraph,
   InputRow,
   NameInput,
   FullWidthInput,
   ContentInput,
   StyledCheckbox,
   RODOContainer,
-  RODO,
-  RODOLink,
+  RODOText,
+  HighlightedRODOText,
   ZIPCode,
 } from './ContactForm.styles';
 import RenderSubmitButton from './RenderSubmitButton';
@@ -69,13 +70,9 @@ export default function ContactForm({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
-  const [showTooltip, setShowTooltip] = useState(false);
-
   const disableInputs = !(
     formStatus === FORM_SENDING_STATUS.initial || formStatus === FORM_SENDING_STATUS.error
   );
-
-  const toggleShowTooltip = (show) => setShowTooltip(show);
 
   const handleInputChange = ({ target, target: { name } }) => {
     const value = name === 'hasAgreedToTerms' ? target.checked : target.value;
@@ -105,7 +102,7 @@ export default function ContactForm({
       (formStatus === FORM_SENDING_STATUS.initial || formStatus === FORM_SENDING_STATUS.error) &&
       isFormValid()
     ) {
-      sendEmailMockup(formValues, changeFormStatus, FORM_SENDING_STATUS);
+      sendEmail(formValues, changeFormStatus, FORM_SENDING_STATUS);
     } else if (formStatus === FORM_SENDING_STATUS.success) {
       dispatch(changeFormSendingStatus(FORM_SENDING_STATUS.initial));
 
@@ -115,7 +112,7 @@ export default function ContactForm({
     }
   };
 
-  const Body = convertRichTextToReactComponent(ParagraphBody, text);
+  const Body = convertRichTextToReactComponent(ContactFormDescription, text);
 
   return (
     <ContactFormContainer className={className} id="contact-form" isInModal={isInModal}>
@@ -123,14 +120,14 @@ export default function ContactForm({
         {isInModal && <CloseButton icon={<XIcon />} onClick={closeModal} />}
 
         <TopSection>
-          <Header3>{title}</Header3>
+          <ContactFormTitle>{title}</ContactFormTitle>
           {Body}
         </TopSection>
 
         <Form onSubmit={handleSubmit}>
           <InputRow spaceBetween>
-            <label htmlFor="firstName">
-              <ParagraphSmall>Imię</ParagraphSmall>
+            <ContactFormLabel htmlFor="firstName">
+              <ContactFormLabelParagraph>Imię</ContactFormLabelParagraph>
               <NameInput
                 name="firstName"
                 value={formValues.firstName || ''}
@@ -142,9 +139,9 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.firstName.message}
               />
-            </label>
-            <label htmlFor="lastName">
-              <ParagraphSmall>Nazwisko</ParagraphSmall>
+            </ContactFormLabel>
+            <ContactFormLabel htmlFor="lastName">
+              <ContactFormLabelParagraph>Nazwisko</ContactFormLabelParagraph>
               <NameInput
                 name="lastName"
                 value={formValues.lastName || ''}
@@ -156,12 +153,12 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.lastName.message}
               />
-            </label>
+            </ContactFormLabel>
           </InputRow>
 
           <InputRow>
-            <label htmlFor="email">
-              <ParagraphSmall>Adres email</ParagraphSmall>
+            <ContactFormLabel htmlFor="email">
+              <ContactFormLabelParagraph>Adres email</ContactFormLabelParagraph>
               <FullWidthInput
                 name="email"
                 value={formValues.email || ''}
@@ -173,12 +170,12 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.email.message}
               />
-            </label>
+            </ContactFormLabel>
           </InputRow>
 
           <InputRow>
-            <label htmlFor="title">
-              <ParagraphSmall>Temat</ParagraphSmall>
+            <ContactFormLabel htmlFor="title">
+              <ContactFormLabelParagraph>Temat</ContactFormLabelParagraph>
               <FullWidthInput
                 name="title"
                 value={formValues.title || ''}
@@ -190,12 +187,12 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.title.message}
               />
-            </label>
+            </ContactFormLabel>
           </InputRow>
 
           <InputRow>
-            <label htmlFor="content">
-              <ParagraphSmall>Treść</ParagraphSmall>
+            <ContactFormLabel htmlFor="content">
+              <ContactFormLabelParagraph>Treść</ContactFormLabelParagraph>
               <ContentInput
                 name="content"
                 value={formValues.content || ''}
@@ -206,7 +203,7 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.content.message}
               />
-            </label>
+            </ContactFormLabel>
           </InputRow>
 
           <InputRow isTerms>
@@ -218,21 +215,14 @@ export default function ContactForm({
               disabled={disableInputs}
             />
             <RODOContainer>
-              {!isMobile && <Tooltip tooltipText={tooltipText} show={showTooltip} />}
-              <RODO>
+              <RODOText>
                 Zapoznałem się z{' '}
-                <Link href="/terms" passHref>
-                  <RODOLink
-                    href
-                    target="_blank"
-                    rel="noreferrer"
-                    onMouseEnter={() => toggleShowTooltip(true)}
-                    onMouseLeave={() => toggleShowTooltip(false)}
-                  >
+                <Tooltip tooltipContent={tooltipText}>
+                  <HighlightedRODOText>
                     informacją o administratorze i przetwarzaniu danych.
-                  </RODOLink>
-                </Link>
-              </RODO>
+                  </HighlightedRODOText>
+                </Tooltip>
+              </RODOText>
             </RODOContainer>
           </InputRow>
           <ZIPCode

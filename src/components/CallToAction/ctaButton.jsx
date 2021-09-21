@@ -9,7 +9,7 @@ export default function CtaButton({ buttonCaption }) {
   const openContactModal = () => dispatch(toggleModal(true));
 
   return (
-    <StyledCtaButton onClick={openContactModal} isBig>
+    <StyledCtaButton onClick={openContactModal} large>
       {buttonCaption}
     </StyledCtaButton>
   );

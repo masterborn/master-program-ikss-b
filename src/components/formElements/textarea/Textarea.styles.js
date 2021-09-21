@@ -4,11 +4,9 @@ import ErrorIcon from '../misc/icon/ErrorIcon';
 export const TextareaContainer = styled.div`
   position: relative;
 `;
-export const StyledTextarea = styled.textarea`
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 12px;
-  padding-right: 20px;
+export const StyledTextarea = styled.textarea(
+  ({ theme: { color }, isValid, isInvalid }) => `
+  padding: 1.0rem 2.0rem 1.0rem 1.2rem;
 
   box-sizing: border-box;
 
@@ -18,34 +16,34 @@ export const StyledTextarea = styled.textarea`
   resize: none;
 
   outline: none;
-  border: 1.5px solid
-    ${(props) => {
-      if (props.isInvalid) return props.theme.color.misc.errorRed;
-      if (props.isValid) return props.theme.color.misc.successGreen;
-
-      return props.theme.color.steelTints.steel30;
-    }};
+  
+  border-width: 1..5rem;
+  border-style: solid;
+  border-color: ${color.steelTints.steel30};
+  border-color: ${isValid && color.misc.successGreen};
+  border-color: ${isInvalid && color.misc.errorRed};
   border-radius: 4px;
 
-  font-size: 14px;
+  font-size: 1.4rem;
 
-  color: ${(props) => props.theme.color.steel};
+  color: ${color.steel};
 
   &::placeholder {
-    color: ${(props) => props.theme.color.steelTints.steel60};
+    color: ${color.steelTints.steel60};
   }
 
   &:focus {
-    border-color: ${(props) => !props.isInvalid && props.theme.color.ikssBlue};
-    color: ${(props) => props.theme.color.steel};
+    border-color: ${color.ikssBlue};
+    color: ${color.steel};
   }
   &:disabled {
-    border-color: ${(props) => props.theme.color.steelTints.steel40};
-    background-color: ${(props) => props.theme.color.blueTints.blue05};
+    border-color: ${color.steelTints.steel40};
+    background-color: ${color.blueTints.blue05};
   }
-`;
+`,
+);
 export const StyledErrorIcon = styled(ErrorIcon)`
   position: absolute;
   bottom: 0;
-  right: -35px;
+  right: -3.5rem;
 `;

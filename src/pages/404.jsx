@@ -31,22 +31,22 @@ export async function getStaticProps() {
 
 export default function Custom404({ custom404Data: { common } }) {
   const {
-    'social-facebook': socialFb,
-    'social-linkedin': socialIn,
-    'social-instagram': socialIg,
-    'social-youtube': socialYt,
-    'contact-form-text': contactFormText,
-    'contact-form-tooltip': tooltipText,
-    'footer-text': footerText,
+    socialFacebook,
+    socialLinkedin,
+    socialInstagram,
+    socialYoutube,
+    contactFormText,
+    contactFormTooltip,
+    footerText,
   } = common;
-  const socials = { socialFb, socialIn, socialIg, socialYt };
+  const socials = { socialFacebook, socialLinkedin, socialInstagram, socialYoutube };
 
   return (
     <Layout
       socials={socials}
       footerText={footerText}
       contactFormText={contactFormText}
-      tooltipText={tooltipText}
+      tooltipText={contactFormTooltip}
     >
       <ErrorPageContainer>
         <IKKSContainer>
@@ -69,13 +69,13 @@ export default function Custom404({ custom404Data: { common } }) {
 Custom404.propTypes = {
   custom404Data: PropTypes.shape({
     common: PropTypes.shape({
-      'contact-form-text': PropTypes.shape({}),
-      'contact-form-tooltip': PropTypes.shape({}),
-      'social-facebook': PropTypes.shape({}),
-      'social-linkedin': PropTypes.shape({}),
-      'social-instagram': PropTypes.shape({}),
-      'social-youtube': PropTypes.shape({}),
-      'footer-text': PropTypes.shape({}),
+      contactFormText: PropTypes.shape({}),
+      contactFormTooltip: PropTypes.shape({}),
+      socialFacebook: PropTypes.shape({}),
+      socialLinkedin: PropTypes.shape({}),
+      socialInstagram: PropTypes.shape({}),
+      socialYoutube: PropTypes.shape({}),
+      footerText: PropTypes.shape({}),
     }).isRequired,
   }).isRequired,
 };

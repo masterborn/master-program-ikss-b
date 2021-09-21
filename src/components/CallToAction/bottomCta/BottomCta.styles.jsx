@@ -1,39 +1,46 @@
-import { Header3 } from '@root/components/typography/headers';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
+import { Header3, Header4 } from '@root/styles/typography/headers';
+import { ParagraphBody } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
-export const BottomCtaContainer = styled.div`
+export const BottomCtaContainer = styled.div(
+  ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 635px;
+  width: 63.5rem;
   height: auto;
-  margin-bottom: 148px;
+  margin: 14.8rem 0;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     height: auto;
-    margin-bottom: 103px;
+    margin: 10.3rem 0;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 2.4rem;
   }
-`;
+`,
+);
 
-export const BottomCtaHeader = styled(Header3)`
+export const BottomCtaHeader = styled.h3(
+  ({ theme: { medias } }) => `
+  margin-bottom: 3.2rem;
+  ${Header3};
   text-align: center;
-  margin-bottom: 32px;
-  @media (max-width: 550px) {
-    margin-bottom: 16px;
-    font-size: 24px;
-    line-height: 32px;
+  @media ${medias.mobile} {
+    margin-bottom: 1.6rem;
+    ${Header4};
   }
-`;
+`,
+);
 
-export const BottomCtaText = styled(ParagraphBody)`
+export const BottomCtaText = styled.p(
+  ({ theme: { medias } }) => `
+  margin-bottom: 3.2rem;
+  ${ParagraphBody};
   text-align: center;
-  margin-bottom: 32px;
 
-  @media (max-width: 550px) {
-    margin-bottom: 16px;
+  @media ${medias.mobile} {
+    margin-bottom: 1.6rem;
   }
-`;
+`,
+);

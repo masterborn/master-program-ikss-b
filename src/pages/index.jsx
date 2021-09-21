@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
 import ProjectsSection from '@root/components/home/projects/ProjectsSection';
 import PartnersSection from '@root/components/home/partnersList/PartnersSection';
-import TopSection from '../components/home/topSection';
+import sortHomepagePartners from '@root/dataMappers/partners';
+import HomepageHero from '../components/home/hero';
 import ValuesSection from '../components/home/valuesSection';
 import ContactForm from '../components/contactForm';
 
@@ -28,64 +29,70 @@ export async function getStaticProps() {
 }
 
 export default function Homepage({ homepageData: { partners, basicContent, common, projects } }) {
+  const homepageHeroRef = useRef();
+
   const {
-    'homepage-partners-text': partnersText,
-    'homepage-top-section': topSectionContent,
-    'homepage-values': valuesText,
-    'homepage-tile-1': homepageTile1,
-    'homepage-tile-2': homepageTile2,
-    'homepage-tile-3': homepageTile3,
+    homepagePartnersText,
+    homepageTopSection: homepageHeroContent,
+    homepageValues,
+    homepageTile1,
+    homepageTile2,
+    homepageTile3,
   } = basicContent;
   const {
-    'social-facebook': socialFb,
-    'social-linkedin': socialIn,
-    'social-instagram': socialIg,
-    'social-youtube': socialYt,
-    'contact-form-text': contactFormText,
-    'contact-form-tooltip': tooltipText,
-    'footer-text': footerText,
+    socialFacebook,
+    socialLinkedin,
+    socialInstagram,
+    socialYoutube,
+    contactFormText,
+    contactFormTooltip,
+    footerText,
   } = common;
-  const socials = { socialFb, socialIn, socialIg, socialYt };
+  const socials = { socialFacebook, socialLinkedin, socialInstagram, socialYoutube };
   const valuesTiles = [homepageTile1, homepageTile2, homepageTile3];
+  const homepagePartners = sortHomepagePartners(partners);
 
   return (
     <Layout
       socials={socials}
       footerText={footerText}
       contactFormText={contactFormText}
-      tooltipText={tooltipText}
+      tooltipText={contactFormTooltip}
+      homepageHeroRef={homepageHeroRef}
     >
-      <TopSection topSectionContent={topSectionContent} socials={socials} />
-      <ValuesSection valuesText={valuesText} valuesTiles={valuesTiles} />
+      <HomepageHero
+        homepageHeroContent={homepageHeroContent}
+        socials={socials}
+        homepageHeroRef={homepageHeroRef}
+      />
+      <ValuesSection valuesText={homepageValues} valuesTiles={valuesTiles} />
       <ProjectsSection projects={projects} />
-      <PartnersSection partners={partners} partnersText={partnersText} />
-      <ContactForm contactFormText={contactFormText} tooltipText={tooltipText} />
+      <PartnersSection partners={homepagePartners} partnersText={homepagePartnersText} />
+      <ContactForm contactFormText={contactFormText} tooltipText={contactFormTooltip} />
     </Layout>
   );
 }
-
-
 
 Homepage.propTypes = {
   homepageData: PropTypes.shape({
     partners: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     basicContent: PropTypes.shape({
-      'homepage-partners-text': PropTypes.shape({}),
-      'homepage-top-section': PropTypes.shape({}),
-      'homepage-values': PropTypes.shape({}),
-      'homepage-tile-1': PropTypes.shape({}),
-      'homepage-tile-2': PropTypes.shape({}),
-      'homepage-tile-3': PropTypes.shape({}),
+      homepagePartnersText: PropTypes.shape({}),
+      homepageTopSection: PropTypes.shape({}),
+      homepageValues: PropTypes.shape({}),
+      homepageTile1: PropTypes.shape({}),
+      homepageTile2: PropTypes.shape({}),
+      homepageTile3: PropTypes.shape({}),
     }).isRequired,
     projects: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     common: PropTypes.shape({
-      'contact-form-text': PropTypes.shape({}),
-      'contact-form-tooltip': PropTypes.shape({}),
-      'social-facebook': PropTypes.shape({}),
-      'social-linkedin': PropTypes.shape({}),
-      'social-instagram': PropTypes.shape({}),
-      'social-youtube': PropTypes.shape({}),
-      'footer-text': PropTypes.shape({}),
+      contactFormText: PropTypes.shape({}),
+      contactFormTooltip: PropTypes.shape({}),
+      socialFacebook: PropTypes.shape({}),
+      socialLinkedin: PropTypes.shape({}),
+      socialInstagram: PropTypes.shape({}),
+      socialYoutube: PropTypes.shape({}),
+      footerText: PropTypes.shape({}),
     }).isRequired,
   }).isRequired,
 };

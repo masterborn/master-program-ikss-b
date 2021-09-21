@@ -2,13 +2,18 @@ import styled from 'styled-components';
 import IconButton from '@root/components/buttons/misc/IconButton';
 import PrimaryButton from '@root/components/buttons/primaryButton';
 import Socials from '@root/components/icons/SocialsCollection';
+import { ButtonBigText } from '@root/styles/typography/buttonsText';
 
-export const SidebarContainer = styled.div`
-  width: ${(props) => (props.isOpened ? '100%' : '0px')};
+export const SidebarContainer = styled.div(
+  ({ isOpened }) => `
+  width: ${isOpened ? '100%' : '.0rem'};
   height: 100%;
   position: absolute;
-`;
-export const SidebarBackground = styled.button`
+`,
+);
+
+export const SidebarBackground = styled.button(
+  ({ theme: { color } }) => `
   width: 100%;
   height: 100vh;
 
@@ -20,12 +25,14 @@ export const SidebarBackground = styled.button`
 
   border: none;
 
-  background-color: ${(props) => props.theme.color.navy};
+  background-color: ${color.navy};
   opacity: 0.6;
-`;
+`,
+);
 
-export const SidebarPanel = styled.div`
-  width: ${(props) => (props.isOpened ? '300px' : '0px')};
+export const SidebarPanel = styled.div(
+  ({ theme: { color }, isOpened }) => `
+  width: ${isOpened ? '30.0rem' : '.0rem'};
   height: 100vh;
 
   position: absolute;
@@ -36,16 +43,18 @@ export const SidebarPanel = styled.div`
   transition: width 0.15s ease-in;
 
   overflow-x: hidden;
-  border-radius: 16px 0px 0px 0px;
-  background-color: ${(props) => props.theme.color.white};
-`;
+  border-radius: 1.6rem .0rem .0rem .0rem;
+  background-color: ${color.white};
+`,
+);
 
 export const CloseButton = styled(IconButton)`
-  margin: 21px 29px 21px 258px;
+  margin: 2.1rem 2.9rem 2.1rem 25.8rem;
 `;
 
-export const Label = styled.h3`
-  margin: 0 10px;
+export const Label = styled.h3(
+  ({ theme: { color }, isHighlighted }) => `
+  margin: 0 1.0rem;
 
   width: fit-content;
 
@@ -53,53 +62,57 @@ export const Label = styled.h3`
 
   white-space: nowrap;
   text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
+  
+  ${ButtonBigText}
+
   text-decoration: none;
 
-  color: ${(props) => (props.isHighlighted ? props.theme.color.navy : props.theme.color.steel)};
-`;
+  color: ${isHighlighted ? color.navy : color.steel};
+`,
+);
 
 export const LinksContainer = styled.div`
   width: 100%;
-  height: 272px;
+  height: 27.2rem;
 
   display: flex;
   flex-direction: column;
 `;
 
-export const SubpageLink = styled.a`
+export const SubpageLink = styled.a(
+  ({ pathname }) => `
   margin: 0;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 24px;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  padding-left: 2.4rem;
 
   text-decoration: none;
 
-  box-shadow: ${(props) =>
-    props.pathname === 'Strona główna'
+  box-shadow: ${
+    pathname === 'Strona główna'
       ? 'inset 0px 1.5px 0px #EAF5FF, inset 0px -1.5px 0px #EAF5FF'
-      : 'inset 0px -1.5px 0px #eaf5ff'};
+      : 'inset 0px -1.5px 0px #eaf5ff'
+  };
 
   &:hover {
     h3 {
       opacity: 0.73;
     }
   }
-`;
+`,
+);
 
 export const ContactButton = styled(PrimaryButton)`
-  margin-top: 40px;
-  margin-left: 87px;
+  margin-top: 4rem;
+  margin-left: 8.7rem;
   margin-right: auto;
 `;
 
 export const StyledSocials = styled(Socials)`
-  width: 200px;
+  width: 20rem;
 
-  margin-top: 40px;
-  margin-left: 50px;
+  margin-top: 4rem;
+  margin-left: 5rem;
   margin-right: auto;
 
   display: flex;

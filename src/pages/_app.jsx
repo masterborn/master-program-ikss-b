@@ -1,9 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { useRef } from 'react';
 import CustomThemeProvider from '@root/styles/CustomThemeProvider';
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { Hydrate } from 'react-query/hydration';
-import { ReactQueryDevtools } from 'react-query/devtools';
 import PropTypes from 'prop-types';
 import { Provider as ReduxProvider } from 'react-redux';
 import store from '@root/redux/store';
@@ -15,10 +11,6 @@ import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 
 const App = (props) => {
-  const queryClientRef = useRef();
-  if (!queryClientRef.current) {
-    queryClientRef.current = new QueryClient();
-  }
   // eslint-disable-next-line react/prop-types
   const { Component, pageProps } = props;
 
@@ -35,14 +27,9 @@ const App = (props) => {
       </Head>
       <ReduxProvider store={store}>
         <CustomThemeProvider theme={theme}>
-          <QueryClientProvider client={queryClientRef.current}>
-            <Hydrate>
-              <IsMobileProvider>
-                <Component {...pageProps} />
-              </IsMobileProvider>
-            </Hydrate>
-            <ReactQueryDevtools initialIsOpen={false} />
-          </QueryClientProvider>
+          <IsMobileProvider>
+            <Component {...pageProps} />
+          </IsMobileProvider>
           <GlobalStyles />
         </CustomThemeProvider>
       </ReduxProvider>

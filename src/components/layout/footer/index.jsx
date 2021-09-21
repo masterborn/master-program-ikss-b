@@ -18,7 +18,7 @@ import LoveIcon from './LoveIcon';
 
 const MASTERBORN_LINK = 'https://masterborn.com/';
 
-export default function Footer({ socials, footerText, paths, isHomepage }) {
+export default function Footer({ socials, footerText, paths, isOnHomepage }) {
   const { title } = footerText;
 
   const scrollUp = () => {
@@ -27,9 +27,9 @@ export default function Footer({ socials, footerText, paths, isHomepage }) {
 
   return (
     <StyledFooter>
-      {isHomepage && <Filler isHomepage={isHomepage} />}
+      {isOnHomepage && <Filler isOnHomepage={isOnHomepage} />}
       <FooterWrapper>
-        <StyledSrollUpButton isHomepage={isHomepage} onClick={scrollUp} />
+        <StyledSrollUpButton isOnHomepage={isOnHomepage} onClick={scrollUp} />
 
         <Centered>
           <LinksContainer>
@@ -68,5 +68,5 @@ Footer.propTypes = {
       path: PropTypes.string,
     }),
   ).isRequired,
-  isHomepage: PropTypes.bool.isRequired,
+  isOnHomepage: PropTypes.bool.isRequired,
 };

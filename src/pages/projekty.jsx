@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
-import MidCta from '@root/components/CallToAction/midCta/midCta';
 import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
-
+import ProjectsMasonry from '@root/components/cooperation/ProjectsMasonry';
+import TopSection from '@root/components/topSection/TopSection';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
@@ -13,8 +13,9 @@ export async function getStaticProps() {
 
   const {
     basicContent: { projects: basicContent, common },
+    projects,
   } = pagesData;
-  const projectsData = { basicContent, common };
+  const projectsData = { basicContent, common, projects };
 
   return {
     props: {
@@ -23,53 +24,55 @@ export async function getStaticProps() {
   };
 }
 
-export default function Projects({ projectsData: { basicContent, common } }) {
+export default function Projects({ projectsData: { basicContent, projects, common } }) {
   const {
-    'projects-bottom-cta-text': bottomCtaContent,
-    'projects-middle-cta-text': midCtaContent,
+    projectsTopSection,
+    projectsBottomCtaText: bottomCtaContent,
+    projectsMiddleCtaText: midCtaContent,
   } = basicContent;
 
   const {
-    'social-facebook': socialFb,
-    'social-linkedin': socialIn,
-    'social-instagram': socialIg,
-    'social-youtube': socialYt,
-    'contact-form-text': contactFormText,
-    'contact-form-tooltip': tooltipText,
-    'footer-text': footerText,
+    socialFacebook,
+    socialLinkedin,
+    socialInstagram,
+    socialYoutube,
+    contactFormText,
+    contactFormTooltip,
+    footerText,
   } = common;
-  const socials = { socialFb, socialIn, socialIg, socialYt };
+  const socials = { socialFacebook, socialLinkedin, socialInstagram, socialYoutube };
 
   return (
     <Layout
       socials={socials}
       footerText={footerText}
       contactFormText={contactFormText}
-      tooltipText={tooltipText}
+      tooltipText={contactFormTooltip}
     >
-      <MidCta midCtaContent={midCtaContent} />
+      <TopSection topSectionContent={projectsTopSection} sectionId="projekty" />
+
+      <ProjectsMasonry midCtaContent={midCtaContent} projectsData={projects} />
       <BottomCta bottomCtaContent={bottomCtaContent} />
     </Layout>
   );
 }
 
-
-
 Projects.propTypes = {
   projectsData: PropTypes.shape({
     common: PropTypes.shape({
-      'contact-form-text': PropTypes.shape({}),
-      'contact-form-tooltip': PropTypes.shape({}),
-      'social-facebook': PropTypes.shape({}),
-      'social-linkedin': PropTypes.shape({}),
-      'social-instagram': PropTypes.shape({}),
-      'social-youtube': PropTypes.shape({}),
-      'footer-text': PropTypes.shape({}),
-    }),
+      contactFormText: PropTypes.shape({}),
+      contactFormTooltip: PropTypes.shape({}),
+      socialFacebook: PropTypes.shape({}),
+      socialLinkedin: PropTypes.shape({}),
+      socialInstagram: PropTypes.shape({}),
+      socialYoutube: PropTypes.shape({}),
+      footerText: PropTypes.shape({}),
+    }).isRequired,
     basicContent: PropTypes.shape({
-      'projects-top-section': PropTypes.shape({}),
-      'projects-bottom-cta-text': PropTypes.shape({}),
-      'projects-middle-cta-text': PropTypes.shape({}),
+      projectsBottomCtaText: PropTypes.shape({}),
+      projectsMiddleCtaText: PropTypes.shape({}),
+      projectsTopSection: PropTypes.shape({}),
     }),
+    projects: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
 };

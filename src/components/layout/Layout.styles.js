@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 
-export const StyledLayout = styled.div`
+export const StyledLayout = styled.div(
+  ({ theme: { medias } }) => `
   width: 100%;
-  min-width: 1440px;
+  min-width: 144.0rem;
   margin: 0 auto;
 
-  @media (max-width: 550px) {
-    min-width: 300px;
+  @media ${medias.mobile} {
+    min-width: 30.0rem;
     width: 100%;
   }
 
   #main {
     width: 100%;
-    max-width: 1440px;
+    max-width: 144.0rem;
     margin: 0 auto;
     position: relative;
 
@@ -20,7 +21,8 @@ export const StyledLayout = styled.div`
     flex-direction: column;
     align-items: center;
   }
-`;
+`,
+);
 
 export const PageWrapper = styled.div`
   width: 100%;
@@ -33,7 +35,7 @@ export const PageContentWrapper = styled.div`
 
 export const TopBackgroundGradient = styled.div`
   width: 100%;
-  height: 464px;
+  height: 46.4rem;
 
   position: absolute;
   z-index: -1;
@@ -41,17 +43,18 @@ export const TopBackgroundGradient = styled.div`
   background: linear-gradient(180deg, #f4faff 0%, rgba(255, 255, 255, 0) 100%);
 `;
 
-export const BottomBackgroundGradient = styled.div`
+export const BottomBackgroundGradient = styled.div(
+  ({ theme: { medias }, isOnHomepage }) => `
   width: 100%;
-  height: 994px;
+  height: 99.4rem;
 
   position: absolute;
-  bottom: ${(props) => (props.isHomepage ? '324px' : '0')};
+  bottom: ${isOnHomepage ? '32.4rem' : '0'};
   z-index: -1;
 
   background: linear-gradient(0deg, #f4faff 0%, rgba(255, 255, 255, 0) 100%);
-  @media (max-width: 550px) {
-    height: 770px;
-    bottom: 206px;
-  }
-`;
+  @media ${medias.mobile} {
+    bottom: ${isOnHomepage ? '29.6rem' : '0'};
+
+`,
+);

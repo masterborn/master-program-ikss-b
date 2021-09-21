@@ -1,209 +1,244 @@
 import styled from 'styled-components';
+import { Header3, Header5 } from '@root/styles/typography/headers';
+import { ButtonBigText, ButtonSmallText } from '@root/styles/typography/buttonsText';
 import IconButton from '../buttons/misc/IconButton';
 import Input from '../formElements/input';
-import { ParagraphSmall } from '../typography/paragraphs';
+import { ParagraphBody, ParagraphSmall } from '../../styles/typography/paragraphs';
 import PrimaryButton from '../buttons/primaryButton';
 import TextArea from '../formElements/textarea';
 import Checkbox from '../formElements/checkbox';
 import { SuccessIcon, ErrorIcon } from '../icons/misc';
 
-export const ContactFormContainer = styled.div`
-  width: 748px;
+export const ContactFormContainer = styled.div(
+  ({ theme: { medias, color }, isInModal }) => `
+  width: 74.8rem;
   height: fit-content;
 
-  margin-top: ${({ isInModal }) => !isInModal && '180px'};
+  margin-top: ${!isInModal && '18.0rem'};
 
-  background-color: ${({ theme: { color } }) => color.white};
-  box-shadow: 3.38443px 55.8976px 80px rgba(97, 121, 139, 0.07),
-    1.71337px 28.2982px 34.875px rgba(97, 121, 139, 0.04725),
-    0.676885px 11.1795px 13px rgba(97, 121, 139, 0.035),
-    0.148069px 2.44552px 4.625px rgba(97, 121, 139, 0.02275);
-  border-radius: 16px;
+  background-color: ${color.white};
+  box-shadow: 3.38443rem 5.58976rem 8.0rem rgba(97, 121, 139, 0.07),
+    1.71337rem 2.82982rem 3.4875rem rgba(97, 121, 139, 0.04725),
+    .0676885rem 1.11795rem 1.3rem rgba(97, 121, 139, 0.035),
+    .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
+  border-radius: 1.6rem;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 80%;
-    min-width: 300px;
-    margin-top: ${({ isInModal }) => !isInModal && '46px'};
+    min-width: 30.0rem;
+    margin-top: ${!isInModal && '4.6rem'};
+    margin-bottom: 9rem;
+
   }
 
   @media (max-width: 420px) {
     width: 80%;
-    max-width: 337px;
-    min-width: 278px;
+    max-width: 33.7rem;
+    min-width: 27.8rem;
   }
-`;
+`,
+);
 
-export const CloseButton = styled(IconButton)`
+export const CloseButton = styled(IconButton)(
+  ({ theme: { medias } }) => `
   position: absolute;
-  top: 37px;
-  right: 37px;
+  top: 3.7rem;
+  right: 3.7rem;
 
-  @media (max-width: 550px) {
-    top: 20px;
-    right: 24px;
+  @media ${medias.mobile} {
+    top: 2.0rem;
+    right: 2.4rem;
   }
-`;
+`,
+);
 
-export const ContactFormContent = styled.div`
+export const ContactFormContent = styled.div(
+  ({ theme: { medias }, isInModal }) => `
   width: 100%;
   height: 100%;
 
   display: flex;
   flex-direction: column;
 
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
 
   align-items: center;
 
   overflow: auto;
 
-  @media (max-width: 550px) {
-    padding-top: ${({ isInModal }) => (isInModal ? '56px' : '32px')};
-    padding-bottom: 32px;
+  @media ${medias.mobile} {
+    padding-top: ${isInModal ? '5.6rem' : '3.2rem'};
+    padding-bottom: 3.2rem;
   }
-`;
+`,
+);
 
-export const TopSection = styled.div`
-  width: 588px;
+export const TopSection = styled.div(
+  ({ theme: { medias } }) => `
+  width: 58.8rem;
   text-align: center;
-  h3 {
-    color: ${({ theme: { color } }) => color.navy};
-  }
-  p {
-    margin-top: 25px;
-    color: ${({ theme: { color } }) => color.steel};
-  }
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 80%;
-    h3 {
-      font-size: 18px;
-      line-height: 24px;
-    }
-    p {
-      margin-top: 24px;
-      font-size: 14px;
-      line-height: 28px;
-    }
   }
-`;
+`,
+);
 
-export const Form = styled.form`
-  width: 588px;
-  margin-top: 37px;
-
-  label > p {
-    color: ${({ theme: { color } }) => color.navy};
+export const ContactFormTitle = styled.h3(
+  ({ theme: { medias } }) => `
+  ${Header3};
+  @media ${medias.mobile} {
+    ${Header5};
   }
+`,
+);
 
-  @media (max-width: 550px) {
+export const ContactFormDescription = styled.p(
+  ({ theme: { medias } }) => `
+  ${ParagraphBody};
+  @media ${medias.mobile} {
+    ${ParagraphSmall};
+  }
+`,
+);
+
+export const Form = styled.form(
+  ({ theme: { medias } }) => `
+  width: 58.8rem;
+  margin-top: 3.7rem;
+
+  @media ${medias.mobile} {
     width: 80%;
-    margin-top: 24px;
+    margin-top: 2.4rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-`;
+`,
+);
 
-export const InputRow = styled.div`
+export const ContactFormLabel = styled.label(
+  ({ theme: { medias } }) => `
+  margin-top: 1.5rem;
+
+  @media ${medias.mobile}{
+    margin-top: 1.2rem;
+  }
+`,
+);
+
+export const ContactFormLabelParagraph = styled.p(
+  ({ theme: { color } }) => `
+  ${ParagraphSmall};
+  color: ${color.navy}
+`,
+);
+
+export const InputRow = styled.div(
+  ({ theme: { medias }, spaceBetween, isTerms }) => `
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: ${({ spaceBetween }) => spaceBetween && 'space-between'};
+  justify-content: ${spaceBetween && 'space-between'};
 
-  label {
-    margin-top: 15px;
+  margin-top: ${isTerms && '1.2rem'};
+
+  @media ${medias.mobile} {
+    margin-top: ${isTerms && '3.0rem'};
+    flex-direction: ${!isTerms && 'column'};
   }
+`,
+);
 
-  @media (max-width: 550px) {
-    margin-top: ${({ isTerms }) => isTerms && '12px'};
-    flex-direction: ${({ isTerms }) => !isTerms && 'column'};
-
-    label {
-      margin-top: 12px;
-    }
-  }
-`;
-
-export const NameInput = styled(Input)`
-  width: 282px;
+export const NameInput = styled(Input)(
+  ({ theme: { medias } }) => `
+  width: 28.2rem;
   margin-right: 0;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 100%;
   }
-`;
-export const FullWidthInput = styled(Input)`
-  width: 588px;
+`,
+);
+export const FullWidthInput = styled(Input)(
+  ({ theme: { medias } }) => `
+  width: 58.8rem;
   margin-right: 0;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 100%;
   }
-`;
-export const ContentInput = styled(TextArea)`
-  width: 588px;
-  height: 221px;
+`,
+);
+export const ContentInput = styled(TextArea)(
+  ({ theme: { medias } }) => `
+  width: 58.8rem;
+  height: 22.1rem;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 89%;
-    height: 125px;
+    height: 12.5rem;
   }
-`;
+`,
+);
 export const StyledCheckbox = styled(Checkbox)`
-  margin-right: 16px;
+  margin-right: 1.6rem;
 `;
 
 export const RODOContainer = styled.div`
-  width: 100%;
+  position: relative;
 `;
+export const RODOText = styled.div(
+  ({ theme: { medias, color } }) => `
+  ${ParagraphSmall};
+  color: ${color.steelTints.steel70};
 
-export const RODO = styled(ParagraphSmall)`
-  color: ${({ theme: { color } }) => color.steelTints.steel70};
-
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 100%;
 
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
-`;
-export const RODOLink = styled.a`
+`,
+);
+export const HighlightedRODOText = styled.span`
   color: inherit;
-  cursor: pointer;
+  cursor: help;
   font-weight: 700;
-  text-decoration: underline;
 `;
 
-export const SubmitButton = styled(PrimaryButton)`
-  width: 187px;
-  height: 48px;
+export const SubmitButton = styled(PrimaryButton)(
+  ({ theme: { medias } }) => `
+  width: 18.7rem;
+  height: 4.8rem;
 
-  margin-top: 37px;
+  margin-top: 3.7rem;
   margin-left: auto;
 
-  @media (max-width: 550px) {
-    width: 154px;
-    height: 36px;
+  @media ${medias.mobile} {
+    width: 15.4rem;
+    height: 3.6rem;
 
     margin-right: auto;
   }
-`;
+`,
+);
 
 export const StyledSuccessIcon = styled(SuccessIcon)`
-  margin-right: 10px;
+  margin-right: 1rem;
 `;
 export const StyledErrorIcon = styled(ErrorIcon)`
-  margin-right: 10px;
+  margin-right: 1rem;
 `;
 
-const StatusButton = styled.button`
+const StatusButton = styled.button(
+  ({ theme: { medias, color } }) => `
   width: 100%;
-  height: 48px;
+  height: 4.8rem;
 
-  margin-top: 37px;
+  margin-top: 3.7rem;
 
   display: flex;
   flex-direction: row;
@@ -211,32 +246,33 @@ const StatusButton = styled.button`
   align-items: center;
 
   border: none;
-  border-radius: 26px;
+  border-radius: 2.6rem;
 
   cursor: pointer;
+  ${ButtonBigText}
+  color: ${color.white};
 
-  color: ${({ theme: { color } }) => color.white};
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-
-  @media (max-width: 550px) {
-    height: 36px;
-    font-size: 14px;
-    line-height: 18px;
+  @media ${medias.mobile} {
+    height: 3.6rem;
+    ${ButtonSmallText}
     svg {
-      width: 20px;
-      height: 20px;
+      width: 2.0rem;
+      height: 2.0rem;
     }
   }
-`;
+`,
+);
 
-export const SuccessButton = styled(StatusButton)`
-  background-color: ${({ theme: { color } }) => color.misc.successGreen};
-`;
-export const ErrorButton = styled(StatusButton)`
-  background-color: ${({ theme: { color } }) => color.misc.errorRed};
-`;
+export const SuccessButton = styled(StatusButton)(
+  ({ theme: { color } }) => `
+  background-color: ${color.misc.successGreen};
+`,
+);
+export const ErrorButton = styled(StatusButton)(
+  ({ theme: { color } }) => `
+  background-color: ${color.misc.errorRed};
+`,
+);
 
 export const ZIPCode = styled.input`
   position: absolute;

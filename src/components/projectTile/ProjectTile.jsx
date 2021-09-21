@@ -14,20 +14,20 @@ import {
   ProjectMediaContainer,
 } from './ProjectTile.styles';
 
-export default function ProjectTile({ project }) {
-  const { title, date, image, video_url: videoUrl, linkUrl, description } = project;
+export default function ProjectTile({ project, isOnGrid }) {
+  const { title, date, image, videoUrl, linkUrl, description } = project;
   const linkIsFromFacebook = /^(https:\/\/)?(www.)?f(b||acebook)\.com\/.*/.test(linkUrl);
   return (
-    <ProjectArticle>
+    <ProjectArticle isOnGrid={isOnGrid}>
       <ProjectMediaContainer>
         {videoUrl ? (
-          <ProjectVideo url={videoUrl} />
+          <ProjectVideo isOnGrid={isOnGrid} url={videoUrl} />
         ) : (
           <ProjectImage alt={image.title} src={`https:\\${image.url}`} />
         )}
       </ProjectMediaContainer>
-      <ProjectSummary>
-        <ProjectHeader>
+      <ProjectSummary isOnGrid={isOnGrid}>
+        <ProjectHeader isOnGrid={isOnGrid}>
           <ProjectTitle>{title}</ProjectTitle>
           <ProjectDate>{date}</ProjectDate>
         </ProjectHeader>
@@ -45,6 +45,7 @@ export default function ProjectTile({ project }) {
 ProjectTile.propTypes = {
   project: PropTypes.shape({
     title: PropTypes.string.isRequired,
+    videoUrl: PropTypes.string,
     date: PropTypes.string.isRequired,
     image: PropTypes.shape({
       url: PropTypes.string,
@@ -60,4 +61,9 @@ ProjectTile.propTypes = {
       nodeType: PropTypes.string,
     }),
   }).isRequired,
+  isOnGrid: PropTypes.bool,
+};
+
+ProjectTile.defaultProps = {
+  isOnGrid: false,
 };

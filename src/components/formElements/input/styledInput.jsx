@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-const styledInput = styled.input`
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 12px;
-  ${(props) => (props.withIcon ? 'padding-right: 38px;' : 'padding-right: 12px;')}
+const styledInput = styled.input(
+  ({ theme: { color }, withIcon, isValid, isInvalid }) => `
+  padding: 1.0rem 1.2rem;
+  padding-right: ${withIcon && 'padding-right: 3.8rem'};
 
   box-sizing: border-box;
 
@@ -12,31 +11,31 @@ const styledInput = styled.input`
   width: 100%;
 
   outline: none;
-  border: 1.5px solid
-    ${(props) => {
-      if (props.isInvalid) return props.theme.color.misc.errorRed;
-      if (props.isValid) return props.theme.color.misc.successGreen;
 
-      return props.theme.color.steelTints.steel30;
-    }};
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: ${color.steelTints.steel30};
+  border-color: ${isValid && color.misc.successGreen};
+  border-color: ${isInvalid && color.misc.errorRed};
+
   border-radius: 4px;
 
-  font-size: 14px;
+  font-size: 1.4rem;
 
-  color: ${(props) => props.theme.color.steel};
+  color: ${color.steel};
 
   &::placeholder {
-    color: ${(props) => props.theme.color.steelTints.steel60};
+    color: ${color.steelTints.steel60};
   }
 
   &:focus {
-    border-color: ${(props) => !props.isInvalid && props.theme.color.ikssBlue};
-    color: ${(props) => props.theme.color.steel};
+    border-color: ${color.ikssBlue};
   }
   &:disabled {
-    border-color: ${(props) => props.theme.color.steelTints.steel40};
-    background-color: ${(props) => props.theme.color.blueTints.blue05};
+    border-color: ${color.steelTints.steel40};
+    background-color: ${color.blueTints.blue05};
   }
-`;
+`,
+);
 
 export default styledInput;
