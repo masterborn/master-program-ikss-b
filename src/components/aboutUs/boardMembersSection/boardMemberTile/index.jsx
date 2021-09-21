@@ -43,7 +43,7 @@ export default function BoardMemberTile({ data, isMobile }) {
       )}
       <StyledBoardMemberTile isTileOpened={isTileOpened}>
         <BoardMemberTileAvatar>
-          {imageUrl && <Image src={`https://${imageUrl}`} width={164} height={164} alt={name} />}
+          {imageUrl && <Image src={`https:${imageUrl}`} width={164} height={164} alt={name} />}
         </BoardMemberTileAvatar>
         <NameText>{name}</NameText>
         <RoleText>{role}</RoleText>
