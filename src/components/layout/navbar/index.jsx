@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { toggleModal } from '@redux/actions/modalActions';
 import { HamburgerMenuIcon } from '@icons/misc';
+import handleContactButton from '@generic/misc/contactFormActions';
 import {
   StyledNavbar,
   FooterWrapper,
@@ -16,7 +17,6 @@ import {
   ContactButton,
   HamburgerMenu,
 } from './Navbar.styles';
-import handleContactFormButton from './contactFormButton';
 import Sidebar from './sidebar';
 
 // Form on homepage must have 'contact-form' id
@@ -29,7 +29,7 @@ export default function Navbar({ socials, paths, currPathname }) {
   const isMobile = useSelector((state) => state.isMobile);
 
   const handleClickContactButton = () =>
-    handleContactFormButton(currPathname, navbarHeight, openContactModal);
+    handleContactButton(currPathname, navbarHeight, openContactModal);
 
   const toggleSidebar = () => setIsSidebarOpened((prevState) => !prevState);
   return (
@@ -48,7 +48,7 @@ export default function Navbar({ socials, paths, currPathname }) {
               handleCloseSidebar={toggleSidebar}
               paths={paths}
               currPathname={currPathname}
-              handleContactFormButton={handleClickContactButton}
+              handleContactButton={handleClickContactButton}
               socialsLinks={socials}
             />
           </>

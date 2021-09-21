@@ -22,14 +22,14 @@ export default function Sidebar({
   handleCloseSidebar,
   paths,
   currPathname,
-  handleContactFormButton,
+  handleContactButton,
   socialsLinks,
 }) {
   const dispatch = useDispatch();
 
   const handleClickContactButton = () => {
     handleCloseSidebar();
-    handleContactFormButton();
+    handleContactButton();
   };
 
   useEffect(() => {
@@ -67,6 +67,6 @@ Sidebar.propTypes = {
   currPathname: PropTypes.string.isRequired,
   isOpened: PropTypes.bool.isRequired,
   handleCloseSidebar: PropTypes.func.isRequired,
-  handleContactFormButton: PropTypes.func.isRequired,
+  handleContactButton: PropTypes.func.isRequired,
   socialsLinks: PropTypes.shape({}).isRequired,
 };
