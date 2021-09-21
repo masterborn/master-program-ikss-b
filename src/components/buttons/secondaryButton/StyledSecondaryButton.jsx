@@ -1,35 +1,34 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { ButtonBigText, ButtonSmallText } from '@root/styles/typography/buttonsText';
 
-const StyledSecondaryButton = styled.button`
+const defaultVariantStyles = css`
+  height: 3.6rem;
+  ${ButtonSmallText};
+  padding: 0.9rem 1.6rem 0.9rem 1.8rem;
+`;
+
+const largeVariantStyles = css`
+  height: 4.8rem;
+  ${ButtonBigText};
+  padding: 1.4rem 2.4rem 1.4rem 2.6rem;
+`;
+
+const StyledSecondaryButton = styled.button(
+  ({ theme: { color }, large }) => `
   display: flex;
   align-items: center;
   justify-content: center;
 
-  ${(props) => {
-    if (props.isBig) {
-      return `
-            height: 48px;
-            font-size: 16px;
-            padding: 0.7em 1.2em 0.7em 1.2em;
-            `;
-    }
-    return `
-        height: 36px;
-        font-size: 14px;
-        padding: 0.5em 0.88em 0.5em 0.88em;
-        `;
-  }}
+  ${large ? largeVariantStyles : defaultVariantStyles};
 
-  font-weight: 700;
-
-  border: 2px solid ${(props) => props.theme.color.navy};
-  border-radius: 2em;
-  color: ${(props) => props.theme.color.navy};
-  background-color: ${(props) => props.theme.color.white};
+  border: 2px solid ${color.navy};
+  border-radius: 2.6rem;
+  color: ${color.navy};
+  background-color: ${color.white};
   & > .icon {
     height: 1em;
-    padding-right: 0.8em;
-    fill: ${(props) => props.theme.color.navy};
+    margin-right: 0.6rem;
+    fill: ${color.navy};
   }
   &:hover {
     border-color: #3c4863;
@@ -55,6 +54,7 @@ const StyledSecondaryButton = styled.button`
       fill: #babec8;
     }
   }
-`;
+`,
+);
 
 export default StyledSecondaryButton;

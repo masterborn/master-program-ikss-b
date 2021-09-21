@@ -1,83 +1,95 @@
-import { Header3 } from '@root/components/typography/headers';
-import { ParagraphBody } from '@root/components/typography/paragraphs';
+import { Header3, Header4 } from '@root/styles/typography/headers';
+import { ParagraphBody, ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
-export const LogosSection = styled.section`
+export const LogosSection = styled.section(
+  ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 1134px;
-  height: 556px;
-  margin-top: 148px;
-  
-  @media (max-width: 550px) {
+  width: 113.4rem;
+  height: auto;
+  margin-top: 14.8rem;
+
+  @media ${medias.mobile} {
     width: 100%;
-    max-width: 550px;
-    padding: 0 26px 0 26px;
+    max-width: 55.0rem;
+    padding: 0 2.6rem 0 2.6rem;
     height: auto;
   } ;
-`;
-export const PartnersHeader = styled(Header3)`
-  margin-bottom: 32px;
-
-  @media (max-width: 500px) {
-    margin-bottom: 16px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-`;
-
-export const PartnersDescription = styled(ParagraphBody)`
+`,
+);
+export const PartnersHeader = styled.h3(
+  ({ theme: { medias } }) => `
+  margin-bottom: 3.2rem;
   text-align: center;
-  width: 635px;
-  height: 64px;
-
-  @media (max-width: 550px) {
-    font-size: 14px;
-    line-height: 28px;
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-    min-height: 112px;
+  
+  ${Header3};
+  @media ${medias.mobile} {
+    ${Header4};
+    margin-bottom: 1.6rem;
   }
-`;
+`,
+);
 
-export const LogosContainer = styled.div`
+export const PartnersDescription = styled.p(
+  ({ theme: { medias } }) => `
+  text-align: center;
+  width: 63.5rem;
+  height: 6.4rem;
+  ${ParagraphBody};
+
+  @media ${medias.mobile} {
+    ${ParagraphSmall};
+    width: 100%;
+    max-width: 55.0rem;
+    height: auto;
+    min-height: 11.2rem;
+  }
+`,
+);
+
+export const LogosContainer = styled.div(
+  ({ theme: { medias } }) => `
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
-  height: 336px;
-  width: 1134px;
-  margin-top: 80px;
+  height: auto;
+  width: 113.4rem;
+  margin-top: 8.0rem;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: 100%;
-    max-width: 550px;
-    margin-top: 32px;
-    min-height: 302px;
+    max-width: 55.0rem;
+    margin-top: 3.2rem;
+    min-height: 30.2rem;
     height: auto;
   }
-`;
-export const Logo = styled.div`
+`,
+);
+
+export const Logo = styled.div(
+  ({ theme: { medias } }) => `
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 226px;
-  height: 112px;
+  width: 22.6rem;
+  height: 11.2rem;
 
-  @media (max-width: 550px) {
+  @media ${medias.mobile} {
     width: calc(100% / 3);
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 3.0rem;
 
     & a,
     img {
       width: 85%;
       height: auto;
-      min-height: 35px;
-      max-height: 40px;
+      min-height: 3.5rem;
+      max-height: 4.0rem;
     }
   } ;
-`;
+`,
+);

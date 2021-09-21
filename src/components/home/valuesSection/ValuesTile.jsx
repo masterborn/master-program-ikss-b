@@ -2,32 +2,43 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
-import { StyledTile, Content, ImageFiller, Title, Paragraph } from './ValuesTile.styles';
+import {
+  StyledValueTile,
+  ValueTileContent,
+  ValueTileImageFiller,
+  ValueTileTitle,
+  ValueTileParagraph,
+} from './ValuesTile.styles';
 
-export default function ValuesTile({ data }) {
+export default function ValuesTile({ className, data, isOnCooperation }) {
   const {
     title,
     text1: richText,
     image1: { url: imageUrl },
   } = data;
-  const Body = convertRichTextToReactComponent(Paragraph, richText);
+
+  if (!imageUrl && !title && !richText) return null;
+
+  const Body = convertRichTextToReactComponent(ValueTileParagraph, richText);
+
   return (
-    <StyledTile>
-      <Content>
+    <StyledValueTile className={className} isOnCooperation={isOnCooperation}>
+      <ValueTileContent isOnCooperation={isOnCooperation}>
         {imageUrl ? (
           <Image src={`https:${imageUrl}`} height={232} width={232} alt={title} />
         ) : (
-          <ImageFiller />
+          <ValueTileImageFiller isOnCooperation={isOnCooperation} />
         )}
 
-        <Title>{title}</Title>
+        <ValueTileTitle>{title}</ValueTileTitle>
         {Body}
-      </Content>
-    </StyledTile>
+      </ValueTileContent>
+    </StyledValueTile>
   );
 }
 
 ValuesTile.propTypes = {
+  className: PropTypes.string,
   data: PropTypes.shape({
     title: PropTypes.string,
     text1: PropTypes.shape({}),
@@ -35,4 +46,10 @@ ValuesTile.propTypes = {
       url: PropTypes.string,
     }),
   }).isRequired,
+  isOnCooperation: PropTypes.bool,
+};
+
+ValuesTile.defaultProps = {
+  className: '',
+  isOnCooperation: false,
 };

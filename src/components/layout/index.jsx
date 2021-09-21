@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
 import { useSelector } from 'react-redux';
-import { StyledLayout, PageWrapper } from './Layout.styles';
+import {
+  StyledLayout,
+  PageWrapper,
+  PageContentWrapper,
+  TopBackgroundGradient,
+  BottomBackgroundGradient,
+} from './Layout.styles';
 import Navbar from './navbar';
 import Footer from './footer';
 import ContactFormModal from '../contactForm/contactModal';
@@ -26,14 +32,29 @@ const paths = [
   },
 ];
 
-export default function Layout({ children, contactFormText, tooltipText }) {
+export default function Layout({
+  children,
+  socials,
+  footerText,
+  contactFormText,
+  tooltipText,
+  homepageHeroRef,
+}) {
   const router = useRouter();
+  const isOnHomepage = router.pathname === '/';
   const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
+
+  const isValidPage = paths.some(({ path }) => path === router.pathname);
 
   return (
     <PageWrapper>
       <StyledLayout>
-        <Navbar paths={paths} currPathname={router.pathname} />
+        <Navbar
+          socials={socials}
+          paths={paths}
+          currPathname={router.pathname}
+          homepageHeroRef={homepageHeroRef}
+        />
         {router.pathname !== '/' && (
           <ContactFormModal
             contactFormText={contactFormText}
@@ -42,9 +63,22 @@ export default function Layout({ children, contactFormText, tooltipText }) {
           />
         )}
 
-        <div id="main">{children}</div>
+        <PageContentWrapper>
+          <TopBackgroundGradient />
 
-        <Footer paths={paths} isHomepage={router.pathname === '/'} />
+          <div id="main">{children}</div>
+
+          {isValidPage && <BottomBackgroundGradient isOnHomepage={isOnHomepage} />}
+        </PageContentWrapper>
+
+        {isValidPage && (
+          <Footer
+            socials={socials}
+            footerText={footerText}
+            paths={paths}
+            isOnHomepage={isOnHomepage}
+          />
+        )}
       </StyledLayout>
     </PageWrapper>
   );
@@ -52,6 +86,13 @@ export default function Layout({ children, contactFormText, tooltipText }) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  socials: PropTypes.shape({}).isRequired,
+  footerText: PropTypes.shape({}).isRequired,
   contactFormText: PropTypes.shape({}).isRequired,
   tooltipText: PropTypes.shape({}).isRequired,
+  homepageHeroRef: PropTypes.shape({}),
+};
+
+Layout.defaultProps = {
+  homepageHeroRef: null,
 };

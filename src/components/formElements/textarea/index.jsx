@@ -1,42 +1,52 @@
-import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TextareaContainer, StyledTextarea, StyledErrorIcon } from './Textarea.styles';
 
-const StyledTextArea = styled.textarea`
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 12px;
-  padding-right: 12px;
+export default function Textarea({
+  className,
+  value,
+  onChange,
+  placeholder,
+  disabled,
+  isValid,
+  isInvalid,
+  errorTooltipText,
+  name,
+}) {
+  return (
+    <TextareaContainer className={className}>
+      {isInvalid && <StyledErrorIcon tooltipText={errorTooltipText} />}
+      <StyledTextarea
+        name={name}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        disabled={disabled}
+        isValid={isValid}
+        isInvalid={isInvalid}
+      />
+    </TextareaContainer>
+  );
+}
 
-  box-sizing: border-box;
+Textarea.propTypes = {
+  className: PropTypes.string,
+  name: PropTypes.string,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+  disabled: PropTypes.bool,
+  isValid: PropTypes.bool,
+  isInvalid: PropTypes.bool,
+  errorTooltipText: PropTypes.string,
+};
 
-  height: 100%;
-  width: 100%;
-
-  outline: none;
-  border: 1.5px solid
-    ${(props) => {
-      if (props.isInvalid) return props.theme.color.misc.errorRed;
-      if (props.isValid) return props.theme.color.misc.successGreen;
-
-      return props.theme.color.steelTints.steel30;
-    }};
-  border-radius: 4px;
-
-  font-size: 14px;
-
-  color: ${(props) => props.theme.color.steel};
-
-  &::placeholder {
-    color: ${(props) => props.theme.color.steelTints.steel60};
-  }
-
-  &:focus {
-    border-color: ${(props) => !props.isInvalid && props.theme.color.ikssBlue};
-    color: ${(props) => props.theme.color.steel};
-  }
-  &:disabled {
-    border-color: ${(props) => props.theme.color.steelTints.steel40};
-    background-color: ${(props) => props.theme.color.blueTints.blue05};
-  }
-`;
-
-export default StyledTextArea;
+Textarea.defaultProps = {
+  className: '',
+  name: '',
+  placeholder: '',
+  disabled: false,
+  isValid: false,
+  isInvalid: false,
+  errorTooltipText: '',
+};

@@ -1,33 +1,55 @@
 import styled from 'styled-components';
-import { Header3 } from '../../typography/headers';
-import { ParagraphBody } from '../../typography/paragraphs';
+import { Header3, Header4 } from '../../../styles/typography/headers';
+import { ParagraphBody } from '../../../styles/typography/paragraphs';
 
-export const StyledValuesSection = styled.section`
-  min-width: 100%;
-  margin-top: 157px;
+export const StyledValuesSection = styled.section(
+  ({ theme: { medias } }) => `
+  width: 100%;
+  margin-top: 15.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+  @media ${medias.mobile}{ 
+    margin-top: 8.0rem;
+    width: 100%;
 
-export const Title = styled(Header3)`
-  color: ${(props) => props.theme.color.navy};
-`;
+  }
+`,
+);
 
-export const Paragraph = styled(ParagraphBody)`
-  width: 551px;
-  margin-top: 32px;
+export const ValuesSectionTitle = styled.h3(
+  ({ theme: { medias, color } }) => `
+  margin: 0 2.4rem;
+  ${Header3};
+  color: ${color.navy};
   text-align: center;
-  color: ${(props) => props.theme.color.steel};
-`;
 
-export const TilesContainer = styled.div`
-  max-width: 1200px;
+  @media ${medias.mobile}{
+    ${Header4};
+  }
+`,
+);
+
+export const ValuesSectionParagraph = styled.p(
+  ({ theme: { medias, color } }) => `
+  width: 55.1rem;
+  margin-top: 3.2rem;
+  padding: 0 2.4rem;
+
+  ${ParagraphBody};
+  text-align: center;
+  color: ${color.steel};
+  @media ${medias.mobile} {
+    width: 100%;
+    margin-top: 2.4rem;
+  }
+`,
+);
+export const ValuesSectionTilesContainer = styled.div`
+  max-width: 120rem;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 `;
-
-export default StyledValuesSection;

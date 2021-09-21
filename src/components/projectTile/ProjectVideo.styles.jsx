@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
-const VideoFrame = styled.iframe`
-  border-radius: 16px 16px 0 0;
+const VideoFrame = styled.iframe(
+  ({ theme: { medias }, isOnGrid }) => `
+  border-radius: 1.6rem 1.6rem 0 0;
   border: none;
-  height: 579px;
+  height: ${isOnGrid ? '37.9rem' : '57.9rem'};
   width: 100%;
-  @media (max-width: 550px) {
-    height: 100%;
+  @media ${medias.mobile} {
+    height: 40vw;
+    min-height: 20.0rem;
   }
-`;
+`,
+);
 
 export default VideoFrame;

@@ -1,11 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+:root {
+  font-size: 62.5%;
+}
+
 html{
   scroll-behavior: smooth;
 }
 body{
-  overflow: ${(props) => props.theme.isModalOpened && 'hidden'};
+  overflow: ${(props) => (props.theme.isModalOpened || props.theme.hideOverflowOnBody) && 'hidden'};
 }
   * {
     -webkit-font-smoothing: antialiased;

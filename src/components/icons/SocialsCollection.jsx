@@ -2,38 +2,48 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FbCircleIcon, IgCircleIcon, YtCircleIcon, InCircleIcon } from './socialCircle';
 import { FbIcon, IgIcon, YtIcon, InIcon } from './socialRegular';
-import { Header5 } from '../typography/headers';
+import SocialsLabel from './SocialsCollection.styles';
 
 export default function Socials({ className, socialsLinks, showRegular, showLabel }) {
   const {
-    socialFb: { title: facebookTitle, linkUrl: facebookUrl, linkCaption: facebookLinkCaption },
-    socialIg: { title: instagramTitle, linkUrl: instagramUrl, linkCaption: instagramLinkCaption },
-    socialYt: { title: youtubeTitle, linkUrl: youtubeUrl, linkCaption: youtubeLinkCaption },
-    socialIn: { title: linkedinTitle, linkUrl: linkedinUrl, linkCaption: linkedinLinkCaption },
+    socialFacebook: {
+      title: facebookTitle,
+      linkUrl: facebookUrl,
+      linkCaption: facebookLinkCaption,
+    },
+    socialInstagram: {
+      title: instagramTitle,
+      linkUrl: instagramUrl,
+      linkCaption: instagramLinkCaption,
+    },
+    socialYoutube: { title: youtubeTitle, linkUrl: youtubeUrl, linkCaption: youtubeLinkCaption },
+    socialLinkedin: {
+      title: linkedinTitle,
+      linkUrl: linkedinUrl,
+      linkCaption: linkedinLinkCaption,
+    },
   } = socialsLinks;
 
   return (
-    <div>
-      <div className={className}>
-        <a href={facebookUrl} alt={facebookLinkCaption || facebookTitle}>
-          {showRegular ? <FbIcon /> : <FbCircleIcon />}
-          {showLabel && <Header5>Facebook</Header5>}
-        </a>
+    <div className={className}>
+      <a href={facebookUrl} alt={facebookLinkCaption || facebookTitle}>
+        {showRegular ? <FbIcon /> : <FbCircleIcon />}
+        {showLabel && <SocialsLabel>Facebook</SocialsLabel>}
+      </a>
 
-        <a href={instagramUrl} alt={instagramLinkCaption || instagramTitle}>
-          {showRegular ? <IgIcon /> : <IgCircleIcon />}
-          {showLabel && <Header5>Instagram</Header5>}
-        </a>
-        <a href={youtubeUrl} alt={youtubeLinkCaption || youtubeTitle}>
-          {showRegular ? <YtIcon /> : <YtCircleIcon />}
-          {showLabel && <Header5>YouTube</Header5>}
-        </a>
+      <a href={instagramUrl} alt={instagramLinkCaption || instagramTitle}>
+        {showRegular ? <IgIcon /> : <IgCircleIcon />}
+        {showLabel && <SocialsLabel>Instagram</SocialsLabel>}
+      </a>
+      <a href={youtubeUrl} alt={youtubeLinkCaption || youtubeTitle}>
+        {showRegular ? <YtIcon /> : <YtCircleIcon />}
+        {showLabel && <SocialsLabel>YouTube</SocialsLabel>}
+      </a>
 
-        <a href={linkedinUrl} alt={linkedinLinkCaption || linkedinTitle}>
-          {showRegular ? <InIcon /> : <InCircleIcon />}
-          {showLabel && <Header5>LinkedIn</Header5>}
-        </a>
-      </div>
+      <a href={linkedinUrl} alt={linkedinLinkCaption || linkedinTitle}>
+        {showRegular ? <InIcon /> : <InCircleIcon />}
+        {showLabel && <SocialsLabel>LinkedIn</SocialsLabel>}
+      </a>
     </div>
   );
 }
@@ -41,22 +51,22 @@ export default function Socials({ className, socialsLinks, showRegular, showLabe
 Socials.propTypes = {
   className: PropTypes.string,
   socialsLinks: PropTypes.shape({
-    socialFb: PropTypes.shape({
+    socialFacebook: PropTypes.shape({
       title: PropTypes.string,
       linkUrl: PropTypes.string,
       linkCaption: PropTypes.string,
     }),
-    socialIg: PropTypes.shape({
+    socialInstagram: PropTypes.shape({
       title: PropTypes.string,
       linkUrl: PropTypes.string,
       linkCaption: PropTypes.string,
     }),
-    socialYt: PropTypes.shape({
+    socialYoutube: PropTypes.shape({
       title: PropTypes.string,
       linkUrl: PropTypes.string,
       linkCaption: PropTypes.string,
     }),
-    socialIn: PropTypes.shape({
+    socialLinkedin: PropTypes.shape({
       title: PropTypes.string,
       linkUrl: PropTypes.string,
       linkCaption: PropTypes.string,

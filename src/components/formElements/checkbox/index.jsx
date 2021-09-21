@@ -1,30 +1,32 @@
 import styled from 'styled-components';
 
-const styledCheckbox = styled.input.attrs({ type: 'checkbox' })`
+const StyledCheckbox = styled.input.attrs({ type: 'checkbox' })(
+  ({ theme: { color }, isInvalid }) => `
   padding-left: 2px;
   padding-top: 4px;
-  padding-bottom: 0.25px;
+  padding-bottom: .025rem;
   box-sizing: border-box;
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  min-width: 2.4rem;
+  height: 2.4rem;
+  min-height: 2.4rem;
   appearance: none;
-  background-color: ${(props) => props.theme.color.white};
+  background-color: ${color.white};
 
   border: 1.5px solid;
-  border-color: ${(props) =>
-    props.isInvalid ? props.theme.color.misc.errorRed : props.theme.color.steelTints.steel40};
+  border-color: ${isInvalid ? color.misc.errorRed : color.steelTints.steel40};
   border-radius: 4px;
 
   cursor: pointer;
 
   &:hover {
-    border-color: ${(props) => props.theme.color.ikssBlue};
+    border-color: ${color.ikssBlue};
   }
 
   &:disabled {
     cursor: default;
-    border-color: ${(props) => props.theme.color.steelTints.steel40};
-    background-color: ${(props) => props.theme.color.blueTints.blue05};
+    border-color: ${color.steelTints.steel40};
+    background-color: ${color.blueTints.blue05};
   }
 
   &:after {
@@ -32,13 +34,14 @@ const styledCheckbox = styled.input.attrs({ type: 'checkbox' })`
   }
 
   &:checked {
-    background-color: ${(props) => props.theme.color.ikssBlue};
-    border-color: ${(props) => props.theme.color.ikssBlue};
+    background-color: ${color.ikssBlue};
+    border-color: ${color.ikssBlue};
     &:after {
       content: url('./tick.svg');
       text-align: center;
     }
   }
-`;
+`,
+);
 
-export default styledCheckbox;
+export default StyledCheckbox;

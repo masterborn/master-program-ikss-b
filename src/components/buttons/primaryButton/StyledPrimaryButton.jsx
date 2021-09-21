@@ -1,36 +1,35 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { ButtonBigText, ButtonSmallText } from '@root/styles/typography/buttonsText';
 
-const StyledPrimaryButton = styled.button`
+const defaultVariantStyles = css`
+  height: 3.6rem;
+  ${ButtonSmallText};
+  padding: 0.9rem 1.6rem 0.9rem 1.8rem;
+`;
+
+const largeVariantStyles = css`
+  height: 4.8rem;
+  ${ButtonBigText};
+  padding: 1.4rem 2.4rem 1.4rem 2.6rem;
+`;
+
+const StyledPrimaryButton = styled.button(
+  ({ theme: { color }, large }) => `
   display: flex;
   align-items: center;
   justify-content: center;
   width: max-content;
 
-  ${(props) => {
-    if (props.isBig) {
-      return `
-            height: 48px;
-            font-size: 16px;
-            padding: 0.7em 1.2em 0.7em 1.2em;
-            `;
-    }
-    return `
-        height: 36px;
-        font-size: 14px;
-        padding: 0.5em 0.88em 0.5em 0.88em;
-        `;
-  }}
-
-  font-weight: 700;
-
   border: none;
-  border-radius: 2em;
-  color: ${(props) => props.theme.color.white};
-  background-color: ${(props) => props.theme.color.ikssBlue};
+  border-radius: 2.6rem;
+  color: ${color.white};
+  background-color: ${color.ikssBlue};
+  ${large ? largeVariantStyles : defaultVariantStyles};
+
   & > .icon {
     height: 1em;
 
-    padding-right: 0.8em;
+    margin-right: 0.6rem;
   }
   &:hover {
     background-color: #2f95eb;
@@ -42,6 +41,7 @@ const StyledPrimaryButton = styled.button`
   &:disabled {
     background-color: #badcf8;
   }
-`;
+`,
+);
 
 export default StyledPrimaryButton;
