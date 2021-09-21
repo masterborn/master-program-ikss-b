@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import getPagesData from '@root/clients/contentful';
+import { getPagesDataMockup } from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
 import ProjectsSection from '@root/components/home/projects/ProjectsSection';
@@ -11,7 +11,7 @@ import ValuesSection from '../components/home/valuesSection';
 import ContactForm from '../components/contactForm';
 
 export async function getStaticProps() {
-  const resJson = await getPagesData();
+  const resJson = await getPagesDataMockup();
   const pagesData = mapData(resJson);
 
   const {
