@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getPagesDataMockup } from '@root/clients/contentful';
+import getPagesData from '@root/clients/contentful';
 import mapData from '@root/dataMappers/contentful';
 import Layout from '@root/components/layout';
 import MissionTile from '@root/components/aboutUs/MissionTile';
@@ -11,7 +11,7 @@ import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
 import TopSection from '@root/components/topSection/TopSection';
 
 export async function getStaticProps() {
-  const resJson = await getPagesDataMockup();
+  const resJson = await getPagesData();
   const pagesData = mapData(resJson);
 
   const {
