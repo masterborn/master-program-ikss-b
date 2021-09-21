@@ -31,7 +31,7 @@ export const PageWrapper = styled.div`
 export const PageContentWrapper = styled.div`
   width: 100%;
   position: relative;
-`;
+
 
 export const TopBackgroundGradient = styled.div`
   width: 100%;

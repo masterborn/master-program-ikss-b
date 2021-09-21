@@ -32,7 +32,14 @@ const paths = [
   },
 ];
 
-export default function Layout({ children, socials, footerText, contactFormText, tooltipText }) {
+export default function Layout({
+  children,
+  socials,
+  footerText,
+  contactFormText,
+  tooltipText,
+  homepageHeroRef,
+}) {
   const router = useRouter();
   const isOnHomepage = router.pathname === '/';
   const isContactModalOpened = useSelector((state) => state.modal.isModalOpened);
@@ -42,7 +49,12 @@ export default function Layout({ children, socials, footerText, contactFormText,
   return (
     <PageWrapper>
       <StyledLayout>
-        <Navbar socials={socials} paths={paths} currPathname={router.pathname} />
+        <Navbar
+          socials={socials}
+          paths={paths}
+          currPathname={router.pathname}
+          homepageHeroRef={homepageHeroRef}
+        />
         {router.pathname !== '/' && (
           <ContactFormModal
             contactFormText={contactFormText}
@@ -78,4 +90,9 @@ Layout.propTypes = {
   footerText: PropTypes.shape({}).isRequired,
   contactFormText: PropTypes.shape({}).isRequired,
   tooltipText: PropTypes.shape({}).isRequired,
+  homepageHeroRef: PropTypes.shape({}),
+};
+
+Layout.defaultProps = {
+  homepageHeroRef: null,
 };

@@ -6,7 +6,7 @@ import {
   resetInputValues,
   changeFormSendingStatus,
 } from '@root/redux/actions/contactFormActions';
-import { sendEmailMockup } from '@root/clients/formcarry';
+import sendEmail from '@root/clients/formcarry';
 import { convertRichTextToReactComponent } from '@root/dataMappers/contentful';
 import { inputsValidationInitialState } from '@root/consts/contactForm';
 import validateInputs from './validation';
@@ -102,7 +102,7 @@ export default function ContactForm({
       (formStatus === FORM_SENDING_STATUS.initial || formStatus === FORM_SENDING_STATUS.error) &&
       isFormValid()
     ) {
-      sendEmailMockup(formValues, changeFormStatus, FORM_SENDING_STATUS);
+      sendEmail(formValues, changeFormStatus, FORM_SENDING_STATUS);
     } else if (formStatus === FORM_SENDING_STATUS.success) {
       dispatch(changeFormSendingStatus(FORM_SENDING_STATUS.initial));
 

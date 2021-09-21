@@ -15,7 +15,6 @@ export const sendEmailMockup = (data, callback, responseType) => {
   mockApi(data)
     .then(() => {
       callback(responseType.success);
-      // console.log(res);
     })
     .catch(() => {
       callback(responseType.error);
@@ -24,7 +23,7 @@ export const sendEmailMockup = (data, callback, responseType) => {
 
 const sendEmail = (data, callback, responseType) => {
   callback(responseType.loading);
-  fetch(`https://formcarry.com/s/${formcarryConfig.ENDPOINT}`, {
+  fetch(formcarryConfig.FORMCARRY_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
     body: JSON.stringify(data),

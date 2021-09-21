@@ -20,7 +20,7 @@ import Sidebar from './sidebar';
 
 // Form on homepage must have 'contact-form' id
 
-export default function Navbar({ socials, paths, currPathname }) {
+export default function Navbar({ socials, paths, currPathname, homepageHeroRef }) {
   const dispatch = useDispatch();
   const [isSidebarOpened, setIsSidebarOpened] = useState(false);
   const openContactModal = (isToggled) => dispatch(toggleModal(isToggled));
@@ -64,8 +64,8 @@ export default function Navbar({ socials, paths, currPathname }) {
 
             <StyledNavbarSocials
               socialsLinks={socials}
-              currPathname={currPathname}
               navbarHeight={navbarHeight}
+              homepageHeroRef={homepageHeroRef}
             />
 
             <ContactButton onClick={handleClickContactButton}>Skontaktuj się</ContactButton>
@@ -85,4 +85,9 @@ Navbar.propTypes = {
     }),
   ).isRequired,
   currPathname: PropTypes.string.isRequired,
+  homepageHeroRef: PropTypes.shape({}),
+};
+
+Navbar.defaultProps = {
+  homepageHeroRef: null,
 };
