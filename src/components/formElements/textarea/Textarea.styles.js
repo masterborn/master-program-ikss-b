@@ -1,49 +1,63 @@
+import { ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 import ErrorIcon from '../misc/icon/ErrorIcon';
 
-export const TextareaContainer = styled.div`
-  position: relative;
-`;
-export const StyledTextarea = styled.textarea(
-  ({ theme: { color }, isValid, isInvalid }) => `
-  padding: 1.0rem 2.0rem 1.0rem 1.2rem;
+export const TextareaContainer = styled.div(
+  ({ theme: { color }, isValid, isInvalid, disabled }) => `
+  width:100%;
+  height:100%;
 
-  box-sizing: border-box;
-
-  height: 100%;
-  width: 100%;
-
-  resize: none;
-
-  outline: none;
-  
-  border-width: 1..5rem;
-  border-style: solid;
   border-color: ${color.steelTints.steel30};
   border-color: ${isValid && color.misc.successGreen};
   border-color: ${isInvalid && color.misc.errorRed};
+
+  &:focus-within {
+    border-color: ${color.ikssBlue};
+  }
+
+  position: relative;
+  padding: 1rem 0 1rem 1rem;
+  padding-bottom: ${isInvalid && '3.0rem'};
+
+  border-width: 0.15rem;
+  border-style: solid;
+  
   border-radius: 4px;
 
-  font-size: 1.4rem;
+  ${
+    disabled &&
+    `border-color: ${color.steelTints.steel40};
+    background-color: ${color.blueTints.blue05};`
+  }
+
+  
+`,
+);
+export const StyledTextarea = styled.textarea(
+  ({ theme: { color } }) => `
+  
+  box-sizing: border-box;
+
+  height: 100%;
+  width:100%;
+  resize: none;
+  padding-right:1rem;
+  border: none;
+  outline: none;
+
+  ${ParagraphSmall}
 
   color: ${color.steel};
+  background-color: transparent;
 
   &::placeholder {
     color: ${color.steelTints.steel60};
   }
-
-  &:focus {
-    border-color: ${color.ikssBlue};
-    color: ${color.steel};
-  }
-  &:disabled {
-    border-color: ${color.steelTints.steel40};
-    background-color: ${color.blueTints.blue05};
-  }
+  
 `,
 );
 export const StyledErrorIcon = styled(ErrorIcon)`
   position: absolute;
-  bottom: 0;
-  right: -3.5rem;
+  right: 0rem;
+  bottom: 0.25rem;
 `;
