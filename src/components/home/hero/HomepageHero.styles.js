@@ -3,7 +3,7 @@ import Socials from '@root/components/icons/SocialsCollection';
 import { Header1, Header4 } from '../../../styles/typography/headers';
 import { ParagraphBody, ParagraphSmall } from '../../../styles/typography/paragraphs';
 
-export const StyledHomepageHero = styled.section(
+export const StyledHomepageHero = styled.header(
   ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;
