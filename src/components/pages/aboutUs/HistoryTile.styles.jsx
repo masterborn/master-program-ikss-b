@@ -28,7 +28,7 @@ export const HistoryRow = styled.div(
   }
   &:last-child {
     div{
-    margin-top: -3.2rem;
+      margin-top: -3.2rem;
     }
   }
   @media ${medias.mobile} {
