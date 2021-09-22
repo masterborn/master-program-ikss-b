@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import getPagesData from '@root/clients/contentful';
-import mapData, { sortByOrder } from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
-import PartnersSection from '@root/components/home/partnersList/PartnersSection';
-import CooperationValuesSection from '@root/components/cooperation/valuesSection';
-import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
-import TopSection from '@root/components/topSection/TopSection';
+
+import { getPagesDataMockup } from '@clients/contentful';
+import mapData, { sortByOrder } from '@dataMappers/contentful';
+import Layout from '@layout';
+import PartnersSection from '@generic/partnersList/PartnersSection';
+import CooperationValuesSection from '@cooperation/valuesSection';
+import BottomCta from '@cta/bottomCta/BottomCta';
+import TopSection from '@topSection/TopSection';
 
 export async function getStaticProps() {
-  const resJson = await getPagesData();
+  const resJson = await getPagesDataMockup();
   const pagesData = mapData(resJson);
 
   const {

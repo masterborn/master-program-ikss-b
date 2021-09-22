@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import getPagesData from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
-import MissionTile from '@root/components/aboutUs/MissionTile';
-import HistoryTile from '@root/components/aboutUs/HistoryTile';
-import TeamTile from '@root/components/aboutUs/TeamTile';
-import BoardMembersSection from '@root/components/aboutUs/boardMembersSection';
-import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
-import TopSection from '@root/components/topSection/TopSection';
+
+import { getPagesDataMockup } from '@clients/contentful';
+import mapData from '@dataMappers/contentful';
+import Layout from '@layout';
+import MissionTile from '@aboutUs/MissionTile';
+import HistoryTile from '@aboutUs/HistoryTile';
+import TeamTile from '@aboutUs/TeamTile';
+import BoardMembersSection from '@aboutUs/boardMembersSection';
+import BottomCta from '@cta/bottomCta/BottomCta';
+import TopSection from '@topSection/TopSection';
 
 export async function getStaticProps() {
-  const resJson = await getPagesData();
+  const resJson = await getPagesDataMockup();
   const pagesData = mapData(resJson);
 
   const {
