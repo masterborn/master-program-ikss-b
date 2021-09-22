@@ -1,6 +1,6 @@
-import { ParagraphSmall } from '@root/styles/typography/paragraphs';
 import styled from 'styled-components';
 
+import { ParagraphSmall } from '@typography/paragraphs';
 import ErrorIcon from '../misc/icon/ErrorIcon';
 
 export const TextareaContainer = styled.div(
