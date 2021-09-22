@@ -1,5 +1,6 @@
-import { ButtonBigText } from '@root/styles/typography/buttonsText';
 import styled from 'styled-components';
+
+import { ButtonBigText } from '@typography/buttonsText';
 
 export const ProjectsSwitchContainer = styled.div(
   ({ theme: { medias, color }, isOnGrid }) => `
