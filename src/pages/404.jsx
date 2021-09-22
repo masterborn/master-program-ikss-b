@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types;
 
 import { getPagesDataMockup } from '@clients/contentful';
 import mapData from '@dataMappers/contentful';
