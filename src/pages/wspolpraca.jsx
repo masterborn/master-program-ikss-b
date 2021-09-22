@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { getPagesDataMockup } from '@clients/contentful';
-import mapData, { sortByOrder } from '@root/dataMappers/contentful';
+import mapData, { sortByOrder } from '@dataMappers/contentful';
 import Layout from '@layout';
 import PartnersSection from '@generic/partnersList/PartnersSection';
 import CooperationValuesSection from '@cooperation/valuesSection';
