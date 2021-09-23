@@ -104,6 +104,12 @@ export const StyledNavbarSocials = styled(NavbarSocials)`
 
   & > a {
     margin: 0rem 2rem;
+
+    transition: transform ease 0.4s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 `;
 

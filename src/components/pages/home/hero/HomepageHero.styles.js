@@ -101,6 +101,13 @@ export const StyledSocials = styled(Socials)(
     text-decoration: none;
 
     color: ${color.navy};
+
+    transition: transform ease 0.4s;
+
+    &:hover{
+      transform: scale(1.05);
+    }
+
     svg {
       transform: scale(2);
       margin-right: 2.4rem;
