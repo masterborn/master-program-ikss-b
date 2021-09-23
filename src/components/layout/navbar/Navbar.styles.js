@@ -88,7 +88,11 @@ export const Label = styled.h3(
   text-decoration: none;
 
   color: ${isHighlighted ? color.navy : color.steel};
-`,
+
+  &:hover {
+      opacity: 0.73;
+  }
+  `,
 );
 
 export const StyledNavbarSocials = styled(NavbarSocials)`
