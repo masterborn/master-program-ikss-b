@@ -23,6 +23,12 @@ export const StyledValueTile = styled.div(
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
   border-radius: 1.6rem;
 
+  transition: ease 0.4s;
+
+  &:hover{
+    transform: scale(1.05);
+  }
+
   @media ${medias.mobile} {
     width: 90%;
     min-width: 25.2rem;
