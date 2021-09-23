@@ -79,6 +79,16 @@ export const Logo = styled.div(
   width: 22.6rem;
   height: 11.2rem;
 
+
+  & > a{
+    transition: transform ease 0.4s;
+
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+  
+
   @media ${medias.mobile} {
     width: calc(100% / 3);
     height: auto;
