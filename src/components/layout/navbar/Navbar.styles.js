@@ -30,7 +30,7 @@ export const StyledNavbar = styled.nav(
 `,
 );
 
-export const FooterWrapper = styled.div`
+export const NavbarWrapper = styled.div`
   width: 100%;
   max-width: 144rem;
   display: flex;

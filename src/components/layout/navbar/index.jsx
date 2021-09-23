@@ -8,7 +8,7 @@ import { HamburgerMenuIcon } from '@icons/misc';
 import handleContactButton from '@generic/misc/contactFormActions';
 import {
   StyledNavbar,
-  FooterWrapper,
+  NavbarWrapper,
   LinksContainer,
   StyledLogoLink,
   StyledLogo,
@@ -35,7 +35,7 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
   const toggleSidebar = () => setIsSidebarOpened((prevState) => !prevState);
   return (
     <StyledNavbar>
-      <FooterWrapper>
+      <NavbarWrapper>
         <Link href="/" passHref>
           <StyledLogoLink href>
             <StyledLogo />
@@ -72,7 +72,7 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
             <ContactButton onClick={handleClickContactButton}>Skontaktuj się</ContactButton>
           </>
         )}
-      </FooterWrapper>
+      </NavbarWrapper>
     </StyledNavbar>
   );
 }
