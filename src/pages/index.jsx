@@ -1,17 +1,5 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
-import { getPagesDataMockup } from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
-import ProjectsSection from '@root/components/home/projects/ProjectsSection';
-import PartnersSection from '@root/components/home/partnersList/PartnersSection';
-import sortHomepagePartners from '@root/dataMappers/partners';
-import CustomHead from '@root/components/CustomHead/CustomHead';
-import HomepageHero from '../components/home/hero';
-import ValuesSection from '../components/home/valuesSection';
-import ContactForm from '../components/contactForm';
-=======
 
 import { getPagesDataMockup } from '@clients/contentful';
 import mapData from '@dataMappers/contentful';
@@ -22,7 +10,6 @@ import sortHomepagePartners from '@dataMappers/partners';
 import HomepageHero from '@homepage/hero';
 import ValuesSection from '@homepage/valuesSection';
 import ContactForm from '@generic/contactForm';
->>>>>>> development
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
