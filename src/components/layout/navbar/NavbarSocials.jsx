@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import useHideNavSocials from '@hooks/useHideNavSocials';
-import SocialsCollection from '../../icons/SocialsCollection';
+import SocialsCollection from '@icons/SocialsCollection';
 
 export default function NavbarSocials({ className, socialsLinks, navbarHeight, homepageHeroRef }) {
   const hideSocials = useHideNavSocials(homepageHeroRef, navbarHeight);

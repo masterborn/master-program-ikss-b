@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getPagesDataMockup } from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
-import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
-import ProjectsMasonry from '@root/components/cooperation/ProjectsMasonry';
-import TopSection from '@root/components/topSection/TopSection';
+
+import { getPagesDataMockup } from '@clients/contentful';
+import mapData from '@dataMappers/contentful';
+import Layout from '@layout';
+import BottomCta from '@cta/bottomCta/BottomCta';
+import ProjectsMasonry from '@projects/ProjectsMasonry';
+import TopSection from '@topSection/TopSection';
 import CustomHead from '@root/components/CustomHead/CustomHead';
 
 export async function getStaticProps() {

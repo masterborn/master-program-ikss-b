@@ -18,238 +18,10 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "5HImaB3auE5dqVRqjx6NKi",
-        "type": "Entry",
-        "createdAt": "2021-09-17T11:46:40.925Z",
-        "updatedAt": "2021-09-17T11:46:40.925Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "cooperation",
-        "identifier": "cooperation-meta",
-        "title": "Informacja Kulturalno-Sportowa Studentów - Współpraca",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "lxUNIf3DZvGDb2nngRoV6",
-        "type": "Entry",
-        "createdAt": "2021-09-17T11:46:17.494Z",
-        "updatedAt": "2021-09-17T11:46:24.791Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "about-us",
-        "identifier": "about-us-meta",
-        "title": "Informacja Kulturalno-Sportowa Studentów - O nas",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "4Vu2blKUQTbFL8Cw4MJ698",
-        "type": "Entry",
-        "createdAt": "2021-09-17T11:45:55.737Z",
-        "updatedAt": "2021-09-17T11:45:55.737Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "projects",
-        "identifier": "projects-meta",
-        "title": "Informacja Kulturalno-Sportowa Studentów - Projekty",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "3xhXdP2tidNvnOXIgFvUB7",
-        "type": "Entry",
-        "createdAt": "2021-09-17T11:45:25.896Z",
-        "updatedAt": "2021-09-17T11:45:25.896Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "homepage",
-        "identifier": "homepage-meta",
-        "title": "Informacja Kulturalno-Sportowa Studentów - Uniwersytet Wrocławski",
-        "text1": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
-          ]
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
         "id": "52Yc1IcAXSY3KSGLuuqaHg",
         "type": "Entry",
         "createdAt": "2021-08-25T08:59:08.184Z",
-        "updatedAt": "2021-09-17T06:58:08.573Z",
+        "updatedAt": "2021-09-15T11:57:09.321Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -257,7 +29,7 @@
             "linkType": "Environment"
           }
         },
-        "revision": 4,
+        "revision": 3,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -280,7 +52,27 @@
               "content": [
                 {
                   "nodeType": "text",
-                  "value": "Administratorem Twoich danych osobowych jest Informacja Kulturalno-Sportowa Studentów działająca przy Uniwersytecie Ekonomicznym we Wrocławiu. Kontakt z Administratorem danych jest dostępny za pomocą adresu email: ikss.ue.wroc@gmail.com. Będziemy przechowywać Pani/Pana dane osobowe do czasu cofnięcia przez Pana/Panią zgody na ich przetwarzanie, chyba że nasze obowiązki wynikające z obecnie panującego prawa będą stanowiły inaczej.",
+                  "value": "Administratorem Twoich danych osobowych jest Informacja Kulturalno-Sportowa Studentów działająca przy Uniwersytecie Ekonomicznym we Wrocławiu. Kontakt z Administratorem danych jest dostępny za pomocą adresu email: ",
+                  "marks": [],
+                  "data": {}
+                },
+                {
+                  "nodeType": "hyperlink",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "ikss.ue.wroc@gmail.com",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {
+                    "uri": "mailto:ikss.ue.wroc@gmail.com"
+                  }
+                },
+                {
+                  "nodeType": "text",
+                  "value": ". Będziemy przechowywać Pani/Pana dane osobowe do czasu cofnięcia przez Pana/Panią zgody na ich przetwarzanie, chyba że nasze obowiązki wynikające z obecnie panującego prawa będą stanowiły inaczej.",
                   "marks": [],
                   "data": {}
                 }
@@ -325,9 +117,9 @@
         "locale": "en-US"
       },
       "fields": {
-        "page": "about-us",
-        "identifier": "about-us-content-2",
-        "title": "Historia",
+        "page": "cooperation",
+        "identifier": "cooperation-meta",
+        "title": "Informacja Kulturalno-Sportowa Studentów - Współpraca",
         "text1": {
           "data": {},
           "content": [
@@ -337,7 +129,7 @@
                 {
                   "data": {},
                   "marks": [],
-                  "value": "Informacja Kulturalno-Sportowa Studentów powstała jako projekt zainicjowany przez Joannę Sobieśniewską – późniejszą pierwszą przewodniczącą organizacji oraz Bartłomieja Postka. Na mocy aktu założycielskiego 8 stycznia 2008 roku powstała organizacja o nazwie Informacja Kulturalno-Sportowa Studentów, która po pewnym okresie działalności zaczęła sama organizować własne projekty, które swoją skalą podbijały nie tylko serca uczestników miasta, ale również i całej Polski.",
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
                   "nodeType": "text"
                 }
               ],
@@ -815,7 +607,7 @@
             "linkType": "Environment"
           }
         },
-        "revision": 2,
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1207,19 +999,21 @@
         "identifier": "homepage-values",
         "title": "Co nas wyróżnia",
         "text1": {
+          "nodeType": "document",
           "data": {},
           "content": [
             {
-              "data": {},
+              "nodeType": "paragraph",
               "content": [
                 {
-                  "data": {},
+                  "nodeType": "text",
+                  "value": "W najbliższym roku akademickim nasza organizacja prowadzona jest przez zarząd kadencji 2021/2022, w którego skład wchodzą:",
                   "marks": [],
                   "value": "Nie koniecznie musimy tu dawać tekst, ale jak jest potrzeba i przestrzeń można rozwinąć nagłówek.",
                   "nodeType": "text"
                 }
               ],
-              "nodeType": "paragraph"
+              "data": {}
             }
           ],
           "nodeType": "document"
@@ -1621,7 +1415,7 @@
             "linkType": "Environment"
           }
         },
-        "revision": 2,
+        "revision": 3,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1645,19 +1439,19 @@
           "data": {},
           "content": [
             {
-              "data": {},
+              "nodeType": "paragraph",
               "content": [
                 {
-                  "data": {},
+                  "nodeType": "text",
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów tworzymy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego, oraz mieszkańców Wrocławia",
                   "marks": [],
                   "value": "WEST jest innowacyjnym, ogólnopolskim turniejem w popularną grę – Counter Strike: Global Offensive tworzonym przez grupę osób zafascynowanych tematyką e-sportową. Podczas wydarzenia mamy dla uczestników przygotowany bogaty w różne znane tytuły gier festiwal gamingu, na którym każdy znajdzie coś dla siebie.",
                   "nodeType": "text"
                 }
               ],
-              "nodeType": "paragraph"
+              "data": {}
             }
-          ],
-          "nodeType": "document"
+          ]
         },
         "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
         "linkCaption": "Podsumowanie wydarzenia"
@@ -1686,7 +1480,7 @@
             "linkType": "Environment"
           }
         },
-        "revision": 2,
+        "revision": 5,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1719,10 +1513,21 @@
                   "nodeType": "text"
                 }
               ],
-              "nodeType": "paragraph"
+              "data": {}
+            },
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Wieczorem projekt zwieńczony jest na scenie, gdzie nasi uczestnicy zasiadają na widowni, skąd mogą być świadkami wyjątkowego spektaklu teatralnego.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
             }
-          ],
-          "nodeType": "document"
+          ]
         },
         "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
         "linkCaption": "Podsumowanie wydarzenia"
