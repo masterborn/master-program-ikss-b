@@ -4,7 +4,6 @@ import IconButton from '@buttons/misc/IconButton';
 import PrimaryButton from '@buttons/primaryButton';
 import { ButtonBigText } from '@typography/buttonsText';
 import Logo from '@logos/BubbleLogo';
-import NavbarSocials from './NavbarSocials';
 
 export const StyledNavbar = styled.nav(
   ({ theme: { medias, color } }) => `
@@ -94,24 +93,6 @@ export const Label = styled.h3(
   }
   `,
 );
-
-export const StyledNavbarSocials = styled(NavbarSocials)`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-
-  margin-left: 19.9rem;
-
-  & > a {
-    margin: 0rem 2rem;
-
-    transition: transform ease 0.4s;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-`;
 
 export const ContactButton = styled(PrimaryButton)`
   margin-left: auto;

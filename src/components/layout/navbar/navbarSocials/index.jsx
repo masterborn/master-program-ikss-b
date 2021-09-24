@@ -2,18 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import useHideNavSocials from '@hooks/useHideNavSocials';
-import SocialsCollection from '@icons/SocialsCollection';
+import { NavbarSocialsContainer, StyledSocialsCollection } from './NavbarSocials.styles';
 
-export default function NavbarSocials({ className, socialsLinks, navbarHeight, homepageHeroRef }) {
-  const hideSocials = useHideNavSocials(homepageHeroRef, navbarHeight);
+export default function NavbarSocials({ socialsLinks, navbarHeight, homepageHeroRef }) {
+  const isHidden = useHideNavSocials(homepageHeroRef, navbarHeight);
 
-  if (hideSocials) return null;
-
-  return <SocialsCollection className={className} socialsLinks={socialsLinks} />;
+  return (
+    <NavbarSocialsContainer isHidden={isHidden}>
+      <StyledSocialsCollection socialsLinks={socialsLinks} isHidden={isHidden} />
+    </NavbarSocialsContainer>
+  );
 }
 
 NavbarSocials.propTypes = {
-  className: PropTypes.string.isRequired,
   socialsLinks: PropTypes.shape({
     fb: PropTypes.string,
     ig: PropTypes.string,

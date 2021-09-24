@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleModal } from '@redux/actions/modalActions';
 import { HamburgerMenuIcon } from '@icons/misc';
 import handleContactButton from '@generic/misc/contactFormActions';
+import NavbarSocials from './navbarSocials';
 import {
   StyledNavbar,
   NavbarWrapper,
@@ -13,7 +14,6 @@ import {
   StyledLogoLink,
   StyledLogo,
   Label,
-  StyledNavbarSocials,
   ContactButton,
   HamburgerMenu,
 } from './Navbar.styles';
@@ -63,7 +63,7 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
               ))}
             </LinksContainer>
 
-            <StyledNavbarSocials
+            <NavbarSocials
               socialsLinks={socials}
               navbarHeight={navbarHeight}
               homepageHeroRef={homepageHeroRef}
