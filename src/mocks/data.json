@@ -21,7 +21,7 @@
         "id": "52Yc1IcAXSY3KSGLuuqaHg",
         "type": "Entry",
         "createdAt": "2021-08-25T08:59:08.184Z",
-        "updatedAt": "2021-09-15T11:57:09.321Z",
+        "updatedAt": "2021-09-17T06:58:08.573Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -29,7 +29,7 @@
             "linkType": "Environment"
           }
         },
-        "revision": 3,
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -52,27 +52,7 @@
               "content": [
                 {
                   "nodeType": "text",
-                  "value": "Administratorem Twoich danych osobowych jest Informacja Kulturalno-Sportowa Studentów działająca przy Uniwersytecie Ekonomicznym we Wrocławiu. Kontakt z Administratorem danych jest dostępny za pomocą adresu email: ",
-                  "marks": [],
-                  "data": {}
-                },
-                {
-                  "nodeType": "hyperlink",
-                  "content": [
-                    {
-                      "nodeType": "text",
-                      "value": "ikss.ue.wroc@gmail.com",
-                      "marks": [],
-                      "data": {}
-                    }
-                  ],
-                  "data": {
-                    "uri": "mailto:ikss.ue.wroc@gmail.com"
-                  }
-                },
-                {
-                  "nodeType": "text",
-                  "value": ". Będziemy przechowywać Pani/Pana dane osobowe do czasu cofnięcia przez Pana/Panią zgody na ich przetwarzanie, chyba że nasze obowiązki wynikające z obecnie panującego prawa będą stanowiły inaczej.",
+                  "value": "Administratorem Twoich danych osobowych jest Informacja Kulturalno-Sportowa Studentów działająca przy Uniwersytecie Ekonomicznym we Wrocławiu. Kontakt z Administratorem danych jest dostępny za pomocą adresu email: ikss.ue.wroc@gmail.com. Będziemy przechowywać Pani/Pana dane osobowe do czasu cofnięcia przez Pana/Panią zgody na ich przetwarzanie, chyba że nasze obowiązki wynikające z obecnie panującego prawa będą stanowiły inaczej.",
                   "marks": [],
                   "data": {}
                 }
