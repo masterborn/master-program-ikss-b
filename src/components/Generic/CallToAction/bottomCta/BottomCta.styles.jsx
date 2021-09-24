@@ -15,7 +15,7 @@ export const BottomCtaContainer = styled.div(
 
   @media ${medias.mobile} {
     height: auto;
-    margin: 10.3rem 0;
+    margin-top: ${isOnProjects ? '5.6rem' : '10.3rem'};
     width: 100%;
     padding: 0 2.4rem;
   }

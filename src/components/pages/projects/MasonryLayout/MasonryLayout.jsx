@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ProjectTile from '@root/components/projectTile/ProjectTile';
-import MidCta from '@root/components/CallToAction/midCta/midCta';
+import ProjectTile from '@generic/projectTile/ProjectTile';
+import MidCta from '@cta/midCta/midCta';
 import { Masonry } from '../ProjectsMasonry.styles';
 
 function sortToColumns(projects) {
