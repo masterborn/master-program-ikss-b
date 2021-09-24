@@ -13,10 +13,10 @@ export const BoardMemberTileWrapper = styled.div(
     `
     display: inline-block;
     &:nth-child(1){
-      margin-top: 26.4rem
+      margin-top: 26.4rem;
     }
     &:nth-child(6){
-      margin-top: 26.4rem
+      margin-top: 26.4rem;
     }
     `
   }
