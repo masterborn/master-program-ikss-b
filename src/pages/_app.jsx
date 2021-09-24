@@ -1,14 +1,15 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import CustomThemeProvider from '@root/styles/CustomThemeProvider';
-import PropTypes from 'prop-types';
-import { Provider as ReduxProvider } from 'react-redux';
-import store from '@root/redux/store';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
+import 'swiper/swiper.scss';
+import 'swiper/components/pagination/pagination.scss';
+import { Provider as ReduxProvider } from 'react-redux';
+
+import CustomThemeProvider from '@styles/CustomThemeProvider';
+import store from '@redux/store';
 import GlobalStyles from '@styles/GlobalStyles';
 import theme from '@styles/theme';
 import IsMobileProvider from '@contextProviders/IsMobileProvider';
-import 'swiper/swiper.scss';
-import 'swiper/components/pagination/pagination.scss';
 
 const App = (props) => {
   // eslint-disable-next-line react/prop-types

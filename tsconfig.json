@@ -24,6 +24,28 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
+      "@homepage/*": ["./src/components/pages/home/*"],
+      "@projects/*": ["./src/components/pages/projects/*"],
+      "@aboutUs/*": ["./src/components/pages/aboutUs/*"],
+      "@cooperation/*": ["./src/components/pages/cooperation/*"],
+      "@404Page/*": ["./src/components/pages/404Page/*"],
+      "@layout/*": ["./src/components/layout/*"],
+      "@layout": ["./src/components/layout/index.jsx"],
+      "@generic/*": ["./src/components/Generic/*"],
+      "@cta/*": ["./src/components/Generic/CallToAction/*"],
+      "@topSection/*": ["./src/components/Generic/topSection/*"],
+      "@icons/*": ["./src/components/Generic/icons/*"],
+      "@formElements/*": ["./src/components/Generic/formElements/*"],
+      "@contactForm/*": ["./src/components/Generic/contactForm/*"],
+      "@valueTile": ["./src/components/Generic/ValueTiles/index.jsx"],
+      "@partnerTiles/*": ["./src/components/Generic/partnersList/*"],
+      "@buttons/*": ["./src/components/Generic/buttons/*"],
+      "@dataMappers/*": ["./src/dataMappers/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@projectSwitch/*": ["./src/components/Generic/ProjectsSwitch/*"],
+      "@typography/*": ["./src/styles/typography/*"],
+      "@projectTile/*": ["./src/components/Generic/projectTile/*"],
+      "@logos/*": ["./src/components/Generic/logos/*"],
       "@root/*": ["./src/*"],
       "@api/*": ["./src/api/*"],
       "@api": ["./src/api/index.ts"],
@@ -36,6 +58,7 @@
       "@styles/*": ["./src/styles/*"],
       "@utils/*": ["./src/utils/*"],
       "@utils": ["./src/utils/index.ts"],
+      "@tootlip": ["./src/components/Generic/tooltip/index.jsx"],
       "@typings/*": ["./src/typings/*"],
       "@hoc/*": ["./src/hoc/*"],
       "@hooks/*": ["./src/hooks/*"],
@@ -43,5 +66,12 @@
     }
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["src", "tests","next.config.js", "sentry.client.config.js","sentry.server.config.js","jest.config.js"]
+  "include": [
+    "src",
+    "tests",
+    "next.config.js",
+    "sentry.client.config.js",
+    "sentry.server.config.js",
+    "jest.config.js"
+  ]
 }

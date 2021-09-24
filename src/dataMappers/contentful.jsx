@@ -96,6 +96,12 @@ export function convertRichTextToReactComponent(Component, richText) {
 }
 
 export default function mapData(data) {
+  // Map API JSON response to format:
+  // {basicContent: {homepage, cooperation, aboutUs, projects, common},
+  //  projects: [project1, project2, etc.],
+  //  partnerLogos: [partner1, partner2, etc.],
+  //  boardMembers: [member1, member2, etc.]
+  // }
   const itemCollection = extractItems(data);
   const mappedCollection = mapItemsCollection(itemCollection);
   return mappedCollection;
