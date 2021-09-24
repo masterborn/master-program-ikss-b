@@ -114,10 +114,19 @@ export const StyledSocials = styled(Socials)`
 
   margin-top: 4rem;
   margin-left: 5rem;
-  margin-right: auto;
+  margin-right: 5rem;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+
+  a {
+    width: 3.2rem;
+    margin-right: 2.4rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
   svg {
     transform: scale(1.33);

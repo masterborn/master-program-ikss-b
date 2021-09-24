@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import Socials from '@icons/SocialsCollection';
-import { Header1, Header4 } from '@typography/headers';
+import { Header1, Header3 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const StyledHomepageHero = styled.section(
@@ -121,11 +121,13 @@ export const StyledSocials = styled(Socials)(
 
 export const Header = styled.h1(
   ({ theme: { medias } }) => `
-  width: 100%;
   ${Header1};
+  width: 512px;
 
   @media ${medias.mobile} {
-    ${Header4};
+    ${Header3};
+    width: 100%;
+    font-weight: 900;
   }
 `,
 );
@@ -136,15 +138,16 @@ export const HomepageHeroImage = styled.img`
 
 export const Paragraph = styled.p(
   ({ theme: { medias, color } }) => `
-  width: 100%;
-  margin: 3.2rem 0;
   ${ParagraphBody};
+  width: 400px;
+  margin: 3.2rem 0;
   color: ${color.steel};
 
   @media ${medias.mobile} {
+    ${ParagraphSmall};
+    width: 100%;
     margin: 2.4rem 0;
 
-    ${ParagraphSmall};
   }
 `,
 );

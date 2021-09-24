@@ -22,7 +22,7 @@ export const BoardMemberTileWrapper = styled.div(
   }
 
   @media ${medias.mobile} {
-    max-width:100vw;
+    max-width: 40rem;
     width: 100%;
     min-width: 252px;
     min-height: fit-content;
@@ -34,7 +34,7 @@ export const BoardMemberTileWrapper = styled.div(
     align-items: center;
 
     &:nth-child(1){
-      margin-top: 1.2rem
+      margin-top: 0;
     }
     &:nth-child(6){
       margin-top: 1.2rem
@@ -83,8 +83,7 @@ export const StyledBoardMemberTile = styled.div(
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
 
   @media ${medias.mobile} {
-    max-width: 38.4rem;
-    width:90%;
+    width:100%;
     min-width:252px;
     margin: 0 2.4rem;
     opacity: 1;
@@ -131,8 +130,7 @@ export const NameText = styled.h4(
 `,
 );
 export const RoleText = styled.h5(
-  ({ theme: { medias, color } }) => `
-  margin: .8rem 2.4rem 0;
+  ({ theme: { medias, color } }) => `1.2rem
   height: 4.8rem;
   ${Header5};
   text-align: center;

@@ -33,6 +33,7 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
   const homepageHeroRef = useRef();
 
   const {
+    homepageMeta,
     homepagePartnersText,
     homepageTopSection: homepageHeroContent,
     homepageValues,
@@ -54,23 +55,23 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
   const homepagePartners = sortHomepagePartners(partners);
 
   return (
-    <Layout
-      socials={socials}
-      footerText={footerText}
-      contactFormText={contactFormText}
-      tooltipText={contactFormTooltip}
-      homepageHeroRef={homepageHeroRef}
-    >
-      <HomepageHero
-        homepageHeroContent={homepageHeroContent}
+      <Layout
         socials={socials}
+        footerText={footerText}
+        contactFormText={contactFormText}
+        tooltipText={contactFormTooltip}
         homepageHeroRef={homepageHeroRef}
-      />
-      <ValuesSection valuesText={homepageValues} valuesTiles={valuesTiles} />
-      <ProjectsSection projects={projects} />
-      <PartnersSection partners={homepagePartners} partnersText={homepagePartnersText} />
-      <ContactForm contactFormText={contactFormText} tooltipText={contactFormTooltip} />
-    </Layout>
+      >
+        <HomepageHero
+          homepageHeroContent={homepageHeroContent}
+          socials={socials}
+          homepageHeroRef={homepageHeroRef}
+        />
+        <ValuesSection valuesText={homepageValues} valuesTiles={valuesTiles} />
+        <ProjectsSection projects={projects} />
+        <PartnersSection partners={homepagePartners} partnersText={homepagePartnersText} />
+        <ContactForm contactFormText={contactFormText} tooltipText={contactFormTooltip} />
+      </Layout>
   );
 }
 
@@ -78,6 +79,7 @@ Homepage.propTypes = {
   homepageData: PropTypes.shape({
     partners: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     basicContent: PropTypes.shape({
+      homepageMeta: PropTypes.shape({}),
       homepagePartnersText: PropTypes.shape({}),
       homepageTopSection: PropTypes.shape({}),
       homepageValues: PropTypes.shape({}),

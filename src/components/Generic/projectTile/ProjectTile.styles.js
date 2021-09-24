@@ -19,12 +19,15 @@ export const ProjectArticle = styled.article(
 
   @media ${medias.mobile} {
     width: 100%;
+    margin-bottom: ${isOnGrid ? '2.4rem' : '3.2rem'};
+
   }
   a {
     margin-top: ${isOnGrid ? '2.4rem' : '3.2rem'};
     color: inherit;
     text-decoration: none;
     @media ${medias.mobile} {
+      margin-top: 1.6rem;
       display: flex;
       justify-content: center;
     }

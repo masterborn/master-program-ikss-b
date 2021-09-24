@@ -219,7 +219,7 @@ export const SubmitButton = styled(PrimaryButton)(
   margin-left: auto;
 
   @media ${medias.mobile} {
-    width: 15.4rem;
+    width: 15.6rem;
     height: 3.6rem;
 
     margin-right: auto;

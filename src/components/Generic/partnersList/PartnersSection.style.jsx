@@ -11,13 +11,14 @@ export const LogosSection = styled.section(
   align-items: center;
   width: 113.4rem;
   height: auto;
-  margin-top: 14.8rem;
+  margin-top: 15.6rem;
 
   @media ${medias.mobile} {
     width: 100%;
     max-width: 55.0rem;
     padding: 0 2.6rem 0 2.6rem;
     height: auto;
+    margin-top: 10rem;
   } ;
 `,
 );
