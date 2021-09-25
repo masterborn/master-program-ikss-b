@@ -131,15 +131,16 @@ export const NameText = styled.h4(
 );
 export const RoleText = styled.h5(
   ({ theme: { medias, color } }) => `1.2rem
-  height: 4.8rem;
   ${Header5};
+  max-width: 300px;
+  height: 4.8rem;
   text-align: center;
   color: ${color.steel};
 
   @media ${medias.mobile} {
+    ${ButtonSmallText};
     margin-top: .8rem;
     height: 3.6rem;
-    ${ButtonSmallText}
   }
 `,
 );

@@ -30,8 +30,8 @@ export const Title = styled.h3(
 export const CooperationValuesTilesContainer = styled.div(
   ({ theme: { medias } }) => `
   width: 100%;
-  margin-top: 6.2rem;
-
+  margin-top: 6.4rem;
+  margin-bottom: -2.4rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -39,7 +39,7 @@ export const CooperationValuesTilesContainer = styled.div(
 
   @media ${medias.mobile} {
     margin-top: 2.4rem;
-
+    margin-bottom: -1.2rem;
     flex-direction: column;
     align-items: center;
   }
@@ -48,7 +48,7 @@ export const CooperationValuesTilesContainer = styled.div(
 
 export const CooperationValueTile = styled(ValueTile)(
   ({ theme: { medias } }) => `
-  margin: 5.0rem 1.2rem 1.2rem;
+  margin: 0 1.2rem 2.4rem;
 
   @media ${medias.mobile} {
     margin: 1.2rem 0;

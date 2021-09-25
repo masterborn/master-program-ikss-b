@@ -58,7 +58,7 @@ export const BoardMembersContainer = styled.div(
     `
     display: block;
     column-count: 3;
-    column-gap: 24px;
+    column-gap: 0px;
   `
   }
   }
