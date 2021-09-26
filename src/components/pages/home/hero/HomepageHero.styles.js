@@ -82,12 +82,13 @@ export const StyledSocials = styled(Socials)(
   border-radius: 1.6rem .0rem .0rem 1.6rem;
 
   @media ${medias.mobile} {
-    width: 80%;
+    width: calc(100% - 4.8rem);
+    min-width: 30rem;
     height: 8.0rem;
     margin-top: 4.0rem;
     margin-right: auto;
     margin-left: auto;
-    padding: 0;
+    padding: 2.4rem 4rem;
     justify-content: space-around;
     border-radius: 1.6rem;
   }
@@ -107,7 +108,7 @@ export const StyledSocials = styled(Socials)(
       margin-left: 2.4rem;
 
       @media ${medias.mobile} {
-        transform: scale(1.5);
+        transform: scale(1.33);
         margin: 0;
       }
     }
