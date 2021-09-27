@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Header3, Header4 } from '@typography/headers';
-import ValueTile from '@valueTile';
+import ValuesTile from '@generic/ValueTiles';
 
 export const CooperationValuesSectionContainer = styled.div(
   ({ theme: { medias } }) => `
@@ -46,7 +46,7 @@ export const CooperationValuesTilesContainer = styled.div(
 `,
 );
 
-export const CooperationValueTile = styled(ValueTile)(
+export const CooperationValueTile = styled(ValuesTile)(
   ({ theme: { medias } }) => `
   margin: 0 1.2rem 2.4rem;
 

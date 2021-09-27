@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SwiperCore, { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import ValuesTile from '@valueTile';
+import ValuesTile from '@generic/ValueTiles';
 import { ValuesTilesContainer, ValuesTilesWrapper } from './ValuesTilesSlider.styles';
 
 SwiperCore.use([Pagination]);
