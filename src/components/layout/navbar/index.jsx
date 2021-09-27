@@ -13,7 +13,6 @@ import {
   LinksContainer,
   StyledLogoLink,
   StyledLogo,
-  StyledNavbarSocials,
   ContactButton,
   HamburgerMenu,
   PageLink,
