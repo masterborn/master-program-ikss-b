@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-import { getPagesDataMockup } from '@clients/contentful';
+import getPagesData from '@clients/contentful';
 import mapData from '@dataMappers/contentful';
 import Layout from '@layout';
 import {
@@ -15,7 +15,7 @@ import {
 } from '@404Page/custom404.styles';
 
 export async function getStaticProps() {
-  const resJson = await getPagesDataMockup();
+  const resJson = await getPagesData();
   const pagesData = mapData(resJson);
 
   const {

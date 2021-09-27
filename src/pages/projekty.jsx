@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getPagesDataMockup } from '@clients/contentful';
+import getPagesData from '@clients/contentful';
 import mapData from '@dataMappers/contentful';
 import Layout from '@layout';
 import BottomCta from '@cta/bottomCta/BottomCta';
@@ -10,7 +10,7 @@ import TopSection from '@topSection/TopSection';
 import CustomHead from '@customHead';
 
 export async function getStaticProps() {
-  const resJson = await getPagesDataMockup();
+  const resJson = await getPagesData();
   const pagesData = mapData(resJson);
 
   const {
