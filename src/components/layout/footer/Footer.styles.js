@@ -7,17 +7,12 @@ import { ParagraphSmall } from '@typography/paragraphs';
 import Socials from '@icons/SocialsCollection';
 
 export const StyledFooter = styled.footer(
-  ({ theme: { medias, color } }) => `
+  ({ theme: { color } }) => `
   position: relative;
 
   width: 100%;
-  height: 40.4rem;
 
   background-color: ${color.ikssBlue};
-
-  @media ${medias.mobile} {
-    height: auto;
-  }
 `,
 );
 
