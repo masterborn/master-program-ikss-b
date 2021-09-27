@@ -18,10 +18,398 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "52Yc1IcAXSY3KSGLuuqaHg",
+        "id": "2Ukm7GipdGxVfvm7pUh1s6",
         "type": "Entry",
-        "createdAt": "2021-08-25T08:59:08.184Z",
-        "updatedAt": "2021-09-15T11:57:09.321Z",
+        "createdAt": "2021-08-09T22:15:35.517Z",
+        "updatedAt": "2021-09-24T12:14:56.746Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "cooperation",
+        "identifier": "cooperation-logos-text",
+        "title": "Współpracują z nami"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "2f0dBk1V7a8eLmDhow16s7",
+        "type": "Entry",
+        "createdAt": "2021-08-09T22:13:27.021Z",
+        "updatedAt": "2021-09-24T12:14:30.558Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "cooperation",
+        "identifier": "cooperation-tile-5",
+        "title": "Reklamowanie twojej firmy na naszych social mediach",
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4YD89UZZXrLScYLl47wHgt"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "3wavUzoauG59raVeUfpONh",
+        "type": "Entry",
+        "createdAt": "2021-08-09T22:11:31.568Z",
+        "updatedAt": "2021-09-24T12:14:11.142Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "cooperation",
+        "identifier": "cooperation-tile-4",
+        "title": "Szansa na pozyskanie przyszłych pracowników i partnerów",
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4tktre6iaJ407xzchpfp2L"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "7iZKA5BVxKqnpQMgoSmO3y",
+        "type": "Entry",
+        "createdAt": "2021-08-09T22:10:14.754Z",
+        "updatedAt": "2021-09-24T12:13:53.403Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "cooperation",
+        "identifier": "cooperation-tile-3",
+        "title": "Dostrzeżenie przez środowisko akademickie i wrocławian",
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "7s6ut2sYDiqiegxJ08Uq9X"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "4ZZC4kuAhqirm3iHegedai",
+        "type": "Entry",
+        "createdAt": "2021-08-09T22:08:07.069Z",
+        "updatedAt": "2021-09-24T12:13:29.745Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "cooperation",
+        "identifier": "cooperation-tile-2",
+        "title": "Przywiązanie do twojej marki i produktów",
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "1dcd11bgDQ6kKN6LplsGah"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "6rwkjNWd6hluPwjORfR6GP",
+        "type": "Entry",
+        "createdAt": "2021-08-09T22:06:38.849Z",
+        "updatedAt": "2021-09-24T12:13:10.888Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "cooperation",
+        "identifier": "cooperation-tile-1",
+        "title": "Wizerunek firmy wspierającej inicjatywy charytatywne",
+        "image1": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6mDNsCmLTIemafpnASaeHf"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "5F4bW0J6ceu1YMg0qYnRo5",
+        "type": "Entry",
+        "createdAt": "2021-08-09T22:00:31.549Z",
+        "updatedAt": "2021-09-24T12:09:46.852Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "about-us",
+        "identifier": "about-us-bottom-cta",
+        "title": "Chcesz zostać członkiem IKSS?",
+        "linkCaption": "Skontaktuj się z nami"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "6Fg9VlhBAvzwbwNc0MjqVA",
+        "type": "Entry",
+        "createdAt": "2021-08-09T21:42:18.964Z",
+        "updatedAt": "2021-09-24T12:08:50.496Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "projects",
+        "identifier": "projects-bottom-cta-text",
+        "title": "Masz pomysł na inny projekt?",
+        "linkCaption": "Skontaktuj się z nami"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "7mF934Vd2nGJtFSnaIrcBe",
+        "type": "Entry",
+        "createdAt": "2021-08-09T21:37:34.113Z",
+        "updatedAt": "2021-09-24T12:07:27.169Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "homepage",
+        "identifier": "homepage-partners-text",
+        "title": "Współpracują z nami"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "3rCxnIQDqMvFA1gEAuypMM",
+        "type": "Entry",
+        "createdAt": "2021-08-09T16:56:53.293Z",
+        "updatedAt": "2021-09-24T12:06:32.883Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -30,6 +418,273 @@
           }
         },
         "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "homepage",
+        "identifier": "homepage-values",
+        "title": "Co nas wyróżnia"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "5HImaB3auE5dqVRqjx6NKi",
+        "type": "Entry",
+        "createdAt": "2021-09-17T11:46:40.925Z",
+        "updatedAt": "2021-09-17T11:46:40.925Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "cooperation",
+        "identifier": "cooperation-meta",
+        "title": "Informacja Kulturalno-Sportowa Studentów - Współpraca",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "lxUNIf3DZvGDb2nngRoV6",
+        "type": "Entry",
+        "createdAt": "2021-09-17T11:46:17.494Z",
+        "updatedAt": "2021-09-17T11:46:24.791Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "about-us",
+        "identifier": "about-us-meta",
+        "title": "Informacja Kulturalno-Sportowa Studentów - O nas",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "4Vu2blKUQTbFL8Cw4MJ698",
+        "type": "Entry",
+        "createdAt": "2021-09-17T11:45:55.737Z",
+        "updatedAt": "2021-09-17T11:45:55.737Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "projects",
+        "identifier": "projects-meta",
+        "title": "Informacja Kulturalno-Sportowa Studentów - Projekty",
+        "text1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "3xhXdP2tidNvnOXIgFvUB7",
+        "type": "Entry",
+        "createdAt": "2021-09-17T11:45:25.896Z",
+        "updatedAt": "2021-09-17T11:45:25.896Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "basicContent"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "page": "homepage",
+        "identifier": "homepage-meta",
+        "title": "Informacja Kulturalno-Sportowa Studentów - Uniwersytet Wrocławski",
+        "text1": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "n21y2i4hkj4h"
+          }
+        },
+        "id": "52Yc1IcAXSY3KSGLuuqaHg",
+        "type": "Entry",
+        "createdAt": "2021-08-25T08:59:08.184Z",
+        "updatedAt": "2021-09-17T06:58:08.573Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -52,27 +707,7 @@
               "content": [
                 {
                   "nodeType": "text",
-                  "value": "Administratorem Twoich danych osobowych jest Informacja Kulturalno-Sportowa Studentów działająca przy Uniwersytecie Ekonomicznym we Wrocławiu. Kontakt z Administratorem danych jest dostępny za pomocą adresu email: ",
-                  "marks": [],
-                  "data": {}
-                },
-                {
-                  "nodeType": "hyperlink",
-                  "content": [
-                    {
-                      "nodeType": "text",
-                      "value": "ikss.ue.wroc@gmail.com",
-                      "marks": [],
-                      "data": {}
-                    }
-                  ],
-                  "data": {
-                    "uri": "mailto:ikss.ue.wroc@gmail.com"
-                  }
-                },
-                {
-                  "nodeType": "text",
-                  "value": ". Będziemy przechowywać Pani/Pana dane osobowe do czasu cofnięcia przez Pana/Panią zgody na ich przetwarzanie, chyba że nasze obowiązki wynikające z obecnie panującego prawa będą stanowiły inaczej.",
+                  "value": "Administratorem Twoich danych osobowych jest Informacja Kulturalno-Sportowa Studentów działająca przy Uniwersytecie Ekonomicznym we Wrocławiu. Kontakt z Administratorem danych jest dostępny za pomocą adresu email: ikss.ue.wroc@gmail.com. Będziemy przechowywać Pani/Pana dane osobowe do czasu cofnięcia przez Pana/Panią zgody na ich przetwarzanie, chyba że nasze obowiązki wynikające z obecnie panującego prawa będą stanowiły inaczej.",
                   "marks": [],
                   "data": {}
                 }
@@ -117,9 +752,9 @@
         "locale": "en-US"
       },
       "fields": {
-        "page": "cooperation",
-        "identifier": "cooperation-meta",
-        "title": "Informacja Kulturalno-Sportowa Studentów - Współpraca",
+        "page": "about-us",
+        "identifier": "about-us-content-2",
+        "title": "Historia",
         "text1": {
           "data": {},
           "content": [
@@ -129,7 +764,7 @@
                 {
                   "data": {},
                   "marks": [],
-                  "value": "Jako Informacja Kulturalno-Sportowa Studentów projektujemy i realizujemy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego oraz mieszkańców całego Wrocławia! Twórz, baw się i zdobywaj doświadczenie razem z nami! U nas możesz rozpocząć niezapomnianą przygodę na studiach.",
+                  "value": "Informacja Kulturalno-Sportowa Studentów powstała jako projekt zainicjowany przez Joannę Sobieśniewską – późniejszą pierwszą przewodniczącą organizacji oraz Bartłomieja Postka. Na mocy aktu założycielskiego 8 stycznia 2008 roku powstała organizacja o nazwie Informacja Kulturalno-Sportowa Studentów, która po pewnym okresie działalności zaczęła sama organizować własne projekty, które swoją skalą podbijały nie tylko serca uczestników miasta, ale również i całej Polski.",
                   "nodeType": "text"
                 }
               ],
@@ -607,7 +1242,7 @@
             "linkType": "Environment"
           }
         },
-        "revision": 4,
+        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -958,65 +1593,6 @@
             "linkType": "Asset",
             "id": "57PyNcsV9LnnX3os87lfaj"
           }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "3rCxnIQDqMvFA1gEAuypMM",
-        "type": "Entry",
-        "createdAt": "2021-08-09T16:56:53.293Z",
-        "updatedAt": "2021-09-09T14:55:23.116Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "homepage",
-        "identifier": "homepage-values",
-        "title": "Co nas wyróżnia",
-        "text1": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "W najbliższym roku akademickim nasza organizacja prowadzona jest przez zarząd kadencji 2021/2022, w którego skład wchodzą:",
-                  "marks": [],
-                  "value": "Nie koniecznie musimy tu dawać tekst, ale jak jest potrzeba i przestrzeń można rozwinąć nagłówek.",
-                  "nodeType": "text"
-                }
-              ],
-              "data": {}
-            }
-          ],
-          "nodeType": "document"
         }
       }
     },
@@ -1415,7 +1991,7 @@
             "linkType": "Environment"
           }
         },
-        "revision": 3,
+        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1439,19 +2015,19 @@
           "data": {},
           "content": [
             {
-              "nodeType": "paragraph",
+              "data": {},
               "content": [
                 {
-                  "nodeType": "text",
-                  "value": "Jako Informacja Kulturalno-Sportowa Studentów tworzymy wydarzenia oraz inicjatywy o charakterze kulturalnym i sportowym dla studentów Uniwersytetu Ekonomicznego, oraz mieszkańców Wrocławia",
+                  "data": {},
                   "marks": [],
                   "value": "WEST jest innowacyjnym, ogólnopolskim turniejem w popularną grę – Counter Strike: Global Offensive tworzonym przez grupę osób zafascynowanych tematyką e-sportową. Podczas wydarzenia mamy dla uczestników przygotowany bogaty w różne znane tytuły gier festiwal gamingu, na którym każdy znajdzie coś dla siebie.",
                   "nodeType": "text"
                 }
               ],
-              "data": {}
+              "nodeType": "paragraph"
             }
-          ]
+          ],
+          "nodeType": "document"
         },
         "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
         "linkCaption": "Podsumowanie wydarzenia"
@@ -1480,7 +2056,7 @@
             "linkType": "Environment"
           }
         },
-        "revision": 5,
+        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1513,21 +2089,10 @@
                   "nodeType": "text"
                 }
               ],
-              "data": {}
-            },
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "Wieczorem projekt zwieńczony jest na scenie, gdzie nasi uczestnicy zasiadają na widowni, skąd mogą być świadkami wyjątkowego spektaklu teatralnego.",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
+              "nodeType": "paragraph"
             }
-          ]
+          ],
+          "nodeType": "document"
         },
         "linkUrl": "https://ikss.ue.wroc.pl/projekty/",
         "linkCaption": "Podsumowanie wydarzenia"
@@ -2007,383 +2572,6 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "2Ukm7GipdGxVfvm7pUh1s6",
-        "type": "Entry",
-        "createdAt": "2021-08-09T22:15:35.517Z",
-        "updatedAt": "2021-08-09T22:15:35.517Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "cooperation",
-        "identifier": "cooperation-logos-text",
-        "title": "Współpracują z nami",
-        "text1": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "Na pewno powinno się pojawić tu logo UE na pierwszym miejscu. Kilka słów o tym, co można zyskać współpracując z wami jako partnerzy. Jakie to niesie korzyści PR’owe etc.",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
-          ]
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "2f0dBk1V7a8eLmDhow16s7",
-        "type": "Entry",
-        "createdAt": "2021-08-09T22:13:27.021Z",
-        "updatedAt": "2021-08-09T22:13:27.021Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "cooperation",
-        "identifier": "cooperation-tile-5",
-        "title": "Reklamowanie twojej firmy na naszych social mediach",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "4YD89UZZXrLScYLl47wHgt"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "3wavUzoauG59raVeUfpONh",
-        "type": "Entry",
-        "createdAt": "2021-08-09T22:11:31.568Z",
-        "updatedAt": "2021-08-09T22:11:31.568Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "cooperation",
-        "identifier": "cooperation-tile-4",
-        "title": "Szansa na pozyskanie przyszłych pracowników i partnerów",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "4tktre6iaJ407xzchpfp2L"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "7iZKA5BVxKqnpQMgoSmO3y",
-        "type": "Entry",
-        "createdAt": "2021-08-09T22:10:14.754Z",
-        "updatedAt": "2021-08-09T22:10:14.754Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "cooperation",
-        "identifier": "cooperation-tile-3",
-        "title": "Dostrzeżenie przez środowisko akademickie i wrocławian",
-        "text1": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
-          ]
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "7s6ut2sYDiqiegxJ08Uq9X"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "4ZZC4kuAhqirm3iHegedai",
-        "type": "Entry",
-        "createdAt": "2021-08-09T22:08:07.069Z",
-        "updatedAt": "2021-08-09T22:08:07.069Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "cooperation",
-        "identifier": "cooperation-tile-2",
-        "title": "Przywiązanie do twojej marki i produktów",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "1dcd11bgDQ6kKN6LplsGah"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "6rwkjNWd6hluPwjORfR6GP",
-        "type": "Entry",
-        "createdAt": "2021-08-09T22:06:38.849Z",
-        "updatedAt": "2021-08-09T22:06:38.849Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "cooperation",
-        "identifier": "cooperation-tile-1",
-        "title": "Wizerunek firmy wspierającej inicjatywy charytatywne",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea tellus nullam vulputate sem suspendisse pellentesque ullamcorper.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "image1": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "6mDNsCmLTIemafpnASaeHf"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
         "id": "1WTKZ2pnnr0id5rY2slItA",
         "type": "Entry",
         "createdAt": "2021-08-09T22:04:30.708Z",
@@ -2473,64 +2661,6 @@
             "id": "6GuujJk5wpDBBocEfbYyDp"
           }
         }
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "5F4bW0J6ceu1YMg0qYnRo5",
-        "type": "Entry",
-        "createdAt": "2021-08-09T22:00:31.549Z",
-        "updatedAt": "2021-08-09T22:00:31.549Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "about-us",
-        "identifier": "about-us-bottom-cta",
-        "title": "Chcesz zostać członkiem IKSS?",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Tincidunt in platea vel cursus eget tellus id arcu nullam. Pulvinar sed nulla scelerisque euismod commodo. Turpis faucibus consequat rhoncus, interdum leo id ut at. Leo ultrices posuere dolor lobortis et et fringilla vehicula maecenas.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "linkCaption": "Skontaktuj się z nami"
       }
     },
     {
@@ -2673,64 +2803,6 @@
             "id": "n21y2i4hkj4h"
           }
         },
-        "id": "6Fg9VlhBAvzwbwNc0MjqVA",
-        "type": "Entry",
-        "createdAt": "2021-08-09T21:42:18.964Z",
-        "updatedAt": "2021-08-09T21:42:18.964Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "projects",
-        "identifier": "projects-bottom-cta-text",
-        "title": "Masz pomysł na inny projekt?",
-        "text1": {
-          "data": {},
-          "content": [
-            {
-              "data": {},
-              "content": [
-                {
-                  "data": {},
-                  "marks": [],
-                  "value": "Tincidunt in platea vel cursus eget tellus id arcu nullam. Pulvinar sed nulla scelerisque euismod commodo. Turpis faucibus consequat rhoncus, interdum leo id ut at. Leo ultrices posuere dolor lobortis et et fringilla vehicula maecenas.",
-                  "nodeType": "text"
-                }
-              ],
-              "nodeType": "paragraph"
-            }
-          ],
-          "nodeType": "document"
-        },
-        "linkCaption": "Skontaktuj się z nami"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
         "id": "1v1hfdUjqf8jRL3kozY4hs",
         "type": "Entry",
         "createdAt": "2021-08-09T21:41:17.258Z",
@@ -2757,63 +2829,6 @@
         "identifier": "projects-middle-cta-text",
         "title": "Chcesz zorganizować z nami podobny projekt?",
         "linkCaption": "Skontaktuj się z nami"
-      }
-    },
-    {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n21y2i4hkj4h"
-          }
-        },
-        "id": "7mF934Vd2nGJtFSnaIrcBe",
-        "type": "Entry",
-        "createdAt": "2021-08-09T21:37:34.113Z",
-        "updatedAt": "2021-08-09T21:37:34.113Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "basicContent"
-          }
-        },
-        "locale": "en-US"
-      },
-      "fields": {
-        "page": "homepage",
-        "identifier": "homepage-partners-text",
-        "title": "Współpracują z nami",
-        "text1": {
-          "nodeType": "document",
-          "data": {},
-          "content": [
-            {
-              "nodeType": "paragraph",
-              "content": [
-                {
-                  "nodeType": "text",
-                  "value": "Na pewno powinno się pojawić tu logo UE na pierwszym miejscu. Kilka słów o tym, co można zyskać współpracując z wami jako partnerzy. Jakie to niesie korzyści PR’owe etc.",
-                  "marks": [],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
-          ]
-        }
       }
     },
     {
@@ -4363,7 +4378,7 @@
           "id": "2tOCnaN3hGEmgtgQxjUucL",
           "type": "Asset",
           "createdAt": "2021-08-09T15:34:24.771Z",
-          "updatedAt": "2021-08-09T15:34:24.771Z",
+          "updatedAt": "2021-09-24T12:19:17.160Z",
           "environment": {
             "sys": {
               "id": "master",
@@ -4371,22 +4386,22 @@
               "linkType": "Environment"
             }
           },
-          "revision": 1,
+          "revision": 2,
           "locale": "en-US"
         },
         "fields": {
           "title": "Paweł Borycki",
           "file": {
-            "url": "//images.ctfassets.net/n21y2i4hkj4h/2tOCnaN3hGEmgtgQxjUucL/0e3622ae6b0f9303ee32f89e16dddf93/image_3.jpg",
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/2tOCnaN3hGEmgtgQxjUucL/4a9d354bb4d42de0bc20acc57d354834/_DSC9010__1_.JPG.png",
             "details": {
-              "size": 26910,
+              "size": 17569369,
               "image": {
-                "width": 164,
-                "height": 164
+                "width": 3680,
+                "height": 3680
               }
             },
-            "fileName": "image 3.jpg",
-            "contentType": "image/jpeg"
+            "fileName": "_DSC9010__1_.JPG.png",
+            "contentType": "image/png"
           }
         }
       },
@@ -5285,7 +5300,7 @@
           "id": "6BLVSqa4thczdhW4IKon6V",
           "type": "Asset",
           "createdAt": "2021-08-09T15:37:21.830Z",
-          "updatedAt": "2021-08-09T15:37:21.830Z",
+          "updatedAt": "2021-09-24T12:17:33.144Z",
           "environment": {
             "sys": {
               "id": "master",
@@ -5293,22 +5308,22 @@
               "linkType": "Environment"
             }
           },
-          "revision": 1,
+          "revision": 2,
           "locale": "en-US"
         },
         "fields": {
           "title": "Roksana Białowąs",
           "file": {
-            "url": "//images.ctfassets.net/n21y2i4hkj4h/6BLVSqa4thczdhW4IKon6V/bd051ed6619ba2308ffdd6b510419b1b/image_3__1_.jpg",
+            "url": "//images.ctfassets.net/n21y2i4hkj4h/6BLVSqa4thczdhW4IKon6V/67b3d3377f195bdb4897719623a27b9c/_DSC8819.JPG.png",
             "details": {
-              "size": 28425,
+              "size": 15979849,
               "image": {
-                "width": 164,
-                "height": 164
+                "width": 3680,
+                "height": 3680
               }
             },
-            "fileName": "image 3 (1).jpg",
-            "contentType": "image/jpeg"
+            "fileName": "_DSC8819.JPG.png",
+            "contentType": "image/png"
           }
         }
       },

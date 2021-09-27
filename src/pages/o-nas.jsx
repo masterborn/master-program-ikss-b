@@ -10,7 +10,7 @@ import TeamTile from '@aboutUs/TeamTile';
 import BoardMembersSection from '@aboutUs/boardMembersSection';
 import BottomCta from '@cta/bottomCta/BottomCta';
 import TopSection from '@topSection/TopSection';
-import CustomHead from '@root/components/CustomHead/CustomHead';
+import CustomHead from '@customHead';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
