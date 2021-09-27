@@ -6,8 +6,20 @@ import { ButtonSmallText } from '@typography/buttonsText';
 import toggleTileVisibility from './TileAnimations.styles';
 
 export const BoardMemberTileWrapper = styled.div(
-  ({ theme: { medias } }) => `
+  ({ theme: { medias }, isDiamond }) => `
   margin: 1.2rem;
+  ${
+    isDiamond &&
+    `
+    display: inline-block;
+    &:nth-child(1){
+      margin-top: 26.4rem;
+    }
+    &:nth-child(6){
+      margin-top: 26.4rem;
+    }
+    `
+  }
 
   @media ${medias.mobile} {
     max-width:100vw;
@@ -20,6 +32,13 @@ export const BoardMemberTileWrapper = styled.div(
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &:nth-child(1){
+      margin-top: 1.2rem
+    }
+    &:nth-child(6){
+      margin-top: 1.2rem
+    }
   }
 `,
 );

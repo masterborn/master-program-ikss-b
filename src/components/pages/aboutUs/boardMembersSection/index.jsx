@@ -14,6 +14,7 @@ import {
 export default function BoardMembersSection({ boardMembersSectionText, boardMembers }) {
   const { title, text1: richText } = boardMembersSectionText;
   const Body = convertRichTextToReactComponent(Description, richText);
+  const isDiamondLayout = boardMembers.length === 7;
 
   const isMobile = useSelector((state) => state.isMobile);
   return (
@@ -21,9 +22,14 @@ export default function BoardMembersSection({ boardMembersSectionText, boardMemb
       <Title>{title}</Title>
       {Body}
 
-      <BoardMembersContainer>
+      <BoardMembersContainer isDiamond={isDiamondLayout}>
         {boardMembers.map((data) => (
-          <BoardMemberTile key={data.name} data={data} isMobile={isMobile} />
+          <BoardMemberTile
+            isDiamond={isDiamondLayout}
+            key={data.name}
+            data={data}
+            isMobile={isMobile}
+          />
         ))}
       </BoardMembersContainer>
     </StyledBoardMembersSection>

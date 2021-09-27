@@ -53,7 +53,7 @@ export default function Projects({ projectsData: { basicContent, projects, commo
       <TopSection topSectionContent={projectsTopSection} sectionId="projekty" />
 
       <ProjectsMasonry midCtaContent={midCtaContent} projectsData={projects} />
-      <BottomCta bottomCtaContent={bottomCtaContent} />
+      <BottomCta isOnProjects bottomCtaContent={bottomCtaContent} />
     </Layout>
   );
 }
