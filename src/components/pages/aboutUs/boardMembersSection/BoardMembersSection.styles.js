@@ -69,6 +69,7 @@ export const BoardMembersContainer = styled.div(
     margin-top: 5.7rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 `,
 );

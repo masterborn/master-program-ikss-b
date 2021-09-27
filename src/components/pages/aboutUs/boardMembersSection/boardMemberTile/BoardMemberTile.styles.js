@@ -23,7 +23,7 @@ export const BoardMemberTileWrapper = styled.div(
   }
 
   @media ${medias.mobile} {
-    max-width: 40rem;
+    max-width: 48rem;
     width: 100%;
     min-width: 252px;
     min-height: fit-content;
@@ -137,19 +137,19 @@ export const RoleText = styled.h5(
   ({ theme: { medias, color } }) => `1.2rem
   ${Header5};
   max-width: 300px;
+  margin-top: 0.8rem;
   height: 4.8rem;
   text-align: center;
   color: ${color.steel};
 
   @media ${medias.mobile} {
     ${ButtonSmallText};
-    margin-top: .8rem;
     height: 3.6rem;
   }
 `,
 );
 export const ContactContainer = styled.div`
-  margin-top: 1.2rem;
+  margin-top: 2.4rem;
   height: 4.8rem;
   display: flex;
   flex-direction: column;
@@ -161,15 +161,12 @@ export const ContactLink = styled.a(
   color: ${color.ikssBlue};
   ${ButtonSmallText}
   text-decoration: none;
+  word-break: break-all;
 `,
 );
-
-export const ContactText = styled.span`
-  overflow-wrap: anywhere;
-`;
 export const LinkedInButton = styled.a(
   ({ theme: { medias } }) => `
-  margin: auto 0 4.0rem;
+  margin: 2.4rem 0 4.0rem;
   text-decoration: none;
 
   @media ${medias.mobile} {
