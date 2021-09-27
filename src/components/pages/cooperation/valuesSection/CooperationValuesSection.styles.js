@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 
 import { Header3, Header4 } from '@typography/headers';
-import ValueTile from '@valueTile';
+import ValuesTile from '@generic/ValueTiles';
 
 export const CooperationValuesSectionContainer = styled.div(
   ({ theme: { medias } }) => `
-  width: 122.4rem;
+  width: 100%;
   margin-top: 14.8rem;
-
   text-align: center;
 
   @media ${medias.mobile} {
     margin-top: 8.0rem;
     width: 100%;
-    padding: 0 1.2rem;
+    padding: 0 2.4rem;
   }
 `,
 );
@@ -30,25 +29,23 @@ export const Title = styled.h3(
 export const CooperationValuesTilesContainer = styled.div(
   ({ theme: { medias } }) => `
   width: 100%;
-  margin-top: 6.2rem;
-
+  margin-top: 4rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 
   @media ${medias.mobile} {
-    margin-top: 2.4rem;
-
+    margin-top: 0;
     flex-direction: column;
     align-items: center;
   }
 `,
 );
 
-export const CooperationValueTile = styled(ValueTile)(
+export const CooperationValueTile = styled(ValuesTile)(
   ({ theme: { medias } }) => `
-  margin: 5.0rem 1.2rem 1.2rem;
+  margin: 0 1.2rem 0;
 
   @media ${medias.mobile} {
     margin: 1.2rem 0;

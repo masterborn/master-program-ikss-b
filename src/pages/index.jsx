@@ -78,6 +78,7 @@ Homepage.propTypes = {
   homepageData: PropTypes.shape({
     partners: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     basicContent: PropTypes.shape({
+      homepageMeta: PropTypes.shape({}),
       homepagePartnersText: PropTypes.shape({}),
       homepageTopSection: PropTypes.shape({}),
       homepageValues: PropTypes.shape({}),

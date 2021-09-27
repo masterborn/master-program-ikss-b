@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import IconButton from '@buttons/misc/IconButton';
-import PrimaryButton from '@buttons/primaryButton';
 import { ButtonBigText } from '@typography/buttonsText';
 import Logo from '@logos/BubbleLogo';
+import StyledPrimaryButton from '@generic/buttons/primaryButton/StyledPrimaryButton';
 import NavbarSocials from './NavbarSocials';
 
 export const StyledNavbar = styled.nav(
@@ -45,6 +45,7 @@ export const LinksContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: space-between;
 
   margin-left: 12.6rem;
 `;
@@ -75,9 +76,6 @@ export const StyledLogo = styled(Logo)(
 
 export const Label = styled.h3(
   ({ theme: { color }, isHighlighted }) => `
-  margin: 0 1.0rem;
-
-  width: fit-content;
 
   cursor: pointer;
 
@@ -103,9 +101,10 @@ export const StyledNavbarSocials = styled(NavbarSocials)`
   }
 `;
 
-export const ContactButton = styled(PrimaryButton)`
+export const ContactButton = styled(StyledPrimaryButton)`
   margin-left: auto;
   margin-right: 12rem;
+  min-width: 130px;
 `;
 
 export const HamburgerMenu = styled(IconButton)`

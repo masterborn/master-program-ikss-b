@@ -16,6 +16,7 @@ export const BottomCtaContainer = styled.div(
   @media ${medias.mobile} {
     height: auto;
     margin-top: ${isOnProjects ? '5.6rem' : '10.3rem'};
+    margin-bottom: ${isOnProjects ? '10.3rem' : '13.1rem'};
     width: 100%;
     padding: 0 2.4rem;
   }
@@ -24,20 +25,20 @@ export const BottomCtaContainer = styled.div(
 
 export const BottomCtaHeader = styled.h3(
   ({ theme: { medias } }) => `
-  margin-bottom: 3.2rem;
   ${Header3};
+  margin-bottom: 3.2rem;
   text-align: center;
   @media ${medias.mobile} {
-    margin-bottom: 1.6rem;
     ${Header4};
+    margin-bottom: 1.6rem;
   }
 `,
 );
 
 export const BottomCtaText = styled.p(
   ({ theme: { medias } }) => `
-  margin-bottom: 3.2rem;
   ${ParagraphBody};
+  margin-bottom: 3.2rem;
   text-align: center;
 
   @media ${medias.mobile} {

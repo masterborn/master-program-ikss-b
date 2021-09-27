@@ -54,7 +54,7 @@ export const HistoryTextContainer = styled.div`
 export const HistoryHeader = styled.h2(
   ({ theme: { medias } }) => `
   ${Header2};
-  margin: 3.2rem 0 1.6rem 0;
+  margin: 2.9rem 0 2.4rem 0;
   @media ${medias.mobile} {
     ${Header4};
   }

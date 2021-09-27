@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ButtonBigText } from '@typography/buttonsText';
+import { ButtonBigText, ButtonSmallText } from '@typography/buttonsText';
 import ScrollUpButton from '@buttons/ScrollUpButton';
 import Logo from '@logos/PlainLogo';
 import { ParagraphSmall } from '@typography/paragraphs';
@@ -50,36 +50,45 @@ export const Filler = styled.div(
 
 export const StyledSrollUpButton = styled(ScrollUpButton)(
   ({ theme: { medias }, isOnHomepage }) => `
+  margin-left: 49.9rem;
   position: absolute;
   top: ${isOnHomepage ? '-37.1rem' : '-4.7rem'};
-  right: 12.6rem;
+  
   z-index: 1;
   & > g:hover {
     cursor: pointer;
   }
 
   @media ${medias.mobile} {
-    top: -5.7rem;
-    right: 50%;
-    transform: translateX(50%);
+    transform: scale(0.625);
+    margin-left: 0;
+    position: relative;
+    top: -5.4rem;
+    margin-bottom: -11rem;
   }
 `,
 );
 
-export const Centered = styled.div`
+export const Centered = styled.div(
+  ({ theme: { medias }, isOnHomepage }) => `
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding-top: 5.6rem;
+  padding-top: ${isOnHomepage ? '10.1rem' : '5.6rem'};
   padding-bottom: 4.8rem;
   z-index: 1;
-`;
+
+  @media ${medias.mobile} {
+    padding-top: 4rem;
+  }
+`,
+);
 
 export const LinksContainer = styled.div(
   ({ theme: { medias } }) => `
-  width: fit-content;
+  width: 41.3rem;
 
   margin-bottom: 4.8rem;
 
@@ -87,41 +96,48 @@ export const LinksContainer = styled.div(
   justify-content: space-between;
 
   @media ${medias.mobile} {
+    width: 100%;
     height: 14.4rem;
+    margin-bottom: 4.1rem;
+
     flex-direction: column;
   }
 `,
 );
 
 export const Label = styled.h3(
-  ({ theme: { color } }) => `
-  min-width: fit-content;
-  margin: .0rem 3.2rem;
-
+  ({ theme: { color, medias } }) => `
   cursor: pointer;
 
   color: ${color.white};
   text-decoration: none;
   ${ButtonBigText}
   text-align: center;
+
+  @media ${medias.mobile} {
+    ${ButtonSmallText}
+  }
 `,
 );
 
 export const StyledSocials = styled(Socials)(
   ({ theme: { medias } }) => `
-  margin-bottom: 2.9rem;
+  width: 18.9rem;
 
-  a {
-    margin: .0rem 3.2rem;
-  }
+  margin-bottom: 5rem;
+
+  display: flex;
+  justify-content: space-between;
 
   @media ${medias.mobile} {
     width: 18.9rem;
-    display: flex;
-    justify-content: space-between;
+
+    margin-bottom: 4.2rem;
+
 
     a {
       margin: 0;
+      transform: scale(0.75);
     }
   }
 `,
@@ -142,7 +158,7 @@ export const Paragraph = styled.p(
 
   @media ${medias.mobile} {
     width: 30.0rem;
-    margin-top: 4.0rem;
+    margin-top: 4rem;
   }
 `,
 );

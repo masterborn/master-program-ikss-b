@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import Socials from '@icons/SocialsCollection';
-import { Header1, Header4 } from '@typography/headers';
+import { Header1, Header3 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const StyledHomepageHero = styled.section(
@@ -82,12 +82,13 @@ export const StyledSocials = styled(Socials)(
   border-radius: 1.6rem .0rem .0rem 1.6rem;
 
   @media ${medias.mobile} {
-    width: 80%;
+    width: calc(100% - 4.8rem);
+    min-width: 30rem;
     height: 8.0rem;
     margin-top: 4.0rem;
     margin-right: auto;
     margin-left: auto;
-    padding: 0;
+    padding: 2.4rem 4rem;
     justify-content: space-around;
     border-radius: 1.6rem;
   }
@@ -107,7 +108,7 @@ export const StyledSocials = styled(Socials)(
       margin-left: 2.4rem;
 
       @media ${medias.mobile} {
-        transform: scale(1.5);
+        transform: scale(1.33);
         margin: 0;
       }
     }
@@ -121,11 +122,13 @@ export const StyledSocials = styled(Socials)(
 
 export const Header = styled.h1(
   ({ theme: { medias } }) => `
-  width: 100%;
   ${Header1};
+  width: 512px;
 
   @media ${medias.mobile} {
-    ${Header4};
+    ${Header3};
+    width: 100%;
+    font-weight: 900;
   }
 `,
 );
@@ -136,15 +139,16 @@ export const HomepageHeroImage = styled.img`
 
 export const Paragraph = styled.p(
   ({ theme: { medias, color } }) => `
-  width: 100%;
-  margin: 3.2rem 0;
   ${ParagraphBody};
+  width: 400px;
+  margin: 3.2rem 0;
   color: ${color.steel};
 
   @media ${medias.mobile} {
+    ${ParagraphSmall};
+    width: 100%;
     margin: 2.4rem 0;
 
-    ${ParagraphSmall};
   }
 `,
 );

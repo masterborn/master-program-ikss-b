@@ -5,7 +5,7 @@ import { ParagraphBody } from '@typography/paragraphs';
 
 export const TeamTileContainer = styled.div(
   ({ theme: { medias } }) => `
-  margin: 16.4rem 0 0;
+  margin: 15.2rem 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
