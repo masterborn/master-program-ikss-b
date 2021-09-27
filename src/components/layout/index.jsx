@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
 import { useSelector } from 'react-redux';
+
+import ContactFormModal from '@contactForm/contactModal';
 import {
   StyledLayout,
   PageWrapper,
@@ -11,7 +13,6 @@ import {
 } from './Layout.styles';
 import Navbar from './navbar';
 import Footer from './footer';
-import ContactFormModal from '../contactForm/contactModal';
 
 const paths = [
   {
