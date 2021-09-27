@@ -29,7 +29,7 @@ const StyledPrimaryButton = styled.button(
 
   & > .icon {
     height: 1em;
-    margin-right: 0.6rem;
+    margin-right: 1.15rem;
   }
   &:hover {
     background-color: #2f95eb;
