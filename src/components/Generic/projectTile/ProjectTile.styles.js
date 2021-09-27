@@ -39,7 +39,6 @@ export const ProjectMediaContainer = styled.div(
   border-radius: 1.6rem 1.6rem 0 0;
   height: auto;
   width: 100%;
-  background-color: black;
   @media ${medias.mobile} {
     height: auto;
   }
