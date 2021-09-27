@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import IconButton from '@root/components/buttons/misc/IconButton';
-import PrimaryButton from '@root/components/buttons/primaryButton';
-import Socials from '@root/components/icons/SocialsCollection';
-import { ButtonBigText } from '@root/styles/typography/buttonsText';
+
+import IconButton from '@buttons/misc/IconButton';
+import PrimaryButton from '@buttons/primaryButton';
+import Socials from '@icons/SocialsCollection';
+import { ButtonBigText } from '@typography/buttonsText';
 
 export const SidebarContainer = styled.div(
   ({ isOpened }) => `
@@ -113,10 +114,19 @@ export const StyledSocials = styled(Socials)`
 
   margin-top: 4rem;
   margin-left: 5rem;
-  margin-right: auto;
+  margin-right: 5rem;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+
+  a {
+    width: 3.2rem;
+    margin-right: 2.4rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
   svg {
     transform: scale(1.33);

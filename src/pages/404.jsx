@@ -1,8 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
-import getPagesData from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
+
+import getPagesData from '@clients/contentful';
+import mapData from '@dataMappers/contentful';
+import Layout from '@layout';
 import {
   ErrorDescription,
   ErrorMessage,
@@ -10,8 +12,7 @@ import {
   GetBackButton,
   IKKSContainer,
   IKKSLogo,
-} from '@root/components/404Page/custom404.styles';
-import Link from 'next/link';
+} from '@404Page/custom404.styles';
 
 export async function getStaticProps() {
   const resJson = await getPagesData();
@@ -54,7 +55,7 @@ export default function Custom404({ custom404Data: { common } }) {
         </IKKSContainer>
         <ErrorMessage>ups, 404</ErrorMessage>
         <ErrorDescription>
-          Za każdym razem kiedy trafiasz na tę stronę, ktoś wymawia <span>„i-ka-ka-es”</span>
+          Za każdym razem kiedy trafiasz na tę stronę, ktoś wymawia <span>„i-ka-ka-es”</span>{' '}
           zamiast
           <b> „ikss”.</b>
         </ErrorDescription>

@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import getPagesData from '@root/clients/contentful';
-import mapData, { sortByOrder } from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
-import PartnersSection from '@root/components/home/partnersList/PartnersSection';
-import CooperationValuesSection from '@root/components/cooperation/valuesSection';
-import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
-import TopSection from '@root/components/topSection/TopSection';
+
+import getPagesData from '@clients/contentful';
+import mapData, { sortByOrder } from '@dataMappers/contentful';
+import Layout from '@layout';
+import PartnersSection from '@generic/partnersList/PartnersSection';
+import CooperationValuesSection from '@cooperation/valuesSection';
+import BottomCta from '@cta/bottomCta/BottomCta';
+import TopSection from '@topSection/TopSection';
+import CustomHead from '@customHead';
 
 export async function getStaticProps() {
   const resJson = await getPagesData();
@@ -37,6 +39,7 @@ export default function Cooperation({ cooperationData: { common, partners, basic
   const socials = { socialFacebook, socialLinkedin, socialInstagram, socialYoutube };
 
   const {
+    cooperationMeta,
     cooperationTopSection,
     cooperationLogosText: partnersText,
     cooperationTilesTitle: valuesTitle,
@@ -57,21 +60,24 @@ export default function Cooperation({ cooperationData: { common, partners, basic
   const orderedPartners = sortByOrder(partners);
 
   return (
-    <Layout
-      socials={socials}
-      footerText={footerText}
-      contactFormText={contactFormText}
-      tooltipText={contactFormTooltip}
-    >
-      <TopSection
-        isOnCooperation
-        topSectionContent={cooperationTopSection}
-        sectionId="współpraca"
-      />
-      <CooperationValuesSection valuesTiles={valuesTiles} valuesTitle={valuesTitle} />
-      <PartnersSection partners={orderedPartners} partnersText={partnersText} />
-      <BottomCta bottomCtaContent={cooperationBottomCta} />
-    </Layout>
+    <>
+      <CustomHead metaContent={cooperationMeta} />
+      <Layout
+        socials={socials}
+        footerText={footerText}
+        contactFormText={contactFormText}
+        tooltipText={contactFormTooltip}
+      >
+        <TopSection
+          isOnCooperation
+          topSectionContent={cooperationTopSection}
+          sectionId="współpraca"
+        />
+        <CooperationValuesSection valuesTiles={valuesTiles} valuesTitle={valuesTitle} />
+        <PartnersSection partners={orderedPartners} partnersText={partnersText} />
+        <BottomCta bottomCtaContent={cooperationBottomCta} />
+      </Layout>
+    </>
   );
 }
 
@@ -88,6 +94,7 @@ Cooperation.propTypes = {
     }).isRequired,
     partners: PropTypes.arrayOf(PropTypes.object).isRequired,
     basicContent: PropTypes.shape({
+      cooperationMeta: PropTypes.shape({}),
       cooperationLogosText: PropTypes.shape({}),
       cooperationTilesTitle: PropTypes.shape({}),
       cooperationTile1: PropTypes.shape({}),

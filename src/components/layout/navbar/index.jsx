@@ -2,20 +2,21 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleModal } from '@root/redux/actions/modalActions';
-import { HamburgerMenuIcon } from '@root/components/icons/misc';
+
+import { toggleModal } from '@redux/actions/modalActions';
+import { HamburgerMenuIcon } from '@icons/misc';
+import handleContactButton from '@generic/misc/contactFormActions';
+import NavbarSocials from './navbarSocials';
 import {
   StyledNavbar,
-  FooterWrapper,
+  NavbarWrapper,
   LinksContainer,
   StyledLogoLink,
   StyledLogo,
-  Label,
-  StyledNavbarSocials,
   ContactButton,
   HamburgerMenu,
+  PageLink,
 } from './Navbar.styles';
-import handleContactFormButton from './contactFormButton';
 import Sidebar from './sidebar';
 
 // Form on homepage must have 'contact-form' id
@@ -29,12 +30,12 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
   const navbarHeight = isMobile ? 56 : 88;
 
   const handleClickContactButton = () =>
-    handleContactFormButton(currPathname, navbarHeight, openContactModal);
+    handleContactButton(currPathname, navbarHeight, openContactModal);
 
   const toggleSidebar = () => setIsSidebarOpened((prevState) => !prevState);
   return (
     <StyledNavbar>
-      <FooterWrapper>
+      <NavbarWrapper>
         <Link href="/" passHref>
           <StyledLogoLink href>
             <StyledLogo />
@@ -48,7 +49,7 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
               handleCloseSidebar={toggleSidebar}
               paths={paths}
               currPathname={currPathname}
-              handleContactFormButton={handleClickContactButton}
+              handleContactButton={handleClickContactButton}
               socialsLinks={socials}
             />
           </>
@@ -56,13 +57,15 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
           <>
             <LinksContainer>
               {paths.map(({ name, path }) => (
-                <Link href={path} key={path}>
-                  <Label isHighlighted={currPathname === path}>{name}</Label>
+                <Link passHref href={path} key={path}>
+                  <PageLink href isHighlighted={currPathname === path}>
+                    {name}
+                  </PageLink>
                 </Link>
               ))}
             </LinksContainer>
 
-            <StyledNavbarSocials
+            <NavbarSocials
               socialsLinks={socials}
               navbarHeight={navbarHeight}
               homepageHeroRef={homepageHeroRef}
@@ -71,7 +74,7 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
             <ContactButton onClick={handleClickContactButton}>Skontaktuj się</ContactButton>
           </>
         )}
-      </FooterWrapper>
+      </NavbarWrapper>
     </StyledNavbar>
   );
 }

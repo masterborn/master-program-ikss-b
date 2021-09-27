@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+
 import {
   StyledFooter,
   FooterWrapper,
@@ -31,7 +32,7 @@ export default function Footer({ socials, footerText, paths, isOnHomepage }) {
       <FooterWrapper>
         <StyledSrollUpButton isOnHomepage={isOnHomepage} onClick={scrollUp} />
 
-        <Centered>
+        <Centered isOnHomepage={isOnHomepage}>
           <LinksContainer>
             {paths.map(({ name, path }) => (
               <Link href={path} key={path}>

@@ -1,5 +1,6 @@
-import { ButtonBigText } from '@root/styles/typography/buttonsText';
 import styled from 'styled-components';
+
+import { ButtonBigText } from '@typography/buttonsText';
 
 export const ProjectsSwitchContainer = styled.div(
   ({ theme: { medias, color }, isOnGrid }) => `
@@ -12,7 +13,7 @@ export const ProjectsSwitchContainer = styled.div(
   border-radius: 2.6rem;
 
   @media ${medias.mobile} {
-    margin-bottom: 2.4rem;
+    margin-bottom: ${isOnGrid ? '5.9rem' : '2.4rem'};
     background: ${isOnGrid ? 'iherit' : 'none'};
     height: auto;
     flex-wrap: wrap;
@@ -36,12 +37,17 @@ export const DateSwitchButton = styled.button(
   ${ButtonBigText}
   cursor: pointer;
 
+  &:hover{
+    background-color: ${!clicked && color.blueTints.blue05};
+  }
+
   @media ${medias.mobile} {
     height: 3.1rem;
     width: 8.4rem;
     padding: .9rem 1.6rem;
     font-size: 1.0rem;
     line-height: 1.3rem;
+    font-weight: 700;
   }
 `,
 );
@@ -63,15 +69,21 @@ export const SwitchButton = styled.button(
   font-size: 1.6rem;
   cursor: pointer;
 
+  &:hover{
+    background-color: ${!clicked && color.blueTints.blue05};
+  }
+
   @media ${medias.mobile} {
     height: 3.1rem;
-    width: auto;
+    width: 45%;
     padding: .9rem 1.6rem;
     font-size: 1.0rem;
     line-height: 1.3rem;
+
     &:first-child {
       margin: 0 100% 1.2rem 100%;
-      min-width: max-content;
+      width: 60%;
+      min-width: 46%;
     }
     &:last-child {
       margin: 0 0 0 1.2rem;
@@ -79,7 +91,6 @@ export const SwitchButton = styled.button(
   }
   @media (max-width: 38.0rem) {
     min-width: 9.0rem;
-    max-width: 12.0rem;
   }
 `,
 );

@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import getPagesData from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
-import MissionTile from '@root/components/aboutUs/MissionTile';
-import HistoryTile from '@root/components/aboutUs/HistoryTile';
-import TeamTile from '@root/components/aboutUs/TeamTile';
-import BoardMembersSection from '@root/components/aboutUs/boardMembersSection';
-import BottomCta from '@root/components/CallToAction/bottomCta/BottomCta';
-import TopSection from '@root/components/topSection/TopSection';
+
+import getPagesData from '@clients/contentful';
+import mapData from '@dataMappers/contentful';
+import Layout from '@layout';
+import MissionTile from '@aboutUs/MissionTile';
+import HistoryTile from '@aboutUs/HistoryTile';
+import TeamTile from '@aboutUs/TeamTile';
+import BoardMembersSection from '@aboutUs/boardMembersSection';
+import BottomCta from '@cta/bottomCta/BottomCta';
+import TopSection from '@topSection/TopSection';
+import CustomHead from '@customHead';
 
 export async function getStaticProps() {
   const resJson = await getPagesData();
@@ -39,6 +41,7 @@ export default function AboutUs({ aboutUsData: { common, basicContent, boardMemb
   } = common;
   const socials = { socialFacebook, socialLinkedin, socialInstagram, socialYoutube };
   const {
+    aboutUsMeta,
     aboutUsTopSection,
     aboutUsContent1: missionContent,
     aboutUsContent2: historyContent,
@@ -47,23 +50,26 @@ export default function AboutUs({ aboutUsData: { common, basicContent, boardMemb
     aboutUsBottomCta,
   } = basicContent;
   return (
-    <Layout
-      socials={socials}
-      footerText={footerText}
-      contactFormText={contactFormText}
-      tooltipText={contactFormTooltip}
-    >
-      <TopSection topSectionContent={aboutUsTopSection} sectionId="o-nas" />
+    <>
+      <CustomHead metaContent={aboutUsMeta} />
+      <Layout
+        socials={socials}
+        footerText={footerText}
+        contactFormText={contactFormText}
+        tooltipText={contactFormTooltip}
+      >
+        <TopSection topSectionContent={aboutUsTopSection} sectionId="o-nas" />
 
-      <MissionTile missionContent={missionContent} />
-      <HistoryTile historyContent={historyContent} />
-      <BoardMembersSection
-        boardMembersSectionText={aboutUsBoardMembersText}
-        boardMembers={boardMembers}
-      />
-      <TeamTile teamContent={teamContent} />
-      <BottomCta bottomCtaContent={aboutUsBottomCta} />
-    </Layout>
+        <MissionTile missionContent={missionContent} />
+        <HistoryTile historyContent={historyContent} />
+        <BoardMembersSection
+          boardMembersSectionText={aboutUsBoardMembersText}
+          boardMembers={boardMembers}
+        />
+        <TeamTile teamContent={teamContent} />
+        <BottomCta bottomCtaContent={aboutUsBottomCta} />
+      </Layout>
+    </>
   );
 }
 
@@ -79,6 +85,7 @@ AboutUs.propTypes = {
       footerText: PropTypes.shape({}),
     }).isRequired,
     basicContent: PropTypes.shape({
+      aboutUsMeta: PropTypes.shape({}),
       aboutUsContent1: PropTypes.shape({}),
       aboutUsContent2: PropTypes.shape({}),
       aboutUsContent3: PropTypes.shape({}),

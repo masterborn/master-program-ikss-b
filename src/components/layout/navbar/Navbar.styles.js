@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import IconButton from '@root/components/buttons/misc/IconButton';
-import { ButtonBigText } from '@root/styles/typography/buttonsText';
-import Logo from '../../logos/BubbleLogo';
-import NavbarSocials from './NavbarSocials';
-import PrimaryButton from '../../buttons/primaryButton';
+
+import IconButton from '@buttons/misc/IconButton';
+import { ButtonBigText } from '@typography/buttonsText';
+import Logo from '@logos/BubbleLogo';
+import PrimaryButton from '@buttons/primaryButton/StyledPrimaryButton';
 
 export const StyledNavbar = styled.nav(
   ({ theme: { medias, color } }) => `
@@ -29,7 +29,7 @@ export const StyledNavbar = styled.nav(
 `,
 );
 
-export const FooterWrapper = styled.div`
+export const NavbarWrapper = styled.div`
   width: 100%;
   max-width: 144rem;
   display: flex;
@@ -37,13 +37,15 @@ export const FooterWrapper = styled.div`
   align-items: center;
 `;
 
-export const LinksContainer = styled.div`
+export const LinksContainer = styled.ul`
   width: 41.3rem;
   height: 2rem;
 
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  list-style: none;
+  justify-content: space-between;
 
   margin-left: 12.6rem;
 `;
@@ -72,39 +74,27 @@ export const StyledLogo = styled(Logo)(
 `,
 );
 
-export const Label = styled.h3(
+export const PageLink = styled.a(
   ({ theme: { color }, isHighlighted }) => `
-  margin: 0 1.0rem;
-
-  width: fit-content;
-
-  cursor: pointer;
-
-  text-align: center;
-  
   ${ButtonBigText}
 
+  margin: 0 1.0rem;
+  width: fit-content;
+  cursor: pointer;
+  text-align: center;
   text-decoration: none;
-
   color: ${isHighlighted ? color.navy : color.steel};
-`,
+
+  &:hover {
+      opacity: 0.73;
+  }
+  `,
 );
 
-export const StyledNavbarSocials = styled(NavbarSocials)`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-
-  margin-left: 19.9rem;
-
-  & > a {
-    margin: 0rem 2rem;
-  }
-`;
-
 export const ContactButton = styled(PrimaryButton)`
-  margin-left: auto;
+  margin-left: 8.9rem;
   margin-right: 12rem;
+  min-width: 130px;
 `;
 
 export const HamburgerMenu = styled(IconButton)`

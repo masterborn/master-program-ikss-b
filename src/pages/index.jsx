@@ -1,14 +1,16 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
+
+import mapData from '@dataMappers/contentful';
+import Layout from '@layout';
+import ProjectsSection from '@homepage/projects/ProjectsSection';
+import PartnersSection from '@generic/partnersList/PartnersSection';
+import sortHomepagePartners from '@dataMappers/partners';
+import HomepageHero from '@homepage/hero';
+import ValuesSection from '@homepage/valuesSection';
+import ContactForm from '@generic/contactForm';
+import CustomHead from '@customHead';
 import getPagesData from '@root/clients/contentful';
-import mapData from '@root/dataMappers/contentful';
-import Layout from '@root/components/layout';
-import ProjectsSection from '@root/components/home/projects/ProjectsSection';
-import PartnersSection from '@root/components/home/partnersList/PartnersSection';
-import sortHomepagePartners from '@root/dataMappers/partners';
-import HomepageHero from '../components/home/hero';
-import ValuesSection from '../components/home/valuesSection';
-import ContactForm from '../components/contactForm';
 
 export async function getStaticProps() {
   const resJson = await getPagesData();
@@ -32,6 +34,7 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
   const homepageHeroRef = useRef();
 
   const {
+    homepageMeta,
     homepagePartnersText,
     homepageTopSection: homepageHeroContent,
     homepageValues,
@@ -53,23 +56,26 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
   const homepagePartners = sortHomepagePartners(partners);
 
   return (
-    <Layout
-      socials={socials}
-      footerText={footerText}
-      contactFormText={contactFormText}
-      tooltipText={contactFormTooltip}
-      homepageHeroRef={homepageHeroRef}
-    >
-      <HomepageHero
-        homepageHeroContent={homepageHeroContent}
+    <>
+      <CustomHead metaContent={homepageMeta} />
+      <Layout
         socials={socials}
+        footerText={footerText}
+        contactFormText={contactFormText}
+        tooltipText={contactFormTooltip}
         homepageHeroRef={homepageHeroRef}
-      />
-      <ValuesSection valuesText={homepageValues} valuesTiles={valuesTiles} />
-      <ProjectsSection projects={projects} />
-      <PartnersSection partners={homepagePartners} partnersText={homepagePartnersText} />
-      <ContactForm contactFormText={contactFormText} tooltipText={contactFormTooltip} />
-    </Layout>
+      >
+        <HomepageHero
+          homepageHeroContent={homepageHeroContent}
+          socials={socials}
+          homepageHeroRef={homepageHeroRef}
+        />
+        <ValuesSection valuesText={homepageValues} valuesTiles={valuesTiles} />
+        <ProjectsSection projects={projects} />
+        <PartnersSection partners={homepagePartners} partnersText={homepagePartnersText} />
+        <ContactForm contactFormText={contactFormText} tooltipText={contactFormTooltip} />
+      </Layout>
+    </>
   );
 }
 
@@ -77,6 +83,7 @@ Homepage.propTypes = {
   homepageData: PropTypes.shape({
     partners: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     basicContent: PropTypes.shape({
+      homepageMeta: PropTypes.shape({}),
       homepagePartnersText: PropTypes.shape({}),
       homepageTopSection: PropTypes.shape({}),
       homepageValues: PropTypes.shape({}),
