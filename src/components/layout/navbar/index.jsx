@@ -13,9 +13,10 @@ import {
   LinksContainer,
   StyledLogoLink,
   StyledLogo,
-  Label,
+  StyledNavbarSocials,
   ContactButton,
   HamburgerMenu,
+  PageLink,
 } from './Navbar.styles';
 import Sidebar from './sidebar';
 
@@ -57,8 +58,10 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
           <>
             <LinksContainer>
               {paths.map(({ name, path }) => (
-                <Link href={path} key={path}>
-                  <Label isHighlighted={currPathname === path}>{name}</Label>
+                <Link passHref href={path} key={path}>
+                  <PageLink href isHighlighted={currPathname === path}>
+                    {name}
+                  </PageLink>
                 </Link>
               ))}
             </LinksContainer>

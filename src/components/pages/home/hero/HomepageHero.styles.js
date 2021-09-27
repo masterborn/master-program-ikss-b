@@ -4,7 +4,7 @@ import Socials from '@icons/SocialsCollection';
 import { Header1, Header3 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
-export const StyledHomepageHero = styled.section(
+export const StyledHomepageHero = styled.header(
   ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;
@@ -129,6 +129,8 @@ export const StyledSocials = styled(Socials)(
 
 export const Header = styled.h1(
   ({ theme: { medias } }) => `
+  width: 100%;
+  max-width: 512px;
   ${Header1};
   width: 512px;
 

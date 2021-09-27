@@ -18,7 +18,7 @@ export default function BoardMembersSection({ boardMembersSectionText, boardMemb
 
   const isMobile = useSelector((state) => state.isMobile);
   return (
-    <StyledBoardMembersSection id="board-members">
+    <StyledBoardMembersSection id="zarząd">
       <Title>{title}</Title>
       {Body}
       <BoardMembersContainer isDiamond={isDiamondLayout}>

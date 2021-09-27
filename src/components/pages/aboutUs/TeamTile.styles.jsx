@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Header3, Header4 } from '@typography/headers';
 import { ParagraphBody } from '@typography/paragraphs';
 
-export const TeamTileContainer = styled.div(
+export const TeamTileContainer = styled.section(
   ({ theme: { medias } }) => `
   margin: 15.2rem 0 0;
   display: flex;

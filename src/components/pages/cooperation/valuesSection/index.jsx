@@ -12,7 +12,7 @@ export default function CooperationValuesSection({ valuesTiles, valuesTitle }) {
   const { title } = valuesTitle;
 
   return (
-    <CooperationValuesSectionContainer>
+    <CooperationValuesSectionContainer id="benefity">
       <Title>{title}</Title>
       <CooperationValuesTilesContainer>
         {valuesTiles.map((cooperationValueTileData) => (

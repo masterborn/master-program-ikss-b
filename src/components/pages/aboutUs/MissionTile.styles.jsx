@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Header2, Header4 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
-export const MissionContainer = styled.div(
+export const MissionContainer = styled.section(
   ({ theme: { medias } }) => `
   display: flex;
   width: 119.7rem;

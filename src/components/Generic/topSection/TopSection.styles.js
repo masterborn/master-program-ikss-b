@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Header1, Header3 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
-export const TopSectionContainer = styled.section(
+export const TopSectionContainer = styled.header(
   ({ theme: { medias }, isOnCooperationPage }) => `
   display: flex;
   flex-direction: column;

@@ -13,7 +13,7 @@ export default function BottomCta({ bottomCtaContent, isOnProjects }) {
   const { title, linkCaption: buttonText, text1: richText } = bottomCtaContent;
   const CtaDescription = convertRichTextToReactComponent(BottomCtaText, richText);
   return (
-    <BottomCtaContainer isOnProjects={isOnProjects}>
+    <BottomCtaContainer className="kontakt" isOnProjects={isOnProjects}>
       {title && <BottomCtaHeader>{title}</BottomCtaHeader>}
       {richText && CtaDescription}
       {buttonText && <CtaButton isBig buttonCaption={buttonText} />}

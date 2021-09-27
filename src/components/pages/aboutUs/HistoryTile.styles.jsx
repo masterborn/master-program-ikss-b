@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Header2, Header4 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
-export const HistoryTileContainer = styled.div(
+export const HistoryTileContainer = styled.section(
   ({ theme: { medias } }) => `
   display: flex;
   height: auto;

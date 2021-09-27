@@ -29,7 +29,7 @@ export default function HomepageHero({ homepageHeroContent, socials, homepageHer
   const Description = convertRichTextToReactComponent(Paragraph, richText);
   const handleClick = () => scrollToContactForm(navbarHeight);
   return (
-    <StyledHomepageHero ref={homepageHeroRef}>
+    <StyledHomepageHero id="hero" ref={homepageHeroRef}>
       <Content>
         <TextSection>
           <Header>{sectionHeader}</Header>
