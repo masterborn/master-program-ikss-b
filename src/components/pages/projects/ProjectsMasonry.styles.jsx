@@ -8,14 +8,7 @@ export const Masonry = styled.div(
 
   width: 120.0rem;
 
-  &&::before,
-  &&:after {
-    content: '';
-    flex-basis: 100%;
-    width: 0;
-    order: 1;
-  }
- 
+
 
   @media ${medias.mobile} {
     display: flex;

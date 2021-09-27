@@ -8,7 +8,8 @@ export const MidCtaContainer = styled.div(
   width: 120.0rem;
   height: 35.2rem;
   column-span: all;
-
+  break-inside: avoid;
+  transform: translateZ(0px);
   @media ${medias.mobile} {
     order: ${order};
     width: 100%;

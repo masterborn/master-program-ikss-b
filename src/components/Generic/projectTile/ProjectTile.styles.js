@@ -6,8 +6,10 @@ import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const ProjectArticle = styled.article(
   ({ theme: { medias }, isOnGrid, order }) => `
-  display: inline-block;
+  display: block;
   border-radius: 1.6rem;
+  break-inside: avoid;
+    transform: translateZ(0px);
   width: ${isOnGrid ? '58.8rem' : '99.7rem'};
   height: auto;
   margin-bottom: ${isOnGrid ? '2.4rem' : '5.6rem'};
@@ -31,13 +33,7 @@ export const ProjectArticle = styled.article(
       display: flex;
       justify-content: center;
     }
-  }
-  &:nth-child(2n) {
-    order: ${isOnGrid && 2};
-  }
-  &:nth-child(2n + 1) {
-    order: ${isOnGrid && 1};
-  }
+ 
   @media ${medias.mobile} {
     width: 100%;
     &:nth-child(n) {
