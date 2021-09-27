@@ -33,7 +33,6 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
   const homepageHeroRef = useRef();
 
   const {
-    homepageMeta,
     homepagePartnersText,
     homepageTopSection: homepageHeroContent,
     homepageValues,
@@ -55,23 +54,23 @@ export default function Homepage({ homepageData: { partners, basicContent, commo
   const homepagePartners = sortHomepagePartners(partners);
 
   return (
-      <Layout
+    <Layout
+      socials={socials}
+      footerText={footerText}
+      contactFormText={contactFormText}
+      tooltipText={contactFormTooltip}
+      homepageHeroRef={homepageHeroRef}
+    >
+      <HomepageHero
+        homepageHeroContent={homepageHeroContent}
         socials={socials}
-        footerText={footerText}
-        contactFormText={contactFormText}
-        tooltipText={contactFormTooltip}
         homepageHeroRef={homepageHeroRef}
-      >
-        <HomepageHero
-          homepageHeroContent={homepageHeroContent}
-          socials={socials}
-          homepageHeroRef={homepageHeroRef}
-        />
-        <ValuesSection valuesText={homepageValues} valuesTiles={valuesTiles} />
-        <ProjectsSection projects={projects} />
-        <PartnersSection partners={homepagePartners} partnersText={homepagePartnersText} />
-        <ContactForm contactFormText={contactFormText} tooltipText={contactFormTooltip} />
-      </Layout>
+      />
+      <ValuesSection valuesText={homepageValues} valuesTiles={valuesTiles} />
+      <ProjectsSection projects={projects} />
+      <PartnersSection partners={homepagePartners} partnersText={homepagePartnersText} />
+      <ContactForm contactFormText={contactFormText} tooltipText={contactFormTooltip} />
+    </Layout>
   );
 }
 
