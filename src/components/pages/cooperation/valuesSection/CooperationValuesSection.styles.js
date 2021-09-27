@@ -45,7 +45,7 @@ export const CooperationValuesTilesContainer = styled.div(
 
 export const CooperationValueTile = styled(ValuesTile)(
   ({ theme: { medias } }) => `
-  margin: 0 1.2rem 0;
+  margin: 2.4rem 1.2rem 0;
 
   @media ${medias.mobile} {
     margin: 1.2rem 0;

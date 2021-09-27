@@ -8,7 +8,7 @@ import MasonryLayout from './MasonryLayout/MasonryLayout';
 
 export default function ProjectsMasonry({ projectsData, midCtaContent }) {
   const projectsCollection = sortProjectsByYear(projectsData);
-  const [currentProjects, setCurrentProjects] = useState(projectsCollection[1].slice(0, 5));
+  const [currentProjects, setCurrentProjects] = useState(projectsCollection[0]);
 
   function switchDisplayedProjects({ target }) {
     const index = target.value;
