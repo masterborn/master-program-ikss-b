@@ -10,7 +10,7 @@ import sortHomepagePartners from '@dataMappers/partners';
 import HomepageHero from '@homepage/hero';
 import ValuesSection from '@homepage/valuesSection';
 import ContactForm from '@generic/contactForm';
-import CustomHead from '@root/components/CustomHead/CustomHead';
+import CustomHead from '@customHead';
 
 export async function getStaticProps() {
   const resJson = await getPagesDataMockup();
