@@ -12,6 +12,7 @@ export const BoardMemberTileWrapper = styled.div(
     isDiamond &&
     `
     display: inline-block;
+    transform: translateZ(0);
     &:nth-child(1){
       margin-top: 26.4rem;
     }
