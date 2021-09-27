@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import { Header1, Header3 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const TopSectionContainer = styled.header(
@@ -31,11 +30,9 @@ export const TopSectionImage = styled.img(
 
 export const TopSectionHeader = styled.h1(
   ({ theme: { medias } }) => `
-  ${Header1};
   margin-top: 1.6rem;
 
   @media ${medias.mobile} {
-    ${Header3};
     margin-top: .8rem;
   }
 `,

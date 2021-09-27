@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header3, Header5 } from '@typography/headers';
+import { Header5 } from '@typography/headers';
 
 export const MidCtaContainer = styled.div(
   ({ theme: { medias }, order }) => `
@@ -45,7 +45,6 @@ export const CtaOverlay = styled.div(
 export const MidCtaHeader = styled.h3(
   ({ theme: { medias } }) => `
   margin-bottom: 3.2rem;
-  ${Header3};
   text-align: center;
   @media ${medias.mobile} {
     width: 100%;

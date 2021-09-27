@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header3, Header4 } from '@typography/headers';
+import { Header4 } from '@typography/headers';
 import { ParagraphBody } from '@typography/paragraphs';
 
 export const BottomCtaContainer = styled.div(
@@ -25,7 +25,6 @@ export const BottomCtaContainer = styled.div(
 
 export const BottomCtaHeader = styled.h3(
   ({ theme: { medias } }) => `
-  ${Header3};
   margin-bottom: 3.2rem;
   text-align: center;
   @media ${medias.mobile} {

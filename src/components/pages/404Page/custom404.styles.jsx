@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import StyledPrimaryButton from '@buttons/primaryButton/StyledPrimaryButton';
-import { Header1, Header2 } from '@typography/headers';
+import { Header2 } from '@typography/headers';
 import { ParagraphSmall } from '@typography/paragraphs';
 import IKKSErrorImage from './IKKSErrorImage';
 
@@ -53,8 +53,6 @@ export const IKKSLogo = styled(IKKSErrorImage)(
 export const ErrorMessage = styled.h1(
   ({ theme: { medias } }) => `
   margin-bottom: 3.2rem;
-
-  ${Header1};
   @media ${medias.mobile} {
     margin-bottom: 2.4rem;
     ${Header2};

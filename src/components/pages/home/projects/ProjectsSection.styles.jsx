@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header3, Header4 } from '@typography/headers';
+import { Header4 } from '@typography/headers';
 
 export const ProjectSection = styled.section(
   ({ theme: { medias } }) => `
@@ -34,7 +34,6 @@ export const ProjectSection = styled.section(
 export const SectionHeader = styled.h3(
   ({ theme: { medias } }) => `
   margin-bottom: 3.2rem;
-  ${Header3};
 
   @media ${medias.mobile} {
     ${Header4};

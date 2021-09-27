@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header2, Header4 } from '@typography/headers';
+import { Header4 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const MissionContainer = styled.section(
@@ -48,7 +48,6 @@ export const MissionTextContainer = styled.div(
 );
 export const MissionHeader = styled.h2(
   ({ theme: { medias } }) => `
-  ${Header2};
   margin-bottom: 2.4rem;
   @media ${medias.mobile} {
     ${Header4};

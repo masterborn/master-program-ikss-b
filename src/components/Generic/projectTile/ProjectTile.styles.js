@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { ButtonSmallText } from '@typography/buttonsText';
-import { Header4, Header5 } from '@typography/headers';
+import { Header5 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const ProjectArticle = styled.article(
@@ -93,7 +93,6 @@ export const ProjectDate = styled.h5(
 
 export const ProjectTitle = styled.h4(
   ({ theme: { medias } }) => `
-  ${Header4};
   margin: 0 2.4rem 0 0;
   @media ${medias.mobile} {
     ${Header5};
