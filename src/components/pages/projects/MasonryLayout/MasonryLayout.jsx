@@ -23,12 +23,18 @@ export default function MasonryLayout({ projects, midCtaContent }) {
   const sortedProjects = showCta ? sortWithCta(projects) : sortToColumns(projects);
 
   return (
-    <Masonry>
+    <Masonry showSingleProject={projects.length === 1}>
       {sortedProjects.map((project, index) => {
         const order = projects.findIndex(({ title }) => title === sortedProjects[index].title);
         return (
           <React.Fragment key={project.title}>
-            <ProjectTile showCta={showCta} order={order} isOnGrid project={project} />
+            <ProjectTile
+              projectsCount={projects.length}
+              showCta={showCta}
+              order={order}
+              isOnGrid
+              project={project}
+            />
             {index === 3 && showCta && <MidCta order={order} midCtaContent={midCtaContent} />}
           </React.Fragment>
         );

@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
 export const Masonry = styled.div(
-  ({ theme: { medias } }) => `
+  ({ theme: { medias }, showSingleProject }) => `
   display:  block;
   column-count: 2;
   column-gap: 24px;
-
   width: 120.0rem;
-
-
+  ${
+    showSingleProject &&
+    `
+    display: flex;
+    justify-content: center;`
+  };
 
   @media ${medias.mobile} {
     display: flex;
