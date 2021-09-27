@@ -52,6 +52,7 @@ export const BoardMemberTileAvatar = styled.div(
 export const BoardMemberTileTextContent = styled.div`
   width: 13rem;
   margin-left: 2.4rem;
+  margin-right: 6.2rem;
   display: flex;
   flex-direction: column;
 
@@ -60,7 +61,6 @@ export const BoardMemberTileTextContent = styled.div`
   @media (max-width: 35.5rem) {
     width: fit-content;
     margin-left: 2.4rem;
-    margin-right: 6rem;
   }
 `;
 

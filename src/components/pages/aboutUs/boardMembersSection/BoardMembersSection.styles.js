@@ -64,8 +64,10 @@ export const BoardMembersContainer = styled.div(
   }
 
   @media ${medias.mobile} {
-    display: flex;
+    width: 100%;
+    min-width: 30rem;
     margin-top: 5.7rem;
+    display: flex;
     flex-direction: column;
   }
 `,

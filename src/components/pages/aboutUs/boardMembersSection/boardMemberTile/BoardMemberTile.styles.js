@@ -33,11 +33,14 @@ export const BoardMemberTileWrapper = styled.div(
     flex-direction: column;
     align-items: center;
 
-    &:nth-child(1){
+    &:first-child{
       margin-top: 0;
     }
     &:nth-child(6){
       margin-top: 1.2rem
+    }
+    &:last-child{
+      margin-bottom: 0;
     }
   }
 `,
@@ -46,14 +49,14 @@ export const BoardMemberTileWrapper = styled.div(
 const toggleButtonOnCollapsedTile = css`
   position: absolute;
   top: 50%;
-  right: 4rem;
+  right: 2rem;
 
   transform: translateY(-50%);
 `;
 const toggleButtonOnExpandedTile = css`
   position: absolute;
   top: 2.1rem;
-  right: 4rem;
+  right: 2rem;
 
   transform: rotate(180deg);
 `;

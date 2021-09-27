@@ -14,7 +14,6 @@ import {
   RoleText,
   ContactContainer,
   ContactLink,
-  ContactText,
   LinkedInButton,
 } from './BoardMemberTile.styles';
 
@@ -58,7 +57,7 @@ export default function BoardMemberTile({ data, isMobile, isDiamond }) {
 
           {email && (
             <ContactLink href={`mailto:${email}`} isBottom>
-              <EmailIcon /> <ContactText>{email}</ContactText>
+              <EmailIcon /> {email}
             </ContactLink>
           )}
         </ContactContainer>
