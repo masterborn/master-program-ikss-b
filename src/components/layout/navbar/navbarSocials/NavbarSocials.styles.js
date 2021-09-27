@@ -7,7 +7,7 @@ export const NavbarSocialsContainer = styled.div(
     opacity:${isHidden ? '0' : '1'};
     z-index: ${isHidden ? '-1' : '1'};
 
-    transition: opacity ease 0.4s;
+    transition: opacity ease 0.2s;
   `,
 );
 

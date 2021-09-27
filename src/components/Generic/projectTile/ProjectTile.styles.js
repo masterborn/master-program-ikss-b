@@ -5,8 +5,8 @@ import { Header4, Header5 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const ProjectArticle = styled.article(
-  ({ theme: { medias }, isOnGrid, order }) => `
-  display: inline-block;
+  ({ theme: { medias }, isOnGrid, order, showCta }) => `
+  display: ${showCta ? 'inline-block' : 'block'};
   border-radius: 1.6rem;
   break-inside: avoid;
     transform: translateZ(0px);
@@ -19,9 +19,6 @@ export const ProjectArticle = styled.article(
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
   order: ${order};
 
-  &:nth-child(2){
-    display: block;
-  }
   @media ${medias.mobile} {
     width: 100%;
     margin-bottom: ${isOnGrid ? '2.4rem' : '3.2rem'};

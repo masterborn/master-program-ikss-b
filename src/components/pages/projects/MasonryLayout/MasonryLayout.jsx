@@ -28,7 +28,7 @@ export default function MasonryLayout({ projects, midCtaContent }) {
         const order = projects.findIndex(({ title }) => title === sortedProjects[index].title);
         return (
           <React.Fragment key={project.title}>
-            <ProjectTile order={order} isOnGrid project={project} />
+            <ProjectTile showCta={showCta} order={order} isOnGrid project={project} />
             {index === 3 && showCta && <MidCta order={order} midCtaContent={midCtaContent} />}
           </React.Fragment>
         );
