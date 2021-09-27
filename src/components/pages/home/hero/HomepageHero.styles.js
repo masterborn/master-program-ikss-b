@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import Socials from '@icons/SocialsCollection';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
+import { Header3 } from '@typography/headers';
 
 export const StyledHomepageHero = styled.header(
   ({ theme: { medias } }) => `
@@ -132,7 +133,7 @@ export const Header = styled.h1(
 
   @media ${medias.mobile} {
     width: 100%;
-    font-weight: 900;
+    ${Header3};
   }
 `,
 );
