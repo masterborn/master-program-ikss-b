@@ -21,7 +21,6 @@ import {
   ContactFormTitle,
   ContactFormDescription,
   Form,
-  ContactFormLabel,
   ContactFormLabelParagraph,
   InputRow,
   NameInput,
@@ -126,8 +125,8 @@ export default function ContactForm({
         </TopSection>
 
         <Form onSubmit={handleSubmit}>
-          <InputRow spaceBetween>
-            <ContactFormLabel htmlFor="firstName">
+          <InputRow spaceBetween firstRow>
+            <label htmlFor="firstName">
               <ContactFormLabelParagraph>Imię</ContactFormLabelParagraph>
               <NameInput
                 name="firstName"
@@ -140,8 +139,8 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.firstName.message}
               />
-            </ContactFormLabel>
-            <ContactFormLabel htmlFor="lastName">
+            </label>
+            <label htmlFor="lastName">
               <ContactFormLabelParagraph>Nazwisko</ContactFormLabelParagraph>
               <NameInput
                 name="lastName"
@@ -154,11 +153,11 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.lastName.message}
               />
-            </ContactFormLabel>
+            </label>
           </InputRow>
 
           <InputRow>
-            <ContactFormLabel htmlFor="email">
+            <label htmlFor="email">
               <ContactFormLabelParagraph>Adres email</ContactFormLabelParagraph>
               <FullWidthInput
                 name="email"
@@ -171,11 +170,11 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.email.message}
               />
-            </ContactFormLabel>
+            </label>
           </InputRow>
 
           <InputRow>
-            <ContactFormLabel htmlFor="title">
+            <label htmlFor="title">
               <ContactFormLabelParagraph>Temat</ContactFormLabelParagraph>
               <FullWidthInput
                 name="title"
@@ -188,11 +187,11 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.title.message}
               />
-            </ContactFormLabel>
+            </label>
           </InputRow>
 
           <InputRow>
-            <ContactFormLabel htmlFor="content">
+            <label htmlFor="content">
               <ContactFormLabelParagraph>Treść</ContactFormLabelParagraph>
               <ContentInput
                 name="content"
@@ -204,7 +203,7 @@ export default function ContactForm({
                 disabled={disableInputs}
                 errorTooltipText={validatedInputs.content.message}
               />
-            </ContactFormLabel>
+            </label>
           </InputRow>
 
           <InputRow isTerms>

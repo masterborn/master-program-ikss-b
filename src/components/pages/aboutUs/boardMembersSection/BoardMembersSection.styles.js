@@ -11,9 +11,10 @@ export const StyledBoardMembersSection = styled.section(
   align-items: center;
 
   @media ${medias.mobile} {
-    width: 95%;
+    width: 100%;
     min-width: 25.2rem;
-    margin: 7.0rem auto 0;
+    padding: 0 2.4rem;
+    margin: 7rem 0 0 0;
   }
 `,
 );
@@ -57,15 +58,18 @@ export const BoardMembersContainer = styled.div(
     `
     display: block;
     column-count: 3;
-    column-gap: 24px;
+    column-gap: 0px;
   `
   }
   }
 
   @media ${medias.mobile} {
-    display: flex;
+    width: 100%;
+    min-width: 30rem;
     margin-top: 5.7rem;
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
 `,
 );

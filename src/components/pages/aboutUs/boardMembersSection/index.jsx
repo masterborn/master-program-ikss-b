@@ -21,7 +21,6 @@ export default function BoardMembersSection({ boardMembersSectionText, boardMemb
     <StyledBoardMembersSection id="zarząd">
       <Title>{title}</Title>
       {Body}
-
       <BoardMembersContainer isDiamond={isDiamondLayout}>
         {boardMembers.map((data) => (
           <BoardMemberTile

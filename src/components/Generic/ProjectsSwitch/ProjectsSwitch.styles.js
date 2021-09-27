@@ -13,7 +13,7 @@ export const ProjectsSwitchContainer = styled.div(
   border-radius: 2.6rem;
 
   @media ${medias.mobile} {
-    margin-bottom: 2.4rem;
+    margin-bottom: ${isOnGrid ? '5.9rem' : '2.4rem'};
     background: ${isOnGrid ? 'iherit' : 'none'};
     height: auto;
     flex-wrap: wrap;
@@ -43,6 +43,7 @@ export const DateSwitchButton = styled.button(
     padding: .9rem 1.6rem;
     font-size: 1.0rem;
     line-height: 1.3rem;
+    font-weight: 700;
   }
 `,
 );
@@ -70,10 +71,11 @@ export const SwitchButton = styled.button(
     padding: .9rem 1.6rem;
     font-size: 1.0rem;
     line-height: 1.3rem;
+
     &:first-child {
-      margin-bottom: 1.2rem;
-      min-width: max-content;
+      margin: 0 100% 1.2rem 100%;
       width: 60%;
+      min-width: 46%;
     }
     &:last-child {
       margin: 0 0 0 1.2rem;

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import IconButton from '@buttons/misc/IconButton';
-import PrimaryButton from '@buttons/primaryButton';
 import { ButtonBigText } from '@typography/buttonsText';
 import Logo from '@logos/BubbleLogo';
+import StyledPrimaryButton from '@generic/buttons/primaryButton/StyledPrimaryButton';
 import NavbarSocials from './NavbarSocials';
 
 export const StyledNavbar = styled.nav(
@@ -46,6 +46,7 @@ export const LinksContainer = styled.ul`
   flex-direction: row;
   align-items: flex-start;
   list-style: none;
+  justify-content: space-between;
 
   margin-left: 12.6rem;
 `;
@@ -99,9 +100,10 @@ export const StyledNavbarSocials = styled(NavbarSocials)`
   }
 `;
 
-export const ContactButton = styled(PrimaryButton)`
+export const ContactButton = styled(StyledPrimaryButton)`
   margin-left: auto;
   margin-right: 12rem;
+  min-width: 130px;
 `;
 
 export const HamburgerMenu = styled(IconButton)`

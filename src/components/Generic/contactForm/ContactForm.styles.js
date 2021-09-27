@@ -14,6 +14,7 @@ export const ContactFormContainer = styled.section(
   ({ theme: { medias, color }, isInModal }) => `
   width: 74.8rem;
   height: fit-content;
+  margin: 0 2.4rem;
 
   margin-top: ${!isInModal && '18.0rem'};
 
@@ -25,17 +26,11 @@ export const ContactFormContainer = styled.section(
   border-radius: 1.6rem;
 
   @media ${medias.mobile} {
-    width: 80%;
+    width: calc(100% - 4.8rem);
     min-width: 30.0rem;
+    margin: 0 2.4rem;
     margin-top: ${!isInModal && '4.6rem'};
     margin-bottom: 9rem;
-
-  }
-
-  @media (max-width: 420px) {
-    width: 80%;
-    max-width: 33.7rem;
-    min-width: 27.8rem;
   }
 `,
 );
@@ -61,36 +56,31 @@ export const ContactFormContent = styled.div(
   display: flex;
   flex-direction: column;
 
-  padding-top: 4.8rem;
-  padding-bottom: 4.8rem;
+  padding: 4.8rem 8rem;
 
   align-items: center;
 
   overflow: auto;
 
   @media ${medias.mobile} {
-    padding-top: ${isInModal ? '5.6rem' : '3.2rem'};
-    padding-bottom: 3.2rem;
+    padding: 3.2rem 1.6rem;
+    padding-top: ${isInModal && '5.6rem'};
   }
 `,
 );
 
-export const TopSection = styled.div(
-  ({ theme: { medias } }) => `
-  width: 58.8rem;
+export const TopSection = styled.div`
   text-align: center;
-
-  @media ${medias.mobile} {
-    width: 80%;
-  }
-`,
-);
+`;
 
 export const ContactFormTitle = styled.h3(
   ({ theme: { medias } }) => `
   ${Header3};
+  margin-bottom: 2.5rem;
   @media ${medias.mobile} {
     ${Header5};
+    margin-bottom: 2.4rem;
+
   }
 `,
 );
@@ -106,26 +96,14 @@ export const ContactFormDescription = styled.p(
 
 export const Form = styled.form(
   ({ theme: { medias } }) => `
-  width: 58.8rem;
   margin-top: 3.7rem;
 
   @media ${medias.mobile} {
-    width: 80%;
     margin-top: 2.4rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-`,
-);
-
-export const ContactFormLabel = styled.label(
-  ({ theme: { medias } }) => `
-  margin-top: 1.5rem;
-
-  @media ${medias.mobile}{
-    margin-top: 1.2rem;
   }
 `,
 );
@@ -138,17 +116,25 @@ export const ContactFormLabelParagraph = styled.p(
 );
 
 export const InputRow = styled.div(
-  ({ theme: { medias }, spaceBetween, isTerms }) => `
+  ({ theme: { medias }, spaceBetween, firstRow, isTerms }) => `
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: ${spaceBetween && 'space-between'};
 
-  margin-top: ${isTerms && '1.2rem'};
+  margin-top: ;
+
+  margin-top: ${isTerms ? '1.8rem' : '0.9rem'};
+  margin-top: ${firstRow && '0'};
+
+  align-items: ${isTerms && 'center'};
 
   @media ${medias.mobile} {
-    margin-top: ${isTerms && '3.0rem'};
+    margin-top: 1.2rem;
+    margin-top: ${firstRow && '0'};
+
     flex-direction: ${!isTerms && 'column'};
+
   }
 `,
 );
@@ -179,7 +165,7 @@ export const ContentInput = styled(TextArea)(
   height: 22.1rem;
 
   @media ${medias.mobile} {
-    width: 89%;
+    width: 100%;
     height: 12.5rem;
   }
 `,
@@ -212,14 +198,13 @@ export const HighlightedRODOText = styled.span`
 
 export const SubmitButton = styled(PrimaryButton)(
   ({ theme: { medias } }) => `
-  width: 18.7rem;
   height: 4.8rem;
-
+  min-width: 15.7rem;
   margin-top: 3.7rem;
   margin-left: auto;
 
   @media ${medias.mobile} {
-    width: 15.4rem;
+    width: 15.6rem;
     height: 3.6rem;
 
     margin-right: auto;

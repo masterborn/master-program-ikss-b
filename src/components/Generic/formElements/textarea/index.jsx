@@ -15,8 +15,12 @@ export default function Textarea({
   name,
 }) {
   return (
-    <TextareaContainer className={className}>
-      {isInvalid && <StyledErrorIcon tooltipText={errorTooltipText} />}
+    <TextareaContainer
+      className={className}
+      isValid={isValid}
+      isInvalid={isInvalid}
+      disabled={disabled}
+    >
       <StyledTextarea
         name={name}
         value={value}
@@ -26,6 +30,7 @@ export default function Textarea({
         isValid={isValid}
         isInvalid={isInvalid}
       />
+      {isInvalid && <StyledErrorIcon tooltipText={errorTooltipText} />}
     </TextareaContainer>
   );
 }

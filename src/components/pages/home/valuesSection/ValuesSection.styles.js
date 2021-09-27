@@ -47,9 +47,9 @@ export const ValuesSectionParagraph = styled.p(
 );
 export const ValuesSectionTilesContainer = styled.div`
   max-width: 120rem;
-  width: 100%;
+  width: auto;
   margin-top: 4rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
 `;
