@@ -10,7 +10,7 @@ import TextArea from '../formElements/textarea';
 import Checkbox from '../formElements/checkbox';
 import { SuccessIcon, ErrorIcon } from '../icons/misc';
 
-export const ContactFormContainer = styled.div(
+export const ContactFormContainer = styled.section(
   ({ theme: { medias, color }, isInModal }) => `
   width: 74.8rem;
   height: fit-content;

@@ -26,7 +26,7 @@ export default function Socials({ className, socialsLinks, showRegular, showLabe
   } = socialsLinks;
 
   return (
-    <div className={className}>
+    <ul className={className}>
       <a href={facebookUrl} alt={facebookLinkCaption || facebookTitle}>
         {showRegular ? <FbIcon /> : <FbCircleIcon />}
         {showLabel && <SocialsLabel>Facebook</SocialsLabel>}
@@ -45,7 +45,7 @@ export default function Socials({ className, socialsLinks, showRegular, showLabe
         {showRegular ? <InIcon /> : <InCircleIcon />}
         {showLabel && <SocialsLabel>LinkedIn</SocialsLabel>}
       </a>
-    </div>
+    </ul>
   );
 }
 

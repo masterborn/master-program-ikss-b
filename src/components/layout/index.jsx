@@ -67,7 +67,7 @@ export default function Layout({
         <PageContentWrapper>
           <TopBackgroundGradient />
 
-          <div id="main">{children}</div>
+          <main id="main">{children}</main>
 
           {isValidPage && <BottomBackgroundGradient isOnHomepage={isOnHomepage} />}
         </PageContentWrapper>

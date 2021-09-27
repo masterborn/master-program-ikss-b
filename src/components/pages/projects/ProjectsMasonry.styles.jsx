@@ -28,7 +28,7 @@ export const Masonry = styled.div(
 `,
 );
 
-export const ProjectsMasonryContainer = styled.div(
+export const ProjectsMasonryContainer = styled.section(
   ({ theme: { medias } }) => `
   display: flex;
   flex-direction: column;

@@ -54,8 +54,7 @@ export default function Projects({ projectsData: { basicContent, projects, commo
         contactFormText={contactFormText}
         tooltipText={contactFormTooltip}
       >
-        <TopSection topSectionContent={projectsTopSection} sectionId="projekty" />
-
+        <TopSection topSectionContent={projectsTopSection} sectionId="projekty-opis" />
         <ProjectsMasonry midCtaContent={midCtaContent} projectsData={projects} />
         <BottomCta isOnProjects bottomCtaContent={bottomCtaContent} />
       </Layout>

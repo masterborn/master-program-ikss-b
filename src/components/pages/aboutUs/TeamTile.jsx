@@ -8,7 +8,7 @@ export default function TeamTile({ teamContent }) {
   const { title, image1: image, text1: richText } = teamContent;
   const Description = convertRichTextToReactComponent(TeamDescription, richText);
   return (
-    <TeamTileContainer>
+    <TeamTileContainer id="zespół">
       <TeamHeader>{title}</TeamHeader>
       {Description}
       {image && <TeamImage src={image.url} alt={image.title} />}
