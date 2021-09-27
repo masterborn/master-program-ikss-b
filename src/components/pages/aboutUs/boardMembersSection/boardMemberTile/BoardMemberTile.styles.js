@@ -63,12 +63,6 @@ export const StyledBoardMemberTile = styled.div(
     .0676885rem 1.11795rem 1.3rem rgba(97, 121, 139, 0.035),
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
 
-  transition: transform ease 0.4s;
-
-  &:hover{
-    transform: scale(1.05);
-  }
-
   @media ${medias.mobile} {
     max-width: 38.4rem;
     width:90%;

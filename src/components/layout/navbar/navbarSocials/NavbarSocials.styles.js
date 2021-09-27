@@ -21,8 +21,6 @@ export const StyledSocialsCollection = styled(SocialsCollection)`
   & > a {
     margin: 0rem 2rem;
 
-    transition: transform ease 0.4s;
-
     &:hover {
       transform: scale(1.2);
     }
