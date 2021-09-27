@@ -165,7 +165,7 @@ export const ContentInput = styled(TextArea)(
   height: 22.1rem;
 
   @media ${medias.mobile} {
-    width: 89%;
+    width: 100%;
     height: 12.5rem;
   }
 `,
