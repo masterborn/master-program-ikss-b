@@ -12,6 +12,7 @@ export const BoardMemberTileWrapper = styled.div(
     isDiamond &&
     `
     display: inline-block;
+    transform: translateZ(0);
     &:nth-child(1){
       margin-top: 26.4rem;
     }
@@ -22,7 +23,7 @@ export const BoardMemberTileWrapper = styled.div(
   }
 
   @media ${medias.mobile} {
-    max-width:100vw;
+    max-width: 48rem;
     width: 100%;
     min-width: 252px;
     min-height: fit-content;
@@ -33,11 +34,14 @@ export const BoardMemberTileWrapper = styled.div(
     flex-direction: column;
     align-items: center;
 
-    &:nth-child(1){
-      margin-top: 1.2rem
+    &:first-child{
+      margin-top: 0;
     }
     &:nth-child(6){
       margin-top: 1.2rem
+    }
+    &:last-child{
+      margin-bottom: 0;
     }
   }
 `,
@@ -46,14 +50,14 @@ export const BoardMemberTileWrapper = styled.div(
 const toggleButtonOnCollapsedTile = css`
   position: absolute;
   top: 50%;
-  right: 4rem;
+  right: 2rem;
 
   transform: translateY(-50%);
 `;
 const toggleButtonOnExpandedTile = css`
   position: absolute;
   top: 2.1rem;
-  right: 4rem;
+  right: 2rem;
 
   transform: rotate(180deg);
 `;
@@ -83,8 +87,7 @@ export const StyledBoardMemberTile = styled.div(
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
 
   @media ${medias.mobile} {
-    max-width: 38.4rem;
-    width:90%;
+    width:100%;
     min-width:252px;
     margin: 0 2.4rem;
     opacity: 1;
@@ -131,22 +134,22 @@ export const NameText = styled.h4(
 `,
 );
 export const RoleText = styled.h5(
-  ({ theme: { medias, color } }) => `
-  margin: .8rem 2.4rem 0;
-  height: 4.8rem;
+  ({ theme: { medias, color } }) => `1.2rem
   ${Header5};
+  max-width: 300px;
+  margin-top: 0.8rem;
+  height: 4.8rem;
   text-align: center;
   color: ${color.steel};
 
   @media ${medias.mobile} {
-    margin-top: .8rem;
+    ${ButtonSmallText};
     height: 3.6rem;
-    ${ButtonSmallText}
   }
 `,
 );
 export const ContactContainer = styled.div`
-  margin-top: 1.2rem;
+  margin-top: 2.4rem;
   height: 4.8rem;
   display: flex;
   flex-direction: column;
@@ -158,15 +161,12 @@ export const ContactLink = styled.a(
   color: ${color.ikssBlue};
   ${ButtonSmallText}
   text-decoration: none;
+  word-break: break-all;
 `,
 );
-
-export const ContactText = styled.span`
-  overflow-wrap: anywhere;
-`;
 export const LinkedInButton = styled.a(
   ({ theme: { medias } }) => `
-  margin: auto 0 4.0rem;
+  margin: 2.4rem 0 4.0rem;
   text-decoration: none;
 
   @media ${medias.mobile} {

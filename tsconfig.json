@@ -24,6 +24,7 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
+      "@customHead": ["./src/components/CustomHead/CustomHead"],
       "@homepage/*": ["./src/components/pages/home/*"],
       "@projects/*": ["./src/components/pages/projects/*"],
       "@aboutUs/*": ["./src/components/pages/aboutUs/*"],

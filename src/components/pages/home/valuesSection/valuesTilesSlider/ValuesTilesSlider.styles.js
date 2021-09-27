@@ -14,6 +14,8 @@ export const ValuesTilesContainer = styled.div`
     width: 1.6rem;
     height: 1.6rem;
 
+    margin-right: 1.6rem !important;
+
     border: 1px solid #1889e9;
     background-color: transparent;
     opacity: 1;

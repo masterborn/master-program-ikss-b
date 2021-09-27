@@ -7,10 +7,8 @@ import toggleTileVisibility from '../TileAnimations.styles';
 export const StyledCollapsedBoardMemberTile = styled.button(
   ({ theme: { color }, isTileOpened }) => `
   max-width:100vw;
-  width:90%;
+  width:100%;
   min-width:252px;
-  margin: 0 2.4rem;
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,7 +23,7 @@ export const StyledCollapsedBoardMemberTile = styled.button(
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
   border-radius: 1.6rem;
 
-  ${toggleTileVisibility(!isTileOpened, 'max-content', '2.3rem 0')}
+  ${toggleTileVisibility(!isTileOpened, 'max-content', '2rem 0')}
 `,
 );
 
@@ -46,7 +44,7 @@ export const BoardMemberTileAvatar = styled.div(
   }
 
   @media (max-width: 35.5rem) {
-    margin-left: .5rem;
+    margin-left: 2rem;
   }
 `,
 );
@@ -54,6 +52,7 @@ export const BoardMemberTileAvatar = styled.div(
 export const BoardMemberTileTextContent = styled.div`
   width: 13rem;
   margin-left: 2.4rem;
+  margin-right: 6.2rem;
   display: flex;
   flex-direction: column;
 
@@ -61,8 +60,7 @@ export const BoardMemberTileTextContent = styled.div`
 
   @media (max-width: 35.5rem) {
     width: fit-content;
-    margin-left: 0.5rem;
-    margin-right: 6rem;
+    margin-left: 2.4rem;
   }
 `;
 
@@ -70,6 +68,7 @@ export const NameText = styled.h5(
   ({ theme: { color } }) => `
   ${Header5};
   color: ${color.navy};
+  margin-bottom: 0.8rem;
 `,
 );
 

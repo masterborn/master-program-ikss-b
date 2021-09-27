@@ -27,10 +27,10 @@ export default function MasonryLayout({ projects, midCtaContent }) {
       {sortedProjects.map((project, index) => {
         const order = projects.findIndex(({ title }) => title === sortedProjects[index].title);
         return (
-          <>
-            <ProjectTile order={order} key={project.title} isOnGrid project={project} />
+          <React.Fragment key={project.title}>
+            <ProjectTile order={order} isOnGrid project={project} />
             {index === 3 && showCta && <MidCta order={order} midCtaContent={midCtaContent} />}
-          </>
+          </React.Fragment>
         );
       })}
     </Masonry>

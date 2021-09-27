@@ -32,7 +32,7 @@ export default function Footer({ socials, footerText, paths, isOnHomepage }) {
       <FooterWrapper>
         <StyledSrollUpButton isOnHomepage={isOnHomepage} onClick={scrollUp} />
 
-        <Centered>
+        <Centered isOnHomepage={isOnHomepage}>
           <LinksContainer>
             {paths.map(({ name, path }) => (
               <Link href={path} key={path}>

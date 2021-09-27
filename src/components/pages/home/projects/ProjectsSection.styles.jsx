@@ -11,9 +11,8 @@ export const ProjectSection = styled.section(
   height: auto;
   width: 99.7rem;
   margin-top: 18.0rem;
+  margin-bottom: -0.8rem;
   a {
-    margin-top: 3.2rem;
-
     color: inherit;
     text-decoration: none;
   }
@@ -23,10 +22,10 @@ export const ProjectSection = styled.section(
     max-width: 55.0rem;
     padding: 0 2.4rem 0 2.4rem;
     margin-top: 3.0rem;
+    margin-bottom: -2rem;
 
     a {
       align-self: center;
-      margin-top: 1.6rem;
     }
   }
 `,
