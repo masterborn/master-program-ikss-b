@@ -17,10 +17,10 @@ export const StyledSocialsCollection = styled(SocialsCollection)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  transition: opacity 500ms ease;
   margin-left: 19.9rem;
 
   & > a:hover {
-    transform: scale(1.2);
+    opacity: 0.5;
   }
 `;

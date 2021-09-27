@@ -23,7 +23,7 @@ export const StyledValueTile = styled.div(
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
   border-radius: 1.6rem;
 
-  transition: transform ease 0.4s;
+  transition: transform ease 0.1s;
 
   &:hover{
     transform: scale(1.05);
