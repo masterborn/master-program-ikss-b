@@ -12,13 +12,13 @@ const validateName = (firstName) => {
     return {
       isValid: false,
       isInvalid: true,
-      message: 'Zbyt krótkie imię. Powinno zawierać od 3 do 20 znaków.',
+      message: `Pole powinno zawierać od ${MIN_NAME_LENGTH} do ${MAX_NAME_LENGTH} znaków.`,
     };
   if (firstName.length > MAX_NAME_LENGTH)
     return {
       isValid: false,
       isInvalid: true,
-      message: 'Zbyt długie imię. Powinno zawierać od 3 do 20 znaków.',
+      message: `Pole powinno zawierać od ${MIN_NAME_LENGTH} do ${MAX_NAME_LENGTH} znaków.`,
     };
 
   return { isValid: true, isInvalid: false, message: 'ok' };
@@ -28,13 +28,13 @@ const validateLastName = (lastName) => {
     return {
       isValid: false,
       isInvalid: true,
-      message: 'Zbyt krótkie nazwisko. Powinno zawierać od 3 do 20 znaków.',
+      message: `Pole powinno zawierać od ${MIN_NAME_LENGTH} do ${MAX_NAME_LENGTH} znaków.`,
     };
   if (lastName.length > MAX_NAME_LENGTH)
     return {
       isValid: false,
       isInvalid: true,
-      message: 'Zbyt długie nazwisko. Powinno zawierać od 3 do 20 znaków.',
+      message: `Pole powinno zawierać od ${MIN_NAME_LENGTH} do ${MAX_NAME_LENGTH} znaków.`,
     };
 
   return { isValid: true, isInvalid: false, message: 'ok' };
@@ -50,13 +50,13 @@ const validateTitle = (title) => {
     return {
       isValid: false,
       isInvalid: true,
-      message: 'Zbyt krótki tytuł. Powinno zawierać od 6 do 50 znaków.',
+      message: `Pole powinno zawierać od ${MIN_TITLE_LENGTH} do ${MAX_TITLE_LENGTH} znaków.`,
     };
   if (title.length > MAX_TITLE_LENGTH)
     return {
       isValid: false,
       isInvalid: true,
-      message: 'Zbyt długi tytuł. Powinno zawierać od 6 do 50 znaków.',
+      message: `Pole powinno zawierać od ${MIN_TITLE_LENGTH} do ${MAX_TITLE_LENGTH} znaków.`,
     };
 
   return { isValid: true, isInvalid: false, message: 'ok' };
@@ -66,13 +66,13 @@ const validateContent = (content) => {
     return {
       isValid: false,
       isInvalid: true,
-      message: 'Zbyt krótki tekst. Powinno zawierać od 6 do 150 znaków.',
+      message: `Pole powinno zawierać od ${MIN_CONTENT_LENGTH} do ${MAX_CONTENT_LENGTH} znaków.`,
     };
   if (content.length > MAX_CONTENT_LENGTH)
     return {
       isValid: false,
       isInvalid: true,
-      message: 'Zbyt długi tekst. Powinno zawierać od 6 do 150 znaków.',
+      message: `Pole powinno zawierać od ${MIN_CONTENT_LENGTH} do ${MAX_CONTENT_LENGTH} znaków.`,
     };
 
   return { isValid: true, isInvalid: false, message: 'ok' };
