@@ -32,6 +32,18 @@ export const ProjectArticle = styled.article(
       justify-content: center;
     }
   }
+  &:nth-child(2n) {
+    order: ${isOnGrid && 2};
+  }
+  &:nth-child(2n + 1) {
+    order: ${isOnGrid && 1};
+  }
+  @media ${medias.mobile} {
+    width: 100%;
+    &:nth-child(n) {
+      order: ${isOnGrid && 1};
+    }
+  }
 `,
 );
 export const ProjectMediaContainer = styled.div(

@@ -6,15 +6,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleModal } from '@redux/actions/modalActions';
 import { HamburgerMenuIcon } from '@icons/misc';
 import handleContactButton from '@generic/misc/contactFormActions';
+import NavbarSocials from './navbarSocials';
 import {
   StyledNavbar,
+  NavbarWrapper,
   LinksContainer,
   StyledLogoLink,
   StyledLogo,
-  StyledNavbarSocials,
   ContactButton,
   HamburgerMenu,
-  NavWrapper,
   PageLink,
 } from './Navbar.styles';
 import Sidebar from './sidebar';
@@ -35,7 +35,7 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
   const toggleSidebar = () => setIsSidebarOpened((prevState) => !prevState);
   return (
     <StyledNavbar>
-      <NavWrapper>
+      <NavbarWrapper>
         <Link href="/" passHref>
           <StyledLogoLink href>
             <StyledLogo />
@@ -65,7 +65,7 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
               ))}
             </LinksContainer>
 
-            <StyledNavbarSocials
+            <NavbarSocials
               socialsLinks={socials}
               navbarHeight={navbarHeight}
               homepageHeroRef={homepageHeroRef}
@@ -74,7 +74,7 @@ export default function Navbar({ socials, paths, currPathname, homepageHeroRef }
             <ContactButton onClick={handleClickContactButton}>Skontaktuj się</ContactButton>
           </>
         )}
-      </NavWrapper>
+      </NavbarWrapper>
     </StyledNavbar>
   );
 }

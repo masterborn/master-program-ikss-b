@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
 import { convertRichTextToReactComponent } from '@dataMappers/contentful';
-import ValueTile from '@generic/ValueTiles';
+import ValueTile from '@valueTile';
 import ValuesTilesSlider from './valuesTilesSlider';
 import {
   StyledValuesSection,

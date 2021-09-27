@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import IconButton from '@buttons/misc/IconButton';
 import { ButtonBigText } from '@typography/buttonsText';
 import Logo from '@logos/BubbleLogo';
-import StyledPrimaryButton from '@generic/buttons/primaryButton/StyledPrimaryButton';
-import NavbarSocials from './NavbarSocials';
+import PrimaryButton from '@buttons/primaryButton/StyledPrimaryButton';
 
 export const StyledNavbar = styled.nav(
   ({ theme: { medias, color } }) => `
@@ -30,7 +29,7 @@ export const StyledNavbar = styled.nav(
 `,
 );
 
-export const NavWrapper = styled.div`
+export const NavbarWrapper = styled.div`
   width: 100%;
   max-width: 144rem;
   display: flex;
@@ -85,23 +84,15 @@ export const PageLink = styled.a(
   text-align: center;
   text-decoration: none;
   color: ${isHighlighted ? color.navy : color.steel};
-`,
+
+  &:hover {
+      opacity: 0.73;
+  }
+  `,
 );
 
-export const StyledNavbarSocials = styled(NavbarSocials)`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-
-  margin-left: 19.9rem;
-
-  & > a {
-    margin: 0rem 2rem;
-  }
-`;
-
-export const ContactButton = styled(StyledPrimaryButton)`
-  margin-left: auto;
+export const ContactButton = styled(PrimaryButton)`
+  margin-left: 8.9rem;
   margin-right: 12rem;
   min-width: 130px;
 `;

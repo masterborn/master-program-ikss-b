@@ -38,7 +38,7 @@
       "@icons/*": ["./src/components/Generic/icons/*"],
       "@formElements/*": ["./src/components/Generic/formElements/*"],
       "@contactForm/*": ["./src/components/Generic/contactForm/*"],
-      "@valueTile": ["./src/components/Generic/ValueTiles/index.jsx"],
+      "@valueTile": ["./src/components/Generic/valueTile/index.jsx"],
       "@partnerTiles/*": ["./src/components/Generic/partnersList/*"],
       "@buttons/*": ["./src/components/Generic/buttons/*"],
       "@dataMappers/*": ["./src/dataMappers/*"],

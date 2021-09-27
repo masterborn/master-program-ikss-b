@@ -37,6 +37,10 @@ export const DateSwitchButton = styled.button(
   ${ButtonBigText}
   cursor: pointer;
 
+  &:hover{
+    background-color: ${!clicked && color.blueTints.blue05};
+  }
+
   @media ${medias.mobile} {
     height: 3.1rem;
     width: 8.4rem;
@@ -64,6 +68,10 @@ export const SwitchButton = styled.button(
   line-height: 2.0rem;
   font-size: 1.6rem;
   cursor: pointer;
+
+  &:hover{
+    background-color: ${!clicked && color.blueTints.blue05};
+  }
 
   @media ${medias.mobile} {
     height: 3.1rem;
