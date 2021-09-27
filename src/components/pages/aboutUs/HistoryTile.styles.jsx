@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header2, Header4 } from '@typography/headers';
+import { Header4 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const HistoryTileContainer = styled.section(
@@ -53,7 +53,6 @@ export const HistoryTextContainer = styled.div`
 
 export const HistoryHeader = styled.h2(
   ({ theme: { medias } }) => `
-  ${Header2};
   margin: 2.9rem 0 2.4rem 0;
   @media ${medias.mobile} {
     ${Header4};

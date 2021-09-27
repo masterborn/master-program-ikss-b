@@ -15,7 +15,7 @@ export default function CollapsedBoardMemberTile({ data, onClick, isTileOpened }
   return (
     <StyledCollapsedBoardMemberTile onClick={onClick} isTileOpened={isTileOpened}>
       <BoardMemberTileAvatar>
-        {imageUrl && <Image src={`https://${imageUrl}`} width={80} height={80} alt={name} />}
+        {imageUrl && <Image src={`https:${imageUrl}`} width={80} height={80} alt={name} />}
       </BoardMemberTileAvatar>
       <BoardMemberTileTextContent>
         <NameText>{name}</NameText>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header3, Header4 } from '@typography/headers';
+import { Header4 } from '@typography/headers';
 import ValuesTile from '@valueTile';
 
 export const CooperationValuesSectionContainer = styled.section(
@@ -18,7 +18,6 @@ export const CooperationValuesSectionContainer = styled.section(
 );
 export const Title = styled.h3(
   ({ theme: { medias, color } }) => `
-  ${Header3};
   color: ${color.navy};
 
   @media ${medias.mobile} {

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import { FbCircleIcon, IgCircleIcon, YtCircleIcon, InCircleIcon } from './socialCircle';
 import { FbIcon, IgIcon, YtIcon, InIcon } from './socialRegular';
-import SocialsLabel from './SocialsCollection.styles';
 
 export default function Socials({ className, socialsLinks, showRegular, showLabel }) {
   const {
@@ -29,21 +28,21 @@ export default function Socials({ className, socialsLinks, showRegular, showLabe
     <ul className={className}>
       <a href={facebookUrl} alt={facebookLinkCaption || facebookTitle}>
         {showRegular ? <FbIcon /> : <FbCircleIcon />}
-        {showLabel && <SocialsLabel>Facebook</SocialsLabel>}
+        {showLabel && <h5>Facebook</h5>}
       </a>
 
       <a href={instagramUrl} alt={instagramLinkCaption || instagramTitle}>
         {showRegular ? <IgIcon /> : <IgCircleIcon />}
-        {showLabel && <SocialsLabel>Instagram</SocialsLabel>}
+        {showLabel && <h5>Instagram</h5>}
       </a>
       <a href={youtubeUrl} alt={youtubeLinkCaption || youtubeTitle}>
         {showRegular ? <YtIcon /> : <YtCircleIcon />}
-        {showLabel && <SocialsLabel>YouTube</SocialsLabel>}
+        {showLabel && <h5>YouTube</h5>}
       </a>
 
       <a href={linkedinUrl} alt={linkedinLinkCaption || linkedinTitle}>
         {showRegular ? <InIcon /> : <InCircleIcon />}
-        {showLabel && <SocialsLabel>LinkedIn</SocialsLabel>}
+        {showLabel && <h5>LinkedIn</h5>}
       </a>
     </ul>
   );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header3, Header5 } from '@typography/headers';
+import { Header5 } from '@typography/headers';
 import { ButtonBigText, ButtonSmallText } from '@typography/buttonsText';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 import IconButton from '../buttons/misc/IconButton';
@@ -75,7 +75,6 @@ export const TopSection = styled.div`
 
 export const ContactFormTitle = styled.h3(
   ({ theme: { medias } }) => `
-  ${Header3};
   margin-bottom: 2.5rem;
   @media ${medias.mobile} {
     ${Header5};

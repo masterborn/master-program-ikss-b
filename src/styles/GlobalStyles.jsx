@@ -1,3 +1,4 @@
+import { Header1, Header2, Header3, Header4, Header5 } from '@typography/headers';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
@@ -17,6 +18,22 @@ body{
     margin: 0;
     padding: 0;
     font-family: ${(props) => props.theme.fontFamily.main}
+  }
+
+  h1{
+    ${Header1};
+  }
+  h2{
+    ${Header2};
+  }
+  h3{
+    ${Header3};
+  }
+  h4{
+    ${Header4};
+  }
+  h5{
+    ${Header5};
   }
 `;
 
