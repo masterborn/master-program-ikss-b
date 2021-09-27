@@ -12,7 +12,7 @@ export const StyledValueTile = styled.div(
 
   margin-right: 2.4rem;
   text-align: center;
-  margin-top: 6.2rem;
+  margin-top: ${isOnCooperation ? '2.4rem' : '6.2rem'};
   z-index: 0;
   background-color: ${color.white};
   box-shadow: 3.38443rem 5.58976rem 8.0rem rgba(97, 121, 139, 0.07),
@@ -30,7 +30,8 @@ export const StyledValueTile = styled.div(
     min-width: 25.2rem;
     max-width: 38.4rem;
     height: ${!isOnCooperation ? '33.4rem' : '35.0rem'};
-
+    margin-right: ${isOnCooperation && '0'};
+    margin-bottom: ${isOnCooperation && '0'};
     display: block;
   }
 `,
