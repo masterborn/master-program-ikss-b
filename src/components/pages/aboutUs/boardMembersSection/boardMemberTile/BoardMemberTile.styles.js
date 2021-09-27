@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import IconButton from '@buttons/misc/IconButton';
-import { Header4, Header5 } from '@typography/headers';
+import { Header5 } from '@typography/headers';
 import { ButtonSmallText } from '@typography/buttonsText';
 import toggleTileVisibility from './TileAnimations.styles';
 
@@ -124,7 +124,6 @@ export const BoardMemberTileAvatar = styled.div(
 export const NameText = styled.h4(
   ({ theme: { medias } }) => `
   margin-top: 2.4rem;
-  ${Header4};
 
   @media ${medias.mobile} {
     margin-top: 1.6rem;

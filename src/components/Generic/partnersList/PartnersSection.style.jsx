@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Header3, Header4 } from '@typography/headers';
+import { Header4 } from '@typography/headers';
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
 
 export const LogosSection = styled.section(
@@ -27,8 +27,6 @@ export const PartnersHeader = styled.h3(
   ({ theme: { medias } }) => `
   margin-bottom: 3.2rem;
   text-align: center;
-  
-  ${Header3};
   @media ${medias.mobile} {
     ${Header4};
     margin-bottom: 1.6rem;

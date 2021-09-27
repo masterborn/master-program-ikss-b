@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Header3, Header4 } from '@typography/headers';
+import { Header4 } from '@typography/headers';
 import { ParagraphBody } from '@typography/paragraphs';
 
 export const StyledValuesSection = styled.section(
@@ -20,7 +20,6 @@ export const StyledValuesSection = styled.section(
 export const ValuesSectionTitle = styled.h3(
   ({ theme: { medias, color } }) => `
   margin: 0 2.4rem;
-  ${Header3};
   color: ${color.navy};
   text-align: center;
 
