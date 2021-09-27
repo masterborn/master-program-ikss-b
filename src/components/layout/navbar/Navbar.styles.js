@@ -95,7 +95,7 @@ export const Label = styled.h3(
 );
 
 export const ContactButton = styled(PrimaryButton)`
-  margin-left: auto;
+  margin-left: 8.9rem;
   margin-right: 12rem;
 `;
 

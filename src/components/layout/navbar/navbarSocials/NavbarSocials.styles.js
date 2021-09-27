@@ -12,17 +12,15 @@ export const NavbarSocialsContainer = styled.div(
 );
 
 export const StyledSocialsCollection = styled(SocialsCollection)`
+  width: 16.8rem;
+
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  justify-content: space-between;
 
   margin-left: 19.9rem;
 
-  & > a {
-    margin: 0rem 2rem;
-
-    &:hover {
-      transform: scale(1.2);
-    }
+  & > a:hover {
+    transform: scale(1.2);
   }
 `;
