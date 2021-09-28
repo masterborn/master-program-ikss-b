@@ -133,8 +133,7 @@ export const NameText = styled.h4(
 `,
 );
 export const RoleText = styled.h5(
-  ({ theme: { medias, color } }) => `1.2rem
-  ${Header5};
+  ({ theme: { medias, color } }) => `
   max-width: 300px;
   margin-top: 0.8rem;
   height: 4.8rem;

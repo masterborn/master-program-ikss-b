@@ -82,7 +82,6 @@ export const ProjectHeader = styled.div(
 
 export const ProjectDate = styled.h5(
   ({ theme: { medias, color } }) => `
-  ${Header5};;
   color: ${color.steel};
 
   @media ${medias.mobile} {
