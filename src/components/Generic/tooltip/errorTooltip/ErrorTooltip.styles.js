@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const ErrorTooltipContainer = styled.div`
+export const ErrorTooltipContainer = styled.div(
+  ({ show }) => `
   max-width: 18rem;
   width: max-content;
 
@@ -12,7 +13,12 @@ export const ErrorTooltipContainer = styled.div`
 
   background: #ffcccc;
   border-radius: 4px;
-`;
+
+  opacity: ${show ? '1' : '0'};
+  z-index: ${show ? '1' : '-1'};
+  transition: 0.2s ease;
+`,
+);
 
 export const Text = styled.p(
   ({ theme: { color } }) => `

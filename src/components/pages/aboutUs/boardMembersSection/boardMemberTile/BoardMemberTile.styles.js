@@ -26,13 +26,14 @@ export const BoardMemberTileWrapper = styled.div(
     max-width: 48rem;
     width: 100%;
     min-width: 252px;
-    min-height: fit-content;
     margin: 1.2rem 0;
 
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    transition: 0.2s linear;
 
     &:first-child{
       margin-top: 0;
@@ -89,11 +90,16 @@ export const StyledBoardMemberTile = styled.div(
   @media ${medias.mobile} {
     width:100%;
     min-width:252px;
-    margin: 0 2.4rem;
-    opacity: 1;
+    margin: 0;
+
+    position: relative;
+    top: ${isTileOpened ? '0' : '-12.4rem'};
+    left: 0;
     overflow: hidden;
 
     ${toggleTileVisibility(isTileOpened, '42.3rem')}
+
+    z-index: ${!isTileOpened && '-1'};
   }
 `,
 );
@@ -143,6 +149,8 @@ export const RoleText = styled.h5(
   @media ${medias.mobile} {
     ${ButtonSmallText};
     height: 3.6rem;
+    max-width: 250px;
+
   }
 `,
 );

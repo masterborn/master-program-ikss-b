@@ -6,7 +6,6 @@ import hideOverflowOnBody from '@redux/actions/hideOverflowOnBodyActions';
 import Link from 'next/link';
 import { XIcon } from '@icons/misc';
 import {
-  SidebarContainer,
   SidebarBackground,
   SidebarPanel,
   CloseButton,
@@ -37,7 +36,7 @@ export default function Sidebar({
   }, [dispatch, isOpened]);
 
   return (
-    <SidebarContainer isOpened={isOpened}>
+    <>
       {isOpened && <SidebarBackground onClick={handleCloseSidebar} />}
       <SidebarPanel isOpened={isOpened}>
         <CloseButton icon={<XIcon />} onClick={handleCloseSidebar} />
@@ -53,7 +52,7 @@ export default function Sidebar({
         <ContactButton onClick={handleClickContactButton}>Skontaktuj się</ContactButton>
         <StyledSocials socialsLinks={socialsLinks} />
       </SidebarPanel>
-    </SidebarContainer>
+    </>
   );
 }
 

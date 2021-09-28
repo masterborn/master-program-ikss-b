@@ -79,7 +79,7 @@ export const StyledSocials = styled(Socials)(
     1.71337rem 2.82982rem 3.4875rem rgba(97, 121, 139, 0.04725),
     .0676885rem 1.11795rem 1.3rem rgba(97, 121, 139, 0.035),
     .0148069rem 2.44552rem 4.625rem rgba(97, 121, 139, 0.02275);
-  border-radius: 1.6rem .0rem .0rem 1.6rem;
+  border-radius: 1.6rem .0rem 1.6rem 1.6rem;
 
   @media ${medias.mobile} {
     width: calc(100% - 4.8rem);

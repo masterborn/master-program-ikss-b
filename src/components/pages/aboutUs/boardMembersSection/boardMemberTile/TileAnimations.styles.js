@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
 const toggleTiletransition = css`
-  transition: opacity 0.2s linear, height 0.1s linear;
+  transition: opacity 0.15s linear, height 0.2s linear;
 `.join('');
 
 const hideTile = css`
