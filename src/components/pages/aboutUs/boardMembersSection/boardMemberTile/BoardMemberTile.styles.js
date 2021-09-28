@@ -33,7 +33,7 @@ export const BoardMemberTileWrapper = styled.div(
     flex-direction: column;
     align-items: center;
 
-    transition: 0.3s linear;
+    transition: 0.2s linear;
 
     &:first-child{
       margin-top: 0;
