@@ -27,7 +27,7 @@ export const StyledContactForm = styled(ContactForm)(
   right: 0;
   margin: auto;
 
-  transition: 0.3s ease;
+  transition: 0.4s ease;
 `,
 );
 
