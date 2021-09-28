@@ -10,7 +10,8 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  overflow: ${(props) => (props.theme.isModalOpened || props.theme.hideOverflowOnBody) && 'hidden'};
+  overflow: ${({ theme: { isModalOpened, hideOverflowOnBody } }) =>
+    (isModalOpened || hideOverflowOnBody) && 'hidden'};
 }
   * {
     -webkit-font-smoothing: antialiased;
