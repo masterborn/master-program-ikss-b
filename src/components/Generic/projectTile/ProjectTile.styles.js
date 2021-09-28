@@ -82,7 +82,6 @@ export const ProjectHeader = styled.div(
 
 export const ProjectDate = styled.h5(
   ({ theme: { medias, color } }) => `
-  ${Header5};;
   color: ${color.steel};
 
   @media ${medias.mobile} {
@@ -120,3 +119,8 @@ export const ProjectImage = styled.img(
   }
 `,
 );
+
+export const ProjectLink = styled.a`
+  width: fit-content;
+  border-radius: 2.6rem;
+`;

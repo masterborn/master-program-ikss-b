@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { ParagraphBody, ParagraphSmall } from '@typography/paragraphs';
+import { Header3 } from '@typography/headers';
 
 export const TopSectionContainer = styled.header(
   ({ theme: { medias }, isOnCooperationPage }) => `
@@ -34,6 +35,7 @@ export const TopSectionHeader = styled.h1(
 
   @media ${medias.mobile} {
     margin-top: .8rem;
+    ${Header3};
   }
 `,
 );

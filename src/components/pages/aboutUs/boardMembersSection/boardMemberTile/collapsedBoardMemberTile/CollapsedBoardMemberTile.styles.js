@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import { Header5 } from '@typography/headers';
 import { ButtonSmallText } from '@typography/buttonsText';
 import toggleTileVisibility from '../TileAnimations.styles';
 
@@ -66,7 +65,6 @@ export const BoardMemberTileTextContent = styled.div`
 
 export const NameText = styled.h5(
   ({ theme: { color } }) => `
-  ${Header5};
   color: ${color.navy};
   margin-bottom: 0.8rem;
 `,
