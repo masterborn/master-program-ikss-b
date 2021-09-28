@@ -119,3 +119,8 @@ export const ProjectImage = styled.img(
   }
 `,
 );
+
+export const ProjectLink = styled.a`
+  width: fit-content;
+  border-radius: 2.6rem;
+`;

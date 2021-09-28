@@ -12,6 +12,7 @@ import {
   ProjectTitle,
   ProjectImage,
   ProjectMediaContainer,
+  ProjectLink,
 } from './ProjectTile.styles';
 import ProjectVideo from './ProjectVideo';
 
@@ -34,9 +35,9 @@ export default function ProjectTile({ project, isOnGrid, order, showCta }) {
         </ProjectHeader>
         {convertRichTextToReactComponent(ProjectDescription, description)}
         {linkUrl && (
-          <a href={linkUrl}>
+          <ProjectLink href={linkUrl}>
             <PrimaryButton withIcon={linkIsFromFacebook}>Podsumowanie wydarzenia</PrimaryButton>
-          </a>
+          </ProjectLink>
         )}
       </ProjectSummary>
     </ProjectArticle>
