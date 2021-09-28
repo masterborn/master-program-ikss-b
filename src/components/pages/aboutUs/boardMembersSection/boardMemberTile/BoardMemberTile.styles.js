@@ -6,7 +6,7 @@ import { ButtonSmallText } from '@typography/buttonsText';
 import toggleTileVisibility from './TileAnimations.styles';
 
 export const BoardMemberTileWrapper = styled.div(
-  ({ theme: { medias }, isDiamond, isTileOpened }) => `
+  ({ theme: { medias }, isDiamond }) => `
   margin: 1.2rem;
   ${
     isDiamond &&
@@ -26,8 +26,6 @@ export const BoardMemberTileWrapper = styled.div(
     max-width: 48rem;
     width: 100%;
     min-width: 252px;
-    height: ${isTileOpened ? '42.3rem' : '0'};
-    min-height: fit-content;
     margin: 1.2rem 0;
 
     position: relative;
@@ -94,10 +92,9 @@ export const StyledBoardMemberTile = styled.div(
     min-width:252px;
     margin: 0;
 
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: ${isTileOpened ? '0' : '-12.4rem'};
     left: 0;
-    opacity: 1;
     overflow: hidden;
 
     ${toggleTileVisibility(isTileOpened, '42.3rem')}
