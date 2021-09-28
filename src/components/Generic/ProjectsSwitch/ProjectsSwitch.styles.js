@@ -24,6 +24,7 @@ export const ProjectsSwitchContainer = styled.div(
 
 export const DateSwitchButton = styled.button(
   ({ theme: { medias, color }, clicked }) => `
+  ${ButtonBigText};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,8 +35,9 @@ export const DateSwitchButton = styled.button(
   border-radius: 2.6rem;
   color: ${clicked ? color.white : color.navy};
   background-color: ${clicked ? color.ikssBlue : color.blueTints.blue10};
-  ${ButtonBigText}
   cursor: pointer;
+  transition: background-color 0.25s ease;
+
 
   &:hover{
     background-color: ${!clicked && color.blueTints.blue05};
@@ -64,6 +66,7 @@ export const SwitchButton = styled.button(
   border-radius: 2.6rem;
   color: ${clicked ? color.white : color.navy};
   background-color: ${clicked ? color.ikssBlue : color.blueTints.blue10};
+  transition: color 0.3s ease;
   font-weight: 700;
   line-height: 2.0rem;
   font-size: 1.6rem;

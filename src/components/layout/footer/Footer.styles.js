@@ -117,13 +117,20 @@ export const Label = styled.h3(
 
 export const StyledSocials = styled(Socials)(
   ({ theme: { medias } }) => `
-  width: 18.9rem;
-
-  margin-bottom: 5rem;
-
   display: flex;
   justify-content: space-between;
 
+  width: 18.9rem;
+  margin-bottom: 5rem;
+
+  a {
+    transition: 0.3s ease;
+    &:hover{
+      transform: translateY(2px);
+    }
+  }
+
+ 
   @media ${medias.mobile} {
     width: 18.9rem;
 
@@ -133,6 +140,7 @@ export const StyledSocials = styled(Socials)(
     a {
       margin: 0;
       transform: scale(0.75);
+
     }
   }
 `,
