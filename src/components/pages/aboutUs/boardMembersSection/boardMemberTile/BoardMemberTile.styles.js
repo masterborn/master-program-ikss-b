@@ -6,7 +6,7 @@ import { ButtonSmallText } from '@typography/buttonsText';
 import toggleTileVisibility from './TileAnimations.styles';
 
 export const BoardMemberTileWrapper = styled.div(
-  ({ theme: { medias }, isDiamond }) => `
+  ({ theme: { medias }, isDiamond, isTileOpened }) => `
   margin: 1.2rem;
   ${
     isDiamond &&
@@ -26,6 +26,7 @@ export const BoardMemberTileWrapper = styled.div(
     max-width: 48rem;
     width: 100%;
     min-width: 252px;
+    height: ${isTileOpened ? '42.3rem' : '0'};
     min-height: fit-content;
     margin: 1.2rem 0;
 
@@ -33,6 +34,8 @@ export const BoardMemberTileWrapper = styled.div(
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    transition: 0.3s linear;
 
     &:first-child{
       margin-top: 0;
@@ -89,11 +92,17 @@ export const StyledBoardMemberTile = styled.div(
   @media ${medias.mobile} {
     width:100%;
     min-width:252px;
-    margin: 0 2.4rem;
+    margin: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 1;
     overflow: hidden;
 
     ${toggleTileVisibility(isTileOpened, '42.3rem')}
+
+    z-index: ${!isTileOpened && '-1'};
   }
 `,
 );
@@ -143,6 +152,8 @@ export const RoleText = styled.h5(
   @media ${medias.mobile} {
     ${ButtonSmallText};
     height: 3.6rem;
+    max-width: 250px;
+
   }
 `,
 );

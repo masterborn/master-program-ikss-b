@@ -9,9 +9,8 @@ export default function InfoTooltip({ tooltipText, show }) {
 
   const Body = convertRichTextToReactComponent(Text, text);
 
-  if (!show) return null;
   return (
-    <InfoTooltipContainer>
+    <InfoTooltipContainer show={show}>
       {Body}
       <InfoTooltipTail />
     </InfoTooltipContainer>

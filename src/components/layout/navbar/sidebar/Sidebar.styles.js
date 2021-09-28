@@ -5,14 +5,6 @@ import PrimaryButton from '@buttons/primaryButton';
 import Socials from '@icons/SocialsCollection';
 import { ButtonBigText } from '@typography/buttonsText';
 
-export const SidebarContainer = styled.div(
-  ({ isOpened }) => `
-  width: ${isOpened ? '100%' : '.0rem'};
-  height: 100%;
-  position: absolute;
-`,
-);
-
 export const SidebarBackground = styled.button(
   ({ theme: { color } }) => `
   width: 100%;
@@ -41,7 +33,7 @@ export const SidebarPanel = styled.div(
   right: 0;
   z-index: 1;
 
-  transition: width 0.15s ease-in;
+  transition: width 0.15s ease;
 
   overflow-x: hidden;
   border-radius: 1.6rem .0rem .0rem .0rem;

@@ -26,7 +26,7 @@ export default function BoardMemberTile({ data, isMobile, isDiamond }) {
   const toggleTileIsOpened = () => setIsTileOpened((prevState) => !prevState);
 
   return (
-    <BoardMemberTileWrapper isDiamond={isDiamond}>
+    <BoardMemberTileWrapper isDiamond={isDiamond} isTileOpened={isTileOpened}>
       {isMobile && (
         <>
           <ToggleButton
