@@ -50,8 +50,6 @@ export const TeamImage = styled.img(
   margin-top: 6.4rem;
   border-radius: 1.6rem;
   @media ${medias.mobile} {
-    min-height: 15.0rem;
-    height: 50vw;
     width: 100%;
     margin-top: 3.2rem;
   }
