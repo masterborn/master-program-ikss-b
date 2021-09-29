@@ -26,6 +26,7 @@ export const ContactFormContainer = styled.section(
   border-radius: 1.6rem;
 
   @media ${medias.mobile} {
+    max-width: 502px;
     width: calc(100% - 4.8rem);
     min-width: 30.0rem;
     margin: 0 2.4rem;
