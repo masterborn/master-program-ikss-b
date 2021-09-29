@@ -19,7 +19,6 @@ export const ProjectSection = styled.section(
 
   @media ${medias.mobile} {
     width: 100%;
-    max-width: 55.0rem;
     padding: 0 2.4rem 0 2.4rem;
     margin-top: 3.0rem;
     margin-bottom: -2rem;

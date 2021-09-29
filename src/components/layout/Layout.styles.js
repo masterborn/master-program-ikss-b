@@ -22,7 +22,7 @@ export const StyledLayout = styled.div(
     align-items: center;
 
     @media ${medias.mobile}{
-      max-width: 550px;
+      max-width: 770px;
     }
   }
 `,

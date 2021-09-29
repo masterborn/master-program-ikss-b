@@ -23,7 +23,7 @@ export const BoardMemberTileWrapper = styled.div(
   }
 
   @media ${medias.mobile} {
-    max-width: 48rem;
+    max-width: 60rem;
     width: 100%;
     min-width: 252px;
     margin: 1.2rem 0;

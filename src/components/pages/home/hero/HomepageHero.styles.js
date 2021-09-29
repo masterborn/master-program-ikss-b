@@ -11,7 +11,6 @@ export const StyledHomepageHero = styled.header(
   align-items: flex-end;
 
   @media ${medias.mobile} {
-    max-width: 55.0rem;
     min-width: 30.0rem;
     width: 100%;
   }
@@ -56,7 +55,6 @@ export const HomepageHeroVideo = styled.video(
   @media ${medias.mobile} {
     order: 1;
     width: 100%;
-    max-width: 55.0rem;
   }
 `,
 );

@@ -16,7 +16,6 @@ export const LogosSection = styled.section(
 
   @media ${medias.mobile} {
     width: 100%;
-    max-width: 55.0rem;
     padding: 0 2.6rem 0 2.6rem;
     height: auto;
     margin-top: 10rem;
@@ -63,7 +62,6 @@ export const LogosContainer = styled.div(
 
   @media ${medias.mobile} {
     width: 100%;
-    max-width: 55.0rem;
     margin-top: 3.2rem;
     min-height: 30.2rem;
     height: auto;
